@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+           vc:minVersion="1.1"
+           elementFormDefault="qualified">
+
+  <xs:element name="monsters">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="monster" type="monsterType" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="monsterType">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="type" type="xs:string"/>
+      <xs:element name="level" type="xs:integer"/>
+      <xs:element name="creatureTraits" type="creatureTraitsType"/>
+      <xs:element name="perception" type="perceptionType"/>
+      <xs:element name="languages" type="languagesType" minOccurs="0"/>
+      <xs:element name="skills" type="skillsType" minOccurs="0"/>
+      <xs:element name="attributes" type="attributesType"/>
+      <xs:element name="interactionAbilities" type="abilityContainerType" minOccurs="0"/>
+      <xs:element name="armorClass" type="xs:integer"/>
+      <xs:element name="saves" type="savesType"/>
+      <xs:element name="health" type="xs:integer"/>
+      <xs:element name="immunities" type="simpleListType" minOccurs="0"/>
+      <xs:element name="weaknesses" type="valueListType" minOccurs="0"/>
+      <xs:element name="resistances" type="resistanceListType" minOccurs="0"/>
+      <xs:element name="reactiveAbilities" type="abilityContainerType" minOccurs="0"/>
+      <xs:element name="speeds" type="speedsType"/>
+      <xs:element name="strikes" type="strikesType"/>
+      <xs:element name="spellList" type="spellListType" minOccurs="0"/>
+      <xs:element name="offensiveAbilities" type="abilityContainerType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="creatureTraitsType">
+    <xs:sequence>
+      <xs:element name="trait" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="xs:string">
+              <xs:attribute name="type" type="xs:string"/>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="perceptionType">
+    <xs:sequence>
+      <xs:element name="bonus" type="xs:string"/>
+      <xs:element name="senses" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="sens" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="name" type="xs:string"/>
+                  <xs:element name="precision" type="xs:string" minOccurs="0"/>
+                  <xs:element name="range" type="xs:string" minOccurs="0"/>
+                  <xs:element name="source" type="xs:string" minOccurs="0"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="attributesType">
+    <xs:attribute name="STR" type="xs:string" use="required"/>
+    <xs:attribute name="DEX" type="xs:string" use="required"/>
+    <xs:attribute name="CON" type="xs:string" use="required"/>
+    <xs:attribute name="INT" type="xs:string" use="required"/>
+    <xs:attribute name="WIS" type="xs:string" use="required"/>
+    <xs:attribute name="CHA" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="skillsType">
+    <xs:sequence>
+      <xs:element name="skill" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="bonus" type="xs:string"/>
+            <xs:element name="skillSpecial" type="xs:string" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="savesType">
+    <xs:attribute name="REF" type="xs:string" use="required"/>
+    <xs:attribute name="FOR" type="xs:string" use="required"/>
+    <xs:attribute name="VOL" type="xs:string" use="required"/>
+    <xs:attribute name="saveSpecial" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="speedsType">
+    <xs:sequence>
+      <xs:element name="speed" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="xs:string">
+              <xs:attribute name="type">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="climb"/>
+                    <xs:enumeration value="fly"/>
+                    <xs:enumeration value="swim"/>
+                    <xs:enumeration value="burrow"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:attribute>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="speedSpecial" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="abilityContainerType">
+    <xs:sequence>
+      <!-- <xs:element name="spellList" type="spellListType" minOccurs="0" maxOccurs="unbounded"/> -->
+      <xs:element name="special" type="specialAbilityType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="specialAbilityType" mixed="true">
+    <xs:sequence>
+      <xs:element name="action" type="xs:string" minOccurs="0"/>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+      <xs:element name="traits" type="simpleListType" minOccurs="0"/>
+      <xs:element name="requirements" type="xs:string" minOccurs="0"/>
+      <xs:element name="trigger" type="xs:string" minOccurs="0"/>
+      <xs:element name="frequency" type="xs:string" minOccurs="0"/>
+      <xs:element name="effect" type="richTextType" minOccurs="0"/>
+      <xs:element name="description" type="richTextType" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="xs:string"/>
+    <xs:attribute name="actions" type="xs:string"/>
+    <!-- <xs:assert test="if (@type = 'activity') then exists(@actions) else empty(@actions)"/> -->
+  </xs:complexType>
+
+  <xs:complexType name="spellListType">
+    <xs:sequence>
+      <xs:element name="rank" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="spells">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="spell" maxOccurs="unbounded">
+                    <xs:complexType>
+                      <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                          <xs:attribute name="source" type="xs:string"/>
+                          <xs:attribute name="spellSpecial" type="xs:string"/>
+                        </xs:extension>
+                      </xs:simpleContent>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+          <xs:attribute name="rank" type="xs:integer" use="required"/>
+          <xs:attribute name="constant" type="xs:string"/>
+          <xs:attribute name="cantrips" type="xs:string"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="source" type="xs:string"/>
+    <xs:attribute name="tradition" type="xs:string"/>
+    <xs:attribute name="DD" type="xs:string"/>
+    <xs:attribute name="attack" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="valueListType">
+    <xs:sequence>
+      <xs:element name="weakness" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="value" type="xs:integer" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="resistanceListType">
+    <xs:sequence>
+      <xs:element name="resistance" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="value" type="xs:integer"/>
+            <xs:element name="exceptions" minOccurs="0">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="exception" type="xs:string" maxOccurs="unbounded"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="simpleListType">
+    <xs:sequence>
+      <xs:element name="trait" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="language" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="immunity" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="languagesType">
+    <xs:sequence>
+      <xs:element name="language" type="xs:string" maxOccurs="unbounded"/>
+      <xs:element name="langSpecial" type="richTextType" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="cannotTalk" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="strikesType">
+    <xs:sequence>
+      <xs:element name="strike" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="bonus" type="xs:string"/>
+            <xs:element name="traits" type="simpleListType" minOccurs="0"/>
+            <xs:element name="damages">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="damage" maxOccurs="unbounded">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="amount" type="xs:string"/>
+                        <xs:element name="damageType" type="xs:string"/>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="extras" minOccurs="0">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="extra" type="xs:string" maxOccurs="unbounded"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+          <xs:attribute name="type" type="xs:string"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="richTextType" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="table" type="tableType"/>
+      <xs:element name="list" type="listType"/>
+      <xs:element name="spell" type="xs:string"/>
+      <xs:element name="scseecBloc" type="scseecType"/>
+    </xs:choice>
+  </xs:complexType>
+
+  <xs:complexType name="tableType">
+    <xs:sequence>
+      <xs:element name="headerLine" type="rowType" minOccurs="0"/>
+      <xs:element name="line" type="rowType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="rowType">
+    <xs:sequence>
+      <xs:element name="cell" type="xs:string" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="listType">
+    <xs:sequence>
+      <xs:element name="listItem" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="special" type="specialAbilityType" minOccurs="0"/>
+            <xs:any minOccurs="0" maxOccurs="unbounded" processContents="skip"/> 
+          </xs:sequence>
+          <xs:anyAttribute processContents="skip"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="scseecType">
+    <xs:sequence>
+      <xs:element name="criticalSuccess" type="xs:string" minOccurs="0"/>
+      <xs:element name="success" type="xs:string" minOccurs="0"/>
+      <xs:element name="failure" type="xs:string" minOccurs="0"/>
+      <xs:element name="criticalFailure" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>

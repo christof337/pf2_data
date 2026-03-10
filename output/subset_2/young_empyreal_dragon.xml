@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="decodeMonster-2.xsl" type="text/xsl"?>
+
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xslt/monster.xsd">
+  <monster>
+    <name>JEUNE DRAGON EMPYRÉEN</name>
+    <type>CRÉATURE</type>
+    <level>10</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>DIVIN</trait>
+      <trait>DRAGON</trait>
+      <trait>SAINT</trait>
+    </creatureTraits>
+    <armorClass>30</armorClass>
+    <saves/>
+    <health>170</health>
+    <perception>
+      <bonus>+21</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>18 m</range>
+        </sens>
+        <sens>
+          <name>perception de la vie</name>
+          <precision>imprécis</precision>
+          <range>9 m</range>
+          <source>p. 360</source>
+        </sens>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages>
+      <language>commun</language>
+      <language>draconique</language>
+      <language>empyréen</language>
+      <langSpecial>
+        <spell>langage universel</spell>
+      </langSpecial>
+    </languages>
+    <strikes>
+      <strike>
+        <name>mâchoires</name>
+        <bonus>+22</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+          <trait>magique</trait>
+          <trait>saint</trait>
+        </traits>
+        <damages/>
+      </strike>
+      <strike>
+        <name>griffes</name>
+        <bonus>+22</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>magique</trait>
+          <trait>saint</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+9</amount>
+            <type>tranchants</type>
+          </damage>
+          <damage>
+            <amount>1d8</amount>
+            <type>d’esprit</type>
+          </damage>
+        </damages>
+      </strike>
+      <strike>
+        <name>queue</name>
+        <bonus>+20</bonus>
+        <traits>
+          <trait>allonge 4</trait>
+          <trait>5 m</trait>
+          <trait>magique</trait>
+          <trait>saint</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d10+9</amount>
+            <type>contondants</type>
+          </damage>
+          <damage>
+            <amount>1d8</amount>
+            <type>d’esprit</type>
+          </damage>
+        </damages>
+      </strike>
+      <strike>
+        <name>aile</name>
+        <bonus>+20</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 3 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages/>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="innés" DD="29" attack="+21">
+      <rank rank="5">
+        <spells>
+          <spell>*guérison*</spell>
+        </spells>
+      </rank>
+      <rank rank="3">
+        <spells>
+          <spell spellSpecial="à volonté">*lumière sainte*</spell>
+        </spells>
+      </rank>
+      <rank rank="5" constant="TRUE">
+        <spells>
+          <spell>*langage universel*</spell>
+        </spells>
+      </rank>
+    </spellList>
+  </monster>
+</monsters>

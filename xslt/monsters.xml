@@ -1,0 +1,2051 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="decodeMonster-2.xsl" type="text/xsl"?>
+
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="monster.xsd">
+    <monster>
+        <name>ABEILLE APOTHICAIRE</name>
+        <type>CRÉATURE</type>
+        <level>7</level>
+        <creatureTraits>
+            <trait type="size">très petite</trait>
+            <trait type="family">animal</trait>
+        </creatureTraits>
+        <perception>
+            <bonus>+15</bonus>
+            <senses>
+                <sens><name>vision dans le noir</name></sens>
+                <sens>
+                    <name>perception des potions</name>
+                    <precision>précis</precision>
+                    <range>18 m</range>
+                </sens>
+            </senses>
+        </perception>
+        
+        <skills>
+            <skill><name>Acrobaties</name><bonus>+17</bonus></skill>
+            <skill><name>Discrétion</name><bonus>+17</bonus></skill>
+            <skill><name>Larcin</name><bonus>+15</bonus></skill>
+        </skills>
+        <attributes STR="+1" DEX="+6" CON="+3" INT="-4" WIS="+2" CHA="+2"/>
+        
+        <armorClass>25</armorClass>
+        <saves REF="+19" FOR="+14" VOL="+13"/>
+        <health>115</health>
+        
+        <weaknesses>
+            <weakness>
+                <name>sensibilité à la fumée</name>
+            </weakness>
+        </weaknesses>
+        
+        <speeds>
+            <speed>3 m</speed>
+            <speed type="climb">3 m</speed> <speed type="fly">15 m</speed>   </speeds>
+        
+        <strikes>
+            <strike>
+                <name>dard</name>
+                <bonus>+19</bonus>
+                <traits><trait>magique</trait><trait>poison</trait></traits>
+                <damages>
+                    <damage><amount>1d4+4</amount><damageType>perforant</damageType></damage>
+                    <damage><amount>3d6</amount><damageType>poison</damageType></damage>
+                </damages>
+            </strike>
+        </strikes>
+        
+        <offensiveAbilities>
+            <special type="activity" actions="2"> <name>Drain de potion</name>
+                <traits><trait>manipulation</trait></traits>
+                <effect>L’abeille apothicaire engloutit une potion à sa portée et la stocke à l’intérieur d’elle-même.</effect>
+            </special>
+            <special type="activity" actions="1">
+                <name>Ingestion d’une potion</name>
+                <traits><trait>manipulation</trait></traits>
+                <effect>L’abeille apothicaire consomme la potion qu’elle a stockée...</effect>
+            </special>
+            <special type="activity" actions="1">
+                <name>Injection d’une potion</name>
+                <traits><trait>manipulation</trait></traits>
+                <effect>L’abeille apothicaire injecte la potion...</effect>
+            </special>
+        </offensiveAbilities>
+    </monster>
+    <monster>
+        <name>DÉCAPODE CANOTIER</name>
+        <type>CRÉATURE</type>
+        <level>8</level>
+        <creatureTraits>
+            <trait type="size">gigantesque</trait>
+            <trait type="family">AMPHIBIE</trait>
+            <trait type="family">BÊTE</trait>
+        </creatureTraits>
+        <perception>
+            <bonus>+16</bonus>
+            <senses>
+                <sens>
+                    <name>perception des vibrations</name>
+                    <precision>imprécis</precision>
+                    <range>9 m</range>
+                </sens>
+                <sens>
+                    <name>perception des ondes</name>
+                    <precision>imprécis</precision>
+                    <range>9 m</range>
+                </sens>
+            </senses>
+        </perception>
+        <languages cannotTalk="TRUE">
+            <language>thalassique</language>
+        </languages>
+        <skills>
+            <skill>
+                <name>Acrobaties</name>
+                <bonus>+15</bonus>
+            </skill>
+            <skill>
+                <name>Athlétisme</name>
+                <bonus>+18</bonus>
+            </skill>
+            <skill>
+                <name>Discrétion</name>
+                <bonus>+15</bonus>
+            </skill>
+            <skill>
+                <name>Nature</name>
+                <bonus>+17</bonus>
+            </skill>
+        </skills>
+        <attributes STR="+7" DEX="+3" CON="+4" INT="-2" WIS="+3" CHA="+0"/>
+        <interactionAbilities>
+            <special>
+                <name>Tous à bord</name>
+                <description>Un décapode canotier peut transporter sur son dos jusqu'à un Encombrement 30 de créatures ou d'objets non portés, comme cinq créatures de taille Moyenne. L'emprise douce des anémones sur les passagers n'est pas gênante dans la plupart des situations, mais en combat, ces passagers sont ralentis 1 s'ils veulent faire d'autres actions tout en restant sur le dos du décapode.</description>
+            </special>
+        </interactionAbilities>
+        <armorClass>28</armorClass>
+        <saves REF="+15" FOR="+18" VOL="+15"/>
+        <health>145</health>
+        <immunities>
+            <immunity>poison</immunity>
+        </immunities>
+        <weaknesses>
+            <weakness>
+                <name>contondant</name>
+                <value>5</value>
+            </weakness>
+        </weaknesses>
+        <reactiveAbilities>
+            <special type="reaction">
+                <action>reaction</action>
+                <name>Protection des passagers</name>
+                <trigger>Un ennemi dans un rayon de 6 m inflige des dégâts à l'un des passagers du décapode</trigger>
+                <effect>Les anémones effectuent une Frappe de tentacule contre la créature qui a déclenché l'action.</effect>
+            </special>
+        </reactiveAbilities>
+        <speeds>
+            <speed>9 m</speed>
+            <speed type="climb">7,5 m</speed>
+            <speed type="swim">7,5 m</speed>
+        </speeds>
+        <strikes>
+            <strike type="melee">
+                <name>griffes</name>
+                <bonus>+19</bonus>
+                <traits>
+                    <trait>allonge 3 m</trait>
+                </traits>
+                <damages>
+                    <damage>
+                        <amount>2d8+7</amount>
+                        <damageType>tranchants</damageType>
+                    </damage>
+                    <damage>
+                        <amount>2d6</amount>
+                        <damageType>poison</damageType>
+                    </damage>
+                </damages>
+            </strike>
+            <strike type="melee">
+                <name>tentacule</name>
+                <bonus>+19</bonus>
+                <traits>
+                    <trait>allonge 6 m</trait>
+                    <trait>poison</trait>
+                </traits>
+                <damages>
+                    <damage>
+                        <amount>5d6</amount>
+                        <damageType>poison</damageType>
+                    </damage>
+                </damages>
+                <extras>
+                    <extra>Empoignade</extra>
+                </extras>
+            </strike>
+        </strikes>
+        <offensiveAbilities>
+            <special type="activity" actions="1">
+                <name>Anémones piqueuses</name>
+                <traits>
+                    <trait>poison</trait>
+                </traits>
+                <description>Les anémones du décapode piquent autant de créatures qu'elles le veulent parmi les passagers et celles que le décapode a empoignées ou entravées. Les piqûres infligent 5d6 dégâts de poison (jet de Vigueur basique DD 26). En cas de jet de sauvegarde raté, cette créature est également affaiblie 2 pendant 1 h.</description>
+            </special>
+            <special type="activity" actions="1">
+                <name>Gonfler les anémones</name>
+                <description>Les anémones sur le dos du décapode gonflent, enveloppant tous les passagers pour leur conférer un bonus de circonstances de +2 à la CA jusqu'au début du prochain tour du décapode.</description>
+            </special>
+            <special type="activity" actions="3">
+                <name>Transport d'anémones</name>
+                <traits>
+                    <trait>primordial</trait>
+                    <trait>téléportation</trait>
+                </traits>
+                <description>Le décapode canotier et tous ses passagers consentants se téléportent vers un banc d'anémones dans un rayon de 15 km suffisamment grand pour que le décapode puisse s'y tenir. Bien que le décapode n'ait pas besoin de voir l'endroit où il se téléporte, il doit s'y être rendu auparavant. Toutes les créatures transportées sont ensuite immunisées contre ce pouvoir pendant 24 h.</description>
+            </special>
+        </offensiveAbilities>
+    </monster>
+    <monster>
+        <name>TROODON</name>
+        <type>CRÉATURE</type>
+        <level>1</level>
+        <creatureTraits>
+            <trait type="size">MOYENNE</trait>
+            <trait type="family">ANIMAL</trait>
+            <trait type="family">DINOSAURE</trait>
+        </creatureTraits>
+        <perception>
+            <bonus>+9</bonus>
+            <senses>
+                <sens>
+                    <name>vision nocturne</name>
+                </sens>
+                <sens>
+                    <name>odorat</name>
+                    <precision>imprécis</precision>
+                    <range>9 m</range>
+                </sens>
+            </senses>
+        </perception>
+        <skills>
+            <skill>
+                <name>Acrobaties</name>
+                <bonus>+6</bonus>
+            </skill>
+            <skill>
+                <name>Athlétisme</name>
+                <bonus>+5</bonus>
+            </skill>
+            <skill>
+                <name>Discrétion</name>
+                <bonus>+8</bonus>
+            </skill>
+            <skill>
+                <name>Duperie</name>
+                <bonus>+8</bonus>
+            </skill>
+            <skill>
+                <name>Survie</name>
+                <bonus>+7</bonus>
+            </skill>
+        </skills>
+        <attributes STR="+1" DEX="+3" CON="+1" INT="-4" WIS="+2" CHA="+3"/>
+        <armorClass>16</armorClass>
+        <saves REF="+8" FOR="+4" VOL="+5"/>
+        <health>20</health>
+        <speeds>
+            <speed>9 m</speed>
+        </speeds>
+        <strikes>
+            <strike type="melee">
+                <name>mâchoires</name>
+                <bonus>+8</bonus>
+                <traits>
+                    <trait>finesse</trait>
+                </traits>
+                <damages>
+                    <damage>
+                        <amount>1d8+1</amount>
+                        <damageType>perforants</damageType>
+                    </damage>
+                </damages>
+            </strike>
+            <strike type="melee">
+                <name>griffes</name>
+                <bonus>+8</bonus>
+                <traits>
+                    <trait>agile</trait>
+                    <trait>finesse</trait>
+                </traits>
+                <damages>
+                    <damage>
+                        <amount>1d6+1</amount>
+                        <damageType>tranchants</damageType>
+                    </damage>
+                </damages>
+            </strike>
+        </strikes>
+        <offensiveAbilities>
+            <special type="activity" actions="2">
+                <name>Attaque en courant</name>
+                <description>Le troodon Marche rapidement et effectue une Frappe de griffes à n'importe quel moment de son déplacement.</description>
+            </special>
+            <special type="activity" actions="1">
+                <name>Mimétisme</name>
+                <description>Le troodon répète jusqu'à douze mots qu'il a entendus la semaine précédente. S'il réussit un test de Duperie contre le DD de Perception de l'auditeur, il est impossible de faire la distinction avec la voix imitée. Le troodon ne peut pas reproduire les pouvoirs ou les sorts basés sur la voix, bien qu'il puisse imiter les sons qu'il entend lors d'une incantation.</description>>
+            </special>
+        </offensiveAbilities>
+    </monster>
+    <monster>
+        <name>PROTOCÉRATOPS</name>
+        <type>CRÉATURE</type>
+        <level>2</level>
+        <creatureTraits>
+            <trait type="size">MOYENNE</trait>
+            <trait type="family">ANIMAL</trait>
+            <trait type="family">DINOSAURE</trait>
+        </creatureTraits>
+        <perception>
+            <bonus>+9</bonus>
+            <senses>
+                <sens>
+                    <name>vision nocturne</name>
+                </sens>
+                <sens>
+                    <name>odorat</name>
+                    <precision>imprécis</precision>
+                    <range>9 m</range>
+                </sens>
+            </senses>
+        </perception>
+        <skills>
+            <skill>
+                <name>Athlétisme</name>
+                <bonus>+8</bonus>
+            </skill>
+        </skills>
+        <attributes STR="+4" DEX="+2" CON="+3" INT="-4" WIS="+2" CHA="+1"/>
+        <armorClass>17</armorClass>
+        <saves REF="+8" FOR="+11" VOL="+6"/>
+        <health>30</health>
+        <reactiveAbilities>
+            <special type="reaction">
+                <name>Blocage à la collerette</name>
+                <requirements>Le protocératops est en Posture défensive</requirements>
+                <trigger>Un allié adjacent devrait subir des dégâts d'une attaque physique</trigger>
+                <effect>Le protocératops bloque partiellement le coup avec sa collerette, réduisant les dégâts de 5.</effect>
+            </special>
+        </reactiveAbilities>
+        <speeds>
+            <speed>7,5 m</speed>
+        </speeds>
+        <strikes>
+            <strike type="melee">
+                <name>tête</name>
+                <bonus>+10</bonus>
+                <damages>
+                    <damage>
+                        <amount>1d8+4</amount>
+                        <damageType>contondants</damageType>
+                    </damage>
+                </damages>
+            </strike>
+            <strike type="melee">
+                <name>queue</name>
+                <bonus>+10</bonus>
+                <traits>
+                    <trait>agile</trait>
+                </traits>
+                <damages>
+                    <damage>
+                        <amount>1d6+4</amount>
+                        <damageType>contondants</damageType>
+                    </damage>
+                </damages>
+                <extras>
+                    <extra>Renversement</extra>
+                </extras>
+            </strike>
+        </strikes>
+        <offensiveAbilities>
+            <special type="activity" actions="1">
+                <name>Posture défensive</name>
+                <description>Le protocératops rentre sa tête et présente sa robuste collerette, accordant un bonus de circonstances de +1 à la CA des alliés adjacents. Le protocératops reste en Posture défensive jusqu'au début de son prochain tour, mais n'accorde le bonus que tant que des alliés sont adjacents.</description>
+            </special>
+        </offensiveAbilities>
+    </monster>
+    <monster>
+        <name>MAJUNGASAURUS</name>
+        <type>CRÉATURE</type>
+        <level>6</level>
+        <creatureTraits>
+            <trait type="size">TRÈS GRANDE</trait>
+            <trait type="family">ANIMAL</trait>
+            <trait type="family">DINOSAURE</trait>
+        </creatureTraits>
+        <perception>
+            <bonus>+12</bonus>
+            <senses>
+                <sens>
+                    <name>vision nocturne</name>
+                </sens>
+                <sens>
+                    <name>odorat</name>
+                    <precision>imprécis</precision>
+                    <range>9 m</range>
+                </sens>
+            </senses>
+        </perception>
+        <skills>
+            <skill>
+                <name>Acrobaties</name>
+                <bonus>+15</bonus>
+            </skill>
+            <skill>
+                <name>Athlétisme</name>
+                <bonus>+16</bonus>
+            </skill>
+            <skill>
+                <name>Discrétion</name>
+                <bonus>+16</bonus>
+            </skill>
+            <skill>
+                <name>Intimidation</name>
+                <bonus>+14</bonus>
+            </skill>
+        </skills>
+        <attributes STR="+6" DEX="+5" CON="+4" INT="-4" WIS="+2" CHA="+4"/>
+        <interactionAbilities>
+            <special>
+                <name>Rugissement saisissant</name>
+                <description>Lorsque le majungasaurus fait un jet d'initiative en utilisant la Discrétion, il peut tenter de Démoraliser chaque créature dans un rayon de 9 m en tant qu'action gratuite. Quel que soit l'effet, chaque créature est alors immunisée pendant 1 h.</description>
+            </special>
+        </interactionAbilities>
+        <armorClass>23</armorClass>
+        <saves REF="+17" FOR="+14" VOL="+12"/>
+        <health>120</health>
+        <speeds>
+            <speed>7,5 m</speed>
+        </speeds>
+        <strikes>
+            <strike type="melee">
+                <name>mâchoires</name>
+                <bonus>+16</bonus>
+                <traits>
+                    <trait>allonge 4,5 m</trait>
+                </traits>
+                <damages>
+                    <damage>
+                        <amount>2d8+6</amount>
+                        <damageType>perforants</damageType>
+                    </damage>
+                </damages>
+                <extras>
+                    <extra>Empoignade</extra>
+                </extras>
+            </strike>
+            <strike type="melee">
+                <name>pied</name>
+                <bonus>+16</bonus>
+                <traits>
+                    <trait>agile</trait>
+                </traits>
+                <damages>
+                    <damage>
+                        <amount>2d6+6</amount>
+                        <damageType>contondants</damageType>
+                    </damage>
+                </damages>
+            </strike>
+        </strikes>
+        <offensiveAbilities>
+            <special type="activity" actions="1">
+                <name>Éclatement des os</name>
+                <requirements>Le majungasaurus a une créature empoignée dans ses mâchoires</requirements>
+                <effect>Le majungasaurus inflige à cette créature 3d8 dégâts contondants (jet de Vigueur basique DD 24). Une créature qui échoue à cette sauvegarde est maladroite 1 jusqu'à ce qu'elle récupère tous ses points de vie.</effect>
+            </special>
+            <special>
+                <name>Proie effrayée</name>
+                <description>Les créatures effrayées sont prises par surprise vis-à-vis d'un majungasaurus.</description>
+            </special>
+        </offensiveAbilities>
+    </monster>
+    <monster>
+        <name>CARNOTAURE</name>
+        <type>CRÉATURE</type>
+        <level>7</level>
+        <creatureTraits>
+            <trait type="size">TRÈS GRANDE</trait>
+            <trait type="family">ANIMAL</trait>
+            <trait type="family">DINOSAURE</trait>
+        </creatureTraits>
+        <perception>
+            <bonus>+15</bonus>
+            <senses>
+                <sens>
+                    <name>vision nocturne</name>
+                </sens>
+                <sens>
+                    <name>odorat</name>
+                    <precision>imprécis</precision>
+                    <range>9 m</range>
+                </sens>
+            </senses>
+        </perception>
+        <skills>
+            <skill>
+                <name>Athlétisme</name>
+                <bonus>+18</bonus>
+            </skill>
+            <skill>
+                <name>Survie</name>
+                <bonus>+14</bonus>
+            </skill>
+        </skills>
+        <attributes STR="+7" DEX="+2" CON="+4" INT="-4" WIS="+2" CHA="+0"/>
+        <armorClass>24</armorClass>
+        <saves REF="+15" FOR="+17" VOL="+13"/>
+        <health>145</health>
+        <reactiveAbilities>
+            <special type="reaction">
+                <name>Coup de tête</name>
+                <trigger>Une créature termine une action de déplacement à portée d'allonge de la Frappe de corne du carnotaure</trigger>
+                <effect>Le carnotaure effectue une Frappe de corne contre la créature ayant déclenché l'effet.</effect>
+            </special>
+        </reactiveAbilities>
+        <speeds>
+            <speed>9 m</speed>
+        </speeds>
+        <strikes>
+            <strike type="melee">
+                <name>mâchoires</name>
+                <bonus>+18</bonus>
+                <traits>
+                    <trait>allonge 4,5 m</trait>
+                </traits>
+                <damages>
+                    <damage>
+                        <amount>2d10+9</amount>
+                        <damageType>perforants</damageType>
+                    </damage>
+                </damages>
+                <extras>
+                    <extra>mutilation vicieuse</extra>
+                </extras>
+            </strike>
+            <strike type="melee">
+                <name>corne</name>
+                <bonus>+18</bonus>
+                <traits>
+                    <trait>allonge 4,5 m</trait>
+                </traits>
+                <damages>
+                    <damage>
+                        <amount>1d12+9</amount>
+                        <damageType>perforants</damageType>
+                    </damage>
+                </damages>
+            </strike>
+        </strikes>
+        <offensiveAbilities>
+            <special type="activity" actions="2">
+                <name>Charge puissante</name>
+                <description>
+                    Le carnotaure abaisse ses cornes et fonce vers un ennemi. Il Marche rapidement deux fois, puis effectue une Frappe de corne. S'il s'est déplacé d'au moins 6 m par rapport à sa position de départ, les dégâts de la Frappe sont augmentés à 2d12+9 et mettent la cible à terre si elle réussit.
+                </description>
+            </special>
+            <special>
+                <name>Mutilation féroce</name>
+                <description>La Frappe de mâchoires du carnotaure inflige 1d8 dégâts de saignement persistants supplémentaires aux cibles à terre.</description>
+            </special>
+        </offensiveAbilities>
+    </monster>
+    <monster>
+        <name>THERIZINOSAURUS</name>
+        <type>CRÉATURE</type>
+        <level>9</level>
+        <creatureTraits>
+            <trait type="size">GIGANTESQUE</trait>
+            <trait type="family">ANIMAL</trait>
+            <trait type="family">DINOSAURE</trait>
+        </creatureTraits>
+        <perception>
+            <bonus>+18</bonus>
+            <senses>
+                <sens>
+                    <name>odorat</name>
+                    <precision>imprécis</precision>
+                    <range>9 m</range>
+                </sens>
+                <sens>
+                    <name>vision nocturne</name>
+                </sens>
+            </senses>
+        </perception>
+        <skills>
+            <skill>
+                <name>Athlétisme</name>
+                <bonus>+20</bonus>
+            </skill>
+            <skill>
+                <name>Survie</name>
+                <bonus>+17</bonus>
+            </skill>
+        </skills>
+        <attributes STR="+7" DEX="+1" CON="+6" INT="-4" WIS="+3" CHA="+0"/>
+        <armorClass>27</armorClass>
+        <saves REF="+16" FOR="+21" VOL="+16"/>
+        <health>210</health>
+        <speeds>
+            <speed>10,5 m</speed>
+        </speeds>
+        <strikes>
+            <strike type="melee">
+                <name>griffes</name>
+                <bonus>+21</bonus>
+                <traits>
+                    <trait>allonge 6 m</trait>
+                </traits>
+                <damages>
+                    <damage>
+                        <amount>2d12+7</amount>
+                        <damageType>tranchants</damageType>
+                    </damage>
+                </damages>
+                <extras>
+                    <extra>griffes à vanner</extra>
+                </extras>
+            </strike>
+        </strikes>
+        <offensiveAbilities>
+            <special>
+                <name>Griffes à vanner</name>
+                <description>Chaque fois que le therizinosaurus réussit une Frappe contre une créature de Grande taille ou plus petite avec ses griffes, il tire cette créature à 1,5 m vers lui (3 m en cas de coup critique).</description>
+            </special>
+            <special type="activity" actions="2">
+                <name>Piétinement des nuisibles</name>
+                <description>
+                    Le therizinosaurus foule des pattes sur ce qui se trouve à proximité, infligeant 5d8 dégâts contondants (jet de Réflexes basique DD 28) à chaque créature adjacente. Les créatures de Grande taille ou plus petites qui ratent leur jet de sauvegarde sont également mises à terre.
+                </description>
+            </special>
+            <special type="activity" actions="2">
+                <name>Volée de griffes</name>
+                <description>
+                    Le therizinosaurus effectue deux Frappes de griffes contre des cibles différentes. Les deux attaques comptent pour le malus d’attaques multiples, mais ce dernier n’augmente pas tant qu’il n’a pas effectué les deux attaques.
+                </description>
+            </special>
+        </offensiveAbilities>
+    </monster>
+    <monster>
+        <name>TITANOSAURE</name>
+        <type>CRÉATURE</type>
+        <level>16</level>
+        <creatureTraits>
+            <trait type="size">GIGANTESQUE</trait>
+            <trait type="family">ANIMAL</trait>
+            <trait type="family">DINOSAURE</trait>
+        </creatureTraits>
+        <perception>
+            <bonus>+27</bonus>
+            <senses>
+                <sens>
+                    <name>odorat</name>
+                    <precision>imprécis</precision>
+                    <range>9 m</range>
+                </sens>
+                <sens>
+                    <name>vision nocturne</name>
+                </sens>
+            </senses>
+        </perception>
+        <skills>
+            <skill>
+                <name>Athlétisme</name>
+                <bonus>+34</bonus>
+            </skill>
+        </skills>
+        <attributes STR="+10" DEX="+4" CON="+9" INT="-4" WIS="+5" CHA="+6"/>
+        <armorClass>38</armorClass>
+        <saves REF="+28" FOR="+33" VOL="+29"/>
+        <health>370</health>
+        <reactiveAbilities>
+            <special>
+                <name>Présence majestueuse</name>
+                <traits>
+                    <trait>aura</trait>
+                    <trait>émotion</trait>
+                    <trait>visuel</trait>
+                </traits>
+                <description>
+                    27 m, DD 38. Les créatures de Très Grande taille ou plus petite qui entrent dans l’aura doivent tenter un jet de Volonté. Quel que soit le résultat du jet de sauvegarde, la créature est ensuite immunisée contre la Présence majestueuse du titanosaure pendant 1 h.
+                    <scseecBloc>
+                        <criticalSuccess>La créature n’est pas affectée.</criticalSuccess>
+                        <success>La créature est fascinée par le titanosaure pendant 1 round.</success>
+                        <failure>La créature est fascinée pendant 2 rounds.</failure>
+                        <criticalFailure>La créature est fascinée pendant 1 min.</criticalFailure>
+                    </scseecBloc>
+                </description>
+            </special>
+        </reactiveAbilities>
+        <speeds>
+            <speed>9 m</speed>
+        </speeds>
+        <strikes>
+            <strike type="melee">
+                <name>queue</name>
+                <bonus>+32</bonus>
+                <traits>
+                    <trait>allonge 9 m</trait>
+                </traits>
+                <damages>
+                    <damage>
+                        <amount>3d8+16</amount>
+                        <damageType>contondants</damageType>
+                    </damage>
+                </damages>
+                <extras>
+                    <extra>Renversement amélioré</extra>
+                </extras>
+            </strike>
+            <strike type="melee">
+                <name>pattes</name>
+                <bonus>+32</bonus>
+                <traits>
+                    <trait>allonge 4,5 m</trait>
+                </traits>
+                <damages>
+                    <damage>
+                        <amount>3d12+16</amount>
+                        <damageType>contondants</damageType>
+                    </damage>
+                </damages>
+            </strike>
+        </strikes>
+        <offensiveAbilities>
+            <special type="activity" actions="2">
+                <name>Balayage de la queue</name>
+                <description>Avec sa queue, le titanosaure balaie un cône de 9 m. Les créatures dans la zone subissent 8d10 dégâts contondants (jet de Réflexes basique DD 38). Le déséquilibre provoqué par cette attaque fait que le titanosaure est alors pris par surprise jusqu’au début de son prochain tour.</description>
+            </special>
+            <special type="activity" actions="2">
+                <name>Frappe sismique</name>
+                <frequency>1 fois/min</frequency>
+                <effect>
+                    Le titanosaure se dresse sur ses pattes arrière avant d’abattre ses pattes avant sur le sol dans un bruit de tonnerre, créant une secousse localisée avec les effets du sort <spell>tremblement de terre</spell> centré sur lui-même, bien que l’effet ne soit pas magique. Aucune fissure ne se forme sous le titanosaure.
+                </effect>
+            </special>
+            <special type="activity" actions="3">
+                <name>Piétiner</name>
+                <description>
+                    Très Grande ou plus petite, pattes, DD 38
+                </description>
+            </special>
+        </offensiveAbilities>
+    </monster>
+    <monster>
+        <name>THRUNÉOSAURUS REX</name>
+        <type>CRÉATURE</type>
+        <level>17</level>
+        <creatureTraits>
+            <trait type="rarity">RARE</trait>
+            <trait type="size">GIGANTESQUE</trait>
+            <trait type="family">BÊTE</trait>
+            <trait type="family">DIABLE</trait>
+            <trait type="family">DINOSAURE</trait>
+            <trait type="sanctification">IMPIE</trait>
+        </creatureTraits>
+        <perception>
+            <bonus>+29</bonus>
+            <senses>
+                <sens>
+                    <name>odorat</name>
+                    <precision>imprécis</precision>
+                    <range>9 m</range>
+                </sens>
+                <sens>
+                    <name>vision dans le noir supérieure</name>
+                </sens>
+            </senses>
+        </perception>
+        <skills>
+            <skill>
+                <name>Acrobaties</name>
+                <bonus>+30</bonus>
+            </skill>
+            <skill>
+                <name>Athlétisme</name>
+                <bonus>+35</bonus>
+            </skill>
+            <skill>
+                <name>Intimidation</name>
+                <bonus>+30</bonus>
+            </skill>
+        </skills>
+        <attributes STR="+10" DEX="+3" CON="+6" INT="-2" WIS="+6" CHA="+5"/>
+        <armorClass>39</armorClass>
+        <saves REF="+25" FOR="+31" VOL="+29"/>
+        <health>290</health>
+        <immunities>
+            <immunity>feu</immunity>
+        </immunities>
+        <weaknesses>
+            <weakness>
+                <name>saint</name>
+                <value>15</value>
+            </weakness>
+        </weaknesses>
+        <resistances>
+            <resistance>
+                <name>physique</name>
+                <value>15</value>
+                <exceptions><exception>argent</exception></exceptions>
+            </resistance>
+        </resistances>
+        <reactiveAbilities>
+            <special>
+                <name>Présence terrifiante</name>
+                <traits>
+                    <trait>aura</trait>
+                    <trait>divin</trait>
+                    <trait>émotion</trait>
+                    <trait>mental</trait>
+                    <trait>terreur</trait>
+                </traits>
+                <description>
+                    27 m, DD 38
+                </description>
+            </special>
+            <special type="reaction">
+                <name>Téléportation instinctive</name>
+                <traits>
+                    <trait>divine</trait>
+                    <trait>téléportation</trait>
+                </traits>
+                <trigger>Le thrunéosaurus subit les dégâts d’un effet saint</trigger>
+                <effect>Le thrunéosaurus, ainsi que les créatures qu’il a gobées, se téléporte dans un espace dégagé dans un rayon de 18 m qu’il peut voir.</effect>
+            </special>
+        </reactiveAbilities>
+        <speeds>
+            <speed>12 m</speed>
+        </speeds>
+        <strikes>
+            <strike type="melee">
+                <name>mâchoires</name>
+                <bonus>+33</bonus>
+                <traits>
+                    <trait>allonge 6 m</trait>
+                    <trait>magique</trait>
+                </traits>
+                <damages>
+                    <damage>
+                        <amount>3d12+16</amount>
+                        <damageType>perforants</damageType>
+                    </damage>
+                </damages>
+                <extras>
+                    <extra>Empoignade</extra>
+                </extras>
+            </strike>
+            <strike type="melee">
+                <name>pied</name>
+                <bonus>+33</bonus>
+                <traits>
+                    <trait>allonge 4,5 m</trait>
+                    <trait>magique</trait>
+                </traits>
+                <damages>
+                    <damage>
+                        <amount>3d10+16</amount>
+                        <damageType>contondants</damageType>
+                    </damage>
+                </damages>
+            </strike>
+        </strikes>
+        <offensiveAbilities>
+            <special type="activity" actions="2">
+                <name>Déflagration de feu infernal</name>
+                <description>Le thrunéosaurus canalise du feu infernal sulfureux de l’une des trois façons suivantes. Le thrunéosaurus choisit l’effet, mais il ne peut pas faire le même choix pendant deux rounds consécutifs.
+                    <list>
+                        <listItem>
+                            <special>
+                                <name>Faisceau ardent</name>
+                                <traits>
+                                    <trait>divine</trait>
+                                    <trait>feu</trait>
+                                    <trait>impie</trait>
+                                </traits>
+                                <description>Une ligne de 36 m de flammes infernales jaillit des yeux du thrunéosaurus, infligeant 6d10 dégâts de feu (jet de Réflexes basique DD 38).</description>
+                            </special>
+                        </listItem>
+                        <listItem>
+                            <special>
+                                <name>Fumées étouffantes</name>
+                                <traits>
+                                    <trait>divine</trait>
+                                    <trait>impie</trait>
+                                    <trait>poison</trait>
+                                </traits>
+                                <description>Le thrunéosaurus exhale un cône de 18 m de fumée sulfureuse qui inflige 6d8 dégâts de poison (jet de Vigueur basique DD 38). Les créatures qui ne réussissent pas leur jet de sauvegarde sont malades 2.</description>
+                            </special>
+                        </listItem>
+                        <listItem>
+                            <special>
+                                <name>Soleil brûlant</name>
+                                <traits>
+                                    <trait>divine</trait>
+                                    <trait>feu</trait>
+                                    <trait>impie</trait>
+                                </traits>
+                                <description>Le thrunéosaurus enflamme un orbe de feu infernal entre ses cornes qui irradie de chaleur dans un rayon de 9 m, infligeant 2d8 dégâts persistants de feu.</description>
+                            </special>
+                        </listItem>
+                    </list>
+                </description>
+            </special>
+            <special type="activity" actions="1">
+                <name>Gober</name>
+                <traits><trait>attaque</trait></traits>
+                <description>Très Grande, 3d12+10 contondants, Rupture 40</description>
+            </special>
+            <special type="activity" actions="3">
+                <name>Piétiner</name>
+                <description>
+                    Très Grande ou plus petite, pattes, DD 38
+                </description>
+            </special>
+        </offensiveAbilities>
+    </monster>
+    <monster>
+        <name>MORTHAK</name>
+        <type>CRÉATURE</type>
+        <level>4</level>
+        <creatureTraits>
+            <trait type="size">MOYENNE</trait>
+            <trait type="family">BÊTE</trait>
+        </creatureTraits>
+        <perception>
+            <bonus>+12</bonus>
+            <senses>
+                <sens>
+                    <name>dénué de vision</name>
+                </sens>
+                <sens>
+                    <name>écholocalisation précise</name>
+                    <precision>précis</precision>
+                    <range>27 m</range>
+                </sens>
+            </senses>
+        </perception>
+        <skills>
+            <skill>
+                <name>Acrobaties</name>
+                <bonus>+10</bonus>
+            </skill>
+            <skill>
+                <name>Athlétisme</name>
+                <bonus>+13</bonus>
+            </skill>
+            <skill>
+                <name>Discrétion</name>
+                <bonus>+12</bonus>
+            </skill>
+        </skills>
+        <attributes STR="+5" DEX="+2" CON="+4" INT="-3" WIS="+2" CHA="+1"/>
+        <interactionAbilities>
+            <special>
+                <name>Écholocation précise</name>
+                <description>Le morthak peut utiliser son ouïe comme un sens précis à la portée indiquée. Si le morthak subit des dégâts de son au-delà de sa résistance, ses sens sont surchargés et toutes les créatures lui sont masquées pendant 1 round.</description>
+            </special>
+        </interactionAbilities>
+        <armorClass>20</armorClass>
+        <saves REF="+10" FOR="+14" VOL="+10"/>
+        <health>70</health>
+        <immunities>
+            <immunity>visuel</immunity>
+        </immunities>
+        <resistances>
+            <resistance>
+                <name>son</name>
+                <value>5</value>
+            </resistance>
+        </resistances>
+        <reactiveAbilities>
+            <special type="reaction">
+                <name>Balayage auditif</name>
+                <trigger>
+                    Une créature à portée du morthak utilise une action audible
+                </trigger>
+                <effect>Le morthak effectue une Frappe de griffes contre la créature ayant déclenché l’effet.</effect>
+            </special>
+        </reactiveAbilities>
+        <speeds>
+            <speed>6 m</speed>
+            <speed type="burrow">9 m</speed>
+        </speeds>
+        <strikes>
+            <strike type="melee">
+                <name>mâchoires</name>
+                <bonus>+13</bonus>
+                <damages>
+                    <damage>
+                        <amount>2d8+5</amount>
+                        <damageType>perforants</damageType>
+                    </damage>
+                </damages>
+            </strike>
+            <strike type="melee">
+                <name>griffes</name>
+                <bonus>+13</bonus>
+                <traits>
+                    <trait>agile</trait>
+                </traits>
+                <damages>
+                    <damage>
+                        <amount>1d6+5</amount>
+                        <damageType>tranchants</damageType>
+                    </damage>
+                    <damage>
+                        <amount>1d6</amount>
+                        <damageType>son</damageType>
+                    </damage>
+                </damages>
+            </strike>
+            <strike type="ranged">
+                <name>hurlement</name>
+                <bonus>+10</bonus>
+                <traits>
+                    <trait>portée 18 m</trait>
+                    <trait>son</trait>
+                </traits>
+                <damages>
+                    <damage>
+                        <amount>4d6</amount>
+                        <damageType>son</damageType>
+                    </damage>
+                </damages>
+            </strike>
+        </strikes>
+        <offensiveAbilities>
+            <special type="activity" actions="2">
+                <name>Raclement dévastateur</name>
+                <traits>
+                    <trait>son</trait>
+                </traits>
+                <description> Le morthak effectue une Frappe de griffes contre une créature portant une armure de pierre ou de métal. Si la Frappe touche et que la Solidité de l’armure est inférieure ou égale à 12, l’armure est brisée.</description>
+            </special>
+        </offensiveAbilities>
+    </monster>
+    <monster>
+        <name>DRTHAK</name>
+        <type>CRÉATURE</type>
+        <level>6</level>
+        <creatureTraits>
+            <trait type="size">grande</trait>
+            <trait type="family">BÊTE</trait>
+        </creatureTraits>
+        <perception>
+            <bonus>+15</bonus>
+            <senses>
+                <sens>
+                    <name>dénué de vision</name>
+                </sens>
+                <sens>
+                    <name>écholocalisation précise</name>
+                    <precision>précis</precision>
+                    <range>36 m</range>
+                </sens>
+            </senses>
+        </perception>
+        <skills>
+            <skill>
+                <name>Athlétisme</name>
+                <bonus>+16</bonus>
+            </skill>
+            <skill>
+                <name>Discrétion</name>
+                <bonus>+17</bonus>
+            </skill>
+            <skill>
+                <name>Survie</name>
+                <bonus>+13</bonus>
+            </skill>
+        </skills>
+        <attributes STR="+4" DEX="+5" CON="+4" INT="-3" WIS="+3" CHA="-1"/>
+        <interactionAbilities>
+            <special>
+                <name>Inspiration profonde</name>
+                <description>Le drthak peut retenir sa respiration pendant environ 2 h.</description>
+            </special>
+            <special>
+                <name>Écholocation précise</name>
+                <description>Le drthak peut utiliser son ouïe comme un sens précis à la portée indiquée. Si le drthak subit des dégâts de son au-delà de sa résistance, ses sens sont surchargés et toutes les créatures lui sont masquées pendant 1 round.</description>
+            </special>
+        </interactionAbilities>
+        <armorClass>23</armorClass>
+        <saves REF="+17" FOR="+14" VOL="+11"/>
+        <health>110</health>
+        <immunities>
+            <immunity>visuel</immunity>
+        </immunities>
+        <resistances>
+            <resistance>
+                <name>son</name>
+                <value>5</value>
+            </resistance>
+        </resistances>
+        <reactiveAbilities>
+            <special type="reaction">
+                <name>Chasseur auditif</name>
+                <trigger>
+                    Une créature située à moins de 4,5 m effectue une action audible
+                </trigger>
+                <effect>Le drthak Marche rapidement ou Nage vers la créature.</effect>
+            </special>
+        </reactiveAbilities>
+        <speeds>
+            <speed>6 m</speed>
+            <speed type="swim">12 m</speed>
+        </speeds>
+        <strikes>
+            <strike type="melee">
+                <name>mâchoires</name>
+                <bonus>+16</bonus>
+                <damages>
+                    <damage>
+                        <amount>2d8+4</amount>
+                        <damageType>perforants</damageType>
+                    </damage>
+                </damages>
+                <extras>
+                    <extra>Empoignade</extra>
+                </extras>
+            </strike>
+            <strike type="ranged">
+                <name>hurlement</name>
+                <bonus>+17</bonus>
+                <traits>
+                    <trait>portée 18 m</trait>
+                    <trait>son</trait>
+                </traits>
+                <damages>
+                    <damage>
+                        <amount>4d6</amount>
+                        <damageType>son</damageType>
+                    </damage>
+                </damages>
+                <extras>
+                    <extra>mâchoires résonnantes</extra>
+                </extras>
+            </strike>
+        </strikes>
+        <offensiveAbilities>
+            <special type="activity" actions="2">
+                <name>Explosion de bulle</name>
+                <traits>
+                    <trait>eau</trait>
+                    <trait>son</trait>
+                </traits>
+                <requirements>Le drthak est sous l’eau</requirements>
+                <effect>Le drthak utilise son pouvoir sonique pour repousser l’eau dans une émanation de 9 m, qui s’effondre ensuite dans un torrent écrasant. Toutes les créatures de la zone, autres que le drthak, subissent 3d10 dégâts contondants (jet de Vigueur basique DD 24).</effect>
+            </special>
+            <special>
+                <name>Mâchoires résonnantes</name>
+                <description>Lorsque le drthak rate une Frappe de hurlement contre une créature empoignée ou entravée dans ses mâchoires, il lui inflige 2d6 points de dégâts de son.</description>
+            </special>
+            <special>
+                <name>Par le fond</name>
+                <description>Le drthak peut Nager à mi-vitesse lorsqu’il a une créature empoignée ou entravée dans ses mâchoires, l’entraînant avec lui</description>
+            </special>
+        </offensiveAbilities>
+    </monster>
+    <monster>
+        <name>SONIPHAK</name>
+        <type>CRÉATURE</type>
+        <level>9</level>
+        <creatureTraits>
+            <trait type="size">très grande</trait>
+            <trait type="family">BÊTE</trait>
+        </creatureTraits>
+        <perception>
+            <bonus>+21</bonus>
+            <senses>
+                <sens>
+                    <name>dénué de vision</name>
+                </sens>
+                <sens>
+                    <name>écholocalisation précise</name>
+                    <precision>précis</precision>
+                    <range>36 m</range>
+                </sens>
+            </senses>
+        </perception>
+        <languages>
+            <language>draconique</language>
+        </languages>
+        <skills>
+            <skill>
+                <name>Acrobaties</name>
+                <bonus>+19</bonus>
+            </skill>
+            <skill>
+                <name>Athlétisme</name>
+                <bonus>+20</bonus>
+            </skill>
+            <skill>
+                <name>Survie</name>
+                <bonus>+17</bonus>
+            </skill>
+        </skills>
+        <attributes STR="+7" DEX="+6" CON="+4" INT="-2" WIS="+4" CHA="+1"/>
+        <interactionAbilities>
+            <special>
+                <name>Écholocation précise</name>
+                <description>Le soniphak peut utiliser son ouïe comme un sens précis à la portée indiquée. Si le soniphak subit des dégâts de son au-delà de sa résistance, ses sens sont surchargés et toutes les créatures lui sont masquées pendant 1 round.</description>
+            </special>
+        </interactionAbilities>
+        <armorClass>27</armorClass>
+        <saves REF="+21" FOR="+21" VOL="+15"/>
+        <health>180</health>
+        <immunities>
+            <immunity>visuel</immunity>
+        </immunities>
+        <resistances>
+            <resistance>
+                <name>son</name>
+                <value>10</value>
+            </resistance>
+        </resistances>
+        <reactiveAbilities>
+            <special type="reaction">
+                <name>Cri pertubateur</name>
+                <trigger>
+                    Une créature située à moins de 9 m du soniphak utilise une action audible
+                </trigger>
+                <effect>Le soniphak effectue une Frappe de hurlement contre la créature ayant déclenché l’effet. En cas de coup critique, l’action de concentration à l’origine de la réaction est interrompue.</effect>
+            </special>
+        </reactiveAbilities>
+        <speeds>
+            <speed>6 m</speed>
+            <speed type="fly">15 m</speed>
+        </speeds>
+        <strikes>
+            <strike type="melee">
+                <name>mâchoires</name>
+                <bonus>+19</bonus>
+                <traits>
+                    <trait>allonge 4,5 m</trait>
+                </traits>
+                <damages>
+                    <damage>
+                        <amount>3d8+9</amount>
+                        <damageType>perforants</damageType>
+                    </damage>
+                </damages>
+            </strike>
+            <strike type="melee">
+                <name>griffes</name>
+                <bonus>+19</bonus>
+                <traits>
+                    <trait>agile</trait>
+                </traits>
+                <damages>
+                    <damage>
+                        <amount>3d6+9</amount>
+                        <damageType>tranchants</damageType>
+                    </damage>
+                </damages>
+                <extras>
+                    <extra>Empoignade</extra>
+                </extras>
+            </strike>
+            <strike type="ranged">
+                <name>hurlement</name>
+                <bonus>+19</bonus>
+                <traits>
+                    <trait>portée 18 m</trait>
+                    <trait>son</trait>
+                </traits>
+                <damages>
+                    <damage>
+                        <amount>6d6</amount>
+                        <damageType>son</damageType>
+                    </damage>
+                </damages>
+                <extras>
+                    <extra>larsen</extra>
+                </extras>
+            </strike>
+        </strikes>
+        <offensiveAbilities>
+            <special type="activity" actions="2">
+                <name>Cri fracassant</name>
+                <traits>
+                    <trait>son</trait>
+                </traits>
+                <description>Le soniphak peut concentrer son cri sur une surface de pierre ou de rocher dans un rayon de 18 m pour provoquer une explosion de 4,5 m à partir du point d’impact. Les créatures dans la zone subissent 5d6 dégâts perforants (jet de Réflexes basique DD 28), et la zone devient un terrain difficile à cause des fragments de pierre.</description>
+            </special>
+            <special>
+                <name>Larsen</name>
+                <description>Chaque fois qu’un soniphak touche avec une Frappe de hurlement, le larsen inflige1d6 points de dégâts de son à chaque créature que le soniphak a empoignée ou entravée.</description>
+            </special>
+            <special>
+                <name>Saisir</name>
+                <description>Le soniphak peut Voler à la moitié de sa Vitesse avec une créature qu’il a empoignée ou entravée dans ses griffes, et l’emporter avec lui.</description>
+            </special>
+        </offensiveAbilities>
+    </monster>
+    <monster>
+        <name>ÉCORNIPLUME</name>
+        <type>CRÉATURE</type>
+        <level>5</level>
+        <creatureTraits>
+            <trait type="size">petite</trait>
+            <trait type="family">animal</trait>
+        </creatureTraits>
+        <perception>
+            <bonus>+13</bonus>
+            <senses>
+                <sens>
+                    <name>vision nocturne</name>
+                </sens>
+            </senses>
+        </perception>
+        <skills>
+            <skill>
+                <name>Acrobaties</name>
+                <bonus>+12</bonus>
+            </skill>
+            <skill>
+                <name>Discrétion</name>
+                <bonus>+12</bonus>
+            </skill>
+            <skill>
+                <name>Larcin</name>
+                <bonus>+14</bonus>
+            </skill>
+        </skills>
+        <attributes STR="+3" DEX="+5" CON="+2" INT="-4" WIS="+1" CHA="+2"/>
+        <armorClass>21</armorClass>
+        <saves REF="+16" FOR="+14" VOL="+8"/>
+        <health>76</health>
+        <speeds>
+            <speed>6 m</speed>
+            <speed type="fly">12 m</speed>
+        </speeds>
+        <strikes>
+            <strike type="melee">
+                <name>bec</name>
+                <bonus>+12</bonus>
+                <traits>
+                    <trait>finesse</trait>
+                </traits>
+                <damages>
+                    <damage>
+                        <amount>2d8+3</amount>
+                        <damageType>perforants</damageType>
+                    </damage>
+                </damages>
+            </strike>
+            <strike type="melee">
+                <name>serres</name>
+                <bonus>+12</bonus>
+                <traits>
+                    <trait>agile</trait>
+                    <trait>finesse</trait>
+                </traits>
+                <damages>
+                    <damage>
+                        <amount>2d6+3</amount>
+                        <damageType>tranchants</damageType>
+                    </damage>
+                </damages>
+            </strike>
+        </strikes>
+        <offensiveAbilities>
+            <special type="activity" actions="1">
+                <name>Lancer un débris</name>
+                <requirements>L’écorniplume a Saisi un débris</requirements>
+                <effect>L’écorniplume lance le débris sur une cible dans un rayon de 6 m autour de lui, en effectuant un jet d’attaque avec un modificateur de +12. En cas de réussite, la cible subit 2d10+5 dégâts contondants.</effect>
+            </special>
+            <special>
+                <name>Nid de débris</name>
+                <description>Le nid de débris d’un écorniplume couvre une surface de 4,5 m de côté. La zone est un terrain difficile et dangereux pour toutes les créatures qui ne sont pas des écorniplumes. Une créature qui se déplace au sol dans le nid subit 3 dégâts perforants pour chaque case de la zone dans laquelle elle entre. Les écorniplumes peuvent Se mettre à l’abri n’importe où dans le nid.</description>
+            </special>
+            <special type="activity" actions="1">
+                <name>Saisir un débris</name>
+                <requirements>L’écorniplume se trouve dans son nid ou dans un autre environnement riche en débris</requirements>
+                <effect>
+                    L’écorniplume utilise une action Interagir pour saisir un objet dans son bec, choisi au hasard ; lancez 1d4 pour le déterminer. L’écorniplume accède aux pouvoirs indiqués jusqu’à ce qu’il utilise Lancer un débris ou qu’il le Relâche. L’écorniplume ne peut pas utiliser son attaque de bec pendant qu’il Saisit un débris.
+                    <table>
+                        <headerLine>
+                            <cell>d4</cell>
+                            <cell>Objet</cell>
+                            <cell>Effet</cell>
+                        </headerLine>
+                        <line>
+                            <cell>1</cell>
+                            <cell>Débris d’armure</cell>
+                            <cell>L’écorniplume gagne un bonus de circonstances de +2 à sa CA.</cell>
+                        </line>
+                        <line>
+                            <cell>2</cell>
+                            <cell>Lame brisée</cell>
+                            <cell>L’écorniplume obtient une Frappe au corps à corps de lame brisée avec un modificateur d’attaque de +12 qui inflige 2d10+6 dégâts tranchants.</cell>
+                        </line>
+                        <line>
+                            <cell>3</cell>
+                            <cell>Bombe intacte</cell>
+                            <cell>Lorsque l’écorniplume lance cela avec Lancer un débris, tous les dégâts sont des dégâts de feu et la bombe inflige également 3 dégâts d’éclaboussure de feu.</cell>
+                        </line>
+                        <line>
+                            <cell>4</cell>
+                            <cell>Baguette</cell>
+                            <cell>L’écorniplume obtient une Frappe à distance de défectueuse carreau magique avec un modificateur d’attaque de +14 qui inflige 2d6+6 dégâts de force.</cell>
+                        </line>
+                    </table>
+                </effect>
+            </special>
+        </offensiveAbilities>
+    </monster>
+    <monster>
+        <name>ÉCUREUIL DES CAVERNES TALDORIEN</name>
+        <type>CRÉATURE</type>
+        <level>5</level>
+        <creatureTraits>
+            <trait type="size">moyenne</trait>
+            <trait type="family">animal</trait>
+        </creatureTraits>
+        <perception>
+            <bonus>+15</bonus>
+            <senses>
+                <sens>
+                    <name>odorat</name>
+                    <precision>imprécis</precision>
+                    <range>18 m</range>
+                </sens>
+                <sens>
+                    <name>perception des vibrations</name>
+                    <precision>imprécis</precision>
+                    <range>12 m</range>
+                </sens>
+                <sens>
+                    <name>vision nocturne</name>
+                </sens>
+            </senses>
+        </perception>
+        <skills>
+            <skill>
+                <name>Acrobaties</name>
+                <bonus>+11</bonus>
+            </skill>
+            <skill>
+                <name>Athlétisme</name>
+                <bonus>+12</bonus>
+            </skill>
+            <skill>
+                <name>Survie</name>
+                <bonus>+13</bonus>
+            </skill>
+        </skills>
+        <attributes STR="+4" DEX="+4" CON="+5" INT="-4" WIS="+1" CHA="+2"/>
+        <interactionAbilities>
+            <special>
+                <name>Bajoues à gemmes</name>
+                <description>L’écureuil des cavernes peut stocker jusqu’à six pierres précieuses dans ses bajoues. Il commence généralement le combat avec six gemmes et perd une gemme chaque fois qu’il en crache une.</description>
+            </special>
+        </interactionAbilities>
+        <armorClass>21</armorClass>
+        <saves REF="+15" FOR="+13" VOL="+9"/>
+        <health>95</health>
+        <reactiveAbilities>
+            <special type="reaction">
+                <name>Cri défensif</name>
+                <traits><trait>audible</trait></traits>
+                <trigger>L’écureuil des cavernes fait un jet d’initiative ou a subi des dégâts avant l’initiative</trigger>
+                <effect>L’écureuil des cavernes pousse un cri perçant qui alerte tous les autres écureuils des cavernes de la zone de sa situation critique. Il utilise Force hurlante.</effect>
+            </special>
+        </reactiveAbilities>
+        <speeds>
+            <speed>9 m</speed>
+            <speed type="burrow">12 m</speed>
+        </speeds>
+        <strikes>
+            <strike type="melee">
+                <name>mâchoires</name>
+                <bonus>+15</bonus>
+                <traits>
+                    <trait>agile</trait>
+                </traits>
+                <damages>
+                    <damage>
+                        <amount>2d6+4</amount>
+                        <damageType>perforants</damageType>
+                    </damage>
+                </damages>
+                <extras><extra>Empoignade</extra></extras>
+            </strike>
+            <strike type="melee">
+                <name>griffes</name>
+                <bonus>+13</bonus>
+                <traits>
+                    <trait>agile</trait>
+                </traits>
+                <damages>
+                    <damage>
+                        <amount>2d8+4</amount>
+                        <damageType>tranchants</damageType>
+                    </damage>
+                </damages>
+            </strike>
+            <strike type="ranged">
+                <name>crachat de gemme</name>
+                <bonus>+15</bonus>
+                <traits><trait>portée 6 m</trait></traits>
+                <damages>
+                    <damage>
+                        <amount>2d8+6</amount>
+                        <damageType>contondants</damageType>
+                    </damage>
+                </damages>
+                <extras><extra>gemme de commotion</extra></extras>
+            </strike>
+        </strikes>
+        <offensiveAbilities>
+            <special type="activity" actions="1">
+                <name>Fore hurlante</name>
+                <traits>
+                    <trait>audible</trait>
+                    <trait>son</trait>
+                </traits>
+                <description>L’écureuil des cavernes pousse un cri terrible. Les créatures qui ne sont pas des écureuils des cavernes et qui se trouvent dans un rayon de 9 m autour de lui doivent réussir un jet de Vigueur DD 22 ou subir 2d10 dégâts de son. En cas d’échec critique, la créature est sourde pendant 1 min. L’écureuil des cavernes ne peut plus utiliser Force hurlante pendant 1d4 rounds.</description>
+            </special>
+            <special>
+                <name>Gemme de commotion</name>
+                <description>En cas de coup critique avec une Frappe de crachat de gemme, la cible doit réussir un jet de Vigueur DD 22 ou être étourdie 1.</description>
+            </special>
+            <special type="activity" actions="2">
+                <name>Recherche de gemmes</name>
+                <description>L’écureuil des cavernes plonge sous terre à la recherche de pierres précieuses. Il Creuse sur une distance maximale égale à sa Vitesse. Il doit terminer son déplacement à la surface. Pendant qu’il creuse, il trouve 1d4 gemmes peu précieuses (comme du sel ou du quartz) qu’il fourre dans ses bajoues, jusqu’à un maximum de 6.</description>
+            </special>
+            <special>
+                <name>Vitesse naturelle</name>
+                <description>Un écureuil des cavernes n’est pas affecté par les terrains difficiles en terre ou en pierre.</description>
+            </special>
+        </offensiveAbilities>
+    </monster>
+    <monster>
+        <name>GARDIEN DES CAVERNES ET DES TERRIERS</name>
+        <type>CRÉATURE</type>
+        <level>22</level>
+        <creatureTraits>
+            <trait type="rarity">UNIQUE</trait>
+            <trait type="size">GIGANTESQUE</trait>
+            <trait type="family">BÊTE</trait>
+            <trait type="family">TERRE</trait>
+        </creatureTraits>
+        <perception>
+            <bonus>+36</bonus>
+            <senses>
+                <sens><name>vision dans le noir</name></sens>
+                <sens><name>perception des vibrations</name><precision>imprécis</precision><range>18 m</range></sens>
+            </senses>
+        </perception>
+        <languages>
+            <language>voix de la nature</language>
+        </languages>
+        <skills>
+            <skill><name>Athlétisme</name><bonus>+42</bonus><skillSpecial>+45 pour Sauter en hauteur ou en longueur</skillSpecial></skill>
+            <skill><name>Connaissances en monde souterrain</name><bonus>+35</bonus></skill>
+            <skill><name>Discrétion</name><bonus>+37</bonus></skill>
+            <skill><name>Intimidation</name><bonus>+37</bonus></skill>
+        </skills>
+        <attributes STR="+12" DEX="+8" CON="+10" INT="+6" WIS="+8" CHA="+9"/>
+        <interactionAbilities>
+            <special>
+                <name>Voix de la nature</name>
+                <description>p. 214</description>
+            </special>
+            <special>
+                <name>Couronne de gardien</name>
+                <description>p. 212</description>
+            </special>
+            <special>
+                <name>Adhésion aux parois</name>
+                <description>Le Gardien des cavernes et des terriers adhère aux surfaces à l’aide de ses pattes segmentées. Il n’a pas besoin d’utiliser une main pour s’accrocher aux murs ou aux plafonds.</description>
+            </special>
+            <special>
+                <name>Appelé vers les profondeurs</name>
+                <description>Les profondeurs appellent le gardien, surtout lorsqu’il se déplace dans les airs. Lorsqu’il Saute en longueur, il peut utiliser la distance inutilisée du Saut en longueur pour Creuser. De plus, le gardien peut Creuser à travers n’importe quelle matière terreuse, y compris la roche. Le cas échéant, il se déplace à sa Vitesse de creusement maximale.</description>
+            </special>
+        </interactionAbilities>
+        <armorClass>45</armorClass>
+        <saves REF="+36" FOR="+39" VOL="+33" saveSpecial="+1 aux jets de sauvegarde contre primordiale"/>
+        <health>500</health>
+        <immunities><immunity>feu</immunity></immunities>
+        <weaknesses><weakness><name>froid</name><value>20</value></weakness></weaknesses>
+        <resistances>
+            <resistance><name>physique</name><value>10</value><exceptions><exception>adamantium</exception></exceptions></resistance>
+            <resistance><name>son</name><value>20</value></resistance>
+        </resistances>
+        <reactiveAbilities>
+            <special type="reaction">
+                <name>Réflexe magmatique</name>
+                <trigger>Le gardien est la cible d’une attaque</trigger>
+                <effect>Le gardien pulvérise du magma en sautant pour échapper au danger. Cette pulvérisation inflige 6d12 dégâts de feu à toutes les créatures adjacentes (jet de Réflexes basique DD 42). Il s’éloigne ensuite en Bondisant ou en Faisant un pas, et gagne un bonus de circonstances de +2 à sa CA contre l’attaque ayant déclenché cet effet.</effect>
+            </special>
+        </reactiveAbilities>
+        <speeds>
+            <speed>12 m</speed>
+            <speed type="burrow">12 m</speed>
+        </speeds>
+        <strikes>
+            <strike type="melee">
+                <name>couronne de cornes</name>
+                <bonus>+41</bonus>
+                <traits><trait>allonge 3 m</trait><trait>magique</trait></traits>
+                <damages><damage><amount>4d12+22</amount><damageType>perforant</damageType></damage></damages>
+            </strike>
+            <strike type="melee">
+                <name>mandibules</name>
+                <bonus>+41</bonus>
+                <traits><trait>agile</trait><trait>allonge 4,5 m</trait><trait>magique</trait></traits>
+                <damages><damage><amount>4d10+22</amount><damageType>contondant</damageType></damage></damages>
+                <extras><extra>Empoignade améliorée</extra></extras>
+            </strike>
+            <strike type="ranged">
+                <name>stridulations</name>
+                <bonus>+33</bonus>
+                <traits><trait>magique</trait><trait>portée 18 m</trait></traits>
+                <damages><damage><amount>4d10+18</amount><damageType>son</damageType></damage></damages>
+            </strike>
+            <strike type="ranged">
+                <name>jet de magma</name>
+                <bonus>+33</bonus>
+                <traits><trait>facteur de portée 18 m</trait><trait>magique</trait></traits>
+                <damages>
+                    <damage><amount>4d8+13</amount><damageType>feu</damageType></damage>
+                    <damage><amount>2d6</amount><damageType>feu persistant</damageType></damage>
+                </damages>
+                <extras><extra>cage d'obsidienne</extra></extras>
+            </strike>
+        </strikes>
+        <offensiveAbilities>
+            <special type="activity" actions="0">
+                <name>Enfouir sous la pierre</name>
+                <traits><trait>attaque</trait><trait>primordiale</trait></traits>
+                <requirements>Le gardien a empoigné une créature</requirements>
+                <effect>Le gardien tente d’enfoncer une créature empoignée dans ses mandibules à l’intérieur d’une fissure dans la terre qui s’ouvre sous elle. Le gardien fait un test d’Athlétisme contre le DD de Réflexes de la créature empoignée. S’il réussit, il enfouit la créature dans le sol. La créature subit 10d10 dégâts contondants. Elle est également immobilisée, ralentie 1 et doit retenir sa respiration ou commencer à s’asphyxier jusqu’à ce qu’elle S’échappe (DD 42). Si la créature est toujours enfouie à la fin de son tour, elle subit 5d10 dégâts contondants.</effect>
+            </special>
+            <special type="activity" actions="2">
+                <name>Excavation vibratoire</name>
+                <traits><trait>manipulation</trait><trait>primordiale</trait></traits>
+                <description>Le gardien pousse un cri retentissant qui brise la terre et la pierre. Il crée une fosse de 3 m de côté et de 15 m de profondeur dans la terre ou la pierre dans un rayon de 18 m autour de lui.</description>
+            </special>
+            <special type="activity" actions="2">
+                <name>Saut éruptif</name>
+                <traits><trait>primordiale</trait></traits>
+                <description>Le gardien provoque l’éruption d’un jet de lave, puis saute hors de la lave qui se solidifie pendant qu’elle refroidit. Le gardien Bondit d’une distance maximale égale à deux fois sa Vitesse. Lorsqu’il se pose, la violence de l’impact inflige 6d12 dégâts contondants à toutes les créatures situées dans un rayon de 4,5 m autour de lui (jet de Vigueur basique DD 42). En cas d’échec critique, la créature est également repoussée de 3 m.</description>
+            </special>
+            <special>
+                <name>Cage d’obsidienne</name>
+                <description>L’obsidienne qui refroidit rapidement s’accroche au corps de la cible et se solidifie autour de ses membres. La cible doit faire un jet de Réflexes DD 42. En cas d’échec, elle est immobilisée jusqu’à ce qu’elle S’échappe (DD 42). En cas d’échec critique, elle est prise par surprise aussi longtemps qu’elle reste immobilisée.</description>
+            </special>
+        </offensiveAbilities>
+    </monster>
+
+    <monster>
+        <name>GARDIEN DES CIMES ET DES CIEUX</name>
+        <type>CRÉATURE</type>
+        <level>22</level>
+        <creatureTraits>
+            <trait type="rarity">UNIQUE</trait>
+            <trait type="size">GIGANTESQUE</trait>
+            <trait type="family">AIR</trait>
+            <trait type="family">BÊTE</trait>
+        </creatureTraits>
+        <perception>
+            <bonus>+40</bonus>
+            <senses>
+                <sens><name>vision dans le noir</name></sens>
+                <sens><name>odorat</name><precision>imprécis</precision><range>18 m</range></sens>
+                <sens><name>vision malgré la tempête</name></sens>
+            </senses>
+        </perception>
+        <languages>
+            <language>voix de la nature</language>
+        </languages>
+        <skills>
+            <skill><name>Acrobaties</name><bonus>+42</bonus></skill>
+            <skill><name>Connaissances en oiseaux</name><bonus>+38</bonus></skill>
+            <skill><name>Connaissances en montagnes</name><bonus>+38</bonus></skill>
+            <skill><name>Diplomatie</name><bonus>+34</bonus></skill>
+            <skill><name>Médecine</name><bonus>+38</bonus></skill>
+            <skill><name>Nature</name><bonus>+40</bonus></skill>
+            <skill><name>Survie</name><bonus>+38</bonus></skill>
+        </skills>
+        <attributes STR="+8" DEX="+12" CON="+9" INT="+6" WIS="+10" CHA="+8"/>
+        <interactionAbilities>
+            <special>
+                <name>Voix de la nature</name>
+                <description>p. 214</description>
+            </special>
+            <special>
+                <name>Couronne de gardien</name>
+                <description>p. 212</description>
+            </special>
+            <special>
+                <name>Vision malgré la tempête</name>
+                <description>Le vent, les précipitations et les nuages ne gênent pas la vision du gardien : il ignore l’état masqué dû aux tempêtes, à la brume, aux précipitations et aux conditions climatiques similaires.</description>
+            </special>
+        </interactionAbilities>
+        <armorClass>48</armorClass>
+        <saves REF="+40" FOR="+36" VOL="+38" saveSpecial="+1 aux jets de sauvegarde contre primordiale"/>
+        <health>445</health>
+        <immunities><immunity>électricité</immunity></immunities>
+        <resistances>
+            <resistance><name>feu</name><value>15</value></resistance>
+            <resistance><name>froid</name><value>15</value></resistance>
+        </resistances>
+        <reactiveAbilities>
+            <special>
+                <name>Tempête de courants descendants</name>
+                <traits><trait>air</trait><trait>primordiale</trait></traits>
+                <trigger>Le gardien Vole</trigger>
+                <effect>Les battements d’ailes du gardien génèrent de puissantes bourrasques qui font dévier les créatures plus petites de leur trajectoire. Une émanation de 18 m, centrée sur le gardien, se remplit de vents traversés d’éclairs jusqu’au début du prochain tour du gardien. Les créatures doivent réussir un jet de Réflexes DD 42 pour pouvoir entreprendre une action de déplacement à l’intérieur des vents ; les créatures volantes réduisent d’un degré de succès leur résultat. Les créatures qui obtiennent un échec critique sont repoussées de 9 m par rapport au gardien, elles sont jetées à terre et subissent 4d6 dégâts d’électricité.</effect>
+            </special>
+        </reactiveAbilities>
+        <speeds speedSpecial="déplacement sans entrave">
+            <speed>18 m</speed>
+            <speed type="fly">72 m</speed>
+        </speeds>
+        <strikes>
+            <strike type="melee">
+                <name>bec</name>
+                <bonus>+41</bonus>
+                <traits><trait>allonge 3 m</trait><trait>finesse</trait><trait>magique</trait></traits>
+                <damages><damage><amount>4d12+16</amount><damageType>perforant</damageType></damage></damages>
+            </strike>
+            <strike type="melee">
+                <name>couronne de cornes</name>
+                <bonus>+41</bonus>
+                <traits><trait>agile</trait><trait>allonge 4,5 m</trait><trait>finesse</trait><trait>magique</trait></traits>
+                <damages><damage><amount>4d8+16</amount><damageType>perforant</damageType></damage></damages>
+            </strike>
+            <strike type="ranged">
+                <name>coup de vent violent</name>
+                <bonus>+39</bonus>
+                <traits><trait>air</trait><trait>facteur de portée 27 m</trait><trait>magique</trait></traits>
+                <damages>
+                    <damage><amount>2d8+16</amount><damageType>contondant</damageType></damage>
+                    <damage><amount>2d8</amount><damageType>électricité</damageType></damage>
+                </damages>
+            </strike>
+        </strikes>
+        <offensiveAbilities>
+            <spellList source="innate" tradition="primal" DD="45">
+                <rank rank="10">
+                    <spells>
+                        <spell>vivifier</spell>
+                        <spell>tempête furieuse</spell>
+                    </spells>
+                </rank>
+                <rank rank="9">
+                    <spells>
+                        <spell source="SdM p. 135">source apaisante</spell>
+                    </spells>
+                </rank>
+                <rank rank="4" constant="TRUE">
+                    <spells>
+                        <spell>déplacement sans entrave</spell>
+                    </spells>
+                </rank>
+            </spellList>
+            <special type="activity" actions="1">
+                <name>Chant des cieux</name>
+                <traits><trait>air</trait><trait>audible</trait><trait>primordiale</trait></traits>
+                <description>Le gardien entonne un joyeux chant d’oiseau, accordant un bienfait qui évoque la liberté qu’offre le vol à tous ses alliés dans un rayon de 18 m autour de lui. Pendant la minute suivante, les alliés affectés gagnent déplacement sans entrave, une Vitesse de vol de 18 m, et considèrent les créatures au sol comme prises par surprise tant qu’ils volent.</description>
+            </special>
+            <special type="activity" actions="2">
+                <name>Expiration de cristaux</name>
+                <traits><trait>froid</trait><trait>primordiale</trait></traits>
+                <description>Le gardien inspire puis souffle une tempête de cristaux de glace. Toutes les créatures dans un cône de 18 m subissent 4d8 dégâts de froid et 4d8 dégâts tranchants (jet de Réflexes basique DD 44). En cas d’échec critique, la créature est immobilisée par la glace. Le gardien ne peut plus utiliser Expiration de cristaux pendant 1d4 rounds.</description>
+            </special>
+            <special type="activity" actions="0">
+                <name>Tempête de courants descendants</name>
+                <traits>
+                    <trait>air</trait>
+                    <trait>primordiale</trait>
+                </traits>
+                <trigger>Le gardien Vole</trigger>
+                <effect>Les battements d’ailes du gardien génèrent de puissantes bourrasques qui font dévier les créatures plus petites de leur trajectoire. Une émanation de 18 m, centrée sur le gardien, se remplit de vents traversés d’éclairs jusqu’au début du prochain tour du gardien. Les créatures doivent réussir un jet de Réflexes DD 42 pour pouvoir entreprendre une action de déplacement à l’intérieur des vents ; les créatures volantes réduisent d’un degré de succès leur résultat. Les créatures qui obtiennent un échec critique sont repoussées de 9 m par rapport au gardien, elles sont jetées à terre et subissent 4d6 dégâts d’électricité.</effect>
+            </special>
+            <special type="activity" actions="3">
+                <name>Vol orogène</name>
+                <traits><trait>air</trait><trait>déplacement</trait><trait>primordiale</trait><trait>terre</trait></traits>
+                <description>Le gardien vole en ligne droite vers le haut sur une distance de 72 m. Ce faisant, le sol dans une explosion de 9 m à partir de son point de départ s’élève en un pilier rocheux de 36 m de haut, son sommet semblable à celui d’une montagne, qui devient un terrain très difficile. Toutes les autres créatures dans cette explosion doivent réussir un jet de Vigueur DD 44 ou être fatiguées par le changement soudain d’altitude. Le gardien s’envole alors directement vers le centre du sommet du pilier et enfonce ses cornes dans la pierre. Lorsqu’il se pose, la montagne nouvellement formée se met à trembler. Toutes les autres créatures dans la zone doivent réussir un jet de Réflexes DD 42 ou chuter du sommet à une hauteur de 36 m, et atterrir dans la case la plus proche à l’extérieur de la zone. Le pilier est permanent.</description>
+            </special>
+        </offensiveAbilities>
+    </monster>
+
+    <monster>
+        <name>GARDIEN DES FORÊTS ET DES PRAIRIES</name>
+        <type>CRÉATURE</type>
+        <level>22</level>
+        <creatureTraits>
+            <trait type="rarity">UNIQUE</trait>
+            <trait type="size">GIGANTESQUE</trait>
+            <trait type="family">BÊTE</trait>
+            <trait type="family">BOIS</trait>
+        </creatureTraits>
+        <perception>
+            <bonus>+36</bonus>
+            <senses>
+                <sens><name>vision dans le noir supérieure</name></sens>
+                <sens><name>odorat</name><precision>imprécis</precision><range>1,5 km</range></sens>
+            </senses>
+        </perception>
+        <languages>
+            <language>voix de la nature</language>
+        </languages>
+        <skills>
+            <skill><name>Acrobaties</name><bonus>+40</bonus><skillSpecial>+44 pour S’échapper</skillSpecial></skill>
+            <skill><name>Diplomatie</name><bonus>+40</bonus></skill>
+            <skill><name>Discrétion</name><bonus>+42</bonus></skill>
+            <skill><name>Duperie</name><bonus>+44</bonus></skill>
+            <skill><name>Intimidation</name><bonus>+42</bonus></skill>
+            <skill><name>Larcin</name><bonus>+40</bonus></skill>
+            <skill><name>Nature</name><bonus>+36</bonus></skill>
+            <skill><name>Société</name><bonus>+39</bonus></skill>
+            <skill><name>Survie</name><bonus>+36</bonus></skill>
+        </skills>
+        <attributes STR="+7" DEX="+10" CON="+8" INT="+11" WIS="+8" CHA="+12"/>
+        <interactionAbilities>
+            <special>
+                <name>Voix de la nature</name>
+                <description>p. 214</description>
+            </special>
+            <special>
+                <name>Couronne de gardien</name>
+                <description>p. 212</description>
+            </special>
+            <special>
+                <name>Attaque sournoise</name>
+                <description>Le gardien inflige 3d6 dégâts de précision supplémentaires aux créatures prises par surprise.</description>
+            </special>
+        </interactionAbilities>
+        <armorClass>48</armorClass>
+        <saves REF="+42" FOR="+34" VOL="+36" saveSpecial="+1 aux jets de sauvegarde contre primordiale"/>
+        <health>435</health>
+        <reactiveAbilities>
+            <special type="reaction">
+                <name>Supercherie sauvage</name>
+                <traits><trait>mental</trait><trait>primordiale</trait></traits>
+                <trigger>Un ennemi à 18 m ou moins cible le gardien avec une attaque, un sort ou un autre pouvoir</trigger>
+                <effect>La créature qui déclenche cet effet doit faire un jet de Volonté DD 45. En cas d’échec, le gardien redirige le pouvoir sur une autre créature à portée dans un éclat de rire mental ; cela ne produit aucun effet s’il n’y a pas d’autres cibles éligibles. La créature qui déclenche cet effet est ensuite immunisée pendant 24 h, sauf en cas d’échec critique.</effect>
+            </special>
+        </reactiveAbilities>
+        <speeds speedSpecial="passage en forêt">
+            <speed>18 m</speed>
+            <speed type="climb">9 m</speed>
+        </speeds>
+        <strikes>
+            <strike type="melee">
+                <name>mâchoires</name>
+                <bonus>+38</bonus>
+                <traits><trait>allonge 4,5 m</trait><trait>finesse</trait><trait>magique</trait></traits>
+                <damages><damage><amount>4d10+15</amount><damageType>perforant</damageType></damage></damages>
+            </strike>
+            <strike type="melee">
+                <name>couronne de cornes</name>
+                <bonus>+40</bonus>
+                <traits><trait>allonge 3 m</trait><trait>finesse</trait><trait>magique</trait></traits>
+                <damages>
+                    <damage><amount>4d8+15</amount><damageType>perforant</damageType></damage>
+                    <damage><amount>2d6</amount><damageType>poison persistant</damageType></damage>
+                </damages>
+            </strike>
+            <strike type="melee">
+                <name>griffes</name>
+                <bonus>+40</bonus>
+                <traits><trait>agile</trait><trait>allonge 4,5 m</trait><trait>finesse</trait><trait>magique</trait></traits>
+                <damages><damage><amount>4d6+15</amount><damageType>tranchant</damageType></damage></damages>
+            </strike>
+            <strike type="ranged">
+                <name>rire du renard</name>
+                <bonus>+40</bonus>
+                <traits><trait>magique</trait><trait>portée 36 m</trait></traits>
+                <damages>
+                    <damage><amount>4d10</amount><damageType>son</damageType></damage>
+                    <damage><amount>3d6</amount><damageType>mental</damageType></damage>
+                </damages>
+            </strike>
+        </strikes>
+        <offensiveAbilities>
+            <spellList source="innate" tradition="primal" DD="45" attack="+41">
+                <rank rank="10">
+                    <spells>
+                        <spell>manifestation</spell>
+                        <spell source="SdM p. 137">tempête de pétales</spell>
+                    </spells>
+                </rank>
+                <rank rank="4">
+                    <spells>
+                        <spell spellSpecial="à volonté">translocation</spell>
+                    </spells>
+                </rank>
+                <rank rank="10" cantrips="TRUE">
+                    <spells>
+                        <spell>chimère</spell>
+                        <spell>lumière</spell>
+                    </spells>
+                </rank>
+                <rank rank="7" constant="TRUE">
+                    <spells>
+                        <spell>langage universel</spell>
+                        <spell>voile occultant</spell>
+                    </spells>
+                </rank>
+            </spellList>
+            <special type="activity" actions="1">
+                <name>Bond magique</name>
+                <description>Le gardien Marche rapidement jusqu’à sa Vitesse, Bondit à une hauteur égale ou inférieure à sa Vitesse ou Lance translocation ; il Frappe à la fin de ce déplacement. Si le gardien a commencé cette action caché, il le reste jusqu’à la fin de la Frappe conférée par ce pouvoir.</description>
+            </special>
+            <special type="activity" actions="1">
+                <name>Changement de forme</name>
+                <traits><trait>concentration</trait><trait>métamorphose</trait><trait>primordiale</trait></traits>
+                <description>La taille du gardien devient Très Petite, Petite, Moyenne, Grande ou Très Grande (son allonge passe à 0 m pour Très Petite, 1,5 m pour Moyenne ou Grande, et 3 m pour Très Grande). Le gardien conserve sa forme mais peut changer de couleur en fonction des saisons.</description>
+            </special>
+            <special type="activity" actions="1">
+                <name>Gage du renard</name>
+                <traits><trait>concentration</trait><trait>mental</trait><trait>primordiale</trait></traits>
+                <description>Le gardien accorde un bienfait à une créature consentante autre que lui-même qu’il peut voir, et exige qu’elle promette d’utiliser le pouvoir accordé pour détruire ou saper les créations de la civilisation. La cible bénéficie d’un bonus de statut de +1 aux jets d’attaque et de +5 aux dégâts contre les créatures artificielles, les structures et les objets construits par des humanoïdes. Elle bénéficie également d’un bonus de statut +2 aux tests de Discrétion contre les humanoïdes. Le gardien ne peut confier qu’un seul gage à la fois. Le gage prend fin si la cible est capturée ou meurt.</description>
+            </special>
+            <special type="activity" actions="1">
+                <name>Panorama idyllique</name>
+                <traits><trait>concentration</trait><trait>primordiale</trait></traits>
+                <frequency>1 fois/heure</frequency>
+                <effect>Le gardien crée une zone de calme apaisant. Cette zone est identique à un mirage de rang 5 représentant une prairie ou une forêt paisible, sauf que la zone est une explosion de 60 m. Lorsqu’il se trouve dans la zone d’un Panorama idyllique, le gardien exerce un contrôle significatif sur les sens des créatures qui s’y trouvent et peut lancer double illusoire et silence de rang 2 à volonté.</effect>
+            </special>
+            <special>
+                <name>Passage en forêt</name>
+                <description>Le Gardien des forêts et des prairies ignore les terrains difficiles et très difficiles causés par la végétation non magique.</description>
+            </special>
+        </offensiveAbilities>
+    </monster>
+
+    <monster>
+        <name>GARDIEN DE L’OCÉAN ET DES RIVIÈRES</name>
+        <type>CRÉATURE</type>
+        <level>22</level>
+        <creatureTraits>
+            <trait type="rarity">UNIQUE</trait>
+            <trait type="size">GIGANTESQUE</trait>
+            <trait type="family">AQUATIQUE</trait>
+            <trait type="family">BÊTE</trait>
+            <trait type="family">EAU</trait>
+        </creatureTraits>
+        <perception>
+            <bonus>+39</bonus>
+            <senses>
+                <sens><name>vision dans le noir</name></sens>
+                <sens><name>odorat</name><precision>imprécis</precision><range>60 m</range></sens>
+            </senses>
+        </perception>
+        <languages>
+            <language>voix de la nature</language>
+        </languages>
+        <skills>
+            <skill><name>Acrobaties</name><bonus>+37</bonus></skill>
+            <skill><name>Athlétisme</name><bonus>+40</bonus></skill>
+            <skill><name>Discrétion</name><bonus>+42</bonus></skill>
+            <skill><name>Intimidation</name><bonus>+36</bonus></skill>
+            <skill><name>Nature</name><bonus>+39</bonus></skill>
+            <skill><name>Survie</name><bonus>+42</bonus></skill>
+        </skills>
+        <attributes STR="+10" DEX="+9" CON="+12" INT="+6" WIS="+8" CHA="+6"/>
+        <interactionAbilities>
+            <special>
+                <name>Voix de la nature</name>
+                <description>p. 214</description>
+            </special>
+            <special>
+                <name>Couronne de gardien</name>
+                <description>p. 212</description>
+            </special>
+            <special>
+                <name>Maelström bioluminescent</name>
+                <traits><trait>aura</trait><trait>eau</trait><trait>primordiale</trait><trait>visuel</trait></traits>
+                <description>
+                    9 m. La colère du gardien invoque une tempête éblouissante autour de lui qui transforme la zone en terrain difficile. Les créatures qui entrent dans la tempête doivent faire un jet de Volonté DD 45. Une créature qui réussit ce jet de sauvegarde est immunisée contre les leurres visuels pendant 24 h.
+                    <scseecBloc>
+                        <success>La créature n’est pas affectée.</success>
+                        <failure>La créature est éblouie pendant 1 round, et pour la première action de son prochain tour, elle doit utiliser une action simple pour se rapprocher le plus possible du gardien.</failure>
+                        <criticalFailure>La créature est éblouie tant qu’elle reste dans l’aura. Lorsqu’elle commence son tour à l’intérieur de l’aura, elle doit utiliser la première action de son tour pour se rapprocher le plus possible du gardien. Elle peut tenter un nouveau jet de sauvegarde à la fin de son tour et met fin à cet effet en cas de succès.</criticalFailure>
+                    </scseecBloc>
+                </description>
+            </special>
+        </interactionAbilities>
+        <armorClass>47</armorClass>
+        <saves REF="+36" FOR="+39" VOL="+33" saveSpecial="+1 aux jets de sauvegarde contre primordiale"/>
+        <health>540</health>
+        <immunities>
+            <immunity>contrôlé</immunity>
+            <immunity>émotion</immunity>
+            <immunity>mental</immunity>
+            <immunity>poison</immunity>
+            <immunity>précision</immunity>
+        </immunities>
+        <weaknesses><weakness><name>électricité</name><value>15</value></weakness></weaknesses>
+        <resistances>
+            <resistance><name>contondant</name><value>20</value></resistance>
+            <resistance><name>froid</name><value>20</value></resistance>
+        </resistances>
+        <speeds>
+            <speed type="swim">30 m</speed>
+        </speeds>
+        <strikes>
+            <strike type="melee">
+                <name>couronne de cornes</name>
+                <bonus>+41</bonus>
+                <traits><trait>allonge 3 m</trait><trait>magique</trait></traits>
+                <damages>
+                    <damage><amount>2d8+15</amount><damageType>froid</damageType></damage>
+                    <damage><amount>2d8+15</amount><damageType>poison</damageType></damage>
+                </damages>
+            </strike>
+            <strike type="melee">
+                <name>tentacule</name>
+                <bonus>+43</bonus>
+                <traits><trait>agile</trait><trait>allonge 9 m</trait><trait>magique</trait></traits>
+                <damages><damage><amount>4d10+16</amount><damageType>contondant</damageType></damage></damages>
+                <extras><extra>Emprise des abysses</extra></extras>
+            </strike>
+        </strikes>
+        <offensiveAbilities>
+            <special>
+                <name>Emprise des abysses</name>
+                <description>Les créatures frappées par l’un des tentacules du gardien obtiennent une faiblesse contre le froid de 10 et subissent un malus de statut de −2 aux jets de Vigueur pendant 1 round.</description>
+            </special>
+            <special type="activity" actions="3">
+                <name>Ce qui menace en dessous</name>
+                <description>Le gardien attaque six fois avec ses tentacules.</description>
+            </special>
+            <special type="activity" actions="2">
+                <name>Étreinte arctique</name>
+                <traits><trait>froid</trait></traits>
+                <description>Toutes les créatures se trouvant dans le maelström bioluminescent du gardien subissent 10d6 dégâts de froid (jet de Vigueur basique DD 45). En cas d’échec, la créature est également ralentie 1 pendant 1 round.</description>
+            </special>
+            <special type="activity" actions="2">
+                <name>Je suis la marée</name>
+                <traits><trait>eau</trait><trait>primordiale</trait></traits>
+                <effect>Le gardien crée trois lignes d’eau tumultueuse, chacune de 3 m de large et de 36 m de long. Les créatures dans la zone subissent 18d8 dégâts contondants (jet de Vigueur basique DD 45). Le gardien peut pousser ou tirer, et toutes les créatures qui ratent ce jet de sauvegarde se déplacent jusqu’à 12 m dans la direction choisie. Le gardien ne peut plus utiliser Je suis la marée pendant 1d4 rounds.</effect>
+            </special>
+            <special type="activity" actions="1">
+                <name>Tous ne font qu’un</name>
+                <frequency>1 fois/tour</frequency>
+                <effect>Le gardien attire des organismes qui étendent son influence. La zone du maelström bioluminescent et l’allonge de sa Frappe de tentacule augmentent de 3 m pendant 1 min, jusqu’à un maximum de 9 m supplémentaires.</effect>
+            </special>
+        </offensiveAbilities>
+    </monster>
+</monsters>

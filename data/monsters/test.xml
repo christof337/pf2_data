@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monster source="EditeurOfficiel">
+  <identity>
+    <name>Inconnu</name>
+    <level>0</level>
+  </identity>
+  <statistics>
+    <ac>30</ac>
+    <hp>170</hp>
+    <attributes>
+      <for>+6</for>
+      <dex>+3</dex>
+      <con>+4</con>
+      <int>+3</int>
+      <sag>+5</sag>
+    </attributes>
+  </statistics>
+</monster>
