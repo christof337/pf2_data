@@ -43,9 +43,10 @@ uv pip install pdfplumber lxml
 
 ### Phase 2 : Industrialisation par Catégorie
 
+* **Subset "Sort" :** Création du XSD "Sorts". Adaptation du script de mapping pour parser les sorts.
 * **Subset "Bestiaire" :** Traitement par lot d'un PDF complet. Ajout de la balise `<source_id>` (Livre, Page) dans chaque XML.
 * **Subset "Équipement" :** Création du XSD "Item". Adaptation du script de mapping pour parser les tableaux de prix et de bulk.
-* **Expansion :** Sorts, Dons, Dangers (Hazards), etc.
+* **Expansion :** Dons, Dangers (Hazards), etc.
 
 ### Phase 3 : Agrégation Massive
 

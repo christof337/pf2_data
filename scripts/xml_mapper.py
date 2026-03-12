@@ -4,8 +4,73 @@ import time
 from lxml import etree
 
 def clean_text(text):
-    """Nettoie les sauts de ligne et espaces superflus dans les descriptions."""
-    return re.sub(r'\s+', ' ', text).strip()
+    """Nettoie les sauts de ligne et espaces superflus."""
+    text = re.sub(r'\s+', ' ', text).strip()
+    # Optionnel : Recolle les étoiles si un espace s'est glissé (ex: "**Mot **" -> "**Mot**")
+    text = text.replace("** ", " **").replace(" **", "**") 
+    return text
+
+def parse_ability_block(text):
+    """Parse un bloc de texte pour en extraire une liste de capacités génériques."""
+    abilities = []
+    if not text or not text.strip(): return abilities
+    
+    # Pattern pour détecter les noms de capacités (Majuscule suivie de minuscules)
+    pattern = r'(?:^|\n)([A-ZÀ-Ÿ][a-zà-ÿ\'-]+(?:[ \t]+[a-zà-ÿ\'-]+)*)(?=\.|\s*\(|\s*\n\s*\d+\b|\s*\n\s*\()'
+    matches = list(re.finditer(pattern, text))
+    
+    for i, m in enumerate(matches):
+        name = m.group(1).strip()
+        start = m.end()
+        end = matches[i+1].start() if i+1 < len(matches) else len(text)
+        raw_body = text[start:end].strip()
+        
+        ability = {
+            'name': name,
+            'traits': [],
+            'action_code': None,
+            'trigger': None,
+            'effect': None,
+            'desc': None,
+            'list_items': [] # Pour stocker les puces si présentes
+        }
+        
+        # 1. Action et Traits (ton code précédent)
+        action_match = re.search(r'^\s*(\d)\b', raw_body)
+        if action_match:
+            ability['action_code'] = action_match.group(1)
+            raw_body = raw_body[action_match.end():].strip()
+            
+        traits_match = re.search(r'^\s*\((.*?)\)', raw_body)
+        if traits_match:
+            ability['traits'] = [t.strip() for t in traits_match.group(1).split(',')]
+            raw_body = raw_body[traits_match.end():].strip()
+            
+        if raw_body.startswith('.'): raw_body = raw_body[1:].strip()
+
+        # 2. Gestion des listes (•)
+        # On ne traite en liste que s'il y a AU MOINS deux puces
+        if raw_body.count('•') >= 2:
+            # On découpe : ce qui est avant la première puce est l'intro
+            # On utilise une regex qui capture le contenu après chaque puce
+            parts = re.split(r'\s*•\s*', raw_body)
+            intro = parts[0].strip()
+            items = [clean_text(p) for p in parts[1:] if p.strip()]
+            
+            ability['list_items'] = items
+            raw_body = intro # Le corps principal devient l'intro
+
+        # 3. Répartition Trigger/Effect ou Description
+        if "Déclencheur." in raw_body:
+            p = re.split(r'Déclencheur\.|Effet\.', raw_body)
+            ability['trigger'] = clean_text(p[1]) if len(p) > 1 else None
+            ability['effect'] = clean_text(p[2]) if len(p) > 2 else None
+        else:
+            ability['desc'] = clean_text(raw_body)
+            
+        abilities.append(ability)
+        
+    return abilities
 
 def parse_monster_md(content):
     """Analyse le Markdown pour extraire les données complexes du monstre."""
@@ -140,47 +205,71 @@ def parse_monster_md(content):
     # 6. Extraction des Attributs (Attributes)
     step_start = time.time()
     print("[PARSING] 6. Extraction des attributs...")
-    # Mapping FR -> Clés XML demandées
     attr_map = {'For': 'STR', 'Dex': 'DEX', 'Con': 'CON', 'Int': 'INT', 'Sag': 'WIS', 'Cha': 'CHA'}
     monster_data['attributes'] = {}
     
-    # On cherche toutes les paires Type +Valeur
-    attr_pairs = re.findall(r'(For|Dex|Con|Int|Sag|Cha)\s+([\+\-]\s*\d+)', main_section)
-    for key, val in attr_pairs:
-        # Nettoyage de la valeur (ex: "+ 6" -> "+6")
-        clean_val = val.replace(" ", "")
-        monster_data['attributes'][attr_map[key]] = clean_val
-    
+    attr_match = re.search(r'(For\s+[\+\-]\s*\d+.*?Cha\s+[\+\-]\s*\d+)', main_section, re.S)
+    if attr_match:
+        attr_pairs = re.findall(r'(For|Dex|Con|Int|Sag|Cha)\s+([\+\-]\s*\d+)', attr_match.group(1))
+        for key, val in attr_pairs:
+            monster_data['attributes'][attr_map[key]] = val.replace(" ", "")
+        main_section = main_section[attr_match.end():].lstrip()
     print(f"[PARSING]    ✓ Attributs : {monster_data['attributes']}")
 
-    # 5. Statistiques de base (Attributs, CA, PV, Saves)
-    # step_start = time.time()
-    # print("[PARSING] 5. Extraction des statistiques de base...")
-    # attr_pattern = r'(For|Dex|Con|Int|Sag|Cha)\s+([\+\-]\s*\d+)'
-    # attrs = re.findall(attr_pattern, main_section)
-    # monster_data['attributes'] = {k.upper(): v.replace(" ", "") for k, v in attrs}
-    
-    ac_search = re.search(r'CA\s+(\d+)', main_section)
-    monster_data['ac'] = ac_search.group(1) if ac_search else "0"
-    
-    hp_search = re.search(r'PV\s+(\d+)', main_section)
-    monster_data['hp'] = hp_search.group(1) if hp_search else "0"
-    
-    saves = re.search(r'Réf\s+([\+\-]\d+),\s*Vig\s+([\+\-]\d+),\s*Vol\s([\+\-]\d+)', main_section)
-    if saves:
-        monster_data['saves'] = {'REF': saves.group(1), 'FOR': saves.group(2), 'VOL': saves.group(3)}
-        spec_save = re.search(r'Vol[\+\-]\d+;\s*(.*?)(?:\n|PV)', main_section)
-        if spec_save: 
-            monster_data['save_special'] = spec_save.group(1).strip()
-        
-        # Ampute main_section jusqu'après les saves
-        saves_end = re.search(r'Vol[\+\-]\d+[^P]*PV', main_section)
-        if saves_end:
-            main_section = main_section[saves_end.end():]
-    
-    print(f"[PARSING]    ✓ CA: {monster_data['ac']}, PV: {monster_data['hp']}, Attributs: {list(monster_data['attributes'].keys())} - {time.time() - step_start:.3f}s")
+    # 6.5 Interaction abilities (entre Attributs et CA)
+    ca_match = re.search(r'(?:^|\n)CA\s+\d+', main_section)
+    if ca_match:
+        inter_text = main_section[:ca_match.start()]
+        monster_data['interaction_abilities'] = parse_ability_block(inter_text)
+        main_section = main_section[ca_match.start():].lstrip() # On ampute jusqu'à la CA
+    else:
+        monster_data['interaction_abilities'] = []
 
-    # 7.5 Extraction des Vitesses (Speeds)
+    # 7. Statistiques de base (CA, PV, Saves, Immunités, Faiblesses)
+    step_start = time.time()
+    print("[PARSING] 7. Défenses...")
+    
+    # On isole le bloc de défense (de CA jusqu'à la fin de la ligne contenant PV)
+    pv_match = re.search(r'PV\s+\d+.*?(?:\n|$)', main_section)
+    if pv_match:
+        defenses_text = main_section[:pv_match.end()]
+        main_section = main_section[pv_match.end():].lstrip() # On ampute ! Le reste est intact pour les réactions.
+        
+        # CA et PV
+        ac_search = re.search(r'CA\s+(\d+)', defenses_text)
+        monster_data['ac'] = ac_search.group(1) if ac_search else "0"
+        hp_search = re.search(r'PV\s+(\d+)', defenses_text)
+        monster_data['hp'] = hp_search.group(1) if hp_search else "0"
+        
+        # Saves
+        saves = re.search(r'Réf\s+([\+\-]\d+),\s*Vig\s+([\+\-]\d+),\s*Vol\s([\+\-]\d+)', defenses_text)
+        if saves:
+            monster_data['saves'] = {'REF': saves.group(1), 'FOR': saves.group(2), 'VOL': saves.group(3)}
+            spec_save = re.search(r'Vol\s[\+\-]\d+\s;\s*(.*?)(?=\nPV|$)', defenses_text, re.DOTALL)
+            if spec_save:
+                monster_data['save_special'] = clean_text(spec_save.group(1))
+
+        # Immunités & Faiblesses
+        imm_match = re.search(r'Immunités\s+(.*?)(?:;|\n|$)', defenses_text)
+        monster_data['immunities'] = [i.strip() for i in imm_match.group(1).split(',')] if imm_match else []
+        weak_match = re.search(r'Faiblesse\s+([a-zA-Zà-ÿ\s]+)\s+(\d+)', defenses_text)
+        monster_data['weaknesses'] = [{'name': weak_match.group(1).strip(), 'value': weak_match.group(2)}] if weak_match else []
+
+    print(f"[PARSING]    ✓ Défenses extraites - {time.time() - step_start:.3f}s")
+
+    # 8. Capacités Spéciales et Réactions (Regroupées)
+    step_start = time.time()
+    print("[PARSING] 8. Réactions...")
+    vit_match = re.search(r'(?:^|\n)Vitesses\s+', main_section)
+    if vit_match:
+        react_text = main_section[:vit_match.start()]
+        monster_data['reactive_abilities'] = parse_ability_block(react_text)
+        main_section = main_section[vit_match.start():].lstrip() # On ampute jusqu'aux Vitesses
+    else:
+        monster_data['reactive_abilities'] = []
+    print(f"[PARSING]    ✓ {len(monster_data['reactive_abilities'])} réactions extraites.")
+
+    # 9 Extraction des Vitesses (Speeds)
     step_start = time.time()
     print("[PARSING] 7.5 Extraction des vitesses...")
     # On cherche "Vitesses" jusqu'à la ligne des attaques ou une nouvelle section
@@ -230,7 +319,7 @@ def parse_monster_md(content):
     else:
         print(f"[PARSING]    ✗ Aucune vitesse trouvée - {time.time() - step_start:.3f}s")
 
-    # 6. Frappes (Strikes)
+    # 10. Frappes (Strikes)
     step_start = time.time()
     print("[PARSING] 6. Extraction des frappes...")
     strikes = []
@@ -261,56 +350,33 @@ def parse_monster_md(content):
     monster_data['strikes'] = strikes
     print(f"[PARSING]    ✓ {strike_count} frappe(s) extraite(s) - {time.time() - step_start:.3f}s")
 
-    # 7. Capacités d'interaction
-    step_start = time.time()
-    print("[PARSING] 7. Extraction des capacités d'interaction...")
-    interaction = []
-    aura_match = re.search(r'([A-ZÀ-Ÿa-zà-ÿ\s]+)\s*\((aura.*?)\)\s*(\d+\s*m)\.\s*(.*?)(?=\n[A-Z][a-z]|\nVitesse)', main_section, re.S)
-    if aura_match:
-        interaction.append({
-            'name': aura_match.group(1).strip(),
-            'traits': [t.strip() for t in aura_match.group(2).split(',')],
-            'desc': clean_text(aura_match.group(3) + ". " + aura_match.group(4))
-        })
-        
-        # Ampute main_section
-        main_section = main_section[aura_match.end():]
-        
-        print(f"[PARSING]    ✓ {len(interaction)} capacité(s) d'interaction trouvée(s) - {time.time() - step_start:.3f}s")
-    else:
-        print(f"[PARSING]    ✗ Aucune capacité d'interaction trouvée - {time.time() - step_start:.3f}s")
-    monster_data['interaction'] = interaction
-
-    # 8. Réactions
-    step_start = time.time()
-    print("[PARSING] 8. Extraction des réactions...")
-    reactive = []
-    react_match = re.search(r'([A-ZÀ-Ÿ][a-zà-ÿ\s\']+)\s+Déclencheur\.\s*(.*?)\s*Effet\.\s*(.*?)(?=\n[A-Z]|Vitesse|Capacités)', main_section, re.S)
-    if react_match:
-        reactive.append({
-            'name': react_match.group(1).strip(),
-            'trigger': clean_text(react_match.group(2)),
-            'effect': clean_text(react_match.group(3)),
-            'type': 'reaction'
-        })
-        
-        # Ampute main_section
-        main_section = main_section[react_match.end():]
-        
-        print(f"[PARSING]    ✓ {len(reactive)} réaction(s) trouvée(s) - {time.time() - step_start:.3f}s")
-    else:
-        print(f"[PARSING]    ✗ Aucune réaction trouvée - {time.time() - step_start:.3f}s")
-    monster_data['reactive'] = reactive
-
     # 9. Sorts
     step_start = time.time()
     print("[PARSING] 9. Extraction des sorts...")
     spells = None
     
-    # Cherche d'abord l'en-tête des sorts
+    # Cherche l'en-tête
     spell_header = re.search(r'Sorts\s+(innés|divins|primordiaux|arcaniques)\s+(.*?)\s+DD\s+(\d+)(?:,\s+attaque\s+([\+\-]\d+))?', main_section, re.DOTALL)
     
     if spell_header:
+        # On définit le début du bloc
+        spells_start = spell_header.start()
+        
+        # On cherche la fin du bloc : soit la fin du texte, soit une nouvelle ligne 
+        # commençant par un nom de capacité (Majuscule suivie de minuscules)
+        # On évite de s'arrêter sur les noms de sorts (souvent en italique ou minuscules)
+        next_section = re.search(r'\n[A-ZÀ-Ÿ][a-zà-ÿ]', main_section[spell_header.end():])
+        
+        if next_section:
+            end_pos = spell_header.end() + next_section.start()
+            spells_text = main_section[spells_start:end_pos]
+            # On ampute la section principale immédiatement
+            main_section = main_section[end_pos:]
+        else:
+            spells_text = main_section[spells_start:]
+            main_section = "" # Plus rien après les sorts
+
+        # Initialisation des données de sorts
         s_data = {
             'source': 'innate' if 'inné' in spell_header.group(1) else ('spontaneous' if 'spontané' in spell_header.group(1) else 'prepared'), 
             'tradition': spell_header.group(1), 
@@ -319,23 +385,9 @@ def parse_monster_md(content):
             'ranks': []
         }
         
-        # Récupère le texte à partir de l'en-tête jusqu'à la VRAIE fin de la section sorts
-        spells_start = spell_header.start()
-        
-        # IMPORTANT: cherche jusqu'au premier mot en majuscule en début de ligne (nouvelle section)
-        # Format: "\n          NOM DE SECTION" avec au moins 2 majuscules
-        next_section = re.search(r'\n\s{0,20}[A-Z]+(?:\s+[A-Z])?', main_section[spells_start:])
-        
-        if next_section:
-            spells_text = main_section[spells_start:spells_start + next_section.start()]
-        else:
-            spells_text = main_section[spells_start:]
-        
-        # Nettoie les espaces et sauts de ligne excessifs
-        spells_text = re.sub(r'\s+', ' ', spells_text)
-        
-        # Divise d'abord par les points-virgules
-        spell_entries = [s.strip() for s in spells_text.split(';') if s.strip()]
+        # Nettoyage et découpage par ';'
+        clean_spells_text = re.sub(r'\s+', ' ', spells_text)
+        spell_entries = [s.strip() for s in clean_spells_text.split(';') if s.strip()]
         
         for entry in spell_entries:
             # Saute l'en-tête "Sorts innés divins DD ..."
@@ -394,12 +446,71 @@ def parse_monster_md(content):
     
     monster_data['spells'] = spells
 
+   # 10. Capacités Offensives (Le reste)
+    step_start = time.time()
+    print("[PARSING] 10. Extraction du reliquat (capacités offensives)...")
+    
+    # --- AJOUT : Tronquer les parasites de fin de page ---
+    # On cherche une séquence de mots en MAJUSCULES (au moins 2 mots de 2+ lettres) qui ne sont pas "DD". 
+    # La regex (?!\bDD\b)[A-ZÀ-Ÿ]{2,} signifie : trouve 2+ majuscules qui ne sont pas "DD"
+    footer_match = re.search(r'(?:\n\s*)(?!\bDD\b)[A-ZÀ-Ÿ]{2,}(?:\s+(?!\bDD\b)[A-ZÀ-Ÿ]{2,})+', main_section)
+    
+    if footer_match:
+        # On ne garde que ce qui est AVANT le match du footer
+        offensive = main_section[:footer_match.start()].strip()
+        print(f"[PARSING]    ℹ Section amputée du footer à l'indice {footer_match.start()}")
+    else:
+        offensive = main_section
+
+    # On envoie tout ce qui reste (propre) au parseur générique
+    monster_data['offensive_abilities'] = parse_ability_block(offensive) if offensive else []
+    
+    print(f"[PARSING]    ✓ {len(monster_data['offensive_abilities'])} capacités offensives trouvées.")
+
     total_time = time.time() - start_time
     print(f"[PARSING] ✓ Analyse complète en {total_time:.3f}s\n")
     
     return monster_data
 
+def add_abilities_to_xml(parent_node, abilities_list, tag_name):
+    """Génère le bloc XML à partir d'une liste d'abilities."""
+    if not abilities_list: return
+    
+    container = etree.SubElement(parent_node, tag_name)
+    for abi in abilities_list:
+        # Détermination du type d'action
+        if abi['action_code'] == '9':
+            spec = etree.SubElement(container, "special", type="reaction")
+            etree.SubElement(spec, "action").text = "reaction"
+        elif abi['action_code'] in ['0', '1', '2', '3']:
+            spec = etree.SubElement(container, "special", type="activity", actions=abi['action_code'])
+        else:
+            spec = etree.SubElement(container, "special")
 
+        etree.SubElement(spec, "name").text = abi['name']
+        
+        if abi['traits']:
+            t_node = etree.SubElement(spec, "traits")
+            for t in abi['traits']:
+                etree.SubElement(t_node, "trait").text = t
+        
+        # Choix de la balise cible pour le texte (Trigger/Effect ou Description)
+        if abi['trigger']:
+            etree.SubElement(spec, "trigger").text = abi['trigger']
+            target_node = etree.SubElement(spec, "effect")
+            content_text = abi['effect']
+        else:
+            target_node = etree.SubElement(spec, "description")
+            content_text = abi['desc']
+
+        # Remplissage du texte et de la liste éventuelle
+        if content_text:
+            target_node.text = content_text
+        
+        if abi['list_items']:
+            list_node = etree.SubElement(target_node, "list")
+            for item in abi['list_items']:
+                etree.SubElement(list_node, "listItem").text = item
 
 def generate_monster_xml(data, output_path):
     """Transforme le dictionnaire de données data en un fichier XML généré dans output_path"""
@@ -490,8 +601,6 @@ def generate_monster_xml(data, output_path):
             
     print(f"[XML]    ✓ Structure des langues finalisée - {time.time() - step_start:.3f}s")
 
-    # ... (création root, name, type, level, traits, perception, languages) ...
-
     # 7. Skills (Compétences)
     if data.get('skills'):
         skills_node = etree.SubElement(monster, "skills")
@@ -509,10 +618,9 @@ def generate_monster_xml(data, output_path):
             val = data['attributes'].get(attr_key, "+0") # Valeur par défaut si l'attribut est manquant
             attr_node.set(attr_key, val)
 
-    # 9. Interaction Abilities (Auras, etc.)
-    # ... (Ajoute ici tes interactionAbilities avant la CA pour respecter le XSD) ...
+    add_abilities_to_xml(monster, data['interaction_abilities'], "interactionAbilities")
 
-    # Défenses
+    # 10. Défenses (CA, PV, Immunités, Faiblesses, Saves)
     step_start = time.time()
     print("[XML] 10. Ajout des défenses (CA, PV, Saves)...")
     etree.SubElement(monster, "armorClass").text = data.get('ac')
@@ -520,7 +628,26 @@ def generate_monster_xml(data, output_path):
     if 'save_special' in data: 
         save_node.set("saveSpecial", data['save_special'])
     etree.SubElement(monster, "health").text = data.get('hp')
+
+    
+    # Immunités
+    if data.get('immunities'):
+        imm_node = etree.SubElement(monster, "immunities")
+        for imm in data['immunities']:
+            etree.SubElement(imm_node, "immunity").text = imm
+
+    # Faiblesses
+    if data.get('weaknesses'):
+        weak_node = etree.SubElement(monster, "weaknesses")
+        for w in data['weaknesses']:
+            w_elem = etree.SubElement(weak_node, "weakness")
+            etree.SubElement(w_elem, "name").text = w['name']
+            etree.SubElement(w_elem, "value").text = w['value']
+
     print(f"[XML]    ✓ Défenses ajoutées - {time.time() - step_start:.3f}s")
+
+    # --- 11. RÉACTIVES (Facultatif) ---
+    add_abilities_to_xml(monster, data['reactive_abilities'], "reactiveAbilities")
 
     # 11. Vitesses (Speeds)
     # IMPORTANT : À placer APRÈS reactiveAbilities et AVANT strikes
@@ -569,22 +696,6 @@ def generate_monster_xml(data, output_path):
             etree.SubElement(dmg_elem, "damageType").text = dmg['type']
     print(f"[XML]    ✓ {strike_count} frappe(s) ajoutée(s) - {time.time() - step_start:.3f}s")
 
-    # Réactions
-    step_start = time.time()
-    print("[XML] 8. Ajout des réactions...")
-    if data.get('reactive'):
-        react = etree.SubElement(monster, "reactiveAbilities")
-        react_count = 0
-        for r in data['reactive']:
-            react_count += 1
-            spec = etree.SubElement(react, "special", type="reaction")
-            etree.SubElement(spec, "name").text = r['name']
-            etree.SubElement(spec, "trigger").text = r['trigger']
-            etree.SubElement(spec, "effect").text = r['effect']
-        print(f"[XML]    ✓ {react_count} réaction(s) ajoutée(s) - {time.time() - step_start:.3f}s")
-    else:
-        print(f"[XML]    ℹ Aucune réaction à ajouter - {time.time() - step_start:.3f}s")
-
     # Sorts
     step_start = time.time()
     print("[XML] 9. Ajout des sorts...")
@@ -613,6 +724,9 @@ def generate_monster_xml(data, output_path):
         print(f"[XML]    ✓ {rank_count} rang(s) de sort(s) avec {spell_total} sort(s) total - {time.time() - step_start:.3f}s")
     else:
         print(f"[XML]    ℹ Aucun sort à ajouter - {time.time() - step_start:.3f}s")
+
+    # --- 13. OFFENSIVES (Facultatif, à la fin) ---
+    add_abilities_to_xml(monster, data['offensive_abilities'], "offensiveAbilities")
 
     # Sauvegarde
     step_start = time.time()
@@ -667,8 +781,8 @@ def validate_xml(xml_path, xsd_path):
         return False
 
 # Exécution
-input_file = "./output/subset_4/young_empyreal_dragon.md"
-output_file = "./output/subset_4/young_empyreal_dragon2.xml"
+input_file = "./output/subset_5/young_empyreal_dragon.md"
+output_file = "./output/subset_5/young_empyreal_dragon.xml"
 
 print("="*60)
 print("DÉBUT DU TRAITEMENT")
