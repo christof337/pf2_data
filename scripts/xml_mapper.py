@@ -11,54 +11,58 @@ def clean_text(text):
     return text
 
 def parse_ability_block(text):
-    """Parse un bloc de texte pour extraire les capacités en utilisant les balises de gras Markdown."""
+    """Extraction robuste utilisant le gras comme ancre."""
     abilities = []
     if not text or not text.strip(): return abilities
     
-    # Nouvelle Regex Magique :
-    # 1. Cherche optionnellement un chiffre d'action (ex: "9\n" ou "1\n")
-    # 2. Cherche un nom en gras "**Nom de capacité**" ou "**Nom Déclencheur.**"
-    pattern = r'(?:^|\n)(?:\s*(\d)\s*\n)?\s*\*\*([A-ZÀ-Ÿ][a-zA-Zà-ÿ\s\'-]+?)(?:\.?|\s+Déclencheur\.?)\*\*'
+    # On se concentre uniquement sur la capture du nom en gras
+    pattern = r'(?:^|\n)\s*\*\*([A-ZÀ-Ÿ][^*]+?)\*\*'
     matches = list(re.finditer(pattern, text))
     
     for i, m in enumerate(matches):
-        action_code = m.group(1) # L'action (0-9) si elle était juste avant
-        name = m.group(2).strip()
+        name = m.group(1).strip()
+        # Nettoyage d'un éventuel "Déclencheur" capturé dans le nom
+        if name.endswith(" Déclencheur."): name = name.replace(" Déclencheur.", "")
+        elif name.endswith("."): name = name[:-1]
         
+        # STOP : Sécurité pour ignorer les noms de monstres en bas de page
+        if name.isupper() and len(name) > 10: continue
+
         start = m.end()
         end = matches[i+1].start() if i+1 < len(matches) else len(text)
         raw_body = text[start:end].strip()
         
         ability = {
-            'name': name,
+            'name': name.strip(),
             'traits': [],
-            'action_code': action_code,
-            'trigger': None,
-            'effect': None,
-            'desc': None,
+            'action_code': None,
+            'trigger': None, 'effect': None, 'desc': None,
             'list_items': []
         }
         
-        # 1. Traits (toujours entre parenthèses juste après le titre)
+        # 1. Capture de l'action : on cherche un chiffre (ou R pour réaction) isolé au TOUT DÉBUT du texte
+        action_match = re.search(r'^\s*([1-3R])\s+', raw_body)
+        if action_match:
+            ability['action_code'] = action_match.group(1)
+            raw_body = raw_body[action_match.end():].strip()
+
+        # 2. Capture des traits : ils sont maintenant au début (puisqu'on a enlevé l'action)
         traits_match = re.search(r'^\s*\((.*?)\)', raw_body)
         if traits_match:
             ability['traits'] = [t.strip() for t in traits_match.group(1).split(',')]
             raw_body = raw_body[traits_match.end():].strip()
             
-        if raw_body.startswith('.'): raw_body = raw_body[1:].strip()
-
-        # 2. Gestion des listes (•)
-        if raw_body.count('•') >= 2:
+        # 3. Gestion des listes (•)
+        if '•' in raw_body:
             parts = re.split(r'\s*•\s*', raw_body)
             intro = parts[0].strip()
             ability['list_items'] = [clean_text(p) for p in parts[1:] if p.strip()]
             raw_body = intro 
 
-        # 3. Répartition Trigger/Effect (l'éditeur met "**Effet.**" en gras !)
+        # 4. Répartition Trigger / Effet
         if "**Effet.**" in raw_body or "Effet." in raw_body:
-            # On découpe sur le mot Effet (avec ou sans gras au cas où)
             p = re.split(r'\*\*Effet\.\*\*|Effet\.', raw_body)
-            ability['trigger'] = clean_text(p[0])
+            ability['trigger'] = clean_text(p[0].replace("Déclencheur.", "").strip())
             ability['effect'] = clean_text(p[1]) if len(p) > 1 else None
         else:
             ability['desc'] = clean_text(raw_body)
