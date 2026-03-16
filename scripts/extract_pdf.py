@@ -3,48 +3,60 @@ import os
 from pdfplumber.utils import extract_text
 
 def extract_styled_layout(page_or_crop, useTextFlow=False):
-    """Extrait le texte avec layout ET italique en modifiant le flux de chars"""
+    """Extrait le texte avec layout, italique (*) et gras (**) en modifiant le flux de chars"""
     chars = page_or_crop.chars
     if not chars:
         return ""
 
-    # 1. Détection des polices italiques de l'Éditeur Officiel
-    # (Souvent contient 'Italic', 'Oblique' ou '-It')
+    # 1. Détecteurs de styles
     def is_italic(fontname):
-        return fontname and ("Italic" in fontname or "-It" in fontname or "Oblique" in fontname)
+        return fontname and any(x in fontname for x in ["Italic", "-It", "Oblique"])
 
-    # 2. Création d'une copie de travail des caractères
-    # On travaille sur une copie pour ne pas polluer l'objet page
+    def is_bold(fontname):
+        # L'éditeur utilise souvent 'Bold', 'Black' ou 'Heavy'
+        return fontname and any(x in fontname for x in ["Bold", "Black", "Heavy"])
+
+    # 2. On travaille sur une copie
     modified_chars = [c.copy() for c in chars]
 
     for i in range(len(modified_chars)):
         curr = modified_chars[i]
-        curr_it = is_italic(curr.get('fontname'))
+        font = curr.get('fontname', '')
         
-        # On regarde le caractère précédent pour détecter la transition
-        prev_it = is_italic(modified_chars[i-1].get('fontname')) if i > 0 else False
+        curr_it = is_italic(font)
+        curr_bd = is_bold(font)
         
-        # Entrée en italique : on injecte l'étoile au début du texte du char
+        prev = modified_chars[i-1] if i > 0 else {}
+        prev_font = prev.get('fontname', '')
+        prev_it = is_italic(prev_font)
+        prev_bd = is_bold(prev_font)
+
+        # --- Gestion du GRAS (Double étoile) ---
+        if curr_bd and not prev_bd:
+            curr['text'] = "**" + curr['text']
+        if not curr_bd and prev_bd:
+            # On ferme le gras sur le caractère PRÉCÉDENT
+            modified_chars[i-1]['text'] = modified_chars[i-1]['text'] + "**"
+
+        # --- Gestion de l'ITALIQUE (Simple étoile) ---
         if curr_it and not prev_it:
             curr['text'] = "*" + curr['text']
-            
-        # Sortie d'italique : on injecte l'étoile à la fin du texte du char PRÉCÉDENT
         if not curr_it and prev_it:
+            # On ferme l'italique sur le caractère PRÉCÉDENT
             modified_chars[i-1]['text'] = modified_chars[i-1]['text'] + "*"
 
-    # Cas particulier : si le tout dernier caractère de la zone était en italique
-    if modified_chars and is_italic(modified_chars[-1].get('fontname')):
-        modified_chars[-1]['text'] = modified_chars[-1]['text'] + "*"
-
-    # 3. Appel au moteur de reconstruction spatial de pdfplumber
-    # C'est ici qu'on récupère le layout (colonnes) et le flux (text_flow)
-    return extract_text(
+    # 3. Extraction avec le moteur de pdfplumber
+    # On passe les caractères modifiés au moteur d'extraction de texte
+    text = extract_text(       
         modified_chars, 
         layout=True, 
         use_text_flow=useTextFlow,
         x_tolerance=3, 
-        y_tolerance=3
-    )
+        y_tolerance=3)
+    
+    # Nettoyage des marqueurs vides type **** ou ** **
+    text = text.replace("** **", " ").replace("**\n**", "\n")
+    return text
 
 def extract_text_with_italics(page_area, useTextFlow=False):
     """Reconstruit le texte d'une zone en préservant l'italique"""
@@ -136,4 +148,4 @@ def extract_with_sidebar_detection(pdf_path, output_dir):
 
 if __name__ == "__main__":
     # extract_with_sidebar_detection("./pdf_sources/bandersnatch.pdf", "./output/subset_2")
-    extract_with_sidebar_detection("./pdf_sources/monstre_unique.pdf", "./output/subset_4")
+    extract_with_sidebar_detection("./pdf_sources/monstre_unique.pdf", "./output/subset_5")

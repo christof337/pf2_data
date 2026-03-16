@@ -7,20 +7,24 @@ def clean_text(text):
     """Nettoie les sauts de ligne et espaces superflus."""
     text = re.sub(r'\s+', ' ', text).strip()
     # Optionnel : Recolle les étoiles si un espace s'est glissé (ex: "**Mot **" -> "**Mot**")
-    text = text.replace("** ", " **").replace(" **", "**") 
+    #text = text.replace("** ", " **").replace(" **", "**") 
     return text
 
 def parse_ability_block(text):
-    """Parse un bloc de texte pour en extraire une liste de capacités génériques."""
+    """Parse un bloc de texte pour extraire les capacités en utilisant les balises de gras Markdown."""
     abilities = []
     if not text or not text.strip(): return abilities
     
-    # Pattern pour détecter les noms de capacités (Majuscule suivie de minuscules)
-    pattern = r'(?:^|\n)([A-ZÀ-Ÿ][a-zà-ÿ\'-]+(?:[ \t]+[a-zà-ÿ\'-]+)*)(?=\.|\s*\(|\s*\n\s*\d+\b|\s*\n\s*\()'
+    # Nouvelle Regex Magique :
+    # 1. Cherche optionnellement un chiffre d'action (ex: "9\n" ou "1\n")
+    # 2. Cherche un nom en gras "**Nom de capacité**" ou "**Nom Déclencheur.**"
+    pattern = r'(?:^|\n)(?:\s*(\d)\s*\n)?\s*\*\*([A-ZÀ-Ÿ][a-zA-Zà-ÿ\s\'-]+?)(?:\.?|\s+Déclencheur\.?)\*\*'
     matches = list(re.finditer(pattern, text))
     
     for i, m in enumerate(matches):
-        name = m.group(1).strip()
+        action_code = m.group(1) # L'action (0-9) si elle était juste avant
+        name = m.group(2).strip()
+        
         start = m.end()
         end = matches[i+1].start() if i+1 < len(matches) else len(text)
         raw_body = text[start:end].strip()
@@ -28,19 +32,14 @@ def parse_ability_block(text):
         ability = {
             'name': name,
             'traits': [],
-            'action_code': None,
+            'action_code': action_code,
             'trigger': None,
             'effect': None,
             'desc': None,
-            'list_items': [] # Pour stocker les puces si présentes
+            'list_items': []
         }
         
-        # 1. Action et Traits (ton code précédent)
-        action_match = re.search(r'^\s*(\d)\b', raw_body)
-        if action_match:
-            ability['action_code'] = action_match.group(1)
-            raw_body = raw_body[action_match.end():].strip()
-            
+        # 1. Traits (toujours entre parenthèses juste après le titre)
         traits_match = re.search(r'^\s*\((.*?)\)', raw_body)
         if traits_match:
             ability['traits'] = [t.strip() for t in traits_match.group(1).split(',')]
@@ -49,22 +48,18 @@ def parse_ability_block(text):
         if raw_body.startswith('.'): raw_body = raw_body[1:].strip()
 
         # 2. Gestion des listes (•)
-        # On ne traite en liste que s'il y a AU MOINS deux puces
         if raw_body.count('•') >= 2:
-            # On découpe : ce qui est avant la première puce est l'intro
-            # On utilise une regex qui capture le contenu après chaque puce
             parts = re.split(r'\s*•\s*', raw_body)
             intro = parts[0].strip()
-            items = [clean_text(p) for p in parts[1:] if p.strip()]
-            
-            ability['list_items'] = items
-            raw_body = intro # Le corps principal devient l'intro
+            ability['list_items'] = [clean_text(p) for p in parts[1:] if p.strip()]
+            raw_body = intro 
 
-        # 3. Répartition Trigger/Effect ou Description
-        if "Déclencheur." in raw_body:
-            p = re.split(r'Déclencheur\.|Effet\.', raw_body)
-            ability['trigger'] = clean_text(p[1]) if len(p) > 1 else None
-            ability['effect'] = clean_text(p[2]) if len(p) > 2 else None
+        # 3. Répartition Trigger/Effect (l'éditeur met "**Effet.**" en gras !)
+        if "**Effet.**" in raw_body or "Effet." in raw_body:
+            # On découpe sur le mot Effet (avec ou sans gras au cas où)
+            p = re.split(r'\*\*Effet\.\*\*|Effet\.', raw_body)
+            ability['trigger'] = clean_text(p[0])
+            ability['effect'] = clean_text(p[1]) if len(p) > 1 else None
         else:
             ability['desc'] = clean_text(raw_body)
             
@@ -73,403 +68,183 @@ def parse_ability_block(text):
     return abilities
 
 def parse_monster_md(content):
-    """Analyse le Markdown pour extraire les données complexes du monstre."""
+    """Analyse le Markdown (formaté avec gras/italique) pour extraire les données."""
     monster_data = {}
     start_time = time.time()
-    
     print("[PARSING] Début de l'analyse du Markdown...")
     
-    # 1. Nettoyage du flux principal (on ignore les en-têtes de page et le lore)
-    step_start = time.time()
-    print("[PARSING] 1. Extraction du flux principal...")
+    # 1. Flux principal
     main_section = content.split("# FLUX PRINCIPAL (STATS/BASE)")[1]
-    print(f"[PARSING]    ✓ Flux principal extrait ({len(main_section)} caractères) - {time.time() - step_start:.3f}s")
     
-       # 2. Nom, Niveau et Traits
-    step_start = time.time()
-    print("[PARSING] 2. Extraction du nom, niveau et traits...")
-    header_match = re.search(r'([A-ZÀ-Ÿ][A-ZÀ-Ÿa-zà-ÿ\s\-]*?)\s{2,}(CRÉATURE)\s+(\d+)\s*\n\s*([A-ZÀ-Ÿ\s]+?)(?=\n)', main_section)
-    
+    # 2. Nom, Niveau et Traits
+    # On isole le bloc d'en-tête de façon beaucoup plus sûre
+    header_match = re.search(r'([A-ZÀ-Ÿ\s\-]+?)\s+(CRÉATURE)\s+(\d+)', main_section)
     if header_match:
-        monster_data['name'] = header_match.group(1).strip()
+        monster_data['name'] = clean_text(header_match.group(1))
         monster_data['type'] = header_match.group(2).strip()
         monster_data['level'] = header_match.group(3).strip()
-        traits_raw = header_match.group(4).strip()
         
-        # Divise les traits en mots séparés et ne garde que ceux qui sont en MAJUSCULES
-        traits_list = traits_raw.split()
-        monster_data['size'] = traits_list[0] if traits_list else "Inconnue"
-        monster_data['traits'] = [t for t in traits_list[1:] if t.isupper()]
-        
-        # Ampute main_section jusqu'à la fin du match (juste avant la nouvelle ligne)
+        # Les traits (on s'arrête avant Perception)
+        traits_match = re.search(r'(TRÈS PETITE|PETITE|MOYENNE|GRANDE|TRÈS GRANDE|GIGANTESQUE)\s+([A-ZÀ-Ÿ\s]+)(?=\n|Perception)', main_section)
+        if traits_match:
+            monster_data['size'] = traits_match.group(1).strip()
+            monster_data['traits'] = [t for t in traits_match.group(2).split() if t.isupper()]
+            
         main_section = main_section[header_match.end():]
-        
-        print(f"[PARSING]    ✓ Nom: {monster_data['name']}, Niveau: {monster_data['level']}, Traits: {monster_data['traits']} - {time.time() - step_start:.3f}s")
-    else:
-        print("[PARSING]    ✗ Aucune correspondance trouvée pour le nom/niveau/traits")
+        print(f"[PARSING]    ✓ Nom: {monster_data['name']}, Niveau: {monster_data['level']}")
 
-       # 3. Perception et Sens
-    step_start = time.time()
-    print("[PARSING] 3. Extraction de la perception et des sens...")
-    # Cherche jusqu'à une nouvelle ligne commençant par une majuscule (avant nettoyage)
-    percept_match = re.search(r'Perception\s+\+(\d+)\s*;\s*(.*?)(?=\n\s*[A-ZÀ-Ÿ][a-zà-ÿ]+)', main_section, re.DOTALL)
+    # 3. Perception
+    percept_match = re.search(r'Perception\*\*\s*\+?(\d+)\s*;\s*(.*?)(?=\n\s*\*\*)', main_section, re.DOTALL)
     if percept_match:
         monster_data['perception_bonus'] = "+" + percept_match.group(1)
-        senses_raw = percept_match.group(2).strip()
-        
-        print(f"[PARSING]    DEBUG perception brute = {repr(senses_raw[:200])}")
-        
-        # Nettoie les sauts de ligne et espaces excessifs APRÈS le match
-        senses_raw = re.sub(r'\s+', ' ', senses_raw)
-        
-        print(f"[PARSING]    DEBUG perception nettoyée = {repr(senses_raw[:200])}")
-        
+        senses_raw = clean_text(percept_match.group(2))
         monster_data['senses'] = []
-        
-        # Divise par les virgules pour obtenir les sens individuels
-        senses_list = [s.strip() for s in senses_raw.split(',')]
-        
-        for s in senses_list:
-            if not s:
-                continue
-            
-            # Pattern pour capturer: nom (précision) portée
-            # Exemples: "odorat (imprécis) 18 m", "vision dans le noir"
-            s_match = re.match(r'([a-zA-Zà-ÿ\s]+?)(?:\s*\((.*?)\))?(?:\s*(\d+\s*m))?(?:\s\((.*?)\))?$', s)
+        for s in senses_raw.split(','):
+            if not s.strip(): continue
+            s_match = re.match(r'([a-zA-Zà-ÿ\s]+?)(?:\s*\((.*?)\))?(?:\s*(\d+\s*m))?(?:\s\((.*?)\))?$', s.strip())
             if s_match:
-                name = s_match.group(1).strip()
-                precision = s_match.group(2) if s_match.group(2) else None
-                range_val = s_match.group(3) if s_match.group(3) else None
-                source = s_match.group(4) if s_match.group(4) else None
-                
                 monster_data['senses'].append({
-                    'name': name,
-                    'precision': precision,
-                    'range': range_val,
-                    'source': source
+                    'name': s_match.group(1).strip(),
+                    'precision': s_match.group(2),
+                    'range': s_match.group(3),
+                    'source': s_match.group(4)
                 })
-                
-                print(f"[PARSING]    DEBUG sens trouvé: {name} (precision={precision}, range={range_val}, source={source})")
-        
-        # Ampute main_section
         main_section = main_section[percept_match.end():]
-        
-        print(f"[PARSING]    ✓ Perception: {monster_data['perception_bonus']}, Sens: {len(monster_data['senses'])} détectés - {time.time() - step_start:.3f}s")
-    else:
-        print("[PARSING]    ✗ Aucune correspondance trouvée pour la perception")
+        print(f"[PARSING]    ✓ Perception et {len(monster_data['senses'])} sens détectés.")
 
     # 4. Langues
-    step_start = time.time()
-    print("[PARSING] 4. Extraction des langues...")
-    # On capture tout jusqu'à la section "Compétences" pour être sûr de ne rien rater
-    lang_match = re.search(r'Langues\s+(.*?)(?=\n\s*Compétences)', main_section, re.DOTALL)
+    lang_match = re.search(r'\*\*Langues\*\*\s+(.*?)(?=\n\s*\*\*Compétences)', main_section, re.DOTALL)
     if lang_match:
-        full_lang_text = lang_match.group(1).strip()
-        
-        # On sépare par le point-virgule
-        parts = full_lang_text.split(';')
-        
-        # Langues classiques (partie avant le ;)
+        parts = lang_match.group(1).split(';')
         monster_data['languages'] = [l.strip() for l in parts[0].split(',') if l.strip()]
-        
-        # Partie spéciale (partie après le ;)
-        monster_data['lang_special'] = parts[1].strip() if len(parts) > 1 else None
-        
-        # Ampute main_section
+        monster_data['lang_special'] = clean_text(parts[1]) if len(parts) > 1 else None
         main_section = main_section[lang_match.end():]
-        print(f"[PARSING]    ✓ Langues: {monster_data['languages']}, Spécial: {monster_data['lang_special']}")
-    else:
-        monster_data['languages'] = []
-        monster_data['lang_special'] = None
     
-    # 5. Extraction des Compétences (Skills)
-    step_start = time.time()
-    print("[PARSING] 5. Extraction des compétences...")
-    # On cherche "Compétences" jusqu'au prochain bloc (souvent les attributs For, Dex...)
-    skills_match = re.search(r'Compétences\s+(.*?)(?=\n\s*(?:For|Dex|Con|Int|Sag|Cha)\s+[\+\-]\d+)', main_section, re.S)
+    # 5. Compétences
+    skills_match = re.search(r'\*\*Compétences\*\*\s+(.*?)(?=\n\s*\*\*For)', main_section, re.S)
     monster_data['skills'] = []
     if skills_match:
-        skills_raw = clean_text(skills_match.group(1))
-        # Split par virgule pour isoler chaque compétence
-        for s in skills_raw.split(','):
-            # Capture le nom et le bonus (ex: Athlétisme +22)
-            s_match = re.search(r'(.*?)\s+([\+\-]\d+)', s.strip())
-            if s_match:
-                monster_data['skills'].append({
-                    'name': s_match.group(1).strip(),
-                    'bonus': s_match.group(2).strip() # On garde le + pour le style ou on cast en int
-                })
+        for s in clean_text(skills_match.group(1)).split(','):
+            s_m = re.search(r'(.*?)\s+([\+\-]\d+)', s.strip())
+            if s_m: monster_data['skills'].append({'name': s_m.group(1).strip(), 'bonus': s_m.group(2).strip()})
         main_section = main_section[skills_match.end():]
-        print(f"[PARSING]    ✓ {len(monster_data['skills'])} compétences trouvées.")
 
-    # 6. Extraction des Attributs (Attributes)
-    step_start = time.time()
-    print("[PARSING] 6. Extraction des attributs...")
+    # 6. Attributs
     attr_map = {'For': 'STR', 'Dex': 'DEX', 'Con': 'CON', 'Int': 'INT', 'Sag': 'WIS', 'Cha': 'CHA'}
     monster_data['attributes'] = {}
-    
-    attr_match = re.search(r'(For\s+[\+\-]\s*\d+.*?Cha\s+[\+\-]\s*\d+)', main_section, re.S)
+    attr_match = re.search(r'(\*\*For\*\*\s+[\+\-]\s*\d+.*?\*\*Cha\*\*\s+[\+\-]\s*\d+)', main_section, re.S)
     if attr_match:
-        attr_pairs = re.findall(r'(For|Dex|Con|Int|Sag|Cha)\s+([\+\-]\s*\d+)', attr_match.group(1))
-        for key, val in attr_pairs:
-            monster_data['attributes'][attr_map[key]] = val.replace(" ", "")
+        pairs = re.findall(r'\*\*(For|Dex|Con|Int|Sag|Cha)\*\*\s+([\+\-]\s*\d+)', attr_match.group(1))
+        for key, val in pairs: monster_data['attributes'][attr_map[key]] = val.replace(" ", "")
         main_section = main_section[attr_match.end():].lstrip()
-    print(f"[PARSING]    ✓ Attributs : {monster_data['attributes']}")
 
-    # 6.5 Interaction abilities (entre Attributs et CA)
-    ca_match = re.search(r'(?:^|\n)CA\s+\d+', main_section)
+    # 6.5 Interactions (jusqu'à la CA)
+    ca_match = re.search(r'(?:^|\n)\*\*CA\s*\*\*', main_section)
     if ca_match:
-        inter_text = main_section[:ca_match.start()]
-        monster_data['interaction_abilities'] = parse_ability_block(inter_text)
-        main_section = main_section[ca_match.start():].lstrip() # On ampute jusqu'à la CA
-    else:
-        monster_data['interaction_abilities'] = []
+        monster_data['interaction_abilities'] = parse_ability_block(main_section[:ca_match.start()])
+        main_section = main_section[ca_match.start():].lstrip()
+    else: monster_data['interaction_abilities'] = []
 
-    # 7. Statistiques de base (CA, PV, Saves, Immunités, Faiblesses)
-    step_start = time.time()
-    print("[PARSING] 7. Défenses...")
-    
-    # On isole le bloc de défense (de CA jusqu'à la fin de la ligne contenant PV)
-    pv_match = re.search(r'PV\s+\d+.*?(?:\n|$)', main_section)
+    # 7. Défenses (CA, Saves, PV, Immunités, Faiblesses)
+    pv_match = re.search(r'\*\*PV\s*\*\*\s*\d+', main_section)
     if pv_match:
-        defenses_text = main_section[:pv_match.end()]
-        main_section = main_section[pv_match.end():].lstrip() # On ampute ! Le reste est intact pour les réactions.
+        # On coupe de CA jusqu'au début du prochain bloc d'action ou de vitesse
+        end_def = re.search(r'(?:\n\s*(?:\d+\s*\n)?\s*\*\*|\n\s*\*\*Vitesses)', main_section[pv_match.end():])
+        cut_idx = pv_match.end() + end_def.start() if end_def else len(main_section)
+        defenses_text = clean_text(main_section[:cut_idx])
+        main_section = main_section[cut_idx:].lstrip()
         
-        # CA et PV
-        ac_search = re.search(r'CA\s+(\d+)', defenses_text)
-        monster_data['ac'] = ac_search.group(1) if ac_search else "0"
-        hp_search = re.search(r'PV\s+(\d+)', defenses_text)
-        monster_data['hp'] = hp_search.group(1) if hp_search else "0"
+        ac_m = re.search(r'\*\*CA\s*\*\*\s*(\d+)', defenses_text)
+        monster_data['ac'] = ac_m.group(1) if ac_m else "0"
         
-        # Saves
-        saves = re.search(r'Réf\s+([\+\-]\d+),\s*Vig\s+([\+\-]\d+),\s*Vol\s([\+\-]\d+)', defenses_text)
-        if saves:
-            monster_data['saves'] = {'REF': saves.group(1), 'FOR': saves.group(2), 'VOL': saves.group(3)}
-            spec_save = re.search(r'Vol\s[\+\-]\d+\s;\s*(.*?)(?=\nPV|$)', defenses_text, re.DOTALL)
-            if spec_save:
-                monster_data['save_special'] = clean_text(spec_save.group(1))
+        hp_m = re.search(r'\*\*PV\s*\*\*\s*(\d+)', defenses_text)
+        monster_data['hp'] = hp_m.group(1) if hp_m else "0"
+        
+        saves_m = re.search(r'\*\*Réf\s*\*\*\s*([\+\-]\d+).*?\*\*Vig\s*\*\*\s*([\+\-]\d+).*?\*\*Vol\s*\*\*\s*([\+\-]\d+)', defenses_text)
+        if saves_m: monster_data['saves'] = {'REF': saves_m.group(1), 'FOR': saves_m.group(2), 'VOL': saves_m.group(3)}
+        
+        save_spec = re.search(r'\*\*Vol\s*\*\*\s*[\+\-]\d+\s*;\s*(.*?)(?=\*\*PV|$)', defenses_text)
+        if save_spec: monster_data['save_special'] = save_spec.group(1).strip()
 
-        # Immunités & Faiblesses
-        imm_match = re.search(r'Immunités\s+(.*?)(?:;|\n|$)', defenses_text)
-        monster_data['immunities'] = [i.strip() for i in imm_match.group(1).split(',')] if imm_match else []
-        weak_match = re.search(r'Faiblesse\s+([a-zA-Zà-ÿ\s]+)\s+(\d+)', defenses_text)
-        monster_data['weaknesses'] = [{'name': weak_match.group(1).strip(), 'value': weak_match.group(2)}] if weak_match else []
+        imm_m = re.search(r'\*\*Immunités\s*\*\*\s*(.*?)(?:;|$)', defenses_text)
+        monster_data['immunities'] = [i.strip() for i in imm_m.group(1).split(',')] if imm_m else []
+        
+        weak_m = re.search(r'\*\*Faiblesse[s]?\s*\*\*\s*([a-zA-Zà-ÿ\s]+)\s+(\d+)', defenses_text)
+        monster_data['weaknesses'] = [{'name': weak_m.group(1).strip(), 'value': weak_m.group(2)}] if weak_m else []
+        print("[PARSING]    ✓ Défenses extraites.")
 
-    print(f"[PARSING]    ✓ Défenses extraites - {time.time() - step_start:.3f}s")
-
-    # 8. Capacités Spéciales et Réactions (Regroupées)
-    step_start = time.time()
-    print("[PARSING] 8. Réactions...")
-    vit_match = re.search(r'(?:^|\n)Vitesses\s+', main_section)
+    # 8. Réactions (jusqu'à Vitesses)
+    vit_match = re.search(r'(?:^|\n)\*\*Vitesses\*\*', main_section)
     if vit_match:
-        react_text = main_section[:vit_match.start()]
-        monster_data['reactive_abilities'] = parse_ability_block(react_text)
-        main_section = main_section[vit_match.start():].lstrip() # On ampute jusqu'aux Vitesses
-    else:
-        monster_data['reactive_abilities'] = []
-    print(f"[PARSING]    ✓ {len(monster_data['reactive_abilities'])} réactions extraites.")
+        monster_data['reactive_abilities'] = parse_ability_block(main_section[:vit_match.start()])
+        main_section = main_section[vit_match.start():].lstrip()
+    else: monster_data['reactive_abilities'] = []
 
-    # 9 Extraction des Vitesses (Speeds)
-    step_start = time.time()
-    print("[PARSING] 7.5 Extraction des vitesses...")
-    # On cherche "Vitesses" jusqu'à la ligne des attaques ou une nouvelle section
-    speeds_match = re.search(r'Vitesses\s+(.*?)(?=\n\s*[A-ZÀ-Ÿ]|Corps à corps|À distance)', main_section)
+    # 9. Vitesses
+    speeds_m = re.search(r'\*\*Vitesses\*\*\s+(.*?)(?=\n\s*(?:\d+\s*)?\*\*Corps à corps|\n\s*(?:\d+\s*)?\*\*À distance|\n\s*[A-ZÀ-Ÿ])', main_section)
     monster_data['speeds'] = {'list': [], 'special': None}
-    
-    if speeds_match:
-        speeds_raw = clean_text(speeds_match.group(1))
+    if speeds_m:
+        parts = clean_text(speeds_m.group(1)).split(';')
+        if len(parts) > 1: monster_data['speeds']['special'] = parts[1].strip()
         
-        # 1. Séparation du spécial (après le point-virgule)
-        parts = speeds_raw.split(';')
-        if len(parts) > 1:
-            monster_data['speeds']['special'] = parts[1].strip()
-            
-        # 2. Traitement des vitesses individuelles (avant le point-virgule)
-        speeds_list = parts[0].split(',')
-        
-        # Dictionnaire de traduction vers les types VO autorisés par le XSD
-        type_mapping = {
-            'vol': 'fly',
-            'escalade': 'climb',
-            'nage': 'swim',
-            'creusement': 'burrow'
-        }
-        
-        for s in speeds_list:
+        for s in parts[0].split(','):
             s = s.strip()
-            speed_type = None
-            speed_val = s
-            
-            # Cherche si la vitesse commence par un mot clé connu
-            for fr_word, en_word in type_mapping.items():
-                if s.lower().startswith(fr_word):
-                    speed_type = en_word
-                    # On enlève le mot clé pour ne garder que la valeur de la vitesse (ex: "45 m")
-                    speed_val = s[len(fr_word):].strip()
-                    break
-                    
-            monster_data['speeds']['list'].append({
-                'value': speed_val,
-                'type': speed_type
-            })
-            
-        # Ampute main_section pour faire avancer le curseur
-        main_section = main_section[speeds_match.end():]
-        print(f"[PARSING]    ✓ {len(monster_data['speeds']['list'])} vitesse(s) trouvée(s) - {time.time() - step_start:.3f}s")
-    else:
-        print(f"[PARSING]    ✗ Aucune vitesse trouvée - {time.time() - step_start:.3f}s")
+            speed_type = next((en for fr, en in {'vol': 'fly', 'escalade': 'climb', 'nage': 'swim', 'creusement': 'burrow'}.items() if s.lower().startswith(fr)), None)
+            val = re.sub(r'^(vol|escalade|nage|creusement)\s+', '', s, flags=re.IGNORECASE).strip()
+            monster_data['speeds']['list'].append({'value': val, 'type': speed_type})
+        main_section = main_section[speeds_m.end():]
 
     # 10. Frappes (Strikes)
-    step_start = time.time()
-    print("[PARSING] 6. Extraction des frappes...")
     strikes = []
-    strike_matches = list(re.finditer(r'Corps à corps\s+(.*?)\s+(\+\d+)\s+\((.*?)\),\s+Dégâts\s+(.*?)(?=Corps à corps|Sorts|Vitesse|Capacités|$)', main_section, re.DOTALL))
-    strike_count = 0
-    
+    strike_matches = list(re.finditer(r'\*\*Corps à corps\*\*\s+(.*?)\s+(\+\d+)\s+\((.*?)\),\s*\*\*Dégâts\s*\*\*\s*(.*?)(?=(?:\d+\s*)?\*\*Corps à corps|(?:\d+\s*)?\*\*À distance|\*\*Sorts|\n\s*(?:\d+\s*)?\*\*[A-ZÀ-Ÿ]|$)', main_section, re.DOTALL))
     for m in strike_matches:
-        strike_count += 1
-        name = re.sub(r'^1\s+', '', m.group(1).strip())
-        bonus = m.group(2).strip()
-        traits = [t.strip() for t in m.group(3).split(',')]
-        dmg_raw = m.group(4).strip()
-        
         dmgs = []
-        parts = re.split(r'\s+plus\s+', dmg_raw)
-        for p in parts:
-            d_match = re.search(r'(\d+d\d+[\+\-]?\d*)\s+(.*)', p, re.DOTALL)
-            if d_match:
-                damage_type = re.sub(r"^d'", '', d_match.group(2).strip())
-                dmgs.append({'amount': d_match.group(1), 'type': damage_type})
-        
-        strikes.append({'name': name, 'bonus': bonus, 'traits': traits, 'damages': dmgs})
-    
-    # Ampute main_section après la dernière frappe
-    if strike_matches:
-        main_section = main_section[strike_matches[-1].end():]
-    
+        for p in re.split(r'\s+plus\s+', clean_text(m.group(4))):
+            d_m = re.search(r'(\d+d\d+[\+\-]?\d*)\s+(.*)', p)
+            if d_m: dmgs.append({'amount': d_m.group(1), 'type': re.sub(r"^d'", '', d_m.group(2).strip())})
+        strikes.append({'name': m.group(1).strip(), 'bonus': m.group(2).strip(), 'traits': [t.strip() for t in m.group(3).split(',')], 'damages': dmgs})
+    if strike_matches: main_section = main_section[strike_matches[-1].end():]
     monster_data['strikes'] = strikes
-    print(f"[PARSING]    ✓ {strike_count} frappe(s) extraite(s) - {time.time() - step_start:.3f}s")
 
-    # 9. Sorts
-    step_start = time.time()
-    print("[PARSING] 9. Extraction des sorts...")
-    spells = None
-    
-    # Cherche l'en-tête
-    spell_header = re.search(r'Sorts\s+(innés|divins|primordiaux|arcaniques)\s+(.*?)\s+DD\s+(\d+)(?:,\s+attaque\s+([\+\-]\d+))?', main_section, re.DOTALL)
-    
-    if spell_header:
-        # On définit le début du bloc
-        spells_start = spell_header.start()
+    # 11. Sorts
+    spell_h = re.search(r'\*\*Sorts\s+(.*?)\*\*\s*DD\s+(\d+)(?:,\s+attaque\s+([\+\-]\d+))?', main_section)
+    if spell_h:
+        next_sec = re.search(r'\n\s*(?:\d+\s*\n)?\s*\*\*[A-ZÀ-Ÿ]', main_section[spell_h.end():])
+        end_pos = spell_h.end() + next_sec.start() if next_sec else len(main_section)
         
-        # On cherche la fin du bloc : soit la fin du texte, soit une nouvelle ligne 
-        # commençant par un nom de capacité (Majuscule suivie de minuscules)
-        # On évite de s'arrêter sur les noms de sorts (souvent en italique ou minuscules)
-        next_section = re.search(r'\n[A-ZÀ-Ÿ][a-zà-ÿ]', main_section[spell_header.end():])
+        # Astuce de génie : on retire toutes les étoiles du texte des sorts pour réutiliser ta logique !
+        spells_text = re.sub(r'\*+', '', main_section[spell_h.start():end_pos])
+        main_section = main_section[end_pos:]
         
-        if next_section:
-            end_pos = spell_header.end() + next_section.start()
-            spells_text = main_section[spells_start:end_pos]
-            # On ampute la section principale immédiatement
-            main_section = main_section[end_pos:]
-        else:
-            spells_text = main_section[spells_start:]
-            main_section = "" # Plus rien après les sorts
-
-        # Initialisation des données de sorts
         s_data = {
-            'source': 'innate' if 'inné' in spell_header.group(1) else ('spontaneous' if 'spontané' in spell_header.group(1) else 'prepared'), 
-            'tradition': spell_header.group(1), 
-            'DD': spell_header.group(3), 
-            'attack': spell_header.group(4), 
-            'ranks': []
+            'source': 'innate' if 'inné' in spell_h.group(1) else ('spontaneous' if 'spontané' in spell_h.group(1) else 'prepared'), 
+            'tradition': spell_h.group(1).replace('innés', '').replace('spontanés', '').strip(), 
+            'DD': spell_h.group(2), 'attack': spell_h.group(3), 'ranks': []
         }
         
-        # Nettoyage et découpage par ';'
-        clean_spells_text = re.sub(r'\s+', ' ', spells_text)
-        spell_entries = [s.strip() for s in clean_spells_text.split(';') if s.strip()]
-        
-        for entry in spell_entries:
-            # Saute l'en-tête "Sorts innés divins DD ..."
-            if 'DD' in entry or 'Sorts' in entry:
-                continue
-            
-            entry = entry.strip()
-            
-            # Cas 1: Constant (5e) langage universel
-            const_match = re.match(r'Constant\s*\(\s*(\d)e\s*\)\s*(.*?)(?:\s*$|$)', entry)
+        for entry in [s.strip() for s in clean_text(spells_text).split(';') if s.strip() and not 'DD' in s and not 'Sorts' in s]:
+            const_match = re.match(r'Constant\s*\(\s*(\d)e\s*\)\s*(.*)', entry)
             if const_match:
-                rank = const_match.group(1)
-                spell_name = const_match.group(2).strip()
-                s_data['ranks'].append({
-                    'rank': rank,
-                    'spells': [spell_name],
-                    'constant': True,
-                    'cantrips': False,
-                    'special': None
-                })
+                s_data['ranks'].append({'rank': const_match.group(1), 'spells': [const_match.group(2).strip()], 'constant': True, 'cantrips': False, 'special': None})
                 continue
-            
-            # Cas 2: Ne <nom> (à volonté) ou Ne <nom> (constant) ou simplement Ne <nom>
-            rank_match = re.match(r'(\d)e\s+(.*?)(?:\s*$|$)', entry)
+            rank_match = re.match(r'(\d)e\s+(.*)', entry)
             if rank_match:
-                rank = rank_match.group(1)
                 spell_info = rank_match.group(2)
-                
-                # Cherche les annotations spéciales
-                special = None
-                if '(à volonté)' in spell_info:
-                    special = 'à volonté'
-                    spell_name = spell_info.replace('(à volonté)', '').strip()
-                elif '(constant)' in spell_info.lower():
-                    special = 'constant'
-                    spell_name = re.sub(r'\(constant\)', '', spell_info, flags=re.IGNORECASE).strip()
-                else:
-                    spell_name = spell_info.strip()
-                
-                s_data['ranks'].append({
-                    'rank': rank,
-                    'spells': [spell_name],
-                    'constant': False,
-                    'cantrips': False,
-                    'special': special
-                })
-                continue
-        
-        if s_data['ranks']:
-            spells = s_data
-            print(f"[PARSING]    ✓ {len(s_data['ranks'])} sort(s) extrait(s) - {time.time() - step_start:.3f}s")
-        else:
-            print(f"[PARSING]    ✗ Aucun sort trouvé - {time.time() - step_start:.3f}s")
-    else:
-        print(f"[PARSING]    ✗ En-tête des sorts non trouvé - {time.time() - step_start:.3f}s")
-    
-    monster_data['spells'] = spells
+                special = 'à volonté' if '(à volonté)' in spell_info else ('constant' if '(constant)' in spell_info else None)
+                s_data['ranks'].append({'rank': rank_match.group(1), 'spells': [re.sub(r'\((à volonté|constant)\)', '', spell_info).strip()], 'constant': False, 'cantrips': False, 'special': special})
+        monster_data['spells'] = s_data
 
-   # 10. Capacités Offensives (Le reste)
-    step_start = time.time()
-    print("[PARSING] 10. Extraction du reliquat (capacités offensives)...")
-    
-    # --- AJOUT : Tronquer les parasites de fin de page ---
-    # On cherche une séquence de mots en MAJUSCULES (au moins 2 mots de 2+ lettres) qui ne sont pas "DD". 
-    # La regex (?!\bDD\b)[A-ZÀ-Ÿ]{2,} signifie : trouve 2+ majuscules qui ne sont pas "DD"
-    footer_match = re.search(r'(?:\n\s*)(?!\bDD\b)[A-ZÀ-Ÿ]{2,}(?:\s+(?!\bDD\b)[A-ZÀ-Ÿ]{2,})+', main_section)
-    
-    if footer_match:
-        # On ne garde que ce qui est AVANT le match du footer
-        offensive = main_section[:footer_match.start()].strip()
-        print(f"[PARSING]    ℹ Section amputée du footer à l'indice {footer_match.start()}")
-    else:
-        offensive = main_section
+    # 12. Offensives (Le reste)
+    # Dans parse_monster_md, à la toute fin (Offensive Abilities) :
 
-    # On envoie tout ce qui reste (propre) au parseur générique
-    monster_data['offensive_abilities'] = parse_ability_block(offensive) if offensive else []
-    
-    print(f"[PARSING]    ✓ {len(monster_data['offensive_abilities'])} capacités offensives trouvées.")
+    # On cherche si un nom de monstre suit (ex: DRAGON DIABOLIQUE...) pour couper avant
+    footer_match = re.search(r'\n\s*\*\*?[A-ZÀ-Ÿ\s]{10,}', main_section)
 
-    total_time = time.time() - start_time
-    print(f"[PARSING] ✓ Analyse complète en {total_time:.3f}s\n")
-    
+
+    #footer_match = re.search(r'(?:\n\s*)(?!\bDD\b)[A-ZÀ-Ÿ]{2,}(?:\s+(?!\bDD\b)(?=\*\*)?[A-ZÀ-Ÿ]{2,})+', main_section)
+    offensive = main_section[:footer_match.start()].strip() if footer_match else main_section
+    monster_data['offensive_abilities'] = parse_ability_block(offensive)
+
     return monster_data
 
 def add_abilities_to_xml(parent_node, abilities_list, tag_name):
@@ -481,7 +256,6 @@ def add_abilities_to_xml(parent_node, abilities_list, tag_name):
         # Détermination du type d'action
         if abi['action_code'] == '9':
             spec = etree.SubElement(container, "special", type="reaction")
-            etree.SubElement(spec, "action").text = "reaction"
         elif abi['action_code'] in ['0', '1', '2', '3']:
             spec = etree.SubElement(container, "special", type="activity", actions=abi['action_code'])
         else:
