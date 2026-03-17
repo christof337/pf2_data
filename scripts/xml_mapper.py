@@ -1,5 +1,6 @@
 import re
 import os
+import sys
 import time
 from lxml import etree
 
@@ -10,36 +11,79 @@ def clean_text(text):
     #text = text.replace("** ", " **").replace(" **", "**") 
     return text
 
+# def parse_ability_block(text):
+#     """Extraction robuste qui agrège les déclencheurs et effets à la capacité parente."""
+    
+#     # Regex pour trouver tous les blocs en gras
+#     for i, m in enumerate(matches):
+#         action_code = m.group(1)
+#         name = m.group(2).strip().rstrip('.')
+        
+#         # Si c'est un mot-clé, on l'ajoute à la capacité précédente
+#         if name in ["Déclencheur", "Effet"] and abilities:
+#             start = m.end()
+#             end = matches[i+1].start() if i+1 < len(matches) else len(text)
+#             content = clean_text(text[start:end])
+#             if name == "Déclencheur":
+#                 abilities[-1]['trigger'] = content
+#             else:
+#                 abilities[-1]['effect'] = content
+#             continue
+
+#         # Sinon, c'est une nouvelle capacité
+#         start = m.end()
+#         end = matches[i+1].start() if i+1 < len(matches) else len(text)
+#         raw_body = text[start:end]
+
+#         ability = {
+#             'name': name,
+#             'action_code': action_code,
+#             'trigger': None,
+#             'effect': None,
+#             'desc': clean_text(raw_body)
+#         }
+#         abilities.append(ability)
+        
+#     return abilities
+
 def parse_ability_block(text):
     """Extraction robuste utilisant le gras comme ancre."""
     abilities = []
     if not text or not text.strip(): return abilities
     
     # On se concentre uniquement sur la capture du nom en gras
-    pattern = r'(?:^|\n)\s*\*\*([A-ZÀ-Ÿ][^*]+?)\*\*'
-    matches = list(re.finditer(pattern, text))
+    pattern = r'(?:^|\n)\s*(?:(\d)\s*\n)?\s*\*\*([A-ZÀ-Ÿ][^*]+?)\*\*'
+    pattern = r'(?:^|\n)\s*\*\*(.+?)(?:^|\n)(?=\*\*)'
+    matches = list(re.finditer(pattern, text, re.DOTALL))
     
     for i, m in enumerate(matches):
-        name = m.group(1).strip()
+        raw_body = m.group(1).strip()
         # Nettoyage d'un éventuel "Déclencheur" capturé dans le nom
-        if name.endswith(" Déclencheur."): name = name.replace(" Déclencheur.", "")
-        elif name.endswith("."): name = name[:-1]
+        #if name.__contains__(" Déclencheur."): name = name.replace(" Déclencheur.", "")
+        #elif name.endswith("."): name = name[:-1]
         
         # Délimitation du contenu de cette capacité
-        start = m.end()
-        end = matches[i+1].start() if i+1 < len(matches) else len(text)
-        raw_body = text[start:end].strip()
+        #start = m.end()
+        #end = matches[i+1].start() if i+1 < len(matches) else #len(text)
+        #raw_body = text[start:end].strip()
         
         ability = {
-            'name': name.strip(),
+            'name': None,
             'traits': [],
             'action_code': None,
             'trigger': None, 'effect': None, 'desc': None,
             'list_items': []
         }
         
+        # Astuce de génie : on va traiter le raw_body en plusieurs étapes pour extraire les différentes infos, en partant du principe que l'ordre est généralement : Nom > Action > Traits > Description/Trigger+Effet > Liste (•)
+        # 0. Capture du nom
+        name_match = re.match(r'^(.+?)\*\*', raw_body)
+        if name_match:
+            ability['name'] = name_match.group(1).strip()
+            raw_body = raw_body[name_match.end():].strip()
+
         # 1. Capture de l'action : on cherche un chiffre (ou R pour réaction) isolé au TOUT DÉBUT du texte
-        action_match = re.search(r'^\s*([1-3R])\s+', raw_body)
+        action_match = re.search(r'^\s*([0-3,9])', raw_body)
         if action_match:
             ability['action_code'] = action_match.group(1)
             raw_body = raw_body[action_match.end():].strip()
@@ -50,6 +94,12 @@ def parse_ability_block(text):
             ability['traits'] = [t.strip() for t in traits_match.group(1).split(',')]
             raw_body = raw_body[traits_match.end():].strip()
             
+        # 3. Trigger
+        trigger_match = re.search(r'^\*\*(Déclencheur\.|Déclencheur\s*:\s*)\*\*(.*?)(?=(\*\*Effet\.?\*\*|Effet\.?|$))', raw_body, re.DOTALL)
+        if trigger_match:
+            ability['trigger'] = clean_text(trigger_match.group(2))
+            raw_body = raw_body[trigger_match.end():].strip()
+
         # 3. Gestion des listes (•)
         if '•' in raw_body:
             parts = re.split(r'\s*•\s*', raw_body)
@@ -60,7 +110,7 @@ def parse_ability_block(text):
         # 4. Répartition Trigger / Effet
         if "**Effet.**" in raw_body or "Effet." in raw_body:
             p = re.split(r'\*\*Effet\.\*\*|Effet\.', raw_body)
-            ability['trigger'] = clean_text(p[0].replace("Déclencheur.", "").strip())
+            #ability['trigger'] = clean_text(p[0].replace("Déclencheur.", "").strip())
             ability['effect'] = clean_text(p[1]) if len(p) > 1 else None
         else:
             ability['desc'] = clean_text(raw_body)
@@ -163,7 +213,7 @@ def parse_monster_md(content):
         monster_data['hp'] = hp_m.group(1) if hp_m else "0"
         
         saves_m = re.search(r'\*\*Réf\s*\*\*\s*([\+\-]\d+).*?\*\*Vig\s*\*\*\s*([\+\-]\d+).*?\*\*Vol\s*\*\*\s*([\+\-]\d+)', defenses_text)
-        if saves_m: monster_data['saves'] = {'REF': saves_m.group(1), 'FOR': saves_m.group(2), 'VOL': saves_m.group(3)}
+        if saves_m: monster_data['saves'] = {'REF': saves_m.group(1), 'FOR': saves_m.group(2), 'WIL': saves_m.group(3)}
         
         save_spec = re.search(r'\*\*Vol\s*\*\*\s*[\+\-]\d+\s*;\s*(.*?)(?=\*\*PV|$)', defenses_text)
         if save_spec: monster_data['save_special'] = save_spec.group(1).strip()
@@ -557,8 +607,8 @@ def validate_xml(xml_path, xsd_path):
         return False
 
 # Exécution
-input_file = "./output/subset_5/young_empyreal_dragon.md"
-output_file = "./output/subset_5/young_empyreal_dragon.xml"
+input_file = sys.argv[1] if len(sys.argv) > 1 else "./output/subset_5/young_empyreal_dragon.md"
+output_file = sys.argv[2] if len(sys.argv) > 2 else "./output/subset_5/young_empyreal_dragon.xml"
 
 print("="*60)
 print("DÉBUT DU TRAITEMENT")
@@ -573,6 +623,10 @@ if os.path.exists(input_file):
     print(f"[MAIN] ✓ Fichier chargé ({len(md_content)} caractères)\n")
     
     monster_data = parse_monster_md(md_content)
+
+    output_dir = "./data/monsters"
+    
+    output_file = os.path.join(output_dir, monster_data['name']+".xml") if monster_data['name'] else output_file
     generate_monster_xml(monster_data, output_file)
     
     print(f"[MAIN] ✓ Succès ! Le fichier {output_file} a été généré.")
