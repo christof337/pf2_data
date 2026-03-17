@@ -25,9 +25,7 @@ def parse_ability_block(text):
         if name.endswith(" Déclencheur."): name = name.replace(" Déclencheur.", "")
         elif name.endswith("."): name = name[:-1]
         
-        # STOP : Sécurité pour ignorer les noms de monstres en bas de page
-        if name.isupper() and len(name) > 10: continue
-
+        # Délimitation du contenu de cette capacité
         start = m.end()
         end = matches[i+1].start() if i+1 < len(matches) else len(text)
         raw_body = text[start:end].strip()

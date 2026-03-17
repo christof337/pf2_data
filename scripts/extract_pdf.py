@@ -1,3 +1,4 @@
+import sys
 import pdfplumber
 import os
 from pdfplumber.utils import extract_text
@@ -136,8 +137,8 @@ def extract_with_sidebar_detection(pdf_path, output_dir):
             main_text = extract_styled_layout(main_page_filtered, useTextFlow=True)
 
             # Sauvegarde séparée pour faciliter le mapping XML
-            # output_file = os.path.join(output_dir, f"page_{i+1}_structured.md")
-            output_file = os.path.join(output_dir, f"young_empyreal_dragon.md")
+            output_file = os.path.join(output_dir, f"page_{i+1}_structured.md")
+            #output_file = os.path.join(output_dir, f"young_empyreal_dragon.md")
             with open(output_file, "w", encoding="utf-8") as f:
                 f.write(f"# FLUX PRINCIPAL (STATS/BASE)\n\n{main_text}\n\n")
                 if sidebar_contents:
@@ -147,5 +148,9 @@ def extract_with_sidebar_detection(pdf_path, output_dir):
     print(f"Extraction terminée. Les fichiers sont dans {output_dir}")
 
 if __name__ == "__main__":
+    input = sys.argv[1] if len(sys.argv) > 1 else "./pdf_sources/monstre_unique.pdf"
+    output = sys.argv[2] if len(sys.argv) > 2 else "./output/subset_1"
+
+    extract_with_sidebar_detection(input, output)
     # extract_with_sidebar_detection("./pdf_sources/bandersnatch.pdf", "./output/subset_2")
-    extract_with_sidebar_detection("./pdf_sources/monstre_unique.pdf", "./output/subset_5")
+    #extract_with_sidebar_detection("./pdf_sources/monstre_unique.pdf", "./output/subset_5")
