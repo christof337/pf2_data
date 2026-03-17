@@ -1742,7 +1742,6 @@
                 </damages>
             </strike>
         </strikes>
-        <offensiveAbilities>
             <spellList source="innate" tradition="primal" DD="45">
                 <rank rank="10">
                     <spells>
@@ -1761,6 +1760,7 @@
                     </spells>
                 </rank>
             </spellList>
+        <offensiveAbilities>
             <special type="activity" actions="1">
                 <name>Chant des cieux</name>
                 <traits><trait>air</trait><trait>audible</trait><trait>primordiale</trait></traits>
@@ -1881,7 +1881,6 @@
                 </damages>
             </strike>
         </strikes>
-        <offensiveAbilities>
             <spellList source="innate" tradition="primal" DD="45" attack="+41">
                 <rank rank="10">
                     <spells>
@@ -1907,6 +1906,7 @@
                     </spells>
                 </rank>
             </spellList>
+        <offensiveAbilities>
             <special type="activity" actions="1">
                 <name>Bond magique</name>
                 <description>Le gardien Marche rapidement jusqu’à sa Vitesse, Bondit à une hauteur égale ou inférieure à sa Vitesse ou Lance translocation ; il Frappe à la fin de ce déplacement. Si le gardien a commencé cette action caché, il le reste jusqu’à la fin de la Frappe conférée par ce pouvoir.</description>

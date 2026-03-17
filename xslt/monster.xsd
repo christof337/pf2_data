@@ -99,7 +99,7 @@
   <xs:complexType name="savesType">
     <xs:attribute name="REF" type="xs:string" use="required"/>
     <xs:attribute name="FOR" type="xs:string" use="required"/>
-    <xs:attribute name="VOL" type="xs:string" use="required"/>
+    <xs:attribute name="WIL" type="xs:string" use="required"/>
     <xs:attribute name="saveSpecial" type="xs:string"/>
   </xs:complexType>
 
