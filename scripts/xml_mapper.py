@@ -248,15 +248,35 @@ def parse_monster_md(content):
 
     # 10. Frappes (Strikes)
     strikes = []
-    strike_matches = list(re.finditer(r'\*\*Corps à corps\*\*\s+(.*?)\s+(\+\d+)\s+\((.*?)\),\s*\*\*Dégâts\s*\*\*\s*(.*?)(?=(?:\d+\s*)?\*\*Corps à corps|(?:\d+\s*)?\*\*À distance|\*\*Sorts|\n\s*(?:\d+\s*)?\*\*[A-ZÀ-Ÿ]|$)', main_section, re.DOTALL))
+    # On gère Corps à corps ET À distance (Groupe 1)
+    strike_matches = list(re.finditer(r'\*\*(Corps à corps|À distance)\*\*\s+(.*?)\s+([\+\-]\d+)\s+\((.*?)\),\s*\*\*Dégâts\s*\*\*\s*(.*?)(?=\n\s*(?:\d+\s*)?\*\*(?:Corps à corps|À distance|Sorts|[A-ZÀ-Ÿ])|$)', main_section, re.DOTALL))
+    
     for m in strike_matches:
+        # Détermination du type pour le XML
+        strike_type = "melee" if m.group(1).strip().lower() == "corps à corps" else "ranged"
+        
+        # Nettoyage du nom (enlève le chiffre d'action qui précède)
+        raw_name = clean_text(m.group(2))
+        clean_name = re.sub(r'^\d+\s+', '', raw_name).strip()
+
         dmgs = []
-        for p in re.split(r'\s+plus\s+', clean_text(m.group(4))):
+        for p in re.split(r'\s+plus\s+', clean_text(m.group(5))):
             d_m = re.search(r'(\d+d\d+[\+\-]?\d*)\s+(.*)', p)
             if d_m: dmgs.append({'amount': d_m.group(1), 'type': re.sub(r"^d'", '', d_m.group(2).strip())})
-        strikes.append({'name': m.group(1).strip(), 'bonus': m.group(2).strip(), 'traits': [t.strip() for t in m.group(3).split(',')], 'damages': dmgs})
-    if strike_matches: main_section = main_section[strike_matches[-1].end():]
+            
+        strikes.append({
+            'type': strike_type,
+            'name': clean_name, 
+            'bonus': m.group(3).strip(), 
+            'traits': [t.strip() for t in m.group(4).split(',')], 
+            'damages': dmgs
+        })
+        
+    if strike_matches: 
+        main_section = main_section[strike_matches[-1].end():]
+        
     monster_data['strikes'] = strikes
+
 
     # 11. Sorts
     spell_h = re.search(r'\*\*Sorts\s+(.*?)\*\*\s*DD\s+(\d+)(?:,\s+attaque\s+([\+\-]\d+))?', main_section)
@@ -510,16 +530,24 @@ def generate_monster_xml(data, output_path):
     for strike in data.get('strikes', []):
         strike_count += 1
         strike_elem = etree.SubElement(strikes_node, "strike")
+        
+        # Ajout du type (melee ou ranged)
+        if strike.get('type'):
+            strike_elem.set("type", strike['type'])
+            
         etree.SubElement(strike_elem, "name").text = strike['name']
         etree.SubElement(strike_elem, "bonus").text = strike['bonus']
+        
         traits_elem = etree.SubElement(strike_elem, "traits")
         for trait in strike['traits']:
             etree.SubElement(traits_elem, "trait").text = trait
+            
         damages_elem = etree.SubElement(strike_elem, "damages")
         for dmg in strike['damages']:
             dmg_elem = etree.SubElement(damages_elem, "damage")
             etree.SubElement(dmg_elem, "amount").text = dmg['amount']
             etree.SubElement(dmg_elem, "damageType").text = dmg['type']
+            
     print(f"[XML]    ✓ {strike_count} frappe(s) ajoutée(s) - {time.time() - step_start:.3f}s")
 
     # Sorts
