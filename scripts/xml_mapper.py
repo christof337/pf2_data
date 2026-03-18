@@ -49,10 +49,6 @@ def parse_ability_block(text):
                 ability['action_code'] = action_match.group(1)
                 raw_body = raw_body[action_match.end():].strip()
 
-        # Normalisation PF2e : le "9" est la police pour Réaction
-        if ability['action_code'] == '9':
-            ability['action_code'] = 'R'
-
         # B. Extraction des Traits
         traits_match = re.search(r'^\s*\((.*?)\)', raw_body)
         if traits_match:

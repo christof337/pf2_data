@@ -155,27 +155,7 @@
       <xsl:text>&#10;</xsl:text>
     </xsl:for-each>
     
-    <!-- Sorts Innés / Préparés -->
-    <xsl:for-each select="innateSpells">
-      <xsl:text>**Sorts </xsl:text><xsl:value-of select="tradition"/><xsl:text> innés** </xsl:text>
-      <xsl:text>DD </xsl:text><xsl:value-of select="dc"/>
-      <xsl:if test="attack">, attaque <xsl:value-of select="attack"/></xsl:if>
-      <xsl:for-each select="spellGroup">
-        <xsl:text> ; **</xsl:text>
-        <xsl:choose>
-          <xsl:when test="@type='cantrip'">Tours de magie (<xsl:value-of select="@level"/>e)</xsl:when>
-          <xsl:when test="@type='constant'">Constant (<xsl:value-of select="@level"/>e)</xsl:when>
-          <xsl:otherwise><xsl:value-of select="@level"/><xsl:text>e</xsl:text></xsl:otherwise>
-        </xsl:choose>
-        <xsl:text>** </xsl:text>
-        <xsl:for-each select="spell">
-          <xsl:text>*</xsl:text><xsl:value-of select="name"/><xsl:text>*</xsl:text>
-          <xsl:if test="details"> (<xsl:value-of select="details"/>)</xsl:if>
-          <xsl:if test="position() != last()">, </xsl:if>
-        </xsl:for-each>
-      </xsl:for-each>
-      <xsl:text>&#10;</xsl:text>
-    </xsl:for-each>
+    <xsl:apply-templates select="spellList"/>
     
     <!-- Capacités Offensives (Bloc Bas) -->
     <xsl:for-each select="offensiveAbilities/special">
@@ -253,6 +233,67 @@
     </xsl:for-each>
   </xsl:template>
   
+  <xsl:template match="spellList">
+    <xsl:text>**Sorts </xsl:text>
+    <xsl:choose>
+      <xsl:when test="@source='prepared'"><xsl:text>préparés </xsl:text></xsl:when>
+      <xsl:when test="@source='innate'"><xsl:text>innés </xsl:text></xsl:when>
+      <xsl:when test="@source='spontaneous'"><xsl:text>spontanés </xsl:text>
+      </xsl:when>
+    </xsl:choose>
+    <xsl:choose>
+      <xsl:when test="@tradition='arcane'"> <xsl:text>arcaniques </xsl:text></xsl:when>
+      <xsl:when test="@tradition='divine'"> <xsl:text>divins </xsl:text></xsl:when>
+      <xsl:when test="@tradition='occult'"> <xsl:text>occultes </xsl:text></xsl:when>
+      <xsl:when test="@tradition='primal'"> <xsl:text>primordiaux </xsl:text></xsl:when>
+    </xsl:choose>
+    
+    <xsl:text>** DD </xsl:text>
+    <xsl:value-of select="@DD"/><xsl:text> ; </xsl:text> 
+    <xsl:for-each select="rank">
+      <xsl:text>**</xsl:text>
+        <xsl:choose>
+          <xsl:when test="@constant='TRUE'"><xsl:text>Constant (</xsl:text><xsl:value-of select="@rank"/><xsl:text>e)</xsl:text></xsl:when>
+          <xsl:when test="@cantrips='TRUE'"><xsl:text>Tours de magie (</xsl:text><xsl:value-of select="@rank"/><xsl:text>e)</xsl:text></xsl:when>
+          <xsl:otherwise><xsl:value-of select="@rank"/><xsl:text>e</xsl:text></xsl:otherwise>
+        </xsl:choose>
+      <xsl:text>**</xsl:text>
+      <xsl:for-each select="spells/spell">
+        <xsl:text>&#xA0;</xsl:text><xsl:apply-templates select="."/>
+        <xsl:if test="not(position()=last())"><xsl:text>, </xsl:text></xsl:if>
+      </xsl:for-each>
+      <xsl:if test="not(position()=last())"><xsl:text> ; </xsl:text></xsl:if>
+    </xsl:for-each>
+    <xsl:text>&#10;</xsl:text>
+  </xsl:template>
+  
+  <xsl:template match="spell">
+    <xsl:text>*</xsl:text><xsl:value-of select="."/><xsl:text>*</xsl:text>
+    <xsl:if test="@source"><xsl:text> (</xsl:text><xsl:value-of select="@source"/><xsl:text>)</xsl:text></xsl:if>
+    <xsl:if test="@spellSpecial"><xsl:text> (</xsl:text><xsl:value-of select="@spellSpecial"/><xsl:text>)</xsl:text></xsl:if>
+  </xsl:template>
+
+  <!-- Sorts Innés / Préparés -->
+  <!--  <xsl:for-each select="innateSpells">
+      <xsl:text>**Sorts </xsl:text><xsl:value-of select="tradition"/><xsl:text> innés** </xsl:text>
+      <xsl:text>DD </xsl:text><xsl:value-of select="dc"/>
+      <xsl:if test="attack">, attaque <xsl:value-of select="attack"/></xsl:if>
+      <xsl:for-each select="spellGroup">
+        <xsl:text> ; **</xsl:text>
+        <xsl:choose>
+          <xsl:when test="@type='cantrip'">Tours de magie (<xsl:value-of select="@level"/>e)</xsl:when>
+          <xsl:when test="@type='constant'">Constant (<xsl:value-of select="@level"/>e)</xsl:when>
+          <xsl:otherwise><xsl:value-of select="@level"/><xsl:text>e</xsl:text></xsl:otherwise>
+        </xsl:choose>
+        <xsl:text>** </xsl:text>
+        <xsl:for-each select="spell">
+          <xsl:text>*</xsl:text><xsl:value-of select="name"/><xsl:text>*</xsl:text>
+          <xsl:if test="details"> (<xsl:value-of select="details"/>)</xsl:if>
+          <xsl:if test="position() != last()">, </xsl:if>
+        </xsl:for-each>
+      </xsl:for-each>
+      <xsl:text>&#10;</xsl:text>
+    </xsl:for-each> -->
 </xsl:stylesheet>
 
 <!--  
