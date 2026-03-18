@@ -259,6 +259,12 @@ def parse_monster_md(content):
         raw_name = clean_text(m.group(2))
         clean_name = re.sub(r'^\d+\s+', '', raw_name).strip()
 
+        # --- Gestion sécurisée des virgules décimales dans les traits ---
+        # On remplace "4,5" par "4__DECIMAL__5" pour le protéger du split
+        raw_traits = re.sub(r'(\d),(\d)', r'\1__DECIMAL__\2', m.group(4))
+        # On sépare par la vraie virgule, puis on restaure la virgule décimale
+        traits_list = [t.strip().replace('__DECIMAL__', ',') for t in raw_traits.split(',')]
+
         dmgs = []
         for p in re.split(r'\s+plus\s+', clean_text(m.group(5))):
             d_m = re.search(r'(\d+d\d+[\+\-]?\d*)\s+(.*)', p)
@@ -268,7 +274,7 @@ def parse_monster_md(content):
             'type': strike_type,
             'name': clean_name, 
             'bonus': m.group(3).strip(), 
-            'traits': [t.strip() for t in m.group(4).split(',')], 
+            'traits': traits_list,
             'damages': dmgs
         })
         
