@@ -258,7 +258,7 @@ def parse_monster_md(content):
         
         s_data = {
             'source': 'innate' if 'inné' in spell_h.group(1) else ('spontaneous' if 'spontané' in spell_h.group(1) else 'prepared'), 
-            'tradition': spell_h.group(1).replace('innés', '').replace('spontanés', '').strip(), 
+            'tradition': 'divine' if 'divins' in spell_h.group(1) else ('arcane' if 'arcaniques' in spell_h.group(1) else ('occult' if 'occultes' in spell_h.group(1) else ('primal' if 'primordiaux' in spell_h.group(1) else None))), 
             'DD': spell_h.group(2), 'attack': spell_h.group(3), 'ranks': []
         }
         

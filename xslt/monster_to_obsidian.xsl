@@ -111,6 +111,7 @@
       <xsl:call-template name="format-special-block"/>
     </xsl:for-each>
     
+    <xsl:text>----&#10;</xsl:text>
     <!-- Vitesse -->
     <xsl:text>**Vitesse** </xsl:text>
     <xsl:for-each select="speeds/speed">
@@ -165,7 +166,8 @@
   
   <!-- Template réutilisable pour les capacités (Spécial) -->
   <xsl:template name="format-special-block">
-    <xsl:text>**</xsl:text><xsl:value-of select="name"/><xsl:text>**</xsl:text>
+    <xsl:text>**</xsl:text><xsl:value-of select="name"/><xsl:if test="not(@actions) and not(@type) and not(traits)">.</xsl:if>
+    <xsl:text>**</xsl:text>
     
     <!-- Traduction des icônes d'actions -->
     <xsl:if test="@actions or @type='reaction' or @type='free'">
@@ -178,7 +180,7 @@
         <xsl:when test="@type='free'">`[free-action]`</xsl:when>
       </xsl:choose>
     </xsl:if>
-    
+
     <!-- Traits de la capacité -->
     <xsl:if test="traits/trait">
       <xsl:text> (</xsl:text>
@@ -192,7 +194,7 @@
     
     <!-- Déclencheur / Effet / Description -->
     <xsl:if test="trigger">
-      <xsl:text>**Déclencheur.** </xsl:text><xsl:value-of select="trigger"/>
+      <xsl:text>**Déclencheur.** </xsl:text><xsl:value-of select="trigger"/><xsl:text> </xsl:text>
     </xsl:if>
     <xsl:if test="effect">
       <xsl:text>**Effet.** </xsl:text><xsl:value-of select="effect"/>
