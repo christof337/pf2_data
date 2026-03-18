@@ -11,109 +11,75 @@ def clean_text(text):
     #text = text.replace("** ", " **").replace(" **", "**") 
     return text
 
-# def parse_ability_block(text):
-#     """Extraction robuste qui agrège les déclencheurs et effets à la capacité parente."""
-    
-#     # Regex pour trouver tous les blocs en gras
-#     for i, m in enumerate(matches):
-#         action_code = m.group(1)
-#         name = m.group(2).strip().rstrip('.')
-        
-#         # Si c'est un mot-clé, on l'ajoute à la capacité précédente
-#         if name in ["Déclencheur", "Effet"] and abilities:
-#             start = m.end()
-#             end = matches[i+1].start() if i+1 < len(matches) else len(text)
-#             content = clean_text(text[start:end])
-#             if name == "Déclencheur":
-#                 abilities[-1]['trigger'] = content
-#             else:
-#                 abilities[-1]['effect'] = content
-#             continue
-
-#         # Sinon, c'est une nouvelle capacité
-#         start = m.end()
-#         end = matches[i+1].start() if i+1 < len(matches) else len(text)
-#         raw_body = text[start:end]
-
-#         ability = {
-#             'name': name,
-#             'action_code': action_code,
-#             'trigger': None,
-#             'effect': None,
-#             'desc': clean_text(raw_body)
-#         }
-#         abilities.append(ability)
-        
-#     return abilities
-
 def parse_ability_block(text):
-    """Extraction robuste utilisant le gras comme ancre."""
+    """Extraction intelligente et robuste pour les capacités."""
     abilities = []
     if not text or not text.strip(): return abilities
     
-    # On se concentre uniquement sur la capture du nom en gras
-    pattern = r'(?:^|\n)\s*(?:(\d)\s*\n)?\s*\*\*([A-ZÀ-Ÿ][^*]+?)\*\*'
-    pattern = r'(?:^|\n)\s*\*\*(.+?)(?:^|\n)(?=\*\*)'
-    matches = list(re.finditer(pattern, text, re.DOTALL))
+    # 1. Capture de TOUS les blocs en gras qui sont de vrais titres
+    # L'utilisation de [ \t]* au lieu de \s* empêche de capturer les listes à puces (•) par erreur
+    pattern = r'(?:^|\n)[ \t]*(?:([0-3,9R])[ \t]*\n)?[ \t]*\*\*([A-ZÀ-Ÿ][^*]+?)\*\*'
+    all_matches = list(re.finditer(pattern, text))
+    
+    # 2. On filtre "Déclencheur" et "Effet" pour ne garder que les capacités parentes
+    matches = [m for m in all_matches if m.group(2).strip().rstrip('.').lower() not in ["déclencheur", "effet"]]
     
     for i, m in enumerate(matches):
-        raw_body = m.group(1).strip()
-        # Nettoyage d'un éventuel "Déclencheur" capturé dans le nom
-        #if name.__contains__(" Déclencheur."): name = name.replace(" Déclencheur.", "")
-        #elif name.endswith("."): name = name[:-1]
+        action_code = m.group(1)
+        name = m.group(2).strip().rstrip('.')
         
-        # Délimitation du contenu de cette capacité
-        #start = m.end()
-        #end = matches[i+1].start() if i+1 < len(matches) else #len(text)
-        #raw_body = text[start:end].strip()
+        # 3. La délimitation magique : du titre actuel jusqu'au PROCHAIN vrai titre (ou la fin)
+        # C'est ceci qui sauve "Présence inspirante" et "Souffle spirituel" !
+        start = m.end()
+        end = matches[i+1].start() if i+1 < len(matches) else len(text)
+        raw_body = text[start:end].strip()
         
         ability = {
-            'name': None,
+            'name': name,
             'traits': [],
-            'action_code': None,
+            'action_code': action_code,
             'trigger': None, 'effect': None, 'desc': None,
             'list_items': []
         }
         
-        # Astuce de génie : on va traiter le raw_body en plusieurs étapes pour extraire les différentes infos, en partant du principe que l'ordre est généralement : Nom > Action > Traits > Description/Trigger+Effet > Liste (•)
-        # 0. Capture du nom
-        name_match = re.match(r'^(.+?)\*\*', raw_body)
-        if name_match:
-            ability['name'] = name_match.group(1).strip()
-            raw_body = raw_body[name_match.end():].strip()
+        # A. Capture de l'action si elle est SOUS le titre (ex: 1, 2, 9)
+        if not ability['action_code']:
+            action_match = re.search(r'^\s*([0-3,9R])', raw_body)
+            if action_match:
+                ability['action_code'] = action_match.group(1)
+                raw_body = raw_body[action_match.end():].strip()
 
-        # 1. Capture de l'action : on cherche un chiffre (ou R pour réaction) isolé au TOUT DÉBUT du texte
-        action_match = re.search(r'^\s*([0-3,9])', raw_body)
-        if action_match:
-            ability['action_code'] = action_match.group(1)
-            raw_body = raw_body[action_match.end():].strip()
+        # Normalisation PF2e : le "9" est la police pour Réaction
+        if ability['action_code'] == '9':
+            ability['action_code'] = 'R'
 
-        # 2. Capture des traits : ils sont maintenant au début (puisqu'on a enlevé l'action)
+        # B. Extraction des Traits
         traits_match = re.search(r'^\s*\((.*?)\)', raw_body)
         if traits_match:
             ability['traits'] = [t.strip() for t in traits_match.group(1).split(',')]
             raw_body = raw_body[traits_match.end():].strip()
             
-        # 3. Trigger
-        trigger_match = re.search(r'^\*\*(Déclencheur\.|Déclencheur\s*:\s*)\*\*(.*?)(?=(\*\*Effet\.?\*\*|Effet\.?|$))', raw_body, re.DOTALL)
+        # C. Séparation Trigger / Effet
+        trigger_match = re.search(r'(?:\*\*Déclencheur\.?\*\*|Déclencheur\.)\s*(.*?)(?=(?:\*\*Effet\.?\*\*|Effet\.)|$)', raw_body, re.DOTALL | re.IGNORECASE)
+        effect_match = re.search(r'(?:\*\*Effet\.?\*\*|Effet\.)\s*(.*)', raw_body, re.DOTALL | re.IGNORECASE)
+        
         if trigger_match:
-            ability['trigger'] = clean_text(trigger_match.group(2))
-            raw_body = raw_body[trigger_match.end():].strip()
+            ability['trigger'] = clean_text(trigger_match.group(1))
+        if effect_match:
+            ability['effect'] = clean_text(effect_match.group(1))
 
-        # 3. Gestion des listes (•)
-        if '•' in raw_body:
-            parts = re.split(r'\s*•\s*', raw_body)
+        # D. Description (ce qui est avant Déclencheur/Effet)
+        desc_parts = re.split(r'\*\*Déclencheur\.?\*\*|Déclencheur\.|\*\*Effet\.?\*\*|Effet\.', raw_body, flags=re.IGNORECASE)
+        desc_raw = desc_parts[0].strip()
+        
+        # E. Gestion des listes à puces (•)
+        if '•' in desc_raw:
+            parts = re.split(r'\s*•\s*', desc_raw)
             intro = parts[0].strip()
             ability['list_items'] = [clean_text(p) for p in parts[1:] if p.strip()]
-            raw_body = intro 
-
-        # 4. Répartition Trigger / Effet
-        if "**Effet.**" in raw_body or "Effet." in raw_body:
-            p = re.split(r'\*\*Effet\.\*\*|Effet\.', raw_body)
-            #ability['trigger'] = clean_text(p[0].replace("Déclencheur.", "").strip())
-            ability['effect'] = clean_text(p[1]) if len(p) > 1 else None
+            ability['desc'] = clean_text(intro) if intro else None
         else:
-            ability['desc'] = clean_text(raw_body)
+            ability['desc'] = clean_text(desc_raw) if desc_raw else None
             
         abilities.append(ability)
         

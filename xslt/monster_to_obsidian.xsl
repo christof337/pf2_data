@@ -116,16 +116,16 @@
     <xsl:for-each select="speeds/speed">
       <xsl:choose>
         <xsl:when test="@type='climb'">
-          escalade
+            <xsl:text>escalade </xsl:text>
         </xsl:when>
         <xsl:when test="@type='swim'">
-          nage
+          <xsl:text>nage </xsl:text>
         </xsl:when>
         <xsl:when test="@type='burrow'">
-          creusement
+          <xsl:text>creusement </xsl:text>
         </xsl:when>
         <xsl:when test="@type='fly'">
-          vol
+          <xsl:text>vol </xsl:text>
         </xsl:when>
       </xsl:choose>
       <xsl:value-of select="."/>
@@ -151,8 +151,7 @@
         </xsl:for-each>
         <xsl:text>)</xsl:text>
       </xsl:if>
-      <xsl:text>, **Dégâts** </xsl:text>
-      <xsl:value-of select="damage"/>
+      <xsl:apply-templates select="damages"/>
       <xsl:text>&#10;</xsl:text>
     </xsl:for-each>
     
@@ -244,6 +243,14 @@
   
   <xsl:template match="i | em">
     <xsl:text>*</xsl:text><xsl:apply-templates/><xsl:text>*</xsl:text>
+  </xsl:template>
+  
+  <xsl:template match="damages">
+    <xsl:text>, **Dégâts** </xsl:text>
+    <xsl:for-each select="damage">
+      <xsl:if test="position()>1"> plus </xsl:if>
+      <xsl:value-of select="amount"/>&#xA0;<xsl:value-of select="damageType"/>
+    </xsl:for-each>
   </xsl:template>
   
 </xsl:stylesheet>
