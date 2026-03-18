@@ -4,32 +4,36 @@ import sys
 import time
 from lxml import etree
 
+# ==========================================
+# UTILITAIRES DE TEXTE
+# ==========================================
+
 def clean_text(text):
     """Nettoie les sauts de ligne et espaces superflus."""
-    text = re.sub(r'\s+', ' ', text).strip()
-    # Optionnel : Recolle les étoiles si un espace s'est glissé (ex: "**Mot **" -> "**Mot**")
-    #text = text.replace("** ", " **").replace(" **", "**") 
-    return text
+    return re.sub(r'\s+', ' ', text).strip()
+
+# ==========================================
+# PARSING SPÉCIFIQUE MONSTRES
+# ==========================================
 
 def parse_ability_block(text):
-    """Extraction intelligente et robuste pour les capacités."""
+    """Extraction robuste des capacités, traits et actions depuis le bloc Markdown."""
     abilities = []
-    if not text or not text.strip(): return abilities
+    if not text or not text.strip(): 
+        return abilities
     
-    # 1. Capture de TOUS les blocs en gras qui sont de vrais titres
-    # L'utilisation de [ \t]* au lieu de \s* empêche de capturer les listes à puces (•) par erreur
+    # 1. Capture des titres en gras (évite de capturer les listes à puces)
     pattern = r'(?:^|\n)[ \t]*(?:([0-3,9R])[ \t]*\n)?[ \t]*\*\*([A-ZÀ-Ÿ][^*]+?)\*\*'
     all_matches = list(re.finditer(pattern, text))
     
-    # 2. On filtre "Déclencheur" et "Effet" pour ne garder que les capacités parentes
+    # 2. Filtrage des mots-clés "Déclencheur" et "Effet" pour isoler les capacités parentes
     matches = [m for m in all_matches if m.group(2).strip().rstrip('.').lower() not in ["déclencheur", "effet"]]
     
     for i, m in enumerate(matches):
         action_code = m.group(1)
         name = m.group(2).strip().rstrip('.')
         
-        # 3. La délimitation magique : du titre actuel jusqu'au PROCHAIN vrai titre (ou la fin)
-        # C'est ceci qui sauve "Présence inspirante" et "Souffle spirituel" !
+        # Délimitation du bloc courant
         start = m.end()
         end = matches[i+1].start() if i+1 < len(matches) else len(text)
         raw_body = text[start:end].strip()
@@ -38,18 +42,20 @@ def parse_ability_block(text):
             'name': name,
             'traits': [],
             'action_code': action_code,
-            'trigger': None, 'effect': None, 'desc': None,
+            'trigger': None, 
+            'effect': None, 
+            'desc': None,
             'list_items': []
         }
         
-        # A. Capture de l'action si elle est SOUS le titre (ex: 1, 2, 9)
+        # A. Capture de l'action si elle est située sous le titre
         if not ability['action_code']:
             action_match = re.search(r'^\s*([0-3,9R])', raw_body)
             if action_match:
                 ability['action_code'] = action_match.group(1)
                 raw_body = raw_body[action_match.end():].strip()
 
-        # B. Extraction des Traits
+        # B. Extraction des traits de la capacité
         traits_match = re.search(r'^\s*\((.*?)\)', raw_body)
         if traits_match:
             ability['traits'] = [t.strip() for t in traits_match.group(1).split(',')]
@@ -64,11 +70,11 @@ def parse_ability_block(text):
         if effect_match:
             ability['effect'] = clean_text(effect_match.group(1))
 
-        # D. Description (ce qui est avant Déclencheur/Effet)
+        # D. Description (texte précédant le déclencheur/effet)
         desc_parts = re.split(r'\*\*Déclencheur\.?\*\*|Déclencheur\.|\*\*Effet\.?\*\*|Effet\.', raw_body, flags=re.IGNORECASE)
         desc_raw = desc_parts[0].strip()
         
-        # E. Gestion des listes à puces (•)
+        # E. Extraction des listes à puces
         if '•' in desc_raw:
             parts = re.split(r'\s*•\s*', desc_raw)
             intro = parts[0].strip()
@@ -82,23 +88,20 @@ def parse_ability_block(text):
     return abilities
 
 def parse_monster_md(content):
-    """Analyse le Markdown (formaté avec gras/italique) pour extraire les données."""
+    """Analyse le Markdown brut (issu de pdfplumber) pour extraire les données du monstre."""
     monster_data = {}
-    start_time = time.time()
     print("[PARSING] Début de l'analyse du Markdown...")
     
     # 1. Flux principal
     main_section = content.split("# FLUX PRINCIPAL (STATS/BASE)")[1]
     
-    # 2. Nom, Niveau et Traits
-    # On isole le bloc d'en-tête de façon beaucoup plus sûre
+    # 2. Nom, Niveau et Traits globaux
     header_match = re.search(r'([A-ZÀ-Ÿ\s\-]+?)\s+(CRÉATURE)\s+(\d+)', main_section)
     if header_match:
         monster_data['name'] = clean_text(header_match.group(1))
         monster_data['type'] = header_match.group(2).strip()
         monster_data['level'] = header_match.group(3).strip()
         
-        # Les traits (on s'arrête avant Perception)
         traits_match = re.search(r'(TRÈS PETITE|PETITE|MOYENNE|GRANDE|TRÈS GRANDE|GIGANTESQUE)\s+([A-ZÀ-Ÿ\s]+)(?=\n|Perception)', main_section)
         if traits_match:
             monster_data['size'] = traits_match.group(1).strip()
@@ -152,17 +155,17 @@ def parse_monster_md(content):
         for key, val in pairs: monster_data['attributes'][attr_map[key]] = val.replace(" ", "")
         main_section = main_section[attr_match.end():].lstrip()
 
-    # 6.5 Interactions (jusqu'à la CA)
+    # 7. Capacités d'interaction
     ca_match = re.search(r'(?:^|\n)\*\*CA\s*\*\*', main_section)
     if ca_match:
         monster_data['interaction_abilities'] = parse_ability_block(main_section[:ca_match.start()])
         main_section = main_section[ca_match.start():].lstrip()
-    else: monster_data['interaction_abilities'] = []
+    else: 
+        monster_data['interaction_abilities'] = []
 
-    # 7. Défenses (CA, Saves, PV, Immunités, Faiblesses)
+    # 8. Défenses (CA, PV, Sauvegardes, Immunités, Faiblesses)
     pv_match = re.search(r'\*\*PV\s*\*\*\s*\d+', main_section)
     if pv_match:
-        # On coupe de CA jusqu'au début du prochain bloc d'action ou de vitesse
         end_def = re.search(r'(?:\n\s*(?:\d+\s*\n)?\s*\*\*|\n\s*\*\*Vitesses)', main_section[pv_match.end():])
         cut_idx = pv_match.end() + end_def.start() if end_def else len(main_section)
         defenses_text = clean_text(main_section[:cut_idx])
@@ -187,14 +190,15 @@ def parse_monster_md(content):
         monster_data['weaknesses'] = [{'name': weak_m.group(1).strip(), 'value': weak_m.group(2)}] if weak_m else []
         print("[PARSING]    ✓ Défenses extraites.")
 
-    # 8. Réactions (jusqu'à Vitesses)
+    # 9. Capacités réactives
     vit_match = re.search(r'(?:^|\n)\*\*Vitesses\*\*', main_section)
     if vit_match:
         monster_data['reactive_abilities'] = parse_ability_block(main_section[:vit_match.start()])
         main_section = main_section[vit_match.start():].lstrip()
-    else: monster_data['reactive_abilities'] = []
+    else: 
+        monster_data['reactive_abilities'] = []
 
-    # 9. Vitesses
+    # 10. Vitesses
     speeds_m = re.search(r'\*\*Vitesses\*\*\s+(.*?)(?=\n\s*(?:\d+\s*)?\*\*Corps à corps|\n\s*(?:\d+\s*)?\*\*À distance|\n\s*[A-ZÀ-Ÿ])', main_section)
     monster_data['speeds'] = {'list': [], 'special': None}
     if speeds_m:
@@ -208,23 +212,17 @@ def parse_monster_md(content):
             monster_data['speeds']['list'].append({'value': val, 'type': speed_type})
         main_section = main_section[speeds_m.end():]
 
-    # 10. Frappes (Strikes)
+    # 11. Frappes (Strikes)
     strikes = []
-    # On gère Corps à corps ET À distance (Groupe 1)
     strike_matches = list(re.finditer(r'\*\*(Corps à corps|À distance)\*\*\s+(.*?)\s+([\+\-]\d+)\s+\((.*?)\),\s*\*\*Dégâts\s*\*\*\s*(.*?)(?=\n\s*(?:\d+\s*)?\*\*(?:Corps à corps|À distance|Sorts|[A-ZÀ-Ÿ])|$)', main_section, re.DOTALL))
     
     for m in strike_matches:
-        # Détermination du type pour le XML
         strike_type = "melee" if m.group(1).strip().lower() == "corps à corps" else "ranged"
-        
-        # Nettoyage du nom (enlève le chiffre d'action qui précède)
         raw_name = clean_text(m.group(2))
         clean_name = re.sub(r'^\d+\s+', '', raw_name).strip()
 
-        # --- Gestion sécurisée des virgules décimales dans les traits ---
-        # On remplace "4,5" par "4__DECIMAL__5" pour le protéger du split
+        # Protection des virgules décimales dans les traits (ex: 4,5 m)
         raw_traits = re.sub(r'(\d),(\d)', r'\1__DECIMAL__\2', m.group(4))
-        # On sépare par la vraie virgule, puis on restaure la virgule décimale
         traits_list = [t.strip().replace('__DECIMAL__', ',') for t in raw_traits.split(',')]
 
         dmgs = []
@@ -245,14 +243,12 @@ def parse_monster_md(content):
         
     monster_data['strikes'] = strikes
 
-
-    # 11. Sorts
+    # 12. Sorts
     spell_h = re.search(r'\*\*Sorts\s+(.*?)\*\*\s*DD\s+(\d+)(?:,\s+attaque\s+([\+\-]\d+))?', main_section)
     if spell_h:
         next_sec = re.search(r'\n\s*(?:\d+\s*\n)?\s*\*\*[A-ZÀ-Ÿ]', main_section[spell_h.end():])
         end_pos = spell_h.end() + next_sec.start() if next_sec else len(main_section)
         
-        # Astuce de génie : on retire toutes les étoiles du texte des sorts pour réutiliser ta logique !
         spells_text = re.sub(r'\*+', '', main_section[spell_h.start():end_pos])
         main_section = main_section[end_pos:]
         
@@ -274,26 +270,24 @@ def parse_monster_md(content):
                 s_data['ranks'].append({'rank': rank_match.group(1), 'spells': [re.sub(r'\((à volonté|constant)\)', '', spell_info).strip()], 'constant': False, 'cantrips': False, 'special': special})
         monster_data['spells'] = s_data
 
-    # 12. Offensives (Le reste)
-    # Dans parse_monster_md, à la toute fin (Offensive Abilities) :
-
-    # On cherche si un nom de monstre suit (ex: DRAGON DIABOLIQUE...) pour couper avant
+    # 13. Capacités offensives (Le reste)
+    # Exclut les blocs de texte annexes (ex: Lore en fin de page)
     footer_match = re.search(r'\n\s*\*\*?[A-ZÀ-Ÿ\s]{10,}', main_section)
-
-
-    #footer_match = re.search(r'(?:\n\s*)(?!\bDD\b)[A-ZÀ-Ÿ]{2,}(?:\s+(?!\bDD\b)(?=\*\*)?[A-ZÀ-Ÿ]{2,})+', main_section)
     offensive = main_section[:footer_match.start()].strip() if footer_match else main_section
     monster_data['offensive_abilities'] = parse_ability_block(offensive)
 
     return monster_data
 
+# ==========================================
+# GÉNÉRATION XML
+# ==========================================
+
 def add_abilities_to_xml(parent_node, abilities_list, tag_name):
-    """Génère le bloc XML à partir d'une liste d'abilities."""
+    """Génère un bloc XML (ex: offensiveAbilities) à partir d'une liste de capacités."""
     if not abilities_list: return
     
     container = etree.SubElement(parent_node, tag_name)
     for abi in abilities_list:
-        # Détermination du type d'action
         if abi['action_code'] == '9':
             spec = etree.SubElement(container, "special", type="reaction")
         elif abi['action_code'] in ['0', '1', '2', '3']:
@@ -308,7 +302,6 @@ def add_abilities_to_xml(parent_node, abilities_list, tag_name):
             for t in abi['traits']:
                 etree.SubElement(t_node, "trait").text = t
         
-        # Choix de la balise cible pour le texte (Trigger/Effect ou Description)
         if abi['trigger']:
             etree.SubElement(spec, "trigger").text = abi['trigger']
             target_node = etree.SubElement(spec, "effect")
@@ -317,7 +310,6 @@ def add_abilities_to_xml(parent_node, abilities_list, tag_name):
             target_node = etree.SubElement(spec, "description")
             content_text = abi['desc']
 
-        # Remplissage du texte et de la liste éventuelle
         if content_text:
             target_node.text = content_text
         
@@ -327,95 +319,54 @@ def add_abilities_to_xml(parent_node, abilities_list, tag_name):
                 etree.SubElement(list_node, "listItem").text = item
 
 def generate_monster_xml(data, output_path):
-    """Transforme le dictionnaire de données data en un fichier XML généré dans output_path"""
+    """Transforme le dictionnaire de données en un fichier XML formaté."""
     start_time = time.time()
     print("[XML] Début de la génération du fichier XML...")
     
-    # Définition de l'URI pour xsi
     XSI_NS = "http://www.w3.org/2001/XMLSchema-instance"
-
-    # Création du nœud racine avec le mappage de l'espace de nom 'xsi'
     root = etree.Element("monsters", nsmap={'xsi': XSI_NS})
-
-    # Ajout de l'attribut noNamespaceSchemaLocation
-    # Note : on utilise la notation Clark {URI} pour cibler l'attribut dans l'espace xsi
     root.set(f"{{{XSI_NS}}}noNamespaceSchemaLocation", "../../xslt/monster.xsd")
 
-    # Création de la racine
-    step_start = time.time()
-    print("[XML] 1. Création de la structure XML de base...")
     monster = etree.SubElement(root, "monster")
-    print(f"[XML]    ✓ Racine créée - {time.time() - step_start:.3f}s")
     
     # Identité
-    step_start = time.time()
-    print("[XML] 2. Ajout de l'identité (nom, type, niveau)...")
     etree.SubElement(monster, "name").text = data.get('name')
     etree.SubElement(monster, "type").text = data.get('type')
     etree.SubElement(monster, "level").text = data.get('level')
-    print(f"[XML]    ✓ Identité ajoutée - {time.time() - step_start:.3f}s")
     
     # Traits
-    step_start = time.time()
-    print("[XML] 3. Ajout des traits de créature...")
     c_traits = etree.SubElement(monster, "creatureTraits")
     etree.SubElement(c_traits, "trait", type="size").text = data.get('size')
     for t in data.get('traits', []):
         etree.SubElement(c_traits, "trait").text = t
-    print(f"[XML]    ✓ {1 + len(data.get('traits', []))} trait(s) ajouté(s) - {time.time() - step_start:.3f}s")
 
     # Perception
-    step_start = time.time()
-    print("[XML] 4. Ajout de la perception et des sens...")
     percep = etree.SubElement(monster, "perception")
     etree.SubElement(percep, "bonus").text = data.get('perception_bonus')
     senses = etree.SubElement(percep, "senses")
-    sense_count = 0
     for s in data.get('senses', []):
-        sense_count += 1
         sens = etree.SubElement(senses, "sens")
         etree.SubElement(sens, "name").text = s['name']
-        if s['precision']: 
-            etree.SubElement(sens, "precision").text = s['precision']
-        if s['range']: 
-            etree.SubElement(sens, "range").text = s['range']
-        if s['source']: 
-            etree.SubElement(sens, "source").text = s['source']
-    print(f"[XML]    ✓ Perception et {sense_count} sens ajoutés - {time.time() - step_start:.3f}s")
+        if s['precision']: etree.SubElement(sens, "precision").text = s['precision']
+        if s['range']: etree.SubElement(sens, "range").text = s['range']
+        if s['source']: etree.SubElement(sens, "source").text = s['source']
 
     # Langues
-    step_start = time.time()
-    print("[XML] 6. Ajout des langues...")
-    # Création du nœud parent unique
     langs_node = etree.SubElement(monster, "languages")
-    
-    # 1. Ajout des langues classiques
     for l in data.get('languages', []):
         etree.SubElement(langs_node, "language").text = l
     
-    # 2. Gestion du "Spécial" (ex: ; *langage universel*)
     if data.get('lang_special'):
         special_text = data['lang_special']
         spec_elem = etree.SubElement(langs_node, "langSpecial")
-        
-        # On cherche si le texte contient de l'italique Markdown (*sort*)
         spell_match = re.search(r'\*(.*?)\*', special_text)
-        
         if spell_match:
-            # Si on trouve des étoiles, on crée une balise <spell>
             spell_node = etree.SubElement(spec_elem, "spell")
             spell_node.text = spell_match.group(1).strip()
-            
-            # Note : Si tu as du texte AVANT ou APRÈS l'étoile (ex: "via *sort*"), 
-            # il faudrait utiliser spec_elem.text et spell_node.tail, 
-            # mais pour PF2e c'est généralement juste le nom du sort.
         else:
-            # Sinon, on met juste le texte brut
             spec_elem.text = special_text
             
-    print(f"[XML]    ✓ Structure des langues finalisée - {time.time() - step_start:.3f}s")
-
-    # 7. Skills (Compétences)
+    # Compétences
     if data.get('skills'):
         skills_node = etree.SubElement(monster, "skills")
         for s in data['skills']:
@@ -423,34 +374,27 @@ def generate_monster_xml(data, output_path):
             etree.SubElement(skill_item, "name").text = s['name']
             etree.SubElement(skill_item, "bonus").text = str(s['bonus'])
 
-    # 8. Ajout des Attributes (sous forme d'attributs XML)
-    # L'ordre dans la balise n'importe pas en XML, mais la balise doit être au bon endroit
+    # Attributs
     if data.get('attributes'):
         attr_node = etree.SubElement(monster, "attributes")
-        # On boucle sur le mapping pour être sûr de ne rien oublier
         for attr_key in ['STR', 'DEX', 'CON', 'INT', 'WIS', 'CHA']:
-            val = data['attributes'].get(attr_key, "+0") # Valeur par défaut si l'attribut est manquant
+            val = data['attributes'].get(attr_key, "+0")
             attr_node.set(attr_key, val)
 
     add_abilities_to_xml(monster, data['interaction_abilities'], "interactionAbilities")
 
-    # 10. Défenses (CA, PV, Immunités, Faiblesses, Saves)
-    step_start = time.time()
-    print("[XML] 10. Ajout des défenses (CA, PV, Saves)...")
+    # Défenses
     etree.SubElement(monster, "armorClass").text = data.get('ac')
     save_node = etree.SubElement(monster, "saves", **data.get('saves', {}))
     if 'save_special' in data: 
         save_node.set("saveSpecial", data['save_special'])
     etree.SubElement(monster, "health").text = data.get('hp')
 
-    
-    # Immunités
     if data.get('immunities'):
         imm_node = etree.SubElement(monster, "immunities")
         for imm in data['immunities']:
             etree.SubElement(imm_node, "immunity").text = imm
 
-    # Faiblesses
     if data.get('weaknesses'):
         weak_node = etree.SubElement(monster, "weaknesses")
         for w in data['weaknesses']:
@@ -458,48 +402,27 @@ def generate_monster_xml(data, output_path):
             etree.SubElement(w_elem, "name").text = w['name']
             etree.SubElement(w_elem, "value").text = w['value']
 
-    print(f"[XML]    ✓ Défenses ajoutées - {time.time() - step_start:.3f}s")
-
-    # --- 11. RÉACTIVES (Facultatif) ---
     add_abilities_to_xml(monster, data['reactive_abilities'], "reactiveAbilities")
 
-    # 11. Vitesses (Speeds)
-    # IMPORTANT : À placer APRÈS reactiveAbilities et AVANT strikes
-    step_start = time.time()
-    print("[XML] 11. Ajout des vitesses...")
+    # Vitesses
     if data.get('speeds') and data['speeds']['list']:
         speeds_node = etree.SubElement(monster, "speeds")
-        
-        # Attribut speedSpecial s'il y a du texte après le point-virgule
         if data['speeds'].get('special'):
             speeds_node.set("speedSpecial", data['speeds']['special'])
             
-        # Création des balises <speed>
         for s in data['speeds']['list']:
             speed_elem = etree.SubElement(speeds_node, "speed")
             speed_elem.text = s['value']
-            
-            # Ajout de l'attribut type VO uniquement s'il n'est pas None (fly, climb...)
             if s['type']:
                 speed_elem.set("type", s['type'])
-                
-        print(f"[XML]    ✓ Vitesses ajoutées au XML - {time.time() - step_start:.3f}s")
     else:
-        # Fallback de sécurité si le monstre n'a pas de bloc vitesse mais que le XSD l'exige
         speeds_node = etree.SubElement(monster, "speeds")
         etree.SubElement(speeds_node, "speed").text = "0 m"
-        print(f"[XML]    ⚠ Bloc vitesses créé par défaut (0 m) - {time.time() - step_start:.3f}s")
 
     # Frappes
-    step_start = time.time()
-    print("[XML] 7. Ajout des frappes...")
     strikes_node = etree.SubElement(monster, "strikes")
-    strike_count = 0
     for strike in data.get('strikes', []):
-        strike_count += 1
         strike_elem = etree.SubElement(strikes_node, "strike")
-        
-        # Ajout du type (melee ou ranged)
         if strike.get('type'):
             strike_elem.set("type", strike['type'])
             
@@ -516,125 +439,97 @@ def generate_monster_xml(data, output_path):
             etree.SubElement(dmg_elem, "amount").text = dmg['amount']
             etree.SubElement(dmg_elem, "damageType").text = dmg['type']
             
-    print(f"[XML]    ✓ {strike_count} frappe(s) ajoutée(s) - {time.time() - step_start:.3f}s")
-
     # Sorts
-    step_start = time.time()
-    print("[XML] 9. Ajout des sorts...")
     if data.get('spells'):
         s = data['spells']
         s_list = etree.SubElement(monster, "spellList", source=s['source'], tradition=s['tradition'], DD=s['DD'])
         if s['attack']: 
             s_list.set("attack", s['attack'])
-        rank_count = 0
-        spell_total = 0
         for r in s['ranks']:
-            rank_count += 1
             r_node = etree.SubElement(s_list, "rank", rank=r['rank'])
-            if r.get('constant'): 
-                r_node.set("constant", "TRUE")
-            if r.get('cantrips'): 
-                r_node.set("cantrips", "TRUE")
+            if r.get('constant'): r_node.set("constant", "TRUE")
+            if r.get('cantrips'): r_node.set("cantrips", "TRUE")
             spells_node = etree.SubElement(r_node, "spells")
             for sp_name in r['spells']:
-                spell_total += 1
                 spell_elem = etree.SubElement(spells_node, "spell")
                 spell_elem.text = sp_name
-                # Ajoute l'attribut spellSpecial si présent
                 if r.get('special'):
                     spell_elem.set("spellSpecial", r['special'])
-        print(f"[XML]    ✓ {rank_count} rang(s) de sort(s) avec {spell_total} sort(s) total - {time.time() - step_start:.3f}s")
-    else:
-        print(f"[XML]    ℹ Aucun sort à ajouter - {time.time() - step_start:.3f}s")
 
-    # --- 13. OFFENSIVES (Facultatif, à la fin) ---
     add_abilities_to_xml(monster, data['offensive_abilities'], "offensiveAbilities")
 
-    # Sauvegarde
-    step_start = time.time()
-    print("[XML] 20. Sauvegarde du fichier XML...")
-
-    # Juste avant la sauvegarde finale dans generate_monster_xml :
+    # Finalisation et Sauvegarde
     tree = etree.ElementTree(root)
-
-    # Création de l'instruction de traitement
-    pi = etree.ProcessingInstruction(
-        "xml-stylesheet", 
-        'href="../../xslt/decodeMonster.xsl" type="text/xsl"'
-    )
-
-    # Insertion de l'instruction avant le nœud racine
+    pi = etree.ProcessingInstruction("xml-stylesheet", 'href="../../xslt/decodeMonster.xsl" type="text/xsl"')
     root.addprevious(pi)
-
-    # Sauvegarde avec déclaration XML
     tree.write(output_path, encoding="UTF-8", xml_declaration=True, pretty_print=True)
     
-    print(f"[XML]    ✓ Fichier sauvegardé à {output_path} - {time.time() - step_start:.3f}s")
-
     total_time = time.time() - start_time
     print(f"[XML] ✓ Génération complète en {total_time:.3f}s\n")
+
+# ==========================================
+# VALIDATION XSD
+# ==========================================
 
 def validate_xml(xml_path, xsd_path):
     """Vérifie si le fichier XML est valide par rapport au schéma XSD."""
     print(f"[VALIDATION] Vérification de {xml_path} avec {xsd_path}...")
     try:
-        # Charger le schéma XSD
         with open(xsd_path, 'rb') as f:
             schema_root = etree.XML(f.read())
         schema = etree.XMLSchema(schema_root)
         
-        # Charger le fichier XML
         with open(xml_path, 'rb') as f:
             xml_doc = etree.parse(f)
             
-        # Valider
         if schema.validate(xml_doc):
             print("[VALIDATION] ✓ Le fichier XML est VALIDE.")
             return True
         else:
             print("[VALIDATION] ✗ Le fichier XML est INVALIDE !")
-            # Afficher les erreurs détaillées
             for error in schema.error_log:
                 print(f"    - Ligne {error.line}, colonne {error.column}: {error.message}")
             return False
-            
     except Exception as e:
         print(f"[VALIDATION] Erreur lors de la validation : {e}")
         return False
 
-# Exécution
-input_file = sys.argv[1] if len(sys.argv) > 1 else "./output/subset_5/young_empyreal_dragon.md"
-output_file = sys.argv[2] if len(sys.argv) > 2 else "./output/subset_5/young_empyreal_dragon.xml"
+# ==========================================
+# EXÉCUTION PRINCIPALE
+# ==========================================
 
-print("="*60)
-print("DÉBUT DU TRAITEMENT")
-print("="*60 + "\n")
+if __name__ == "__main__":
+    input_file = sys.argv[1] if len(sys.argv) > 1 else "./output/subset_5/young_empyreal_dragon.md"
+    output_file = sys.argv[2] if len(sys.argv) > 2 else "./output/subset_5/young_empyreal_dragon.xml"
 
-start_total = time.time()
+    print("="*60)
+    print("DÉBUT DU TRAITEMENT (MONSTER MAPPER)")
+    print("="*60 + "\n")
 
-if os.path.exists(input_file):
-    print(f"[MAIN] Lecture du fichier {input_file}...")
-    with open(input_file, 'r', encoding='utf-8') as f:
-        md_content = f.read()
-    print(f"[MAIN] ✓ Fichier chargé ({len(md_content)} caractères)\n")
-    
-    monster_data = parse_monster_md(md_content)
+    start_total = time.time()
 
-    output_dir = "./data/monsters"
-    
-    output_file = os.path.join(output_dir, monster_data['name']+".xml") if monster_data['name'] else output_file
-    generate_monster_xml(monster_data, output_file)
-    
-    print(f"[MAIN] ✓ Succès ! Le fichier {output_file} a été généré.")
+    if os.path.exists(input_file):
+        print(f"[MAIN] Lecture du fichier {input_file}...")
+        with open(input_file, 'r', encoding='utf-8') as f:
+            md_content = f.read()
+        print(f"[MAIN] ✓ Fichier chargé ({len(md_content)} caractères)\n")
+        
+        monster_data = parse_monster_md(md_content)
 
-    xsd_file = "./xslt/monster.xsd"
-    if os.path.exists(output_file) and os.path.exists(xsd_file):
-        validate_xml(output_file, xsd_file)
+        output_dir = "./data/monsters"
+        output_file = os.path.join(output_dir, monster_data['name']+".xml") if monster_data['name'] else output_file
+        
+        generate_monster_xml(monster_data, output_file)
+        print(f"[MAIN] ✓ Succès ! Le fichier {output_file} a été généré.")
+
+        xsd_file = "./xslt/monster.xsd"
+        if os.path.exists(output_file) and os.path.exists(xsd_file):
+            validate_xml(output_file, xsd_file)
+        else:
+            print(f"[ERROR] Fichier(s) manquant(s) pour la validation (XML: {output_file}, XSD: {xsd_file})")
     else:
-        print(f"[ERROR] Fichier(s) manquant(s) pour la validation (XML: {output_file}, XSD: {xsd_file})")
-else:
-    print(f"[MAIN] ✗ Erreur : le fichier {input_file} n'existe pas.")
+        print(f"[MAIN] ✗ Erreur : le fichier {input_file} n'existe pas.")
 
-total_elapsed = time.time() - start_total
-print(f"\n[MAIN] Temps total de traitement: {total_elapsed:.3f}s")
-print("="*60)
+    total_elapsed = time.time() - start_total
+    print(f"\n[MAIN] Temps total de traitement: {total_elapsed:.3f}s")
+    print("="*60)

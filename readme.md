@@ -66,7 +66,7 @@ Pour traiter un nouveau document ou mettre à jour la base, suivez ces étapes d
 
 ### Étape 2 : Markdown → XML (Pivot)
 
-**Script :** `scripts/step2_xml_mapper.py`
+**Script :** `scripts/monster_mapper.py`
 
 * **Action :** Utilise des Regex pour capturer les stats (CA, PV, Attributes) et les injecter dans l'arbre `lxml`.
 * **Output :** `data/monsters/nom_du_monstre.xml`.

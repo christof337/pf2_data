@@ -28,7 +28,7 @@ if [ $? -ne 0 ]; then echo "❌ Échec à l'étape 1"; exit 1; fi
 
 # Étape 2 : Markdown -> XML Pivot
 echo "[2/3] Mapping sémantique vers XML..."
-$VENV_PYTHON "$PROJECT_DIR/scripts/xml_mapper.py"
+$VENV_PYTHON "$PROJECT_DIR/scripts/monster_mapper.py"
 if [ $? -ne 0 ]; then echo "❌ Échec à l'étape 2"; exit 1; fi
 
 # Étape 3 : XML -> Obsidian (Saxon XSLT)
