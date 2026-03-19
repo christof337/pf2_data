@@ -47,7 +47,6 @@ def extract_styled_layout(page_or_crop, useTextFlow=False):
             modified_chars[i-1]['text'] = modified_chars[i-1]['text'] + "*"
 
     # 3. Extraction avec le moteur de pdfplumber
-    # On passe les caractères modifiés au moteur d'extraction de texte
     text = extract_text(       
         modified_chars, 
         layout=True, 
@@ -69,16 +68,12 @@ def extract_text_with_italics(page_area, useTextFlow=False):
     is_italic = False
     
     for char in chars:
-        # Détection du style (ajustez le mot-clé selon votre PDF)
         char_is_italic = "Italic" in char['fontname'] or "-It" in char['fontname']
         
-        # Transition : Entrée en italique
         if char_is_italic and not is_italic:
             styled_text += "*"
             is_italic = True
-        # Transition : Sortie d'italique
         elif not char_is_italic and is_italic:
-            # On gère l'espace avant l'étoile de fin si nécessaire
             if styled_text.endswith(" "):
                 styled_text = styled_text[:-1] + "* "
             else:
@@ -87,7 +82,6 @@ def extract_text_with_italics(page_area, useTextFlow=False):
             
         styled_text += char['text']
         
-    # Fermeture si la ligne finit en italique
     if is_italic:
         styled_text += "*"
         
@@ -97,31 +91,38 @@ def extract_with_sidebar_detection(pdf_path, output_dir):
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
-    print(f"Analyse géométrique de : {os.path.basename(pdf_path)}...")
+    # Détermination du nom du fichier de sortie basé sur le PDF d'entrée
+    base_name = os.path.basename(pdf_path).replace('.pdf', '.md')
+    output_file = os.path.join(output_dir, base_name)
+
+    print(f"Analyse géométrique et extraction de : {os.path.basename(pdf_path)}...")
+    
+    # Accumulateur global sous forme de liste (plus optimisé que la concaténation de strings)
+    full_text = []
     
     with pdfplumber.open(pdf_path) as pdf:
+        total_pages = len(pdf.pages)
         for i, page in enumerate(pdf.pages):
-            # 1. Identifier les encarts via les rectangles (rects)
-            # On filtre pour ne garder que les rectangles "significatifs" 
-            # (ex: largeur > 100 et hauteur > 50 pour éviter les petites cases de stats)
-            sidebars = [r for r in page.rects if r['width'] > 100 and r['height'] > 50]
+            page_num = i + 1
+            print(f"  -> Traitement de la page {page_num}/{total_pages}")
             
+            # Injection du marqueur sémantique strict
+            page_content = [f"[[PAGE {page_num}]]\n\n"]
+            
+            # 1. Identifier les encarts via les rectangles
+            sidebars = [r for r in page.rects if r['width'] > 100 and r['height'] > 50]
             sidebar_bboxes = [(r['x0'], r['top'], r['x1'], r['bottom']) for r in sidebars]
             
             # 2. Extraire le texte des encarts
             sidebar_contents = []
             for bbox in sidebar_bboxes:
-                #.within_bbox() crée une "sous-page" limitée au rectangle
                 sidebar_area = page.within_bbox(bbox)
                 text = extract_styled_layout(sidebar_area)
                 if text:
                     sidebar_contents.append(text)
 
             # 3. Exclure les caractères des encarts de la page principale
-            # On utilise.filter() : on ne garde que les objets (chars) 
-            # qui ne sont PAS dans les bboxes des sidebars
             def is_outside_sidebars(obj):
-                # On vérifie si le centre du caractère est dans un encart
                 obj_mid_x = (obj['x0'] + obj['x1']) / 2
                 obj_mid_y = (obj['top'] + obj['bottom']) / 2
                 for (x0, top, x1, bottom) in sidebar_bboxes:
@@ -132,25 +133,33 @@ def extract_with_sidebar_detection(pdf_path, output_dir):
             main_page_filtered = page.filter(is_outside_sidebars)
 
             # 4. Extraction finale du flux principal
-            # On garde use_text_flow=True pour suivre l'ordre de l'Editeur Officiel
-            # On récupère les extra_attrs pour votre future brique XML
             main_text = extract_styled_layout(main_page_filtered, useTextFlow=True)
 
-            # Sauvegarde séparée pour faciliter le mapping XML
-            output_file = os.path.join(output_dir, f"page_{i+1}_structured.md")
-            #output_file = os.path.join(output_dir, f"young_empyreal_dragon.md")
-            with open(output_file, "w", encoding="utf-8") as f:
-                f.write(f"# FLUX PRINCIPAL (STATS/BASE)\n\n{main_text}\n\n")
-                if sidebar_contents:
-                    f.write("# ENCARTS DETECTÉS (LORE/ANNEXES)\n\n")
-                    f.write("\n\n---\n\n".join(sidebar_contents))
+            # 5. Construction du bloc de la page
+            page_content.append("# FLUX PRINCIPAL (STATS/BASE)\n")
+            page_content.append(f"{main_text}\n" if main_text else "\n")
+            
+            if sidebar_contents:
+                page_content.append("\n# ENCARTS DETECTÉS (LORE/ANNEXES)\n")
+                page_content.append("\n\n---\n\n".join(sidebar_contents))
+                page_content.append("\n")
+                
+            page_content.append("\n") # Espace avant la page suivante
+            
+            # Ajout au buffer global
+            full_text.append("".join(page_content))
+            
+            # 6. Optimisation mémoire vitale (purge les caches de chars, rects, etc.)
+            page.flush_cache()
 
-    print(f"Extraction terminée. Les fichiers sont dans {output_dir}")
+    # Écriture de l'intégralité du document consolidé
+    with open(output_file, "w", encoding="utf-8") as f:
+        f.write("".join(full_text))
+
+    print(f"Extraction terminée. Fichier consolidé disponible ici : {output_file}")
 
 if __name__ == "__main__":
-    input = sys.argv[1] if len(sys.argv) > 1 else "./pdf_sources/monstre_unique.pdf"
-    output = sys.argv[2] if len(sys.argv) > 2 else "./output/subset_1"
+    input_pdf = sys.argv[1] if len(sys.argv) > 1 else "./pdf_sources/monstre_unique.pdf"
+    output_directory = sys.argv[2] if len(sys.argv) > 2 else "./output/subset_1"
 
-    extract_with_sidebar_detection(input, output)
-    # extract_with_sidebar_detection("./pdf_sources/bandersnatch.pdf", "./output/subset_2")
-    #extract_with_sidebar_detection("./pdf_sources/monstre_unique.pdf", "./output/subset_5")
+    extract_with_sidebar_detection(input_pdf, output_directory)
