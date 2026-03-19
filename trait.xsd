@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+           vc:minVersion="1.1"
+           elementFormDefault="qualified">
+
+  <xs:element name="traits">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="trait" type="traitType" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="traitType">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="description" type="xs:richTextType"/>
+      <xs:attribute name="source" type="xs:string"/>
+  </xs:complexType>
+  
+  <xs:complexType name="richTextType" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="table" type="tableType"/>
+      <xs:element name="list" type="listType"/>
+      <xs:element name="spell" type="xs:string"/>
+      <xs:element name="scseecBloc" type="scseecType"/>
+    </xs:choice>
+  </xs:complexType>
+
+  <xs:complexType name="tableType">
+    <xs:sequence>
+      <xs:element name="headerLine" type="rowType" minOccurs="0"/>
+      <xs:element name="line" type="rowType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="rowType">
+    <xs:sequence>
+      <xs:element name="cell" type="xs:string" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="listType">
+    <xs:sequence>
+      <xs:element name="listItem" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="special" type="specialAbilityType" minOccurs="0"/>
+            <xs:any minOccurs="0" maxOccurs="unbounded" processContents="skip"/> 
+          </xs:sequence>
+          <xs:anyAttribute processContents="skip"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="scseecType">
+    <xs:sequence>
+      <xs:element name="criticalSuccess" type="xs:string" minOccurs="0"/>
+      <xs:element name="success" type="xs:string" minOccurs="0"/>
+      <xs:element name="failure" type="xs:string" minOccurs="0"/>
+      <xs:element name="criticalFailure" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
