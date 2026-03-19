@@ -290,15 +290,15 @@
       <xs:element name="cell" type="xs:string" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
-
+  
   <xs:complexType name="listType">
     <xs:sequence>
       <xs:element name="listItem" maxOccurs="unbounded">
-        <xs:complexType>
-          <xs:sequence>
-            <xs:element name="special" type="specialAbilityType" minOccurs="0"/>
-            <xs:any minOccurs="0" maxOccurs="unbounded" processContents="skip"/> 
-          </xs:sequence>
+        <xs:complexType mixed="true"> 
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="special" type="specialAbilityType"/>
+            <xs:element name="spell" type="xs:string"/>
+          </xs:choice>
           <xs:anyAttribute processContents="skip"/>
         </xs:complexType>
       </xs:element>
