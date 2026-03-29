@@ -10,7 +10,8 @@ from lxml import etree
 MULTI_WORD_TRAITS = [
     "NON LÉTAL", 
     "PEU COURANT", 
-    "MISE HORS DE COMBAT"
+    "MISE HORS DE COMBAT",
+    "TOUR DE MAGIE"
 ]
 
 # ==========================================
@@ -19,32 +20,31 @@ MULTI_WORD_TRAITS = [
 
 def clean_pdf_artifacts(content):
     """Purge les filigranes, numéros de page et sommaires avant traitement."""
-    # 1. Gestion des retours à la ligne litéraux qui font tout planter
+    # 1. Gestion des retours à la ligne litéraux
     content = content.replace('\\n', '\n')
     
-    # 2. Numéros de page et balises type [[PAGE 1]]
+    # 2. Purge des en-têtes/pieds de page et filigranes
     content = re.sub(r'\[\[PAGE \d+\]\]', '', content)
-    content = re.sub(r'(?m)^\s*\d+\s*$', '', content)
-    
-    # 3. Filigranes et adresses mail (Toute ligne contenant un @ avec un domaine)
+    #content = re.sub(r'(?m)^\s*\d+\s*$', '', content)
+    content = re.sub(r'(?m)^\s*Sorts\s*$', '', content, flags=re.IGNORECASE)
+    content = re.sub(r'(?m)^\s*# FLUX PRINCIPAL \(STATS/BASE\)\s*$\n*\s*\d{1,3}', '', content)
     content = re.sub(r'(?m)^.*[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}.*$\n?', '', content)
     
-    # 4. Suppression intelligente des sommaires / barres latérales
+    # 3. Suppression intelligente des sommaires (barres latérales)
     lines = content.split('\n')
     cleaned_lines = []
     streak = []
     
     for line in lines:
         stripped = line.strip()
-        # Ligne courte (< 25 chars) qui ne ressemble pas au header "SORT X"
-        if 0 < len(stripped) < 25 and not re.search(r'\bSORT\s+\d+', stripped):
+        # Si la ligne est courte et ne ressemble pas à un titre de sort
+        if 0 < len(stripped) < 25 and not re.search(r'\b(?:SORT|TOUR DE MAGIE)\s+\d+', stripped):
             streak.append(line)
         elif len(stripped) == 0:
             streak.append(line)
         else:
-            # Ligne normale -> on casse la série
             if len([l for l in streak if l.strip()]) >= 5:
-                pass # C'était un sommaire, on l'efface
+                pass # C'était un sommaire, on l'ignore
             else:
                 cleaned_lines.extend(streak)
             cleaned_lines.append(line)
@@ -61,13 +61,15 @@ def clean_pdf_artifacts(content):
 
 def clean_text(text):
     if not text: return ""
-    text = text.replace("-\n", "").replace("- ", "")
+    #text = text.replace("-\n", "").replace("- ", "")
+    text = re.sub(r'-\n?\s+', '', text)  # Nettoie les résidus de mots coupés
+    # text = re.sub(r'-\s+', '', text)  # Nettoie les résidus de mots coupés
+
     return re.sub(r'\s+', ' ', text).strip()
 
 def clean_value(val):
     if not val: return None
-    val = clean_text(val)
-    return re.sub(r'^[:\-\s]+', '', val).strip()
+    return re.sub(r'^[:\-\s]+', '', clean_text(val)).strip()
 
 def parse_traits(traits_raw):
     text = traits_raw.upper().strip()
@@ -83,6 +85,21 @@ def parse_traits(traits_raw):
             final_traits.append(t_clean)
     return final_traits
 
+def add_rich_text(parent, tag_name, text_content):
+    """Génère un nœud XML en convertissant les *mot* en balises <spell>mot</spell>"""
+    if not text_content: return
+    
+    el = etree.SubElement(parent, tag_name)
+    # On découpe selon les astérisques uniques (exclut les **)
+    parts = re.split(r'(?<!\*)\*([a-zA-ZÀ-Ÿ\s\'’\-]+?)\*(?!\*)', text_content)
+    
+    el.text = parts[0]
+    for i in range(1, len(parts), 2):
+        spell_el = etree.SubElement(el, "spell")
+        spell_el.text = parts[i]
+        if i + 1 < len(parts):
+            spell_el.tail = parts[i+1]
+
 # ==========================================
 # PARSING D'UN BLOC DE SORT
 # ==========================================
@@ -90,68 +107,69 @@ def parse_traits(traits_raw):
 def parse_spell_block(content):
     spell_data = {'savingThrows': {}, 'heightened': []}
     
-    # 1. En-tête (Nom) - Prend la première ligne pleine en MAJUSCULES
-    name_match = re.search(r'^\s*\**([A-ZÀ-Ÿ][A-ZÀ-Ÿ\s\-\'’]+)\**(?:\s|$)', content, re.MULTILINE)
+    # 1. En-tête (Nom)
+    name_match = re.search(r'^\s*\**([A-ZÀ-Ÿ][A-ZÀ-Ÿ\s\-\'’]+)(?:(?:\*{2}(?:\s|$))|(?:SORT|TOUR DE MAGIE))', content, re.MULTILINE)
     spell_data['name'] = clean_text(name_match.group(1)) if name_match else "INCONNU"
 
-    # 2. Rang (SORT X)
-    rank_match = re.search(r'\bSORT\s+(\d+)', content)
-    spell_data['rank'] = rank_match.group(1) if rank_match else "1"
+    # 2. Rang (Gère Sort et Tour de Magie)
+    rank_match = re.search(r'\b(SORT|TOUR DE MAGIE)\s+(\d+)', content)
+    spell_data['type'] = rank_match.group(1)
+    spell_data['rank'] = rank_match.group(2) if rank_match else "1"
 
-    # 3. Actions 
-    header_area = content[:content.find('SORT')] if 'SORT' in content else content[:200]
-    action_match = re.search(r'(?:\b|^|\s)(1|2|3|R)(?:\b|\s|$)', header_area)
+    # 3. Actions (Isolé entre le Nom et le Rang)
+    header_end = rank_match.end() if rank_match else 200
+    header_area = content[:header_end]
+    action_match = re.search(r'(?m)^\s*\**\s*([123R])\s*\**\s*$', header_area)
+    if not action_match:
+        action_match = re.search(r'\b(1|2|3|R)\b', header_area[name_match.end() if name_match else 0:])
     spell_data['actions'] = action_match.group(1) if action_match else None
 
-    # 4. Mécaniques (Stoppe la capture si on croise un autre champ)
-    stop_words = r'(?=\bCibles?\b|\bDéfense\b|\bDurée\b|\bZone\b|\bPortée\b|\bIncantation\b|;|\n|$)'
+    # 4. Mécaniques stricto sensu (Bloque au premier saut de ligne ou point-virgule)
+    mech_prefix = r'(?:(?<=\n)|(?<=;)|(?<=^))\s*\**'
     mechanics = {
-        'range': r'\**?Portée\**[\s:]*(.*?)' + stop_words,
-        'targets': r'\**?Cibles?\**[\s:]*(.*?)' + stop_words,
-        'defense': r'\**?Défense\**[\s:]*(.*?)' + stop_words,
-        'duration': r'\**?Durée\**[\s:]*(.*?)' + stop_words,
-        'area': r'\**?Zone[\s:]*\**[\s:]*(.*?)' + stop_words,
-        'cast': r'\**?Incantation\**[\s:]*(.*?)' + stop_words
+        'range': mech_prefix + r'Portée\**[\s:]*(.*?)(?=\s*(?:;|\n|$))',
+        'targets': mech_prefix + r'Cibles?\**[\s:]*(.*?)(?=\s*(?:;|\n|$))',
+        'defense': mech_prefix + r'Défense\**[\s:]*(.*?)(?=\s*(?:;|\n|$))',
+        'duration': mech_prefix + r'Durée\**[\s:]*(.*?)(?=\s*(?:;|\n|$))',
+        'area': mech_prefix + r'Zone[\s:]*\**[\s:]*(.*?)(?=\s*(?:;|\n|$))',
+        'cast': mech_prefix + r'Incantation\**[\s:]*(.*?)(?=\s*(?:;|\n|$))'
     }
     
-    end_of_mechanics = name_match.end() if name_match else 0
+    mech_ends = []
     for key, pattern in mechanics.items():
         m = re.search(pattern, content, re.IGNORECASE)
         if m:
             spell_data[key] = clean_value(m.group(1))
-            if m.end() > end_of_mechanics: end_of_mechanics = m.end()
+            mech_ends.append(m.end())
         else:
             spell_data[key] = None
 
     # 5. Traditions
-    trad_match = re.search(r'\*?Traditions?\**[\s:]*([a-zA-Zà-ÿ,\s]+?)(?=\n|\*|;)', content, re.IGNORECASE)
+    trad_match = re.search(mech_prefix + r'Traditions?\**[\s:]*([a-zA-Zà-ÿ,\s]+?)(?=\s*(?:;|\n|$))', content, re.IGNORECASE)
     if trad_match:
         spell_data['traditions'] = [clean_value(t).lower() for t in trad_match.group(1).split(',')]
-        if trad_match.end() > end_of_mechanics: end_of_mechanics = trad_match.end()
+        mech_ends.append(trad_match.end())
     else:
         spell_data['traditions'] = []
 
-    # 6. Traits
-    search_area = content[name_match.end():end_of_mechanics] if name_match else content[:end_of_mechanics]
-    traits_line_match = re.search(r'\n\s*([A-ZÀ-Ÿ\s]{10,})\s*\n', search_area)
-    spell_data['traits'] = parse_traits(traits_line_match.group(1)) if traits_line_match else []
-
-    if rank_match and rank_match.end() > end_of_mechanics:
-        end_of_mechanics = rank_match.end()
+    # 6. Traits (Entre le Rang et la première mécanique)
+    first_mech_start = min([m.start() for m in re.finditer(r'(?:(?<=\n)|(?<=;)|(?<=^))\s*\**(?:Portée|Cibles?|Défense|Durée|Zone|Incantation|Traditions?)', content, re.IGNORECASE)] or [len(content)])
+    traits_area = content[header_end:first_mech_start]
+    spell_data['traits'] = parse_traits(traits_area)
 
     # 7. Sauvegardes
     save_patterns = {
-        'criticalSuccess': r'\**Succès critique\.\s?\**[\s]*(.*?)(?=\n\s*\**(?:Succès|Échec|Intensifié)|$)',
-        'success': r'\**Succès\.\s?\**[\s]*(.*?)(?=\n\s*\**(?:Succès|Échec|Intensifié)|$)',
-        'failure': r'\**Échec\.\s?\**[\s]*(.*?)(?=\n\s*\**(?:Échec|Intensifié)|$)',
-        'criticalFailure': r'\**Échec critique\.?\s?\**[\s]*(.*?)(?=\n\s*\**(?:Intensifié)|$)'
+        'criticalSuccess': r'(?:^|\n)\s*\**Succès critique\.\s?\**[\s]*(.*?)(?=\n\s*\**(?:Succès|Échec|Intensifié)|$)',
+        'success': r'(?:^|\n)\s*\**Succès\.\s?\**[\s]*(.*?)(?=\n\s*\**(?:Succès|Échec|Intensifié)|$)',
+        'failure': r'(?:^|\n)\s*\**Échec\.\s?\**[\s]*(.*?)(?=\n\s*\**(?:Échec|Intensifié)|$)',
+        'criticalFailure': r'(?:^|\n)\s*\**Échec critique\.?\s?\**[\s]*(.*?)(?=\n\s*\**(?:Intensifié)|$)'
     }
     for key, pattern in save_patterns.items():
         m = re.search(pattern, content, re.DOTALL | re.IGNORECASE)
         if m: spell_data['savingThrows'][key] = clean_text(m.group(1))
 
     # 8. Intensification
-    h_pattern = r'\**Intensifiés?\s*\((.*?)\)\.?\**\s*(.*?)(?=(?:\n\s*\**Intensifié)|$)'
+    h_pattern = r'(?:^|\n)\s*\**Intensifiés?\s*\((.*?)\)\.?\**\s*(.*?)(?=(?:\n\s*\**Intensifié)|$)'
     for m in re.finditer(h_pattern, content, re.DOTALL | re.IGNORECASE):
         type_val = re.sub(r'[\*]', '', m.group(1)).strip()
         spell_data['heightened'].append({
@@ -159,19 +177,18 @@ def parse_spell_block(content):
             "text": clean_text(m.group(2))
         })
 
-    # 9. Description (Soustraction propre)
-    desc_raw = content[end_of_mechanics:]
-    removal_patterns = [
-        r'\**Succès critique\.?\s?\**[\s]*.*?(?=\n\s*\**(?:Succès|Échec|Intensifié)|$)',
-        r'\**Succès\.\s?\**[\s]*.*?(?=\n\s*\**(?:Échec|Intensifié)|$)',
-        r'\**Échec\.\s?\**[\s]*.*?(?=\n\s*\**(?:Échec|Intensifié)|$)',
-        r'\**Échec critique\.?\s?\**[\s]*.*?(?=\n\s*\**(?:Intensifié)|$)',
-        r'\**Intensifiés?\s*\((.*?)\)\.?\**\s*(.*?)(?=(?:\n\s*\**Intensifié)|$)'
-    ]
-    for p in removal_patterns:
-        desc_raw = re.sub(p, '', desc_raw, flags=re.DOTALL | re.IGNORECASE)
+    # 9. Description (Démarre après la dernière mécanique, s'arrête avant la première sauvegarde)
+    desc_start = max(mech_ends) if mech_ends else header_end
+    
+    save_starts = []
+    for p in save_patterns.values():
+        m = re.search(p, content, re.DOTALL | re.IGNORECASE)
+        if m: save_starts.append(m.start())
+    for m in re.finditer(h_pattern, content, re.DOTALL | re.IGNORECASE):
+        save_starts.append(m.start())
         
-    spell_data['description'] = clean_text(desc_raw)
+    desc_end = min(save_starts) if save_starts else len(content)
+    spell_data['description'] = clean_text(content[desc_start:desc_end])
 
     return spell_data
 
@@ -183,14 +200,14 @@ def process_full_file(input_path, output_path):
     with open(input_path, 'r', encoding='utf-8') as f:
         full_content = f.read()
 
-    # Nettoyage et astuce pour toujours capturer le premier sort
+    # Nettoyage
     full_content = '\n' + clean_pdf_artifacts(full_content).strip()
 
-    # Le split qui change tout : Lookahead sur un nom en majuscules suivi plus tard par SORT X
-    split_pattern = re.compile(r'\n(?=\s*\**[A-ZÀ-Ÿ][A-ZÀ-Ÿ\s\-\'’]+\s*?\**\s*\n(?:.{1,400}?)\bSORT\s+\d+)', re.DOTALL)
+    # Découpage robuste : Nom en MAJ suivi de SORT X ou TOUR DE MAGIE X (même avec des sauts de ligne)
+    split_pattern = re.compile(r'\n(?=\s*\**[A-ZÀ-Ÿ][A-ZÀ-Ÿ\s\-\'’]+\s?\**\s*(?:.{0,150}?)\b(?:SORT|TOUR DE MAGIE)\s+\d+)', re.DOTALL)
     spell_blocks = split_pattern.split(full_content)
     
-    spell_blocks = [b for b in spell_blocks if "SORT" in b]
+    spell_blocks = [b for b in spell_blocks if "SORT" in b or "TOUR DE MAGIE" in b]
 
     print(f"[MAIN] {len(spell_blocks)} sorts isolés et parés au traitement.")
 
@@ -201,6 +218,8 @@ def process_full_file(input_path, output_path):
         
         s_el = etree.SubElement(root, "spell")
         etree.SubElement(s_el, "name").text = data['name']
+        if data['type']: 
+            etree.SubElement(s_el, "type").set('type',"spell" if data['type']=="SORT" else "cantrip" if data['type']=="TOUR DE MAGIE" else "unknown")
         etree.SubElement(s_el, "rank").text = data['rank']
         if data['actions']: etree.SubElement(s_el, "actions").text = data['actions']
         
@@ -217,23 +236,24 @@ def process_full_file(input_path, output_path):
         for field in ['cast', 'range', 'area', 'targets', 'defense', 'duration']:
             if data.get(field): etree.SubElement(s_el, field).text = data[field]
         
-        etree.SubElement(s_el, "description").text = data['description']
+        add_rich_text(s_el, "description", data['description'])
 
         if data['savingThrows']:
             st_el = etree.SubElement(s_el, "savingThrow")
             for k in ['criticalSuccess', 'success', 'failure', 'criticalFailure']:
                 if k in data['savingThrows']:
-                    etree.SubElement(st_el, k).text = data['savingThrows'][k]
+                    add_rich_text(st_el, k, data['savingThrows'][k])
 
         if data['heightened']:
             hl_el = etree.SubElement(s_el, "heightenList")
             for h in data['heightened']:
                 el = etree.SubElement(hl_el, "heighten", type=h['type'])
-                el.text = h['text']
+                add_rich_text(el, "text", h['text'])  # Ou el.text = h['text'] si pas de <spell> dans les heightened
 
     tree = etree.ElementTree(root)
     tree.write(output_path, encoding="utf-8", xml_declaration=True, pretty_print=True)
-    print(f"[MAIN] C'est dans la boîte : {output_path}")
+    print(f"[MAIN] Fichier XML généré avec succès : {output_path}")
+
 
 if __name__ == "__main__":
     #process_full_file("./output/subset_1/sorts_MD.md", "data/spells/all_spells.xml", "xslt/spell.xsd")
