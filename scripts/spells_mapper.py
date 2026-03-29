@@ -1,6 +1,7 @@
 import re
 import os
 import sys
+import time
 from lxml import etree
 
 from xml_validator import validate_xml
@@ -109,7 +110,6 @@ def add_rich_text(parent, text_content, tag_name=None):
         spell_el.text = parts[i]
         if i + 1 < len(parts):
             spell_el.tail = parts[i+1]
-
 # ==========================================
 # PARSING D'UN BLOC DE SORT
 # ==========================================
@@ -204,32 +204,47 @@ def parse_spell_block(content):
     return spell_data
 
 # ==========================================
-# GESTION DU FLUX COMPLET
+# PARSING COMPLET DES SORTS
 # ==========================================
 
-def process_full_file(input_path, output_path):
-    with open(input_path, 'r', encoding='utf-8') as f:
-        full_content = f.read()
+def parse_spells_md(content):
+    """Extrait et parse tous les sorts du Markdown brut."""
+    spells_data = []
+    print("[PARSING] Début de l'analyse des sorts...")
 
     # Nettoyage
-    full_content = '\n' + clean_pdf_artifacts(full_content).strip()
+    content = '\n' + clean_pdf_artifacts(content).strip()
 
     # Découpage robuste avec la constante UPPER pour éviter de couper sur un "é"
     split_regex = rf'\n(?=\s*\**[{UPPER}][{UPPER}\s\-\'’]+\s?\**\s*(?:.{{0,150}}?)\b(?:SORT|TOUR DE MAGIE)\s+\d+)'
     split_pattern = re.compile(split_regex, re.DOTALL)
-    spell_blocks = split_pattern.split(full_content)
+    spell_blocks = split_pattern.split(content)
     
     spell_blocks = [b for b in spell_blocks if "SORT" in b or "TOUR DE MAGIE" in b]
 
-    print(f"[MAIN] {len(spell_blocks)} sorts isolés et parés au traitement.")
+    print(f"[PARSING] {len(spell_blocks)} sorts isolés.")
+
+    for block in spell_blocks:
+        data = parse_spell_block(block)
+        spells_data.append(data)
+        print(f"[PARSING]   ✓ {data['name']}")
+
+    return spells_data
+
+# ==========================================
+# GÉNÉRATION XML
+# ==========================================
+
+def generate_spells_xml(spells_data, output_path):
+    """Transforme la liste des sorts en fichier XML."""
+    start_time = time.time()
+    print("[XML] Début de la génération du fichier XML...")
+    
     XSI_NS = "http://www.w3.org/2001/XMLSchema-instance"
     root = etree.Element("spells", nsmap={'xsi': XSI_NS})
     root.set(f"{{{XSI_NS}}}noNamespaceSchemaLocation", "../../xslt/spell.xsd")
 
-    for block in spell_blocks:
-        data = parse_spell_block(block)
-        print(f"  -> Traitement de : {data['name']}")
-        
+    for data in spells_data:
         s_el = etree.SubElement(root, "spell")
         etree.SubElement(s_el, "name").text = data['name']
         if data['type']: 
@@ -262,21 +277,48 @@ def process_full_file(input_path, output_path):
             hl_el = etree.SubElement(s_el, "heightenList")
             for h in data['heightened']:
                 el = etree.SubElement(hl_el, "heighten", type=h['type'])
-                add_rich_text(el, h['text'])  # Ou el.text = h['text'] si pas de <spell> dans les heightened
+                add_rich_text(el, h['text'])
 
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
     tree = etree.ElementTree(root)
     tree.write(output_path, encoding="utf-8", xml_declaration=True, pretty_print=True)
-    print(f"[MAIN] Fichier XML généré avec succès : {output_path}")
+    
+    total_time = time.time() - start_time
+    print(f"[XML] ✓ Fichier sauvegardé à {output_path} - {total_time:.3f}s")
 
+# ==========================================
+# EXÉCUTION PRINCIPALE
+# ==========================================
 
 if __name__ == "__main__":
-    #process_full_file("./output/subset_1/sorts_MD.md", "data/spells/all_spells.xml", "xslt/spell.xsd")
-    output_file="data/spells/all_spells.xml"
-    process_full_file("./output/subset_1/sorts_MD.md", "data/spells/all_spells.xml")
-    print(f"[MAIN] ✓ Succès ! Le fichier {output_file} a été généré.")
+    input_file = sys.argv[1] if len(sys.argv) > 1 else "./output/subset_1/sorts_MD.md"
+    output_file = sys.argv[2] if len(sys.argv) > 2 else "./data/spells/all_spells.xml"
 
-    xsd_file = "./xslt/spell.xsd"
-    if os.path.exists(output_file) and os.path.exists(xsd_file):
-        validate_xml(output_file, xsd_file)
+    print("="*60)
+    print("DÉBUT DU TRAITEMENT (SPELLS MAPPER)")
+    print("="*60 + "\n")
+
+    start_total = time.time()
+
+    if os.path.exists(input_file):
+        print(f"[MAIN] Lecture du fichier {input_file}...")
+        with open(input_file, 'r', encoding='utf-8') as f:
+            md_content = f.read()
+        print(f"[MAIN] ✓ Fichier chargé ({len(md_content)} caractères)\n")
+
+        spells_data = parse_spells_md(md_content)
+        generate_spells_xml(spells_data, output_file)
+        
+        print(f"[MAIN] ✓ Succès ! Le fichier {output_file} a été généré.")
+
+        xsd_file = "./xslt/spell.xsd"
+        if os.path.exists(output_file) and os.path.exists(xsd_file):
+            validate_xml(output_file, xsd_file)
+        else:
+            print(f"[WARNING] Fichier XSD introuvable ({xsd_file}), validation ignorée.")
     else:
-        print(f"[ERROR] Fichier(s) manquant(s) pour la validation (XML: {output_file}, XSD: {xsd_file})")
+        print(f"[MAIN] ✗ Erreur : le fichier {input_file} n'existe pas.")
+
+    total_elapsed = time.time() - start_total
+    print(f"\n[MAIN] Temps total de traitement: {total_elapsed:.3f}s")
+    print("="*60)
