@@ -4,6 +4,7 @@ import sys
 from lxml import etree
 
 from xml_validator import validate_xml
+from slug_generator import generate_slug
 
 # ==========================================
 # CONFIGURATION & CONSTANTES

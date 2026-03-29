@@ -2,8 +2,9 @@ import re
 import os
 import sys
 import time
-import unicodedata
 from lxml import etree
+from xml_validator import validate_xml
+from slug_generator import generate_slug
 
 # ==========================================
 # UTILITAIRES
@@ -13,21 +14,7 @@ def clean_text(text):
     """Nettoie les sauts de ligne et espaces superflus de pdfplumber."""
     return re.sub(r'\s+', ' ', text).strip()
 
-def generate_slug(prefix, text):
-    """
-    Génère un identifiant unique (slug) normalisé.
-    Ex: "Très grande" -> "trait-très-grande"
-    """
-    # 1. Retirer les accents
-    text = unicodedata.normalize('NFKD', text).encode('ASCII', 'ignore').decode('utf-8')
-    # 2. Mettre en minuscules
-    text = text.lower()
-    # 3. Remplacer tout ce qui n'est pas alphanumérique par des tirets
-    text = re.sub(r'[^a-z0-9]+', '-', text)
-    # 4. Nettoyer les tirets en début et fin de chaîne
-    text = text.strip('-')
-    
-    return f"{prefix}-{text}"
+
 
 # ==========================================
 # PARSING SPÉCIFIQUE TRAITS
@@ -110,40 +97,12 @@ def generate_trait_xml(traits_data, output_path):
     print(f"[XML] ✓ Fichier sauvegardé à {output_path} - {time.time() - start_time:.3f}s")
 
 # ==========================================
-# VALIDATION XSD
-# ==========================================
-
-def validate_xml(xml_path, xsd_path):
-    """Vérifie si le fichier XML est valide par rapport au schéma XSD."""
-    print(f"[VALIDATION] Vérification de {os.path.basename(xml_path)}...")
-    try:
-        with open(xsd_path, 'rb') as f:
-            schema_root = etree.XML(f.read())
-        schema = etree.XMLSchema(schema_root)
-        
-        with open(xml_path, 'rb') as f:
-            xml_doc = etree.parse(f)
-            
-        if schema.validate(xml_doc):
-            print("[VALIDATION] ✓ Le fichier XML est VALIDE.")
-            return True
-        else:
-            print("[VALIDATION] ✗ Le fichier XML est INVALIDE !")
-            for error in schema.error_log:
-                print(f"    - Ligne {error.line}, colonne {error.column}: {error.message}")
-            return False
-            
-    except Exception as e:
-        print(f"[VALIDATION] Erreur lors de la validation : {e}")
-        return False
-
-# ==========================================
 # EXÉCUTION PRINCIPALE
 # ==========================================
 
 if __name__ == "__main__":
-    input_file = sys.argv[1] if len(sys.argv) > 1 else "./traits_LdM.md"
-    output_file = sys.argv[2] if len(sys.argv) > 2 else "./output/traits.xml"
+    input_file = sys.argv[1] if len(sys.argv) > 1 else "./output/subset_3/traits_LdM.md"
+    output_file = sys.argv[2] if len(sys.argv) > 2 else "./output/subset_3/traits.xml"
 
     print("="*60)
     print("DÉBUT DU TRAITEMENT (TRAIT MAPPER)")
