@@ -88,17 +88,21 @@ def parse_traits(traits_raw):
             final_traits.append(t_clean)
     return final_traits
 
-def add_rich_text(parent, tag_name, text_content):
+def add_rich_text(parent, text_content, tag_name=None):
     """Génère un nœud XML en convertissant les *mot* en balises <spell>mot</spell>"""
     if not text_content: return
     
-    el = etree.SubElement(parent, tag_name)
+    if tag_name is None:
+        el = parent
+    else:
+        el = etree.SubElement(parent, tag_name)
+
     # Accepte n'importe quel caractère (y compris la ponctuation) sauf un astérisque
     parts = re.split(r'(?<!\*)\*([^\*]+?)\*(?!\*)', text_content)
     
     el.text = parts[0]
     for i in range(1, len(parts), 2):
-        spell_el = etree.SubElement(el, "spell")
+        spell_el = etree.SubElement(el, "spellRef")
         spell_el.text = parts[i]
         if i + 1 < len(parts):
             spell_el.tail = parts[i+1]
@@ -241,19 +245,19 @@ def process_full_file(input_path, output_path):
         for field in ['cast', 'range', 'area', 'targets', 'defense', 'duration']:
             if data.get(field): etree.SubElement(s_el, field).text = data[field]
         
-        add_rich_text(s_el, "description", data['description'])
+        add_rich_text(s_el, data['description'], "description")
 
         if data['savingThrows']:
             st_el = etree.SubElement(s_el, "savingThrow")
             for k in ['criticalSuccess', 'success', 'failure', 'criticalFailure']:
                 if k in data['savingThrows']:
-                    add_rich_text(st_el, k, data['savingThrows'][k])
+                    add_rich_text(st_el, data['savingThrows'][k], k)
 
         if data['heightened']:
             hl_el = etree.SubElement(s_el, "heightenList")
             for h in data['heightened']:
                 el = etree.SubElement(hl_el, "heighten", type=h['type'])
-                add_rich_text(el, "text", h['text'])  # Ou el.text = h['text'] si pas de <spell> dans les heightened
+                add_rich_text(el, h['text'])  # Ou el.text = h['text'] si pas de <spell> dans les heightened
 
     tree = etree.ElementTree(root)
     tree.write(output_path, encoding="utf-8", xml_declaration=True, pretty_print=True)
