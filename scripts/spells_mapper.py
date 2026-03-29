@@ -14,6 +14,9 @@ MULTI_WORD_TRAITS = [
     "TOUR DE MAGIE"
 ]
 
+# Plage stricte des majuscules (exclut les minuscules accentuées)
+UPPER = r'A-ZÀÂÄÆÇÉÈÊËÎÏÔÖŒÙÛÜŸ'
+
 # ==========================================
 # PRÉ-NETTOYAGE DU PDF
 # ==========================================
@@ -90,8 +93,8 @@ def add_rich_text(parent, tag_name, text_content):
     if not text_content: return
     
     el = etree.SubElement(parent, tag_name)
-    # On découpe selon les astérisques uniques (exclut les **)
-    parts = re.split(r'(?<!\*)\*([a-zA-ZÀ-Ÿ\s\'’\-]+?)\*(?!\*)', text_content)
+    # Accepte n'importe quel caractère (y compris la ponctuation) sauf un astérisque
+    parts = re.split(r'(?<!\*)\*([^\*]+?)\*(?!\*)', text_content)
     
     el.text = parts[0]
     for i in range(1, len(parts), 2):
@@ -107,8 +110,9 @@ def add_rich_text(parent, tag_name, text_content):
 def parse_spell_block(content):
     spell_data = {'savingThrows': {}, 'heightened': []}
     
-    # 1. En-tête (Nom)
-    name_match = re.search(r'^\s*\**([A-ZÀ-Ÿ][A-ZÀ-Ÿ\s\-\'’]+)(?:(?:\*{2}(?:\s|$))|(?:SORT|TOUR DE MAGIE))', content, re.MULTILINE)
+# 1. En-tête (Nom) - Utilise la nouvelle constante UPPER
+    name_regex = rf'^\s*\**([{UPPER}][{UPPER}\s\-\'’]+)(?:(?:\*{{2}}(?:\s|$))|(?:SORT|TOUR DE MAGIE))'
+    name_match = re.search(name_regex, content, re.MULTILINE)
     spell_data['name'] = clean_text(name_match.group(1)) if name_match else "INCONNU"
 
     # 2. Rang (Gère Sort et Tour de Magie)
@@ -168,8 +172,8 @@ def parse_spell_block(content):
         m = re.search(pattern, content, re.DOTALL | re.IGNORECASE)
         if m: spell_data['savingThrows'][key] = clean_text(m.group(1))
 
-    # 8. Intensification
-    h_pattern = r'(?:^|\n)\s*\**Intensifiés?\s*\((.*?)\)\.?\**\s*(.*?)(?=(?:\n\s*\**Intensifié)|$)'
+    # 8. Intensification - Ajout d'un \s* pour tolérer l'espace avant les **
+    h_pattern = r'(?:^|\n)\s*\**Intensifiés?\s*\((.*?)\)\.?\s*\**\s*(.*?)(?=(?:\n\s*\**Intensifié)|$)'
     for m in re.finditer(h_pattern, content, re.DOTALL | re.IGNORECASE):
         type_val = re.sub(r'[\*]', '', m.group(1)).strip()
         spell_data['heightened'].append({
@@ -203,8 +207,9 @@ def process_full_file(input_path, output_path):
     # Nettoyage
     full_content = '\n' + clean_pdf_artifacts(full_content).strip()
 
-    # Découpage robuste : Nom en MAJ suivi de SORT X ou TOUR DE MAGIE X (même avec des sauts de ligne)
-    split_pattern = re.compile(r'\n(?=\s*\**[A-ZÀ-Ÿ][A-ZÀ-Ÿ\s\-\'’]+\s?\**\s*(?:.{0,150}?)\b(?:SORT|TOUR DE MAGIE)\s+\d+)', re.DOTALL)
+    # Découpage robuste avec la constante UPPER pour éviter de couper sur un "é"
+    split_regex = rf'\n(?=\s*\**[{UPPER}][{UPPER}\s\-\'’]+\s?\**\s*(?:.{{0,150}}?)\b(?:SORT|TOUR DE MAGIE)\s+\d+)'
+    split_pattern = re.compile(split_regex, re.DOTALL)
     spell_blocks = split_pattern.split(full_content)
     
     spell_blocks = [b for b in spell_blocks if "SORT" in b or "TOUR DE MAGIE" in b]
