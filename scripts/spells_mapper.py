@@ -245,8 +245,12 @@ def generate_spells_xml(spells_data, output_path):
     root.set(f"{{{XSI_NS}}}noNamespaceSchemaLocation", "../../xslt/spell.xsd")
 
     for data in spells_data:
-        s_el = etree.SubElement(root, "spell")
+        # Génération de l'ID dynamique
+        trait_id = generate_slug("spell", data['name'])
+        s_el = etree.SubElement(root, "spell", id=trait_id)
+
         etree.SubElement(s_el, "name").text = data['name']
+
         if data['type']: 
             etree.SubElement(s_el, "type").set('type',"spell" if data['type']=="SORT" else "cantrip" if data['type']=="TOUR DE MAGIE" else "unknown")
         etree.SubElement(s_el, "rank").text = data['rank']

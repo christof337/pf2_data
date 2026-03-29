@@ -85,6 +85,7 @@
       </xs:element>
       
     </xs:sequence>
+    <xs:attribute name="id" type="xs:ID"/>
   </xs:complexType>
   
   <xs:complexType name="richTextType" mixed="true">
