@@ -30,7 +30,7 @@
         <attributes STR="+1" DEX="+6" CON="+3" INT="-4" WIS="+2" CHA="+2"/>
         
         <armorClass>25</armorClass>
-        <saves REF="+19" FOR="+14" VOL="+13"/>
+        <saves REF="+19" FOR="+14" WIL="+13"/>
         <health>115</health>
         
         <weaknesses>
@@ -125,7 +125,7 @@
             </special>
         </interactionAbilities>
         <armorClass>28</armorClass>
-        <saves REF="+15" FOR="+18" VOL="+15"/>
+        <saves REF="+15" FOR="+18" WIL="+15"/>
         <health>145</health>
         <immunities>
             <immunity>poison</immunity>
@@ -253,7 +253,7 @@
         </skills>
         <attributes STR="+1" DEX="+3" CON="+1" INT="-4" WIS="+2" CHA="+3"/>
         <armorClass>16</armorClass>
-        <saves REF="+8" FOR="+4" VOL="+5"/>
+        <saves REF="+8" FOR="+4" WIL="+5"/>
         <health>20</health>
         <speeds>
             <speed>9 m</speed>
@@ -328,7 +328,7 @@
         </skills>
         <attributes STR="+4" DEX="+2" CON="+3" INT="-4" WIS="+2" CHA="+1"/>
         <armorClass>17</armorClass>
-        <saves REF="+8" FOR="+11" VOL="+6"/>
+        <saves REF="+8" FOR="+11" WIL="+6"/>
         <health>30</health>
         <reactiveAbilities>
             <special type="reaction">
@@ -424,7 +424,7 @@
             </special>
         </interactionAbilities>
         <armorClass>23</armorClass>
-        <saves REF="+17" FOR="+14" VOL="+12"/>
+        <saves REF="+17" FOR="+14" WIL="+12"/>
         <health>120</health>
         <speeds>
             <speed>7,5 m</speed>
@@ -506,7 +506,7 @@
         </skills>
         <attributes STR="+7" DEX="+2" CON="+4" INT="-4" WIS="+2" CHA="+0"/>
         <armorClass>24</armorClass>
-        <saves REF="+15" FOR="+17" VOL="+13"/>
+        <saves REF="+15" FOR="+17" WIL="+13"/>
         <health>145</health>
         <reactiveAbilities>
             <special type="reaction">
@@ -596,7 +596,7 @@
         </skills>
         <attributes STR="+7" DEX="+1" CON="+6" INT="-4" WIS="+3" CHA="+0"/>
         <armorClass>27</armorClass>
-        <saves REF="+16" FOR="+21" VOL="+16"/>
+        <saves REF="+16" FOR="+21" WIL="+16"/>
         <health>210</health>
         <speeds>
             <speed>10,5 m</speed>
@@ -668,7 +668,7 @@
         </skills>
         <attributes STR="+10" DEX="+4" CON="+9" INT="-4" WIS="+5" CHA="+6"/>
         <armorClass>38</armorClass>
-        <saves REF="+28" FOR="+33" VOL="+29"/>
+        <saves REF="+28" FOR="+33" WIL="+29"/>
         <health>370</health>
         <reactiveAbilities>
             <special>
@@ -784,7 +784,7 @@
         </skills>
         <attributes STR="+10" DEX="+3" CON="+6" INT="-2" WIS="+6" CHA="+5"/>
         <armorClass>39</armorClass>
-        <saves REF="+25" FOR="+31" VOL="+29"/>
+        <saves REF="+25" FOR="+31" WIL="+29"/>
         <health>290</health>
         <immunities>
             <immunity>feu</immunity>
@@ -959,7 +959,7 @@
             </special>
         </interactionAbilities>
         <armorClass>20</armorClass>
-        <saves REF="+10" FOR="+14" VOL="+10"/>
+        <saves REF="+10" FOR="+14" WIL="+10"/>
         <health>70</health>
         <immunities>
             <immunity>visuel</immunity>
@@ -1083,7 +1083,7 @@
             </special>
         </interactionAbilities>
         <armorClass>23</armorClass>
-        <saves REF="+17" FOR="+14" VOL="+11"/>
+        <saves REF="+17" FOR="+14" WIL="+11"/>
         <health>110</health>
         <immunities>
             <immunity>visuel</immunity>
@@ -1205,7 +1205,7 @@
             </special>
         </interactionAbilities>
         <armorClass>27</armorClass>
-        <saves REF="+21" FOR="+21" VOL="+15"/>
+        <saves REF="+21" FOR="+21" WIL="+15"/>
         <health>180</health>
         <immunities>
             <immunity>visuel</immunity>
@@ -1327,7 +1327,7 @@
         </skills>
         <attributes STR="+3" DEX="+5" CON="+2" INT="-4" WIS="+1" CHA="+2"/>
         <armorClass>21</armorClass>
-        <saves REF="+16" FOR="+14" VOL="+8"/>
+        <saves REF="+16" FOR="+14" WIL="+8"/>
         <health>76</health>
         <speeds>
             <speed>6 m</speed>
@@ -1456,7 +1456,7 @@
             </special>
         </interactionAbilities>
         <armorClass>21</armorClass>
-        <saves REF="+15" FOR="+13" VOL="+9"/>
+        <saves REF="+15" FOR="+13" WIL="+9"/>
         <health>95</health>
         <reactiveAbilities>
             <special type="reaction">
@@ -1580,7 +1580,7 @@
             </special>
         </interactionAbilities>
         <armorClass>45</armorClass>
-        <saves REF="+36" FOR="+39" VOL="+33" saveSpecial="+1 aux jets de sauvegarde contre primordiale"/>
+        <saves REF="+36" FOR="+39" WIL="+33" saveSpecial="+1 aux jets de sauvegarde contre primordiale"/>
         <health>500</health>
         <immunities><immunity>feu</immunity></immunities>
         <weaknesses><weakness><name>froid</name><value>20</value></weakness></weaknesses>
@@ -1700,7 +1700,7 @@
             </special>
         </interactionAbilities>
         <armorClass>48</armorClass>
-        <saves REF="+40" FOR="+36" VOL="+38" saveSpecial="+1 aux jets de sauvegarde contre primordiale"/>
+        <saves REF="+40" FOR="+36" WIL="+38" saveSpecial="+1 aux jets de sauvegarde contre primordiale"/>
         <health>445</health>
         <immunities><immunity>électricité</immunity></immunities>
         <resistances>
@@ -1835,7 +1835,7 @@
             </special>
         </interactionAbilities>
         <armorClass>48</armorClass>
-        <saves REF="+42" FOR="+34" VOL="+36" saveSpecial="+1 aux jets de sauvegarde contre primordiale"/>
+        <saves REF="+42" FOR="+34" WIL="+36" saveSpecial="+1 aux jets de sauvegarde contre primordiale"/>
         <health>435</health>
         <reactiveAbilities>
             <special type="reaction">
@@ -1987,7 +1987,7 @@
             </special>
         </interactionAbilities>
         <armorClass>47</armorClass>
-        <saves REF="+36" FOR="+39" VOL="+33" saveSpecial="+1 aux jets de sauvegarde contre primordiale"/>
+        <saves REF="+36" FOR="+39" WIL="+33" saveSpecial="+1 aux jets de sauvegarde contre primordiale"/>
         <health>540</health>
         <immunities>
             <immunity>contrôlé</immunity>

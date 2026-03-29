@@ -3,6 +3,8 @@ import os
 import sys
 from lxml import etree
 
+from xml_validator import validate_xml
+
 # ==========================================
 # CONFIGURATION & CONSTANTES
 # ==========================================
@@ -219,8 +221,10 @@ def process_full_file(input_path, output_path):
     spell_blocks = [b for b in spell_blocks if "SORT" in b or "TOUR DE MAGIE" in b]
 
     print(f"[MAIN] {len(spell_blocks)} sorts isolés et parés au traitement.")
+    XSI_NS = "http://www.w3.org/2001/XMLSchema-instance"
+    root = etree.Element("spells", nsmap={'xsi': XSI_NS})
+    root.set(f"{{{XSI_NS}}}noNamespaceSchemaLocation", "../../xslt/spell.xsd")
 
-    root = etree.Element("spells")
     for block in spell_blocks:
         data = parse_spell_block(block)
         print(f"  -> Traitement de : {data['name']}")
@@ -266,4 +270,12 @@ def process_full_file(input_path, output_path):
 
 if __name__ == "__main__":
     #process_full_file("./output/subset_1/sorts_MD.md", "data/spells/all_spells.xml", "xslt/spell.xsd")
+    output_file="data/spells/all_spells.xml"
     process_full_file("./output/subset_1/sorts_MD.md", "data/spells/all_spells.xml")
+    print(f"[MAIN] ✓ Succès ! Le fichier {output_file} a été généré.")
+
+    xsd_file = "./xslt/spell.xsd"
+    if os.path.exists(output_file) and os.path.exists(xsd_file):
+        validate_xml(output_file, xsd_file)
+    else:
+        print(f"[ERROR] Fichier(s) manquant(s) pour la validation (XML: {output_file}, XSD: {xsd_file})")

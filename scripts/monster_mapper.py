@@ -3,6 +3,7 @@ import os
 import sys
 import time
 from lxml import etree
+from xml_validator import validate_xml
 
 # ==========================================
 # UTILITAIRES DE TEXTE
@@ -468,39 +469,12 @@ def generate_monster_xml(data, output_path):
     print(f"[XML] ✓ Génération complète en {total_time:.3f}s\n")
 
 # ==========================================
-# VALIDATION XSD
-# ==========================================
-
-def validate_xml(xml_path, xsd_path):
-    """Vérifie si le fichier XML est valide par rapport au schéma XSD."""
-    print(f"[VALIDATION] Vérification de {xml_path} avec {xsd_path}...")
-    try:
-        with open(xsd_path, 'rb') as f:
-            schema_root = etree.XML(f.read())
-        schema = etree.XMLSchema(schema_root)
-        
-        with open(xml_path, 'rb') as f:
-            xml_doc = etree.parse(f)
-            
-        if schema.validate(xml_doc):
-            print("[VALIDATION] ✓ Le fichier XML est VALIDE.")
-            return True
-        else:
-            print("[VALIDATION] ✗ Le fichier XML est INVALIDE !")
-            for error in schema.error_log:
-                print(f"    - Ligne {error.line}, colonne {error.column}: {error.message}")
-            return False
-    except Exception as e:
-        print(f"[VALIDATION] Erreur lors de la validation : {e}")
-        return False
-
-# ==========================================
 # EXÉCUTION PRINCIPALE
 # ==========================================
 
 if __name__ == "__main__":
-    input_file = sys.argv[1] if len(sys.argv) > 1 else "./output/subset_5/young_empyreal_dragon.md"
-    output_file = sys.argv[2] if len(sys.argv) > 2 else "./output/subset_5/young_empyreal_dragon.xml"
+    input_file = sys.argv[1] if len(sys.argv) > 1 else "./output/subset_3/monstre_unique.md"
+    output_file = sys.argv[2] if len(sys.argv) > 2 else "./output/subset_3/young_empyreal_dragon.xml"
 
     print("="*60)
     print("DÉBUT DU TRAITEMENT (MONSTER MAPPER)")

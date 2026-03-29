@@ -15,6 +15,13 @@
   <xs:complexType name="spellType">
     <xs:sequence>
       <xs:element name="name" type="xs:string"/>
+      
+      <xs:element name="type" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="type" type="xs:string" use="required"/>
+        </xs:complexType>
+      </xs:element>
+      
       <xs:element name="rank">
         <xs:simpleType>
           <xs:restriction base="xs:integer">
@@ -23,6 +30,7 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
+      
       <xs:element name="actions" type="xs:string" minOccurs="0"/>
       
       <xs:element name="traits" minOccurs="0">
@@ -33,10 +41,10 @@
         </xs:complexType>
       </xs:element>
       
-      <xs:element name="traditions">
+      <xs:element name="traditions" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="tradition" type="traditionType" minOccurs="1" maxOccurs="4"/>
+            <xs:element name="tradition" type="traditionType" maxOccurs="unbounded"/>
           </xs:sequence>
         </xs:complexType>
       </xs:element>
@@ -45,19 +53,18 @@
       <xs:element name="range" type="xs:string" minOccurs="0"/>
       <xs:element name="area" type="xs:string" minOccurs="0"/>
       <xs:element name="targets" type="xs:string" minOccurs="0"/>
-      
       <xs:element name="defense" type="xs:string" minOccurs="0"/>
       <xs:element name="duration" type="xs:string" minOccurs="0"/>
       
-      <xs:element name="description" type="xs:string"/>
+      <xs:element name="description" type="richTextType"/>
       
       <xs:element name="savingThrow" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="criticalSuccess" type="xs:string" minOccurs="0"/>
-            <xs:element name="success" type="xs:string" minOccurs="0"/>
-            <xs:element name="failure" type="xs:string" minOccurs="0"/>
-            <xs:element name="criticalFailure" type="xs:string" minOccurs="0"/>
+            <xs:element name="criticalSuccess" type="richTextType" minOccurs="0"/>
+            <xs:element name="success" type="richTextType" minOccurs="0"/>
+            <xs:element name="failure" type="richTextType" minOccurs="0"/>
+            <xs:element name="criticalFailure" type="richTextType" minOccurs="0"/>
           </xs:sequence>
         </xs:complexType>
       </xs:element>
@@ -66,12 +73,11 @@
         <xs:complexType>
           <xs:sequence>
             <xs:element name="heighten" maxOccurs="unbounded">
-              <xs:complexType>
-                <xs:simpleContent>
-                  <xs:extension base="xs:string">
-                    <xs:attribute name="type" type="xs:string" use="required"/> 
-                  </xs:extension>
-                </xs:simpleContent>
+              <xs:complexType mixed="true">
+                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                  <xs:element name="spellRef" type="xs:string"/>
+                </xs:choice>
+                <xs:attribute name="type" type="xs:string" use="required"/>
               </xs:complexType>
             </xs:element>
           </xs:sequence>
@@ -79,6 +85,12 @@
       </xs:element>
       
     </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="richTextType" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="spellRef" type="xs:string"/>
+    </xs:choice>
   </xs:complexType>
   
   <xs:simpleType name="traditionType">
