@@ -403,7 +403,8 @@
       <tradition>occulte</tradition>
     </traditions>
     <range>18 m</range>
-    <description>; **Cible** 1 créature Vous poussez un cri libérateur, pressant un allié de se libérer d’un effet qui le cloue sur place. Si la cible est empoignée, immobilisée ou entravée, elle peut immédiatement utiliser une réaction pour tenter de S’échapper.</description>
+    <targets>1 créature</targets>
+    <description>Vous poussez un cri libérateur, pressant un allié de se libérer d’un effet qui le cloue sur place. Si la cible est empoignée, immobilisée ou entravée, elle peut immédiatement utiliser une réaction pour tenter de S’échapper.</description>
   </spell>
   <spell id="spell-malediction" type="spell">
     <name>MALÉDICTION</name>
@@ -601,6 +602,7 @@
     </traditions>
     <cast>1 min</cast>
     <range>contact</range>
+    <targets>jusqu’à 3 créatures</targets>
     <duration>10 min</duration>
     <description>Vous partagez votre savoir avec les créatures touchées. Choisissez une compétence de Connaissances pour laquelle vous êtes qualifié. Les cibles sont qualifiées pour cette compétence de Connaissances pour la durée du sort.</description>
     <heightenList>

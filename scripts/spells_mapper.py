@@ -161,7 +161,7 @@ def parse_spell_block(content):
     mech_prefix = r'(?:(?<=\n)|(?<=;)|(?<=^))\s*\**'
     mechanics = {
         'range': mech_prefix + r'Portée\**[\s:]*(.*?)(?=\s*(?:;|\n|$))',
-        'targets': mech_prefix + r'Cibles?\**[\s:]*(.*?)(?=\s*(?:;|\n\s*\*\*Durée|\n\s*\*\*Défense))',
+        'targets': mech_prefix + r'[Cc]ibles?\**[\s:]*(.*?)(?=\s*(?:;|\n\s*\*\*|\n\s*[A-ZÀÂÄÆÇÉÈÊËÎÏÔÖŒÙÛÜŸ]|$))',
         'defense': mech_prefix + r'Défense\**[\s:]*(.*?)(?=\s*(?:;|\n|$))',
         'duration': mech_prefix + r'Durée\**[\s:]*(.*?)(?=\s*(?:;|\n|$))',
         'area': mech_prefix + r'Zone[\s:]*\**[\s:]*(.*?)(?=\s*(?:;|\n|$))',
