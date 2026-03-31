@@ -80,7 +80,7 @@ def generate_trait_xml(traits_data, output_path):
     XSI_NS = "http://www.w3.org/2001/XMLSchema-instance"
     root = etree.Element("traits", nsmap={'xsi': XSI_NS})
     
-    root.set(f"{{{XSI_NS}}}noNamespaceSchemaLocation", "../../xslt/trait.xsd")
+    root.set(f"{{{XSI_NS}}}noNamespaceSchemaLocation", "../../schema/trait.xsd")
 
     for t in traits_data:
         # Ajout de l'attribut id directement dans la balise <trait>
@@ -117,7 +117,7 @@ if __name__ == "__main__":
         traits_data = parse_traits_md(md_content)
         generate_trait_xml(traits_data, output_file)
 
-        xsd_file = "./xslt/trait.xsd"
+        xsd_file = "./schema/trait.xsd"
         if os.path.exists(output_file) and os.path.exists(xsd_file):
             validate_xml(output_file, xsd_file)
         else:

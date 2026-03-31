@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<spells xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xslt/spell.xsd">
+<spells xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/spell.xsd">
   <spell id="spell-agitation">
     <name>AGITATION</name>
     <type type="spell"/>
@@ -40,6 +40,10 @@
       <trait>MANIPULATION</trait>
       <trait>PRÉDICTION</trait>
     </traits>
+    <traditions>
+      <tradition>arcanique</tradition>
+      <tradition>occulte</tradition>
+    </traditions>
     <range>9 m</range>
     <targets>1 créature</targets>
     <duration>10 min</duration>
@@ -417,8 +421,7 @@
       <tradition>occulte</tradition>
     </traditions>
     <range>18 m</range>
-    <targets>1 créature</targets>
-    <description>Vous poussez un cri libérateur, pressant un allié de se libérer d’un effet qui le cloue sur place. Si la cible est empoignée, immobilisée ou entravée, elle peut immédiatement utiliser une réaction pour tenter de S’échapper.</description>
+    <description>; **Cible** 1 créature Vous poussez un cri libérateur, pressant un allié de se libérer d’un effet qui le cloue sur place. Si la cible est empoignée, immobilisée ou entravée, elle peut immédiatement utiliser une réaction pour tenter de S’échapper.</description>
   </spell>
   <spell id="spell-malediction">
     <name>MALÉDICTION</name>
@@ -491,7 +494,6 @@
     <name>MONTRER LE CHEMIN</name>
     <type type="spell"/>
     <rank>3</rank>
-    <actions>3</actions>
     <traits>
       <trait>CONCENTRATION</trait>
       <trait>DÉTECTION</trait>
@@ -601,7 +603,6 @@
     <name>OUTIL ÉPHÉMÈRE</name>
     <type type="spell"/>
     <rank>1</rank>
-    <actions>1</actions>
     <traits>
       <trait>CONCENTRATION</trait>
       <trait>MANIPULATION</trait>
@@ -617,7 +618,6 @@
     <name>PARTAGE DE CONNAISSANCES</name>
     <type type="spell"/>
     <rank>1</rank>
-    <actions>1</actions>
     <traits>
       <trait>CONCENTRATION</trait>
       <trait>MANIPULATION</trait>
@@ -670,7 +670,6 @@
     <name>RUNE MESSAGÈRE</name>
     <type type="spell"/>
     <rank>1</rank>
-    <actions>1</actions>
     <traits>
       <trait>CONCENTRATION</trait>
       <trait>LINGUISTIQUE</trait>
@@ -683,7 +682,6 @@
     </traditions>
     <cast>5 min</cast>
     <range>contact</range>
-    <targets>1 surface plane non portée ou un objet non</targets>
     <duration>1 jour</duration>
     <description>Vous enregistrez un message d’une durée maximale de 5 min et inscrivez une rune spéciale sur toute surface plane et non portée ou sur un petit objet à portée de main. La nature de l’apparence de la rune dépend de vous, mais elle est visible par tout le monde et son diamètre ne doit pas être inférieur à 5 cm. Vous spécifiez également un déclencheur pour que les créatures activent la rune (Livre des joueurs p. 303). Pendant la durée du sort, les créatures qui répondent aux critères du déclencheur peuvent entrer en contact avec la rune pour entendre dans leur tête le message enregistré, comme si vous leur parliez par télépathie. Vous savez quand quelqu’un écoute le message, mais vous ne savez pas de qui il s’agit. Vous pouvez Révoquer le sort.</description>
     <heightenList>

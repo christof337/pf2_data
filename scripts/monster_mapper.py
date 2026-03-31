@@ -326,7 +326,7 @@ def generate_monster_xml(data, output_path):
     
     XSI_NS = "http://www.w3.org/2001/XMLSchema-instance"
     root = etree.Element("monsters", nsmap={'xsi': XSI_NS})
-    root.set(f"{{{XSI_NS}}}noNamespaceSchemaLocation", "../../xslt/monster.xsd")
+    root.set(f"{{{XSI_NS}}}noNamespaceSchemaLocation", "../../schema/monster.xsd")
 
     monster = etree.SubElement(root, "monster")
     
@@ -496,7 +496,7 @@ if __name__ == "__main__":
         generate_monster_xml(monster_data, output_file)
         print(f"[MAIN] ✓ Succès ! Le fichier {output_file} a été généré.")
 
-        xsd_file = "./xslt/monster.xsd"
+        xsd_file = "./schema/monster.xsd"
         if os.path.exists(output_file) and os.path.exists(xsd_file):
             validate_xml(output_file, xsd_file)
         else:

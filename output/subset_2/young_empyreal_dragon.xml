@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="decodeMonster-2.xsl" type="text/xsl"?>
 
-<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xslt/monster.xsd">
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
   <monster>
     <name>JEUNE DRAGON EMPYRÉEN</name>
     <type>CRÉATURE</type>
