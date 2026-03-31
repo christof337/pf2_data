@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<spells xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/spell.xsd">
+  <spell id="spell-agitation" type="spell">
+    <name>AGITATION</name>
+    <rank>1</rank>
+    <actions>2</actions>
+    <traits>
+      <trait>NON LÉTAL</trait>
+      <trait>CONCENTRATION</trait>
+      <trait>MANIPULATION</trait>
+      <trait>MENTAL</trait>
+    </traits>
+    <traditions>
+      <tradition>arcanique</tradition>
+      <tradition>occulte</tradition>
+    </traditions>
+    <range>9 m</range>
+    <targets>1 créature</targets>
+    <defense>Volonté</defense>
+    <duration>variable</duration>
+    <description>Le corps et l'esprit de votre cible sont stimulés de façon excessive et elle est prise de frénésie hyperactive. Pendant la durée, la cible doit Marcher rapidement, Voler ou Nager au moins une fois par tour ou subir 2d8 dégâts mentaux à la fin de son tour. Le MJ peut décider d'ajouter des actions de déplacement supplémentaires à la liste pour les créatures qui ne possèdent qu'une forme de déplacement inhabituelle. La durée du sort dépend du jet de Volonté de la cible.</description>
+    <savingThrow>
+      <criticalSuccess>Le sort n'a aucun effet.</criticalSuccess>
+      <success>La durée est de 1 round.</success>
+      <failure>La durée est de 2 rounds.</failure>
+      <criticalFailure>La durée est de 4 rounds.</criticalFailure>
+    </savingThrow>
+    <heightenList>
+      <heighten type="+1">Les dégâts sont augmentés de 2d8.</heighten>
+    </heightenList>
+  </spell>
+</spells>
