@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+  <!-- Racine : liste des capacités universelles -->
+  <xs:element name="abilities">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ability" type="abilityType" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="abilityType">
+    <xs:sequence>
+      <!-- Identifiant unique : ability-{slug} -->
+      <xs:element name="id" type="xs:string"/>
+      <!-- Nom de la capacité en français -->
+      <xs:element name="name" type="xs:string"/>
+      <!-- Nombre d'actions (0=action libre, 1,2,3=actions, 9=réaction) -->
+      <xs:element name="actions" type="xs:string" minOccurs="0"/>
+      <!-- Traits de la capacité (aura, mental, olfactif, etc.) -->
+      <xs:element name="traits" type="traitsListType" minOccurs="0"/>
+      <!-- Conditions d'utilisation -->
+      <xs:element name="conditions" type="xs:string" minOccurs="0"/>
+      <!-- Déclencheur (pour les réactions) -->
+      <xs:element name="trigger" type="xs:string" minOccurs="0"/>
+      <!-- Effet (pour les capacités avec déclencheur) -->
+      <xs:element name="effect" type="xs:string" minOccurs="0"/>
+      <!-- Description complète -->
+      <xs:element name="description" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="traitsListType">
+    <xs:sequence>
+      <xs:element name="trait" type="xs:string" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>

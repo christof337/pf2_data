@@ -114,12 +114,27 @@ def extract_with_sidebar_detection(pdf_path, output_dir):
             sidebar_bboxes = [(r['x0'], r['top'], r['x1'], r['bottom']) for r in sidebars]
             
             # 2. Extraire le texte des encarts
+            # Clip bboxes to page boundaries to avoid ValueError
+            page_bbox = (0, 0, page.width, page.height)
+            valid_bboxes = []
+            for bbox in sidebar_bboxes:
+                x0, top, x1, bottom = bbox
+                cx0 = max(x0, page_bbox[0])
+                ctop = max(top, page_bbox[1])
+                cx1 = min(x1, page_bbox[2])
+                cbottom = min(bottom, page_bbox[3])
+                if cx1 > cx0 and cbottom > ctop:
+                    valid_bboxes.append((cx0, ctop, cx1, cbottom))
+            sidebar_bboxes = valid_bboxes
             sidebar_contents = []
             for bbox in sidebar_bboxes:
-                sidebar_area = page.within_bbox(bbox)
-                text = extract_styled_layout(sidebar_area)
-                if text:
-                    sidebar_contents.append(text)
+                try:
+                    sidebar_area = page.within_bbox(bbox)
+                    text = extract_styled_layout(sidebar_area)
+                    if text:
+                        sidebar_contents.append(text)
+                except Exception as e:
+                    print(f"    [WARN] Encart ignoré (page {page_num}): {e}")
 
             # 3. Exclure les caractères des encarts de la page principale
             def is_outside_sidebars(obj):

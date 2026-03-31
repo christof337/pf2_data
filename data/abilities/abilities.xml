@@ -1,0 +1,472 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<abilities xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/ability.xsd">
+  <ability>
+    <id>ability-constriction-superieure</id>
+    <name>Constriction supérieure</name>
+    <actions>1</actions>
+    <description>Le monstre inflige la quantité de dégâts
+ indiquée à toutes les créatures qu’il a empoignées ou entravées.
+ Chacune d’entre elles peut tenter un jet de Vigueur basique avec
+ le DD indiqué. Si une créature échoue à son jet de sauvegarde, elle
+ perd connaissance. Si elle réussit, elle est immunisée contre l’état
+ inconscient causé par la Constriction supérieure pendant 1 min.</description>
+  </ability>
+  <ability>
+    <id>ability-desarconner</id>
+    <name>Désarçonner</name>
+    <actions>9</actions>
+    <trigger>Une créature Se met en selle ou utilise l’action
+ Diriger un animal alors qu’elle se trouve sur le dos du monstre ;</trigger>
+    <effect>La créature ayant déclenché cet effet doit réussir un jet de
+ Réflexes du DD indiqué pour éviter d’être désarçonnée et de tomber
+ à terre. En cas d’échec critique, elle subit 1d6 dégâts contondants
+ en plus des dégâts causés par la chute.</effect>
+    <description>La plupart des monstres qui servent de monture
+ peuvent tenter de désarçonner des cavaliers indésirables ou aga-
+ çants, mais ils n’utilisent généralement pas cette réaction contre
+ une créature de confiance, sauf s’ils sont effrayés ou maltrai-
+ tés</description>
+  </ability>
+  <ability>
+    <id>ability-embuscade-aquatique</id>
+    <name>Embuscade aquatique</name>
+    <actions>1</actions>
+    <conditions>Le monstre est caché dans l’eau
+ et une créature qui ne l’a pas détecté se trouve dans la zone d’effet
+ indiquée</conditions>
+    <effect>Le monstre se déplace, dans l’eau et sur terre, de sa
+ Vitesse de nage +3 m en direction de la créature ayant déclenché
+ cet effet. Le monstre Frappe la créature une fois qu’elle se trouve à
+ portée. La créature est prise par surprise pour cette Frappe.</effect>
+  </ability>
+  <ability>
+    <id>ability-empoignade</id>
+    <name>Empoignade</name>
+    <actions>1</actions>
+    <conditions>La dernière action du monstre est une
+ Frappe réussie dotée du trait Empoignade dans l’entrée des dégâts,
+ ou il a déjà empoigné une créature grâce à cette action</conditions>
+    <effect>Si ce
+ pouvoir est utilisé après une Frappe, le monstre tente de Saisir la
+ créature avec la portion de son corps qu’il a utilisée pour attaquer.
+ Cette tentative n’est pas soumise au malus d’attaques multiples du
+ monstre et n’est pas non plus comptabilisée dans celui-ci.
+ Le monstre peut à la place utiliser Empoignade pour désigner
+ une créature qu’il a déjà empoignée ou qu’il entrave avec un appen-
+ dice capable d’Empoigner et lui conférer automatiquement cet état
+ jusqu’à ce qu’il finisse son prochain tour.</effect>
+  </ability>
+  <ability>
+    <id>ability-empoignade-amelioree</id>
+    <name>Empoignade améliorée</name>
+    <actions>0</actions>
+    <description>Le monstre peut utiliser Empoignade,
+ Renversement ou Bousculade (selon le pouvoir) comme une action
+ libre déclenchée par la réussite de son attaque initiale. Un monstre
+ qui possède Empoignade améliorée doit quand même dépenser
+ une action pour prolonger la durée de la saisie des créatures qu’il
+ a déjà empoignées.</description>
+  </ability>
+  <ability>
+    <id>ability-engloutir</id>
+    <name>Engloutir</name>
+    <actions>2</actions>
+    <description>Le monstre Marche rapidement sur une distance maxi-
+ male égale à deux fois sa Vitesse et peut traverser l’espace de toute
+ créature qui se trouve sur son chemin. Toute créature d’une taille
+ inférieure ou égale à celle du monstre et dont l’espace est traversé
+ par ce dernier peut tenter un jet de Réflexes avec le DD indiqué
+ pour éviter de se faire engloutir. Une créature incapable d’agir subit
+ automatiquement un échec critique à ce jet de sauvegarde. Si une
+ créature réussit son jet de sauvegarde, elle peut décider si elle est
+ repoussée sur le côté (hors du chemin du monstre) ou si elle reste
+ devant le monstre qui la pousse alors devant lui jusqu’à la fin de son
+ déplacement. Le monstre ne peut tenter d’Engloutir une même créa-
+ ture qu’une fois par utilisation du pouvoir Engloutir. Le monstre peut
+ contenir autant de créatures qu’il peut s’en trouver dans son espace.
+ Une créature qui échoue à son jet de sauvegarde se retrouve
+ engloutie dans le corps du monstre. Elle est alors empoignée,
+ ralentie 1 et doit retenir sa respiration ou commencer à asphyxier.
+ La créature subit la quantité de dégâts indiquée dans le descriptif
+ du pouvoir au moment où elle est engloutie, puis de nouveau à la
+ fin de chacun de ses tours tant qu’elle est engloutie. Une créature
+ engloutie peut se libérer en tentant de S’échapper en utilisant le DD
+ indiqué. La créature engloutie peut également attaquer le monstre
+ dans lequel elle se trouve, mais seulement à l’aide d’attaques à
+ mains nues ou d’armes dont l’Encombrement est léger ou moindre.
+ Le monstre est pris par surprise face à cette attaque. S’il subit une
+ quantité de dégâts perforants ou tranchants supérieure ou égale à
+ la valeur de Rupture et infligée par une attaque ou un sort unique,
+ la créature engloutie arrive à s’extraire de son corps. Une créature
+ qui arrive à se libérer grâce à l’une de ces méthodes peut immé-
+ diatement respirer normalement et quitte l’espace du monstre.
+ Si le monstre meurt, sa forme se délite et les créatures qu’il a
+ englouties sont automatiquement relâchées.
+ **Esprit de la nuée.** Ce monstre ne possède pas d’esprit individuel
+ (notamment car il est composé d’une nuée de petites créatures) et
+ est ainsi immunisé contre les effets mentaux qui ciblent seulement
+ un nombre donné de créatures. Il est cependant toujours affecté
+ par les effets mentaux qui prennent pour cible toutes les créatures
+ qui se trouvent dans une zone.</description>
+  </ability>
+  <ability>
+    <id>ability-eventration</id>
+    <name>Éventration</name>
+    <actions>1</actions>
+    <conditions>Au cours d’un même round, le
+ monstre touche un même ennemi avec deux Frappes consécutives
+ du type indiqué</conditions>
+    <effect>Le monstre inflige une nouvelle fois et
+ automatiquement à sa cible la quantité de dégâts de cette Frappe.</effect>
+    <description>Une entrée Éventration indique une Frappe que
+ possède le monstre ;</description>
+  </ability>
+  <ability>
+    <id>ability-ferocite</id>
+    <name>Férocité</name>
+    <actions>9</actions>
+    <trigger>Le monstre est réduit à 0 PV ;</trigger>
+    <effect>Le monstre n’est pas assommé et conserve 1 PV, mais l’intensité
+ de son état blessé augmente de 1. Il ne peut plus faire appel à ce
+ pouvoir si l’intensité de cet état atteint 3.</effect>
+  </ability>
+  <ability>
+    <id>ability-frappe-reflexe</id>
+    <name>Frappe réflexe</name>
+    <actions>9</actions>
+    <trigger>Une créature qui se trouve à portée
+ du monstre utilise une action de manipulation ou de déplacement,
+ fait une attaque à distance, ou quitte une case lors d’une action de
+ déplacement qu’elle entreprend ;</trigger>
+    <effect>Le monstre tente une Frappe
+ au corps à corps contre la créature ayant déclenché cet effet. Si l’at-
+ taque se solde par un coup critique et que le déclencheur était une
+ action de manipulation, le monstre interrompt cette action. Cette
+ Frappe n’est pas comptabilisée dans le malus d’attaques multiples
+ du monstre et ce dernier ne s’applique pas à cette Frappe.</effect>
+  </ability>
+  <ability>
+    <id>ability-gober</id>
+    <name>Gober</name>
+    <actions>1</actions>
+    <traits>
+      <trait>attaque</trait>
+    </traits>
+    <description>Le monstre tente d’avaler une créature dont
+ la taille est inférieure ou égale à la taille indiquée et qu’il a déjà
+ empoignée ou entravée dans sa gueule ou entre ses mâchoires. Si la
+ créature avalée est de la taille maximale indiquée dans le descriptif
+ du pouvoir, le monstre ne peut plus utiliser l’action Gober. Si la
+ créature est plus petite que ce maximum, le monstre peut générale-
+ ment gober d’autres créatures. Le MJ en détermine alors le nombre.
+ Le monstre effectue un test d’Athlétisme opposé au DD de Réflexes
+ de la cible. S’il réussit, il gobe la créature. La gueule ou les mâchoires
+ du monstre n’enserrent plus la créature qu’il vient de gober et il peut
+ donc à nouveau s’en servir pour Frapper ou Empoigner une créature.
+ Le monstre ne peut pas attaquer les créatures qu’il a gobées.
+ Une créature gobée est empoignée, ralentie 1 et doit retenir sa
+ respiration ou commencer à asphyxier. La créature gobée subit la
+ quantité de dégâts indiquée dans le descriptif du pouvoir au moment
+ où elle est gobée, puis de nouveau à la fin de chacun de ses tours
+ tant qu’elle est gobée. Si la victime réussit à S’échapper de l’état
+ empoigné lié à ce pouvoir, elle fuit alors par la gueule du monstre.
+ Cette action libère également toutes les autres créatures capturées
+ 
+
+ 
+
+ dans la gueule ou entre les mâchoires du monstre. La créature gobée
+ peut également attaquer le monstre dans lequel elle se trouve, mais
+ seulement à l’aide d’attaques à mains nues ou d’armes dont l’Encom-
+ brement est léger ou moindre. Le monstre est pris par surprise face à
+ ces attaques. Si le monstre subit une quantité de dégâts perforants
+ ou tranchants supérieure ou égale à la valeur de Rupture infligée par
+ une attaque ou un sort unique, la créature gobée arrive à s’extraire de
+ son corps. Une créature qui arrive à se libérer en S’échappant ou en
+ taillant une issue à travers le monstre peut immédiatement respirer
+ normalement et quitte l’espace du monstre.
+ Si le monstre meurt, une créature gobée peut être libérée par des
+ créatures adjacentes au cadavre qui utilisent un total combiné de 3
+ actions pour éventrer le monstre avec une arme ou une attaque à
+ mains nues qui inflige des dégâts perforants ou tranchants.
+ **Guérison accélérée.** Un monstre qui possède ce pouvoir regagne
+ la quantité de points de vie indiquée chaque round, au début
+ de son tour.
+ **Maladie.** Quand une créature est exposée à la maladie d’un monstre,
+ elle doit réussir un jet de Vigueur pour éviter de la contracter.
+ Le niveau de la maladie est le même que celui du monstre qui la
+ transmet. Cette maladie est soumise aux règles des afflictions.
+ **Odorat.** L’odorat permet de sentir les odeurs émises par des créatures
+ ou des objets. Il s’agit généralement d’un sens vague. La portée de
+ ce sens est indiquée à côté de son nom et il ne fonctionne que si
+ la créature ou l’objet concerné émet une odeur (par exemple, les
+ créatures intangibles n’émettent généralement pas d’odeur).
+ Si une créature exhale une odeur importante ou se trouve sous le
+ vent, le MJ peut doubler, voire tripler la portée des pouvoirs basés sur
+ l’odorat utilisés pour détecter cette créature, mais il peut également
+ réduire cette portée si la créature se trouve dans le sens du vent.
+ **Perception de la vie.** La perception de la vie permet à un monstre de
+ ressentir l’essence vitale des créatures vivantes et mortes-vivantes
+ sur une portée donnée. Ce sens permet de différencier l’énergie de
+ vitalité qui anime les créatures vivantes et l’énergie du néant qui
+ anime les créatures mortes-vivantes, de la même manière que la
+ vue permet de différencier les couleurs.
+ **Perception des ondes.** Ce sens permet à un monstre de ressentir les
+ vibrations causées par un déplacement à travers un liquide. Il s’agit
+ généralement d’un sens imprécis avec une portée limitée (indiquée
+ dans la description du pouvoir). La perception des ondes ne fonc-
+ tionne que si le monstre et le sujet se trouvent dans la même étendue
+ de liquide, et seulement si le sujet se déplace à travers ce liquide.
+ **Perception des vibrations.** Ce sens permet à un monstre de ressentir
+ les vibrations causées par un déplacement à travers une surface
+ solide. Il s’agit généralement d’un sens imprécis avec une portée
+ limitée (indiquée dans la description du pouvoir). La perception
+ des vibrations ne fonctionne que si le monstre se trouve sur la
+ même surface que le sujet à l’origine des vibrations, et seulement
+ si celui-ci se déplace sur (ou creuse à travers) cette surface.</description>
+  </ability>
+  <ability>
+    <id>ability-pietinement</id>
+    <name>Piétinement</name>
+    <actions>3</actions>
+    <description>Le monstre Marche rapidement sur une distance
+ maximale égale au double de sa Vitesse et peut traverser les espaces
+ de créatures de la taille indiquée. Il Piétine alors chaque créature
+ dans l’espace de laquelle il pénètre. Le monstre ne peut tenter de
+ Piétiner une créature qu’une seule fois par utilisation de ce pouvoir.
+ Le monstre inflige les dégâts de la Frappe indiquée. Les créatures
+ piétinées peuvent alors tenter un jet de Réflexes basique avec le DD
+ indiqué (aucun dégât sur un succès critique, la moitié des dégâts sur
+ un succès, le double des dégâts sur un échec critique).
+ **Poison.** Quand une créature se trouve exposée au poison d’un
+ monstre, elle doit réussir un jet de Vigueur pour éviter d’être empoi-
+ sonnée. Le niveau du poison est le même que celui du monstre qui
+ l’inocule. Le poison est soumis aux règles des afflictions.</description>
+  </ability>
+  <ability>
+    <id>ability-presence-terrifiante</id>
+    <name>Présence terrifiante</name>
+    <traits>
+      <trait>aura</trait>
+      <trait>émotion</trait>
+      <trait>mental</trait>
+      <trait>terreur</trait>
+    </traits>
+    <description>Une créature
+ qui pénètre dans la zone d’effet doit faire un jet de Volonté. Quel
+ que soit le résultat du jet de sauvegarde, la créature est immunisée
+ contre la Présence terrifiante du monstre pendant 1 min.
+ **Succès critique.** La créature n’est pas affectée par la présence.
+ **Succès. **La créature est effrayée 1.
+ **Échec.** La créature est effrayée 2.
+ **Échec critique.** La créature est effrayée 4.</description>
+  </ability>
+  <ability>
+    <id>ability-projection-de-rochers</id>
+    <name>Projection de rochers</name>
+    <actions>1</actions>
+    <description>Le monstre Interagit pour ramasser un
+ rocher qui se trouve à portée ou qu’il avait mis de côté et le lance
+ en faisant une Frappe à distance.</description>
+  </ability>
+  <ability>
+    <id>ability-puanteur</id>
+    <name>Puanteur</name>
+    <traits>
+      <trait>aura</trait>
+      <trait>olfactif</trait>
+    </traits>
+    <description>Une créature qui pénètre dans l’aura ou y
+ commence son tour doit réussir un jet de Vigueur ou se trouver
+ dans l’état malade 1 (et ralentie 1 tant qu’elle est malade en cas
+ d’échec critique). Si la créature réussit son jet de sauvegarde ou
+ se remet de son état malade, elle est immunisée contre toutes les
+ auras de puanteur pendant 1 min.
+ **Régénération.** Ce monstre regagne la quantité de points de vie indi-
+ quée chaque round, au début de son tour. Tant qu’il bénéficie du
+ pouvoir régénération, l’intensité de son état mourant ne peut jamais
+ dépasser 3. Cependant, s’il subit des dégâts d’un des types indiqués
+ dans l’entrée régénération, son pouvoir de régénération devient
+ alors inactif jusqu’à la fin de son prochain tour. Vous devez désacti-
+ ver ce pouvoir avant d’appliquer ces dégâts, car ils sont susceptibles
+ de tuer le monstre en lui faisant atteindre l’état mourant 4.</description>
+  </ability>
+  <ability>
+    <id>ability-renversement</id>
+    <name>Renversement</name>
+    <actions>1</actions>
+    <conditions>La dernière action du monstre était
+ une Frappe réussie indiquant Renversement dans l’entrée des
+ dégâts</conditions>
+    <effect>**Le monstre tente de Faire un croc-en-jambe à la créa-
+ ture. Cette tentative n’est pas soumise au malus d’attaques multi-
+ ples du monstre et n’est pas non plus comptabilisée dans celui-ci.</effect>
+  </ability>
+  <ability>
+    <id>ability-renversement-amelioree</id>
+    <name>Renversement améliorée</name>
+    <description>Voir Empoignade améliorée.
+ **Soins du néant.** Une créature possédant ce pouvoir tire sa santé de
+ l’énergie du néant et non de celle de la vitalité. L’énergie de vita-
+ lité lui inflige des dégâts et les effets de vitalité de guérison ne la
+ soignent pas. L’énergie du néant ne lui inflige pas de dégâts et elle
+ est soignée par les effets du néant qui guérissent les morts-vivants.
+ **Sorts à volonté.** Le monstre peut lancer ses sorts à volonté autant de
+ fois qu’il le souhaite sans utiliser d’emplacement de sort.
+ **Sorts constants.** Un sort constant affecte le monstre sans que ce
+ dernier ait besoin de le lancer. Le sort a une durée illimitée. Si un
+ sort constant est contré, le monstre peut le réactiver en utilisant
+ les actions d’incantation normalement requises pour lancer le sort.</description>
+  </ability>
+  <ability>
+    <id>ability-telepathie</id>
+    <name>Télépathie</name>
+    <traits>
+      <trait>aura</trait>
+      <trait>magique</trait>
+      <trait>mental</trait>
+    </traits>
+    <description>Un monstre télépathe peut com-
+ muniquer mentalement avec n’importe quelle créature qui se trouve
+ dans la portée indiquée, tant qu’il partage une langue avec cette
+ créature. Cela ne lui donne cependant pas accès à leurs pensées et
+ il ne peut pas communiquer plus d’informations que par le langage.
+ **Vision à 360..** Ce monstre peut voir simultanément dans toutes les
+ directions et ne peut donc pas être pris en tenaille.
+ **Vision dans le noir.** Un monstre qui possède vision dans le noir
+ n’a aucun mal à voir dans les zones plongées dans les ténèbres
+ ou la lumière faible, mais il ne voit alors qu’en noir et blanc.
+ Certaines formes de ténèbres magiques, comme le sort de rang 4
+ *ténèbres*, empêchent le pouvoir vision dans le noir de fonctionner.
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ **
+ Un monstre qui possède vision dans le noir supérieure peut cepen-
+ dant voir même à travers ce type de ténèbres magiques.
+**Vision nocturne.** Le monstre peut voir dans la lumière faible comme
+ s’il s’agissait de lumière vive. Il ignore ainsi l’état masqué causé
+ par la lumière faible.
+TRAITS DES CRÉATURES
+Certains de ces traits sont déjà présentés dans le *Livre des
+joueurs* ou *le Livre du MJ* de Pathfinder. D’autres sont présentés
+pour la première fois dans cet ouvrage.</description>
+  </ability>
+  <ability>
+    <id>ability-traits-de-rarete</id>
+    <name>Traits de rareté</name>
+    <description>La liste de traits d’une créature commence par sa rareté, sauf
+si elle est commune.
+**Commune.** Une créature qui possède cette rareté est courante et peut
+ être convoquée à l’aide du sort de convocation approprié.
+**Peu courante.** On en sait moins sur les créatures peu courantes
+ que sur les créatures communes. Elles ne peuvent généralement
+ pas être convoquées. Le DD des tests permettant de Se souvenir
+ d’informations sur une telle créature est augmenté de 2.
+**Rare.** Comme le nom l’indique, ces créatures sont rares. Elles ne
+ peuvent généralement pas être convoquées. Le DD des tests per-
+ mettant de Se souvenir d’informations sur une telle créature est
+ augmenté de 5.
+**Unique.** Une créature qui possède cette rareté est la seule de son
+ espèce. Le DD des tests permettant de Se souvenir d’informations
+ sur une telle créature est augmenté de 10.</description>
+  </ability>
+  <ability>
+    <id>ability-taille</id>
+    <name>Taille</name>
+    <description>La taille d’une créature est indiquée après son trait de rareté.
+**Gigantesque.** Une créature de taille Gigantesque occupe un espace
+ d’au moins 6 m sur 6 m (soit 16 cases sur le quadrillage), mais
+ certaines sont bien plus grandes. Les créatures Gigantesques ont
+ généralement une allonge de 6 m si elles sont hautes ou de 4,5 m
+ si elles sont longues, mais les plus grandes peuvent avoir une
+ allonge bien supérieure.
+**Très Grande.** Une créature de Très Grande taille occupe un espace
+ de 4,5 m sur 4,5 m (9 cases sur le quadrillage). Elle a généra-
+ lement une allonge de 4,5 m si elle est haute ou de 3 m si elle
+ est longue.
+**Grande.** Une créature de Grande taille occupe un espace de 3 m sur
+ 3 m (4 cases sur le quadrillage). Elle a généralement une allonge
+ de 3 m si elle est haute ou de 1,5 m si elle est longue.
+**Moyenne.** Une créature de taille Moyenne occupe un espace de
+ 1,5 m sur 1,5 m (1 case sur le quadrillage) et a généralement une
+ allonge de 1,5 m.
+**Petite.** Une créature de Petite taille occupe un espace de 1,5 m
+ sur 1,5 m (1 case sur le quadrillage) et a généralement une
+ allonge de 1,5 m.
+**Très Petite.** Une créature de Très Petite taille occupe un espace infé-
+ rieur à 1,5 m sur 1,5 m (1 case sur le quadrillage), et plusieurs Très
+ Petites créatures peuvent occuper la même case sur le quadrillage.
+ Une même case peut être occupée par au moins quatre créatures
+ de Très Petites taille, et même plus si le MJ le permet. Elles peuvent
+ également occuper le même espace que des créatures de taille
+ supérieure et, si leur allonge est de 0 m, elles y sont même forcées
+ pour pouvoir attaquer.</description>
+  </ability>
+  <ability>
+    <id>ability-autres-traits</id>
+    <name>Autres traits</name>
+    <description>Après la rareté et la taille d’une créature, ses autres traits sont
+ présentés par ordre alphabétique. Vous trouverez ici la liste
+ de tous les traits utilisés dans ce livre.
+ **aberration.** Les aberrations sont des créatures venant d’au-delà des
+ plans ou des créatures naturelles corrompues.
+ **air. **Les effets dotés du trait air permettent de manipuler ou de créer
+ de l’air. Ceux qui permettent de manipuler l’air n’ont aucun effet
+ dans le vide ou une zone dépourvue d’air. Les créatures dotées de
+ ce trait sont essentiellement constituées d’air ou ont une connexion
+ magique avec cet élément.
+ **aiuvarin.** Les aiuvarins ont des origines mixtes et ont généralement
+ un parent elfe et un aiuvarin ou humain.
+ **alchimique.** Les objets alchimiques fonctionnent grâce à des réactifs
+ alchimiques. Ils ne sont pas magiques et n’émettent pas d’aura
+ magique. Les créatures alchimiques sont partiellement animées
+ par des réactions alchimiques.
+ **âmes. **Ces créatures artificielles reçoivent une augmentation mentale
+ sous la forme d’un fragment d’âme d’une créature qui a été vivante.
+ **âme‑en‑peine.** Une âme-en-peine est une créature morte-vivante
+ intangible imprégnée d’énergie du néant et animée d’une profonde
+ haine pour la vie.
+ **amphibie.** Une créature amphibie peut respirer dans l’eau et dans
+ l’air, même si elle se trouve hors de son environnement de prédi-
+ lection, généralement sans limites de temps ou au moins pendant
+ plusieurs heures. Ces créatures disposent souvent d’une Vitesse
+ de nage. Leurs Frappes contondantes et tranchantes à mains
+ nues ne subissent pas le malus habituel de −2 lié à l’environne-
+ ment aquatique.
+ **ange.** Les membres de cette famille de célestes sont des messagers et
+ des guerriers. La majorité des anges possèdent le trait saint, vision
+ dans le noir et souffrent d’une faiblesse contre ce qui est impie.
+ **animal.** Un animal est une créature dont l’intelligence est relativement
+ limitée. Son modificateur d’attribut d’Intelligence ne dépasse géné-
+ ralement pas −4, il ne peut pas parler de langue ni développer de
+ compétences basées sur l’Intelligence.
+ **aquatique.** Les créatures aquatiques vivent sous l’eau. Leurs Frappes
+ contondantes et tranchantes à mains nues ne subissent pas le
+ malus habituel de −2 lié à l’environnement aquatique. Les créatures
+ aquatiques peuvent respirer dans l’eau, mais pas à l’air libre.
+ **arcane. **Cette magie découle de la tradition arcanique, qui repose
+ sur la logique et la rationalité. Tout ce qui est doté de ce trait est
+ magique. Une créature pourvue de ce trait est essentiellement
+ constituée de magie arcanique ou a une forte connexion avec elle.
+ **archon. **Les membres de cette famille de célestes sont les protecteurs
+ du Paradis et possèdent généralement le trait saint, vision dans le
+ noir et souffrent d’une faiblesse contre ce qui est impie.
+ **astral.** Les créatures astrales sont originaires du plan astral, et
+ peuvent survivre à ses effets environnementaux basiques.
+ **athamaru.** Les athamarus sont des humanoïdes aquatiques aux traits
+ de poisson.
+ **azarketi.** Les azarketis descendent des humains et se sont adaptés
+ à la vie dans des communautés aquatiques. Ils ont des ouïes, des
+ mains palmées, des petites nageoires et peuvent survivre dans
+ l’eau comme en dehors.
+ **azata. **Cette famille de célestes est originaire de l’Élysée. Ils possèdent
+ généralement le trait saint, vision dans le noir, et souffrent d’une
+ faiblesse au fer froid et à ce qui est impie.</description>
+  </ability>
+</abilities>
