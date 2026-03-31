@@ -674,7 +674,7 @@
       <tradition>primordiale</tradition>
     </traditions>
     <range>9 m</range>
-    <area>explosion affectant une surface de terre ou de sable</area>
+    <area>explosion affectant une surface de terre ou de sable horizontale d’un rayon de 6 m</area>
     <defense>Réflexes</defense>
     <duration>maintenu jusqu’à 1 min</duration>
     <description>La surface est soulevée et secouée. Elle devient une zone de terrain difficile. Toute trace ou empreinte est effacée par les mouvements du sol. Les créatures qui s’y tiennent debout subissent un malus de statut de –1 à leurs tests d’Acrobaties pour Garder l’équilibre ou faire un Déplacement acrobatique, ainsi qu’à leurs tests d’Athlétisme pour Sauter en hauteur ou en longueur. La première fois à chaque round que vous Maintenez le sort, vous pouvez déplacer la zone secouée jusqu’à 6 m dans n’importe quelle direction. Les créatures immobilisées par le sort sont transportées par les <spellRef>sables mouvants</spellRef> dans la même direction, si possible. Les créatures qui commencent leur tour dans la zone de <spellRef>sables mouvants</spellRef> ou qui y pénètrent doivent tenter un jet de Réflexes.</description>
@@ -802,7 +802,7 @@
     <savingThrow>
       <criticalSuccess>La cible n’est pas affectée.</criticalSuccess>
       <success>L’effet dure 1 round.</success>
-      <failure>L’effet dure la durée normale. Tourbillon de foulards</failure>
+      <failure>L’effet dure la durée normale.</failure>
     </savingThrow>
   </spell>
 </spells>

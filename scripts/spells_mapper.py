@@ -38,6 +38,11 @@ def clean_pdf_artifacts(content):
     content = re.sub(r'\[\[PAGE \d+\]\]', '', content)
     content = re.sub(r'(?m)^\s*Sorts\s*$', '', content, flags=re.IGNORECASE)
     content = re.sub(r'(?m)^\s*# FLUX PRINCIPAL \(STATS/BASE\)\s*$\n*\s*\d{1,3}', '', content)
+    # Suppression des légendes d'illustration + crédit artiste (légende indentée suivie d'une ligne email)
+    content = re.sub(
+        r'(?m)^[ \t]{3,}[A-ZÀÂÄÆÇÉÈÊËÎÏÔÖŒÙÛÜŸ][a-zà-ÿ][^\n]{0,45}\n[ \t]*[^\n]*[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}[^\n]*$\n?',
+        '', content
+    )
     content = re.sub(r'(?m)^.*[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}.*$\n?', '', content)
     
     # 3. Suppression intelligente des sommaires (barres latérales)
@@ -164,7 +169,7 @@ def parse_spell_block(content):
         'targets': mech_prefix + r'[Cc]ibles?\**[\s:]*(.*?)(?=\s*(?:;|\n\s*\*\*|\n\s*[A-ZÀÂÄÆÇÉÈÊËÎÏÔÖŒÙÛÜŸ]|$))',
         'defense': mech_prefix + r'Défense\**[\s:]*(.*?)(?=\s*(?:;|\n|$))',
         'duration': mech_prefix + r'Durée\**[\s:]*(.*?)(?=\s*(?:;|\n|$))',
-        'area': mech_prefix + r'Zone[\s:]*\**[\s:]*(.*?)(?=\s*(?:;|\n|$))',
+        'area': mech_prefix + r'Zone[\s:]*\**[\s:]*(.*?)(?=\s*(?:;|\n\s*[A-ZÀÂÄÆÇÉÈÊËÎÏÔÖŒÙÛÜŸ]|$|\*\*))',
         'cast': mech_prefix + r'Incantation\**[\s:]*(.*?)(?=\s*(?:;|\n|$))'
     }
     

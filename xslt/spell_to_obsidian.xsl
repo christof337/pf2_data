@@ -86,16 +86,16 @@
     <xsl:text> &#10;</xsl:text>
     
     <xsl:if test="savingThrow/criticalSuccess">
-      <xsl:text>**Succès critique.** </xsl:text><xsl:value-of select="savingThrow/criticalSuccess"/><xsl:text>  &#10;</xsl:text>
+      <xsl:text>**Succès critique.** </xsl:text><xsl:apply-templates select="savingThrow/criticalSuccess"/><xsl:text>  &#10;</xsl:text>
     </xsl:if>
     <xsl:if test="savingThrow/success">
-      <xsl:text>**Succès.** </xsl:text><xsl:value-of select="savingThrow/success"/><xsl:text>  &#10;</xsl:text>
+      <xsl:text>**Succès.** </xsl:text><xsl:apply-templates select="savingThrow/success"/><xsl:text>  &#10;</xsl:text>
     </xsl:if>
     <xsl:if test="savingThrow/failure">
-      <xsl:text>**Échec.** </xsl:text><xsl:value-of select="savingThrow/failure"/><xsl:text>&#10;</xsl:text>
+      <xsl:text>**Échec.** </xsl:text><xsl:apply-templates select="savingThrow/failure"/><xsl:text>&#10;</xsl:text>
     </xsl:if>
     <xsl:if test="savingThrow/criticalFailure">
-      <xsl:text>**Échec critique.** </xsl:text><xsl:value-of select="savingThrow/criticalFailure"/><xsl:text>&#10;</xsl:text>
+      <xsl:text>**Échec critique.** </xsl:text><xsl:apply-templates select="savingThrow/criticalFailure"/><xsl:text>&#10;</xsl:text>
     </xsl:if>
     
     <xsl:if test="heightenList">
