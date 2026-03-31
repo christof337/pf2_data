@@ -128,7 +128,7 @@ def parse_spell_block(content):
     spell_data['rank'] = rank_match.group(2) if rank_match else "1"
 
     # 3. Actions (Isolé entre le Nom et le Rang)
-    header_end = rank_match.end() if rank_match else 200
+    header_end = rank_match.start() if rank_match else 200
     header_area = content[:header_end]
     action_match = re.search(r'(?m)^\s*\**\s*([123R])\s*\**\s*$', header_area)
     if not action_match:
@@ -139,7 +139,7 @@ def parse_spell_block(content):
     mech_prefix = r'(?:(?<=\n)|(?<=;)|(?<=^))\s*\**'
     mechanics = {
         'range': mech_prefix + r'Portée\**[\s:]*(.*?)(?=\s*(?:;|\n|$))',
-        'targets': mech_prefix + r'Cibles?\**[\s:]*(.*?)(?=\s*(?:;|\n|$))',
+        'targets': mech_prefix + r'Cibles?\**[\s:]*(.*?)(?=\s*(?:;|\n\s*\*\*Durée|\n\s*\*\*Défense))',
         'defense': mech_prefix + r'Défense\**[\s:]*(.*?)(?=\s*(?:;|\n|$))',
         'duration': mech_prefix + r'Durée\**[\s:]*(.*?)(?=\s*(?:;|\n|$))',
         'area': mech_prefix + r'Zone[\s:]*\**[\s:]*(.*?)(?=\s*(?:;|\n|$))',
@@ -148,7 +148,7 @@ def parse_spell_block(content):
     
     mech_ends = []
     for key, pattern in mechanics.items():
-        m = re.search(pattern, content, re.IGNORECASE)
+        m = re.search(pattern, content, re.DOTALL)
         if m:
             spell_data[key] = clean_value(m.group(1))
             mech_ends.append(m.end())
@@ -156,7 +156,7 @@ def parse_spell_block(content):
             spell_data[key] = None
 
     # 5. Traditions
-    trad_match = re.search(mech_prefix + r'Traditions?\**[\s:]*([a-zA-Zà-ÿ,\s]+?)(?=\s*(?:;|\n|$))', content, re.IGNORECASE)
+    trad_match = re.search(mech_prefix + r'Traditions?\s?\**[\s:]*([a-zA-Zà-ÿ,\s]+?)(?=\s*(?:;|\n|$))', content, re.IGNORECASE)
     if trad_match:
         spell_data['traditions'] = [clean_value(t).lower() for t in trad_match.group(1).split(',')]
         mech_ends.append(trad_match.end())
@@ -165,7 +165,7 @@ def parse_spell_block(content):
 
     # 6. Traits (Entre le Rang et la première mécanique)
     first_mech_start = min([m.start() for m in re.finditer(r'(?:(?<=\n)|(?<=;)|(?<=^))\s*\**(?:Portée|Cibles?|Défense|Durée|Zone|Incantation|Traditions?)', content, re.IGNORECASE)] or [len(content)])
-    traits_area = content[header_end:first_mech_start]
+    traits_area = content[rank_match.end() if rank_match else 200:first_mech_start]
     spell_data['traits'] = parse_traits(traits_area)
 
     # 7. Sauvegardes
