@@ -7,6 +7,7 @@ sys.path.append(os.path.relpath("scripts"))
 
 from monster_mapper import parse_monster_md, generate_monster_xml
 from spells_mapper import parse_spells_md, generate_spells_xml
+from trait_mapper import parse_traits_md, generate_trait_xml
 
 def run_snapshot_test(name, md_path, expected_xml_path, parse_fn, generate_fn):
     print(f"▶ Exécution du test : {name}...")
@@ -72,6 +73,13 @@ if __name__ == "__main__":
             "xml": "./tests/fixtures/test_sorts_ok.xml",
             "parse": parse_spells_md,
             "generate": generate_spells_xml,
+        },
+        {
+            "name": "Traits (traits.xml — LdM subset)",
+            "md": "./tests/fixtures/test_traits.md",
+            "xml": "./tests/fixtures/test_traits_ok.xml",
+            "parse": parse_traits_md,
+            "generate": generate_trait_xml,
         },
     ]
 
