@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>ADEPTE NÉ DE LA FOSSE</name>
+    <type>CRÉATURE</type>
+    <level>3</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>HUMAIN</trait>
+      <trait>HUMANOÏDE</trait>
+      <trait>NÉPHILIM</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>chthonien</language>
+      <language>commun</language>
+    </languages>
+    <armorClass>17</armorClass>
+    <saves REF="+7" FOR="+5" WIL="+8"/>
+    <health>29</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>bâton</name>
+        <bonus>+6</bonus>
+        <traits>
+          <trait>deux mains 1d8</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="prepared" tradition="arcane" DD="21" attack="+11">
+      <rank rank="2">
+        <spells>
+          <spell>flammes ondoyantes, invisibilité</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special>
+        <name>Sorts innés divins</name>
+        <description>DD 17 ; **2**e *ténèbres*</description>
+      </special>
+      <special>
+        <name>Drain d’objet lié</name>
+        <description/>
+      </special>
+      <special type="activity" actions="0">
+        <name>Fréquence</name>
+        <description>une fois par jour� **Conditions**� L’adepte n’a pas encore agi pendant ce tour�</description>
+      </special>
+      <special>
+        <name>Prêtre combattant porteur de loi</name>
+        <description>Les mortels dont l’ascendance a été influencée par les archons sont appelés des porteurs de loi. Ils peuvent avoir un ancêtre mortel qui a combattu aux côtés des archons contre les forces du mal et de l’entropie, ou peuvent être issus de l’union d’un archon et d’un mortel. De nombreux porteurs de loi cherchent l’aventure pour apporter l’ordre au monde.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

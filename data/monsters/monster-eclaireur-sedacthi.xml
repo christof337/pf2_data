@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>ÉCLAIREUR SÉDACTHI</name>
+    <type>CRÉATURE</type>
+    <level>2</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>AMPHIBIE</trait>
+      <trait>HUMANOÏDE</trait>
+      <trait>SÉDACTHI</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+9</bonus>
+      <senses>
+        <sens>
+          <name>perception des ondes</name>
+          <precision>précis</precision>
+          <range>9 m</range>
+          <source>p� 360</source>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+9</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+7</bonus>
+      </skill>
+    </skills>
+    <armorClass>17</armorClass>
+    <saves REF="+10" FOR="+7" WIL="+7"/>
+    <health>30</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>lance +10, **Dégâts** 1d6+6 perforants **Corps à corps** 1 mâchoires +10, **Dégâts **1d4+4 perforants plus 1d4 de saignement persistant **Corps à corps** 1 griffes</name>
+        <bonus>+10</bonus>
+        <traits>
+          <trait>agile</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+4</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>lance</name>
+        <bonus>+10</bonus>
+        <traits>
+          <trait>jet 6 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+4</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Empressement frétillant</name>
+        <description/>
+      </special>
+      <special type="activity" actions="1">
+        <name>Fréquence</name>
+        <description>1 fois/round ;</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Festin partagé</name>
+        <description>Le sédacthi fait une Frappe de mâchoires� S’il touche sa cible, un allié de son choix peut, par une réac- tion, porter une Frappe de mâchoires contre la même cible� Si l’allié en question possède un bec ou une attaque similaire au lieu de mâchoires, il peut les utiliser à la place�</description>
+      </special>
+      <special>
+        <name>Maraudeur sédacthi</name>
+        <description>Les sédacthis au physique imposant assoient leur statut en prenant le contrôle de dangereuses créatures aquatiques, comme de grands requins blancs ou des murènes géantes.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>AVALANCHE ÉLÉMENTAIRE</name>
+    <type>CRÉATURE</type>
+    <level>11</level>
+    <creatureTraits>
+      <trait type="size">TRÈS GRANDE</trait>
+      <trait>ÉLÉMENTAIRE</trait>
+      <trait>TERRE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+20</bonus>
+      <senses>
+        <sens>
+          <name>perception des vibrations</name>
+          <precision>imprécis</precision>
+          <range>27 m</range>
+        </sens>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+24</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+14</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+7, **Dex **–1, **Con **+8, **Int **+0, **Sag **+3, **Cha **–1</description>
+      </special>
+      <special>
+        <name>Lié à la terre</name>
+        <description>Quand elle n’est pas en contact avec la terre ferme, l’avalanche élémentaire est ralentie 1 et ne peut utiliser ni réaction ni Piétinement�</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>32</armorClass>
+    <saves/>
+    <health>215</health>
+    <immunities>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>saignement</immunity>
+      <immunity>sommeil</immunity>
+    </immunities>
+    <reactiveAbilities>
+      <special type="reaction">
+        <name>Désagrégation</name>
+        <description>Comme le glissement de terrain vivant mais l’avalanche Creuse sur 6 m�</description>
+      </special>
+      <special>
+        <name>Pointes de pierre</name>
+        <traits>
+          <trait>aura</trait>
+          <trait>primordiale</trait>
+          <trait>terre</trait>
+        </traits>
+        <description>3 m� Comme le broyeur de pierre mais 2d8 dégâts perforants�</description>
+      </special>
+    </reactiveAbilities>
+    <speeds speedSpecial="glisse à travers la terre">
+      <speed>7</speed>
+      <speed>5 m</speed>
+      <speed type="burrow">7</speed>
+      <speed>5 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>poing</name>
+        <bonus>+24</bonus>
+        <traits>
+          <trait>allonge 6 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d12+11</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>rocher</name>
+        <bonus>+24</bonus>
+        <traits>
+          <trait>brutal</trait>
+          <trait>facteur de portée 24 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d12+7</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Glisse à travers la terre</name>
+        <description>Comme le molosse de tourbe�</description>
+      </special>
+      <special type="activity" actions="3">
+        <name>Piétinement</name>
+        <description>Grande ou plus petite, poing, DD 30 (p� 360)</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Roches écrasantes</name>
+        <description>L’avalanche élémentaire inflige 4d12 dégâts contondants à chaque créature à terre dans sa zone d’allonge (jet de Réflexes basique DD 30)�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

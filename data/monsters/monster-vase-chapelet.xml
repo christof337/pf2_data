@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>VASE CHAPELET</name>
+    <type>CRÉATURE</type>
+    <level>3</level>
+    <creatureTraits>
+      <trait type="size"/>
+    </creatureTraits>
+    <perception>
+      <bonus>+3</bonus>
+      <senses>
+        <sens>
+          <name>dénué de vision</name>
+        </sens>
+        <sens>
+          <name>perception du mouvement</name>
+          <range>18 m</range>
+          <source>précis</source>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+11</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+4, **Dex **–5, **Con **+5, **Int **–5, **Sag **+0, **Cha **–5</description>
+      </special>
+      <special>
+        <name>Perception du mouvement</name>
+        <description>Comme la vase des égouts�</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>10</armorClass>
+    <saves REF="+0" FOR="+12" WIL="+5"/>
+    <health>90</health>
+    <immunities>
+      <immunity>acide</immunity>
+      <immunity>coups critiques</immunity>
+      <immunity>inconscient</immunity>
+      <immunity>mental</immunity>
+      <immunity>précision</immunity>
+      <immunity>saignement</immunity>
+      <immunity>tranchants</immunity>
+      <immunity>visuel</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special>
+        <name>Scission</name>
+        <description>Chaque fois qu’une vase chapelet devrait subir des dégâts tranchants (si elle n’y était pas immunisée) et qu’il lui reste au moins 10 PV, elle se scinde en deux vases identiques avec chacune la moitié des points de vie qu’elle avait avant la scission� Une vase chapelet reste dans le même espace et l’autre apparaît dans un espace inoccupé adjacent� Si aucune case adjacente n’est inoccupée, déplacez les créatures et les objets plus petits pour libérer une case ou la scission est annulée, à la discrétion du MJ�</description>
+      </special>
+      <special>
+        <name>Vitesse</name>
+        <description>6 m</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>pseudopode +11, **Dégâts **1d8+4 contondants plus 1d6 acide</description>
+      </special>
+      <special>
+        <name>Acide faible</name>
+        <description>L’acide d’une vase chapelet n’inflige des dégâts qu’à la matière organique, pas aux métaux, à la pierre ou aux autres substances non organiques�</description>
+      </special>
+      <special>
+        <name>Tandem</name>
+        <description/>
+      </special>
+      <special type="activity" actions="2">
+        <name>Conditions</name>
+        <description>Une autre vase chapelet se trouve dans un rayon de 9 m� **</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

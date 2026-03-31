@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GARDE SQUELETTE</name>
+    <type>CRÉATURE</type>
+    <level>-1</level>
+    <creatureTraits>
+      <trait type="size"/>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+6</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+3</bonus>
+      </skill>
+    </skills>
+    <armorClass>16</armorClass>
+    <saves REF="+8" FOR="+2" WIL="+2"/>
+    <health>4</health>
+    <immunities>
+      <immunity>effets de mort</immunity>
+      <immunity>inconscient</immunity>
+      <immunity>maladie</immunity>
+      <immunity>mental</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>saignement</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>cimeterre</name>
+        <bonus>+6</bonus>
+        <traits>
+          <trait>balayage</trait>
+          <trait>percutant</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+2</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+6</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+2</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>arc court</name>
+        <bonus>+6</bonus>
+        <traits>
+          <trait>facteur de portée 18 m</trait>
+          <trait>mortel d10</trait>
+          <trait>rechargement 0</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Champion squelettique</name>
+        <description>Ces squelettes ont conservé la ruse qui était la leur de leur vivant.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

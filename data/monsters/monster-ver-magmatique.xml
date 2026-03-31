@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>VER MAGMATIQUE</name>
+    <type>CRÉATURE</type>
+    <level>18</level>
+    <creatureTraits>
+      <trait type="size">GIGANTESQUE</trait>
+      <trait>BÊTE</trait>
+      <trait>FEU</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+25</bonus>
+      <senses>
+        <sens>
+          <name>perception des vibrations</name>
+          <precision>imprécis</precision>
+          <range>30 m</range>
+        </sens>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <armorClass>40</armorClass>
+    <saves/>
+    <health>410</health>
+    <weaknesses>
+      <weakness>
+        <name>froid</name>
+        <value>15</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>12 m</speed>
+      <speed type="burrow">12 m</speed>
+      <speed type="swim">6 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+36</bonus>
+        <traits>
+          <trait>allonge 6 m</trait>
+          <trait>mortel 3d10</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d10+18</amount>
+            <damageType>perforants</damageType>
+          </damage>
+          <damage>
+            <amount>2d6</amount>
+            <damageType>de feu et Empoignade améliorée (p� 359)</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>dard</name>
+        <bonus>+36</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 6 m</trait>
+          <trait>feu</trait>
+          <trait>poison</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d12+18</amount>
+            <damageType>perforants</damageType>
+          </damage>
+          <damage>
+            <amount>2d6</amount>
+            <damageType>de feu et venin de ver magmatique</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>corps</name>
+        <bonus>+34</bonus>
+        <traits>
+          <trait>allonge 4,5 m</trait>
+          <trait>feu</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d10+16</amount>
+            <damageType>contondants</damageType>
+          </damage>
+          <damage>
+            <amount>2d6</amount>
+            <damageType>de feu</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Foreur de roche</name>
+        <description>Comme le ver des cavernes�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Gober</name>
+        <description>Très Grande, 3d10+10 contondants plus 2d6 de feu, Rupture 36 (p� 359)</description>
+      </special>
+      <special type="reaction">
+        <name>Gober rapidement</name>
+        <trigger>**Le ver Empoigne une créature ; **</trigger>
+        <effect>**Le ver magmatique utilise Gober�</effect>
+      </special>
+      <special type="activity" actions="2">
+        <name>Rosser</name>
+        <description>Comme le ver des cavernes�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Souffle ardent</name>
+        <traits>
+          <trait>feu</trait>
+          <trait>primordiale</trait>
+        </traits>
+        <description>� Le ver magmatique crache un jet de flammes dans un cône de 18 m, qui inflige 18d6 dégâts de feu à toutes les créatures dans la zone (jet de Réflexes basique DD 41)� Il ne peut plus utiliser ce pouvoir pendant 1d4 rounds�</description>
+      </special>
+      <special>
+        <name>Venin de ver magmatique</name>
+        <traits>
+          <trait>poison</trait>
+        </traits>
+        <description>; **Jet de sauvegarde** Vigueur DD 41 ; **Durée maximale** 6 rounds ; **Stade 1** 1d6 dégâts de poison et drainé 1 (1 round) ; **Stade 2** 2d6 dégâts de poison et drainé 1 (1 round) ; **Stade 3** 2d6 dégâts de poison et drainé 2 (1 round)</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>PHÉNIX</name>
+    <type>CRÉATURE</type>
+    <level>15</level>
+    <creatureTraits>
+      <trait type="size">GIGANTESQUE</trait>
+      <trait>BÊTE</trait>
+      <trait>FEU</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+30</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+27</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+31</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+27</bonus>
+      </skill>
+      <skill>
+        <name>Nature</name>
+        <bonus>+25</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+6" DEX="+0" CON="+0" INT="+0" WIS="+6" CHA="+6"/>
+    <armorClass>36</armorClass>
+    <saves REF="+31" FOR="+27" WIL="+28" saveSpecial="bonus de statut de +1 à tous les jets de sauvegarde contre la magie"/>
+    <health>300</health>
+    <weaknesses>
+      <weakness>
+        <name>froid</name>
+        <value>10</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>bec</name>
+        <bonus>+30</bonus>
+        <traits>
+          <trait>allonge 6 m</trait>
+          <trait>feu</trait>
+          <trait>finesse</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d12+9</amount>
+            <damageType>perforants</damageType>
+          </damage>
+          <damage>
+            <amount>3d8</amount>
+            <damageType>feu et 2d10 feu persistants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>serres</name>
+        <bonus>+30</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 6 m</trait>
+          <trait>feu</trait>
+          <trait>finesse</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+6</amount>
+            <damageType>perforants</damageType>
+          </damage>
+          <damage>
+            <amount>3d8</amount>
+            <damageType>feu et 2d10 feu persistants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>jet de flammes</name>
+        <bonus>+30</bonus>
+        <traits>
+          <trait>facteur de portée 12 m</trait>
+          <trait>feu</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>6d6</amount>
+            <damageType>feu</damageType>
+          </damage>
+          <damage>
+            <amount>2d10</amount>
+            <damageType>feu persistants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="primal" DD="39">
+      <rank rank="8">
+        <spells>
+          <spell spellSpecial="à volonté">dissipation de la magie (×3), guérison (×3), immolation divine, lumière éternelle , mur de feu (×3), purification des afflictions</spell>
+        </spells>
+      </rank>
+      <rank rank="7">
+        <spells>
+          <spell spellSpecial="à volonté">dissipation de la magie</spell>
+        </spells>
+      </rank>
+      <rank rank="6">
+        <spells>
+          <spell>purification des afflic‑ tions (×3)</spell>
+        </spells>
+      </rank>
+      <rank rank="8" constant="TRUE">
+        <spells>
+          <spell>détection de la magie</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Vol enflammé</name>
+        <traits>
+          <trait>feu</trait>
+          <trait>primordiale</trait>
+        </traits>
+        <description>� Le phénix s’embrase de flammes surchauffées et Vole jusqu’à sa Vitesse maximale� Il inflige 6d6 dégâts de feu à toutes les créatures situées dans un rayon de 6 m autour de toute case dans laquelle il se déplace (jet de Réflexes basique DD 37)�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

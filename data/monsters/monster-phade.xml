@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>PHADE</name>
+    <type>CRÉATURE</type>
+    <level>7</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>AIR</trait>
+      <trait>ÉLÉMENTAIRE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+16</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+18</bonus>
+      </skill>
+      <skill>
+        <name>Nature</name>
+        <bonus>+15</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+15</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+3" DEX="+6" CON="+3" INT="+2" WIS="+2" CHA="+0"/>
+    <armorClass>26</armorClass>
+    <saves REF="+18" FOR="+14" WIL="+11"/>
+    <health>70</health>
+    <immunities>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>saignement</immunity>
+      <immunity>sommeil</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>poing</name>
+        <bonus>+18</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d10+5</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Attaque sournoise</name>
+        <description>Le phade inflige 2d6 dégâts de précision supplémentaires aux créatures prises par surprise�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Son étouffé</name>
+        <traits>
+          <trait>air</trait>
+          <trait>primordiale</trait>
+        </traits>
+        <description>Le phade calme l’air dans une émanation de 9 m jusqu’au début de son prochain tour, réduisant tous les sons à l’état de murmures ne pouvant pas être entendus hors de l’émanation� Ceci n’empêche pas de lancer des sorts, mais un phade tente de contrer (*Livre des joueurs* p� 431) tout effet audible ou de son originaire de la zone avec un modificateur de contre de +17� Si la tentative de contre échoue, Son étouffé prend fin immédiatement�</description>
+      </special>
+      <special>
+        <name>Ouragan élémentaire</name>
+        <description>Les ouragans élémentaires personnifient la violence des tempêtes déchaînées.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>CHASSEUR KHOLO</name>
+    <type>CRÉATURE</type>
+    <level>2</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>HUMANOÏDE</trait>
+      <trait>KHOLO</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+7</bonus>
+      <senses>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages>
+      <language>commun</language>
+      <language>kholo</language>
+    </languages>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+4</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+5</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+4, **Dex **+3, **Con **+2, **Int **−1, **Sag**+1, **Cha **+0</description>
+      </special>
+      <special>
+        <name>Objets</name>
+        <description>arc court (20 flèches), armure de cuir, hache d’armes</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>18</armorClass>
+    <saves REF="+7" FOR="+8" WIL="+7"/>
+    <health>29</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>hache d’armes</name>
+        <bonus>+10</bonus>
+        <traits>
+          <trait>balayage</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8+4</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+10</bonus>
+        <traits>
+          <trait>agile</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8+2</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>arc court</name>
+        <bonus>+10</bonus>
+        <traits>
+          <trait>mortel d10</trait>
+          <trait>facteur de portée 18 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Attaque en meute</name>
+        <description>Un chasseur kholo inflige 1d4 dégâts supplé- mentaires à toute créature à portée d’au moins deux alliés du chasseur�</description>
+      </special>
+      <special>
+        <name>Tout terrain</name>
+        <description>Un kholo ignore la première case de terrain diffi- cile dans laquelle il se déplace à chaque action Faire un pas ou Marcher rapidement�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

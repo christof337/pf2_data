@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>DRAGON DES PRÉDICTIONS VÉNÉRABLE</name>
+    <type>CRÉATURE</type>
+    <level>16</level>
+    <creatureTraits>
+      <trait type="size">TRÈS GRANDE</trait>
+      <trait>DRAGON</trait>
+      <trait>OCCULTE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>aklo</language>
+      <language>commun</language>
+      <language>draconique</language>
+      <language>féerique</language>
+      <language>jotun</language>
+    </languages>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+28</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+30</bonus>
+      </skill>
+      <skill>
+        <name>Connaissances (n’importe quelle sous-ca- tégorie)</name>
+        <bonus>+31</bonus>
+      </skill>
+      <skill>
+        <name>Connaissances sur la voyance</name>
+        <bonus>+33</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+29</bonus>
+      </skill>
+      <skill>
+        <name>Occultisme</name>
+        <bonus>+33</bonus>
+      </skill>
+      <skill>
+        <name>Société</name>
+        <bonus>+31</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+8" DEX="+6" CON="+7" INT="+9" WIS="+7" CHA="+5"/>
+    <armorClass>38</armorClass>
+    <saves REF="+28" FOR="+27" WIL="+29" saveSpecial="bonus de statut de +2 à tous les jets de sauvegarde contre la magie occulte"/>
+    <health>280</health>
+    <immunities>
+      <immunity>condamné</immunity>
+      <immunity>confus</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>sommeil</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+30</bonus>
+        <traits>
+          <trait>allonge 4,5 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d8+14</amount>
+            <damageType>perforants</damageType>
+          </damage>
+          <damage>
+            <amount>1d8</amount>
+            <damageType>mentaux</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+30</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 3 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d6+14</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+          <damage>
+            <amount>1d8</amount>
+            <damageType>mentaux</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>queue</name>
+        <bonus>+28</bonus>
+        <traits>
+          <trait>allonge 6 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d8+14</amount>
+            <damageType>conton- dants</damageType>
+          </damage>
+          <damage>
+            <amount>1d8</amount>
+            <damageType>mentaux</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>aile +28 (agile, allonge 4,5 m, magique) ; **Dégâts **2d8+14 tranchants plus 1d8 mentaux</description>
+      </special>
+      <special>
+        <name>Sorts innés occultes</name>
+        <description>* *DD 39 ; **8**e* rétrocognition *; **7**e* cible verrouillée * (x2), *lien mental *(à volonté),* mauvais augure *(à volonté) ; **Tours de magie (8**e**) ***assistance divine*</description>
+      </special>
+      <special>
+        <name>Ailes prophétiques</name>
+        <description>Comme le jeune dragon des prédictions, mais le sort *augure *est de rang 8� De plus, une créature peut choisir des prédire des événements se déroulant jusqu’à un an dans le futur� Le dragon peut voir des événements un an à l’avance dans ses propres ailes seulement une fois par jour�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Frénésie draconique</name>
+        <description>Comme le jeune dragon des prédictions�</description>
+      </special>
+      <special>
+        <name>Glas du destin</name>
+        <description>Les attaques du dragon rapprochent un peu plus ses cibles de leur mort� Lorsque le dragon obtient un coup critique avec une Frappe ou lorsqu’une créature obtient un échec critique contre le Souffle du destin du dragon, la cible devient condam- née 1 ou augmente de 1 la valeur de cet état si elle l’était déjà�</description>
+      </special>
+      <special>
+        <name>Impulsion draconique</name>
+        <description>Comme le jeune dragon des prédictions�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Souffle du destin</name>
+        <traits>
+          <trait>mental</trait>
+          <trait>occulte</trait>
+        </traits>
+        <description>Comme le jeune dra- gon des prédictions, mais 15d6 dégâts mentaux, cône de 12 m et DD 39�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Voyageur des lignes temporelles</name>
+        <traits>
+          <trait>occulte</trait>
+        </traits>
+        <description>Comme le dragon des prédictions adulte�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

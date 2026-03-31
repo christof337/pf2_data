@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>TARENTULE GÉANTE</name>
+    <type>CRÉATURE</type>
+    <level>6</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <armorClass>21</armorClass>
+    <saves/>
+    <health>135</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>crocs +17, **Dégâts **2d8+8 perforants plus venin de tarentule géante **Corps à corps** 1 patte</name>
+        <bonus>+17</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d12+8</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Déluge de poils</name>
+        <description>La tarentule déploie ses pattes en projetant des poils acérés dans un cône de 4,5 m� Ils infligent 4d6 dégâts perforants (jet de Réflexes basique DD 25)�</description>
+      </special>
+      <special>
+        <name>Venin de tarentule géante</name>
+        <traits>
+          <trait>poison</trait>
+        </traits>
+        <description>; **Jet de sauvegarde** Vigueur DD 2 ; **Durée maximale** 8 rounds ; **Stade 1** 1d10 dégâts de poison (1 round) ; **Stade 2** 1d12 dégâts de poison, mala- droit 1 et pris par surprise (1 round) ; **Stade 3** 2d6 dégâts de poison, maladroit 2 et pris par surprise (1 round) ; **Stade 4** 2d6 dégâts de poison, paralysé (1 round)</description>
+      </special>
+      <special>
+        <name>Araignée goliath</name>
+        <description>Les araignées goliaths vivent dans les jungles les plus épaisses où elles tissent des toiles aussi grandes que des temples et dévorent des proies aussi grosses que des hippopotames.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

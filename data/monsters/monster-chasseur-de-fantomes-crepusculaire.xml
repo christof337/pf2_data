@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>CHASSEUR DE FANTÔMES CRÉPUSCULAIRE</name>
+    <type>CRÉATURE</type>
+    <level>4</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>CRÉPUSCULAIRE</trait>
+      <trait>HUMAIN</trait>
+      <trait>HUMANOÏDE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+10</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+12</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+6</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+6</bonus>
+      </skill>
+      <skill>
+        <name>Nature</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+8</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+2, **Dex **+4, **Con **+1, **Int **+0, **Sag **+2, **Cha **+0</description>
+      </special>
+      <special>
+        <name>Objets</name>
+        <description>arc long composite (20 flèches), armure de cuir, hachette (2)</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>21</armorClass>
+    <saves REF="+12" FOR="+9" WIL="+10" saveSpecial="bonus de statut de +1 à tous les jets de sauvegarde contre les effets de mort"/>
+    <health>56</health>
+    <immunities>
+      <immunity>effets qui transformeraient son corps ou son âme en mort-vivant</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>hachette</name>
+        <bonus>+12</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>balayage</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+5</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>arc long composite</name>
+        <bonus>+14</bonus>
+        <traits>
+          <trait>facteur de portée 30 m</trait>
+          <trait>mortel 1d10</trait>
+          <trait>propulsif</trait>
+          <trait>rechar-
+ gement 0</trait>
+          <trait>volée 9 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8+4</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>hachette</name>
+        <bonus>+14</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>balayage</trait>
+          <trait>jet 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+5</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Chasseur d’esprit</name>
+        <description>Le crépusculaire désigne une unique créature qu’il peut voir comme sa proie� Le crépusculaire bénéficie d’un bonus de circonstances de +2 aux tests de Duperie, d’Intimidation et de Discrétion contre sa proie, ainsi qu’à tout test pour Se souvenir à son sujet, et il inflige 2 points de dégâts d’esprit supplémentaires à toutes les Frappes d’arme contre sa proie� Ces effets durent jusqu’à ce que le crépusculaire utilise à nouveau Chasseur d’esprit�</description>
+      </special>
+      <special>
+        <name>Chasseur de fantômes</name>
+        <description>Les armes du crépusculaire bénéficient de la propriété d’une rune *spectrale* pour les attaques contre des morts-vivants intangibles�</description>
+      </special>
+      <special>
+        <name>Tir spirituel</name>
+        <description/>
+      </special>
+      <special type="activity" actions="1">
+        <name>Fréquence</name>
+        <description>une fois par round� **Conditions.** Le crépusculaire a désigné une créature comme sa proie en utilisant Chasseur d’esprit�</description>
+      </special>
+      <special>
+        <name>Néphilim</name>
+        <description>Les néphilims sont des héritiers des plans avec un lien aux plans de la Sphère exté‑ rieure. Certains ont de toute évidence un rapport avec des royaumes comme le Paradis ou les Enfers, tandis que d’autres sont des amalgames énigmatiques de traits métaphysiques.</description>
+      </special>
+      <special>
+        <name>Adepte né de la fosse</name>
+        <description>L’espèce la plus commune est celle des nés de la fosse, dont la lignée mortelle est infestée par la corruption démoniaque. Il y a autant d’héritiers des plans qu’il y a de plans d’existence� Et même s’ils partagent les mêmes racines planaires, il existe des différences significatives entre les héritiers en fonction de la nature exacte de leurs ancêtres extraplanaires�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>CHIPEUR TENGU</name>
+    <type>CRÉATURE</type>
+    <level>2</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>HUMANOÏDE</trait>
+      <trait>TENGU</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <armorClass>19</armorClass>
+    <saves REF="+10" FOR="+7" WIL="+4"/>
+    <health>27</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>wakizashi</name>
+        <bonus>+10</bonus>
+        <traits>
+          <trait>désarmer</trait>
+          <trait>finesse</trait>
+          <trait>mortel d8</trait>
+          <trait>polyvalent P</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+2</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>bec</name>
+        <bonus>+10</bonus>
+        <traits>
+          <trait>finesse</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+2</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>arc court</name>
+        <bonus>+10</bonus>
+        <traits>
+          <trait>facteur de portée 18 m</trait>
+          <trait>mortel d10</trait>
+          <trait>rechargement
+                                      0</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Agresseur surprise</name>
+        <description>Au premier round de combat, les créatures qui n’ont pas encore agi sont prises par surprise par le tengu�</description>
+      </special>
+      <special>
+        <name>Attaque sournoise</name>
+        <description>Le tengu inflige 1d6 dégâts de précision supplémentaires aux créatures prises par surprise�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Poussière d’éventail</name>
+        <traits>
+          <trait>air</trait>
+          <trait>divine</trait>
+        </traits>
+        <description>; **Fréquence** 1 fois toutes les 10 min ;</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

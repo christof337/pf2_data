@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>BALAI ANIMÉ</name>
+    <type>CRÉATURE</type>
+    <level>-1</level>
+    <creatureTraits>
+      <trait type="size"/>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <interactionAbilities>
+      <special>
+        <name>Compétence</name>
+        <description>Athlétisme +5</description>
+      </special>
+      <special>
+        <name>For</name>
+        <description>+0, **Dex **+1, **Con **+0, **Int **–5, **Sag **+0, **Cha **–5</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>15</armorClass>
+    <saves REF="+6" FOR="+3" WIL="+3"/>
+    <health>6</health>
+    <immunities>
+      <immunity>attaques non létales</immunity>
+      <immunity>condamné</immunity>
+      <immunity>drainé</immunity>
+      <immunity>effets de mort</immunity>
+      <immunity>esprit</immunity>
+      <immunity>fatigué</immunity>
+      <immunity>guérison</immunity>
+      <immunity>inconscient</immunity>
+      <immunity>malade</immunity>
+      <immunity>maladie</immunity>
+      <immunity>mental</immunity>
+      <immunity>néant</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>saigne- ment</immunity>
+      <immunity>vitalité</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>poils</name>
+        <bonus>+6</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Poussière</name>
+        <description>Une créature touchée par les poils du balai animé doit réussir un jet de Vigueur DD 15 ou se mettre à tousser et perdre sa prochaine action� Même si elle est affectée plu- sieurs fois par poussière, la créature n’utilise qu’une seule action pour tousser et évacuer la poussière de ses voies respiratoires� Une créature qui ne respire pas est immunisée contre cet effet�</description>
+      </special>
+      <special>
+        <name>Armure animée</name>
+        <description>Les armures animées servent aussi bien de gardiens que de partenaires d’entraînement dans les académies de combat haut de gamme qui peuvent se permettre ce genre d’extravagances. Une vieille armure de guerrier qui a subi trop de dégâts pour offrir une protection adéquate peut avoir une nouvelle vie sous forme d’armure animée. On rencontre généralement ces créatures artificielles dans des laboratoires de magiciens ou de vieux donjons.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

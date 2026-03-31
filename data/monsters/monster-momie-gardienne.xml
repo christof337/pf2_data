@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>MOMIE GARDIENNE</name>
+    <type>CRÉATURE</type>
+    <level>6</level>
+    <creatureTraits>
+      <trait type="size"/>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+15</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+11</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+4" DEX="+0" CON="+2" INT="+0" WIS="+4" CHA="+2"/>
+    <armorClass>23</armorClass>
+    <saves REF="+10" FOR="+14" WIL="+16"/>
+    <health>125</health>
+    <immunities>
+      <immunity>effets de mort</immunity>
+      <immunity>inconscient</immunity>
+      <immunity>maladie</immunity>
+      <immunity>paralysie</immunity>
+      <immunity>poison</immunity>
+      <immunity>saignement</immunity>
+    </immunities>
+    <weaknesses>
+      <weakness>
+        <name>alchimique</name>
+        <value>5</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>poing</name>
+        <bonus>+16</bonus>
+        <traits>
+          <trait>agile</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d10+7</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Douleur suffocante</name>
+        <traits>
+          <trait>divin</trait>
+          <trait>illusion</trait>
+          <trait>mental</trait>
+          <trait>néant</trait>
+        </traits>
+        <description>**Conditions.** La dernière action de la momie était une Frappe de poing réussie�</description>
+      </special>
+      <special>
+        <name>DANS L’ÉTERNITÉ</name>
+        <description>Les momies mortes-vivantes sont une caricature de la préservation des corps après la mort, emprisonnant les âmes dans une enveloppe statique plutôt que de leur permettre d’entrer dans le Grand Au-Delà� Les fidèles de Pharasma les considèrent comme un affront à leur déesse à bien des égards, certains refusant même d’accomplir les rites traditionnels que leur déesse soutient�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

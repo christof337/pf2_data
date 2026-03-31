@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>DRAKE DU FROID</name>
+    <type>CRÉATURE</type>
+    <level>7</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>DRAGON</trait>
+      <trait>FROID</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+14</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>9 m</range>
+        </sens>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+        <sens>
+          <name>vision malgré la neige</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+15</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+17</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+15</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+14</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+6, **Dex **+2, **Con **+4, **Int **–1, **Sag **+3, **Cha **+1</description>
+      </special>
+      <special>
+        <name>Vision malgré la neige</name>
+        <description>La neige ne gêne pas la vision des drakes du froid ; ils ignorent l’état masqué octroyé par la neige�</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>25</armorClass>
+    <saves REF="+15" FOR="+17" WIL="+14"/>
+    <health>115</health>
+    <immunities>
+      <immunity>froid</immunity>
+      <immunity>paralysie</immunity>
+      <immunity>sommeil</immunity>
+    </immunities>
+    <weaknesses>
+      <weakness>
+        <name>feu</name>
+        <value>10</value>
+      </weakness>
+    </weaknesses>
+    <reactiveAbilities>
+      <special type="reaction">
+        <name>Frappe punitive</name>
+        <trigger>Une créature à portée de la queue du drake du froid réussit à lui infliger des dégâts avec une Frappe� **</trigger>
+        <effect>**Le drake du froid tente d’effectuer une Frappe avec sa queue� Si la Frappe touche, elle inflige 1d6 dégâts supplémentaires�</effect>
+      </special>
+    </reactiveAbilities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>crocs +17, **Dégâts** 2d12+8 perforants plus 1d6 de froid **Corps à corps** 1 queue</name>
+        <bonus>+17</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d10+8</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Frénésie draconique</name>
+        <description>Le drake du froid effectue deux Frappes de crocs et une Frappe de queue dans l’ordre qu’il veut�</description>
+      </special>
+      <special>
+        <name>Marche sur la glace</name>
+        <description>Un drake du froid n’est pas ralenti par un terrain rendu difficile par la neige ou la glace� Il n’a pas non plus à faire de tests d’Acrobaties pour éviter de tomber en glissant�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Souffle de brume glacée</name>
+        <traits>
+          <trait>froid</trait>
+          <trait>primordiale</trait>
+        </traits>
+        <description>Le drake de froid crache une sphère de liquide qui traverse une distance maximale de 18 m avant de former une explosion de brume glacée de 6 m à l’impact� Les créatures dans la zone d’effet subissent 8d6 dégâts de froid (jet de Réflexes basique DD 25)� Le drake du froid ne peut plus utiliser son Souffle de brume glacée pendant 1d6 rounds� Dans ce laps de temps, la brume recouvre toute la surface de la zone d’une couche de verglas, créant ainsi un terrain difficile�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Vitesse augmentée</name>
+        <traits>
+          <trait>déplacement</trait>
+        </traits>
+        <description>**Fréquence** trois fois par jour�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

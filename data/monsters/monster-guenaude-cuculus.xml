@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GUENAUDE CUCULUS</name>
+    <type>CRÉATURE</type>
+    <level>9</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>GUENAUDE</trait>
+      <trait>HUMANOÏDE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+18</bonus>
+      <senses>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <armorClass>28</armorClass>
+    <saves REF="+19" FOR="+16" WIL="+18" saveSpecial="bonus de statut +1 aux jets de sauvegarde contre la magie"/>
+    <health>170</health>
+    <weaknesses>
+      <weakness>
+        <name>fer froid</name>
+        <value>10</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+20</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d10+8</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>d’esprit</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="occult" DD="29">
+      <rank rank="9">
+        <spells>
+          <spell>enfermer l’âme (à volonté</spell>
+        </spells>
+      </rank>
+      <rank rank="5">
+        <spells>
+          <spell>cau‑ chemar, mirage, objet illusoire, potentiel onirique, scène illusoire, suggestion subconsciente</spell>
+        </spells>
+      </rank>
+      <rank rank="4">
+        <spells>
+          <spell>clairaudience, clairvoyance, poigne acide (×3), vol</spell>
+        </spells>
+      </rank>
+      <rank rank="3">
+        <spells>
+          <spell spellSpecial="à volonté">message onirique , som‑ meil</spell>
+        </spells>
+      </rank>
+      <rank rank="2">
+        <spells>
+          <spell spellSpecial="à volonté">invisibilité</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special>
+        <name>Rituel</name>
+        <description>DD 28 ; **5**e *animation d’objet*</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Changement de forme</name>
+        <traits>
+          <trait>concentration</trait>
+          <trait>métamorphose</trait>
+          <trait>occulte</trait>
+        </traits>
+        <description>� La guenaude cuculus peut prendre l’apparence de n’importe quelle femme humanoïde de taille Moyenne (p� 358)� Cela ne modifie pas sa Vitesse ni ses bonus à l’attaque et aux dégâts de ses Frappes, mais cela peut modifier le type de dégâts qu’elles infligent (généralement en dégâts contondants)�</description>
+      </special>
+      <special>
+        <name>Antre de la cuculus</name>
+        <description>Une guenaude cuculus est intrinsèquement liée à une dimension de poche qui lui sert de domaine� L’antre est un espace extradimensionnel de 12 m de large et de long, et 9 m de haut� Il contient la nourriture, les bâtisses, les paysages et les objets ordinaires que la guenaude cuculus désire, mais tout ce qui est retiré de l’antre de la cuculus se dissout instantanément dans le néant� Pour entrer dans le plan ou en sortir, la guenaude cuculus doit créer une porte dans le monde physique par une action unique dotée des traits concentration et manipulation� La porte est invisible par défaut, même si la guenaude cuculus peut désigner une créature pour qu’elle la perçoive normalement� La guenaude cuculus peut Révoquer cette porte de la réalité mais uniquement si elle (et aucune autre créature) est seule à l’intérieur de son antre�</description>
+      </special>
+      <special>
+        <name>Engagement de l’âme</name>
+        <traits>
+          <trait>occulte</trait>
+        </traits>
+        <description>; **Conditions.** La guenaude cuculus peut lancer *enfermer l’âme* à volonté, mais uniquement pour cibler une créature qui a accepté de rester pour toujours à ses côtés� Elle le fait généralement dès que l’accord est conclu mais elle peut attendre pour avoir plus de poids dans une situation donnée� Elle place le plus souvent l’âme dans une créature artificielle, généralement une poupée des âmes (p� 273) si elle souhaite un compagnon, ou une créature artificielle plus puissante si elle souhaite un gardien�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

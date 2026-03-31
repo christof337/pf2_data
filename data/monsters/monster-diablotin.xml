@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>DIABLOTIN</name>
+    <type>CRÉATURE</type>
+    <level>1</level>
+    <creatureTraits>
+      <trait type="size">TRÈS PETITE</trait>
+      <trait>FIÉLON</trait>
+      <trait>IMPIE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+7</bonus>
+      <senses>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Arcanes</name>
+        <bonus>+6</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+5</bonus>
+      </skill>
+    </skills>
+    <armorClass>17</armorClass>
+    <saves REF="+9" FOR="+5" WIL="+7"/>
+    <health>15</health>
+    <weaknesses>
+      <weakness>
+        <name>saint</name>
+        <value>3</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>dard</name>
+        <bonus>+9</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 0 m</trait>
+          <trait>finesse</trait>
+          <trait>impie</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages/>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="divine" DD="17">
+      <rank rank="4">
+        <spells>
+          <spell>lire les présages</spell>
+        </spells>
+      </rank>
+      <rank rank="2">
+        <spells>
+          <spell>invisibilité (à volonté</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Changement de forme</name>
+        <traits>
+          <trait>concentration</trait>
+          <trait>divine</trait>
+          <trait>métamorphose</trait>
+        </traits>
+        <description>� Le diablotin peut prendre l’apparence de n’importe quel animal de taille Moyenne ou plus petit (p� 358)� Quand il est métamorphosé, le diablotin perd ses sens normaux, ses sorts innés et ses actions spéciales, mais ses statistiques restent inchangées et il peut toujours parler et utiliser la télépathie� Le diablotin gagne également tous les sens spéciaux et toutes les Vitesses de l’animal� Cela ne change pas les modificateurs à l’attaque et aux dégâts de ses Frappes mais peut changer le type de dégâts que ses Frappes infligent (en fonction des types d’attaque de l’animal) et l’empêche d’exposer des créatures au venin de diablotin�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Guérison fiélone</name>
+        <description>(concentration, divine, guérison, vitalité) ; **Fréquence ** 1 fois/ round ;</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Tentation fiélone</name>
+        <description>(concentration, divine, fortune, impie) ; **Fréquence **1 fois/jour ; **</description>
+      </special>
+      <special>
+        <name>Venin de diablotin</name>
+        <traits>
+          <trait>poison</trait>
+        </traits>
+        <description>; **Jet de sauvegarde** Vigueur DD 16 ; **Durée maximale** 6 rounds ; **Stade 1** 1d6 poison et maladroit 1 (1 round) ; **Stade 2** 1d6 poison, maladroit 1 et ralenti 1 (1 round)</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

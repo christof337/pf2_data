@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>MÉDUSE</name>
+    <type>CRÉATURE</type>
+    <level>7</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>HUMANOÏDE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+14</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+16</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+16</bonus>
+      </skill>
+    </skills>
+    <armorClass>25</armorClass>
+    <saves REF="+16" FOR="+15" WIL="+14"/>
+    <health>105</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>épée courte</name>
+        <bonus>+18</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+          <trait>polyvalent T</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+8</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>crochets de serpent</name>
+        <bonus>+16</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+8</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>*arc court composite*</name>
+        <bonus>+19</bonus>
+        <traits>
+          <trait>facteur de portée 18 m</trait>
+          <trait>magique</trait>
+          <trait>mortel d10</trait>
+          <trait>propulsif</trait>
+          <trait>rechargement 0</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+7</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Focaliser le regard</name>
+        <traits>
+          <trait>arcanique</trait>
+          <trait>concentration</trait>
+          <trait>mise hors de combat</trait>
+          <trait>visuel</trait>
+        </traits>
+        <description>La méduse fixe son regard sur une créature située dans son champ de vision et dans un rayon de 9 m� Cette créature doit faire immédiatement un jet de Vigueur contre le regard pétrifiant de la méduse� Si la créature était déjà ralentie par ce pouvoir avant de faire son jet, elle est pétrifiée de manière permanente si elle le rate� Une fois qu’elle a fait son jet de sauvegarde, elle est temporairement immunisée jusqu’au début du prochain tour de la méduse�</description>
+      </special>
+      <special>
+        <name>Venin de serpent</name>
+        <traits>
+          <trait>poison</trait>
+        </traits>
+        <description>**Jet de sauvegarde** Vigueur DD 25 ; **Durée maximale** 6 rounds ; **Stade 1 **1d6 dégâts de poison et affaibli 1 (1 round) ; **Stade 2** 2d6 dégâts de poison et affaibli 2 (1 round)</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

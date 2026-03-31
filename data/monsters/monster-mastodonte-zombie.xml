@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>MASTODONTE ZOMBIE</name>
+    <type>CRÉATURE</type>
+    <level>6</level>
+    <creatureTraits>
+      <trait type="size"/>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <interactionAbilities>
+      <special>
+        <name>Compétence</name>
+        <description>Athlétisme +18</description>
+      </special>
+      <special>
+        <name>For</name>
+        <description>+7, **Dex **–1, **Con **+4, **Int **–5, **Sag **+0, **Cha **–2</description>
+      </special>
+      <special>
+        <name>Lent</name>
+        <description>Comme un titubeur zombie�</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>21</armorClass>
+    <saves/>
+    <health>160</health>
+    <immunities>
+      <immunity>effets de mort</immunity>
+      <immunity>inconscient</immunity>
+      <immunity>maladie</immunity>
+      <immunity>mental</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>saignement</immunity>
+    </immunities>
+    <weaknesses>
+      <weakness>
+        <name>tranchants</name>
+        <value>10</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>quartier de viande</name>
+        <bonus>+17</bonus>
+        <traits>
+          <trait>allonge 4,5 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d10+9</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>cadavre</name>
+        <bonus>+17</bonus>
+        <traits>
+          <trait>brutal</trait>
+          <trait>facteur de portée 9 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+9</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Coup élargi</name>
+        <description>Le mastodonte zombie fait deux Frappes de quartier de viande contre des cibles différentes à sa portée�</description>
+      </special>
+      <special>
+        <name>Lancer de cadavres</name>
+        <description>Un mastodonte zombie peut jeter des cadavres de taille Moyenne ou inférieure sur ses adversaires� Il peut également jeter d’autres zombies de taille Moyenne ou inférieure ; ces derniers subissent alors autant de dégâts que les cibles contre lesquelles ils sont lancés� Si un zombie survit au lancer, il se trouve à terre�</description>
+      </special>
+      <special>
+        <name>REVENUS D’ENTRE LES MORTS</name>
+        <description>Les zombies sont souvent le fruit de rituels nécromantiques malsains� Ces morts-vivants sont généralement utilisés comme chair à canon afin d’affaiblir les défenses d’ennemis et les forcer à utiliser leurs ressources avant que des morts-vivants plus puissants n’arrivent pour infliger le coup de grâce� Les zombies ne peuvent pas parler ni vraiment penser par eux-mêmes, mais ils peuvent suivre les ordres d’alliés morts-vivants ou de puissants nécromanciens�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

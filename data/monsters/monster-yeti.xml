@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>YÉTI</name>
+    <type>CRÉATURE</type>
+    <level>5</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>HUMANOÏDE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+15</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>9 m</range>
+        </sens>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+14</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+12</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+11</bonus>
+      </skill>
+    </skills>
+    <armorClass>21</armorClass>
+    <saves REF="+11" FOR="+15" WIL="+13" saveSpecial="bonus de statut de +4 à tous les jets de sauvegarde contre la terreur et les rêves"/>
+    <health>115</health>
+    <weaknesses>
+      <weakness>
+        <name>feu</name>
+        <value>10</value>
+      </weakness>
+    </weaknesses>
+    <speeds speedSpecial="passage arctique">
+      <speed>10</speed>
+      <speed>5 m</speed>
+      <speed type="climb">6 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>griffes +15, **Dégâts** 2d10+5 tranchants</description>
+      </special>
+      <special type="activity" actions="0">
+        <name>Apparition effroyable</name>
+        <trigger>Lors du premier round de com- bat, le yéti réussit à frapper une créature alors qu’il était caché de cette dernière au début du combat ;</trigger>
+        <effect>Chaque ennemi qui assiste à cette attaque dans un rayon de 9 m (y compris la cible de l’attaque) doit faire un jet de Volonté DD 23� Sur un échec, la créature est effrayée 2 ; sur un échec critique, elle est effrayée 4�</effect>
+      </special>
+      <special type="activity" actions="1">
+        <name>Éventration</name>
+        <description>griffes (p� 359)</description>
+      </special>
+      <special>
+        <name>Passage arctique</name>
+        <description>Un yéti ignore les terrains rendus difficiles par la glace ou la neige�</description>
+      </special>
+      <special>
+        <name>L’ARTISANAT YÉTI</name>
+        <description>Les yétis exilés par leurs clans n’ont que faire des trésors et abandonnent aux éléments l’équipement de leurs victimes� Cependant, ceux qui vivent encore avec leurs clans façonnent de superbes sculptures de pierre, dont certaines sont des talismans protecteurs d’une rare beauté� [[PAGE 357]]</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

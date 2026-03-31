@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>POUPÉE DES ÂMES</name>
+    <type>CRÉATURE</type>
+    <level>2</level>
+    <creatureTraits>
+      <trait type="size">TRÈS PETITE</trait>
+      <trait>ÂME</trait>
+      <trait>CRÉATURE</trait>
+      <trait>ARTIFICIELLE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <interactionAbilities>
+      <special>
+        <name>Langue</name>
+        <description>une langue parlée par son créateur (généralement le commun)</description>
+      </special>
+      <special>
+        <name>Compétence</name>
+        <description>Acrobaties +8, Discrétion +8, Occultisme +4</description>
+      </special>
+      <special>
+        <name>For</name>
+        <description>–2, **Dex **+4, **Con **+3, **Int **+0, **Sag **+2, **Cha **+0</description>
+      </special>
+      <special>
+        <name>Fragments de personnalité</name>
+        <description>Une poupée des âmes partage des fragments de personnalité de la personne à qui appartenait l’âme, mais aucun de ses souvenirs� Cela implique que la poupée des âmes sera proche d’un fort trait de personnalité de l’âme du donneur (voir encadré)� En raison de ce fragment d’âme, une poupée des âmes n’est pas immunisée contre le trait esprit comme la plupart des créatures artificielles�</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>17</armorClass>
+    <saves REF="+10" FOR="+7" WIL="+6"/>
+    <health>23</health>
+    <immunities>
+      <immunity>attaques non létales</immunity>
+      <immunity>condamné</immunity>
+      <immunity>drainé</immunity>
+      <immunity>effets de mort</immunity>
+      <immunity>fatigué</immunity>
+      <immunity>guérison</immunity>
+      <immunity>inconscient</immunity>
+      <immunity>malade</immunity>
+      <immunity>maladie</immunity>
+      <immunity>néant</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>saignement</immunity>
+      <immunity>vitalité</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>poing</name>
+        <bonus>+10</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 0 m</trait>
+          <trait>finesse</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+2</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="occult" DD="18" attack="+10">
+      <rank rank="3">
+        <spells>
+          <spell>lévitation</spell>
+        </spells>
+      </rank>
+      <rank rank="2">
+        <spells>
+          <spell>un sort basé sur la personnalité de l’âme du donneur (voir encadré)</spell>
+        </spells>
+      </rank>
+    </spellList>
+  </monster>
+</monsters>

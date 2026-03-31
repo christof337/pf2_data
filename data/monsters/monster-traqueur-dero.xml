@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>TRAQUEUR DERO</name>
+    <type>CRÉATURE</type>
+    <level>2</level>
+    <creatureTraits>
+      <trait type="size">PETITE</trait>
+      <trait>DERO</trait>
+      <trait>HUMANOÏDE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+5</bonus>
+      <senses>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages>
+      <language>aklo</language>
+      <language>sakvroth</language>
+    </languages>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Larcin</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Médecine</name>
+        <bonus>+5</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+2" DEX="+0" CON="+0" INT="+0" WIS="+0" CHA="+1"/>
+    <interactionAbilities>
+      <special>
+        <name>Objets</name>
+        <description>arbalète de poing (20 carreaux), corde (15 m), gourdin, matériel en cytillesh (voir enca- dré), poison de léthargie (2 doses)</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>18</armorClass>
+    <saves REF="+10" FOR="+7" WIL="+3"/>
+    <health>30</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>gourdin +8, **Dégâts** 1d6+2 contondants **À distance** 1 gourdin</name>
+        <bonus>+10</bonus>
+        <traits>
+          <trait>jet 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+2</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>arbalète de poing</name>
+        <bonus>+10</bonus>
+        <traits>
+          <trait>facteur de portée 18 m</trait>
+          <trait>rechargement 1</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="occult" DD="17"/>
+    <offensiveAbilities>
+      <special>
+        <name>Attaque sournoise</name>
+        <description>Un traqueur dero inflige 1d6 dégâts de précision supplé- mentaires aux créatures prises par surprise�</description>
+      </special>
+      <special>
+        <name>Exploiter la léthargie</name>
+        <description>Une créature affectée par le poison de léthargie est prise par surprise par le traqueur dero, et celui-ci peut décider d’ajouter le trait non létal à ses attaques contre cette créature sans subir le malus normal�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Médecine dero</name>
+        <traits>
+          <trait>guérison</trait>
+          <trait>manipulation</trait>
+        </traits>
+        <description>; **Conditions.** Le dero porte sur lui du matériel en cytillesh et a une main libre ;</description>
+      </special>
+      <special>
+        <name>Étrangleur dero</name>
+        <description>Les étrangleurs deros sont spécialisés dans la capture de victimes vivantes, et on les sollicite souvent dans le cadre d’enlèvements.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

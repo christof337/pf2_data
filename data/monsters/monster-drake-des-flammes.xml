@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>DRAKE DES FLAMMES</name>
+    <type>CRÉATURE</type>
+    <level>5</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>DRAGON</trait>
+      <trait>FEU</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+12</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>9 m</range>
+        </sens>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+        <sens>
+          <name>vision malgré la fumée</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+10</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+12</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+9</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+10</bonus>
+      </skill>
+    </skills>
+    <armorClass>22</armorClass>
+    <saves REF="+10" FOR="+12" WIL="+10"/>
+    <health>75</health>
+    <immunities>
+      <immunity>feu</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>sommeil</immunity>
+    </immunities>
+    <weaknesses>
+      <weakness>
+        <name>froid</name>
+        <value>10</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special type="reaction">
+        <name>Frappe réflexe</name>
+        <description>Seulement avec ses crocs (p� 359)�</description>
+      </special>
+      <special>
+        <name>Vitesse</name>
+        <description>6 m, vol 15 m</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

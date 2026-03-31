@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>SMARANAVA</name>
+    <type>CRÉATURE</type>
+    <level>7</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>BÊTE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+17</bonus>
+      </skill>
+      <skill>
+        <name>Arcanes</name>
+        <bonus>+16</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+19</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+16</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+16</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+2" DEX="+6" CON="+4" INT="+3" WIS="+2" CHA="+3"/>
+    <armorClass>27</armorClass>
+    <saves REF="+17" FOR="+15" WIL="+15"/>
+    <health>115</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>crochets</name>
+        <bonus>+20</bonus>
+        <traits>
+          <trait>finesse</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d10+5</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>queue</name>
+        <bonus>+20</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 4,5 m</trait>
+          <trait>finesse</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+5</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="occult" DD="25">
+      <rank rank="3">
+        <spells>
+          <spell>dissipation de la magie, éclair, lecture des pensées</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special>
+        <name>Anneaux de connaissance</name>
+        <traits>
+          <trait>force</trait>
+          <trait>magique</trait>
+        </traits>
+        <description>L’étreinte du naga est plus spirituelle que physique� Une créature touchée par la queue d’un smaranava doit réussir un jet de Volonté DD 25 ou être empoignée par la queue jusqu’à ce qu’elle S’échappe, que le naga la libère avec une action Interagir ou que le naga meure� Une cible captive subit un malus de statut de –4 pour S’échapper, mais pour éviter cette pénalité, elle peut choisir de tenter un test d’Occultisme ou de Religion pour S’échapper au lieu des autres options habituelles�</description>
+      </special>
+      <special>
+        <name>NAGAJOR</name>
+        <description>Sur Golarion, les nagas règnent sur la nation de Nagajor� Cependant, la plupart des tâches administratives sont effectuées par des nagajis, des humanoïdes apparentés à ces puissants serpents� Bien que cela fasse des siècles que Nagajor est en paix avec ses voisins, si elle le peut elle évite d’avoir affaire aux sociétés humaines pour limiter une éventuelle reprise des hostilités�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

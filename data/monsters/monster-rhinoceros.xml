@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>RHINOCÉROS</name>
+    <type>CRÉATURE</type>
+    <level>4</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+9</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>9 m</range>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+12</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+10</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+6, **Dex **+0, **Con **+4, **Int **–4, **Sag **+3, **Cha **–1</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>22</armorClass>
+    <saves/>
+    <health>70</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Vitesse</name>
+        <description>0,5 m</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>corne +14, **Dégâts** 2d8+6 perforants</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>pied +12, **Dégâts** 2d6+6 contondants</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Charge du rhinocéros</name>
+        <description>Le rhinocéros Marche rapidement deux fois puis effectue une Frappe de corne� Dès lors que le rhinocéros s’est déplacé d’au moins 6 m, les dégâts de la Frappe augmentent à 3d8+6� Une créature de taille Moyenne ou plus petite touchée par cette attaque doit réussir un jet de Réflexes DD 21 ou être automatiquement Poussée en arrière sur 1,5 m et se retrouver à terre sous la force du coup�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Piétinement</name>
+        <description>Moyenne ou plus petite, patte, DD 18 (p� 360)</description>
+      </special>
+      <special>
+        <name>Rhinocéros laineux</name>
+        <description>Ces rhinocéros, encore plus imposants que leurs cousins glabres, sont couverts d’une épaisse fourrure hirsute et leur museau se termine par une immense corne en forme de croissant de lune. Les rhinocéros laineux vivent dans les toundras déser‑ tiques et les steppes froides, où ils passent la plus grande partie de la journée à brouter.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

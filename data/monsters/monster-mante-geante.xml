@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>MANTE GÉANTE</name>
+    <type>CRÉATURE</type>
+    <level>3</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+10</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+12</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+5" DEX="+3" CON="+3" INT="+0" WIS="+2" CHA="+0"/>
+    <armorClass>18</armorClass>
+    <saves REF="+12" FOR="+10" WIL="+7"/>
+    <health>40</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>patte</name>
+        <bonus>+12</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d10+5</amount>
+            <damageType>perforant</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>mandibules +12, **Dégâts **1d12+5 perforants</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Empoignade de capture</name>
+        <description>Ce pouvoir fonctionne comme Empoignade (p� 359) mais, en cas de succès, la mante peut choisir d’attirer la créature à côté d’elle avant de l’attaquer avec une Frappe de mandibules� Cet avantage supplémentaire ne s’applique pas si la mante maintient son Empoignade�</description>
+      </special>
+      <special>
+        <name>Frappe soudaine</name>
+        <description>Au premier round de combat, les créatures qui n’ont pas encore agi sont prises par surprise face à la mante géante�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Se fendre et frapper</name>
+        <description>La mante géante plonge en avant et fait une Frappe de patte avec une allonge étendue de 6 m� Si elle touche, elle peut utiliser Empoignade de capture après la Frappe même si sa cible est hors de portée�</description>
+      </special>
+      <special>
+        <name>Mante meurtrière</name>
+        <description>Ces gigantesques mantes vivent dans des forêts préhistoriques.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

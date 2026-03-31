@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>LÉCHI CALEBASSE</name>
+    <type>CRÉATURE</type>
+    <level>1</level>
+    <creatureTraits>
+      <trait type="size">PETITE</trait>
+      <trait>LÉCHÉE</trait>
+      <trait>PLANTE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>commun</language>
+      <language>féerique</language>
+      <langSpecial>
+        <spell>communication avec les plantes</spell>
+      </langSpecial>
+    </languages>
+    <skills>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Nature</name>
+        <bonus>+5</bonus>
+      </skill>
+    </skills>
+    <armorClass>17</armorClass>
+    <saves REF="+9" FOR="+5" WIL="+7"/>
+    <health>20</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>poing</name>
+        <bonus>+7</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+2</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>graine</name>
+        <bonus>+9</bonus>
+        <traits>
+          <trait>facteur de portée 9 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+2</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Sort inné primordial</name>
+        <description>DD 15 ; **Constant (3**e**) ***communication avec les plantes* (calebasses uniquement)</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Changement de forme</name>
+        <traits>
+          <trait>concentration</trait>
+          <trait>métamorphose</trait>
+          <trait>primordiale</trait>
+        </traits>
+        <description>� Comme le léchi de feuilles mais le léchi calebasse se transforme en calebassier (p� 358)�</description>
+      </special>
+      <special>
+        <name>Prise au piège</name>
+        <description>Quand le léchi calebasse blesse une créature avec une Frappe du poing ou de graine, des vignes jaillissent du léchi (ou de la graine) et s’enroulent autour des membres de la cible� La cible doit effectuer un jet de Réflexes DD 17� Sur un échec, la cible subit un malus de statut de –3 m à sa Vitesse pendant 1 round ; sur un échec critique, la cible est immobilisée pendant 1 round et le malus à sa Vitesse dure 1 min�</description>
+      </special>
+      <special>
+        <name>Léchi fongique</name>
+        <description>Les léchis fongiques protègent les cavernes, les tourbières et les lieux sombres et humides. Leurs jardins de champignons sont extrêmement étranges mais ils sont toujours très fiers de leur ouvrage.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

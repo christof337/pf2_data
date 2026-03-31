@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>EXÉCUTEUR GOBELOURS</name>
+    <type>CRÉATURE</type>
+    <level>2</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>GOBELOURS</trait>
+      <trait>HUMANOÏDE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+7</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>9 m</range>
+        </sens>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages>
+      <language>commun</language>
+      <language>gobelin</language>
+    </languages>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+6</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+6</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+4</bonus>
+      </skill>
+    </skills>
+    <armorClass>17</armorClass>
+    <saves/>
+    <health>34</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>épée bâtarde</name>
+        <bonus>+10</bonus>
+        <traits>
+          <trait>deux mains d12</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8+4</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>poing</name>
+        <bonus>+10</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>non létal</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+4</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>javeline</name>
+        <bonus>+8</bonus>
+        <traits>
+          <trait>jet 9 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+4</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Écharpeur</name>
+        <description>L’exécuteur gobelours gagne un bonus de circonstances de +3 à ses jets de dégâts contre une créature qu’il a empoignée�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Embûche</name>
+        <description>L’exécuteur gobelours Marche rapidement sur une dis- tance maximale de 3 m et tente de se Saisir d’une créature qui ne l’a pas détectée� Si le gobelours réussit, il inflige également des dégâts de poing à la créature�</description>
+      </special>
+      <special>
+        <name>Tourmenteur gobelours</name>
+        <description>Les tourmenteurs gobelours aiment torturer leurs proies aussi bien physiquement que psychologiquement. Ils font ainsi de leur mieux pour que leurs victimes restent en vie et terrifiées aussi longtemps que possible.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

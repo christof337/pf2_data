@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>QUAI DAU TO</name>
+    <type>CRÉATURE</type>
+    <level>13</level>
+    <creatureTraits>
+      <trait type="size">TRÈS GRANDE</trait>
+      <trait>BÊTE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+27</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+24</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+24</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+8, **Dex **+4, **Con **+8, **Int **–3, **Sag **+5, **Cha **–1</description>
+      </special>
+      <special>
+        <name>Vision malgré la brume</name>
+        <description>Le quai dau to ignore l’état masqué à cause de la brume et du brouillard�</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>32</armorClass>
+    <saves/>
+    <health>300</health>
+    <immunities>
+      <immunity>cécité</immunity>
+      <immunity>ébloui</immunity>
+    </immunities>
+    <weaknesses>
+      <weakness>
+        <name>son</name>
+        <value>15</value>
+      </weakness>
+    </weaknesses>
+    <reactiveAbilities>
+      <special type="reaction">
+        <name>Écailles réfléchissantes</name>
+        <trigger>**Une créature dans un rayon de 9 m lance un sort doté du trait lumière ou utilise un pouvoir avec le trait lumière ;</trigger>
+        <effect>Le quai dau to modifie sa position pour que la lumière se réfléchisse de manière aveuglante sur ses écailles� Toutes les créatures dans une émanation de 9 m doivent réussir un jet de Vigueur DD 33 ou être aveugles pendant 1 round�</effect>
+      </special>
+      <special>
+        <name>Vision effrayante</name>
+        <traits>
+          <trait>aura</trait>
+          <trait>émotion</trait>
+          <trait>mental</trait>
+          <trait>terreur</trait>
+          <trait>visuel</trait>
+        </traits>
+        <description>18 m Cette aura fonctionne comme une aura de présence terrifiante DD 32 (p� 360), mais une créature ne tente pas de jet de sauvegarde tant qu’elle ne voit pas le quai dau to�</description>
+      </special>
+    </reactiveAbilities>
+    <speeds speedSpecial="gonflement">
+      <speed>12 m</speed>
+      <speed type="swim">9 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+27</bonus>
+        <traits>
+          <trait>allonge 3 m) ; **Dégâts **3d12+14 perforants
+**Corps à corps**
+      1
+        queue +27 (allonge 6 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d8+14</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>pied</name>
+        <bonus>+27</bonus>
+        <traits>
+          <trait>agile</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d8+14</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Drainer l’eau</name>
+        <traits>
+          <trait>manipulation</trait>
+        </traits>
+        <description>; **Conditions.** Le quai dau to se trouve à moins de 3 m d’une étendue d’eau d’au moins 3 m de profondeur et son sac d’eau est vide ;</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Expulsion d’eau</name>
+        <traits>
+          <trait>eau</trait>
+          <trait>primordiale</trait>
+        </traits>
+        <description>; **Conditions.** Le sac d’eau du quai dau to est plein ;</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Gonflement</name>
+        <description>Le corps du quai dau to gonfle� Il devient Gigantesque, gagne une vitesse de vol de 9 jusqu’à la fin de son prochain tour puis il Vole� Son corps se dégonfle s’il devient inconscient ou s’il Révoque cet effet�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Souffle de brume</name>
+        <traits>
+          <trait>eau</trait>
+          <trait>primordiale</trait>
+        </traits>
+        <description>; **Conditions.** Le sac d’eau du quai dau to est plein ;</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

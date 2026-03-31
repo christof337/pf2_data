@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>OMBRE</name>
+    <type>CRÉATURE</type>
+    <level>4</level>
+    <creatureTraits>
+      <trait type="size"/>
+    </creatureTraits>
+    <perception>
+      <bonus>+10</bonus>
+      <senses>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+10</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+14</bonus>
+      </skill>
+    </skills>
+    <armorClass>20</armorClass>
+    <saves REF="+14" FOR="+8" WIL="+12"/>
+    <health>40</health>
+    <immunities>
+      <immunity>effets de mort</immunity>
+      <immunity>inconscient</immunity>
+      <immunity>maladie</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>précision</immunity>
+      <immunity>saignement</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>main d’ombre</name>
+        <bonus>+15</bonus>
+        <traits>
+          <trait>finesse</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+3</amount>
+            <damageType>de néant</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Rejeton d’ombre</name>
+        <description>Quand l’ombre d’une créature lui est arrachée grâce au pouvoir Vol d’ombre, celle-ci devient un rejeton d’ombre qui sert l’ombre qui l’a créé� Ce rejeton d’ombre ne possède pas le pouvoir Vol d’ombre et est perpétuellement et incurablement dans l’état maladroit 2� Si la créature dont le rejeton d’ombre est issu meurt, il devient une ombre véritable et autonome� Par contre, si la créature se remet de son affaiblissement, elle récupère son ombre et le rejeton d’ombre n’est plus�</description>
+      </special>
+      <special>
+        <name>Se glisser dans les ombres</name>
+        <description>L’ombre peut Se cacher ou cesser d’Être furtive dans l’ombre d’une créature ou d’un objet�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Vol d’ombre</name>
+        <traits>
+          <trait>divine</trait>
+        </traits>
+        <description>; **Conditions. **Au cours de son action précédente, l’ombre a touché une créature vivante avec une Frappe de main d’ombre ;</description>
+      </special>
+      <special>
+        <name>Ombre majeure</name>
+        <description>Les ombres qui passent beaucoup de temps dans le Monde des ténèbres et absorbent sa magie deviennent des ombres majeures.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

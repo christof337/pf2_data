@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>VER BENTHIQUE</name>
+    <type>CRÉATURE</type>
+    <level>15</level>
+    <creatureTraits>
+      <trait type="size">GIGANTESQUE</trait>
+      <trait>AMPHIBIE</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+22</bonus>
+      <senses>
+        <sens>
+          <name>perception des vibrations</name>
+          <precision>imprécis</precision>
+          <range>30 m</range>
+        </sens>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+33</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+20</bonus>
+      </skill>
+    </skills>
+    <armorClass>35</armorClass>
+    <saves REF="+20" FOR="+32" WIL="+23"/>
+    <health>320</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special>
+        <name>Inexorable</name>
+        <description>Comme le ver des cavernes�</description>
+      </special>
+      <special type="reaction">
+        <name>Mue</name>
+        <description>Comme le ver des cavernes�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

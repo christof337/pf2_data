@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>AIGLE</name>
+    <type>CRÉATURE</type>
+    <level>-1</level>
+    <creatureTraits>
+      <trait type="size">PETITE</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <attributes STR="+0" DEX="+3" CON="+1" INT="+0" WIS="+1" CHA="+1"/>
+    <armorClass>15</armorClass>
+    <saves/>
+    <health>6</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>bec</name>
+        <bonus>+6</bonus>
+        <traits>
+          <trait>finesse</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>serres</name>
+        <bonus>+6</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Piqué de l’aigle</name>
+        <description>L’aigle Vole jusqu’à deux fois sa Vitesse en vol en ligne droite et en rédui- sant son altitude d’au moins 3 m, puis il effectue une Frappe de serres�</description>
+      </special>
+      <special>
+        <name>Aigle géant</name>
+        <description>Les aigles géants ne sont pas de simples animaux. Ils sont très intelligents et sont dotés d’un profond sens de l’honneur. En tant que gardiens de leur environnement montagneux, ils tentent d’empêcher la propagation de la civilisation sur les terres sauvages et les agressions des communautés d’humanoïdes maléfiques. Les aigles géants se rassemblent au sein d’aires pouvant accueillir une dizaine de membres et œuvrent ensemble pour protéger leur domaine. Ils ont une envergure d’environ 9 m et pèsent jusqu’à 225 kg. Un aigle géant peut autoriser un allié de confiance à le chevaucher, mais il refusera toujours de porter une selle, un harnais ou tout autre équipement qui pourrait suggérer qu’il n’est qu’une simple bête de somme. Dotés d’une longue espérance de vie, ils considèrent les dettes et les serments avec le plus grand sérieux. Le passage du temps ne leur fait pas oublier un affront et ils ne pardonnent pas facilement.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

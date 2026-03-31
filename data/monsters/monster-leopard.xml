@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>LÉOPARD</name>
+    <type>CRÉATURE</type>
+    <level>2</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+8</bonus>
+      </skill>
+    </skills>
+    <armorClass>18</armorClass>
+    <saves/>
+    <health>30</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+10</bonus>
+        <traits>
+          <trait>finesse</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d10+3</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>griffes +10 (agile, finesse) ; **Dégâts** 1d6+3 tranchants</description>
+      </special>
+      <special>
+        <name>Attaque sournoise</name>
+        <description>Le léopard inflige 1d4 dégâts de précision supplémentaires aux créatures prises par surprise�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Bond</name>
+        <description>Le léopard Marche rapidement et effectue une Frappe à la fin de son déplacement� Si le léopard est caché au début de son action, il le reste jusqu’à ce qu’il ait effectué la Frappe de ce pouvoir�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Écharper</name>
+        <description>Le léopard fait deux Frappes de griffes contre une créature qu’il a empoignée� Les deux attaques comptent pour son malus d’attaques multiples mais ce dernier n’augmente qu’après les deux attaques�</description>
+      </special>
+      <special>
+        <name>Lion</name>
+        <description>Les lions sont des animaux sociaux. Les lionnes chassent notamment en groupe pour prendre en embuscade des proies dangereuses afin de ramener de quoi manger au reste de la troupe. Les mâles, plus grands et reconnaissables à leur longue crinière, préfèrent quant à eux chasser seuls.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

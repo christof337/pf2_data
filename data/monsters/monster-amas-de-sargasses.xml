@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>AMAS DE SARGASSES</name>
+    <type>CRÉATURE</type>
+    <level>6</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>AMPHIBIE</trait>
+      <trait>PLANTE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+10</bonus>
+      <senses>
+        <sens>
+          <name>perception des ondes</name>
+          <precision>précis</precision>
+          <range>18 m</range>
+          <source>p� 360</source>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <armorClass>14</armorClass>
+    <saves/>
+    <health>180</health>
+    <immunities>
+      <immunity>coups critiques</immunity>
+      <immunity>inconscient</immunity>
+      <immunity>précision</immunity>
+    </immunities>
+    <weaknesses>
+      <weakness>
+        <name>tranchants</name>
+        <value>5</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>3 m</speed>
+      <speed type="climb">3 m</speed>
+      <speed type="swim">7</speed>
+      <speed>5 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>vrille</name>
+        <bonus>+17</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+8</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Constriction</name>
+        <description>2d8+3 contondants, DD 23 (p� 359)</description>
+      </special>
+      <special>
+        <name>Amas potaunoir</name>
+        <description>Si la majorité des amas de sargasses se divisent une fois qu’ils ont atteint une taille, certains individus semblent croître indéfiniment. Les navires s’engluent dans ces « amas potaunoir », qui sont alors libres de les disloquer et de dévorer leurs passagers sans défense.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

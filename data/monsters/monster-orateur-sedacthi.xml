@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>ORATEUR SÉDACTHI</name>
+    <type>CRÉATURE</type>
+    <level>6</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>AMPHIBIE</trait>
+      <trait>HUMANOÏDE</trait>
+      <trait>SÉDACTHI</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+15</bonus>
+      <senses>
+        <sens>
+          <name>perception des ondes</name>
+          <precision>précis</precision>
+          <range>9 m</range>
+          <source>p� 360</source>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <interactionAbilities>
+      <special>
+        <name>Langues</name>
+        <description>thalassique ; langage de la mer</description>
+      </special>
+      <special>
+        <name>Compétences</name>
+        <description>Athlétisme +16, Artisanat +14, Diplomatie +13, Intimidation +15, Nature +15</description>
+      </special>
+      <special>
+        <name>For</name>
+        <description>+6, **Dex **+3, **Con **+4, **Int **+2, **Sag **+3, **Cha **+5</description>
+      </special>
+      <special>
+        <name>Objet</name>
+        <description>*trident +1*</description>
+      </special>
+      <special>
+        <name>Langage de la mer</name>
+        <description>Comme l’éclaireur sédacthi�</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>23</armorClass>
+    <saves REF="+13" FOR="+14" WIL="+15"/>
+    <health>95</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>*trident*</name>
+        <bonus>+17</bonus>
+        <traits>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8+10</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>mâchoires +16, **Dégâts **1d6+8 perforants plus 1d4 de saignement persistants **Corps à corps** 1 griffes</name>
+        <bonus>+16</bonus>
+        <traits>
+          <trait>agile</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+8</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>*trident*</name>
+        <bonus>+14</bonus>
+        <traits>
+          <trait>magique</trait>
+          <trait>jet 6 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8+8</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Bouclier animal</name>
+        <description/>
+      </special>
+      <special type="activity" actions="1">
+        <name>Conditions</name>
+        <description>L’orateur sédacthi se trouve dans un espace adjacent à un allié animal de taille Grande ou supérieure ;</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Cri douloureux</name>
+        <traits>
+          <trait>mental</trait>
+          <trait>son</trait>
+        </traits>
+        <description>� Le sédacthi pousse un cri aigu sur une plage de fréquences douloureuse, infligeant 3d6 dégâts de son et 1d6 dégâts mentaux à toutes les créatures dans un cône de 9 m (jet de Vigueur basique DD 23)� Une créature qui échoue son jet de sauvegarde se trouve dans l’état malade 1�</description>
+      </special>
+      <special>
+        <name>Exploiter les faiblesses</name>
+        <description>Les Frappes de l’orateur infligent 1d6 dégâts supplémentaires aux créatures qui se trouvent dans l’état effrayé ou malade�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Festin partagé</name>
+        <description>Comme l’éclaireur sédacthi�</description>
+      </special>
+      <special>
+        <name>Nager ensemble</name>
+        <description/>
+      </special>
+      <special type="activity" actions="2">
+        <name>Conditions</name>
+        <description>L’orateur se trouve dans un espace adjacent à un allié ani- mal ;</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

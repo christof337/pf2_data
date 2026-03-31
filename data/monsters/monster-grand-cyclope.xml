@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GRAND CYCLOPE</name>
+    <type>CRÉATURE</type>
+    <level>12</level>
+    <creatureTraits>
+      <trait type="size">TRÈS GRANDE</trait>
+      <trait>GÉANTE</trait>
+      <trait>HUMANOÏDE</trait>
+      <trait>MUTANT</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>commun</language>
+      <language>cyclope</language>
+      <language>jotun</language>
+    </languages>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+25</bonus>
+      </skill>
+      <skill>
+        <name>une compétence de Connaissances au choix</name>
+        <bonus>+18</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+22</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+7,** Dex** +1,** Con** +6,** Int** –2, **Sag** +4, **Cha** –1</description>
+      </special>
+      <special>
+        <name>Objets</name>
+        <description>armure de peau, massue</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>32</armorClass>
+    <saves/>
+    <health>235</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mas- sue</name>
+        <bonus>+25</bonus>
+        <traits>
+          <trait>allonge 4,5 m</trait>
+          <trait>pousser</trait>
+          <trait>prise d’élan</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d10+13</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>corne</name>
+        <bonus>+25</bonus>
+        <traits>
+          <trait>allonge 4,5 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d10+13</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>poing</name>
+        <bonus>+25</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 4,5 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d4+13</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>rocher</name>
+        <bonus>+23</bonus>
+        <traits>
+          <trait>brutal</trait>
+          <trait>facteur de portée 36 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>4d6+7</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Charge puissante</name>
+        <description>Le grand cyclope Marche rapi- dement deux fois puis effectue une Frappe de corne� S’il s’est déplacé d’au moins 6 m à partir de sa position de départ, les dégâts de la Frappe sont augmentés à 3d10+20�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Projection de rochers</name>
+        <traits>
+          <trait>p� 360</trait>
+        </traits>
+        <description/>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

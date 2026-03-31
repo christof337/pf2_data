@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>CHASSEUR MINOTAURE</name>
+    <type>CRÉATURE</type>
+    <level>4</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>BÊTE</trait>
+      <trait>HUMANOÏDE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+14</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+9</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+12</bonus>
+      </skill>
+    </skills>
+    <armorClass>20</armorClass>
+    <saves REF="+8" FOR="+13" WIL="+10"/>
+    <health>70</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>grande hache</name>
+        <bonus>+14</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+          <trait>balayage</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d12+8</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>cornes +14, **Dégâts **1d8+8 perforants</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Charge puissante</name>
+        <description>Le minotaure Marche rapidement deux fois puis effectue une Frappe de corne� S’il s’est déplacé d’au moins 6 m à partir de sa position de départ, les dommages de la Frappe passent à 2d8+10�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Chasse terrifiante</name>
+        <description>Le minotaure grogne et avance à pas bruyants alors qu’il traque sa proie pour la terroriser� Il fait un test d’Intimidation pour Démoraliser toutes les créatures vivantes dans un rayon de 18 m capables de l’entendre mais pas de le voir� Lancez le dé une seule fois et appliquez le résultat à toutes ces créatures� Si les cibles se trouvent dans un labyrinthe ou un autre lieu où il est difficile de s’orienter, le mino- taure gagne un bonus de circonstances de +4 au test� Les créatures effrayées suite à ce test subissent aussi un malus de circonstances de −2 aux tests de Survie pour éviter de se perdre pendant 1 min� Chaque cible est temporairement immunisée pendant 1 min�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Coup de hache</name>
+        <description>Le minotaure abat sa hache en un ample arc de cercle, effectuant des Frappes avec sa grande hache contre deux adversaires adjacents l’un à l’autre et à sa portée� Le malus d’attaques multiples n’augmente qu’après la résolution des deux attaques�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

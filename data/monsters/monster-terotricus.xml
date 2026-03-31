@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>TEROTRICUS</name>
+    <type>CRÉATURE</type>
+    <level>19</level>
+    <creatureTraits>
+      <trait type="size">GIGANTESQUE</trait>
+      <trait>CHAMPIGNON</trait>
+      <trait>IMPIE</trait>
+      <trait>IMPIE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>chthonien</language>
+      <language>elfique</language>
+      <language>féerique</language>
+    </languages>
+    <interactionAbilities>
+      <special>
+        <name>Compétences</name>
+        <description>Athlétisme +37, Duperie +32, Intimidation +35, Nature +31, Survie +31</description>
+      </special>
+      <special>
+        <name>For</name>
+        <description>+10, **Dex **+5, **Con **+9, **Int **–1, **Sag **+6, **Cha **+5</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>42</armorClass>
+    <saves REF="+28" FOR="+34" WIL="+33" saveSpecial="bonus de statut de +1 aux jets de sauvegarde contre la magie"/>
+    <health>370</health>
+    <immunities>
+      <immunity>contrôlé</immunity>
+      <immunity>mala- die</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>sommeil</immunity>
+    </immunities>
+    <weaknesses>
+      <weakness>
+        <name>fer froid</name>
+        <value>15</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>tentacule</name>
+        <bonus>+37</bonus>
+        <traits>
+          <trait>allonge 6 m</trait>
+          <trait>impie</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>4d10+18</amount>
+            <damageType>contondants</damageType>
+          </damage>
+          <damage>
+            <amount>2d6</amount>
+            <damageType>d’esprit et Empoignade améliorée (p� 359) ou Bousculade améliorée 6 m (p� 359)</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>spores</name>
+        <bonus>+37</bonus>
+        <traits>
+          <trait>brutal</trait>
+          <trait>facteur de portée 24 m</trait>
+          <trait>impie</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>4d8+8</amount>
+            <damageType>de poison</damageType>
+          </damage>
+          <damage>
+            <amount>2d6</amount>
+            <damageType>d’esprit, flétrissement sporifère et spores gluants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Flétrissement sporifère</name>
+        <traits>
+          <trait>maladie</trait>
+        </traits>
+        <description>� Les plantes et les champignons sont immunisés ; **Jet de sauvegarde** Vigueur DD 40 ; **Stade 1** affaibli 2 (1 jour) ; **Stade 2** affaibli 4 et ralenti 1 (1 jour) ; **Stade 3** contrôlé par le terotricus (comme *domination* ; 5d8 jours) ;</description>
+      </special>
+      <special>
+        <name>Stade 4</name>
+        <description>mort�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Infester les environs</name>
+        <traits>
+          <trait>primordiale</trait>
+        </traits>
+        <description>; **Fréquence** 1 fois/jour ;</description>
+      </special>
+      <special>
+        <name>Conditions</name>
+        <description>Le terotricus est dans une zone marécageuse ou fores- tière ;</description>
+      </special>
+      <special>
+        <name>Spores gluants</name>
+        <description>Une créature touchée par les spores d’un terotricus subit un malus de statut de −10 m à toutes ses Vitesses pen- dant 1 min� Si la Frappe a obtenu un succès critique, la créa- ture est aussi immobilisée jusqu’à ce qu’elle S’échappe (DD 40)�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

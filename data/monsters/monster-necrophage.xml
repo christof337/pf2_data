@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>NÉCROPHAGE</name>
+    <type>CRÉATURE</type>
+    <level>3</level>
+    <creatureTraits>
+      <trait type="size"/>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+10</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+9</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+4" DEX="+1" CON="+4" INT="+0" WIS="+3" CHA="+2"/>
+    <armorClass>18</armorClass>
+    <saves/>
+    <health>40</health>
+    <immunities>
+      <immunity>effets de mort</immunity>
+      <immunity>inconscient</immunity>
+      <immunity>maladie</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>saignement</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>dague</name>
+        <bonus>+12</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>polyvalent T</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+6</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+12</bonus>
+        <traits>
+          <trait>agile</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+6</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>dague</name>
+        <bonus>+10</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>jet 3 m</trait>
+          <trait>polyvalent T</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+6</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Malveillance corruptrice</name>
+        <traits>
+          <trait>divine</trait>
+          <trait>malédiction</trait>
+          <trait>néant</trait>
+        </traits>
+        <description>Les attaques à mains nues du nécrophage et ses armes liées infligent une malédiction qui rend la victime faible et malveillante� Si un nécro- phage inflige malveillance corruptrice à une créature qui en souffre déjà, elle effectue un nouveau jet de sauvegarde et ignore le résultat s’il est meilleur qu’un échec� Un humanoïde vivant qui meurt alors qu’il souffrait de cette malédiction revient sous la forme d’un nécrophage soumis à son meurtrier au bout de 1d4 rounds� Ce rejeton de nécrophage ne peut pas infliger malveillance corruptrice et est maladroit 2� Si son créateur meurt ou s’il existe sous cette forme depuis un mois, il devient un nécrophage à part entière et autonome ; **Jet de sauvegarde** Vigueur DD 17 ; **Stade 1** drainé 1 (1 round) ; **Stade 2** drainé 2 et ne traite aucune créature comme son allié (1 round) ;</description>
+      </special>
+      <special>
+        <name>Stade 3</name>
+        <description>comme Stade 2 mais drainé 3 (1 round) ; **Stade 4 **comme Stade 2 mais drainé 4 (1 round)�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

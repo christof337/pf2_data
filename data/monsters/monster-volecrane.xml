@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>VOLECRÂNE</name>
+    <type>CRÉATURE</type>
+    <level>18</level>
+    <creatureTraits>
+      <trait type="size"/>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>nécril</language>
+      <langSpecial>langues associées aux Connaissances squelettiques</langSpecial>
+    </languages>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+34</bonus>
+      </skill>
+      <skill>
+        <name>Connaissances squelettiques</name>
+        <bonus>+30</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+32</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+35</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+30</bonus>
+      </skill>
+    </skills>
+    <armorClass>42</armorClass>
+    <saves REF="+33" FOR="+31" WIL="+35" saveSpecial="bonus de statut de +1 à tous les jets de sauvegarde contre la vitalité�"/>
+    <health>300</health>
+    <immunities>
+      <immunity>effets de mort</immunity>
+      <immunity>froid</immunity>
+      <immunity>inconscient</immunity>
+      <immunity>maladie</immunity>
+      <immunity>para- lysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>saignement</immunity>
+    </immunities>
+    <speeds>
+      <speed>9 m</speed>
+      <speed type="fly">18 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+35</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+          <trait>magique</trait>
+          <trait>mortel 2d12</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d10+14</amount>
+            <damageType>perforants</damageType>
+          </damage>
+          <damage>
+            <amount>3d6</amount>
+            <damageType>de néant et drain de vitalité</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+35</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 4,5 m</trait>
+          <trait>magique</trait>
+          <trait>mortel 2d12</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d6+14</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+          <damage>
+            <amount>3d6</amount>
+            <damageType>de néant et drain de vitalité</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>javeline d’os</name>
+        <bonus>+33</bonus>
+        <traits>
+          <trait>jet 30 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d8+6</amount>
+            <damageType>perforants</damageType>
+          </damage>
+          <damage>
+            <amount>3d6</amount>
+            <damageType>de néant</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="divine" DD="40">
+      <rank rank="8">
+        <spells>
+          <spell>déshydratation (×2), exécution (×2), vents punitifs (×2)</spell>
+        </spells>
+      </rank>
+      <rank rank="6" constant="TRUE">
+        <spells>
+          <spell>discernement</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special>
+        <name>Rituel</name>
+        <description>DD 40 ; *mémoire collective* (voir Connaissances squelettiques)</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Champ d’esquilles</name>
+        <description>Le volecrâne fait émerger des os brisés de toutes les surfaces solides, à l’exception de la pierre taillée, dans une émanation de 30 m� Toute créature qui se déplace dans la zone affectée subit 10 dégâts perforants et 10 dégâts de néant par tranche de 1,5 m parcourue� La première fois qu’une créature subit des dégâts infligés par ces esquilles au cours d’un round, elle doit réussir un jet de Réflexes DD 40 pour éviter de subir un malus de circonstances de −3 m à toutes ses Vitesses pendant 10 min, ou un malus de circonstances de −4,5 m pendant 24 h en cas d’échec critique� Les os restent en place jusqu’à ce que le volecrâne utilise de nouveau cette action ou qu’ils soient retirés manuellement (10 min par case de 1,5 m de côté)�</description>
+      </special>
+      <special>
+        <name>Drain de vitalité</name>
+        <traits>
+          <trait>divine</trait>
+        </traits>
+        <description>� Quand un volecrâne porte une Frappe au corps à corps, sa cible doit réussir un jet de Vigueur DD 40 ou se trouver dans l’état drainé 2 et condamné 1�</description>
+      </special>
+      <special>
+        <name>Voleur d’os</name>
+        <traits>
+          <trait>divine</trait>
+        </traits>
+        <description>� Chaque fois qu’une créature meurt dans un rayon de 18 m autour d’un volecrâne, celui-ci récupère une partie de ses os qu’il intègre à sa tempête d’esquilles� La créature doit alors réussir un jet de Volonté DD 40 ou être réanimée sous la forme d’un champion squelettique (p� 330) 1d4 rounds plus tard� Ces champions squelettiques se trouvent sous le contrôle du volecrâne�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

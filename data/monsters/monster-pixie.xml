@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>PIXIE</name>
+    <type>CRÉATURE</type>
+    <level>4</level>
+    <creatureTraits>
+      <trait type="size">PETITE</trait>
+      <trait>ESPRIT</trait>
+      <trait>FOLLET</trait>
+      <trait>FÉE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <interactionAbilities>
+      <special>
+        <name>Langues</name>
+        <description>commun, féerique</description>
+      </special>
+      <special>
+        <name>Compétences</name>
+        <description>Acrobaties +13, Discrétion +11, Duperie +11, Nature +10</description>
+      </special>
+      <special>
+        <name>For</name>
+        <description>–1, **Dex **+5, **Con **+1, **Int **+3, **Sag **+2, **Cha **+3</description>
+      </special>
+      <special>
+        <name>Objets</name>
+        <description>arc long (60 flèches), épée courte</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>23</armorClass>
+    <saves REF="+14" FOR="+8" WIL="+12" saveSpecial="bonus de statut de +1 aux jets de sauvegarde contre la magie"/>
+    <health>40</health>
+    <weaknesses>
+      <weakness>
+        <name>fer froid</name>
+        <value>5</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>épée courte</name>
+        <bonus>+13</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+          <trait>polyvalent T</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+4</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>arc long</name>
+        <bonus>+13</bonus>
+        <traits>
+          <trait>facteur de portée 30 m</trait>
+          <trait>mortel 1d10</trait>
+          <trait>rechargement 0</trait>
+          <trait>volée 6 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8+4</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="primal" DD="21">
+      <rank rank="4">
+        <spells>
+          <spell>invisibilité (à volonté</spell>
+        </spells>
+      </rank>
+      <rank rank="3">
+        <spells>
+          <spell>dissipation de la magie</spell>
+        </spells>
+      </rank>
+      <rank rank="2">
+        <spells>
+          <spell>enchevêtrement végétal, lumière révélatrice</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Saupoudrer de la poussière de pixie</name>
+        <traits>
+          <trait>manipulation</trait>
+          <trait>primordiale</trait>
+        </traits>
+        <description>� Le pixie saupoudre de la poussière de pixie sur l’une de ses flèches� Si le pixie touche une créature avec cette flèche avant son prochain tour, la flèche inflige l’un des effets spéciaux suivants au lieu d’infliger des dégâts� Chaque effet dépend du jet de Volonté DD 21 de la cible� Sur un coup critique, la cible obtient un résultat un degré inférieur à celui obtenu�<list><listItem>**Charme **(émotion, mental, mise hors de combat)� La cible subit les effets d’un *charme*, sauf qu’elle ne bénéficie d’aucun bonus à son jet de sauvegarde si la seule action hostile à son encontre était le tir à l’arc du pixie� De plus, le pixie peut choisir de déplacer l’adoration de la cible sur une créature différente de lui�</listItem><listItem>**Perte de mémoire** (mental)� En cas d’échec au jet de Volonté, la cible ne se souvient plus des cinq dernières minutes écoulées�</listItem><listItem>**Sommeil **(mental, mise hors de combat, sommeil)� La cible subit les effets d’un *sommeil * de rang 3�</listItem><listItem>**Soumission **(mental, non létal)� La cible subit 4d6 dégâts mentaux en fonction de son jet de Volonté basique�</listItem></list></description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

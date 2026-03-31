@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>VASE DES ÉGOUTS</name>
+    <type>CRÉATURE</type>
+    <level>1</level>
+    <creatureTraits>
+      <trait type="size"/>
+    </creatureTraits>
+    <perception>
+      <bonus>+3</bonus>
+      <senses>
+        <sens>
+          <name>dénué de vision</name>
+        </sens>
+        <sens>
+          <name>perception du mouvement</name>
+          <range>18 m</range>
+          <source>précis</source>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+1</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+2, **Dex **–5, **Con **+4, **Int **–5, **Sag **+0, **Cha **–5</description>
+      </special>
+      <special>
+        <name>Perception du mouvement</name>
+        <description>Une vase des égouts peut percevoir les mouvements proches grâce aux vibrations et au déplacement d’air�</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>8</armorClass>
+    <saves REF="+1" FOR="+9" WIL="+3"/>
+    <health>40</health>
+    <immunities>
+      <immunity>acide</immunity>
+      <immunity>coups critiques</immunity>
+      <immunity>inconscient</immunity>
+      <immunity>mental</immunity>
+      <immunity>précision</immunity>
+      <immunity>saignement</immunity>
+      <immunity>visuel</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special type="activity" actions="3">
+        <name>Vitesse</name>
+        <description>m</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>pseudopode +9, **Dégâts** 1d6+1 contondants plus 1d4 acide</description>
+      </special>
+      <special>
+        <name>Vague de fange</name>
+        <description/>
+      </special>
+      <special type="activity" actions="1">
+        <name>Fréquence</name>
+        <description>une fois par minute�</description>
+      </special>
+      <special>
+        <name>Vase chapelet</name>
+        <description>ôdant sous terre ou dans les donjons, ces chapelets frémissants de vase similaires à des limaces parcourent constamment leur domaine en quête de nourriture. Elles sont ainsi nommées en raison de leur capacité à projeter des rubans de bave qui ressemblent à des chapelets enchevêtrés.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

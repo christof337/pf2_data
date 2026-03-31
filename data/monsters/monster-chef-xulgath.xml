@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>CHEF XULGATH</name>
+    <type>CRÉATURE</type>
+    <level>3</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>HUMANOÏDE</trait>
+      <trait>XULGATH</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+11</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+6</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+6</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+4**, Dex** +1**, Con **+2**, Int **–1**, Sag **+2**, Cha** +1</description>
+      </special>
+      <special>
+        <name>Objets</name>
+        <description>cuirasse, grande hache, javelines (4)</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>18</armorClass>
+    <saves REF="+6" FOR="+9" WIL="+9"/>
+    <health>44</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>grande hache</name>
+        <bonus>+11</bonus>
+        <traits>
+          <trait>balayage</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d10+6</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>mâchoires +11, **Dégâts** 1d6+6 perforants plus frappe affaiblissante **Corps à corps** 1 griffes</name>
+        <bonus>+11</bonus>
+        <traits>
+          <trait>agile</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+6</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>javeline</name>
+        <bonus>+8</bonus>
+        <traits>
+          <trait>jet 9 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+4</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Frappe affaiblissante</name>
+        <description>Une créature touchée par la Frappe de mâchoires ou de griffes d’un xulgath est affaiblie 1 (ou affaiblie 2 sur un coup critique) pendant 1 round�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

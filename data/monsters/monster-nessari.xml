@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>NESSARI</name>
+    <type>CRÉATURE</type>
+    <level>20</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>DIABLE</trait>
+      <trait>FIÉLON</trait>
+      <trait>IMPIE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+34</bonus>
+      </skill>
+      <skill>
+        <name>Arcanes</name>
+        <bonus>+32</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+33</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+34</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+34</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+39</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+39</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+37</bonus>
+      </skill>
+      <skill>
+        <name>Société</name>
+        <bonus>+36</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+9" DEX="+8" CON="+9" INT="+8" WIS="+9" CHA="+8"/>
+    <armorClass/>
+    <saves/>
+    <health/>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special>
+        <name>FAÇONNAGE DE DIABLES</name>
+        <description>Un nessari a besoin d’un nombre minimum d’orts pour façonner la masse grouillante en un diable d’un certain niveau comme cela est indiqué ci-après�</description>
+      </special>
+      <special>
+        <name>Niveau du diable Nombre d’orts</name>
+        <description>4 ou moins 4 5–6 8 7–8 16 9–10 32 11–12 64 13–14 128 15–16 256 17–18 512 19–20 1 024 [[PAGE 93]]</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

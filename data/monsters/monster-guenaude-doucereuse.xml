@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GUENAUDE DOUCEREUSE</name>
+    <type>CRÉATURE</type>
+    <level>4</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>GUENAUDE</trait>
+      <trait>HUMANOÏDE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+10</bonus>
+      <senses>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+9</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+11</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+9</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+10</bonus>
+      </skill>
+      <skill>
+        <name>Nature</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Occultisme</name>
+        <bonus>+8</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+5" DEX="+3" CON="+3" INT="+2" WIS="+2" CHA="+4"/>
+    <armorClass>21</armorClass>
+    <saves REF="+11" FOR="+11" WIL="+12" saveSpecial="bonus de statut de +1 aux jets de sauvegarde contre la magie"/>
+    <health>70</health>
+    <weaknesses>
+      <weakness>
+        <name>fer froid</name>
+        <value>5</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>griffes en sucre d’orge</name>
+        <bonus>+14</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d10+5</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="occult" DD="20" attack="+14">
+      <rank rank="2">
+        <spells>
+          <spell spellSpecial="à volonté">création de nourriture (bonbons uniquement), invisibilité , rétrécir, rire incontrôlable, sommeil</spell>
+        </spells>
+      </rank>
+      <rank rank="5" constant="TRUE">
+        <spells>
+          <spell>langage universel</spell>
+        </spells>
+      </rank>
+    </spellList>
+  </monster>
+</monsters>

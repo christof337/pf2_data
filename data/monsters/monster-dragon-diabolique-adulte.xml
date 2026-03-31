@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>DRAGON DIABOLIQUE ADULTE</name>
+    <type>CRÉATURE</type>
+    <level>15</level>
+    <creatureTraits>
+      <trait type="size">TRÈS GRANDE</trait>
+      <trait>DIVIN</trait>
+      <trait>DRAGON</trait>
+      <trait>IMPIE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+27</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+30</bonus>
+      </skill>
+      <skill>
+        <name>Connaissances sur les Enfers</name>
+        <bonus>+24</bonus>
+      </skill>
+      <skill>
+        <name>Connaissances juridiques</name>
+        <bonus>+26</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+28</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+26</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+26</bonus>
+      </skill>
+      <skill>
+        <name>Larcin</name>
+        <bonus>+27</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+26</bonus>
+      </skill>
+      <skill>
+        <name>Société</name>
+        <bonus>+24</bonus>
+      </skill>
+    </skills>
+    <armorClass/>
+    <saves/>
+    <health/>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special>
+        <name>For</name>
+        <description>+8, **Dex **+4, **Con **+6, **Int **+3, **Sag **+5, **Cha **+ 5</description>
+      </special>
+      <special>
+        <name>Vision malgré la fumée</name>
+        <description>Comme le jeune dragon diabolique�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

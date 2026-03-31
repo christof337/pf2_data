@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GÉANT DES PIERRES</name>
+    <type>CRÉATURE</type>
+    <level>8</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>GÉANT</trait>
+      <trait>HUMANOÏDE</trait>
+      <trait>TERRE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+16</bonus>
+      <senses>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <interactionAbilities>
+      <special>
+        <name>Langues</name>
+        <description>commun, jotun, pétran</description>
+      </special>
+      <special>
+        <name>Compétences</name>
+        <description>Acrobaties +14, Athlétisme +20, Discrétion +14 (+18 dans un environnement rocailleux), Intimidation +14, Nature +18</description>
+      </special>
+      <special>
+        <name>For</name>
+        <description>+6, **Dex **+2, **Con **+4, **Int **+0, **Sag **+4, **Cha **+0</description>
+      </special>
+      <special>
+        <name>Objet</name>
+        <description>* massue de frappe +1*</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>27</armorClass>
+    <saves/>
+    <health>150</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>*massue *+21 (allonge 3 m, magique, pousser, prise d’élan), **Dégâts ** 2d10+12 contondants **Corps à corps** 1 poing</name>
+        <bonus>+20</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+14</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>rocher</name>
+        <bonus>+18</bonus>
+        <traits>
+          <trait>brutal</trait>
+          <trait>facteur de portée 36 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+12</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Coup violent</name>
+        <description>Le géant de pierre effectue une Frappe de massue� La cible est bousculée jusqu’à 3 m en cas de coup réussi ou jusqu’à 6 m en cas de coup critique� Si la cible percute un objet solide, elle subit des dégâts contondants comme si elle avait chuté d’une hauteur égale à la distance parcourue�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Création de rocher</name>
+        <traits>
+          <trait>primordiale</trait>
+          <trait>terre</trait>
+        </traits>
+        <description>� Le géant des pierres crée un rocher à partir d’une terre primordiale et le lance comme une Frappe de rocher� Une créature touchée par la Frappe doit réussir un jet de Réflexes DD 26 ou être projetée à terre�</description>
+      </special>
+      <special>
+        <name>Géant du givre</name>
+        <description>Les géants du givre sont des maraudeurs implacables qui pillent et dépouillent tous ceux qui osent vivre trop près d’eux dans les régions froides et désolées. Les clans peuvent être composés de chasseurs extrêmement territoriaux prêts à défendre férocement leur part de la toundra comme de familles nomades parcourant les terres glacées à la recherche de communautés à conquérir. Ces groupes sont dirigés par le membre le plus féroce et le plus redoutable au combat. Il s’agit donc souvent d’une immense brute exigeant une obéissance absolue de la part de tous les autres membres. Pouvant aller d’un bleu glacé translucide au gris du verglas, peu des géants du givre reflète parfaitement leur habitat glacial. Un géant du givre typique mesure 4,5 m de haut environ pour un poids approximatif de 1 400 kg. Ils portent souvent des armures métalliques ornées des fourrures, peaux, crocs et défenses de bêtes tuées, et manient des armes aussi longues qu’une table de banquet. Un clan important de géants du givre élève ses propres mammouths pour s’en servir de montures ou bien soumet des sorcewargs pour en faire des compagnons de chasse, mais tous considèrent leur environnement de vie comme trop hostile pour adopter un concept aussi doux que celui d’animaux de compagnie.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

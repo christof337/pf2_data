@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>PONEY DE SELLE</name>
+    <type>CRÉATURE</type>
+    <level>0</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+4</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+7</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+3" DEX="+2" CON="+3" INT="+0" WIS="+2" CHA="+0"/>
+    <armorClass>14</armorClass>
+    <saves/>
+    <health>16</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special type="reaction">
+        <name>Désarçonner</name>
+        <description>DD 15 (p� 359)</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Vitesse</name>
+        <description>0,5 m</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>sabot +5, **Dégâts** 1d4+3 contondants</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Galop</name>
+        <description>Le poney de selle Marche rapidement deux fois� Il bénéficie d’un bonus de circons- tances de +3 m à sa Vitesse pour chaque Marche rapide�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

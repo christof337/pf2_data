@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>REINE VESCAVORE</name>
+    <type>CRÉATURE</type>
+    <level>9</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>FIÉLON</trait>
+      <trait>IMPIE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <armorClass>28</armorClass>
+    <saves REF="+19" FOR="+17" WIL="+15"/>
+    <health>150</health>
+    <weaknesses>
+      <weakness>
+        <name>fer froid</name>
+        <value>10</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>6 m</speed>
+      <speed type="fly">15 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+20</bonus>
+        <traits>
+          <trait>impie</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d10+13</amount>
+            <damageType>perforants</damageType>
+          </damage>
+          <damage>
+            <amount>1d10</amount>
+            <damageType>d’acide</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>griffes +20 (agile, allonge 3 m, impie, magique) ; **Dégâts **2d10+8 tranchants plus Empoignade (p� 359)</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>dard +20 (allonge 4,5 m, impie, magique) ; **Dégâts **2d4 perfo- rants plus 2d10 d’acide</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>À distance</name>
+        <description>crachat +19 (acide, facteur de portée 9 m, magique) ; **Dégâts **2d8 d’acide plus phéromones de rage</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>En‑cas opportun</name>
+        <description>La reine vescavore attire une créature qu’elle tient empoignée ou res- treinte dans un espace adjacent à elle et effectue une Frappe de mâchoires avec un bonus de circonstances de +2�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>L’heure du repas</name>
+        <description>La reine vescavore force n’importe quel nombre de nuées de vescavores à moins de 30 m à dépenser immédiatement leur réaction pour utiliser morsures dévoratrices�</description>
+      </special>
+      <special>
+        <name>Phéromones de rage</name>
+        <description>Si la Frappe de crachat de la reine vescavore inflige des dégâts à une créature, celle-ci subit un malus de statut de −2 à tous ses jets de sauvegarde imposés par les nuées de vescavores pendant 1 min�</description>
+      </special>
+      <special type="activity" actions="3">
+        <name>Ponte chaotique</name>
+        <description>La reine vescavore renforce ses nuées� Toutes les nuées de vesca- vores à moins de 30 m deviennent Très Grandes et accélérées pendant 1 min� Les nuées de vescavores peuvent dépenser l’action supplémentaire de chaque round uniquement pour utiliser morsures dévoratrices�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

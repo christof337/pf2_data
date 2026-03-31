@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>AEOLAEKA</name>
+    <type>CRÉATURE</type>
+    <level>12</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>AZATA</trait>
+      <trait>CÉLESTE</trait>
+      <trait>SAINT</trait>
+      <trait>TERRE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <interactionAbilities>
+      <special>
+        <name>Langues</name>
+        <description>draconique, empyréen, pétran ; *communication avec les pierres*, *lan‑ gage universel*</description>
+      </special>
+      <special>
+        <name>Compétences</name>
+        <description>Athlétisme +25, Diplomatie +22, Intimidation +22, Nature +23</description>
+      </special>
+      <special>
+        <name>For</name>
+        <description>+6, **Dex **+4, **Con **+7, **Int **+2, **Sag **+5, **Cha **+4</description>
+      </special>
+      <special>
+        <name>Objet</name>
+        <description>*marteau de guerre de frappe +1*</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>33</armorClass>
+    <saves/>
+    <health>250</health>
+    <weaknesses>
+      <weakness>
+        <name>fer froid</name>
+        <value>15</value>
+      </weakness>
+    </weaknesses>
+    <speeds speedSpecial="glisse à travers la terre">
+      <speed>7</speed>
+      <speed>5 m</speed>
+      <speed type="burrow">7</speed>
+      <speed>5 m</speed>
+    </speeds>
+    <strikes/>
+    <spellList source="innate" tradition="divine" DD="32" attack="+24">
+      <rank rank="6">
+        <spells>
+          <spell>pétrification, pied sûr</spell>
+        </spells>
+      </rank>
+      <rank rank="5">
+        <spells>
+          <spell>guérison, localisation, mur de pierre, tempête d’armes</spell>
+        </spells>
+      </rank>
+      <rank rank="3">
+        <spells>
+          <spell spellSpecial="à volonté">cloué à terre</spell>
+        </spells>
+      </rank>
+      <rank rank="5" constant="TRUE">
+        <spells>
+          <spell>communication avec les pierres, langage universel</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special>
+        <name>Glisse à travers la terre</name>
+        <description>Un aeolaeka peut Creuser à travers n’importe quelle matière composée de terre, y compris la pierre� Il se déplace alors de sa pleine Vitesse de creuse- ment, sans laisser de tunnel ni de traces de son passage derrière lui�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Libérer la terre</name>
+        <traits>
+          <trait>concentration</trait>
+          <trait>divine</trait>
+          <trait>terre</trait>
+        </traits>
+        <description>� L’aeolaeka invoque un tourbillon de pierres et crée une avalanche de pierres sur une ligne de 18 m� Les créatures qui se trouvent sur la ligne d’effet subissent 10d6 dégâts contondants (jet de Réflexes DD 35)� La zone affectée devient un terrain difficile pendant 24 h au terme desquelles les pierres se désagrègent� L’aeolaeka ne peut plus Libérer la terre pen- dant 1d4 rounds�</description>
+      </special>
+      <special>
+        <name>Succès critique</name>
+        <description>La créature ne subit aucun dégât�</description>
+      </special>
+      <special>
+        <name>Succès</name>
+        <description>La créature subit la moitié des dégâts�</description>
+      </special>
+      <special>
+        <name>Échec</name>
+        <description>La créature subit la totalité des dégâts et se retrouve jetée à terre�</description>
+      </special>
+      <special>
+        <name>Échec critique</name>
+        <description>La créature subit le double des dégâts, est jetée à terre et se trouve immo- bilisée par les pierres (S’échapper DD 32)�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Statue</name>
+        <traits>
+          <trait>concentration</trait>
+        </traits>
+        <description>� L’aeolaeka ressemble en tout point à une statue jusqu’à sa prochaine action� Il bénéficie d’un résultat automatique de 45 à ses tests de Duperie et à ses DD pour se faire passer pour une statue�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

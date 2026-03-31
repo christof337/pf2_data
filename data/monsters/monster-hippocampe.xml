@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>HIPPOCAMPE</name>
+    <type>CRÉATURE</type>
+    <level>1</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>ANIMAL</trait>
+      <trait>AQUATIQUE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+6</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>9 m</range>
+        </sens>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+4</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+7</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+4,** Dex** +1,** Con** +4,** Int** −4,** Sag** +3,** Cha** +1</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>15</armorClass>
+    <saves/>
+    <health>24</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>queue</name>
+        <bonus>+7</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+4</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Retraite soudaine</name>
+        <description>L’hippocampe effectue une Frappe de queue puis Nage avec un bonus de circonstances de +3 m à sa Vitesse de nage� Il gagne un bonus de circonstances de +2 à sa CA contre les réactions déclenchées par ce déplacement�</description>
+      </special>
+      <special>
+        <name>Hippocampe géant</name>
+        <description>Vivant dans les océans les plus profonds, les hippocampes géants sont sou‑ vent considérés comme des êtres légendaires imaginés par les marins.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

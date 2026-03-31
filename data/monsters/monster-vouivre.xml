@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>VOUIVRE</name>
+    <type>CRÉATURE</type>
+    <level>6</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>DRAGON</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+13</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>9 m</range>
+        </sens>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+14</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+15</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+12</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+5" DEX="+2" CON="+4" INT="+0" WIS="+3" CHA="+0"/>
+    <armorClass>24</armorClass>
+    <saves REF="+12" FOR="+16" WIL="+13"/>
+    <health>95</health>
+    <immunities>
+      <immunity>paralysé</immunity>
+      <immunity>sommeil</immunity>
+    </immunities>
+    <speeds>
+      <speed>6 m</speed>
+      <speed type="fly">18 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>crocs +17, **Dégâts** 2d12+5 perforants **Corps à corps** 1 griffes +17, **Dégâts **2d8+5 tranchants plus Empoignade (p� 359) **Corps à corps** 1 dard</name>
+        <bonus>+15</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+5</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Élan fatal</name>
+        <description/>
+      </special>
+      <special type="activity" actions="1">
+        <name>Conditions</name>
+        <description>La vouivre a empoigné une créature au cours de ce tour en utilisant Piqué en puissance�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Piqué en puissance</name>
+        <traits>
+          <trait>déplacement</trait>
+        </traits>
+        <description>La vouivre Vole jusqu’à sa Vitesse de vol maximale et doit se déplacer en ligne droite d’au moins 6 m tout en réduisant son altitude d’au moins 3 m� Si elle termine son déplacement dans la zone d’allonge d’au moins un ennemi de sa taille ou plus petit, elle peut effec- tuer une Frappe de griffes contre lui� Si les griffes touchent, la vouivre peut, en tant qu’action gratuite, soit Empoigner automatiquement sa proie, soit la mettre à terre�</description>
+      </special>
+      <special>
+        <name>Venin de vouivre</name>
+        <traits>
+          <trait>poison</trait>
+        </traits>
+        <description>**Jet de sauvegarde** Vigueur DD 22 ; **Durée maximale** 6 rounds ;</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Stade 1</name>
+        <description>d6 dégâts de poison (1 round) ; **Stade 2** 3d6 dégâts de poison (1 round) ; **Stade 3** 4d6 dégâts de poison (1 round)</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

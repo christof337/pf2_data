@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>DRAKE DES RIVIÈRES</name>
+    <type>CRÉATURE</type>
+    <level>3</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>AMPHIBIE</trait>
+      <trait>DRAGON</trait>
+      <trait>EAU</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+9</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>9 m</range>
+        </sens>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+11</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+10</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+9</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+6</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+7</bonus>
+      </skill>
+    </skills>
+    <armorClass>17</armorClass>
+    <saves REF="+9" FOR="+11" WIL="+7"/>
+    <health>45</health>
+    <immunities>
+      <immunity>paralysie</immunity>
+      <immunity>sommeil</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>crocs +12, **Dégâts** 2d8+3 perforants **Corps à corps** 1 queue</name>
+        <bonus>+12</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+3</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Frénésie draconique</name>
+        <description>Le drake des rivières effectue une Frappes de crocs et deux Frappes de queue dans l’ordre qu’il veut�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Mucus corrosif</name>
+        <traits>
+          <trait>acide</trait>
+          <trait>primordiale</trait>
+        </traits>
+        <description>Le drake des rivières crache une boule de mucus corrosif qui traverse une distance maximale de 15 m avant de former une explosion de 3 m à l’impact� Les créatures dans la zone d’explosion subissent 4d6 dégâts d’acide (jet de Réflexes basique DD 19)� Celles qui échouent subissent également 1d6 dégâts d’acide persistants et un malus de statut de −1,5 m à leur Vitesse� Cette réduction de la Vitesse se termine avec la fin des dégâts d’acide persistants� Le drake des rivières ne peut utiliser de nouveau ce pouvoir avant 1d6 rounds�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Vitesse augmentée</name>
+        <traits>
+          <trait>déplacement</trait>
+        </traits>
+        <description>**Fréquence** trois fois par jour�</description>
+      </special>
+      <special>
+        <name>Drake des flammes</name>
+        <description>Les drakes des flammes vivent près des volcans et du magma, mais il n’est pas rare que certains s’aventurent dans des zones alentour comme des forêts ou des collines boisées. Leurs écailles ont souvent des tons rouges avec parfois une teinte noire et grise le long des bords de leurs ailes et sur le bout de leur queue. Afin de ne pas avoir à quitter leurs foyers volcaniques, les saccages de drakes des flammes vivent souvent, à contrecœur, près de clans de géants du feu.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

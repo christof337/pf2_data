@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>LINNORM DES GLACES</name>
+    <type>CRÉATURE</type>
+    <level>17</level>
+    <creatureTraits>
+      <trait type="size">GIGANTESQUE</trait>
+      <trait>DRAGON</trait>
+      <trait>FROID</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>aklo</language>
+      <language>draconique</language>
+      <language>féerique</language>
+    </languages>
+    <attributes STR="+9" DEX="+5" CON="+0" INT="+0" WIS="+6" CHA="+7"/>
+    <armorClass>41</armorClass>
+    <saves REF="+28" FOR="+32" WIL="+27" saveSpecial="bonus de statut +1 aux jets de sauvegarde contre la magie"/>
+    <health>330</health>
+    <immunities>
+      <immunity>froid</immunity>
+      <immunity>malédiction</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>sommeil</immunity>
+    </immunities>
+    <weaknesses>
+      <weakness>
+        <name>fer froid</name>
+        <value>15</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+34</bonus>
+        <traits>
+          <trait>allonge 7,5 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d12+17</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+34</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 6 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d8+17</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>queue</name>
+        <bonus>+34</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 7,5 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d6+17</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="primal" DD="38">
+      <rank rank="8" constant="TRUE">
+        <spells>
+          <spell>déplacement sans entrave</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Constriction</name>
+        <description>2d6+18 contondants, DD 38 (p� 359)</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Souffle de mucus glacé</name>
+        <traits>
+          <trait>froid</trait>
+          <trait>primordiale</trait>
+        </traits>
+        <description>� Le linnorm des glaces souffle un jet de mucus glacial dans un cône de 18 m qui inflige 15d6 dégâts de froid aux créatures dans la zone (jet de Réflexes basique DD 38)� Ce mucus colle à tout ce qu’il touche et se solidifie en une épaisse couche de glace� Si une créature rate son jet de sauvegarde, la glace l’immobilise jusqu’à ce qu’elle réussisse un test pour S’échapper ou qu’un allié Ouvre de force la gangue de glace (DD 34 dans les deux cas)� Au début de son tour, une créature encore immobilisée par la glace subit 4d6 dégâts de froid� Un tiers peut libérer la cible gelée en lui infligeant 20 dégâts de feu� Si rien n’interfère avec la glace, elle s’effrite au bout de 1 min� Une créature dotée du trait feu ne peut pas être gelée sur place à cause du souffle� Si une créature est gelée en plein vol, elle tombe, tandis que si elle nageait, elle remonte à la surface à une vitesse de 18 m par round� Le linnorm ne peut plus utiliser Souffle de mucus glacial pendant 1d4 rounds�</description>
+      </special>
+      <special>
+        <name>Venin de linnorm des glaces</name>
+        <traits>
+          <trait>froid</trait>
+          <trait>poison</trait>
+        </traits>
+        <description>; **Jet de sauvegarde** Vigueur DD 38 ; **Durée maximale** 10 rounds ; **Stade 1** 5d6 dégâts de froid et drainé 1 (1 round) ; **Stade 2** 7d6 dégâts de froid et drainé 2 (1 round)</description>
+      </special>
+      <special>
+        <name>Linnorm des lacs</name>
+        <description>Bien qu’il existe des linnorms plus puissants que lui, le linnorm des lacs aux multiples têtes est capable de semer une dévasta‑ tion d’une ampleur terrifiante.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>TYRANNOSAURE</name>
+    <type>CRÉATURE</type>
+    <level>10</level>
+    <creatureTraits>
+      <trait type="size">GIGANTESQUE</trait>
+      <trait>ANIMAL</trait>
+      <trait>DINOSAURE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+19</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>9 m</range>
+        </sens>
+        <sens>
+          <name>vision nocturne</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+15</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+24</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+8" DEX="+1" CON="+5" INT="+0" WIS="+3" CHA="+0"/>
+    <armorClass>29</armorClass>
+    <saves REF="+15" FOR="+21" WIL="+19"/>
+    <health>180</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+22</bonus>
+        <traits>
+          <trait>allonge 6 m</trait>
+          <trait>mortel d12</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d12+12</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>patte</name>
+        <bonus>+22</bonus>
+        <traits>
+          <trait>allonge 4,5 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d10+12</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Gober</name>
+        <traits>
+          <trait>attaque</trait>
+        </traits>
+        <description>� Moyenne, 3d6+8 contondants, Rupture 26 (p� 359)</description>
+      </special>
+      <special type="reaction">
+        <name>Immobilisation de la proie</name>
+        <trigger>Le tyrannosaure a réussi une attaque cri- tique sur une cible de Grande taille ou plus petite avec sa patte ;</trigger>
+        <effect>La créature touchée est mise à terre et le tyrannosaure utilise sa patte pour l’immobiliser� Tant que le dinosaure ne bouge pas de la position qu’il occupe, la créature immobilisée est empoignée� Le tyran- nosaure gagne un bonus de circons- tances de +2 pour attaquer la créature immobilisée mais il ne peut utiliser Gober sur sa cible que s’il l’a préalablement empoignée dans ses mâchoires�</effect>
+      </special>
+      <special type="activity" actions="3">
+        <name>Piétinement</name>
+        <description>Très Grande ou plus petite, patte, DD 29 (p� 360)</description>
+      </special>
+      <special>
+        <name>Projection</name>
+        <description/>
+      </special>
+      <special type="activity" actions="1">
+        <name>Conditions</name>
+        <description>Une créature est empoignée dans la mâchoire du tyranno- saure ;</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

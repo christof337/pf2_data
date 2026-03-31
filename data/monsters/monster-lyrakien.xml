@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>LYRAKIEN</name>
+    <type>CRÉATURE</type>
+    <level>1</level>
+    <creatureTraits>
+      <trait type="size">TRÈS PETITE</trait>
+      <trait>AZATA</trait>
+      <trait>CÉLESTE</trait>
+      <trait>SAINT</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+9</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+6</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+6</bonus>
+      </skill>
+      <skill>
+        <name>Représentation</name>
+        <bonus>+8</bonus>
+      </skill>
+    </skills>
+    <armorClass>17</armorClass>
+    <saves REF="+7" FOR="+4" WIL="+6"/>
+    <health>25</health>
+    <weaknesses>
+      <weakness>
+        <name>fer froid</name>
+        <value>3</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>7</speed>
+      <speed>5 m</speed>
+      <speed type="fly">15 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>poing</name>
+        <bonus>+7</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+          <trait>saint</trait>
+          <trait>magique</trait>
+          <trait>allonge 0 m</trait>
+        </traits>
+        <damages/>
+      </strike>
+      <strike type="ranged">
+        <name>rayon de lumière stellaire</name>
+        <bonus>+7</bonus>
+        <traits>
+          <trait>saint</trait>
+          <trait>lumière</trait>
+          <trait>portée 9 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d4</amount>
+            <damageType>d’esprit</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="divine" DD="17">
+      <rank rank="4">
+        <spells>
+          <spell>lire les présages</spell>
+        </spells>
+      </rank>
+      <rank rank="4" constant="TRUE">
+        <spells>
+          <spell>déplacement sans entrave</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Déflagration de lumière stellaire</name>
+        <traits>
+          <trait>saint</trait>
+          <trait>lumière</trait>
+        </traits>
+        <description>� Le lyrakien libère une déflagration de lumière stellaire sainte dans une émanation de 1,5 m� Les ennemis dans la zone d’effet subissent 2d6 dégâts d’esprit (jet de Réflexes basique DD 17)� Le lyrakien doit ensuite attendre 1d4 rounds pour pouvoir utiliser de nouveau Déflagration de lumière stellaire ou son attaque à distance rayon de lumière stellaire�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

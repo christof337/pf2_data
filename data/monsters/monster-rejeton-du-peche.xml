@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>REJETON DU PÉCHÉ</name>
+    <type>CRÉATURE</type>
+    <level>2</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>ABERRATION</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+9</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+9</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+6</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+4, **Dex **+3, **Con **+4, **Int **+0, **Sag **+2, **Cha **+1</description>
+      </special>
+      <special>
+        <name>Objet</name>
+        <description>une arme déterminée par son péché</description>
+      </special>
+      <special>
+        <name>Péché</name>
+        <description>Un rejeton du péché gagne une compétence supplémentaire en fonc- tion de son péché, ainsi qu’une arme qui reflète les préférences de leurs anciens créateurs� Vous trouverez les sept péchés ainsi que les avantages qu’ils confèrent à un rejeton du péché dans la section « Les péchés des rejetons du péché »�</description>
+      </special>
+      <special>
+        <name>Perception du péché</name>
+        <description>Un rejeton du péché peut sentir les créatures qui portent son péché� Ce pouvoir fonctionne comme l’odorat� Le MJ détermine à quelles créatures ce pouvoir peut s’appliquer�</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>16</armorClass>
+    <saves REF="+9" FOR="+10" WIL="+6"/>
+    <health>30</health>
+    <immunities>
+      <immunity>contrôlé</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+10</bonus>
+        <traits>
+          <trait>agile</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8+4</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>griffes +10, **Dégâts** 1d6+4 tranchants</description>
+      </special>
+      <special>
+        <name>Morsure du péché</name>
+        <traits>
+          <trait>arcane</trait>
+          <trait>émotion</trait>
+          <trait>mental</trait>
+        </traits>
+        <description>� Une créature mordue par un rejeton du péché doit faire un jet de Volonté DD 18 pour lutter contre les pensées pécheresses qui l’assaillent�</description>
+      </special>
+      <special>
+        <name>Succès critique</name>
+        <description>La créature n’est pas affectée�</description>
+      </special>
+      <special>
+        <name>Succès</name>
+        <description>La créature est malade 1�</description>
+      </special>
+      <special>
+        <name>Échec</name>
+        <description>La créature est malade 2�</description>
+      </special>
+      <special>
+        <name>Échec critique</name>
+        <description>La créature est malade 2 et subit un effet supplémentaire déterminé par le péché du rejeton du péché�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GECKO GÉANT</name>
+    <type>CRÉATURE</type>
+    <level>1</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <interactionAbilities>
+      <special>
+        <name>Compétences</name>
+        <description>Acrobaties +8, Athlétisme +5 (+9 pour Escalader), Discrétion +6</description>
+      </special>
+      <special>
+        <name>For</name>
+        <description>+2, **Dex **+3, **Con **+1, **Int **–4, **Sag **+2, **Cha **–2</description>
+      </special>
+      <special>
+        <name>Extraordinaire grimpeur</name>
+        <description>Les pattes du gecko géant lui permettent de grimper sur n’importe quelle surface, aussi lisse ou abrupte soit-elle� Si un gecko géant fait un échec critique sur un test d’Athlétisme pour grimper, il le remplace par un simple échec�</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>16</armorClass>
+    <saves REF="+10" FOR="+6" WIL="+5"/>
+    <health>20</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special type="reaction">
+        <name>Vitesses</name>
+        <description>m, escalade 9 m</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>mâchoires, +8, **Dégâts **1d8+2 perforants</description>
+      </special>
+      <special>
+        <name>Varan géant</name>
+        <description>Sous ses airs imposants et lourds, le varan géant est un prédateur impitoyable d’une vivacité surprenante. Il tend une embuscade à sa proie et jaillit de sa cachette pour refermer ses puissantes mâchoires sur elle. Sa salive est venimeuse, ce qui lui permet d’abattre des proies plus grandes que ce qu’il peut facilement traîner dans sa gueule. Un varan géant dépasse les 4 m de long, queue comprise, et pèse dans les 160 kg. Son corps est normalement d’un brun sombre avec des taches jaunes ou vertes. En guise de nid, il creuse un trou profond où se cacher. Ce terrier sert de refuge et de zone d’embuscade d’où attaquer des proies plus grandes comme un daim, un sanglier ou un même un humanoïde. Un varan géant peut absorber l’équivalent de son propre poids en un seul repas, ses mâchoires aux articulations très laxes lui permettant d’engloutir des proies d’une taille surprenante.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

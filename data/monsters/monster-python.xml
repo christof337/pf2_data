@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>PYTHON</name>
+    <type>CRÉATURE</type>
+    <level>1</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+6</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>9 m</range>
+        </sens>
+        <sens>
+          <name>vision nocturne</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+6</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+6</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+6</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+4</bonus>
+      </skill>
+    </skills>
+    <armorClass>15</armorClass>
+    <saves REF="+10" FOR="+8" WIL="+4"/>
+    <health>20</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special type="reaction">
+        <name>Resserrer les anneaux</name>
+        <trigger>Une créature empoi- gnée ou entravée par un python tente de S’échapper ;</trigger>
+        <effect>Le DD du test pour S’échapper est augmenté de 2�</effect>
+      </special>
+      <special>
+        <name>Vitesses</name>
+        <description>6 m, escalade 6 m, nage 6 m</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>mâchoires +8, **Dégâts** 1d8+3 perforants plus Empoignade (p� 359)</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Constriction</name>
+        <description>1d8 contondants, DD 17 (p� 359)</description>
+      </special>
+      <special>
+        <name>Enrouler les anneaux</name>
+        <description/>
+      </special>
+      <special type="activity" actions="1">
+        <name>Conditions</name>
+        <description>Le python a empoigné ou entravé dans ses mâchoires une créature de taille Moyenne ou inférieure ;</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

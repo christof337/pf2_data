@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>AIGLE GÉANT</name>
+    <type>CRÉATURE</type>
+    <level>3</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>BÊTE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>sussuran</language>
+      <language>féerique (incapable
+                                                    de parler)</language>
+    </languages>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+11</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+8</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+3" DEX="+4" CON="+1" INT="+0" WIS="+2" CHA="+2"/>
+    <armorClass>17</armorClass>
+    <saves REF="+11" FOR="+6" WIL="+9"/>
+    <health>45</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>bec +12, **Dégâts** 2d8+5 perforants **Corps à corps** 1 serres</name>
+        <bonus>+12</bonus>
+        <traits>
+          <trait>agile</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d10+5</amount>
+            <damageType>tran- chants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Piqué de l’aigle</name>
+        <description>L’aigle géant Vole jusqu’à deux fois sa Vitesse en vol en ligne droite et en réduisant son altitude d’au moins 3 m, puis il effectue une Frappe de serres�</description>
+      </special>
+      <special>
+        <name>Transport</name>
+        <description>Un aigle géant peut Voler à mi-Vitesse lors- qu’il a une créature empoignée ou entravée dans ses serres et qu’il la transporte avec lui�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GRAND REQUIN BLANC</name>
+    <type>CRÉATURE</type>
+    <level>4</level>
+    <creatureTraits>
+      <trait type="size">TRÈS GRANDE</trait>
+      <trait>ANIMAL</trait>
+      <trait>AQUATIQUE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+11</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>30 m</range>
+        </sens>
+        <sens>
+          <name>perception du sang</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+14</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+12</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+9</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+6, **Dex **+2, **Con **+4, **Int **–4, **Sag **+1, **Cha **–4</description>
+      </special>
+      <special>
+        <name>Perception du sang</name>
+        <description>Un requin peut sentir du sang dans l’eau à une distance de 1,5 km�</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>21</armorClass>
+    <saves REF="+10" FOR="+12" WIL="+9"/>
+    <health>60</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special>
+        <name>Vitesse</name>
+        <description>nage 12 m</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>mâchoires +14, **Dégâts** 1d12+8 perforants</description>
+      </special>
+      <special>
+        <name>Attaque féroce</name>
+        <description/>
+      </special>
+      <special type="activity" actions="1">
+        <name>Conditions</name>
+        <description>Le requin touche avec une Frappe de mâchoires au cours de l’action la plus récente de son tour ;</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Brèche</name>
+        <description>Le requin Nage sur une distance maximale égale à sa Vitesse de nage, puis Bondit verticalement hors de l’eau jusqu’à une hauteur de 7,5 m, et porte une Frappe contre une créa- ture à n’importe quel moment de son saut (il peut ainsi attaquer une créature qui se trouve jusqu’à 9 m au-dessus de la surface de l’eau)� Après la Frappe, le requin retombe dans l’eau�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Morsure éclair</name>
+        <description>Le requin Nage sur une distance maximale égale à la moitié de sa Vitesse de nage, porte une Frappe de mâchoires, puis Nage de nouveau sur une distance maximale égale à la moitié de sa Vitesse de nage� La Frappe inflige la moitié des dégâts�</description>
+      </special>
+      <special>
+        <name>Mégalodon</name>
+        <description>Les mégalodons sont d’immenses requins préhistoriques qui se distinguent par leur taille, leur force et leur férocité et qui écument les eaux profondes et littorales pour tenter d’assouvir leur énorme appétit. La présence d’un mégalodon a un effet indé‑ niable sur l’écosystème aquatique qui l’abrite.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

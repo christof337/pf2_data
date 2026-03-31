@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>FÉLIDE MUSARD</name>
+    <type>CRÉATURE</type>
+    <level>1</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>FÉLIDE</trait>
+      <trait>HUMANOÏDE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>amurrun</language>
+      <language>commun</language>
+    </languages>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+6</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Nature</name>
+        <bonus>+4</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+4</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+3, **Dex **+4, **Con **+1, **Int **–1, **Sag **+1, **Cha **+1</description>
+      </special>
+      <special>
+        <name>Objets</name>
+        <description>dague (3), grande hache</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>17</armorClass>
+    <saves/>
+    <health>17</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>grande hache</name>
+        <bonus>+8</bonus>
+        <traits>
+          <trait>balayage</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d12+3</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>dague</name>
+        <bonus>+9</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+          <trait>polyvalent T</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+3</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>dague</name>
+        <bonus>+9</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>jet 3 m</trait>
+          <trait>polyvalent T</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+3</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Charge soudaine</name>
+        <description>Le félide Marche rapidement deux fois� S’il termine son déplacement à portée de corps à corps d’au moins un ennemi, il peut Frapper au corps à corps�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

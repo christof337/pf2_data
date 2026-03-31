@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>NUCKELAVEE</name>
+    <type>CRÉATURE</type>
+    <level>9</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>AMPHIBIE</trait>
+      <trait>FÉE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+19</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+18</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+19</bonus>
+      </skill>
+      <skill>
+        <name>Nature</name>
+        <bonus>+16</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+16</bonus>
+      </skill>
+    </skills>
+    <armorClass>28</armorClass>
+    <saves REF="+16" FOR="+19" WIL="+20"/>
+    <health>190</health>
+    <immunities>
+      <immunity>maladie</immunity>
+      <immunity>poison</immunity>
+    </immunities>
+    <weaknesses>
+      <weakness>
+        <name>fer froid</name>
+        <value>10</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>*épée bâtarde*</name>
+        <bonus>+21</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+          <trait>deux mains d12</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+12</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>poison et mortéclat</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+20</bonus>
+        <traits>
+          <trait>agile</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+12</amount>
+            <damageType>perforants</damageType>
+          </damage>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>de poison et mortéclat</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="primal" DD="28">
+      <rank rank="5">
+        <spells>
+          <spell>contrôle de l’eau</spell>
+        </spells>
+      </rank>
+      <rank rank="3">
+        <spells>
+          <spell>nuage toxique</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special>
+        <name>Rituel</name>
+        <description>DD 28 ; *flétrissement végétal*</description>
+      </special>
+      <special>
+        <name>Mortéclat</name>
+        <traits>
+          <trait>maladie</trait>
+        </traits>
+        <description>� La cible ne peut pas se remettre de l’état fatigué causé par mortéclat tant que la maladie n’est pas soignée� Mortéclat prend le trait virulent contre les animaux et les plantes ; **Jet de sauvegarde** Vigueur DD 28 ; **Stade 1** Porteur sans effet négatif (1 jour) ; **Stade 2** drainé 1 et fatigué (1 jour) ; **Stade 3** drainé 2 et fatigué (1 jour) ; **Stade 4** mort</description>
+      </special>
+      <special type="activity" actions="3">
+        <name>Piétinement</name>
+        <description>Moyenne ou plus petite, sabot, DD 28 (p� 360)</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Souffle de pestilence</name>
+        <description>(maladie, poison, primordiale)� Le nuckelavee libère un souffle immonde dans un cône de 9 m, infligeant 8d6 dégâts de néant à toutes les créatures vivantes dans la zone avec un jet de Vigueur basique DD 28� Une créature qui échoue subit également 2d6 dégâts persistants de saignement� Le nuckelavee ne peut plus utiliser son souffle avant 1d4 rounds�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

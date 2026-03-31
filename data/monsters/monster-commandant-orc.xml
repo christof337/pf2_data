@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>COMMANDANT ORC</name>
+    <type>CRÉATURE</type>
+    <level>2</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>HUMANOÏDE</trait>
+      <trait>ORC</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>commun</language>
+      <language>orquien</language>
+    </languages>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+6</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+5</bonus>
+      </skill>
+    </skills>
+    <armorClass>19</armorClass>
+    <saves REF="+6" FOR="+7" WIL="+7"/>
+    <health>32</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>massue</name>
+        <bonus>+10</bonus>
+        <traits>
+          <trait>pousser</trait>
+          <trait>prise d’élan</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d10+4</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>poing</name>
+        <bonus>+10</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>pousser</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+4</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>javeline</name>
+        <bonus>+8</bonus>
+        <traits>
+          <trait>jet 9 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+4</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Cri de guerre</name>
+        <traits>
+          <trait>audible</trait>
+          <trait>concentration</trait>
+          <trait>émotion</trait>
+          <trait>mental</trait>
+        </traits>
+        <description>� En beuglant puissamment, le commandant orc se confère, ainsi qu’à tous les orcs situés dans un rayon de 18 m, un bonus de statut de +1 à leurs jets d’attaque et de dégâts jusqu’au début du prochain tour du commandant orc�</description>
+      </special>
+      <special>
+        <name>Montagnard dromaar</name>
+        <description>Les montagnards dromaars sont des éclaireurs demi‑orcs endurcis qui guident souvent un groupe de pillage ou de reconnaissance lors de dangereuses expéditions. Ceux qui guident avec succès de nombreuses expéditions peuvent accéder à un poste important au sein de leur forteresse et ceux qui inspirent la loyauté peuvent même revendiquer leur propre forteresse.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

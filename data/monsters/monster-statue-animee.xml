@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>STATUE ANIMÉE</name>
+    <type>CRÉATURE</type>
+    <level>3</level>
+    <creatureTraits>
+      <trait type="size"/>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <armorClass>19</armorClass>
+    <saves REF="+5" FOR="+12" WIL="+5"/>
+    <health>35</health>
+    <immunities>
+      <immunity>attaques non létales</immunity>
+      <immunity>condamné</immunity>
+      <immunity>drainé</immunity>
+      <immunity>effets de mort</immunity>
+      <immunity>esprit</immunity>
+      <immunity>fati- gué</immunity>
+      <immunity>guérison</immunity>
+      <immunity>inconscient</immunity>
+      <immunity>malade</immunity>
+      <immunity>maladie</immunity>
+      <immunity>mental</immunity>
+      <immunity>néant</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>saignement</immunity>
+      <immunity>vitalité</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>poing</name>
+        <bonus>+11</bonus>
+        <traits>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8+6</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Statue animée géante</name>
+        <description>La taille et la puissance des statues animées géantes les rend particulièrement utiles dans de grands espaces, comme de vastes souterrains, de grandes pièces ou à l’exté‑ rieur. Les tâches au‑delà de leurs capacités nécessitent cependant d’avoir recours à une créature artificielle plus évoluée.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

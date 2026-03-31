@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GUERRIER BOURBIÉRIN</name>
+    <type>CRÉATURE</type>
+    <level>2</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>AMPHIBIE</trait>
+      <trait>BOURBIÉRIN</trait>
+      <trait>HUMANOÏDE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+6</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+5</bonus>
+      </skill>
+    </skills>
+    <armorClass>17</armorClass>
+    <saves/>
+    <health>38</health>
+    <speeds speedSpecial="passage dans les marais">
+      <speed>6 m</speed>
+      <speed type="swim">7</speed>
+      <speed>5 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>gourdin +10, **Dégâts** 1d6+6 contondants</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

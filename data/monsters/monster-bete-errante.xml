@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>BÊTE ERRANTE</name>
+    <type>CRÉATURE</type>
+    <level>8</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>ERRANT</trait>
+      <trait>ESPRIT</trait>
+      <trait>ÉTHÉRÉ</trait>
+      <trait>INTANGIBLE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+16</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+18</bonus>
+      </skill>
+      <skill>
+        <name>Larcin</name>
+        <bonus>+18</bonus>
+      </skill>
+      <skill>
+        <name>Occultisme</name>
+        <bonus>+14</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>–5, **Dex **+6, **Con **+1, **Int **+0, **Sag **+4, **Cha **+6</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>En équilibre sur la ligne éthérée</name>
+        <description>Comme le chevalier errant�</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>26</armorClass>
+    <saves REF="+18" FOR="+13" WIL="+16" saveSpecial="malus de statut de −1 à tous les jets de sauvegarde contre les effets de mort"/>
+    <health>120</health>
+    <immunities>
+      <immunity>maladie</immunity>
+      <immunity>paralysie</immunity>
+      <immunity>poison</immunity>
+      <immunity>précision</immunity>
+      <immunity>saignement</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>corne d’errant</name>
+        <bonus>+18</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+8</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Sorts innés occultes</name>
+        <description>* *DD 28, attaque +20 ; **4**e* arsenal fantomatique, douleur fantôme*,* sommeil *; **Tours de magie (4**e**) ***hébétement*,* projec‑ tile télékinésique*</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Empoigner un objet</name>
+        <description>La bête errante tente de Dérober un objet d’un Encombrement maximal de 1 à une créature, même si celle-ci est en phase de combat, mais il faut que l’objet ne soit pas activement utilisé� Si elle réussit, elle porte l’objet par télékinésie�</description>
+      </special>
+      <special>
+        <name>Toucher de l’errant</name>
+        <description>Comme le chevalier errant�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>IFRIT</name>
+    <type>CRÉATURE</type>
+    <level>9</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>ÉLÉMENTAIRE</trait>
+      <trait>FEU</trait>
+      <trait>GÉNIE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>commun</language>
+      <language>pyrique</language>
+      <langSpecial>
+        <spell>langage universel</spell>
+      </langSpecial>
+    </languages>
+    <skills>
+      <skill>
+        <name>Arcanes</name>
+        <bonus>+14</bonus>
+      </skill>
+      <skill>
+        <name>Artisanat</name>
+        <bonus>+14</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+22</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+17</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+19</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+19</bonus>
+      </skill>
+      <skill>
+        <name>Société</name>
+        <bonus>+14</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+5, **Dex **+3, **Con **+4, **Int **+1, **Sag **+2, **Cha **+4</description>
+      </special>
+      <special>
+        <name>Objets</name>
+        <description>*cimeterre de frappe +1, *cuirasse</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>28</armorClass>
+    <saves/>
+    <health>175</health>
+    <weaknesses>
+      <weakness>
+        <name>froid</name>
+        <value>10</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>*cimeterre *+21 (allonge 3 m, balayage, feu, magique, percutant +2), **Dégâts **2d6+11 tranchants plus 2d6 de feu **Corps à corps** 1 poing</name>
+        <bonus>+20</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 3 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+11</amount>
+            <damageType>contondants</damageType>
+          </damage>
+          <damage>
+            <amount>2d6</amount>
+            <damageType>de feu</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="arcane" DD="27" attack="+19">
+      <rank rank="7">
+        <spells>
+          <spell>téléportation interpla‑ naire (vers le plan astral, les plans élémentaires ou l’Univers uni- quement)</spell>
+        </spells>
+      </rank>
+      <rank rank="4">
+        <spells>
+          <spell>boule de feu, invisibilité (×2)</spell>
+        </spells>
+      </rank>
+      <rank rank="5" constant="TRUE">
+        <spells>
+          <spell>langage universel</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Ailes de flammes</name>
+        <traits>
+          <trait>arcanique</trait>
+          <trait>feu</trait>
+        </traits>
+        <description>� L’ifrit fait pousser des ailes de flammes dans son dos� Il gagne une Vitesse de vol de 10,5 m pen- dant 1 min� Les flammes créent également une aura dans une éma- nation de 1,5 m autour de l’ifrit� Toute créature qui termine son tour dans l’aura subit 2d6 dégâts de feu (jet de Réflexes basique DD 25)�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Changement de forme</name>
+        <traits>
+          <trait>arcanique</trait>
+          <trait>concentration</trait>
+          <trait>métamorphose</trait>
+        </traits>
+        <description>� L’ifrit se transforme en un élémentaire de feu ou un reptile de taille Petite ou Moyenne, comme un serpent (p� 358)� Cela n’affecte pas ses statis- tiques, mais peut changer le type de dégâts de ses Frappes�</description>
+      </special>
+      <special>
+        <name>Empoignade en combat</name>
+        <description/>
+      </special>
+      <special type="activity" actions="1">
+        <name>Conditions</name>
+        <description>L’ifrit dispose d’une main libre ;</description>
+      </special>
+      <special>
+        <name>Poigne brûlante</name>
+        <traits>
+          <trait>feu</trait>
+        </traits>
+        <description>� Quand l’ifrit empoigne ou entrave une créature, celle-ci subit 2d6 dégâts de feu, puis 2d6 dégâts de feu à la fin de chacun de ses tours jusqu’à ce qu’elle soit libérée�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

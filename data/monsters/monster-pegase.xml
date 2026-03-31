@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>PÉGASE</name>
+    <type>CRÉATURE</type>
+    <level>3</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>BÊTE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+11</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+10</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+3" DEX="+4" CON="+2" INT="+0" WIS="+2" CHA="+3"/>
+    <armorClass>18</armorClass>
+    <saves REF="+11" FOR="+9" WIL="+7"/>
+    <health>55</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>sabot +10, **Dégâts **1d8+5 contondants **Corps à corps** 1 aile</name>
+        <bonus>+10</bonus>
+        <traits>
+          <trait>agile</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+5</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Chevauchée facilitée</name>
+        <description/>
+      </special>
+      <special type="activity" actions="1">
+        <name>Conditions</name>
+        <description>Le pégase Vole sans cavalier�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Galop</name>
+        <description>Le pégase utilise deux actions de déplacement, chacune d’elles pouvant être Marcher rapidement ou Vol� Il bénéficie d’un bonus de circonstances de +6 m à ses Vitesses au cours d’un Galop�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

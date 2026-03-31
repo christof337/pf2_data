@@ -1,0 +1,203 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>DRAGON EMPYRÉEN VÉNÉRABLE</name>
+    <type>CRÉATURE</type>
+    <level>19</level>
+    <creatureTraits>
+      <trait type="size">GIGANTESQUE</trait>
+      <trait>DIVIN</trait>
+      <trait>DRAGON</trait>
+      <trait>SAINT</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+35</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>18 m</range>
+        </sens>
+        <sens>
+          <name>perception de la vie</name>
+          <precision>imprécis</precision>
+          <range>9 m</range>
+          <source>p� 360</source>
+        </sens>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages>
+      <language>chthonien</language>
+      <language>commun</language>
+      <language>diabolique</language>
+      <language>draconique</language>
+      <language>empyréen</language>
+      <language>féerique</language>
+      <language>nécril</language>
+      <langSpecial>
+        <spell>lan‑ gage universel</spell>
+      </langSpecial>
+    </languages>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+31</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+35</bonus>
+      </skill>
+      <skill>
+        <name>Connaissances sur le Paradis</name>
+        <bonus>+32</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+31</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+31</bonus>
+      </skill>
+      <skill>
+        <name>Médecine</name>
+        <bonus>+35</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+32</bonus>
+      </skill>
+      <skill>
+        <name>Société</name>
+        <bonus>+30</bonus>
+      </skill>
+    </skills>
+    <armorClass>43</armorClass>
+    <saves REF="+31" FOR="+31" WIL="+35" saveSpecial="bonus de statut de +2 à tous les jets de sauvegarde contre la magie divine"/>
+    <health>350</health>
+    <immunities>
+      <immunity>terreur</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>sommeil</immunity>
+    </immunities>
+    <weaknesses>
+      <weakness>
+        <name>impie</name>
+        <value>15</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+35</bonus>
+        <traits>
+          <trait>allonge 6 m</trait>
+          <trait>magique</trait>
+          <trait>saint</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>4d10+16</amount>
+            <damageType>perforants</damageType>
+          </damage>
+          <damage>
+            <amount>1d8</amount>
+            <damageType>d’esprit</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+35</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 4,5 m</trait>
+          <trait>magique</trait>
+          <trait>saint</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>4d8+16</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+          <damage>
+            <amount>1d8</amount>
+            <damageType>d’esprit</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>queue</name>
+        <bonus>+33</bonus>
+        <traits>
+          <trait>allonge 7,5 m</trait>
+          <trait>magique</trait>
+          <trait>saint</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>4d10+16</amount>
+            <damageType>contondants</damageType>
+          </damage>
+          <damage>
+            <amount>1d8</amount>
+            <damageType>d’esprit</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>aile</name>
+        <bonus>+33</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 6 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d10+16</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+          <damage>
+            <amount>1d8</amount>
+            <damageType>d’esprit</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="divine" DD="41" attack="+33">
+      <rank rank="9">
+        <spells>
+          <spell>guérison</spell>
+        </spells>
+      </rank>
+      <rank rank="7">
+        <spells>
+          <spell spellSpecial="à volonté">lumière sainte , téléportation interplanaire (à volonté, soi uniquement)</spell>
+        </spells>
+      </rank>
+      <rank rank="5" constant="TRUE">
+        <spells>
+          <spell>langage universel</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Frénésie draconique</name>
+        <description>Comme le jeune dragon empyréen�</description>
+      </special>
+      <special>
+        <name>Impulsion draconique</name>
+        <description>Comme le jeune dragon empyréen�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

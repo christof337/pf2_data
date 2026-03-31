@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>VARAN GÉANT</name>
+    <type>CRÉATURE</type>
+    <level>2</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <armorClass>16</armorClass>
+    <saves REF="+8" FOR="+9" WIL="+5"/>
+    <health>36</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special type="reaction">
+        <name>Serre entre les dents</name>
+        <trigger>Une créature empoignée dans les mâchoires du varan géant rate son test pour S’échapper�</trigger>
+        <effect>Les mâchoires du varan géant infligent 1d6 dégâts perforants et la créature ayant déclenché l’effet est exposée au venin du varan�</effect>
+      </special>
+      <special type="reaction">
+        <name>Vitesses</name>
+        <description>m, nage 9 m</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>mâchoires +11, **Dégâts **1d10+3 perforants plus Empoignade (p� 359) et venin de varan</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Charge soudaine</name>
+        <description>Le varan Marche rapidement deux fois puis effectue une Frappe de mâchoires� Si le varan se déplace à au moins 6 m de sa position de départ, il gagne un bonus de circonstances de +2 sur ce jet d’attaque�</description>
+      </special>
+      <special>
+        <name>Venin de varan</name>
+        <traits>
+          <trait>poison</trait>
+        </traits>
+        <description>**Jet de sauvegarde** Vigueur DD 17 ; **Durée maximale** 6 rounds ; **Stade 1** affaibli 1 (1 round) ; **Stade 2** 1d6 de poison et affaibli 2 (1 round)</description>
+      </special>
+      <special>
+        <name>Lézard à collerette géant</name>
+        <description>Ces immenses lézards originaires des savanes et forêts tropicales représentent un danger mortel pour les voyageurs sans méfiance. Quand ils ne sont pas en train de dormir ou de traquer une proie, ils passent des heures à se dorer au soleil. Les explo‑ rateurs les confondent parfois avec des dragons à cause de leur grande taille, de leur collerette élaborée (que l’on peut prendre pour des ailes quand ils la déploient en signe d’agressivité ou de domination) et des féroces sifflements qu’ils émettent pour effrayer les créatures trop grosses pour qu’ils les mangent. Un lézard à collerette géant se nourrit principalement d’arthro‑ podes et autres invertébrés hypertrophiés, mais ils n’hésitent pas à diversifier leur menu avec des vertébrés, y compris d’autres lézards, des singes et à peu près tout ce qui tient dans leur gueule, même des humanoïdes. Bien que le lézard à collerette géant soit capable de brèves pointes de vitesse, il reste normalement parfaitement immobile lorsqu’il chasse, attendant qu’une proie passe à portée.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

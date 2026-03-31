@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GRIFFON</name>
+    <type>CRÉATURE</type>
+    <level>4</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>ANIMAL</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+11</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+11</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+10</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+9</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+4" DEX="+3" CON="+3" INT="+0" WIS="+1" CHA="+2"/>
+    <armorClass>21</armorClass>
+    <saves REF="+13" FOR="+13" WIL="+7"/>
+    <health>60</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>bec</name>
+        <bonus>+14</bonus>
+        <traits>
+          <trait>mortel d10</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+4</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>serres</name>
+        <bonus>+14</bonus>
+        <traits>
+          <trait>agile</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+4</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>aile</name>
+        <bonus>+14</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+4</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Bond</name>
+        <description>Le griffon Marche rapidement et effectue une Frappe de serres à la fin de son déplacement� S’il commence son action en étant caché, il le reste jusqu’après l’attaque�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Cri régalien</name>
+        <traits>
+          <trait>audible</trait>
+          <trait>émotion</trait>
+          <trait>mental</trait>
+          <trait>terreur</trait>
+        </traits>
+        <description>� Le griffon pousse un cri qui se transforme en un rugissement terrifiant� Chaque créature dans une émana- tion de 18 m doit effectuer un jet de Volonté DD 20� Quel que soit le résultat, les créatures sont immunisées contre le Cri régalien de tous les griffons pendant 10 min�</description>
+      </special>
+      <special>
+        <name>Succès critique</name>
+        <description>La créature n’est pas affectée�</description>
+      </special>
+      <special>
+        <name>Succès</name>
+        <description>La créature est effrayée 1�</description>
+      </special>
+      <special>
+        <name>Échec</name>
+        <description>La créature est effrayée 2� Les animaux sont ralentis 1 tant qu’ils restent effrayés�</description>
+      </special>
+      <special>
+        <name>Échec critique</name>
+        <description>La créature est effrayée 3� Les animaux sont paralysés tant qu’ils restent effrayés�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Frappes en vol</name>
+        <description>Le griffon Vole jusqu’à sa Vitesse maximale et effectue deux Frappes de serres à n’importe quel moment durant son déplacement� Chaque Frappe doit cibler une créature différente� Les attaques subissent le malus normal d’attaques multiples�</description>
+      </special>
+      <special>
+        <name>LES ALCES</name>
+        <description>Les griffons dépourvus d’ailes, appelés des alces, sont le résultat d’une mutation rare� Au sein d’une couvée de griffons ailés, l’alce est généralement considéré comme l’avorton, aussi voit-on peu de ces rejetons dans la nature� Ils sont toutefois gardés et élevés en captivité pour en faire des montures exotiques relativement abordables� Un alce à une Vitesse au sol de 10,5 m� Il perd sa Vitesse de vol et ses Frappes en vol� [[PAGE 195]]</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

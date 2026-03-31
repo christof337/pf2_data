@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>JEUNE DRAGON CORNU</name>
+    <type>CRÉATURE</type>
+    <level>8</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>AMPHIBIE</trait>
+      <trait>DRAGON</trait>
+      <trait>PRIMORDIALE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+16</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>18 m</range>
+        </sens>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <armorClass/>
+    <saves/>
+    <health/>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+  </monster>
+</monsters>

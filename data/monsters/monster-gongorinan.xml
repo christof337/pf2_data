@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GONGORINAN</name>
+    <type>CRÉATURE</type>
+    <level>11</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>FIÉLON</trait>
+      <trait>IMPIE</trait>
+      <trait>QLIPPOTH</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+20</bonus>
+      <senses>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+23</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+23</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+21</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+21</bonus>
+      </skill>
+    </skills>
+    <armorClass>31</armorClass>
+    <saves REF="+21" FOR="+24" WIL="+20"/>
+    <health>205</health>
+    <immunities>
+      <immunity>contrôlé</immunity>
+      <immunity>terreur</immunity>
+    </immunities>
+    <speeds speedSpecial="*déplacement sans entrave*">
+      <speed>12 m</speed>
+      <speed type="climb">12 m</speed>
+      <speed type="fly">12 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>*gourdin* +24, **Dégâts** 2d6+9 contondants plus rejet des outils **Corps à corps** 1 pinces</name>
+        <bonus>+23</bonus>
+        <traits>
+          <trait>impie</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d10+9</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+          <damage>
+            <amount>2d6</amount>
+            <damageType>mentaux et Empoignade (p� 359)</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>tentacule</name>
+        <bonus>+23</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 3 m</trait>
+          <trait>impie</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+9</amount>
+            <damageType>conton- dants</damageType>
+          </damage>
+          <damage>
+            <amount>2d6</amount>
+            <damageType>mentaux</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>dard</name>
+        <bonus>+23</bonus>
+        <traits>
+          <trait>impie</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+9</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="occult" DD="30">
+      <rank rank="6">
+        <spells>
+          <spell>pétrification, transformation infortunée</spell>
+        </spells>
+      </rank>
+      <rank rank="3">
+        <spells>
+          <spell spellSpecial="à volonté">symbiose minérale</spell>
+        </spells>
+      </rank>
+      <rank rank="4" constant="TRUE">
+        <spells>
+          <spell>déplacement sans entrave</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Démonstration inquiétante</name>
+        <traits>
+          <trait>concentration</trait>
+          <trait>mental</trait>
+          <trait>occulte</trait>
+          <trait>visuel</trait>
+        </traits>
+        <description>� Le gongorinan ouvre sa gueule pour y révéler les formes qui s’y cachent poussant les observateurs à s’interroger sur leur propre corps� Toute créature dans une émanation de 9 m doit faire un jet de Volonté DD 30� Ensuite, elle est immunisée contre la Démonstration inquiétante pendant 1 min�</description>
+      </special>
+      <special>
+        <name>Succès critique</name>
+        <description>La créature n’est pas affectée�</description>
+      </special>
+      <special>
+        <name>Succès</name>
+        <description>La créature est maladroite 1 pendant 1 round�</description>
+      </special>
+      <special>
+        <name>Échec critique</name>
+        <description>La créature est maladroite 2 et ralentie 1 pendant 1 round�</description>
+      </special>
+      <special>
+        <name>Échec critique</name>
+        <description>Comme l’échec, mais pendant 1 min�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Membres douloureux</name>
+        <description>Le gongorinan effectue jusqu’à quatre Frappes contre dif- férentes cibles, chacune utilisant un membre différent� Chaque Frappe compte pour son malus d’attaques multiples, mais ce malus n’augmente qu’une fois toutes les attaques effectuées�</description>
+      </special>
+      <special>
+        <name>Rejet des outils</name>
+        <traits>
+          <trait>mental</trait>
+          <trait>occulte</trait>
+        </traits>
+        <description>� Une créature touchée par le gourdin du gongorinan doit réussir un jet de Volonté DD 30 ou Relâcher tous les objets fabriqués qu’il tient�</description>
+      </special>
+      <special>
+        <name>Venin de gongorinan</name>
+        <traits>
+          <trait>métamorphose</trait>
+          <trait>poison</trait>
+        </traits>
+        <description>; **Jet de sauvegarde** Vigueur DD 30 ; **Stade 1 ** stupéfié 1 et apparition de certains signes indiquant une transformation en animal, champignon ou plante (1 round) ; **Stade 2** stupéfié 2 et mala- droit 2 (1 round) ; **Stade 3** stupéfié 4 et maladroit 4 (1 round) ; **Stade 4** paralysé par les transforma- tions qui affectent tout le corps (1 round) ; **Stade 5** la victime est transformée physiquement et mentalement de manière permanente en un animal, un cham- pignon ou une plante et l’affliction cesse� C’est une malédiction permanente�</description>
+      </special>
+      <special>
+        <name>Augnagar (qlippoth affamé)</name>
+        <description>Violents et voraces, les augnagars ne vivent que pour manger, de préférence de la viande en décomposition, si possible venant d’un démon. Mais leur mets préféré reste la chair des autres augnagars. Ils ont des pattes arachnides, des</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

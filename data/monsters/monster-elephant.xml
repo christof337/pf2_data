@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>ÉLÉPHANT</name>
+    <type>CRÉATURE</type>
+    <level>7</level>
+    <creatureTraits>
+      <trait type="size">TRÈS GRANDE</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+17</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+15</bonus>
+      </skill>
+    </skills>
+    <armorClass>23</armorClass>
+    <saves/>
+    <health>130</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>défense</name>
+        <bonus>+16</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d8+9</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>trompe</name>
+        <bonus>+18</bonus>
+        <traits>
+          <trait>allonge 4,5 m)</trait>
+          <trait>**Effet** Empoignade à la trompe
+                                       **Corps à corps**
+                                              1
+                                               patte +16 (allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d10+9</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="3">
+        <name>Piétinement</name>
+        <description>Grande ou plus petite, patte, DD 24 (p� 360)</description>
+      </special>
+      <special>
+        <name>Trompe constrictive</name>
+        <description>Une créature de taille Moyenne ou plus petite tou- chée par la trompe de l’éléphant est empoignée� Si l’éléphant se déplace, il peut emporter la créature empoignée avec lui�</description>
+      </special>
+      <special>
+        <name>Mammouth</name>
+        <description>Habitant principalement dans les climats froids, les mammouths ont l’ha‑ bitude des prédateurs dangereux et désespérés qu’ils piétinent et broient tout en utilisant efficacement leurs défenses. Les humanoïdes qui vivent dans des régions hostiles et froides tirent profit de la force des mammouths pour leur survie.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GELÉE DES SÉPULTURES</name>
+    <type>CRÉATURE</type>
+    <level>5</level>
+    <creatureTraits>
+      <trait type="size"/>
+    </creatureTraits>
+    <perception>
+      <bonus>+7</bonus>
+      <senses>
+        <sens>
+          <name>dénué de vision</name>
+        </sens>
+        <sens>
+          <name>perception du mouvement</name>
+          <range>18 m</range>
+          <source>précis</source>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <armorClass>12</armorClass>
+    <saves REF="+4" FOR="+15" WIL="+7"/>
+    <health>150</health>
+    <immunities>
+      <immunity>acide</immunity>
+      <immunity>coups critiques</immunity>
+      <immunity>inconscient</immunity>
+      <immunity>mental</immunity>
+      <immunity>néant</immunity>
+      <immunity>précision</immunity>
+      <immunity>saignement</immunity>
+      <immunity>tranchants</immunity>
+      <immunity>visuel</immunity>
+    </immunities>
+    <speeds>
+      <speed>4</speed>
+      <speed>5 m</speed>
+      <speed type="climb">3 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>pseudopode +15, **Dégâts** 1d8+6 contondants plus 1d6 acide et malédiction des sépultures</description>
+      </special>
+      <special>
+        <name>Acide dissolvant la chair</name>
+        <description>L’acide d’une gelée des sépultures n’inflige des dégâts qu’à la chair�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Liés dans la mort</name>
+        <traits>
+          <trait>guérison</trait>
+          <trait>néant</trait>
+        </traits>
+        <description>� La gelée des sépultures projette un peu de sa substance sur une créature morte-vivante consentante qui se trouve à sa portée� La cible regagne 5 PV et ses Frappes de corps à corps gagnent le pouvoir malédiction des sépultures jusqu’à la fin de son prochain tour�</description>
+      </special>
+      <special>
+        <name>Malédiction des sépultures</name>
+        <traits>
+          <trait>divine</trait>
+          <trait>malédiction</trait>
+          <trait>néant</trait>
+        </traits>
+        <description>� Une créature touchée par un pseudo- pode d’une gelée des sépultures subit 1d6 dégâts persistants de néant� Si la créature meurt alors qu’elle subit ces dégâts persistants, son cadavre est affecté par *conservation du corps*, sauf que la gelée des sépultures peut encore dissoudre sa chair�</description>
+      </special>
+      <special>
+        <name>Goudron vivant</name>
+        <description>Vivant généralement sous terre, ces vases parcourent les cavernes en quête d’objets à dissoudre avec leurs sécrétions corrosives. Ces masses gluantes sont souvent remplies d’os, de fossiles et d’armes abandonnées par les aventuriers.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

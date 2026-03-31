@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GÉANT DES NUAGES</name>
+    <type>CRÉATURE</type>
+    <level>11</level>
+    <creatureTraits>
+      <trait type="size">TRÈS GRANDE</trait>
+      <trait>AIR</trait>
+      <trait>GÉANT</trait>
+      <trait>HUMANOÏDE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <interactionAbilities>
+      <special>
+        <name>Langues</name>
+        <description>commun, jotun, sussuran</description>
+      </special>
+      <special>
+        <name>Compétences</name>
+        <description>Athlétisme +26, Artisanat +21, Diplomatie +24, Intimidation +26, Représentation +21</description>
+      </special>
+      <special>
+        <name>For</name>
+        <description>+7, **Dex **+0, **Con **+5, **Int **+1, **Sag **+3, **Cha **+1</description>
+      </special>
+      <special>
+        <name>Objet</name>
+        <description>* corsèque de frappe +1*</description>
+      </special>
+      <special>
+        <name>Vision malgré les nuages</name>
+        <description>Les géants des nuages ignorent l’état masqué accordé par les conditions météorologiques, y compris les nuages et la pluie�</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>30</armorClass>
+    <saves/>
+    <health>220</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>*corsèque *+25 (allonge 6 m, désarmer, magique), **Dégâts **2d10+13 perforants **Corps à corps** 1 poing</name>
+        <bonus>+24</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 4,5 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+13</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="primal" DD="30">
+      <rank rank="4">
+        <spells>
+          <spell>forme vaporeuse</spell>
+        </spells>
+      </rank>
+      <rank rank="3">
+        <spells>
+          <spell spellSpecial="à volonté">lévitation</spell>
+        </spells>
+      </rank>
+      <rank rank="2">
+        <spells>
+          <spell spellSpecial="à volonté">brume</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Frappe venteuse</name>
+        <traits>
+          <trait>air</trait>
+          <trait>primordiale</trait>
+        </traits>
+        <description>� Le géant des nuages Frappe une créature avec sa corsèque, entouré d’un tourbillon d’air rugissant� En cas de réussite, la cible subit 4d8 dégâts contondants supplémentaires et reste sourde pendant 1 min� Que la Frappe soit réussie ou non, chaque créature dans une émanation de 6 m, y compris la cible de la Frappe mais pas les géants des nuages, est ballottée par les vents rugissants et doit faire un jet de Vigueur DD 30�</description>
+      </special>
+      <special>
+        <name>Succès critique</name>
+        <description>La créature n’est pas affectée�</description>
+      </special>
+      <special>
+        <name>Succès</name>
+        <description>La créature subit 2d8 dégâts de son�</description>
+      </special>
+      <special>
+        <name>Échec</name>
+        <description>La créature subit 4d8 dégâts de son et reste sourde jusqu’à la fin de son prochain tour�</description>
+      </special>
+      <special>
+        <name>Échec critique</name>
+        <description>Comme l’échec, mais la créature subit le double des dégâts et est projetée à terre�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

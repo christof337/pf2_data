@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>MITFLIT</name>
+    <type>CRÉATURE</type>
+    <level>-1</level>
+    <creatureTraits>
+      <trait type="size">PETITE</trait>
+      <trait>FÉE</trait>
+      <trait>GREMLIN</trait>
+      <trait>GREMLIN</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+4</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>9 m</range>
+        </sens>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+5</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+1</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+5</bonus>
+      </skill>
+      <skill>
+        <name>Larcin</name>
+        <bonus>+5</bonus>
+      </skill>
+      <skill>
+        <name>Nature</name>
+        <bonus>+3</bonus>
+      </skill>
+    </skills>
+    <armorClass>14</armorClass>
+    <saves REF="+7" FOR="+2" WIL="+4"/>
+    <health>10</health>
+    <weaknesses>
+      <weakness>
+        <name>fer froid</name>
+        <value>2</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>épée courte</name>
+        <bonus>+8</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+          <trait>polyvalent T</trait>
+        </traits>
+        <damages/>
+      </strike>
+      <strike type="ranged">
+        <name>fléchette</name>
+        <bonus>+8</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>jet 6 m</trait>
+          <trait>facteur de portée 6 m</trait>
+        </traits>
+        <damages/>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="primal" DD="16">
+      <rank rank="2">
+        <spells>
+          <spell>communication avec les animaux (à volonté</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special>
+        <name>Colère vengeresse</name>
+        <traits>
+          <trait>émotion</trait>
+          <trait>mental</trait>
+        </traits>
+        <description>� Tant qu’il n’est pas effrayé, un mitflit gagne un bonus de statut de +2 à ses jets de dégâts contre une créature qui l’a blessé ou tourmenté�</description>
+      </special>
+      <special>
+        <name>Pugwampi</name>
+        <description>Méchants et lâches, les pugwampis au visage de chien prennent un plaisir malsain quand les autres créatures ont des accidents ou font un faux pas, ce qui se produit souvent à cause de l’aura de malchance que projettent ces gremlins. Ils adorent pré‑ parer des farces avec des pointes, des excréments, des fosses pleines d’araignées, etc. Les pugwampis sont un peu sourds et, quand ils ne se cachent pas, ils se parlent entre eux en beuglant. Beaucoup de pugwampis vénèrent les kholos (p. 184) comme des dieux et aspirent à devenir comme eux. Cependant, les kholos les haïssent à cause de leurs flagorneries obséquieuses.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

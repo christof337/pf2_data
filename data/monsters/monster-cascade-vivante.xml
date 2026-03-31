@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>CASCADE VIVANTE</name>
+    <type>CRÉATURE</type>
+    <level>5</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>AQUATIQUE</trait>
+      <trait>EAU</trait>
+      <trait>ÉLÉMENTAIRE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+12</bonus>
+      </skill>
+    </skills>
+    <armorClass>20</armorClass>
+    <saves/>
+    <health>90</health>
+    <immunities>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>saignement</immunity>
+      <immunity>sommeil</immunity>
+    </immunities>
+    <speeds>
+      <speed>6 m</speed>
+      <speed type="swim">18 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>vague</name>
+        <bonus>+15</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+7</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Tremper</name>
+        <traits>
+          <trait>eau</trait>
+          <trait>primordiale</trait>
+        </traits>
+        <description>� L’élémentaire éteint tous les feux dans une émanation de 1,5 m� Elle éteint automatiquement tous les feux non magiques et tente de contrer les feux magiques (modificateur de contre +14)�</description>
+      </special>
+      <special>
+        <name>Quatoïde</name>
+        <description>Les quatoïdes sont d’insolites élémentaires originaires du plan de l’eau qui ressemblent à des pieuvres à quatre tentacules dont le manteau arbore des visages étrangement humanoïdes. Mystérieux même pour les autres élémentaires, ils répondent toutefois aux convocations des mortels. Ils sont prêts à les assister en combat mais semblent préférer offrir leurs conseils pacifiques et cherchent d’ailleurs des solutions alternatives même au milieu des conflits les plus sanglants.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

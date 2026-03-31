@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>SUCCUBE</name>
+    <type>CRÉATURE</type>
+    <level>7</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>DÉMON</trait>
+      <trait>FIÉLON</trait>
+      <trait>IMPIE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+14</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+20</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+14</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+18</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+16</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Société</name>
+        <bonus>+15</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+2" DEX="+3" CON="+4" INT="+4" WIS="+2" CHA="+7"/>
+    <armorClass>23</armorClass>
+    <saves REF="+14" FOR="+15" WIL="+17" saveSpecial="bonus de statut de +1 aux jets de sauvegarde contre la magie"/>
+    <health>100</health>
+    <weaknesses>
+      <weakness>
+        <name>fer froid</name>
+        <value>5</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+16</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+          <trait>impie</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+8</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Sorts innés divins</name>
+        <description>* *DD 26* ; ***6**e *domination* ; **5**e *translocation *; **4**e *translo‑ cation* (à volonté), *suggestion* (à volonté) ; **3**e *lecture des pensées* (à volonté) ; **1**er *charme* (à volonté) ; **Constant (5**e**) ***langage universel*</description>
+      </special>
+      <special>
+        <name>Rituel</name>
+        <description>DD 26 ; *pacte démoniaque* (p� 320)</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Baiser passionné</name>
+        <traits>
+          <trait>divine</trait>
+          <trait>émotion</trait>
+          <trait>impie</trait>
+          <trait>mental</trait>
+          <trait>néant</trait>
+        </traits>
+        <description>; **Fréquence **1 fois/ round ;</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

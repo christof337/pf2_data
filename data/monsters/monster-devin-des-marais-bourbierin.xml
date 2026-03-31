@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>DEVIN DES MARAIS BOURBIÉRIN</name>
+    <type>CRÉATURE</type>
+    <level>3</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>AMPHIBIE</trait>
+      <trait>BOURBIÉRIN</trait>
+      <trait>HUMANOÏDE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+11</bonus>
+      <senses>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages>
+      <language>bourbiérin</language>
+      <language>commun</language>
+      <language>chthonien</language>
+    </languages>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Médecine</name>
+        <bonus>+9</bonus>
+      </skill>
+      <skill>
+        <name>Nature</name>
+        <bonus>+11</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+9</bonus>
+      </skill>
+      <skill>
+        <name>Représentation</name>
+        <bonus>+8</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+3, **Dex **+0, **Con **+2, **Int **+0, **Sag **+4, **Cha **+3</description>
+      </special>
+      <special>
+        <name>Objet</name>
+        <description>bâton</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>18</armorClass>
+    <saves REF="+7" FOR="+9" WIL="+11"/>
+    <health>40</health>
+    <speeds speedSpecial="passage dans les marais">
+      <speed>6 m</speed>
+      <speed type="swim">7</speed>
+      <speed>5 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>bâton</name>
+        <bonus>+10</bonus>
+        <traits>
+          <trait>deux mains d8</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+6</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="prepared" tradition="primal" DD="21" attack="+11">
+      <rank rank="2">
+        <spells>
+          <spell>brume, poigne acide</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="reaction">
+        <name>Bourdonnement parasite</name>
+        <traits>
+          <trait>audible</trait>
+          <trait>mental</trait>
+        </traits>
+        <trigger>Le devin des marais ou un de ses alliés dans un rayon de 18 m fait un jet de sauvegarde contre un effet audible ou de son ;</trigger>
+        <effect>Le devin des marais pousse un coassement qui couvre les autres sons� Il fait pour cela un test de Représentation� Le devin des marais et les autres bourbiérins dans la zone choisissent quel résultat utiliser entre celui du jet de sauvegarde et celui du test de Représentation afin de résoudre l’effet audible ou sonique�</effect>
+      </special>
+      <special type="activity" actions="2">
+        <name>Coassement destructeur</name>
+        <traits>
+          <trait>son</trait>
+        </traits>
+        <description>� Le devin des marais émet un puissant coassement qui inflige 4d6 dégâts de son à tout non bourbiérin situé dans une émanation de 4,5 m (jet de Vigueur basique DD 19) ; toute créature se trouvant dans l’état effrayé subit une quantité de dégâts de son supplémentaires égale à deux fois l’intensité de son état effrayé� Le bourbiérin ne peut plus utiliser Coassement destructeur avant 1d4 rounds�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Coassement terrifiant</name>
+        <traits>
+          <trait>audible</trait>
+          <trait>émotion</trait>
+          <trait>mental</trait>
+          <trait>terreur</trait>
+        </traits>
+        <description>� Comme l’éclaireur bourbiérin mais DD 19�</description>
+      </special>
+      <special>
+        <name>Empoignade avec la langue</name>
+        <description>Comme l’éclaireur bourbiérin mais avec CA 15 et 4 PV�</description>
+      </special>
+      <special>
+        <name>Passage dans les marais</name>
+        <description>Comme l’éclaireur bourbiérin�</description>
+      </special>
+      <special>
+        <name>Poison de la libellule bleue</name>
+        <description>Si les devins des marais absorbent cette mixture pour éveiller leurs pouvoirs divins, ce poison provoque chez la plupart des autres créatures des hallucina‑ tions paralysantes.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

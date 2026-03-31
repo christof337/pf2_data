@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>MOMIE PHARAON</name>
+    <type>CRÉATURE</type>
+    <level>9</level>
+    <creatureTraits>
+      <trait type="size"/>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+18</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+20</bonus>
+      </skill>
+      <skill>
+        <name>Occultisme</name>
+        <bonus>+15</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+20</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+5, **Dex **+2, **Con **+4, **Int **+0, **Sag **+5, **Cha **+5</description>
+      </special>
+      <special>
+        <name>Objet</name>
+        <description>* pique de frappe +1*</description>
+      </special>
+      <special>
+        <name>Reconstruction</name>
+        <traits>
+          <trait>divine</trait>
+        </traits>
+        <description>Quand une momie pharaon est détruite, des énergies nécromantiques reconstruisent son corps dans sa tombe en 1d10 jours� Si le corps est de nouveau détruit alors qu’il est en train de se reconstituer, le processus recommence depuis le début� Une momie pharaon en train de se reconstituer est détruite définitivement si son tombeau est consacré (*Livre des joueurs* p� 391)�</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>27</armorClass>
+    <saves REF="+15" FOR="+19" WIL="+20" saveSpecial="bonus de statut de +1 aux jets de sauvegarde contre la vitalité"/>
+    <health>175</health>
+    <immunities>
+      <immunity>effets de mort</immunity>
+      <immunity>inconscient</immunity>
+      <immunity>maladie</immunity>
+      <immunity>paralysie</immunity>
+      <immunity>poison</immunity>
+      <immunity>saignement</immunity>
+    </immunities>
+    <weaknesses>
+      <weakness>
+        <name>eau</name>
+        <value>10</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>*pique*</name>
+        <bonus>+21</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+11</amount>
+            <damageType>perforants</damageType>
+          </damage>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>de néant</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>poing</name>
+        <bonus>+20</bonus>
+        <traits>
+          <trait>agile</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d10+11</amount>
+            <damageType>contondants</damageType>
+          </damage>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>de néant</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Fureur du sable</name>
+        <traits>
+          <trait>concentration</trait>
+          <trait>divine</trait>
+          <trait>feu</trait>
+          <trait>terre</trait>
+        </traits>
+        <description>La momie pharaon exhale un cône de 18 m de sable surchauffé qui inflige 5d6 dégâts de feu et 5d6 dégâts tranchants (jet de Réflexes basique DD 28)� La momie pharaon ne peut pas réutiliser Fureur du sable pendant 1d4 rounds�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Voile de sable</name>
+        <traits>
+          <trait>aura</trait>
+          <trait>divine</trait>
+          <trait>terre</trait>
+        </traits>
+        <description>Du sable tourbillonne autour de la momie pharaon dans une émanation de 1,5 m jusqu’au début de son prochain tour� Les créatures dans le sable sont masquées par rapport à celles qui se trouvent à l’extérieur, et toute créature qui termine son tour dans le tourbillon subit 4d6 dégâts tranchants avec un jet de Vigueur basique DD 28� Le voile de sable se termine si la momie subit des dégâts à cause de sa faiblesse à l’eau�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

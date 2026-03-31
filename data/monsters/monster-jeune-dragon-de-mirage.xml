@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>JEUNE DRAGON DE MIRAGE</name>
+    <type>CRÉATURE</type>
+    <level>9</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>ARCANIQUE</trait>
+      <trait>DRAGON</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+20</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>18 m</range>
+        </sens>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages>
+      <language>commun</language>
+      <language>draconique</language>
+    </languages>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+19</bonus>
+      </skill>
+      <skill>
+        <name>Arcanes</name>
+        <bonus>+19</bonus>
+      </skill>
+      <skill>
+        <name>Artisanat</name>
+        <bonus>+19</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+18</bonus>
+      </skill>
+      <skill>
+        <name>Connaissances des illusions</name>
+        <bonus>+21</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+19</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+19</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+21</bonus>
+      </skill>
+      <skill>
+        <name>Larcin</name>
+        <bonus>+19</bonus>
+      </skill>
+      <skill>
+        <name>Représentation</name>
+        <bonus>+19</bonus>
+      </skill>
+    </skills>
+    <armorClass/>
+    <saves/>
+    <health/>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special>
+        <name>For</name>
+        <description>+5, **Dex **+4, **Con **+3, **Int **+4, **Sag **+5, **Cha **+6</description>
+      </special>
+      <special>
+        <name>Camouflage</name>
+        <description>Le dragon peut Se cacher dans un environnement naturel même s’il n’a pas d’abri�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>ÉPOUVANTAIL</name>
+    <type>CRÉATURE</type>
+    <level>4</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>CRÉATURE</trait>
+      <trait>ARTIFICIELLE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <interactionAbilities>
+      <special>
+        <name>Compétence</name>
+        <description>Athlétisme +12</description>
+      </special>
+      <special>
+        <name>For</name>
+        <description>+5, **Dex** +2, **Con** +3, **Int** –4, **Sag** +3, **Cha** –2</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>19</armorClass>
+    <saves REF="+8" FOR="+13" WIL="+11"/>
+    <health>60</health>
+    <immunities>
+      <immunity>saignement</immunity>
+      <immunity>effets de mort</immunity>
+      <immunity>maladie</immunity>
+      <immunity>condamné</immunity>
+      <immunity>drainé</immunity>
+      <immunity>fatigué</immunity>
+      <immunity>terreur</immunity>
+      <immunity>guérison</immunity>
+      <immunity>attaques non létales</immunity>
+      <immunity>para- lysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>malade</immunity>
+      <immunity>esprit</immunity>
+      <immunity>inconscient</immunity>
+      <immunity>vitalité</immunity>
+      <immunity>néant</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+13</bonus>
+        <traits>
+          <trait>polyvalent T</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+7</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Apparence banale</name>
+        <traits>
+          <trait>concentration</trait>
+        </traits>
+        <description>� Jusqu’à ce qu’il agisse, l’épouvantail ressemble à un épouvantail normal� Il obtient un résultat automatique de 32 aux tests de Duperie et aux DD pour se faire passer pour un épouvantail normal�</description>
+      </special>
+      <special type="activity" actions="0">
+        <name>Lueur funeste</name>
+        <traits>
+          <trait>concentration</trait>
+          <trait>lumière</trait>
+          <trait>mental</trait>
+          <trait>occulte</trait>
+        </traits>
+        <description>� La tête de l’épouvantail est engloutie par des flammes fantomatiques dont il ne se dégage aucune chaleur et qui répandent une lumière vive dans une émanation de 6 m (et une lumière faible dans les 6 m qui suivent)� Si l’épouvantail utilise ce pouvoir pendant le premier round de combat, toute créature qui n’a pas encore agi est ébranlée et prise par surprise face à l’épouvantail pendant 1 round� L’épouvantail peut inhiber cette lumière en utilisant à nouveau cette action�</description>
+      </special>
+      <special>
+        <name>Peur griffue</name>
+        <description>Les Frappes de l’épouvantail infligent 1d6 dégâts mentaux supplémentaires aux créatures effrayées�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

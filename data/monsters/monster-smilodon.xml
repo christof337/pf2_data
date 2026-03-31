@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>SMILODON</name>
+    <type>CRÉATURE</type>
+    <level>6</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+14</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>18 m</range>
+        </sens>
+        <sens>
+          <name>vision nocturne</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+12</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+16</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+12</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+6" DEX="+2" CON="+3" INT="+0" WIS="+2" CHA="+0"/>
+    <armorClass>23</armorClass>
+    <saves/>
+    <health>110</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>crocs +11, **Dégâts** 2d10+6 perforants plus Empoignade (p� 359) **Corps à corps** 1 griffes</name>
+        <bonus>+16</bonus>
+        <traits>
+          <trait>agile</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+6</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Attaque sournoise</name>
+        <description>Le smilodon inflige 1d6 dégâts de précision supplémentaires aux créatures prises par surprise�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Bond</name>
+        <description>Le smilodon Marche rapidement et effectue une Frappe à la fin de son déplacement� Si le smilodon est caché au début de son action, il le reste jusqu’à ce qu’il ait effectué la Frappe de ce pouvoir�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Perforation d’armure</name>
+        <description>Le smilodon effectue une Frappe de crocs contre une créature empoignée ou entravée� Si l’attaque touche, la proie est jetée à terre ; si cette dernière porte une armure avec une Solidité de 10 ou moins, l’armure est brisée� Si la Frappe brise l’armure de la proie ou inflige des dégâts à une créature sans armure ou portant une armure brisée, la proie subit également 2d6 dégâts de saignement per- sistants� Cette Frappe ne peut pas infliger de nouveaux dégâts à une armure déjà brisée�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>MEGAPRIMATUS</name>
+    <type>CRÉATURE</type>
+    <level>8</level>
+    <creatureTraits>
+      <trait type="size">GIGANTESQUE</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+15</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>9 m</range>
+        </sens>
+        <sens>
+          <name>vision nocturne</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+14</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+19</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+7" DEX="+2" CON="+5" INT="+0" WIS="+1" CHA="+2"/>
+    <armorClass>26</armorClass>
+    <saves REF="+16" FOR="+19" WIL="+13"/>
+    <health>150</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>poing</name>
+        <bonus>+21</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 6 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+10</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+21</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d10+10</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Mutilation acharnée</name>
+        <description>Un megaprimatus fait deux Frappes de poing contre la même cible� Si les deux touchent, l’attaque inflige 2d6 points contondants sup- plémentaires, la cible est prise par surprise et subit un malus de statut de −6 m à toutes ses Vitesses jusqu’à la fin de son prochain tour�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Posture effrayante</name>
+        <traits>
+          <trait>audible</trait>
+          <trait>émotion</trait>
+          <trait>mental</trait>
+          <trait>terreur</trait>
+        </traits>
+        <description>� Le megaprimatus adopte une posture intimidante et se frappe le torse� Les créatures dans un rayon de 15 m doivent effectuer un jet de Volonté DD 27� Tant qu’une créature est effrayée par ce pouvoir, elle est prise par surprise face au megaprimatus et aux gorilles�</description>
+      </special>
+      <special>
+        <name>Succès critique</name>
+        <description>Aucun effet et immunité pendant 1 min�</description>
+      </special>
+      <special>
+        <name>Succès</name>
+        <description>La créature n’est pas affectée�</description>
+      </special>
+      <special>
+        <name>Échec</name>
+        <description>La créature est effrayée 1�</description>
+      </special>
+      <special>
+        <name>Échec critique</name>
+        <description>La créature est effrayée 2 et fuit jusqu’à la fin de son prochain tour�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

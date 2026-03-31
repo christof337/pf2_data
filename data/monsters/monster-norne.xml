@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>NORNE</name>
+    <type>CRÉATURE</type>
+    <level>20</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>FÉE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+41</bonus>
+      <senses>
+        <sens>
+          <name>vision dans le noir supérieure</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Artisanat</name>
+        <bonus>+36</bonus>
+      </skill>
+      <skill>
+        <name>Connaissances (toutes)</name>
+        <bonus>+28</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+35</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+37</bonus>
+      </skill>
+      <skill>
+        <name>Médecine</name>
+        <bonus>+38</bonus>
+      </skill>
+      <skill>
+        <name>Occultisme</name>
+        <bonus>+34</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+34</bonus>
+      </skill>
+      <skill>
+        <name>Représentation</name>
+        <bonus>+31</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+7, **Dex **+6, **Con **+6, **Int **+6, **Sag **+10, **Cha **+7</description>
+      </special>
+      <special>
+        <name>Objets</name>
+        <description>cisailles (voir arme de prédilection)</description>
+      </special>
+      <special>
+        <name>Percevoir le destin</name>
+        <traits>
+          <trait>fortune</trait>
+        </traits>
+        <description>� Une norne obtient automatiquement un 20 lorsqu’elle fait un jet d’initiative�</description>
+      </special>
+      <special>
+        <name>Triumvirat</name>
+        <description>Cela fonctionne comme le pouvoir cercle (p� 358) si ce n’est que seules les nornes peuvent rejoindre un triumvirat et qu’il fonctionne uniquement tant que trois nornes en font partie� Un triumvirat accorde les sorts suivants : *cataclysme*, *prémonition*, *manifestation* (une fois par jour), *déterminer la position* et *vivifier*�</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>46</armorClass>
+    <saves REF="+30" FOR="+34" WIL="+38" saveSpecial="bonus de statut de +1 à tous les jets de sauvegarde contre la magie"/>
+    <health>375</health>
+    <immunities>
+      <immunity>néant</immunity>
+      <immunity>pris par surprise</immunity>
+    </immunities>
+    <weaknesses>
+      <weakness>
+        <name>fer froid</name>
+        <value>20</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>cisailles</name>
+        <bonus>+38</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+          <trait>magique</trait>
+          <trait>mortel 2d8</trait>
+          <trait>polyvalent P</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>4d4+15</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+          <damage>
+            <amount>6d6</amount>
+            <damageType>de néant et punition d’infortune</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>main du destin,</name>
+        <bonus>+38</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 3 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>4d10+15</amount>
+            <damageType>négatifs</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="occult" DD="42">
+      <rank rank="9">
+        <spells>
+          <spell>exécution, fantasmagorie, rétrocognition</spell>
+        </spells>
+      </rank>
+      <rank rank="8">
+        <spells>
+          <spell>dilemme, migration</spell>
+        </spells>
+      </rank>
+      <rank rank="7">
+        <spells>
+          <spell spellSpecial="à volonté">dissipation de la magie , lire les présages , ravages magiques</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special>
+        <name>Rituels</name>
+        <description>DD 42 ; *mémoire collective*,* serment rituel*</description>
+      </special>
+      <special type="reaction">
+        <name>Changer le destin</name>
+        <traits>
+          <trait>occulte</trait>
+        </traits>
+        <trigger>Une créature à moins de 36 m fait un jet de sauvegarde�</trigger>
+        <effect>La créature fait deux fois son jet de sauvegarde et la norne décide du résultat qui s’applique� Si elle choisit le moins bon, c’est un effet d’infortune ; si elle choisit le meilleur, c’est un effet de fortune ; s’ils sont égaux, elle décide quel trait s’applique�</effect>
+      </special>
+      <special type="activity" actions="2">
+        <name>Inciser un fil du destin</name>
+        <traits>
+          <trait>manipulation</trait>
+          <trait>mort</trait>
+          <trait>occulte</trait>
+        </traits>
+        <description>**Fréquence** trois fois par jour�</description>
+      </special>
+      <special>
+        <name>Punition d’infortune</name>
+        <traits>
+          <trait>occulte</trait>
+        </traits>
+        <description>� Lorsqu’une norne inflige des dégâts de néant avec une Frappe, elle regagne 10 PV� La cible doit réussir un jet de Vigueur DD 39 ou être drainée 1 (drainée 2 sur un échec critique)� D’autres dégâts du néant infligés par la norne augmentent l’intensité de l’état drainé de 1 sur un jet de sauvegarde raté (ou de 2 sur un échec critique) jusqu’à atteindre au maximum drainé 4�</description>
+      </special>
+      <special>
+        <name>Touché par le destin</name>
+        <description>Lorsqu’une créature est sujette à un effet de fortune d’une norne et un effet d’infortune d’une autre source qui n’est pas une norne (ou vice versa), l’effet de la norne contre automatiquement l’autre effet et agit normalement� En revanche, si les deux effets de fortune et d’infortune proviennent d’une norne, les deux s’annulent comme d’habitude� À la discrétion du MJ, les entités puissantes liées au destin ou à la chance, comme Desna, Magdh ou Pharasma, ne peuvent pas voir leurs effets annulés par cette capacité�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

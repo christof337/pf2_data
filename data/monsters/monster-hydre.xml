@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>HYDRE</name>
+    <type>CRÉATURE</type>
+    <level>6</level>
+    <creatureTraits>
+      <trait type="size">TRÈS GRANDE</trait>
+      <trait>BÊTE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <interactionAbilities>
+      <special>
+        <name>Compétence</name>
+        <description>Athlétisme +17, Discrétion +12 (+15 dans l’eau)</description>
+      </special>
+      <special>
+        <name>For</name>
+        <description>+7,** Dex** +4,** Con** +5, **Int** –3,** Sag** +2, **Cha** –1</description>
+      </special>
+    </interactionAbilities>
+    <armorClass/>
+    <saves/>
+    <health/>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>crocs</name>
+        <bonus>+16</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+7</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Assaut focalisé</name>
+        <description>L’hydre attaque une seule cible avec ses têtes, submergeant son adversaire avec des assauts multiples sans lui donner la possibilité d’esquiver� L’hydre frappe avec ses crocs� Si l’at- taque réussit, l’hydre inflige à la cible les dégâts de sa Frappe de crocs plus 1d6 dégâts supplémentaires pour chacune de ses têtes en plus de la première� En cas d’échec (mais pas en cas d’échec critique), l’hydre inflige à la cible les dégâts d’une seule Frappe de crocs� Cette Frappe compte comme un nombre d’attaques égal au nombre de ses têtes pour le calcul de son malus d’attaques multiples�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Tempête de mâchoires</name>
+        <description>L’hydre effectue un nombre de Frappes au maximum égal à son nombre de têtes, chacune contre une cible différente� Ces attaques comptent pour le malus d’attaques multiples de l’hydre mais ce malus n’aug- mente qu’une fois toutes les attaques effectuées�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>PYRO GOBELIN</name>
+    <type>CRÉATURE</type>
+    <level>1</level>
+    <creatureTraits>
+      <trait type="size">PETITE</trait>
+      <trait>GOBELIN</trait>
+      <trait>HUMANOÏDE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>commun</language>
+      <language>gobelin</language>
+    </languages>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Connaissances du feu</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+7</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+0, **Dex **+4, **Con **+2, **Int **+0, **Sag **–1, **Cha **+3</description>
+      </special>
+      <special>
+        <name>Objet</name>
+        <description>torche</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>17</armorClass>
+    <saves REF="+9" FOR="+5" WIL="+4"/>
+    <health>15</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>torche</name>
+        <bonus>+7</bonus>
+        <traits>
+          <trait>feu</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Sorts spontanés arcaniques</name>
+        <description>* *DD 16, attaque +6 ; **1**er* *(3 emplacements) *graisse, souffle de feu *;</description>
+      </special>
+      <special>
+        <name>Tours de magie (1</name>
+        <description>er**) ***enflammer*,* lumière*,* main télékinésique*,* piège de liane*</description>
+      </special>
+      <special>
+        <name>Chantre de guerre gobelin</name>
+        <description>Bien que tous les gobelins aiment chanter, les chantres de guerre s’enorgueillissent de maîtriser l’art de la performance vocale. Leurs ballades et petits airs sont indénia‑ blement entraînants et jouent parfaitement leur rôle pendant un combat, inspirant les gobelins et perturbant les ennemis simultanément. Leur appréciation demeure toutefois une affaire très subjective.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>CAUTHOOJ</name>
+    <type>CRÉATURE</type>
+    <level>12</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>BÊTE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+22</bonus>
+      <senses>
+        <sens>
+          <name>perception des pensées</name>
+          <precision>imprécis</precision>
+          <range>18 m</range>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+24</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+25</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+6, **Dex **+4, **Con **+7, **Int **–3, **Sag **+2, **Cha **+0</description>
+      </special>
+      <special>
+        <name>Perception des pensées</name>
+        <traits>
+          <trait>divination</trait>
+          <trait>mental</trait>
+          <trait>occulte</trait>
+        </traits>
+        <description>� Un cauthooj détecte toutes les créatures non dénuées d’intelligence qui se trouvent à la portée mentionnée�</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>33</armorClass>
+    <saves/>
+    <health>215</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>bec</name>
+        <bonus>+26</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 3 m</trait>
+          <trait>mortel d12</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d12+12</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Frappe staccato</name>
+        <traits>
+          <trait>mental</trait>
+          <trait>primordiale</trait>
+          <trait>son</trait>
+        </traits>
+        <description>� Par de subtiles altérations de l’intensité et de la tonalité de son chant, le cauthooj pousse une créature rendue confuse par son Gazouillement mélodieux à effectuer une Frappe� Cela fonctionne comme les autres Frappes effectuées par des créatures confuses sauf que le cauthooj choisit la cible� S’il n’y a aucune cible à portée, ou si la créature est incapable de Frapper pour une raison ou pour une autre, ce pouvoir n’a aucun effet�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Gazouillement mélodieux</name>
+        <traits>
+          <trait>audible</trait>
+          <trait>mental</trait>
+          <trait>mise hors de combat</trait>
+          <trait>primordiale</trait>
+        </traits>
+        <description>� Le cauthooj émet un étrange ululement qui provoque des réactions violentes et incontrôlées chez les créatures à proximité� Chaque créature qui peut entendre le cauthooj dans une émanation de 36 m fait un jet de Volonté DD 32 pour tenter de résister à cet effet�</description>
+      </special>
+      <special>
+        <name>Succès critique</name>
+        <description>La cible n’est pas affectée et est immunisée pendant 1 min�</description>
+      </special>
+      <special>
+        <name>Succès</name>
+        <description>La cible n’est pas affectée�</description>
+      </special>
+      <special>
+        <name>Échec</name>
+        <description>La cible est confuse pendant 1 round�</description>
+      </special>
+      <special>
+        <name>Échec critique</name>
+        <description>La cible est confuse pendant 1 round et s’en prend immédiatement à elle-même (en suivant les règles normales de l’état confus)� Cette Frappe ne permet pas à une créature affectée d’effectuer un test nu pour dissiper l’état confus�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

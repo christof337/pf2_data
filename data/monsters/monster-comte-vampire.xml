@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>COMTE VAMPIRE</name>
+    <type>CRÉATURE</type>
+    <level>6</level>
+    <creatureTraits>
+      <trait type="size"/>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+14</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+14</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+16</bonus>
+      </skill>
+      <skill>
+        <name>Société</name>
+        <bonus>+14</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+5" DEX="+3" CON="+2" INT="+2" WIS="+4" CHA="+4"/>
+    <interactionAbilities>
+      <special>
+        <name>Objets</name>
+        <description>armure en cuir, *rapière +1*</description>
+      </special>
+      <special>
+        <name>Enfants de la nuit</name>
+        <traits>
+          <trait>divin</trait>
+          <trait>mental</trait>
+        </traits>
+        <description/>
+      </special>
+    </interactionAbilities>
+    <armorClass/>
+    <saves/>
+    <health/>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>CA</name>
+        <description>4 ; **Réf **+14, **Vig **+11, **Vol **+17</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

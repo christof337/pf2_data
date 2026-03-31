@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>ARBITRE</name>
+    <type>CRÉATURE</type>
+    <level>1</level>
+    <creatureTraits>
+      <trait type="size">TRÈS PETITE</trait>
+      <trait>ÉON</trait>
+      <trait>VEILLEUR</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+9</bonus>
+      </skill>
+      <skill>
+        <name>Connaissances sur Axis</name>
+        <bonus>+5</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+6</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+9</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+1, **Dex **+4, **Con **+2, **Int **+0, **Sag **+2, **Cha **+1</description>
+      </special>
+      <special>
+        <name>Localisation des éons</name>
+        <description>Un arbitre sait toujours dans quelle direction se trouve l’éon non arbitre le plus proche, mais sans connaître sa distance�</description>
+      </special>
+      <special>
+        <name>Objet</name>
+        <description>épée courte</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>16</armorClass>
+    <saves REF="+7" FOR="+5" WIL="+7" saveSpecial="bonus de statut de +1 à tous les jets de sauvegarde contre la magie"/>
+    <health>22</health>
+    <immunities>
+      <immunity>effets de mort</immunity>
+      <immunity>émotion</immunity>
+      <immunity>inconscient</immunity>
+      <immunity>maladie</immunity>
+      <immunity>poison</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>épée courte</name>
+        <bonus>+7</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 0 m</trait>
+          <trait>finesse</trait>
+          <trait>magique</trait>
+          <trait>polyvalent T</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+1</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="divine" DD="17">
+      <rank rank="4">
+        <spells>
+          <spell>lire les présages</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Projection électrique</name>
+        <traits>
+          <trait>divine</trait>
+          <trait>électricité</trait>
+        </traits>
+        <description>� L’arbitre projette un arc électrique qui inflige 3d6 dégâts d’électricité à toutes les créatures dans une émanation de 3 m (jet de Réflexes basique DD 17)� L’arbitre se trouve ensuite dans l’état étourdi pendant 24 h�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

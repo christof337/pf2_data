@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>PACHYCÉPHALOSAURE</name>
+    <type>CRÉATURE</type>
+    <level>3</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>ANIMAL</trait>
+      <trait>DINOSAURE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+10</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>9 m</range>
+        </sens>
+        <sens>
+          <name>vision nocturne</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <attributes STR="+4" DEX="+3" CON="+4" INT="+0" WIS="+3" CHA="+0"/>
+    <armorClass>17</armorClass>
+    <saves REF="+11" FOR="+12" WIL="+7"/>
+    <health>65</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>crâne</name>
+        <bonus>+11</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+          <trait>percutant</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d10+6</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Charge percutante</name>
+        <description>Le pachycéphalosaure Marche rapidement jusqu’à sa Vitesse maxi- male� S’il termine son déplacement dans la zone d’allonge d’une cible, il peut effectuer contre elle une Frappe de crâne� Si le pachycéphalosaure obtient un coup critique avec cette Frappe, la créature touchée est étourdie 1�</description>
+      </special>
+      <special type="reaction">
+        <name>Poussée soudaine</name>
+        <traits>
+          <trait>attaque</trait>
+        </traits>
+        <trigger>Le pachycéphalosaure inflige des dégâts à un adversaire de taille Moyenne ou plus petite avec sa Frappe de crâne ;</trigger>
+        <effect>Le pachycépha- losaure se cabre et dresse sa tête vers le haut en projetant son adversaire� Il tente un test d’Athlétisme contre le DD de Vigueur de la cible�</effect>
+      </special>
+      <special>
+        <name>Succès critique</name>
+        <description>Le pachycéphalosaure repousse l’adversaire de 3 m et le met à terre�</description>
+      </special>
+      <special>
+        <name>Succès</name>
+        <description>Le pachycéphalosaure repousse son adversaire de 1,5 m�</description>
+      </special>
+      <special>
+        <name>Échec</name>
+        <description>Le pachycéphalosaure ne parvient pas à repousser son adversaire�</description>
+      </special>
+      <special>
+        <name>Échec critique</name>
+        <description>Comme un échec, mais le pachycéphalosaure est pris par surprise pendant 1 round�</description>
+      </special>
+      <special>
+        <name>Hadrosaure</name>
+        <description>Les hadrosaures regroupent une large famille d’herbivores qui possèdent tous un bec plat garni de rangées de dents adaptées à la mastication des plantes. Aussi connus sous le nom de « dinosaures à bec de canard » en raison de la forme inhabituelle de leurs mâchoires, les hadrosaures sont des créatures mas‑ sives qui peuvent atteindre la taille d’un éléphant. Cependant, ils sont bien moins agressifs et, confrontés à un danger, préfèrent généralement fuir plutôt que se battre. De nombreux types d’hadrosaures possèdent une crête caractéristique sur la tête, ce qui permet de les reconnaître facilement, même pour les observateurs amateurs de dinosaures. Les géants et autres créatures de grande taille sont réputés pour élever des troupeaux d’hadrosaures qui leur servent de bétail. Bien qu’ils puissent courir vite, ils ne constituent pas des montures particulièrement fiables à cause de leur nature timide, mais un large groupe d’hadrosaures pris de panique peut provoquer d’importants dommages.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

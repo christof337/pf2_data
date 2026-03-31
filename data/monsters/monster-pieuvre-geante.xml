@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>PIEUVRE GÉANTE</name>
+    <type>CRÉATURE</type>
+    <level>8</level>
+    <creatureTraits>
+      <trait type="size">TRÈS GRANDE</trait>
+      <trait>ANIMAL</trait>
+      <trait>AQUATIQUE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+17</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+20</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+17</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+6, **Dex** +3, **Con** +4, **Int** –4, **Sag** +3, **Cha** –2</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>27</armorClass>
+    <saves REF="+17" FOR="+16" WIL="+15"/>
+    <health>135</health>
+    <speeds speedSpecial="compression">
+      <speed>4</speed>
+      <speed>5 m</speed>
+      <speed type="swim">12 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>bras</name>
+        <bonus>+20</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 4,5 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+9</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>bec +20, **Dégâts** 2d8+9 perforants plus venin de la pieuvre géante</description>
+      </special>
+      <special>
+        <name>Compression</name>
+        <description>Une pieuvre géante peut passer à travers une fente d’au moins 60 cm de large sans Se faufiler et peut Se faufiler à travers un interstice d’au moins 30 cm de large�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Constriction</name>
+        <description>1d8+9 contondants, DD 26 (p� 359)</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Membres grouillants</name>
+        <description>La pieuvre géante effec- tue jusqu’à quatre Frappes avec différents bras, chacune contre une cible dif- férente� Chaque attaque compte pour le malus d’attaques multi- ples de la pieuvre géante, mais ce malus n’augmente qu’une fois toutes les attaques effectuées� Si la pieuvre enchaîne en utilisant l’action Empoignade, elle Empoigne le nombre de créatures de son choix parmi celles qui ont été touchées par Membres grouillants�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Nuage d’encre</name>
+        <description>La pieuvre libère un nuage d’encre noire dans une émanation de 9 m� Ce nuage n’a aucun effet en dehors de l’eau� Les créatures dans le nuage sont non détectées et ne peuvent pas utiliser leur odorat� Le nuage se dissipe au bout d’une minute� La pieuvre ne peut réutiliser son nuage d’encre avant 2d6 rounds�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Propulsion</name>
+        <traits>
+          <trait>déplacement</trait>
+        </traits>
+        <description>� La pieuvre se déplace à travers l’eau jusqu’à 60 m en ligne droite sans déclencher de réactions�</description>
+      </special>
+      <special>
+        <name>Venin de pieuvre géante</name>
+        <traits>
+          <trait>poison</trait>
+        </traits>
+        <description>**Jet de sauvegarde** Vigueur DD 26 ; **Durée maximale** 6 rounds ; **Stade 1 **2d6 dégâts de poison et pris par surprise (1 round) ; **Stade 2** 2d6 dégâts de poison, maladroit 1 et pris par surprise (1 round) ; **Stade 3** 2d6 dégâts de poison, maladroit 2 et pris par surprise (1 round)</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

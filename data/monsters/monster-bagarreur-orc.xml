@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>BAGARREUR ORC</name>
+    <type>CRÉATURE</type>
+    <level>0</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>HUMANOÏDE</trait>
+      <trait>ORC</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>commun</language>
+      <language>orquien</language>
+    </languages>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+5</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+2</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+3, **Dex** +2, **Con** +2, **Int** +0,** Sag** +1,** Cha** +0</description>
+      </special>
+      <special>
+        <name>Objets</name>
+        <description>cuirasse de mauvaise qualité, dague de poing orque (2), javeline (3)</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>14</armorClass>
+    <saves REF="+4" FOR="+5" WIL="+2"/>
+    <health>18</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>dague de poing orque</name>
+        <bonus>+7</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>désarmer</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+3</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>poing</name>
+        <bonus>+7</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>non létal</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+3</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>javeline</name>
+        <bonus>+4</bonus>
+        <traits>
+          <trait>jet 9 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+3</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Vétéran orc</name>
+        <description>Les vétérans orques ont survécu à plusieurs conflits sanglants et chaotiques. Ils en sont revenus avec des cicatrices et une expérience qui en font des adversaires encore plus dangereux.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>ZOAEM</name>
+    <type>CRÉATURE</type>
+    <level>1</level>
+    <creatureTraits>
+      <trait type="size">PETITE</trait>
+      <trait>ARCHON</trait>
+      <trait>CÉLESTE</trait>
+      <trait>SAINT</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+6</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+6</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>–5, **Dex** +3, **Con** +1, **Int** –1, **Sag** +1, **Cha** +1</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>16</armorClass>
+    <saves REF="+10" FOR="+6" WIL="+4"/>
+    <health>20</health>
+    <immunities>
+      <immunity>terreur</immunity>
+    </immunities>
+    <weaknesses>
+      <weakness>
+        <name>impie</name>
+        <value>3</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="ranged">
+        <name>rayon oculaire</name>
+        <bonus>+8</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>feu</trait>
+          <trait>magique</trait>
+          <trait>portée 9 m</trait>
+          <trait>saint</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8</amount>
+            <damageType>feu</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="divine" DD="17">
+      <rank rank="4">
+        <spells>
+          <spell>lire les présages</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Lumière de la vérité</name>
+        <traits>
+          <trait>concentration</trait>
+          <trait>divine</trait>
+          <trait>lumière</trait>
+        </traits>
+        <description>� Le zoaem émet une intense lumière qui fonctionne comme *lumière révélatrice*, mais sur une ligne de 18 m� Le zoaem et ses alliés gagnent un bonus de statut de +1 à leurs jets de dégâts et à leurs tests pour Se souvenir face aux créatures affectées par cette lumière� Le zoaem doit alors attendre 1d4 rounds pour réutiliser Lumière de la vérité�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Regardez !</name>
+        <traits>
+          <trait>concentration</trait>
+          <trait>illusion</trait>
+          <trait>mise hors de combat</trait>
+          <trait>visuel</trait>
+        </traits>
+        <description>; **Fréquence** 1 fois/h ;</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

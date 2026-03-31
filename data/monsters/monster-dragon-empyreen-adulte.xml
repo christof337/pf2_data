@@ -1,0 +1,220 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>DRAGON EMPYRÉEN ADULTE</name>
+    <type>CRÉATURE</type>
+    <level>14</level>
+    <creatureTraits>
+      <trait type="size">TRÈS GRANDE</trait>
+      <trait>DIVIN</trait>
+      <trait>DRAGON</trait>
+      <trait>SAINT</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+27</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>18 m</range>
+        </sens>
+        <sens>
+          <name>perception de la vie</name>
+          <precision>imprécis</precision>
+          <range>9 m</range>
+          <source>p� 360</source>
+        </sens>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages>
+      <language>chthonien</language>
+      <language>commun</language>
+      <language>diabolique</language>
+      <language>draconique</language>
+      <language>empyréen</language>
+      <langSpecial>
+        <spell>langage universel</spell>
+      </langSpecial>
+    </languages>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+26</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+28</bonus>
+      </skill>
+      <skill>
+        <name>Connaissances sur le Paradis</name>
+        <bonus>+26</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+25</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+25</bonus>
+      </skill>
+      <skill>
+        <name>Médecine</name>
+        <bonus>+28</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+28</bonus>
+      </skill>
+      <skill>
+        <name>Société</name>
+        <bonus>+24</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+8" DEX="+4" CON="+6" INT="+4" WIS="+7" CHA="+5"/>
+    <armorClass>36</armorClass>
+    <saves REF="+24" FOR="+24" WIL="+26" saveSpecial="bonus de statut de +2 à tous les jets de sauvegarde contre la magie divine"/>
+    <health>250</health>
+    <immunities>
+      <immunity>terreur</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>sommeil</immunity>
+    </immunities>
+    <weaknesses>
+      <weakness>
+        <name>impie</name>
+        <value>10</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+28</bonus>
+        <traits>
+          <trait>allonge 4,5 m</trait>
+          <trait>saint</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d10+11</amount>
+            <damageType>perforants</damageType>
+          </damage>
+          <damage>
+            <amount>1d8</amount>
+            <damageType>d’esprit</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+28</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 3 m</trait>
+          <trait>saint</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d8+11</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+          <damage>
+            <amount>1d8</amount>
+            <damageType>d’esprit</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>queue</name>
+        <bonus>+26</bonus>
+        <traits>
+          <trait>allonge 6 m</trait>
+          <trait>saint</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d10+11</amount>
+            <damageType>contondants</damageType>
+          </damage>
+          <damage>
+            <amount>1d8</amount>
+            <damageType>d’esprit</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>aile</name>
+        <bonus>+26</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 4,5 m</trait>
+          <trait>saint</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d10+11</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+          <damage>
+            <amount>1d8</amount>
+            <damageType>d’esprit</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="divine" DD="34" attack="+26">
+      <rank rank="7">
+        <spells>
+          <spell>guérison, téléportation interplanaire (à volonté, soi uniquement)</spell>
+        </spells>
+      </rank>
+      <rank rank="5">
+        <spells>
+          <spell spellSpecial="à volonté">lumière sainte</spell>
+        </spells>
+      </rank>
+      <rank rank="5" constant="TRUE">
+        <spells>
+          <spell>langage universel</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Frénésie draconique</name>
+        <description>Comme le jeune dragon empyréen�</description>
+      </special>
+      <special>
+        <name>Impulsion draconique</name>
+        <description>Comme le jeune dragon empyréen�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Manipulation de halo</name>
+        <description>Comme le jeune dragon empyréen�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Pulsation du halo</name>
+        <traits>
+          <trait>concentration</trait>
+          <trait>divine</trait>
+        </traits>
+        <description>Comme le jeune dragon empyréen, mais répul- sion DD 34 et restauration soigne 7d8 PV�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Souffle spirituel</name>
+        <traits>
+          <trait>divine</trait>
+          <trait>esprit</trait>
+          <trait>saint</trait>
+        </traits>
+        <description>Comme le jeune dragon empyréen, mais cône de 15 m, 12d8 dégâts d’esprit et DD 34�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

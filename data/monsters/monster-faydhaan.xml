@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>FAYDHAAN</name>
+    <type>CRÉATURE</type>
+    <level>9</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>EAU</trait>
+      <trait>ÉLÉMENTAIRE</trait>
+      <trait>GÉNIE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>commun</language>
+      <language>muane</language>
+      <language>pétran</language>
+      <language>pyrique</language>
+      <language>sussuran</language>
+      <language>talican</language>
+      <language>thalassique</language>
+      <langSpecial>
+        <spell>langage universel</spell>
+      </langSpecial>
+    </languages>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+19</bonus>
+      </skill>
+      <skill>
+        <name>Artisanat</name>
+        <bonus>+16</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+20</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+18</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+18</bonus>
+      </skill>
+      <skill>
+        <name>Nature</name>
+        <bonus>+18</bonus>
+      </skill>
+      <skill>
+        <name>Représentation</name>
+        <bonus>+20</bonus>
+      </skill>
+      <skill>
+        <name>Société</name>
+        <bonus>+16</bonus>
+      </skill>
+    </skills>
+    <armorClass>28</armorClass>
+    <saves/>
+    <health>145</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>*trident *+20 (allonge 3 m, magique), **Dégâts **2d8+10 perforants **Corps à corps** 1 poing</name>
+        <bonus>+20</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 3 m</trait>
+          <trait>magique</trait>
+          <trait>non létal</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+10</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>À distance</name>
+        <description>*trident *+21 (jet 6 m, magique), **Dégâts **2d8+10 perforants</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

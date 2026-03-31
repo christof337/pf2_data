@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>SCORPION GÉANT</name>
+    <type>CRÉATURE</type>
+    <level>3</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+9</bonus>
+      <senses>
+        <sens>
+          <name>perception des vibrations</name>
+          <precision>imprécis</precision>
+          <range>18 m</range>
+        </sens>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+11</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+7</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+4, **Dex** +2, **Con** +3, **Int** –5, **Sag** +2, **Cha** –4</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>18</armorClass>
+    <saves REF="+9" FOR="+12" WIL="+7"/>
+    <health>45</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special type="reaction">
+        <name>Frappe réflexe</name>
+        <description>Seulement avec son dard (p� 359)�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Vitesse</name>
+        <description>2 m</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>pince +11 (agile, allonge 3 m) ; **Dégâts** 1d8+6 tranchants plus Empoignade (p� 359)</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>dard +11 (allonge 3 m) ; **Dégâts** 1d6+6 perforants plus venin de scorpion géant</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Constriction</name>
+        <description>1d6+4 contondants, DD 20 (p� 359)</description>
+      </special>
+      <special>
+        <name>Venin de scorpion géant</name>
+        <traits>
+          <trait>poison</trait>
+        </traits>
+        <description>; **Jet de sauvegarde** Vigueur DD 18 ; **Durée maximale** 6 rounds ; **Stade 1** 1d10 dégâts de poison et affaibli 1 (1 round) ; **Stade 2** 2d10 dégâts de poison et affaibli 1 (1 round) ; **Stade 3** 2d10 dégâts de poison et affaibli 2 (1 round)</description>
+      </special>
+      <special>
+        <name>Nuée de scorpions</name>
+        <description>Si un scorpion isolé représente déjà une menace, une nuée de scorpions est une véri‑ table catastrophe. Ces multitudes cliquetantes et mortelles abattent leur proie en un rien de temps avant de la dévorer et n’en laisser que les os.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>PÊCHEUR DE CRABES AZARKETI</name>
+    <type>CRÉATURE</type>
+    <level>0</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>AMPHIBIE</trait>
+      <trait>AZARKETI</trait>
+      <trait>HUMANOÏDE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Connaissances sous-marines</name>
+        <bonus>+4</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+3</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+5</bonus>
+      </skill>
+      <skill>
+        <name>Nature</name>
+        <bonus>+3</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+5</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+2, **Dex **+3, **Con **+2, **Int **+0, **Sag **+1, **Cha **+1</description>
+      </special>
+      <special>
+        <name>Objets</name>
+        <description>dague, nasse à crabes, sac</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>16</armorClass>
+    <saves REF="+9" FOR="+6" WIL="+3"/>
+    <health>15</health>
+    <reactiveAbilities>
+      <special>
+        <name>Hydratation</name>
+        <description>Les azarketis doivent régulièrement s’immerger dans l’eau pour réhydrater leur peau� Au bout de 24 h hors de l’eau, ils subissent un malus de statut de –1 à leurs jets de Vigueur, car leur peau se craquelle et leurs branchies deviennent douloureuses� Au bout de 48 h, ils sont en état d’asphyxie tant qu’ils ne s’immergent pas dans de l’eau�</description>
+      </special>
+      <special>
+        <name>S’échapper à la nage</name>
+        <description/>
+      </special>
+      <special type="reaction">
+        <name>Conditions</name>
+        <trigger>Le pêcheur de crabes azarketi est ciblé par une attaque et il voit son assaillant ;</trigger>
+        <effect>Le pêcheur de crabes azarketi gagne un bonus de circonstances de +2 à sa CA contre l’attaque ayant déclenché la réaction� Après l’attaque, il Nage sur une dis- tance de 1,5 m�</effect>
+      </special>
+    </reactiveAbilities>
+    <speeds speedSpecial="nage 7,5 m">
+      <speed>7</speed>
+      <speed>5 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>dague</name>
+        <bonus>+7</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+          <trait>jet 3 m</trait>
+          <trait>polyvalent T</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+2</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>dague</name>
+        <bonus>+7</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+          <trait>jet 3 m</trait>
+          <trait>polyvalent T</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+2</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Dompteur des marées azarketi</name>
+        <description>Les azarketis les plus ambitieux et talentueux deviennent des dompteurs de marées et apprennent à communiquer avec des animaux marins et à les dresser.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

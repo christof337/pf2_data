@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>FÉE DES DENTS</name>
+    <type>CRÉATURE</type>
+    <level>-1</level>
+    <creatureTraits>
+      <trait type="size">TRÈS PETITE</trait>
+      <trait>FÉE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+5</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+5</bonus>
+      </skill>
+      <skill>
+        <name>Larcin</name>
+        <bonus>+6</bonus>
+      </skill>
+    </skills>
+    <armorClass>15</armorClass>
+    <saves REF="+7" FOR="+2" WIL="+4"/>
+    <health>8</health>
+    <weaknesses>
+      <weakness>
+        <name>fer froid</name>
+        <value>2</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>pinces</name>
+        <bonus>+7</bonus>
+        <traits>
+          <trait>allonge 0 m</trait>
+          <trait>désarmer</trait>
+          <trait>finesse</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="primal" DD="13"/>
+    <offensiveAbilities>
+      <special>
+        <name>Tire‑dent</name>
+        <traits>
+          <trait>manipulation</trait>
+        </traits>
+        <description/>
+      </special>
+      <special type="activity" actions="1">
+        <name>Conditions</name>
+        <description>La dernière action de la fée des dents est une Frappe de pinces qui a réussi contre une créature avec des dents ; **</description>
+      </special>
+      <special>
+        <name>Nuée de fées des dents</name>
+        <description>Une nuée de fées des dents œuvrant ensemble peuvent imposer des opérations dentaires en quelques secondes.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

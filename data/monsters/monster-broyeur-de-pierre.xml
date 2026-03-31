@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>BROYEUR DE PIERRE</name>
+    <type>CRÉATURE</type>
+    <level>9</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>ÉLÉMENTAIRE</trait>
+      <trait>TERRE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+16</bonus>
+      <senses>
+        <sens>
+          <name>perception des vibrations</name>
+          <precision>imprécis</precision>
+          <range>24 m</range>
+        </sens>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+21</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+12</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+6, **Dex **–1, **Con **+7, **Int **–1, **Sag **+3, **Cha **–1</description>
+      </special>
+      <special>
+        <name>Lié à la terre</name>
+        <description>Quand il n’est pas en contact avec le sol, le broyeur de pierre est ralenti 1 et ne peut utiliser de réaction�</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>27</armorClass>
+    <saves/>
+    <health>180</health>
+    <immunities>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>saignement</immunity>
+      <immunity>sommeil</immunity>
+    </immunities>
+    <reactiveAbilities>
+      <special type="reaction">
+        <name>Désagrégation</name>
+        <description>Comme le glissement de terrain vivant, mais il s’enfonce de 4,5 m�</description>
+      </special>
+      <special>
+        <name>Pointes de pierre</name>
+        <traits>
+          <trait>aura</trait>
+          <trait>primordiale</trait>
+          <trait>terre</trait>
+        </traits>
+        <description>1,5 m� Des pointes de pierre jaillissent de toutes les surfaces en pierre situées dans l’émanation et créent un terrain difficile� Une créature qui se déplace sur ce terrain subit 2d6 dégâts perforants par case contenant des pointes dans laquelle il se déplace (une créature de taille au moins Grande ne subit des dégâts qu’une seule fois pour chaque case de déplacement même si son espace couvre plusieurs cases de pointes de pierre)� Les créatures dotées du trait terre ignorent cet effet dans la zone affectée� Le broyeur de pierre peut activer ou désactiver cette aura avec une action unique dotée du trait concentration�</description>
+      </special>
+    </reactiveAbilities>
+    <speeds speedSpecial="glisse à travers la terre">
+      <speed>10</speed>
+      <speed>5 m</speed>
+      <speed type="burrow">10</speed>
+      <speed>5 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>poing</name>
+        <bonus>+21</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d10+10</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>rocher</name>
+        <bonus>+21</bonus>
+        <traits>
+          <trait>brutal</trait>
+          <trait>facteur de portée 24 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d12+6</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Glisse à travers la terre</name>
+        <description>Comme le molosse de tourbe�</description>
+      </special>
+      <special>
+        <name>Avalanche élémentaire</name>
+        <description>Bornées et maladroites, les avalanches élémentaires sont des êtres massifs constitués de roches et de terre vivantes. Une fois cour‑ roucées, elles emploieront la méthode la plus directe pour résoudre le problème, le plus souvent en l’ensevelissant sous la roche.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

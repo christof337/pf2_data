@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GUERRIER OGRE</name>
+    <type>CRÉATURE</type>
+    <level>3</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>GÉANT</trait>
+      <trait>HUMANOÏDE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+12</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+9</bonus>
+      </skill>
+    </skills>
+    <armorClass>17</armorClass>
+    <saves REF="+6" FOR="+11" WIL="+5"/>
+    <health>50</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>crochet d’ogre</name>
+        <bonus>+12</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+          <trait>croc-en-jambe</trait>
+          <trait>mortel
+                                        1d10</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d10+7</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>javeline,</name>
+        <bonus>+6</bonus>
+        <traits>
+          <trait>jet 9 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+7</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Ogre glouton</name>
+        <description>Les ogres gloutons poussent l’art de la table jusqu’à des extrêmes épou‑ vantables et sont capables de dilater leur bouche déjà énorme jusqu’à pouvoir avaler tout cru un halfelin. Il existe d’innombrables histoires d’ogres gloutons persuadés par ruse d’avaler des boucliers aux bords tranchants ou des tonneaux remplis de viande empoisonnée. Cependant, ces récits ne sont d’aucune consolation pour ceux qui sont gobés par ces géants affamés. En plus de leur déplorable et sadique comportement alimentaire, les ogres gloutons ont un don particulièrement perturbant</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>HIPPOCAMPE GÉANT</name>
+    <type>CRÉATURE</type>
+    <level>8</level>
+    <creatureTraits>
+      <trait type="size">TRÈS GRANDE</trait>
+      <trait>ANIMAL</trait>
+      <trait>AQUATIQUE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+16</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>9 m</range>
+        </sens>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+14</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+20</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+6" DEX="+0" CON="+0" INT="+0" WIS="+0" CHA="+1"/>
+    <armorClass>27</armorClass>
+    <saves REF="+16" FOR="+18" WIL="+14"/>
+    <health>170</health>
+    <reactiveAbilities>
+      <special type="reaction">
+        <name>Désarçonner</name>
+        <description>DD 28 (p� 359)</description>
+      </special>
+    </reactiveAbilities>
+    <speeds>
+      <speed>3 m</speed>
+      <speed type="swim">24 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>queue</name>
+        <bonus>+18</bonus>
+        <traits>
+          <trait>allonge 4,5 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+10</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Retraite soudaine</name>
+        <description>Comme l’hippocampe�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>VICHARAMUNI</name>
+    <type>CRÉATURE</type>
+    <level>10</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>BÊTE</trait>
+      <trait>SAINT</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+22</bonus>
+      </skill>
+      <skill>
+        <name>Connaissances sur le Paradis</name>
+        <bonus>+21</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+21</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+20</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+18</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+5" DEX="+6" CON="+5" INT="+3" WIS="+5" CHA="+4"/>
+    <armorClass>31</armorClass>
+    <saves REF="+21" FOR="+20" WIL="+22"/>
+    <health>175</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>crochets</name>
+        <bonus>+22</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+          <trait>finesse</trait>
+          <trait>saint</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d10+8</amount>
+            <damageType>perfo- rants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>queue</name>
+        <bonus>+22</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 6 m</trait>
+          <trait>finesse</trait>
+          <trait>saint</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d8+8</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="spontaneous" tradition="divine" DD="29" attack="+21">
+      <rank rank="5">
+        <spells>
+          <spell>(4 emplacements) dissipa‑ tion de la magie, immolation divine, souffle de vie</spell>
+        </spells>
+      </rank>
+      <rank rank="4">
+        <spells>
+          <spell>(4 emplacements) éclair, purification des afflictions, vol</spell>
+        </spells>
+      </rank>
+      <rank rank="3">
+        <spells>
+          <spell>(4 emplacements) lecture des pensées, lumière sainte, manque de foi</spell>
+        </spells>
+      </rank>
+      <rank rank="2">
+        <spells>
+          <spell>(4 emplacements) explosion bruyante, per‑ cevoir l’imperceptible, tranquiliser</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special>
+        <name>Anneaux de connaissance</name>
+        <description>Comme un smaranava, mais DD 29�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Constriction supérieure</name>
+        <description>3d8+5 contondants, DD 29 (p� 359)</description>
+      </special>
+      <special>
+        <name>Venin spirituel</name>
+        <description>Un vicharamuni peut choisir d’annuler tous les dégâts que son venin inflige à une créature� De plus, le naga peut lancer n’importe lequel de ses sorts divins sur une créature affectée par son venin, quelles que soient la portée ou la ligne d’effet�</description>
+      </special>
+      <special>
+        <name>Venin de Vicharamuni</name>
+        <traits>
+          <trait>divine</trait>
+          <trait>esprit</trait>
+          <trait>mental</trait>
+          <trait>poison</trait>
+          <trait>saint</trait>
+        </traits>
+        <description>**Jet de sauvegarde** Volonté DD 29 ; **Durée maximale** 6 rounds ; **Stade 1 **3d6 d’esprit (1 round) ; **Stade 2 **3d6 d’esprit et drainé 1 (1 round)</description>
+      </special>
+      <special>
+        <name>RAVITHRA</name>
+        <description>avithra, la Stèle de Karma, a régné sur le Vudra dans les temps anciens, aux côtés des éons� Après la première d’une longue série de trahisons, sa tête coupée s’est transformée en un corps ophidien et elle est devenue la Mère des Nagas� Les descendants qui la vénèrent encore exercent une justice impitoyable tout en cherchant à restaurer son pouvoir�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

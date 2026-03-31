@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>TABELLIA</name>
+    <type>CRÉATURE</type>
+    <level>14</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>ANGE</trait>
+      <trait>CÉLESTE</trait>
+      <trait>SAINT</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+24</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+26</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+28</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+24</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+8, **Dex **+4, **Con **+5, **Int **+4, **Sag **+4, **Cha **+6</description>
+      </special>
+      <special>
+        <name>Objet</name>
+        <description>*marteau de guerre de frappe +1*</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>36</armorClass>
+    <saves REF="+26" FOR="+27" WIL="+22" saveSpecial="bonus de statut +1 à tous les jets de sau- vegarde contre la magie"/>
+    <health>285</health>
+    <weaknesses>
+      <weakness>
+        <name>impie</name>
+        <value>15</value>
+      </weakness>
+    </weaknesses>
+    <reactiveAbilities>
+      <special>
+        <name>Amnistie du messager</name>
+        <traits>
+          <trait>divine</trait>
+        </traits>
+        <description>� Un tabellia qui transporte un message est conti- nuellement protégé par l’effet de *sanctuaire *(DD 32)� Si l’ange met fin à cet effet en utilisant une action hostile, le *sanctuaire* se reforme 10 min après que l’ange a cessé les hostilités�</description>
+      </special>
+      <special>
+        <name>Aura du voyageur</name>
+        <traits>
+          <trait>aura</trait>
+          <trait>divine</trait>
+        </traits>
+        <description>6 m� Les créatures qui se trouvent dans l’aura d’un tabellia sont protégées contre les dégâts environnementaux des plans, dont la cha- leur ou le froid importants ou extrêmes ainsi que des dangers plus exotiques� Un tabellia ne peut pas être pris par surprise par les créatures qui se trouvent dans son aura�</description>
+      </special>
+    </reactiveAbilities>
+    <speeds>
+      <speed>12 m</speed>
+      <speed type="fly">22</speed>
+      <speed>5 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>*marteau de guerre saint*</name>
+        <bonus>+30</bonus>
+        <traits>
+          <trait>magique</trait>
+          <trait>pousser</trait>
+          <trait>saint</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+14</amount>
+            <damageType>contondants</damageType>
+          </damage>
+          <damage>
+            <amount>1d4</amount>
+            <damageType>d’esprit (ou 2d4 d’esprit contre les cibles impies)</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="divine" DD="36" attack="+28">
+      <rank rank="7">
+        <spells>
+          <spell>clarté spirituelle, colère divine, décret divin, gué‑ rison, purification des afflictions, sphère bénie</spell>
+        </spells>
+      </rank>
+      <rank rank="3">
+        <spells>
+          <spell spellSpecial="à volonté">tintement de vérité</spell>
+        </spells>
+      </rank>
+      <rank rank="2">
+        <spells>
+          <spell>invisibilité (à volonté, soi unique- ment)</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special>
+        <name>Constant (5</name>
+        <description>e**) ***langage universel*</description>
+      </special>
+      <special>
+        <name>Rituel</name>
+        <description>DD 36 ; *messager angé‑ lique* (p� 319)</description>
+      </special>
+      <special>
+        <name>Frappe étourdissante</name>
+        <description/>
+      </special>
+      <special type="activity" actions="1">
+        <name>Conditions</name>
+        <description>Le tabellia a touché un ennemi avec une Frappe d’arme plus tôt lors de ce tour ; **</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

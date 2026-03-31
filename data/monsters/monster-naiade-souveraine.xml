@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>NAÏADE SOUVERAINE</name>
+    <type>CRÉATURE</type>
+    <level>7</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>AMPHIBIE</trait>
+      <trait>EAU</trait>
+      <trait>FÉE</trait>
+      <trait>NYMPHE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>commun</language>
+      <language>elfique</language>
+      <language>féerique</language>
+      <language>thalassique</language>
+    </languages>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+16</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+9</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+20</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+14</bonus>
+      </skill>
+      <skill>
+        <name>Médecine</name>
+        <bonus>+15</bonus>
+      </skill>
+      <skill>
+        <name>Nature</name>
+        <bonus>+15</bonus>
+      </skill>
+      <skill>
+        <name>Représentation</name>
+        <bonus>+20</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+15</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+0, **Dex **+5, **Con **+4, **Int **+3, **Sag **+4, **Cha **+7</description>
+      </special>
+      <special>
+        <name>Empathie animale</name>
+        <description>Comme la naïade�</description>
+      </special>
+      <special>
+        <name>Liée à la région</name>
+        <description>La souveraine est liée à une étendue d’eau ou à une région qui comporte de nombreux éléments liés à l’eau�</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>26</armorClass>
+    <saves REF="+18" FOR="+15" WIL="+17"/>
+    <health>100</health>
+    <weaknesses>
+      <weakness>
+        <name>fer froid</name>
+        <value>10</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>poing aqueux</name>
+        <bonus>+18</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>eau</trait>
+          <trait>finesse</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+6</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>orbe d’eau</name>
+        <bonus>+18</bonus>
+        <traits>
+          <trait>eau</trait>
+          <trait>magique</trait>
+          <trait>portée 18 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>4d6</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="prepared" tradition="primal" DD="28" attack="+18">
+      <rank rank="4">
+        <spells>
+          <spell>convocation d’ani‑ mal, guérison</spell>
+        </spells>
+      </rank>
+      <rank rank="3">
+        <spells>
+          <spell>cloué à terre, guérison, orbe aqueux</spell>
+        </spells>
+      </rank>
+      <rank rank="2">
+        <spells>
+          <spell>lumière révélatrice, messager animal, symbiose végétale</spell>
+        </spells>
+      </rank>
+    </spellList>
+  </monster>
+</monsters>

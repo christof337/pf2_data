@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>NUÉE DE SCORPIONS</name>
+    <type>CRÉATURE</type>
+    <level>4</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>ANIMAL</trait>
+      <trait>NUÉE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+11</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+6</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+11</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+0, **Dex** +5, **Con** +2, **Int** –5, **Sag** +0, **Cha** –4</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>21</armorClass>
+    <saves REF="+13" FOR="+10" WIL="+8"/>
+    <health>55</health>
+    <immunities>
+      <immunity>à terre</immunity>
+      <immunity>entravé</immunity>
+      <immunity>esprit de la nuée (p� 359)</immunity>
+      <immunity>précision</immunity>
+      <immunity>Saisir</immunity>
+    </immunities>
+    <weaknesses>
+      <weakness>
+        <name>dégâts de zone</name>
+        <value>5</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special>
+        <name>Vitesse</name>
+        <description>7,5 m</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Nuée de piqûres</name>
+        <description>Chaque ennemi qui se trouve dans l’espace de la nuée subit 2d8 dégâts perforants (jet de Réflexes basique DD 21) et se trouve exposé au venin de scorpion�</description>
+      </special>
+      <special>
+        <name>Venin de scorpion</name>
+        <traits>
+          <trait>poison</trait>
+        </traits>
+        <description>; **Jet de sauvegarde** Vigueur DD 18 ; **Durée maximale** 6 rounds ; **Stade 1** 1d6 dégâts de poison (1 round) ; **Stade 2** 1d6 dégâts de poison et affaibli 1 (1 round)</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

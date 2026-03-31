@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>CHEF DE GUERRE TROLL</name>
+    <type>CRÉATURE</type>
+    <level>10</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>BOIS</trait>
+      <trait>GÉANT</trait>
+      <trait>HUMANOÏDE</trait>
+      <trait>TROLLS</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <armorClass>29</armorClass>
+    <saves REF="+17" FOR="+23" WIL="+15"/>
+    <health>240</health>
+    <weaknesses>
+      <weakness>
+        <name>électricité</name>
+        <value>10</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+23</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d12+13</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>*hache d’armes*</name>
+        <bonus>+24</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+          <trait>balayage</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+13</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+23</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+13</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Balayage à la hache</name>
+        <description/>
+      </special>
+      <special type="activity" actions="3">
+        <name>Conditions</name>
+        <description>Le chef de guerre troll manie deux haches d’armes ; **</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Retrait de l’armure</name>
+        <traits>
+          <trait>manipulation</trait>
+        </traits>
+        <description>� Le chef de guerre arrache son armure de sa chair� Il récupère immédiatement de 60 points de vie en raison d’une poussée régénératrice qui fait pousser des membres et des visages difformes� Sans son armure, sa CA tombe à 26 mais il gagne vision à 360° (p� 360) grâce à ses nouveaux visages� Remettre son armure lui demande 10 min, et ce pouvoir ne peut plus être utilisé avant 1 h�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Rugissement primordial</name>
+        <traits>
+          <trait>audible</trait>
+          <trait>émotion</trait>
+          <trait>mental</trait>
+          <trait>terreur</trait>
+        </traits>
+        <description>� Le chef de guerre troll pousse un rugissement bestial� Chaque ennemi qui n’est pas un troll dans une émanation de 30 m effectue un jet de Volonté DD 29� La créature est ensuite immunisée pendant 10 min�</description>
+      </special>
+      <special>
+        <name>Succès critique</name>
+        <description>La créature n’est pas affectée�</description>
+      </special>
+      <special>
+        <name>Succès</name>
+        <description>La créature est effrayée 1�</description>
+      </special>
+      <special>
+        <name>Échec</name>
+        <description>La créature est effrayée 2�</description>
+      </special>
+      <special>
+        <name>Échec critique</name>
+        <description>La créature est effrayée 3�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

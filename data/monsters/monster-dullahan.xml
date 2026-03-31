@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>DULLAHAN</name>
+    <type>CRÉATURE</type>
+    <level>7</level>
+    <creatureTraits>
+      <trait type="size"/>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+15</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+17</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+15</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+6, **Dex **+2, **Con **+2, **Int **+2, **Sag **+3, **Cha **+4</description>
+      </special>
+      <special>
+        <name>Objets</name>
+        <description>*épée longue +1, hachette +1*, harnois</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>28</armorClass>
+    <saves REF="+15" FOR="+13" WIL="+17"/>
+    <health>95</health>
+    <immunities>
+      <immunity>effets de mort</immunity>
+      <immunity>inconscient</immunity>
+      <immunity>maladie</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>saignement</immunity>
+      <immunity>terreur</immunity>
+    </immunities>
+    <weaknesses>
+      <weakness>
+        <name>saint</name>
+        <value>5</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>*épée longue acérée*</name>
+        <bonus>+18</bonus>
+        <traits>
+          <trait>magique</trait>
+          <trait>polyvalent P</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8+10</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>*hachette boomerang acérée*</name>
+        <bonus>+17</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>balayage</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+10</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>poing</name>
+        <bonus>+18</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>non létal</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+10</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>*hachette acérée boomerang*</name>
+        <bonus>+14</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>jet 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+10</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Chasseur de têtes</name>
+        <description>N’importe quelle arme tranchante gagne la rune *acérée *lorsqu’un dullahan la manie et n’importe quelle hachette gagne aussi la rune* boomerang*� Si un dullahan tue une créature avec un coup critique et une arme tranchante, la cible est décapitée comme s’il avait utilisé Moissonner sur sa cible�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Invocation du destrier</name>
+        <traits>
+          <trait>occulte</trait>
+        </traits>
+        <description>Le dullahan invoque un cheval de bataille (p� 175) avec des ajustements d’élite (p� 10) et les traits fiélon et impie� Ce destrier reste jusqu’à ce qu’il soit tué, que le dullahan le Révoque ou qu’il invoque un autre destrier�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Moissonner</name>
+        <description>Le dullahan décapite une créature morte à portée� Chaque créature dans la zone d’effet de la présence terrifiante du dullahan doit tenter un nouveau jet de sauvegarde, même si elle est temporairement immunisée�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

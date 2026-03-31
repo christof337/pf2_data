@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>ASTRADAÉMON</name>
+    <type>CRÉATURE</type>
+    <level>16</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>DAÉMONS</trait>
+      <trait>FIÉLON</trait>
+      <trait>IMPIE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+28</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+32</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+28</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+33</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+26</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+26</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+8" DEX="+6" CON="+7" INT="+2" WIS="+4" CHA="+7"/>
+    <armorClass>39</armorClass>
+    <saves REF="+30" FOR="+27" WIL="+26" saveSpecial="bonus de statut de +1 aux jets de sauvegarde contre la magie"/>
+    <health>240</health>
+    <immunities>
+      <immunity>effets de mort</immunity>
+      <immunity>néant</immunity>
+    </immunities>
+    <weaknesses>
+      <weakness>
+        <name>saint</name>
+        <value>15</value>
+      </weakness>
+    </weaknesses>
+    <reactiveAbilities>
+      <special>
+        <name>Lumière déformée</name>
+        <traits>
+          <trait>divine</trait>
+          <trait>illusion</trait>
+          <trait>visuel</trait>
+        </traits>
+        <description>� Un astradaémon déforme la lumière et ne semble pas occuper sa véritable position alors qu’il demeure dans le même espace� Les créatures prenant pour cible l’astradaémon doivent tenter un test nu DD 11 comme si ce dernier était caché, même s’il reste observé� Les pouvoirs qui s’appliquent au test nu contre les créatures cachées s’appliquent également à la lumière déformée�</description>
+      </special>
+      <special>
+        <name>Siphon d’âme</name>
+        <traits>
+          <trait>aura</trait>
+          <trait>divine</trait>
+          <trait>force</trait>
+        </traits>
+        <description>9 m� Un astradaémon tire de la puissance des âmes de ceux qui ont été récemment tués� Si une créature vivante de Petite taille ou inférieure meurt dans son aura, l’astradaémon gagne 5 points de vie temporaires et un bonus de statut de +1 aux jets d’attaque et de dégâts pendant 1 round, à moins que la créature n’ait été tuée par son pouvoir Engloutissement d’âme� Tant qu’ils se tiennent dans l’aura du daémon, les morts-vivants intangibles et les esprits vivants se déplaçant hors de leur corps subissent 1d8 dégâts spirituels par round à cause de la pression spirituelle qu’ils subissent tandis que l’astradaémon absorbe des fragments de leur âme�</description>
+      </special>
+    </reactiveAbilities>
+    <speeds>
+      <speed>18 m</speed>
+      <speed type="fly">18 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+32</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+          <trait>impie</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d6+8</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+32</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 3 m</trait>
+          <trait>impie</trait>
+          <trait>magique) ; **Dégâts **
+ 2d6+8 tranchants plus drain d’essence
+**Corps à corps**
+       1
+         queue +32 (allonge 4,5 m</trait>
+          <trait>impie</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d10+8</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="divine" DD="37">
+      <rank rank="8">
+        <spells>
+          <spell>déterminer la position</spell>
+        </spells>
+      </rank>
+      <rank rank="7">
+        <spells>
+          <spell>téléportation interplanaire (×2)</spell>
+        </spells>
+      </rank>
+      <rank rank="5">
+        <spells>
+          <spell>translocation</spell>
+        </spells>
+      </rank>
+      <rank rank="4">
+        <spells>
+          <spell spellSpecial="à volonté">translocation</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special>
+        <name>Constant (6</name>
+        <description>e**) ***discernement*</description>
+      </special>
+      <special>
+        <name>Drain d’essence</name>
+        <traits>
+          <trait>divine</trait>
+          <trait>néant</trait>
+        </traits>
+        <description>� Quand un astradaémon touche avec ses griffes, ses mâchoires ou sa queue, il absorbe l’essence spirituelle et vitale de la cible� La cible subit 2d10 dégâts de néant et l’astradaémon récupère un nombre égal de points de vie� La cible doit réussir un jet de Vigueur DD 37 ou subir les états condamné 1 et drainé 1� Si la cible était déjà drainée ou condam- née, elle augmente de 1 l’intensité de ces deux états jusqu’à un maximum de 4�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Engloutissement d’âme</name>
+        <description>(divine, mise hors de combat)� **Conditions. **Durant ce tour, l’astradaé- mon n’a pas encore utilisé d’action possédant le trait attaque ; **</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

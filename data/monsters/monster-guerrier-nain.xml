@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GUERRIER NAIN</name>
+    <type>CRÉATURE</type>
+    <level>1</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>HUMANOÏDE</trait>
+      <trait>NAIN</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+7</bonus>
+      <senses>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages>
+      <language>commun</language>
+      <language>nain</language>
+    </languages>
+    <skills>
+      <skill>
+        <name>Artisanat</name>
+        <bonus>+5</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Connaissances sur les nains</name>
+        <bonus>+5</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+3</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+4, **Dex **+1, **Con **+3, **Int **+1, **Sag **+3, **Cha **–1</description>
+      </special>
+      <special>
+        <name>Objets</name>
+        <description>armure de plates, bouclier en acier (Solidité 5, 20 PV, SR 10), marteau de guerre</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>17</armorClass>
+    <saves REF="+3" FOR="+8" WIL="+5"/>
+    <health>20</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>marteau de guerre</name>
+        <bonus>+8</bonus>
+        <traits>
+          <trait>pousser</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8+2</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>dague de clan</name>
+        <bonus>+8</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>parade</trait>
+          <trait>polyvalent C</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+2</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Charge au bouclier</name>
+        <description>Le guerrier nain Lève un bouclier et Marche rapidement deux fois�</description>
+      </special>
+      <special>
+        <name>Vaillance naine</name>
+        <description>Un nain fait généralement preuve de calme et de sang-froid face à un danger imminent� À la fin de son tour, réduisez son état effrayé de 2 au lieu de 1�</description>
+      </special>
+      <special>
+        <name>Maître de la roche nain</name>
+        <description>Tous les nains partagent un lien particulier avec la terre, mais les maîtres de la roche ont intensifié et façonné cette relation. Des années et des années de méditation leur ont permis d’atteindre la capacité de créer des rochers et de faire trembler la terre elle‑même. Les spécialistes de cet élément sont traditionnellement tenus en haute estime au sein de leur communauté, qui admire leur art de la géomancie. Les jeunes nains faisant preuve d’un lien plus puissant que la normale avec la terre peuvent être envoyés auprès d’un maître de la roche afin d’être formé le plus tôt possible.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

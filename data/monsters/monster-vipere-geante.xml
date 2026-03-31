@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>VIPÈRE GÉANTE</name>
+    <type>CRÉATURE</type>
+    <level>2</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+9</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+6</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+3, **Dex** +4, **Con** +3, **Int** –4, **Sag** +1, **Cha** –2</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>17</armorClass>
+    <saves REF="+11" FOR="+8" WIL="+6"/>
+    <health>26</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>crochets</name>
+        <bonus>+11</bonus>
+        <traits>
+          <trait>finesse</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8+3</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Enrouler</name>
+        <description>La vipère géante utilise une action pour s’enrouler� Tant qu’elle est enroulée, l’allonge de ses crochets est de 3 m et elle dispose de la réaction Frappe réflexe (p� 359)� Après avoir Frappé avec ses crochets, la vipère géante est déroulée�</description>
+      </special>
+      <special>
+        <name>Venin de vipère géante</name>
+        <traits>
+          <trait>poison</trait>
+        </traits>
+        <description>; **Jet de sauvegarde** Vigueur DD 17 ; **Durée maximale** 6 rounds ;</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Stade 1</name>
+        <description>d6 poison (1 round) ; **Stade 2** 1d6 poison et drainé 1�</description>
+      </special>
+      <special>
+        <name>Anaconda géant</name>
+        <description>Le monstrueux anaconda géant est un serpent constricteur capable d’avaler en une seule bouchée des créatures grandes comme des chevaux (sans parler des cavaliers qui les montent). Si les broussards novices sont plus attentifs aux serpents qui pour‑ raient se tapir dans la canopée des jungles, les anacondas géants préfèrent les mares et les rivières, où ils se nourrissent notamment de lamantins et de capybaras. Cette tactique de chasse permet à l’anaconda de noyer sa proie tout en l’immobilisant, ce qui réduit le risque qu’il soit blessé. Malgré des récits sensationnels propagés par les aventuriers, ces serpents n’attaquent que rarement les humanoïdes.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>PROPHÈTE DES OSSEMENTS</name>
+    <type>CRÉATURE</type>
+    <level>8</level>
+    <creatureTraits>
+      <trait type="size"/>
+    </creatureTraits>
+    <perception>
+      <bonus>+15</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>9 m</range>
+        </sens>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Arcanes</name>
+        <bonus>+15</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+18</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+16</bonus>
+      </skill>
+      <skill>
+        <name>Occultisme</name>
+        <bonus>+17</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+19</bonus>
+      </skill>
+      <skill>
+        <name>Société</name>
+        <bonus>+15</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+3, **Dex **+3, **Con **+2, **Int **+5, **Sag **+5, **Cha **+6</description>
+      </special>
+      <special>
+        <name>Objets</name>
+        <description>* bâton de frappe +1, potion d’invisibilité*, symbole religieux d’Ydersius</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>27</armorClass>
+    <saves REF="+15" FOR="+14" WIL="+19"/>
+    <health>115</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>bâton</name>
+        <bonus>+18</bonus>
+        <traits>
+          <trait>deux mains d8</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d4+9</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>crochets</name>
+        <bonus>+17</bonus>
+        <traits>
+          <trait>finesse</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+9</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="spontaneous" tradition="divine" DD="28" attack="+20">
+      <rank rank="4">
+        <spells>
+          <spell>(3 emplacements) cadavre loquace, lire les présages, mise à mal, vol</spell>
+        </spells>
+      </rank>
+      <rank rank="3">
+        <spells>
+          <spell>(4 emplacements) cécité, festin vampirique, lier un mort‑vivant, ténèbres gla‑ ciales</spell>
+        </spells>
+      </rank>
+      <rank rank="2">
+        <spells>
+          <spell>(4 emplacements) percevoir l’imperceptible, résistance à l’énergie, ténèbres, vendetta sanglante</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special>
+        <name>Sorts innés occultes</name>
+        <description>DD 28 ; **6**e *domination* ; **5**e *scène illusoire*, *suggestion* ; **3**e *déguisement illusoire* (à volonté) ; **2**e *flou* (soi uniquement ; à volonté) ; **1**er *ventriloquie *(à volonté)</description>
+      </special>
+      <special>
+        <name>Rituel</name>
+        <description>DD 28 ; *création de mort‑vivant*</description>
+      </special>
+      <special type="activity" actions="3">
+        <name>Résurrection de serpent</name>
+        <traits>
+          <trait>divine</trait>
+        </traits>
+        <description>; **Fréquence** 1 fois/jour ;</description>
+      </special>
+      <special>
+        <name>Venin des hommes‑serpents</name>
+        <traits>
+          <trait>poison</trait>
+        </traits>
+        <description>� Comme les hommes-serpents zyss, mais DD 26�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

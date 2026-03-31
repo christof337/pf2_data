@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>DESTRIER NOIR</name>
+    <type>CRÉATURE</type>
+    <level>6</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>BÊTE</trait>
+      <trait>FIÉLON</trait>
+      <trait>IMPIE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+16</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+14</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+12</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+6, **Dex **+3, **Con **+3, **Int **+1, **Sag **+4, **Cha **+2</description>
+      </special>
+      <special>
+        <name>Fumée</name>
+        <traits>
+          <trait>aura</trait>
+        </traits>
+        <description>4,5 m� Le destrier noir exhale continuellement une fumée noire� Les créatures dans l’aura sont masquées par rapport à celles qui sont à l’extérieur, et inversement� Les des- triers noirs et leurs cavaliers peuvent voir à travers cette fumée� Une créature qui commence son tour dans l’aura doit réussir un jet de Vigueur DD 22 ou être malade 2� Puis elle est temporairement immunisée contre l’effet de la fumée pendant 1 min� C’est un poison inhalé et le destrier noir ainsi que son cavalier y sont immunisés�</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>24</armorClass>
+    <saves REF="+15" FOR="+15" WIL="+12"/>
+    <health>100</health>
+    <speeds>
+      <speed>12 m</speed>
+      <speed type="fly">27 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+16</bonus>
+        <traits>
+          <trait>impie</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d10+8</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>sabot</name>
+        <bonus>+16</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>feu</trait>
+          <trait>impie</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8+8</amount>
+            <damageType>conton- dants</damageType>
+          </damage>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>de feu</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="divine" DD="24">
+      <rank rank="7">
+        <spells>
+          <spell>téléportation interplanaire (uniquement le destrier et son cavalier)</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Galop enflammé</name>
+        <traits>
+          <trait>divin</trait>
+          <trait>feu</trait>
+          <trait>impie</trait>
+        </traits>
+        <description>Le destrier noir Marche rapidement ou Vole jusqu’au triple de sa Vitesse� Ses sabots s’embrasent de flammes intenses, infligeant une seule fois 3d6 dégâts de feu avec un jet de Réflexes basique DD 24 à toutes les créatures (sauf son cavalier) auxquelles le destrier se retrouve adjacent au cours de son galop� Chaque créature ne peut être affectée qu’une seule fois par la même utilisation de Galop enflammé�</description>
+      </special>
+      <special>
+        <name>Destrier noir supérieur</name>
+        <description>Cet énorme destrier noir supérieur est apprécié pour son pouvoir lui permet‑ tant d’envahir d’autres réalités avec son cavalier.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

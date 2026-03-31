@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GUERRIER KOBOLD</name>
+    <type>CRÉATURE</type>
+    <level>-1</level>
+    <creatureTraits>
+      <trait type="size">PETITE</trait>
+      <trait>HUMANOÏDE</trait>
+      <trait>KOBOLD</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>commun</language>
+      <language>sakvroth</language>
+    </languages>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+5</bonus>
+      </skill>
+      <skill>
+        <name>Artisanat</name>
+        <bonus>+2</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+5</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+1, **Dex** +3, **Con** −1,** Int** +0, **Sag** +1,** Cha**+1</description>
+      </special>
+      <special>
+        <name>Objets</name>
+        <description>armure de cuir, fronde (20 billes), lance</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>16</armorClass>
+    <saves REF="+7" FOR="+3" WIL="+3"/>
+    <health>7</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>lance +3, **Dégâts **1d6+1 perforants **À distance** 1 fronde</name>
+        <bonus>+5</bonus>
+        <traits>
+          <trait>propulsif</trait>
+          <trait>facteur de portée 15 m</trait>
+          <trait>rechargement
+ 1</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>lance</name>
+        <bonus>+5</bonus>
+        <traits>
+          <trait>jet 6 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+1</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Attaque sournoise</name>
+        <description>Le guerrier kobold inflige 1d4 dégâts de précision supplémentaires aux créatures prises par surprise�</description>
+      </special>
+      <special>
+        <name>Détaler</name>
+        <description/>
+      </special>
+      <special type="activity" actions="1">
+        <name>Conditions</name>
+        <description>Le guerrier kobold est adjacent à au moins un ennemi ;</description>
+      </special>
+      <special>
+        <name>Éclaireur kobold</name>
+        <description>La plupart des kobolds rencontrés à l’extérieur de leurs terriers ou tanières bien défendus sont des éclaireurs entraînés à la traque et à la chasse. Ils se retrouvent souvent au cœur des combats quand leur tanière est envahie et tentent de faire gagner du temps à leurs camarades pour qu’ils puissent poser des pièges et des assommoirs.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

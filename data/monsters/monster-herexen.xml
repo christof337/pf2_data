@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>HÉREXEN</name>
+    <type>CRÉATURE</type>
+    <level>2</level>
+    <creatureTraits>
+      <trait type="size"/>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <armorClass>17</armorClass>
+    <saves REF="+8" FOR="+5" WIL="+10"/>
+    <health>30</health>
+    <immunities>
+      <immunity>effets de mort</immunity>
+      <immunity>inconscient</immunity>
+      <immunity>maladie</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>saignement</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>dague</name>
+        <bonus>+10</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>polyvalent T</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+4</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="prepared" tradition="divine" DD="18"/>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Sort de domaine de prêtre</name>
+        <description>point de focalisation, DD 18 ; **1**er *appel de la mort* (*Livre des joueurs* p� 379)</description>
+      </special>
+      <special>
+        <name>Châtiment hérétique</name>
+        <traits>
+          <trait>divine</trait>
+          <trait>impie</trait>
+        </traits>
+        <description>� Tant qu’il manie l’arme de prédilection de son ancienne divinité (comme une dague pour les anciens adeptes de Pharasma), les Frappes de l’hérexen infligent 1d6 dégâts spirituels supplémentaires contre les créatures ayant le trait saint�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

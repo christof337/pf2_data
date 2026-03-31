@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>ANKYLOSAURE</name>
+    <type>CRÉATURE</type>
+    <level>6</level>
+    <creatureTraits>
+      <trait type="size">TRÈS GRANDE</trait>
+      <trait>ANIMAL</trait>
+      <trait>DINOSAURE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+12</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>9 m</range>
+        </sens>
+        <sens>
+          <name>vision nocturne</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <interactionAbilities>
+      <special>
+        <name>Compétence</name>
+        <description>Athlétisme +17</description>
+      </special>
+      <special>
+        <name>For</name>
+        <description>+7, **Dex** +0, **Con** +4, **Int** –4, **Sag** +2, **Cha** –1</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>26</armorClass>
+    <saves REF="+10" FOR="+16" WIL="+12"/>
+    <health>90</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>queue</name>
+        <bonus>+17</bonus>
+        <traits>
+          <trait>allonge 4,5 m</trait>
+          <trait>prise d’élan</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+7</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>patte</name>
+        <bonus>+17</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+7</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="3">
+        <name>Piétinement</name>
+        <description>Moyenne ou plus petite, patte, DD 24 (p� 360)</description>
+      </special>
+      <special>
+        <name>Queue percutante</name>
+        <description>Une créature touchée par la queue d’un ankylosaure doit tenter un jet de Vigueur DD 24� Sur un échec, elle est étourdie 1 ; sur un échec critique, elle est étourdie 3�</description>
+      </special>
+      <special>
+        <name>Stégosaure</name>
+        <description>Le stégosaure est facilement identifiable grâce à sa double rangée de plaques dor‑ sales en forme de losanges le long de sa colonne vertébrale et à son épaisse queue dotée de quatre grandes piques. Cette configuration protège l’herbivore dont les plaques osseuses dévient les attaques alors qu’il empale les prédateurs sur les pointes de sa queue. Malgré sa taille, le stégosaure est généralement d’humeur égale et douce. Cela en fait une bête particulièrement appré‑ ciée pour servir de garde ou d’animal de compagnie mais il faut tout de même faire attention à ne pas l’énerver ; un stégosaure contrarié ou courroucé peut don‑ ner un coup de queue sans prévenir.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

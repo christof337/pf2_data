@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>MANTICORE</name>
+    <type>CRÉATURE</type>
+    <level>6</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>BÊTE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+14</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>9 m</range>
+        </sens>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <interactionAbilities>
+      <special>
+        <name>Langue</name>
+        <description>commun</description>
+      </special>
+      <special>
+        <name>Compétences</name>
+        <description>Acrobaties +10, Athlétisme +15, Intimidation +11, Survie +12</description>
+      </special>
+      <special>
+        <name>For</name>
+        <description>+5, **Dex **+2, **Con **+4, **Int **–2, **Sag **+2, **Cha** –1</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>23</armorClass>
+    <saves REF="+12" FOR="+16" WIL="+12"/>
+    <health>90</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires +17, **Dégâts ** 2d8+8 perforants **Corps à corps** 1 griffes</name>
+        <bonus>+17</bonus>
+        <traits>
+          <trait>agile</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+8</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>piquant</name>
+        <bonus>+14</bonus>
+        <traits>
+          <trait>facteur de portée
+ 12 m</trait>
+          <trait>propulsif</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d10+5</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>dard</name>
+        <bonus>+17</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8+8</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Venin de manticore</name>
+        <traits>
+          <trait>poison</trait>
+        </traits>
+        <description>**Jet de sauvegarde** Vigueur DD 22 ; **Durée maximale** 6 rounds ; **Stade 1** 1d10 dégâts de poison et affaibli 1 (1 round) ;</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Stade 2</name>
+        <description>d10 dégâts de poison et affaibli 1 (1 round) ; **Stade 3** 2d10 dégâts de poison et affaibli 2 (1 round) FRANCK PONT - lhanselo@hotmail.fr - 202602/3379711/4016001 [[PAGE 250]]</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

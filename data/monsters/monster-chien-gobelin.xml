@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>CHIEN GOBELIN</name>
+    <type>CRÉATURE</type>
+    <level>1</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+6</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>9 m</range>
+        </sens>
+        <sens>
+          <name>vision nocturne</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+6</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+7</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+3,** Dex** +2,** Con **+2,** Int** +4,** Sag **+1,** Cha **–1</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>15</armorClass>
+    <saves/>
+    <health>17</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special type="reaction">
+        <name>Désarçonner</name>
+        <description>DD 17 (p� 359)</description>
+      </special>
+      <special>
+        <name>Saccade</name>
+        <description/>
+      </special>
+      <special type="reaction">
+        <name>Conditions</name>
+        <trigger>Le cavalier donne un ordre au chien gobelin ;</trigger>
+        <effect>Le chien gobelin Fait un pas avant de suivre l’ordre�</effect>
+      </special>
+      <special>
+        <name>Squame irritante</name>
+        <description>Une créature qui touche un chien gobelin avec une attaque à mains nues, qui tente de le Saisir ou qui entre en contact avec lui d’une autre manière, est exposée à la variole gobeline�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Vitesse</name>
+        <description>2 m</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>mâchoires +9, **Dégâts** 1d6+3 perforants plus variole gobeline</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Se gratter</name>
+        <traits>
+          <trait>manipulation</trait>
+        </traits>
+        <description>� Le chien gobelin se gratte vigoureusement exposant toutes les créatures adjacentes à la variole gobeline�</description>
+      </special>
+      <special>
+        <name>Variole gobeline</name>
+        <traits>
+          <trait>maladie</trait>
+        </traits>
+        <description>� Les gobelins et les chiens gobelins sont immunisés contre la variole gobeline ; **Jet de sauvegarde** Vigueur DD 17 ; **Stade 1** malade 1 (1 round) ; **Stade 2** malade 1 et ralenti 1 (1 round) ; **Stade 3** malade 2 et ne peut réduire l’intensité de son état malade en dessous de 1 (1 jour)�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

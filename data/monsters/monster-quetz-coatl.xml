@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>QUETZ COATL</name>
+    <type>CRÉATURE</type>
+    <level>10</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>BÊTE</trait>
+      <trait>COATL</trait>
+      <trait>SAINT</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>commun</language>
+      <language>empyréen</language>
+      <language>sussuran</language>
+      <language>utopien</language>
+      <langSpecial>télépathie 30 m (p� 316)</langSpecial>
+    </languages>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+16</bonus>
+      </skill>
+      <skill>
+        <name>Arcanes</name>
+        <bonus>+19</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+19</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+22</bonus>
+      </skill>
+      <skill>
+        <name>Nature</name>
+        <bonus>+22</bonus>
+      </skill>
+      <skill>
+        <name>Occultisme</name>
+        <bonus>+19</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+22</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+16</bonus>
+      </skill>
+    </skills>
+    <armorClass>30</armorClass>
+    <saves/>
+    <health>175</health>
+    <speeds>
+      <speed>4</speed>
+      <speed>5 m</speed>
+      <speed type="fly">15 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+23</bonus>
+        <traits>
+          <trait>magique</trait>
+          <trait>saint</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d10+13</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="divine" DD="29">
+      <rank rank="7">
+        <spells>
+          <spell>téléportation inter‑ planaire (soi uniquement)</spell>
+        </spells>
+      </rank>
+      <rank rank="5">
+        <spells>
+          <spell>souffle de vie, puri‑ fication des afflictions, colère divine</spell>
+        </spells>
+      </rank>
+      <rank rank="4">
+        <spells>
+          <spell>charme, forme vaporeuse</spell>
+        </spells>
+      </rank>
+      <rank rank="3">
+        <spells>
+          <spell spellSpecial="à volonté">lecture des pensées</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special>
+        <name>Tours de magie (5</name>
+        <description>e**) ***lumière*, *main télékinésique*, *frappe de vitalité*</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Ailes resplendissantes</name>
+        <description>(divine, lumière, mental, mise hors de combat, visuel)� Le quetz coatl déploie ses ailes multi- colores et expose son plumage resplendissant� Chaque ennemi dans une émanation de 9 m fait un jet de Volonté DD 29�</description>
+      </special>
+      <special>
+        <name>Succès critique</name>
+        <description>La créature n’est pas affectée et est immunisée contre les ailes resplendissantes pendant 24 h�</description>
+      </special>
+      <special>
+        <name>Succès</name>
+        <description>La créature est éblouie pendant 1 round�</description>
+      </special>
+      <special>
+        <name>Échec</name>
+        <description>La créature est éblouie pendant 1 min�</description>
+      </special>
+      <special>
+        <name>Échec critique</name>
+        <description>Comme un échec, mais si la créature est impie, elle est éga- lement étourdie 3�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Constriction supérieure</name>
+        <description>2d10+7 contondants, DD 29 (p� 359)</description>
+      </special>
+      <special>
+        <name>Enrouler les anneaux</name>
+        <description/>
+      </special>
+      <special type="activity" actions="1">
+        <name>Conditions</name>
+        <description>Le quetz coatl a empoigné ou entravé une créature de taille Moyenne ou inférieure à l’aide de ses mâchoires ;</description>
+      </special>
+      <special>
+        <name>Venin de quetz coatl</name>
+        <traits>
+          <trait>poison</trait>
+          <trait>saint</trait>
+        </traits>
+        <description>� Pour les créatures impies, ce venin prend la forme d’une malédiction qui inflige des dégâts d’esprit au lieu de celle d’un poison qui inflige des dégâts de poison ; **Jet de sauvegarde** Vigueur DD 29 ; **Durée maximale** 6 rounds ; **Stade 1** 2d6 dégâts de poison et affaibli 1 (1 round) ; **Stade 2** 2d8 dégâts de poison, affaibli 1 et pris par surprise (1 round) ; **Stade 3** 2d10 dégâts de poison, affaibli 2 et pris par surprise (1 round)</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

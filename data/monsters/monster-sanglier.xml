@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>SANGLIER</name>
+    <type>CRÉATURE</type>
+    <level>2</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+8</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>9 m</range>
+        </sens>
+        <sens>
+          <name>vision nocturne</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+5</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+8</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+4, **Dex** +1, **Con** +4, **Int** –4, **Sag** +2, **Cha** –3</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>15</armorClass>
+    <saves/>
+    <health>40</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special type="reaction">
+        <name>Férocité</name>
+        <traits>
+          <trait>p� 359</trait>
+        </traits>
+        <description/>
+      </special>
+      <special type="activity" actions="1">
+        <name>Vitesse</name>
+        <description>2 m</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>défense +10, **Dégâts** 2d6+4 perforants</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Charge du sanglier</name>
+        <description>Le sanglier Marche rapidement deux fois puis effectue une Frappe de défenses� S’il s’est déplacé d’au moins 6 m, il gagne un bonus de circonstances de +2 à son jet d’attaque�</description>
+      </special>
+      <special>
+        <name>Daeodon</name>
+        <description>Alors qu’un sanglier typique est seulement une créature antipathique dotée d’un mauvais caractère, les grands daeodons sont résolument hostiles et violents. Bien qu’ils soient omnivores, les daeodons (également appelés sangliers géants dans cer‑ taines régions) préfèrent manger de la chair. S’ils sont principalement des charo‑ gnards, ils n’hésitent pas à attaquer les créatures qui croisent leur route quand ils cherchent leur pitance, pour protéger leur repaire ou leur territoire. Certains orcs particulièrement braves ou habiles réussissent à dresser les daeodons pour en faire des animaux de combat ou de redoutables montures. Un daeodon adulte moyen mesure 3 m de long et a une taille de 2,1 m au garrot pour un poids d’environ 1 tonne.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

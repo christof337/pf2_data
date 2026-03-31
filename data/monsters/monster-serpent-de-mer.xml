@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>SERPENT DE MER</name>
+    <type>CRÉATURE</type>
+    <level>12</level>
+    <creatureTraits>
+      <trait type="size">GIGANTESQUE</trait>
+      <trait>ANIMAL</trait>
+      <trait>AQUATIQUE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+18</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+26</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+28</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+8" DEX="+4" CON="+6" INT="+0" WIS="+2" CHA="+0"/>
+    <armorClass>35</armorClass>
+    <saves REF="+21" FOR="+25" WIL="+21"/>
+    <health>210</health>
+    <speeds>
+      <speed>6 m</speed>
+      <speed type="swim">18 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+27</bonus>
+        <traits>
+          <trait>allonge 6 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d10+14</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>queue</name>
+        <bonus>+27</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 9 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d10+14</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>geyser d’eau</name>
+        <bonus>+25</bonus>
+        <traits>
+          <trait>brutal</trait>
+          <trait>eau</trait>
+          <trait>facteur de portée 30 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+12</amount>
+            <damageType>conton- dants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Algues de serpent de mer</name>
+        <traits>
+          <trait>mise hors de combat</trait>
+          <trait>poison</trait>
+        </traits>
+        <description>� L’eau contenue dans les organes qui permettent d’assurer la stabilité du serpent et qui sont situés au niveau de son cou est satu- rée d’algues psychotropes� **Jet de sauvegarde** DD 34 Vigueur ; **Durée maximale** 6 rounds ;</description>
+      </special>
+      <special>
+        <name>Stade 1</name>
+        <description>confus et, si la créature est en train de voler, elle doit utiliser sa première action lors de chaque tour pour descendre de 6 m (1 round) ; **Stade 2 **confus et, si la créature est en train de voler, elle doit descendre jusqu’au niveau du sol ou de l’eau (1 round)�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Chavirer</name>
+        <traits>
+          <trait>attaque</trait>
+        </traits>
+        <description>� Le serpent de mer tente de faire chavirer une embarcation d’une taille inférieure ou égale à la sienne et qui se trouve dans un espace adjacent� Pour cela, il doit réussir un test d’Athlé- tisme DD 35 (réduit de 5 par catégorie de taille du navire inférieure à la sienne) ou égal au DD de Connaissances en navigation maritime du pilote (le plus élevé des deux)�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Constriction</name>
+        <description>1d10+14 contondants, DD 32 (p� 359)</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Extension des pointes dorsales</name>
+        <traits>
+          <trait>attaque</trait>
+        </traits>
+        <description>� Le serpent de mer déploie les épines qui lui couvrent le dos et Nage ou Marche rapidement� Toutes les créatures qui se trouvent dans un espace adjacent au serpent à n’importe quel moment de son déplacement subissent 4d6+8 dégâts tranchants (jet de Réflexes basique DD 32)�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Gober</name>
+        <traits>
+          <trait>attaque</trait>
+        </traits>
+        <description>Très Grande, 2d10+6 dégâts contondants, Rupture 20 (p� 359)</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

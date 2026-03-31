@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>CYTHNIGOTE</name>
+    <type>CRÉATURE</type>
+    <level>1</level>
+    <creatureTraits>
+      <trait type="size">TRÈS PETITE</trait>
+      <trait>FIÉLON</trait>
+      <trait>IMPIE</trait>
+      <trait>QLIPPOTH</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+5</bonus>
+      <senses>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages>
+      <language>chthonien</language>
+      <langSpecial>télépathie (contact uniquement</langSpecial>
+    </languages>
+    <attributes STR="+1" DEX="+3" CON="+4" INT="+2" WIS="+2" CHA="+1"/>
+    <armorClass>16</armorClass>
+    <saves REF="+6" FOR="+9" WIL="+5"/>
+    <health>14</health>
+    <immunities>
+      <immunity>contrôlé</immunity>
+      <immunity>terreur</immunity>
+    </immunities>
+    <speeds>
+      <speed>9 m</speed>
+      <speed type="fly">12 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>morsure</name>
+        <bonus>+8</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 0 m</trait>
+          <trait>finesse</trait>
+          <trait>impie</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d10+1</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Sorts innés occultes</name>
+        <description>* *DD 17 ; **4**e* lire les présages* ; **2**e* paranoïa *; **1**er* douleur fantôme *; **Tours de magie (1**er**) ***détection de la magie, hébétement*</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Démonstration écœurante</name>
+        <traits>
+          <trait>concentration</trait>
+          <trait>émotion</trait>
+          <trait>mental</trait>
+          <trait>occulte</trait>
+          <trait>terreur</trait>
+          <trait>visuel</trait>
+        </traits>
+        <description>� Le cythnigote révèle toute l’horreur de son apparence et oblige les créatures situées dans une émanation de 3 m à faire un jet de Volonté DD 17� Une fois qu’une créature a fait ce jet, elle est immunisée contre la Démonstration écœurante pendant 1 min�</description>
+      </special>
+      <special>
+        <name>Succès critique</name>
+        <description>La créature n’est pas affectée�</description>
+      </special>
+      <special>
+        <name>Succès</name>
+        <description>La créature est prise par surprise jusqu’à son prochain tour�</description>
+      </special>
+      <special>
+        <name>Échec</name>
+        <description>La créature est malade 1 et prise par surprise tant qu’elle est malade�</description>
+      </special>
+      <special>
+        <name>Échec critique</name>
+        <description>Comme un échec, mais malade 2�</description>
+      </special>
+      <special>
+        <name>Enchevêtrement de spores</name>
+        <traits>
+          <trait>maladie</trait>
+        </traits>
+        <description>� Si un cythnigote mord une créature, il lui inocule des spores qui se développent rapidement et forment des épines frémissantes et des paquets de hideuses fibres blafardes aussi fines que des cheveux� Ces excroissances poussent au niveau de la plaie et s’enroulent autour des membres de la créature� Les créatures végétales subissent un malus de circonstances de −2 au jet de sauvegarde contre ce pouvoir ; **Jet de sauvegarde** Vigueur DD 17 ; **Durée maximale** 6 rounds ; **Stade 1** mala- droit 1 (1 round) ; **Stade 2** maladroit 1 et pris par surprise (1 round) ; **Stade 3 **maladroit 2, pris par surprise et si vous tentez une action de manipulation, vous devez réussir un test nu DD 5, sinon cette action est perdue� Le dé se lance après avoir dépensé l’action, mais avant d’appliquer un quelconque effet (1 round)�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

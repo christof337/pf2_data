@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>MAGISTER DERO</name>
+    <type>CRÉATURE</type>
+    <level>5</level>
+    <creatureTraits>
+      <trait type="size">PETITE</trait>
+      <trait>DERO</trait>
+      <trait>HUMANOÏDE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+8</bonus>
+      <senses>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages>
+      <language>aklo</language>
+      <language>sakvroth</language>
+    </languages>
+    <skills>
+      <skill>
+        <name>Artisanat</name>
+        <bonus>+12</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+11</bonus>
+      </skill>
+      <skill>
+        <name>Médecine</name>
+        <bonus>+10</bonus>
+      </skill>
+      <skill>
+        <name>Occultisme</name>
+        <bonus>+12</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+1" DEX="+4" CON="+2" INT="+3" WIS="+0" CHA="+5"/>
+    <armorClass>22</armorClass>
+    <saves REF="+13" FOR="+10" WIL="+10"/>
+    <health>65</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>bâton</name>
+        <bonus>+10</bonus>
+        <traits>
+          <trait>deux mains d8</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+3</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="occult" DD="24">
+      <rank rank="4">
+        <spells>
+          <spell>cauchemar, mémoire réécrite</spell>
+        </spells>
+      </rank>
+      <rank rank="2">
+        <spells>
+          <spell>lumière révélatrice, ténèbres</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special>
+        <name>Sorts spontanés occultes</name>
+        <description>DD 24 ; **3**e (3 emplacements) *cécité*, *festin vampirique, lévitation* ; **2**e (4 emplacements) *manœuvre télékinésique, paranoïa*,* rire incontrôlable*, *stupéfaction* ; **1**er (4 emplacements) *apaiser, barrage de force*, *douleur fantôme*, *sinistres volutes* ;</description>
+      </special>
+      <special>
+        <name>Tours de magie (3</name>
+        <description>e**) ***détection de la magie*, *lumière*, *message, perversion du néant*, *sceau d’interdiction*</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Médecine dero</name>
+        <description>Comme le traqueur dero mais guérison de 2d8+10 points de vie�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Regard cytillesh</name>
+        <traits>
+          <trait>concentration</trait>
+          <trait>mental</trait>
+          <trait>mise hors de combat</trait>
+          <trait>visuel</trait>
+        </traits>
+        <description>; **Fréquence** 1 fois/round ;</description>
+      </special>
+      <special>
+        <name>CYTILLESH</name>
+        <description>Les deros cultivent et mangent un champignon empoisonné appelé le cytillesh, aussi connu sous le nom de moisissure cérébrale� Ce champignon luit d’une pâle lueur bleutée et peut provoquer des anomalies congénitales et d’autres effets nocifs� Les deros ne sont pas intimidés par ces problèmes puisqu’une exposition prolongée peut aussi ralentir les effets du vieillissement et, dans de rares cas, octroyer des pouvoirs occultes à certains qui sont connus sous le nom de « magisters� » Les deros savent également préparer les spores de cytillesh pour en faire du poison de léthargie ainsi que de nombreuses toxines hallucinogènes�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

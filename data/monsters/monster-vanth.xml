@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>VANTH</name>
+    <type>CRÉATURE</type>
+    <level>7</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>PSYCHOPOMPE</trait>
+      <trait>VEILLEUR</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+17</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+17</bonus>
+      </skill>
+      <skill>
+        <name>Connaissances sur le Cimetière</name>
+        <bonus>+15</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+17</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+15</bonus>
+      </skill>
+      <skill>
+        <name>Occultisme</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+13</bonus>
+      </skill>
+    </skills>
+    <armorClass>27</armorClass>
+    <saves REF="+13" FOR="+15" WIL="+17" saveSpecial="bonus de statut de +1 à tous les jets de sauvegarde contre la magie"/>
+    <health>105</health>
+    <immunities>
+      <immunity>effets de mort</immunity>
+      <immunity>maladie</immunity>
+    </immunities>
+    <speeds>
+      <speed>7</speed>
+      <speed>5 m</speed>
+      <speed type="fly">12 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>*faux*+18 (croc-en-jambe, magique, mortel d10), **Dégâts **1d10+8 tranchants plus 2d6 de toucher du berger **Corps à corps** 1 mâchoires</name>
+        <bonus>+17</bonus>
+        <traits>
+          <trait>agile</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+8</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+          <damage>
+            <amount>2d6</amount>
+            <damageType>de toucher du berger</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="divine" DD="22">
+      <rank rank="5">
+        <spells>
+          <spell>translocation</spell>
+        </spells>
+      </rank>
+      <rank rank="4">
+        <spells>
+          <spell spellSpecial="à volonté">translocation</spell>
+        </spells>
+      </rank>
+      <rank rank="3">
+        <spells>
+          <spell>localisation (×3), lumière sainte (×3)</spell>
+        </spells>
+      </rank>
+      <rank rank="2">
+        <spells>
+          <spell>invisibilité (à volonté, soi uniquement)</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special>
+        <name>Imprégnation d’arme</name>
+        <traits>
+          <trait>divine</trait>
+        </traits>
+        <description>� La faux d’un vanth est le sym- bole de sa fonction et gagne un peu de sa puissance person- nelle� Cette faux devient une *faux +1* et est traitée comme si elle était en adamantium tant que le vanth la brandit� Un vanth dont la faux est volée ou détruite peut en imprégner une nouvelle après 1 h de travail�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Malédiction du vanth</name>
+        <traits>
+          <trait>malédiction</trait>
+          <trait>divine</trait>
+          <trait>infortune</trait>
+        </traits>
+        <description>; **Fréquence** 3 fois/jour ;</description>
+      </special>
+      <special>
+        <name>Succès critique</name>
+        <description>La créature n’est pas affectée et est immunisée contre la malédiction du vanth pendant 24 h�</description>
+      </special>
+      <special>
+        <name>Succès</name>
+        <description>La cible ressent un frisson mortel momentané et est stupéfiée 1 pendant 1 min par cette sensation déstabilisante�</description>
+      </special>
+      <special>
+        <name>Échec</name>
+        <description>La cible devient morose et abattue et accepte son sort inévitable� Pendant 1 h, elle est stupéfiée 2� Chaque fois que la cible subit l’état mourant, l’intensité de l’état stupéfié augmente de 1 jusqu’à un maximum de 4�</description>
+      </special>
+      <special>
+        <name>Échec critique</name>
+        <description>Comme un échec mais l’effet est permanent�</description>
+      </special>
+      <special>
+        <name>Toucher du berger</name>
+        <description>Comme le nosoi, mais 2d6�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

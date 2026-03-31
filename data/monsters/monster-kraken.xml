@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>KRAKEN</name>
+    <type>CRÉATURE</type>
+    <level>18</level>
+    <creatureTraits>
+      <trait type="size">GIGANTESQUE</trait>
+      <trait>AQUATIQUE</trait>
+      <trait>BÊTE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>commun</language>
+      <language>thalassique</language>
+    </languages>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+38</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+33</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+32</bonus>
+      </skill>
+      <skill>
+        <name>Nature</name>
+        <bonus>+35</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+9, **Dex** +4,** Con** +9, **Int** +5,** Sag** +6,** Cha** +5</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>42</armorClass>
+    <saves REF="+28" FOR="+35" WIL="+32"/>
+    <health>360</health>
+    <immunities>
+      <immunity>contrôlé</immunity>
+      <immunity>émotion</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>bras</name>
+        <bonus>+37</bonus>
+        <traits>
+          <trait>allonge 12 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>4d10+17</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>tentacule</name>
+        <bonus>+37</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 18 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d10+17</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>bec</name>
+        <bonus>+37</bonus>
+        <traits>
+          <trait>allonge 6 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d10+17</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="primal" DD="40">
+      <rank rank="8">
+        <spells>
+          <spell>vents punitifs</spell>
+        </spells>
+      </rank>
+      <rank rank="7">
+        <spells>
+          <spell>résistance à l’énergie</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Constriction</name>
+        <description>2d10+17 contondants, DD 40 (p� 359)� En cas de jet de sauvegarde raté, une créature qui retient sa respiration perd 1d4 rounds d’air�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Double attaque</name>
+        <description>Le kraken effectue deux Frappes avec deux bras ou tentacules différents, chaque Frappe pre- nant pour cible une créature différente� Double attaque compte comme deux attaques pour le malus d’attaques multiples du kraken mais le malus n’augmente qu’une fois les deux attaques effectuées� Si le kraken enchaîne en utilisant l’action Empoignade, il Empoigne le nombre de créatures de son choix parmi celles qui ont été touchées par sa Double attaque�</description>
+      </special>
+      <special>
+        <name>Encre de kraken</name>
+        <traits>
+          <trait>poison</trait>
+        </traits>
+        <description>� Les krakens sont immunisés contre ce poison ; **Jet de sau‑ vegarde** Vigueur DD 39 ; **Durée maximale** 10 rounds ; **Stade 1** 4d6 dégâts de poison et malade 1 (1 round) ; **Stade 2** 5d6 dégâts de poison et malade 2 (1 round)�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Nuage d’encre</name>
+        <description>Le kraken libère un nuage d’encre noire et empoisonnée dans une émana- tion de 24 m� Ce nuage n’a aucun effet en dehors de l’eau� Les créatures prises dans le nuage d’encre sont exposées au poison de l’encre du kraken et sont non détectées tant qu’elles se trouvent dedans� Le kraken ne peut utiliser une nouvelle fois son Nuage d’encre avant 2d6 rounds et le nuage se dissipe après 1 min�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Propulsion</name>
+        <traits>
+          <trait>déplacement</trait>
+        </traits>
+        <description>� Le kraken se déplace dans l’eau à une vitesse maximale de 84 m en ligne droite sans déclencher de réactions�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

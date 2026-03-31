@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>INCENDIE VIVANT</name>
+    <type>CRÉATURE</type>
+    <level>5</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>ÉLÉMENTAIRE</trait>
+      <trait>FEU</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <armorClass>22</armorClass>
+    <saves REF="+15" FOR="+11" WIL="+10"/>
+    <health>80</health>
+    <immunities>
+      <immunity>feu</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>saignement</immunity>
+      <immunity>sommeil</immunity>
+    </immunities>
+    <weaknesses>
+      <weakness>
+        <name>eau</name>
+        <value>5</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>volute</name>
+        <bonus>+15</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 3 m</trait>
+          <trait>finesse</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+6</amount>
+            <damageType>de feu</damageType>
+          </damage>
+          <damage>
+            <amount>2d4</amount>
+            <damageType>de feu persistants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>À distance</name>
+        <description>flammèche +15 (facteur de portée 18 m), **Damage** 2d6+3 de feu</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Propagation de flammes</name>
+        <traits>
+          <trait>feu</trait>
+          <trait>primordiale</trait>
+        </traits>
+        <description>; **Conditions.** La dernière action de l’in- cendie vivant était une Frappe infligeant des dégâts de feu ;</description>
+      </special>
+      <special>
+        <name>Wyrm de feu</name>
+        <description>Les wyrms de feu vivent dans des canaux de magma que l’on trouve à travers tout le plan élémentaire du feu. Ces étranges environnements sont souvent reliés aux volcans des mondes mortels, ce qui permet aux wyrms de feu d’accéder à une grande diversité de proies.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

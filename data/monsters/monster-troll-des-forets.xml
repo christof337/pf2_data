@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>TROLL DES FORÊTS</name>
+    <type>CRÉATURE</type>
+    <level>5</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>BOIS</trait>
+      <trait>GÉANT</trait>
+      <trait>HUMANOÏDE</trait>
+      <trait>TROLLS</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <interactionAbilities>
+      <special>
+        <name>Langue</name>
+        <description>jotun</description>
+      </special>
+      <special>
+        <name>Compétences</name>
+        <description>Athlétisme +12, Intimidation +12</description>
+      </special>
+      <special>
+        <name>For</name>
+        <description>+5, **Dex **+2, **Con **+6, **Int **−2, **Sag **+0, **Cha **−2</description>
+      </special>
+      <special>
+        <name>Facile à duper</name>
+        <description>Le troll des forêts subit un malus de circonstance de −4 au DD de Perception contre les tests de Duperie�</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>20</armorClass>
+    <saves/>
+    <health>125</health>
+    <weaknesses>
+      <weakness>
+        <name>électricité</name>
+        <value>10</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+14</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d10+5</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+14</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+5</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Chasser une proie</name>
+        <description>Le troll des forêts se précipite à quatre pattes, il Marche rapide- ment puis effectue deux Frappes de griffes�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Éventration</name>
+        <description>griffes (p� 359)</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

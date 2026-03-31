@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>SERVITEUR VAMPIRE</name>
+    <type>CRÉATURE</type>
+    <level>4</level>
+    <creatureTraits>
+      <trait type="size"/>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+11</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+9</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+12</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Société</name>
+        <bonus>+5</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+3" DEX="+5" CON="+1" INT="+0" WIS="+3" CHA="+2"/>
+    <armorClass>22</armorClass>
+    <saves REF="+13" FOR="+9" WIL="+11"/>
+    <health>40</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+14</bonus>
+        <traits>
+          <trait>agile</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8+6</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Attaque sournoise</name>
+        <description>Le serviteur inflige 1d6 dégâts de précision supplémentaires aux créatures prises par surprise�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Boire le sang</name>
+        <traits>
+          <trait>divin</trait>
+        </traits>
+        <description>� Lorsqu’il Boit le sang, le serviteur regagne 5 PV�</description>
+      </special>
+      <special>
+        <name>Comte Vampire</name>
+        <description>Un comte vampire règne sur son domaine par un mélange de peur et de cruauté.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

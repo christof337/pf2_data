@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>FOURMI GÉANTE</name>
+    <type>CRÉATURE</type>
+    <level>2</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+7</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>9 m</range>
+        </sens>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+7</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+4, **Dex **+1, **Con **+4, **Int **–5, **Sag **+1, **Cha **–4</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>18</armorClass>
+    <saves REF="+7" FOR="+10" WIL="+5"/>
+    <health>30</health>
+    <speeds>
+      <speed>12 m</speed>
+      <speed type="climb">6 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mandibules +9, **Dégâts** 1d8+4 tranchants plus Empoignade (p� 359) **Corps à corps** 1 dard</name>
+        <bonus>+9</bonus>
+        <traits>
+          <trait>agile</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+4</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Amener</name>
+        <description/>
+      </special>
+      <special type="activity" actions="1">
+        <name>Conditions</name>
+        <description>La fourmi géante empoigne une créature de taille Grande ou infé- rieure ;</description>
+      </special>
+      <special>
+        <name>Venin de fourmi géante</name>
+        <traits>
+          <trait>poison</trait>
+        </traits>
+        <description>**Jet de sauvegarde** Vigueur DD 18 ; **Durée maximale** 4 rounds ;</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Stade 1</name>
+        <description>d8 poison et affaibli 1 (1 round) ; **Stade 2** 1d10 poison et affaibli 2 (1 round) ; **Stade 3** 1d12 poison et affaibli 3 (1 round)</description>
+      </special>
+      <special>
+        <name>Nuée de fourmis soldats</name>
+        <description>Une nuée de fourmis soldats est une vague terrifiante d’insectes piquant et dévorant tout son passage.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

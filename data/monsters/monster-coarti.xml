@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>COARTI</name>
+    <type>CRÉATURE</type>
+    <level>7</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>DIABLE</trait>
+      <trait>FIÉLON</trait>
+      <trait>IMPIE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <armorClass>24</armorClass>
+    <saves REF="+17" FOR="+13" WIL="+15" saveSpecial="bonus de statut de +1 aux jets de sauvegarde contre la magie"/>
+    <health>110</health>
+    <weaknesses>
+      <weakness>
+        <name>saint</name>
+        <value>5</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>7</speed>
+      <speed>5 m</speed>
+      <speed type="fly">12 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>morgenstern</name>
+        <bonus>+18</bonus>
+        <traits>
+          <trait>impie</trait>
+          <trait>magique</trait>
+          <trait>polyvalent P</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+10</amount>
+            <damageType>contondants</damageType>
+          </damage>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>d’esprit</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>aile</name>
+        <bonus>+17</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>impie</trait>
+          <trait>polyvalent P</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+7</amount>
+            <damageType>contondants</damageType>
+          </damage>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>de feu</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="divine" DD="25">
+      <rank rank="4">
+        <spells>
+          <spell spellSpecial="à volonté">ténèbres, translocation</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special>
+        <name>Constant (5</name>
+        <description>e**) ***langage universel*</description>
+      </special>
+      <special>
+        <name>Rituel</name>
+        <description>DD 25 ; *pacte diabolique* (p� 320)</description>
+      </special>
+      <special>
+        <name>Coup d’ailes</name>
+        <description/>
+      </special>
+      <special type="activity" actions="1">
+        <name>Fréquence</name>
+        <description>1/tour ;</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Cri de désespoir</name>
+        <traits>
+          <trait>divine</trait>
+          <trait>impie</trait>
+          <trait>son</trait>
+        </traits>
+        <description>� Le coarti pousse un horrible cri qui inflige 4d6 dégâts de son à toutes les créatures dans une émanation de 9 m (jet de Volonté basique DD 25)� Les créatures saintes qui ratent ce jeu de sauvegarde sont également effrayées 2 ; cet effet supplémentaire a les traits émotion, terreur et mental� Le coarti ne peut plus utiliser Cri de désespoir pendant 1d4 rounds�</description>
+      </special>
+      <special>
+        <name>Sarglagon (diable de la noyade)</name>
+        <description>Les sarglagons vivent dans les innombrables cours d’eau, lacs et océans des Enfers. Ce sont les gardiens de l’Académie des mensonges, les archives des secrets de Stygie, la cinquième strate des Enfers. Les sarglagons sont capables de respirer aussi bien dans l’eau qu’à l’air libre et peuvent se déplacer dans un milieu liquide, aérien ou au sol avec une très grande célérité. Peu de fiélons empruntent les étendues d’eau du multivers, mais quand une rivière traverse les plans, il est fort probable que les sarglagons s’y soient engagés pour ourdir leurs machina‑ tions infernales. La seule étendue liquide qu’ils évitent est le fleuve Styx puisque les fiélons ne sont pas protégés contre les propriétés de ces eaux qui font perdre la mémoire. Les incantateurs mortels parviennent parfois à asservir des sarglagons pour qu’ils</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

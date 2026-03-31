@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GUENAUDE DE FER</name>
+    <type>CRÉATURE</type>
+    <level>6</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>GUENAUDE</trait>
+      <trait>HUMANOÏDE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <attributes STR="+6" DEX="+4" CON="+4" INT="+1" WIS="+4" CHA="+3"/>
+    <interactionAbilities>
+      <special>
+        <name>Cercle</name>
+        <description>Une guenaude de fer ajoute *cloué à terre*, *épieu *et *ravages magiques* à ses sorts de cercle (p� 358)� Le DD de ses sorts s’élève à 24 quand elle dirige un cercle�</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>24</armorClass>
+    <saves REF="+12" FOR="+16" WIL="+14" saveSpecial="bonus de statut de +1 aux jets de sauvegarde contre la magie"/>
+    <health>80</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+16</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 3 m</trait>
+          <trait>fer froid</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+6</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+16</bonus>
+        <traits>
+          <trait>fer froid</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+6</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Changement de forme</name>
+        <traits>
+          <trait>concentration</trait>
+          <trait>métamorphose</trait>
+          <trait>occulte</trait>
+        </traits>
+        <description>� La guenaude de fer peut prendre l’apparence de n’importe quelle femme humanoïde de taille Moyenne (p� 358)� Cela ne modifie pas sa Vitesse ni ses bonus à l’attaque et aux dégâts de ses Frappes, mais cela peut modifier le type de dégâts qu’elles infligent (généralement en dégâts contondants)�</description>
+      </special>
+      <special>
+        <name>Étreinte de fer</name>
+        <description/>
+      </special>
+      <special type="activity" actions="1">
+        <name>Conditions</name>
+        <description>Une créature est empoignée ou entravée par les griffes de la guenaude de fer ;</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Liens de fer</name>
+        <traits>
+          <trait>attaque</trait>
+          <trait>occulte</trait>
+        </traits>
+        <description>; **Fréquence **1 fois/jour ;</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

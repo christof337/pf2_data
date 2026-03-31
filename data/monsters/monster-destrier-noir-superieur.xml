@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>DESTRIER NOIR SUPÉRIEUR</name>
+    <type>CRÉATURE</type>
+    <level>11</level>
+    <creatureTraits>
+      <trait type="size">TRÈS GRANDE</trait>
+      <trait>BÊTE</trait>
+      <trait>FIÉLON</trait>
+      <trait>IMPIE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+23</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+24</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+22</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+20</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+7, **Dex **+4, **Con **+5, **Int **+2, **Vol **+5, **Cha **+3</description>
+      </special>
+      <special>
+        <name>Fumée</name>
+        <traits>
+          <trait>aura</trait>
+        </traits>
+        <description>6 m� Comme le destrier noir, mais DD 28�</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>31</armorClass>
+    <saves REF="+24" FOR="+25" WIL="+21"/>
+    <health>200</health>
+    <speeds>
+      <speed>18 m</speed>
+      <speed type="fly">36 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+24</bonus>
+        <traits>
+          <trait>impie</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d10+13</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>sabot</name>
+        <bonus>+24</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>feu</trait>
+          <trait>impie</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+10</amount>
+            <damageType>conton- dants</damageType>
+          </damage>
+          <damage>
+            <amount>2d6</amount>
+            <damageType>de feu</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="divine" DD="30">
+      <rank rank="7">
+        <spells>
+          <spell>téléportation interplanaire (uniquement le destrier et son cavalier)</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Galop enflammé</name>
+        <traits>
+          <trait>divin</trait>
+          <trait>feu</trait>
+          <trait>impie</trait>
+        </traits>
+        <description>Comme le destrier noir, mais 6d6 dégâts de feu et DD 30�</description>
+      </special>
+      <special type="activity" actions="3">
+        <name>Piétinement</name>
+        <description>Grande ou plus petite, sabot, DD 30 (p� 360)</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

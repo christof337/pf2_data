@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GOSREG</name>
+    <type>CRÉATURE</type>
+    <level>11</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>ABERRATION</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+21</bonus>
+      <senses>
+        <sens>
+          <name>perception des pensées</name>
+          <range>18 m</range>
+        </sens>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages>
+      <language>aklo</language>
+      <language>sakvroth</language>
+      <langSpecial>télépathie 30 m</langSpecial>
+    </languages>
+    <skills>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+22</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+23</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+24</bonus>
+      </skill>
+      <skill>
+        <name>Occultisme</name>
+        <bonus>+23</bonus>
+      </skill>
+      <skill>
+        <name>Société</name>
+        <bonus>+19</bonus>
+      </skill>
+    </skills>
+    <armorClass>31</armorClass>
+    <saves REF="+23" FOR="+18" WIL="+22" saveSpecial="bonus de statut de +1 à tous les jets de sauvegarde contre la magie"/>
+    <health>195</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+21</bonus>
+        <traits>
+          <trait>finesse</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d10+7</amount>
+            <damageType>perforants</damageType>
+          </damage>
+          <damage>
+            <amount>1d10</amount>
+            <damageType>mental</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+21</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+7</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="occult" DD="30" attack="+22">
+      <rank rank="6">
+        <spells>
+          <spell>calamité imaginaire, douleur fantôme</spell>
+        </spells>
+      </rank>
+      <rank rank="5">
+        <spells>
+          <spell>communication à distance, pulsation synaptique, sonde mentale, suggestion subconsciente</spell>
+        </spells>
+      </rank>
+      <rank rank="4">
+        <spells>
+          <spell>cauchemar, suggestion (×3)</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Assaut mental</name>
+        <traits>
+          <trait>mental</trait>
+          <trait>occulte</trait>
+        </traits>
+        <description>Le gosreg concentre son champ d’énergie mentale dis- cordante et le projette dans l’esprit d’une créature située à moins de 18 m� La cible subit 6d6 dégâts mentaux (jet de Volonté basique DD 30)� Sur un échec critique, la créature est également confuse pendant 1 min ou jusqu’à ce qu’elle subisse des dégâts�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Changement de forme</name>
+        <traits>
+          <trait>concentration</trait>
+          <trait>métamorphose</trait>
+          <trait>occulte</trait>
+        </traits>
+        <description>Le gosreg peut prendre l’apparence de n’importe quel humanoïde de taille Petite ou Moyenne (p� 358)� Cela ne modifie ni sa Vitesse ni le bonus à l’attaque et aux dégâts de ses griffes, mais cela peut modifier le type de dégâts infligés (généralement conton- dants)� Il ne peut pas utiliser sa Frappe de mâchoires sous sa forme humanoïde�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Posture d’émission</name>
+        <traits>
+          <trait>mental</trait>
+          <trait>occulte</trait>
+          <trait>posture</trait>
+        </traits>
+        <description>**Condition.** Le gosreg est sous sa forme naturelle�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

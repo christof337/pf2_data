@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GRIZZLY</name>
+    <type>CRÉATURE</type>
+    <level>3</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+10</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>9 m</range>
+        </sens>
+        <sens>
+          <name>vision nocturne</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+11</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+8</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+4, **Dex** +1, **Con** +5, **Int** –4, **Sag** +1, **Cha** –2</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>17</armorClass>
+    <saves REF="+6" FOR="+12" WIL="+8"/>
+    <health>59</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires +11, **Dégâts** 2d8+4 perforants **Corps à corps** 1 griffes</name>
+        <bonus>+11</bonus>
+        <traits>
+          <trait>agile</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d10+4</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Écharpeur</name>
+        <description>Le grizzly gagne un bonus de circonstances de +2 à ses jets de dégâts contre une créature qu’il a empoignée�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Ruée</name>
+        <description>Le grizzly Marche rapidement et effectue une Frappe à la fin de ce déplacement� Pendant la Marche rapide, il bénéficie d’un bonus de circonstances de +3 m à sa Vitesse�</description>
+      </special>
+      <special>
+        <name>Ours des cavernes</name>
+        <description>Plus grand, plus fort et beaucoup plus agressif que ses cousins plus petits, l’ours des cavernes est un mastodonte qui évite les régions civilisées et préfère vivre dans des zones isolées. Comme son nom l’indique, il établit sa tanière principalement dans des cavernes naturelles et, à l’instar du grizzly, défend férocement son territoire. Contrairement aux grizzlys, cependant, les ours des cavernes ont particulièrement mauvais caractère : ils n’hésitent pas à commencer de se nourrir de leurs adversaires une fois ceux‑ci hors de combat, et s’assurent toujours qu’ils soient morts avant de poursuivre leur chemin. Les ours des cavernes sont souvent perçus comme de puissants esprits gardiens par les populations des régions reculées et ils servent parfois d’animaux de combat aux orcs ou aux géants. Les géants de pierre en particulier ont une affinité avec ces ours, qu’ils dressent afin d’en faire des animaux de compagnie ou de garde.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

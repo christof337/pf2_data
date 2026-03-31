@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>TSUNAMI ÉLÉMENTAIRE</name>
+    <type>CRÉATURE</type>
+    <level>11</level>
+    <creatureTraits>
+      <trait type="size">TRÈS GRANDE</trait>
+      <trait>AQUATIQUE</trait>
+      <trait>EAU</trait>
+      <trait>ÉLÉMENTAIRE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+23</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+23</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+6, **Dex **+6, **Con **+6, **Int **+0, **Sag **+3, **Cha **+0</description>
+      </special>
+      <special>
+        <name>Lié à l’eau</name>
+        <description>Comme la cascade vivante�</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>31</armorClass>
+    <saves/>
+    <health>195</health>
+    <immunities>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>saigne- ment</immunity>
+      <immunity>sommeil</immunity>
+    </immunities>
+    <reactiveAbilities>
+      <special>
+        <name>Vortex</name>
+        <traits>
+          <trait>aura</trait>
+          <trait>eau</trait>
+        </traits>
+        <description>15 m� Comme la cas- cade vivante�</description>
+      </special>
+    </reactiveAbilities>
+    <speeds>
+      <speed>10</speed>
+      <speed>5 m</speed>
+      <speed type="swim">30 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>rafale</name>
+        <bonus>+24</bonus>
+        <traits>
+          <trait>allonge 6 m</trait>
+          <trait>finesse</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d12+12</amount>
+            <damageType>conton- dants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Déferlante</name>
+        <description>Le tsunami élémen- taire étend rapidement son espace pour occuper toute la zone de son vor- tex� Les créatures dans l’aura subissent 5d12+6 dégâts contondants (jet de Vigueur basique DD 31)� Une créature qui rate ce jet est repoussée de 6 m� Après quoi, le tsunami élémentaire reprend sa taille normale, occupe son espace initial et ne peut plus utiliser déferlante pendant 1d4 rounds�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Tremper</name>
+        <traits>
+          <trait>eau</trait>
+          <trait>primordiale</trait>
+        </traits>
+        <description>� Comme la cascade vivante mais avec une émanation de 6 m et un modificateur de contre de +20�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

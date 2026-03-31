@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GALAPIAT DE FEU</name>
+    <type>CRÉATURE</type>
+    <level>1</level>
+    <creatureTraits>
+      <trait type="size">PETITE</trait>
+      <trait>ÉLÉMENTAIRE</trait>
+      <trait>FEU</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+7</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+0, **Dex **+4, **Con **+0, **Int **–2, **Sag **+0, **Cha **+2</description>
+      </special>
+      <special>
+        <name>Vision malgré la fumée</name>
+        <description>Le galapiat de feu ignore l’état masqué imposé par la fumée�</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>17</armorClass>
+    <saves REF="+9" FOR="+3" WIL="+7"/>
+    <health>16</health>
+    <immunities>
+      <immunity>feu</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>sai- gnement</immunity>
+      <immunity>sommeil</immunity>
+    </immunities>
+    <weaknesses>
+      <weakness>
+        <name>froid</name>
+        <value>3</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>6 m</speed>
+      <speed type="fly">7</speed>
+      <speed>5 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+9</bonus>
+        <traits>
+          <trait>finesse</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>perforants et 1d4 feu</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="arcane" DD="15"/>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Souffle de flammes</name>
+        <traits>
+          <trait>arcanique</trait>
+          <trait>feu</trait>
+        </traits>
+        <description>� Le galapiat de feu crache des flammes dans un cône de 4,5 m qui inflige 2d4 dégâts de feu à chaque créature dans la zone (jet de Réflexes basique DD 17)� Les créatures qui ratent leur jet de sauvegarde subissent également 1d4 dégâts de feu persistants� Le galapiat de feu ne peut plus utiliser souffle de flammes pendant 1d4 rounds�</description>
+      </special>
+      <special>
+        <name>Galapiat de terre</name>
+        <description>L’apparence rocailleuse d’un galapiat de terre lui permettrait de bien se camoufler dans les roches s’il n’avait pas de grands yeux et des ailes de chauve‑souris. Bien que capables de voler, ils trouvent ce mode de déplacement inconfortable et dérangeant, ce qui explique qu’ils quittent rarement la terre ferme sans nécessité absolue. À vrai dire, la plupart d’entre eux préféreraient même ne jamais se rendre ne serait‑ce qu’à la surface et rester dans les profondeurs rocailleuses auxquelles ils ressemblent tant.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

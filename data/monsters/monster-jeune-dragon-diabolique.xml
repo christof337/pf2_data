@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>JEUNE DRAGON DIABOLIQUE</name>
+    <type>CRÉATURE</type>
+    <level>11</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>DIVIN</trait>
+      <trait>DRAGON</trait>
+      <trait>IMPIE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+20</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+24</bonus>
+      </skill>
+      <skill>
+        <name>Connaissances sur les Enfers</name>
+        <bonus>+19</bonus>
+      </skill>
+      <skill>
+        <name>Connaissances juri- diques</name>
+        <bonus>+21</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+22</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+20</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+20</bonus>
+      </skill>
+      <skill>
+        <name>Larcin</name>
+        <bonus>+20</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+21</bonus>
+      </skill>
+      <skill>
+        <name>Société</name>
+        <bonus>+19</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+7, **Dex **+3, **Con **+6, **Int **+2, **Sag **+4, **Cha **+ 3</description>
+      </special>
+      <special>
+        <name>Vision malgré la fumée</name>
+        <description>La fumée ne gêne pas la vision du dragon ; il ignore l’état masqué octroyé par la fumée�</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>30</armorClass>
+    <saves REF="+20" FOR="+23" WIL="+21" saveSpecial="bonus de statut de +2 à tous les jets de sauvegarde contre la magie divine"/>
+    <health>215</health>
+    <immunities>
+      <immunity>feu</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>sommeil</immunity>
+    </immunities>
+    <weaknesses>
+      <weakness>
+        <name>saint</name>
+        <value>10</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+24</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+          <trait>feu</trait>
+          <trait>impie</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d12+10</amount>
+            <damageType>perforants</damageType>
+          </damage>
+          <damage>
+            <amount>2d6</amount>
+            <damageType>de feu</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+24</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>feu</trait>
+          <trait>impie</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+10</amount>
+            <damageType>perforants</damageType>
+          </damage>
+          <damage>
+            <amount>2d6</amount>
+            <damageType>de feu et Empoignade (p� 359)</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>queue</name>
+        <bonus>+22</bonus>
+        <traits>
+          <trait>allonge 4,5 m</trait>
+          <trait>feu</trait>
+          <trait>impie</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+10</amount>
+            <damageType>contondants</damageType>
+          </damage>
+          <damage>
+            <amount>2d6</amount>
+            <damageType>de feu et Renversement (p� 360)</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="divine" DD="28" attack="+20">
+      <rank rank="5">
+        <spells>
+          <spell>immolation divine, mur de feu</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special>
+        <name>Tours de magie (6e)</name>
+        <description>* enflammer*</description>
+      </special>
+      <special>
+        <name>Feu diabolique</name>
+        <description>Tous les dégâts de feu infligés par un dragon diabolique, y compris ceux de sorts, sont imprégnés du pouvoir impie des Enfers et impactent donc l’esprit en plus du corps� Une créature subit des dégâts d’esprit au lieu des dégâts de feu si ce type est plus nocif pour elle (selon le MJ)� Un dragon diabolique est immunisé contre le feu diabolique de ses congénères, le feu d’*immolation divine* et d’autres effets similaires�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Frénésie draconique</name>
+        <description>� Le dragon effectue deux Frappes de griffes et une Frappe de queue dans l’ordre qu’il veut�</description>
+      </special>
+      <special>
+        <name>Impulsion draconique</name>
+        <description>Le dragon recharge son Souffle de feu infernal chaque fois qu’il inflige un coup critique avec une Frappe�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Souffle de feu infernal</name>
+        <traits>
+          <trait>divine</trait>
+          <trait>feu</trait>
+          <trait>impie</trait>
+        </traits>
+        <description>Le dragon crache un feu infernal qui inflige 12d6 dégâts de feu dans un cône de 12 m (jet de Réflexes basique DD 30)� Le dragon ne peut plus utiliser Souffle de feu infernal pendant 1d4 rounds�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

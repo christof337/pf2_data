@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>MOLOSSE DE TOURBE</name>
+    <type>CRÉATURE</type>
+    <level>3</level>
+    <creatureTraits>
+      <trait type="size">PETITE</trait>
+      <trait>ÉLÉMENTAIRE</trait>
+      <trait>TERRE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+9</bonus>
+      <senses>
+        <sens>
+          <name>perception des cristaux</name>
+          <precision>imprécis</precision>
+          <range>18 m</range>
+        </sens>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+11</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+9</bonus>
+      </skill>
+    </skills>
+    <armorClass>19</armorClass>
+    <saves REF="+6" FOR="+12" WIL="+7"/>
+    <health>44</health>
+    <immunities>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>saignement</immunity>
+      <immunity>sommeil</immunity>
+    </immunities>
+    <speeds speedSpecial="glisse à travers la terre">
+      <speed>9 m</speed>
+      <speed type="burrow">6 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>mâchoires +11, **Dégâts** 1d10+6 perforants plus Empoignade (p� 359)</description>
+      </special>
+      <special>
+        <name>Glisse à travers la terre</name>
+        <description>Le molosse de tourbe peut Creuser à travers n’importe quelle matière composée de terre et de roche, y compris la pierre� Quand il le fait, il se déplace à sa pleine Vitesse de creusement sans laisser de tunnel ou de traces de son passage�</description>
+      </special>
+      <special>
+        <name>Glissement de terrain vivant</name>
+        <description>Les glissements de terrain vivants ressemblent à des humanoïdes constitués de terre et de cailloux. Ils éprouvent un puissant sentiment de liberté en se déplaçant sur les nombreuses surfaces de l’Univers mortel.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

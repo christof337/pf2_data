@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>QUELAUNT</name>
+    <type>CRÉATURE</type>
+    <level>15</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>ABERRATION</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+29</bonus>
+      <senses>
+        <sens>
+          <name>perception des vibrations</name>
+          <precision>imprécis</precision>
+          <range>18 m</range>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+30</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+30</bonus>
+      </skill>
+      <skill>
+        <name>Occultisme</name>
+        <bonus>+27</bonus>
+      </skill>
+    </skills>
+    <armorClass>36</armorClass>
+    <saves REF="+26" FOR="+27" WIL="+31"/>
+    <health>305</health>
+    <speeds speedSpecial="*vol*">
+      <speed>12 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+30</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 3 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d8+12</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="occult" DD="39">
+      <rank rank="7">
+        <spells>
+          <spell>vague de désespoir (×3)</spell>
+        </spells>
+      </rank>
+      <rank rank="3">
+        <spells>
+          <spell spellSpecial="à volonté">terreur</spell>
+        </spells>
+      </rank>
+      <rank rank="2">
+        <spells>
+          <spell>rire incontrôlable</spell>
+        </spells>
+      </rank>
+      <rank rank="4" constant="TRUE">
+        <spells>
+          <spell>vol</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Absorption des émotions</name>
+        <traits>
+          <trait>émotion</trait>
+          <trait>mental</trait>
+          <trait>mise hors de combat</trait>
+        </traits>
+        <description>;</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Fréquence</name>
+        <description>fois/round ;</description>
+      </special>
+      <special>
+        <name>Focalisation émotionnelle</name>
+        <description>Le quelaunt peut lancer à volonté les sorts de domaine de prêtre suivants en tant que sorts innés occultes de rang 8 sans dépenser de points de focali- sation : *adoration captivante* (*Livre des joueurs* p� 379), *fierté illusoire* (*Livre des joueurs* p� 376) et *attiser l’ambition* (*Livre des joueurs* p� 375)�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Frappes rapides</name>
+        <traits>
+          <trait>attaque</trait>
+        </traits>
+        <description>� Le quelaunt porte trois Frappe au corps à corps� Chacune est dirigée contre une cible différente qui se trouve à portée� Le malus d’attaques multiples s’applique à chaque attaque mais n’augmente qu’une fois toutes les attaques portées�</description>
+      </special>
+      <special type="activity" actions="3">
+        <name>Frénésie émotionnelle</name>
+        <description>Le quelaunt lance jusqu’à trois sorts choisis parmi ses sorts innés à volonté et ses sorts de focalisation émotionnelle�</description>
+      </special>
+      <special type="activity" actions="0">
+        <name>Spirale du désespoir</name>
+        <traits>
+          <trait>émotion</trait>
+          <trait>mental</trait>
+        </traits>
+        <trigger>Une créature échoue à un jet de sauvegarde contre un sort inné ou un sort de focalisation émotionnelle du quelaunt ;</trigger>
+        <effect>En même temps que le quelaunt envahit l’esprit de la créature ayant déclenché l’effet pour y implanter les graines d’émotions négatives, il la dépouille de tout sentiment d’espoir ou d’optimisme� Le quelaunt peut immédiatement mettre un terme à un effet émotionnel dont bénéficie cette créature�</effect>
+      </special>
+      <special>
+        <name>D’AUTRES QUELAUNTS</name>
+        <description>Les pires récits mettant en scène les quelaunts leur attribuent des pouvoirs encore plus grands que ceux qui sont présentés dans cette section, laissant penser qu’ils représenteraient une catégorie à part entière d’extraterrestres qui viendrait à peine de tourner sa monstrueuse attention vers l’humanité� [[PAGE 307]]</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

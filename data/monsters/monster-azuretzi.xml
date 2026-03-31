@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>AZURETZI</name>
+    <type>CRÉATURE</type>
+    <level>5</level>
+    <creatureTraits>
+      <trait type="size">PETITE</trait>
+      <trait>PROTÉEN</trait>
+      <trait>VEILLEUR</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+11</bonus>
+      <senses>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages>
+      <language>chthonien</language>
+      <language>protéen</language>
+    </languages>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+11</bonus>
+      </skill>
+      <skill>
+        <name>Arcanes</name>
+        <bonus>+11</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Larcin</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Représentation</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+11</bonus>
+      </skill>
+    </skills>
+    <armorClass/>
+    <saves/>
+    <health/>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special>
+        <name>For</name>
+        <description>+2, **Dex **+4, **Con **+4, **Int **+4, **Sag **+2, **Cha **+4</description>
+      </special>
+      <special>
+        <name>Perception de l’entropie</name>
+        <traits>
+          <trait>divine</trait>
+          <trait>prédiction</trait>
+        </traits>
+        <description>� Comme le ver du néant�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>CA</name>
+        <description>2 ; **Réf **+15, **Vig **+11, **Vol **+11 ; bonus de statut de +1 à tous les jets de sauvegarde contre la magie</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>XOARIAN</name>
+    <type>CRÉATURE</type>
+    <level>8</level>
+    <creatureTraits>
+      <trait type="size">PETITE</trait>
+      <trait>ABERRATION</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+16</bonus>
+      <senses>
+        <sens>
+          <name>perception des pensées</name>
+          <range>18 m</range>
+        </sens>
+        <sens>
+          <name>perception des vibrations</name>
+          <range>18 m</range>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+14</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+16</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+18</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+20</bonus>
+      </skill>
+      <skill>
+        <name>Occultisme</name>
+        <bonus>+17</bonus>
+      </skill>
+      <skill>
+        <name>Société</name>
+        <bonus>+17</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+2" DEX="+4" CON="+4" INT="+5" WIS="+4" CHA="+6"/>
+    <armorClass>26</armorClass>
+    <saves REF="+16" FOR="+14" WIL="+18"/>
+    <health>130</health>
+    <immunities>
+      <immunity>aveugle</immunity>
+      <immunity>contrôlé</immunity>
+      <immunity>émotion</immunity>
+      <immunity>possession</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>tentacule</name>
+        <bonus>+18</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d10+5</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="occult" DD="27">
+      <rank rank="4">
+        <spells>
+          <spell>confusion, globe de dissipation</spell>
+        </spells>
+      </rank>
+      <rank rank="3">
+        <spells>
+          <spell>apaiser (x3), paralysie (×3)</spell>
+        </spells>
+      </rank>
+      <rank rank="2">
+        <spells>
+          <spell spellSpecial="à volonté">invisibilité (à volonté, soi uniquement), paranoïa</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Extraction du corps</name>
+        <traits>
+          <trait>déplacement</trait>
+        </traits>
+        <description>**Condition.** Le xoarian contrôle un hôte avec Voleur de corps�</description>
+      </special>
+      <special type="activity" actions="3">
+        <name>Ravage</name>
+        <description>Le xoarian effectue deux Frappes de tentacules contre une seule créature paralysée, entravée ou inconsciente� Si la cible tombe à 0 PV après Ravage, le xoarian peut utiliser une action gratuite avec le trait mort pour tuer la cible et prendre possession de son corps via Voleur de corps�</description>
+      </special>
+      <special type="activity" actions="3">
+        <name>Voleur de corps</name>
+        <traits>
+          <trait>manipulation</trait>
+          <trait>occulte</trait>
+          <trait>possession</trait>
+        </traits>
+        <description>Le xoarian com- presse son corps pour entrer dans la tête d’une créature morte depuis moins d’un jour, consomme le cerveau encore présent et prend sa place� Au début du prochain tour du xoarian, le corps est réanimé avec son maximum de points de vie et il est contrôlé par le voleur de chair� Ce dernier est conscient et peut ressentir tout ce que ressentirait son hôte� Tout effet mettant fin à cette possession tue l’hôte avec les mêmes effets qu’Extraction du corps� Le xoarian ne peut pas utiliser les sorts de la créature hôte avec Voleur de corps, mais il peut utiliser ses propres sorts innés�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

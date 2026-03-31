@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>ARAIGNÉE GOLIATH</name>
+    <type>CRÉATURE</type>
+    <level>11</level>
+    <creatureTraits>
+      <trait type="size">GIGANTESQUE</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+22</bonus>
+      <senses>
+        <sens>
+          <name>perception sur les toiles</name>
+        </sens>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <armorClass>30</armorClass>
+    <saves/>
+    <health>220</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>crocs</name>
+        <bonus>+24</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d12+12</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>À distance</name>
+        <description>toile +22 (facteur de portée 18 m), **Effet **bride de toile</description>
+      </special>
+      <special>
+        <name>Bride de toile</name>
+        <description>Une créature touchée par la Frappe de toile de l’araignée est entravée et attachée à l’araignée, ce qui l’empêche de s’en éloigner� L’araignée ne peut brider qu’une seule créature en même temps� Le DD pour S’échapper ou pour Ouvrir de force la toile s’élève à 30� Une Frappe permet de trancher la bride (CA 20, Solidité 5, 20 PV), mais ne libère pas la créature entravée�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Descendre sur un fil de toile</name>
+        <traits>
+          <trait>déplacement</trait>
+        </traits>
+        <description>� Comme l’araignée chasseuse, mais l’araignée goliath peut descendre d’une dis- tance maximale de 36 m et le fil de toile à une CA de 20, une Solidité de 5 et 20 PV�</description>
+      </special>
+      <special>
+        <name>Venin d’araignée goliath</name>
+        <traits>
+          <trait>mise hors de combat</trait>
+          <trait>poison</trait>
+        </traits>
+        <description>; **Jet de sauve‑ garde** Vigueur DD 30 ; **Durée maximale** 6 rounds ; **Stade 1** 3d6 dégâts de poison et ralenti 1 (1 round) ; **Stade 2** 3d8 dégâts de poison et ralenti 2 (1 round) ; **Stade 3** 3d10 dégâts de poison et paralysé pendant 2d4 heures</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>ROTURIER FANTÔME</name>
+    <type>CRÉATURE</type>
+    <level>4</level>
+    <creatureTraits>
+      <trait type="size"/>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <armorClass>0</armorClass>
+    <saves REF="+11" FOR="+8" WIL="+8"/>
+    <health>30</health>
+    <immunities>
+      <immunity>effets de mort</immunity>
+      <immunity>inconscient</immunity>
+      <immunity>maladie</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>précision</immunity>
+      <immunity>saignement</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>main spectrale</name>
+        <bonus>+13</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+2</amount>
+            <damageType>de néant</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Lamentation d’épouvante</name>
+        <traits>
+          <trait>audible</trait>
+          <trait>divine</trait>
+          <trait>émotion</trait>
+          <trait>mental</trait>
+          <trait>terreur</trait>
+        </traits>
+        <description>DD 21</description>
+      </special>
+      <special>
+        <name>Mage fantôme</name>
+        <description>Un magicien mort avant d’avoir achevé sa tâche peut revenir sous la forme d’un mage fantôme.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

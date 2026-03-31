@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>TIGRE</name>
+    <type>CRÉATURE</type>
+    <level>4</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+12</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>9 m</range>
+        </sens>
+        <sens>
+          <name>vision nocturne</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+11</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+13</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+5, **Dex** +3, **Con** +3, **Int** –4, **Sag** +2, **Cha** –2</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>21</armorClass>
+    <saves/>
+    <health>60</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special type="reaction">
+        <name>Vitesse</name>
+        <description>m</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>mâchoires +13, **Dégâts** 1d10+7 perforants plus Empoignade (p� 359)</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>griffes +13 (agile) ; **Dégâts** 1d8+7 tranchants</description>
+      </special>
+      <special>
+        <name>Attaque sournoise</name>
+        <description>Le tigre inflige 1d6 dégâts de précision supplémentaires aux créatures prises par surprise�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Bond</name>
+        <description>Le tigre Marche rapidement et effectue une Frappe à la fin de son déplacement� Si le tigre est caché au début de son action, il le reste jusqu’à ce qu’il ait effectué la Frappe de ce pouvoir�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Lutte</name>
+        <description>Le tigre effectue une Frappe de griffes contre une créature qu’il empoignée� Si l’at- taque touche, la créature est mise à terre�</description>
+      </special>
+      <special>
+        <name>Smilodon</name>
+        <description>Les smilodons sont de grands félins à dents de sabre, des superprédateurs qui sont plus puissants et plus massifs que les autres grands félins. Ils tuent généralement leur proie rapidement en l’attaquant à la gorge ou à une autre partie vulnérable de leur anatomie. Les dents démesurées du smilodon sont des trophées particulièrement recherchés.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

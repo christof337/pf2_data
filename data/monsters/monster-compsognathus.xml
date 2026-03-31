@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>COMPSOGNATHUS</name>
+    <type>CRÉATURE</type>
+    <level>-1</level>
+    <creatureTraits>
+      <trait type="size">TRÈS PETITE</trait>
+      <trait>ANIMAL</trait>
+      <trait>DINOSAURE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+5</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>9 m</range>
+        </sens>
+        <sens>
+          <name>vision nocturne</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+6</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+6</bonus>
+      </skill>
+    </skills>
+    <armorClass>15</armorClass>
+    <saves REF="+7" FOR="+4" WIL="+4"/>
+    <health>8</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+7</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 0 m</trait>
+          <trait>finesse</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Venin de compsognathus</name>
+        <traits>
+          <trait>poison</trait>
+        </traits>
+        <description>**Jet de sauvegarde** Vigueur DD 16 ; **Durée maximale** 4 rounds ; **Stade 1** 1d6 dégâts de poison et affaibli 1 (1 round), **Stade 2** 1d8 dégâts de poison et affaibli 2 (1 round)�</description>
+      </special>
+      <special>
+        <name>Vélociraptor</name>
+        <description>Cousin plus petit du deinonychus, le vélociraptor, aussi rapide que rusé, chasse en meute. Il ne craint pas les créatures plus grandes, et un groupe de ces dinosaures n’hésitera pas à attaquer une proie aussi massive qu’un cheval. Ils arborent une sorte de crinière de plumes qui s’étend sur leur dos et le long de leurs membres antérieures, de leurs pattes et de leur queue. Leur ventre et leurs flancs sont couverts d’écailles. Ces plumes leur permettent de se fondre facilement dans le terrain environnant mais, quand ils sont exci‑ tés, qu’ils tentent d’impressionner un adversaire ou qu’ils cherchent à s’accoupler, les vélociraptors peuvent ébouriffer ce plumage pour révéler des couleurs plus vives dissimulées par les longues plumes. Un vélociraptor moyen mesure 45 cm de hauteur pour 2,3 m de long et pèse environ 18 kg.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

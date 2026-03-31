@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>RAT GÉANT</name>
+    <type>CRÉATURE</type>
+    <level>-1</level>
+    <creatureTraits>
+      <trait type="size">PETITE</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+5</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>9 m</range>
+        </sens>
+        <sens>
+          <name>vision nocturne</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+5</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+2</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+5</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+1, **Dex** +3, **Con** +2, **Int **–4, **Sag **+1, **Cha **–3</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>15</armorClass>
+    <saves REF="+7" FOR="+6" WIL="+3"/>
+    <health>8</health>
+    <speeds>
+      <speed>9 m</speed>
+      <speed type="climb">3 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+7</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+1</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Peste putride</name>
+        <traits>
+          <trait>maladie</trait>
+        </traits>
+        <description>� Les états malade et inconscient de cette maladie ne peuvent se termi- ner ni être atténués tant que la maladie n’est pas guérie ; **Jet de sauvegarde** Vigueur DD 14 ;</description>
+      </special>
+      <special>
+        <name>Stade 1</name>
+        <description>porteur sain (1d4 heures) ; **Stade 2** malade 1 (1 jour) ; **Stade 3 **malade 1 et ralenti 1 (1 jour) ; **Stade 4** inconscient (1 jour) ; **Stade 5** mort</description>
+      </special>
+      <special>
+        <name>Nuée de rats</name>
+        <description>Une nuée de rats peut causer le chaos le plus total au sein d’une maisonnée ou d’une boutique. Le risque de contracter la peste putride est bien plus élevé quand des dizaines de ces rongeurs agressifs se réunissent et entreprennent de mordre ensemble leurs victimes. Il est ainsi possible de faire carrière dans la chasse aux rats dans de nombreuses régions du monde afin d’endiguer la propagation de la maladie.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

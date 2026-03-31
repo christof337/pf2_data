@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>DANSEUR CALIGNI</name>
+    <type>CRÉATURE</type>
+    <level>1</level>
+    <creatureTraits>
+      <trait type="size">PETITE</trait>
+      <trait>CALIGNI</trait>
+      <trait>HUMANOÏDE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+10</bonus>
+      <senses>
+        <sens>
+          <name>aveuglé par la lumière</name>
+        </sens>
+        <sens>
+          <name>vision dans le noir supérieure</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Larcin</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Représentation</name>
+        <bonus>+6</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+0, **Dex **+4, **Con **+2, **Int **–1, **Sag **+1, **Cha **+3</description>
+      </special>
+      <special>
+        <name>Objets</name>
+        <description>dague, matraque (fonctionne comme une masse d’armes légère)</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>17</armorClass>
+    <saves REF="+9" FOR="+7" WIL="+4"/>
+    <health>18</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>matraque</name>
+        <bonus>+9</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+          <trait>pousser</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>dague</name>
+        <bonus>+9</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+          <trait>polyvalent T</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>dague</name>
+        <bonus>+9</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>jet 3 m</trait>
+          <trait>polyvalent T</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="occult" DD="16"/>
+    <offensiveAbilities>
+      <special>
+        <name>Attaque sournoise</name>
+        <description>Le danseur caligni inflige 1d6 dégâts de précision supplémentaires aux créatures prises par surprise�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Malédiction du danseur</name>
+        <traits>
+          <trait>malédiction</trait>
+          <trait>mental</trait>
+          <trait>occulte</trait>
+        </traits>
+        <description>� Le danseur caligni touche un adversaire et le maudit� La cible doit réussir un jet de Volonté DD 18 ou devenir maladroite 1 et stupéfiée 1� La cible est immunisée contre ce pouvoir pendant 24 h� Ces états persistent jusqu’à ce que la malédiction soit levée� La victime peut tenter un nouveau jet de Volonté DD 18 une fois par heure pour tenter de lever la malédiction�</description>
+      </special>
+      <special>
+        <name>Maraudeur caligni</name>
+        <description>On rencontre généralement les maraudeurs calignis à la surface, en train de voler des produits de première nécessité et de luxe. Ils sont parfois enrôlés par des calignis plus puissants pour se battre et sont alors envoyés en première ligne comme chair à canon, afin d’épuiser l’ennemi. Les maraudeurs sont sinon plutôt prudents et préfèrent fuir quand une situation n’est pas à leur avantage.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

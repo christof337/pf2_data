@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GÉNÉRAL HOBGOBELIN</name>
+    <type>CRÉATURE</type>
+    <level>6</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>HOBGOBELIN</trait>
+      <trait>HUMANOÏDE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>commun</language>
+      <language>gobelin</language>
+    </languages>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+12</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+15</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+12</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+14</bonus>
+      </skill>
+    </skills>
+    <armorClass>25</armorClass>
+    <saves/>
+    <health>90</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>*coutille*</name>
+        <bonus>+17</bonus>
+        <traits>
+          <trait>allonge</trait>
+          <trait>mortel 1d8</trait>
+          <trait>percutant</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8+10</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>arc court composite</name>
+        <bonus>+15</bonus>
+        <traits>
+          <trait>brutal</trait>
+          <trait>facteur de portée 18 m</trait>
+          <trait>mortel d10</trait>
+          <trait>propulsif</trait>
+          <trait>rechargement 0</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+8</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Critique spécialisé à l’arme d’hast</name>
+        <description>Sur un coup critique, la cible qui le subit est déplacée de 1,5 m dans une direction au choix du général hobgobelin�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

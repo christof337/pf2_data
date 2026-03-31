@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>DRAGON DE FORTUNE ADULTE</name>
+    <type>CRÉATURE</type>
+    <level>14</level>
+    <creatureTraits>
+      <trait type="size">TRÈS GRANDE</trait>
+      <trait>ARCANIQUE</trait>
+      <trait>DRAGON</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+27</bonus>
+      </skill>
+      <skill>
+        <name>Arcanes</name>
+        <bonus>+28</bonus>
+      </skill>
+      <skill>
+        <name>Artisanat</name>
+        <bonus>+28</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+27</bonus>
+      </skill>
+      <skill>
+        <name>Connaissances commerciales</name>
+        <bonus>+28</bonus>
+      </skill>
+      <skill>
+        <name>Connaissances comptables</name>
+        <bonus>+28</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+24</bonus>
+      </skill>
+      <skill>
+        <name>Larcin</name>
+        <bonus>+27</bonus>
+      </skill>
+    </skills>
+    <armorClass>36</armorClass>
+    <saves REF="+27" FOR="+24" WIL="+24" saveSpecial="bonus de statut de +2 à tous les jets de sauvegarde contre la magie arcanique"/>
+    <health>230</health>
+    <immunities>
+      <immunity>drainé</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>sommeil</immunity>
+    </immunities>
+    <speeds>
+      <speed>21 m</speed>
+      <speed type="fly">42 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+27</bonus>
+        <traits>
+          <trait>allonge 4,5 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d10+13</amount>
+            <damageType>perforants</damageType>
+          </damage>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>de force</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+27</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 3 m</trait>
+          <trait>mauvais</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d6+13</amount>
+            <damageType>perforants</damageType>
+          </damage>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>de force</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>queue</name>
+        <bonus>+25</bonus>
+        <traits>
+          <trait>allonge 6 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d10+13</amount>
+            <damageType>contondants</damageType>
+          </damage>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>de force</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Sorts spontanés arcaniques</name>
+        <description>* *DD 36, attaque +28 ; **7**e* *(2 emplacements) *barrage de force*,* boule de feu*,* déformer l’esprit*,* déplacement sans entrave, éclairs multiples*,* serpents d’ombre *; **Tours de magie (7**e**) ***détection de la magie*,* lecture de l’aura*</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Frénésie draconique</name>
+        <description>Comme le jeune dragon de fortune�</description>
+      </special>
+      <special>
+        <name>Impulsion draconique</name>
+        <description>Comme le jeune dragon de fortune�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Partage de richesse</name>
+        <description>Comme le jeune dragon de fortune, mais 9d10 dégâts contondants, DD 35 et émanation de 12 m�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Plongeon dans le trésor</name>
+        <description>Comme le jeune dragon de fortune, mais le DD est de 33�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Souffle perturbateur</name>
+        <traits>
+          <trait>arcanique</trait>
+          <trait>force</trait>
+        </traits>
+        <description>Comme le jeune dragon de fortune, mais 13d6 dégâts de force, le cône fait 12 m et le DD est de 36�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

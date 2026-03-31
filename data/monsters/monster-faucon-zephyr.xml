@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>FAUCON ZÉPHYR</name>
+    <type>CRÉATURE</type>
+    <level>3</level>
+    <creatureTraits>
+      <trait type="size">PETITE</trait>
+      <trait>AIR</trait>
+      <trait>ÉLÉMENTAIRE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+7</bonus>
+      <senses>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <attributes STR="+2" DEX="+4" CON="+1" INT="+0" WIS="+0" CHA="+0"/>
+    <armorClass>18</armorClass>
+    <saves REF="+13" FOR="+6" WIL="+7"/>
+    <health>36</health>
+    <immunities>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>saignement</immunity>
+      <immunity>sommeil</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>aile</name>
+        <bonus>+11</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8+4</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Attaque tournoyante</name>
+        <description>Le faucon zéphyr Vole sur la moitié de sa Vitesse, effectue deux Frappes avec ses ailes puis utilise l’autre moitié de sa Vitesse pour revenir à sa position d’origine en Volant� La deuxième partie de son déplacement ne déclenche pas de réaction� Ces deux attaques comptent pour le malus d’at- taques multiples du faucon zéphyr, mais ce malus n’augmente qu’une fois les deux attaques effectuées�</description>
+      </special>
+      <special>
+        <name>Tourbillon vivant</name>
+        <description>Un tourbillon vivant ressemble à un diable de poussière sur lequel on peut distinguer ce qui ressemble à une bouche et des yeux au milieu des débris virevoltants.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

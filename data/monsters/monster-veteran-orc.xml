@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>VÉTÉRAN ORC</name>
+    <type>CRÉATURE</type>
+    <level>1</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>HUMANOÏDE</trait>
+      <trait>ORC</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>commun</language>
+      <language>orquien</language>
+    </languages>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+4</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+4</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+4**, Dex **+2**, Con **+3**, Int **−1**, Sag **+1**, Cha **+0</description>
+      </special>
+      <special>
+        <name>Objets</name>
+        <description>coupecou orc, cuirasse, épée courte (2), javeline (4)</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>18</armorClass>
+    <saves REF="+7" FOR="+8" WIL="+4"/>
+    <health>23</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special type="reaction">
+        <name>Férocité</name>
+        <traits>
+          <trait>p� 359</trait>
+        </traits>
+        <description/>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

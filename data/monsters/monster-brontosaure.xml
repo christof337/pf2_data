@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>BRONTOSAURE</name>
+    <type>CRÉATURE</type>
+    <level>10</level>
+    <creatureTraits>
+      <trait type="size">GIGANTESQUE</trait>
+      <trait>ANIMAL</trait>
+      <trait>DINOSAURE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+16</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>9 m</range>
+        </sens>
+        <sens>
+          <name>vision nocturne</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <attributes STR="+9" DEX="+0" CON="+5" INT="+0" WIS="+2" CHA="+1"/>
+    <armorClass>28</armorClass>
+    <saves/>
+    <health>220</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>queue</name>
+        <bonus>+23</bonus>
+        <traits>
+          <trait>allonge 6 m</trait>
+          <trait>balayage</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d10+13</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>patte</name>
+        <bonus>+23</bonus>
+        <traits>
+          <trait>allonge 4,5 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+13</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Balayage avec la queue</name>
+        <description>Le brontosaure effectue une Frappe avec la queue et compare le jet d’attaque à la CA d’un maximum de trois adversaires, chacun d’eux devant se trouver à portée d’allonge de l’attaque de sa queue et adjacent à au moins une autre cible� Ne lancez qu’une seule fois les dégâts et appliquez-les à toutes les créatures touchées� Un Balayage avec la queue compte comme deux attaques pour le malus d’attaques multiples�</description>
+      </special>
+      <special type="activity" actions="3">
+        <name>Piétinement</name>
+        <description>Très Grande ou plus petite, patte, DD 29 (p� 360)</description>
+      </special>
+      <special>
+        <name>Tyrannosaure</name>
+        <description>Globalement considéré comme le roi des dinosaures, le tyrannosaure est un prédateur massif avec une énorme gueule garnie de crocs tranchants. Certaines tribus de géants ont même dressé des tyrannosaures pour en faire leurs montures ou des bêtes de guerre.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

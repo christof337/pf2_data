@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GNOME OMBRAL GUERRIER</name>
+    <type>CRÉATURE</type>
+    <level>2</level>
+    <creatureTraits>
+      <trait type="size">PETITE</trait>
+      <trait>GNOME</trait>
+      <trait>HUMANOÏDE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+7</bonus>
+      <senses>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages>
+      <language>gnomien</language>
+      <language>sakvroth</language>
+    </languages>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+5</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+5</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+4, **Dex **+2, **Con **+3, **Int **+0, **Sag **+1, **Cha **–1</description>
+      </special>
+      <special>
+        <name>Objets</name>
+        <description>arbalète lourde (20 carreaux), armure de cuir clouté, bouclier en acier (Solidité 5, 20 PV, SR 10), lance</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>18</armorClass>
+    <saves REF="+8" FOR="+9" WIL="+5"/>
+    <health>34</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>lance +10, **Dégâts** 1d6+4 perforants **À distance** 1 arbalète lourde</name>
+        <bonus>+8</bonus>
+        <traits>
+          <trait>facteur de portée 36 m</trait>
+          <trait>rechargement 2</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d10</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="primal" DD="15"/>
+    <offensiveAbilities>
+      <special>
+        <name>Gnome ombral gardien des roches</name>
+        <description>Les gnomes ombraux gardiens des roches suivent un enseignement druidique et communient avec les entités élémentaires naturelles et les habitants de l’Ombreterre.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

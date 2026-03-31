@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>SATYRE</name>
+    <type>CRÉATURE</type>
+    <level>4</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>FÉE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+11</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+11</bonus>
+      </skill>
+      <skill>
+        <name>Nature</name>
+        <bonus>+9</bonus>
+      </skill>
+      <skill>
+        <name>Représentation</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+8</bonus>
+      </skill>
+    </skills>
+    <armorClass>19</armorClass>
+    <saves REF="+11" FOR="+9" WIL="+12"/>
+    <health>80</health>
+    <weaknesses>
+      <weakness>
+        <name>fer froid</name>
+        <value>5</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>dague</name>
+        <bonus>+14</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+          <trait>polyvalent T</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+6</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>arc court</name>
+        <bonus>+14</bonus>
+        <traits>
+          <trait>facteur de portée 18 m</trait>
+          <trait>mortel d10</trait>
+          <trait>rechargement 0</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+3</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>dague</name>
+        <bonus>+14</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>jet 3 m</trait>
+          <trait>polyvalent T</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+6</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="primal" DD="21">
+      <rank rank="4">
+        <spells>
+          <spell>charme, sommeil, suggestion, terreur</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special>
+        <name>Artiste leste</name>
+        <description>Quand le satyre Joue de la flûte afin de lancer un sort, il peut Faire un pas ou Marcher rapidement dans le cadre de cette activité�</description>
+      </special>
+      <special type="activity" actions="3">
+        <name>Jouer de la flûte</name>
+        <traits>
+          <trait>audible</trait>
+          <trait>primordiale</trait>
+        </traits>
+        <description>; **Conditions.** Le satyre tient un instrument de musique ;</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

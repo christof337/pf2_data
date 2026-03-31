@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>BASILIC</name>
+    <type>CRÉATURE</type>
+    <level>5</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>BÊTE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+8</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+4, **Dex **–1, **Con **+5, **Int **–3, **Sag **+2, **Cha **+1</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>22</armorClass>
+    <saves/>
+    <health>70</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special type="reaction">
+        <name>Coup d’œil pétrifiant</name>
+        <traits>
+          <trait>arcanique</trait>
+          <trait>aura</trait>
+          <trait>visuel</trait>
+        </traits>
+        <trigger>� Une créature qui se trouve dans un rayon de 9 m autour du basilic commence son tour ;</trigger>
+        <effect>La cible fait un jet de Vigueur DD 20� En cas d’échec, elle est ralentie 1 pendant 1 min alors que son corps se raidit progressivement�</effect>
+      </special>
+      <special>
+        <name>Vitesse</name>
+        <description>6 m</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>mâchoires +15, **Dégâts** 2d8+4 perforants</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Regard pétrifiant</name>
+        <description>(arcane, concentration, mise hors de combat, visuel)� Le basilic fixe du regard une créature qu’il peut voir dans un rayon de 9 m� La créature doit faire un jet de Vigueur DD 22� Si elle échoue et qu’elle n’a pas déjà été ralentie par Coup d’œil pétrifiant ou par ce pouvoir, elle devient ralentie 1� Si elle échoue et qu’elle était déjà ralentie par ce pouvoir ou par Coup d’œil pétrifiant, elle est définitivement pétrifiée� Une créature pétrifiée est immé- diatement libérée de cet état si elle se trouve enduite (et pas simplement éclaboussée) de sang de basilic frais (qui n’a pas été drainé depuis plus de 1 h)� Un basilic contient assez de sang pour recouvrir 1d3 créa- tures de taille Moyenne�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

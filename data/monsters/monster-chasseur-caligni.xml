@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>CHASSEUR CALIGNI</name>
+    <type>CRÉATURE</type>
+    <level>4</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>CALIGNI</trait>
+      <trait>HUMANOÏDE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+10</bonus>
+      <senses>
+        <sens>
+          <name>aveuglé par la lumière</name>
+        </sens>
+        <sens>
+          <name>vision dans le noir supérieure</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages>
+      <language>caligni</language>
+      <language>sakvroth</language>
+    </languages>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Larcin</name>
+        <bonus>+11</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+12</bonus>
+      </skill>
+    </skills>
+    <armorClass>21</armorClass>
+    <saves REF="+13" FOR="+10" WIL="+8"/>
+    <health>60</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>épée courte</name>
+        <bonus>+13</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+          <trait>polyvalent T</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+7</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="occult" DD="19">
+      <rank rank="2">
+        <spells>
+          <spell spellSpecial="à volonté">ténèbres , percevoir l’imperceptible</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special>
+        <name>Attaque sournoise</name>
+        <description>Le chasseur caligni inflige 1d6 dégâts de précision supplémentaires aux créatures prises par surprise�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Double taille</name>
+        <description>Le chasseur caligni fait deux Frappes contre la même cible, une avec chacune de ses épées courtes� Le chasseur combine les dégâts des attaques qui ont touché, en appliquant une seule fois les dégâts de précision, les résistances et les faiblesses� Les deux attaques comptent dans le malus d’attaques multiples du chasseur mais ce dernier n’augmente qu’après les deux attaques�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Ordre d’encerclement</name>
+        <traits>
+          <trait>audible</trait>
+        </traits>
+        <description>� Chaque maraudeur caligni dans un rayon de 9 m autour du chasseur peut Faire un pas� Un maraudeur ne peut pas profiter de l’effet de plus d’un seul Ordre d’encerclement par round�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

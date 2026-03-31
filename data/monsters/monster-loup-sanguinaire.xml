@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>LOUP SANGUINAIRE</name>
+    <type>CRÉATURE</type>
+    <level>3</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+10</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>9 m</range>
+        </sens>
+        <sens>
+          <name>vision nocturne</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <armorClass>18</armorClass>
+    <saves REF="+8" FOR="+11" WIL="+8"/>
+    <health>50</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+12</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d10+5</amount>
+            <damageType>perfo- rants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Attaque en meute</name>
+        <description>Les Frappes du loup sanguinaire infligent 1d6 dégâts supplémentaires aux créatures à portée d’au moins deux de ses alliés�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Malmener</name>
+        <traits>
+          <trait>attaque</trait>
+        </traits>
+        <description>; **Conditions.** Le loup sanguinaire tient une créa- ture empoignée ou entravée entre ses mâchoires ;</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

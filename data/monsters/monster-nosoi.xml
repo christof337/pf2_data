@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>NOSOI</name>
+    <type>CRÉATURE</type>
+    <level>1</level>
+    <creatureTraits>
+      <trait type="size">TRÈS PETITE</trait>
+      <trait>PSYCHOPOMPE</trait>
+      <trait>VEILLEUR</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+6</bonus>
+      </skill>
+      <skill>
+        <name>Connaissances en bibliothèques</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Connaissances sur le Cimetière</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+6</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+6</bonus>
+      </skill>
+      <skill>
+        <name>Représentation</name>
+        <bonus>+6</bonus>
+      </skill>
+      <skill>
+        <name>Société</name>
+        <bonus>+2</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>–1, **Dex** +3, **Con** +1, **Int** +1, **Sag** +1, **Cha** +3</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>16</armorClass>
+    <saves REF="+8" FOR="+4" WIL="+6"/>
+    <health>18</health>
+    <immunities>
+      <immunity>effets de mort</immunity>
+      <immunity>maladie</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>bec</name>
+        <bonus>+6</bonus>
+        <traits>
+          <trait>allonge 0 m</trait>
+          <trait>finesse</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>toucher du berger</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="divine" DD="16">
+      <rank rank="4">
+        <spells>
+          <spell>cadavre loquace, lire les présages</spell>
+        </spells>
+      </rank>
+      <rank rank="2">
+        <spells>
+          <spell>explosion bruyante, invisi‑ bilité (à volonté</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Changement de forme</name>
+        <traits>
+          <trait>concentration</trait>
+          <trait>divine</trait>
+          <trait>métamorphose</trait>
+        </traits>
+        <description>� Le nosoi prend l’apparence d’un corbeau ou d’un oiseau chanteur (p� 358)� Cela ne change pas sa Vitesse ni les bonus d’attaque et de dégâts de ses Frappes�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Mélodie envoûtante</name>
+        <traits>
+          <trait>audible</trait>
+          <trait>concentration</trait>
+          <trait>divine</trait>
+          <trait>mental</trait>
+          <trait>mise hors de combat</trait>
+        </traits>
+        <description>� Le nosoi fredonne une chanson captivante� Chaque créature vivante ou morte-vivante dans une émanation de 18 m doit tenter un jet de Volonté DD 18� L’effet dure jusqu’à la fin du prochain tour du nosoi, mais ce dernier peut le Maintenir� Une créature qui réussit son jet de sauvegarde est immunisée pendant 24 h� Bien qu’il s’agisse d’un effet mental, ce pouvoir affecte les morts-vivants dénués d’intelligence� Les psychopompes sont immu- nisés contre ce pouvoir�</description>
+      </special>
+      <special>
+        <name>Échec</name>
+        <description>La cible est fascinée par le nosoi�</description>
+      </special>
+      <special>
+        <name>Échec critique</name>
+        <description>La créature est fascinée par le nosoi et doit utiliser chacune de ses actions pour se rapprocher de lui aussi rapidement que possible tout en évitant d’éventuels dangers évidents� Si une créature envoûtée est adjacente au nosoi, elle reste immobile et n’agit pas� La fascination se termine si la cible est attaquée�</description>
+      </special>
+      <special>
+        <name>Toucher du berger</name>
+        <description>La Frappe d’un nosoi bénéficie des avantages de la rune de propriété *spectrale* et inflige 1d6 dégâts de néant supplémentaires aux créatures vivantes ou 1d6 dégâts de vitalité aux morts-vivants�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

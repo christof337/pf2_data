@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GNOME OMBRAL GARDIEN DES ROCHES</name>
+    <type>CRÉATURE</type>
+    <level>5</level>
+    <creatureTraits>
+      <trait type="size">PETITE</trait>
+      <trait>GNOME</trait>
+      <trait>HUMANOÏDE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+14</bonus>
+      <senses>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages>
+      <language>gnomien</language>
+      <language>pétran</language>
+      <language>sakvroth</language>
+    </languages>
+    <skills>
+      <skill>
+        <name>Artisanat</name>
+        <bonus>+9</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+11</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+9</bonus>
+      </skill>
+      <skill>
+        <name>Nature</name>
+        <bonus>+14</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+1, **Dex **+2, **Con **+3, **Int **+0, **Sag **+5, **Cha **+2</description>
+      </special>
+      <special>
+        <name>Objets</name>
+        <description>armure de peau, fronde (10 billes), parchemin de *voile occultant*, pic de guerre, symbole primordial</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>22</armorClass>
+    <saves REF="+9" FOR="+12" WIL="+14"/>
+    <health>63</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>pic de guerre</name>
+        <bonus>+10</bonus>
+        <traits>
+          <trait>fatal d10</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>fronde</name>
+        <bonus>+11</bonus>
+        <traits>
+          <trait>facteur de portée 15 m</trait>
+          <trait>propulsif</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="primal" DD="21"/>
+  </monster>
+</monsters>

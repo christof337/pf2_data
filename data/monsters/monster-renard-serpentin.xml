@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>RENARD SERPENTIN</name>
+    <type>CRÉATURE</type>
+    <level>2</level>
+    <creatureTraits>
+      <trait type="size">TRÈS PETITE</trait>
+      <trait>BÊTE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+11</bonus>
+      <senses>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages>
+      <language>commun</language>
+      <language>draconique</language>
+      <langSpecial>
+        <spell>traduction</spell>
+      </langSpecial>
+    </languages>
+    <armorClass>19</armorClass>
+    <saves REF="+11" FOR="+8" WIL="+7"/>
+    <health>30</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+12</bonus>
+        <traits>
+          <trait>allonge 0 m</trait>
+          <trait>finesse</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+4</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="arcane" DD="18" attack="+8">
+      <rank rank="2">
+        <spells>
+          <spell>invisibilité (à volonté, soi uniquement) Tours de magie (1er) lecture de l’aura</spell>
+        </spells>
+      </rank>
+      <rank rank="2" constant="TRUE">
+        <spells>
+          <spell>traduction</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Érudition rapide</name>
+        <traits>
+          <trait>concentration</trait>
+        </traits>
+        <description>**Conditions.** Le renard serpentin a vu l’incantation d’un tour de magie au cours de la minute qui vient de s’écou- ler�</description>
+      </special>
+      <special>
+        <name>Maître des langues</name>
+        <description>Même si le renard serpentin ne parle pas la langue d’une créature, il peut rapi- dement capter ses inflexions, ses mots-clés et son langage corporel� Si un renard ser- pentin interagit avec une créature ou l’ob- serve pendant au moins dix minutes et que cette créature peut parler une langue, il peut lui communiquer des concepts de base�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

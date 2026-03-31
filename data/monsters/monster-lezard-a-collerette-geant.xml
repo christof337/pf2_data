@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>LÉZARD À COLLERETTE GÉANT</name>
+    <type>CRÉATURE</type>
+    <level>5</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <attributes STR="+5" DEX="+1" CON="+4" INT="+0" WIS="+2" CHA="+0"/>
+    <armorClass>22</armorClass>
+    <saves REF="+12" FOR="+13" WIL="+9"/>
+    <health>75</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+16</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+7</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>queue</name>
+        <bonus>+16</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+7</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Démonstration d’intimidation</name>
+        <description>(audible, émo- tion, mental, terreur, visuel) Le lézard à collerette géant Marche rapidement� S’il termine ce mouvement adjacent à au moins une autre créature, il déploie soudain sa collerette colorée et pousse un sifflement effrayant� Chaque créature adjacente doit réussir un jet de Volonté DD 21 ou être effrayée 2 (ou effrayée 3 sur un échec critique)� Ensuite, la créature est temporai- rement immunisée contre la Démonstration d’intimidation pendant 1 min�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

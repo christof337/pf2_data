@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>ORQUE ÉPAULARD</name>
+    <type>CRÉATURE</type>
+    <level>5</level>
+    <creatureTraits>
+      <trait type="size">TRÈS GRANDE</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <attributes STR="+7" DEX="+2" CON="+5" INT="+0" WIS="+3" CHA="+0"/>
+    <armorClass>21</armorClass>
+    <saves REF="+11" FOR="+14" WIL="+12"/>
+    <health>75</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special>
+        <name>Vitesse</name>
+        <description>nage 18 m</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>mâchoires +13, **Dégâts **2d8+9 perforants plus Empoignade (p� 359)</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Brèche</name>
+        <description>L’orque épaulard Nage sur une distance maximale égale à sa Vitesse de nage, puis Bondit verticalement hors de l’eau jusqu’à une hauteur de 7,5 m, et effec- tue une Frappe contre une créature à n’importe quel moment de son saut (il peut ainsi attaquer une créature qui se trouve jusqu’à 9 m au-dessus de la surface de l’eau)� Après la Frappe, l’épaulard retombe dans l’eau�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Embuscade aquatique</name>
+        <description>9 m (p� 359) Un épaulard peut se déplacer d’un maximum de 1,5 m à terre en effectuant son Embuscade aquatique� Après quoi, il est considéré comme mis à terre jusqu’à ce qu’il Rampe pour retourner dans l’eau�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

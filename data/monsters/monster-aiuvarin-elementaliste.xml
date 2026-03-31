@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>AIUVARIN ÉLÉMENTALISTE</name>
+    <type>CRÉATURE</type>
+    <level>2</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>AIUVARIN</trait>
+      <trait>ELFE</trait>
+      <trait>HUMAIN</trait>
+      <trait>HUMANOÏDE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Arcanes</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+5</bonus>
+      </skill>
+      <skill>
+        <name>Connaissances élémentaires</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+4</bonus>
+      </skill>
+      <skill>
+        <name>Nature</name>
+        <bonus>+6</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+1, **Dex** +3, **Con** +0, **Int** −4, **Sag** +2,** Cha** +0</description>
+      </special>
+      <special>
+        <name>Objet</name>
+        <description>dague</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>17</armorClass>
+    <saves REF="+11" FOR="+5" WIL="+8"/>
+    <health>20</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>dague</name>
+        <bonus>+9</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+          <trait>polyvalent T</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+3</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>dague</name>
+        <bonus>+9</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>jet 3 m</trait>
+          <trait>polyvalent T</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+3</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Sorts arcaniques préparés</name>
+        <description>* *DD 18 ; **1**er* atterrissage en douceur*,* bourrasque, coup de tonnerre, déguisement illusoire *; **Tours de magie (1**er**) ***arc électrique, bouclier, détection de la magie, lumière, message*</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Champ élémentaire</name>
+        <traits>
+          <trait>arcanique</trait>
+          <trait>concentration</trait>
+          <trait>électricité</trait>
+        </traits>
+        <description>� L’élémentaliste envoie une puissante charge électrostatique dans une émanation de 6 m qui dure pendant 1 min� Toutes les cases de la zone deviennent un terrain dangereux pour les autres créatures� Une créature subit 1 dégât d’élec- tricité chaque fois qu’elle se déplace sur l’une de ces cases� Tant qu’elle demeure dans la zone, une créature subit un malus de statut de −1 aux jets de sauvegarde contre les sorts d’électricité�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Pas elfique</name>
+        <description>L’élémentaliste Fait deux pas�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

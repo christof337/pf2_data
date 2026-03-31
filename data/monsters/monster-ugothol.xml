@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>UGOTHOL</name>
+    <type>CRÉATURE</type>
+    <level>4</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>ABERRATION</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+12</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+12</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Larcin</name>
+        <bonus>+9</bonus>
+      </skill>
+    </skills>
+    <armorClass>21</armorClass>
+    <saves REF="+9" FOR="+9" WIL="+12" saveSpecial="bonus de statut +2 à tous les jets de sauvegarde contre les effets audibles et visuels"/>
+    <health>60</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>épée longue</name>
+        <bonus>+14</bonus>
+        <traits>
+          <trait>polyvalent P</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8+6</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+12</bonus>
+        <traits>
+          <trait>agile</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+6</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Sort inné occulte</name>
+        <description>DD 19 ; **Constant (5**e**) ***langage universel*</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Alimentation sanglante</name>
+        <description>L’ugothol se sert de sa langue, dotées de trois crochets, pour boire le sang d’une créature adjacente entravée ou inconsciente� Cette créa- ture obtient l’état drainé 1�</description>
+      </special>
+      <special>
+        <name>Attaque sournoise</name>
+        <description>L’ugothol inflige 1d6 dégâts de précision supplémentaires aux créatures prises par surprise�</description>
+      </special>
+      <special>
+        <name>Compression</name>
+        <description>Quand un ugothol parvient à Se faufiler, il traverse l’espace étroit à sa Vitesse normale� Les espaces étroits ne représentent pas un terrain difficile pour un ugothol�</description>
+      </special>
+      <special>
+        <name>Reprendre sa forme</name>
+        <description/>
+      </special>
+      <special type="activity" actions="0">
+        <name>Conditions</name>
+        <description>L’ugothol a adopté une autre forme que la sienne ;</description>
+      </special>
+      <special>
+        <name>Maître voilé (vidileth)</name>
+        <description>Les puissants vidileths sont les insidieux maîtres voilés des alghollthus. Ces manipulateurs des esprits et des corps sont à la tête de vastes complots et se servent de leur capacité à changer de forme pour côtoyer et tromper les humains et d’autres espèces intelligentes.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

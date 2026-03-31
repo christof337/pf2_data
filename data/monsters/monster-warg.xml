@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>WARG</name>
+    <type>CRÉATURE</type>
+    <level>2</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>BÊTE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <attributes STR="+4" DEX="+3" CON="+3" INT="+0" WIS="+2" CHA="+2"/>
+    <armorClass>17</armorClass>
+    <saves/>
+    <health>36</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special type="reaction">
+        <name>Morsure vengeresse</name>
+        <trigger>Une créature à portée d’allonge des attaques de mâchoires du warg attaque un des alliés de celui-ci ; **</trigger>
+        <effect>**Le warg effectue une Frappe de mâchoires contre la créature ayant déclenché cet effet�</effect>
+      </special>
+      <special type="activity" actions="1">
+        <name>Vitesse</name>
+        <description>2 m</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>mâchoires +11, **Dégâts **1d8+4 perforants plus Empoignade (p� 359)</description>
+      </special>
+      <special>
+        <name>Attaque en meute</name>
+        <description>Les Frappes du warg infligent 1d4 dégâts supplémentaires aux créatures à portée d’au moins deux de ses alliés�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Gober</name>
+        <traits>
+          <trait>attaque</trait>
+        </traits>
+        <description>Petite, 1d6+2 contondants, Rupture 9 (p� 359)</description>
+      </special>
+      <special>
+        <name>Sorcewarg</name>
+        <description>Les sorcewarg sont apparentés aux wargs, mais ils sont plus gros, plus rusés et bien plus dangereux. Ils sont capables de souffler des volutes d’air glacial. Lorsqu’ils daignent servir d’autres créatures, ils préfèrent généralement se tourner uniquement vers les plus dangereuses, comme les sorcières de l’hiver d’Irrisen</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

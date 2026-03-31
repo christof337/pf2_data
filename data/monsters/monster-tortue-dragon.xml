@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>TORTUE DRAGON</name>
+    <type>CRÉATURE</type>
+    <level>9</level>
+    <creatureTraits>
+      <trait type="size">TRÈS GRANDE</trait>
+      <trait>AMPHIBIE</trait>
+      <trait>DRAGON</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>commun</language>
+      <language>draconique</language>
+      <language>thalassique</language>
+    </languages>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+21</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+18</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+18</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+17</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+6" DEX="+0" CON="+4" INT="+2" WIS="+4" CHA="+2"/>
+    <armorClass>29</armorClass>
+    <saves REF="+15" FOR="+19" WIL="+17"/>
+    <health>140</health>
+    <immunities>
+      <immunity>paralysé</immunity>
+      <immunity>sommeil</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+21</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d12+9</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+21</bonus>
+        <traits>
+          <trait>agile</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+9</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Chavirer</name>
+        <traits>
+          <trait>attaque</trait>
+        </traits>
+        <description>La tortue dragon tente de faire chavirer un bateau adjacent de sa taille ou plus petit� Elle doit réussir un test d’Athlé- tisme DD 30 (réduit de 5 par catégorie de taille du navire inférieure à celle de la tortue dragon) ou égal au DD de Connaissances en navigation maritime du pilote, selon le plus élevé�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Frénésie draconique</name>
+        <description>La tortue dragon effectue deux Frappes de griffes et une Frappe de mâchoires dans l’ordre qu’elle veut�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Invocation de tempête</name>
+        <traits>
+          <trait>air</trait>
+          <trait>aura</trait>
+          <trait>eau</trait>
+          <trait>primordiale</trait>
+        </traits>
+        <description>La tortue dra- gon invoque une puissante tempête qui s’abat tout autour d’elle� La zone dans une émanation de 9 m autour de la tortue devient un terrain difficile pour toutes les autres créatures en train de voler ou de nager� La tortue dragon peut mettre fin à la tempête en utilisant à nouveau cette action�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Tsunami</name>
+        <traits>
+          <trait>eau</trait>
+          <trait>primordiale</trait>
+        </traits>
+        <description>La tortue dragon déchaîne toute sa puissance de destruction pour créer une immense vague qui inflige 7d6 dégâts conton- dants dans un cône de 18 m (jet de Réflexes basique DD 27)� La vague grossit en progressant et ses dégâts augmentent de 10 pour les créatures qui se trouvent à plus de 9 m de distance� Toute créature échouant son jet de sauvegarde subit l’état à terre� Le tortue dragon ne peut plus utiliser tsunami pendant 1d4 rounds�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>DRAKE DE LA JUNGLE</name>
+    <type>CRÉATURE</type>
+    <level>6</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>BOIS</trait>
+      <trait>DRAGON</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+13</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>9 m</range>
+        </sens>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+15</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+11</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+5" DEX="+3" CON="+4" INT="+0" WIS="+1" CHA="+1"/>
+    <armorClass>23</armorClass>
+    <saves REF="+13" FOR="+17" WIL="+11"/>
+    <health>90</health>
+    <immunities>
+      <immunity>maladie</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>sommeil</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>crocs +17, **Dégâts** 2d10+7 perforants plus Empoignade du prédateur **Corps à corps** 1 dard</name>
+        <bonus>+17</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+7</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Empoignade du prédateur</name>
+        <description>Comme Empoignade (p� 359), mais celle du drake de la jungle ne prend pas fin s’il se déplace� À la place, il emporte la créature avec lui� Un drake de la jungle ne peut pas Voler quand il empoigne une créature, à moins que cette dernière puisse aussi Voler�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Frénésie draconique</name>
+        <description>Le drake de la jungle effectue une Frappe de crocs et deux Frappes de dard dans l’ordre qu’il veut�</description>
+      </special>
+      <special>
+        <name>Passage en forêt</name>
+        <description>Le dragon de la jungle ignore tout terrain difficile dû aux végétaux, tels les fourrés, les lianes et la broussaille� Même les plantes manipulées par magie ne peuvent ralentir sa progression�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Projection de venin</name>
+        <traits>
+          <trait>poison</trait>
+        </traits>
+        <description>Un drake de la jungle peut cracher une masse gluante de venin qui traverse une distance maximale de 15 m avant de former une explosion de 3 m à l’impact� Les créatures prises dans la zone d’effet doivent réussir un jet de Réflexes DD 24 ou être exposées au venin du drake� Le drake de la jungle ne peut utiliser de nouveau ce pouvoir avant 1d6 rounds�</description>
+      </special>
+      <special>
+        <name>Venin de drake de la jungle</name>
+        <traits>
+          <trait>poison</trait>
+        </traits>
+        <description>**Jet de sauvegarde** Vigueur DD 24 ; **Durée maxi‑ male** 6 rounds ; **Stade 1** 1d6 de poison et affaibli 1 (1 round) ; **Stade 2** 1d6 de poison et affaibli 2 (1 round)</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Vitesse augmentée</name>
+        <traits>
+          <trait>déplacement</trait>
+        </traits>
+        <description>**Fréquence** trois fois par jour�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

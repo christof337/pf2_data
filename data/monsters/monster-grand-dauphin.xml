@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GRAND DAUPHIN</name>
+    <type>CRÉATURE</type>
+    <level>0</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <attributes STR="+2" DEX="+3" CON="+2" INT="+0" WIS="+3" CHA="+0"/>
+    <armorClass>15</armorClass>
+    <saves REF="+7" FOR="+6" WIL="+5"/>
+    <health>16</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special>
+        <name>Vitesse</name>
+        <description>nage 18 m</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>rostre +6, **Dégâts **1d6+2 contondants</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>mâchoires +6, **Dégâts **1d6+2 perforants</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Vitesse d’éperonnage</name>
+        <description>Le grand dauphin nage deux fois puis effectue une Frappe de rostre� S’il s’est déplacé d’au moins 6 m, il gagne un bonus de circonstances de +1 à son jet d’attaque� Une créature de Grande taille ou plus petite touchée par cette attaque doit réussir un jet de Vigueur DD 16 ou être ralentie 1 pendant 1 round�</description>
+      </special>
+      <special>
+        <name>Orque épaulard</name>
+        <description>Bien que les orques épaulards soient souvent surnommés les « baleines tueuses », ils constituent en fait la plus grande espèce de dauphins. Ces puissants animaux chassent en bancs pour s’attaquer aux phoques, aux requins et même à de véritables baleines. Un épaulard adulte mesure géné‑ ralement entre 4,5 et 7,5 m et pèse de 4 à 6 tonnes.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

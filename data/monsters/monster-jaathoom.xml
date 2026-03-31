@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>JAATHOOM</name>
+    <type>CRÉATURE</type>
+    <level>5</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>AIR</trait>
+      <trait>ÉLÉMENTAIRE</trait>
+      <trait>GÉNIE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>commun</language>
+      <language>sussuran (incapable de parler)</language>
+      <langSpecial>nuage de visions</langSpecial>
+    </languages>
+    <interactionAbilities>
+      <special>
+        <name>Compétences</name>
+        <description>Acrobaties +14, Arcanes +11, Artisanat +9, Athlétisme +11, Diplomatie +13, Discrétion +12, Duperie +11, Société +9</description>
+      </special>
+      <special>
+        <name>For</name>
+        <description>+4, **Dex **+5, **Con **+2, **Int **+2, **Sag **+2, **Cha **+4</description>
+      </special>
+      <special>
+        <name>Objets</name>
+        <description>cimeterre</description>
+      </special>
+      <special>
+        <name>Nuage de visions</name>
+        <traits>
+          <trait>arcanique</trait>
+          <trait>aura</trait>
+          <trait>mental</trait>
+        </traits>
+        <description>18 m� Un jaathoom peut utiliser télépa- thie sur 18 m mais il ne peut envoyer que des images, pas des paroles�</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>22</armorClass>
+    <saves/>
+    <health>55</health>
+    <reactiveAbilities>
+      <special>
+        <name>Ciel orageux</name>
+        <traits>
+          <trait>air</trait>
+          <trait>arcanique</trait>
+          <trait>aura</trait>
+        </traits>
+        <description>6 m Toutes les cases dans l’émana- tion forment un terrain difficile pour les créatures qui Volent ou qui Marchent rapidement� Les créatures avec le trait air sont immunisées� Le jaathoom peut activer ou désactiver cette aura en utilisant une action unique dotée du trait concentration�</description>
+      </special>
+      <special>
+        <name>Invisibilité naturelle</name>
+        <description>Le jaathoom est invisible en permanence� Toutefois, lorsqu’il effectue une action hostile, quelle qu’elle soit, il est caché au lieu d’être non détecté jusqu’au début de son prochain tour� Cela est dû au vague contour de sa forme humanoïde qui est à peine visible pendant un court moment�</description>
+      </special>
+    </reactiveAbilities>
+    <speeds>
+      <speed>7</speed>
+      <speed>5 m</speed>
+      <speed type="fly">12 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>cimeterre</name>
+        <bonus>+15</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+          <trait>balayage</trait>
+          <trait>percu-
+ tant +1</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+10</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>poing</name>
+        <bonus>+16</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 3 m</trait>
+          <trait>finesse</trait>
+          <trait>magique</trait>
+          <trait>non
+ létal</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+10</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>vent percutant</name>
+        <bonus>+16</bonus>
+        <traits>
+          <trait>air</trait>
+          <trait>arcanique</trait>
+          <trait>facteur de portée 6 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8+8</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Sorts innés arcaniques</name>
+        <description>* *DD 21 ; **7**e* téléportation interplanaire *(vers le plan astral, les plans élémentaires ou l’Univers uniquement) ; **4**e* cauchemar, forme vaporeuse *; **3**e* créature illusoire*,* mauvais augure*,* objet illusoire*,* sommeil *; **Tours de magie (3**e**) ***détection de la magie*</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Changement de forme</name>
+        <traits>
+          <trait>arcanique</trait>
+          <trait>concentration</trait>
+          <trait>métamorphose</trait>
+        </traits>
+        <description>� Le jaathoom se transforme en un élémentaire d’air ou un animal aérien de taille Petite ou Moyenne, comme une chouette (p� 358)� Cela n’affecte pas ses statistiques, mais peut changer le type de dégâts de ses Frappes�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Rêves prémonitoires</name>
+        <traits>
+          <trait>mental</trait>
+          <trait>prédiction</trait>
+        </traits>
+        <description>� Le jaathoom envoie un rêve prophétique à une créature endormie à moins de 3 m� Une créature non consentante évite la vision si elle réussit un jet de Volonté DD 23� Le jaathoom choisit le sujet du rêve mais pas les détails spécifiques� La cible reçoit une brève vision de son futur en lien avec le sujet choisi et est affectée par les effets du sort *augure*� Si le résultat est mauvais ou mitigé, la créature est effrayée 2 et ne peut pas se remettre de cet état tant qu’elle ne s’est pas réveillée�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

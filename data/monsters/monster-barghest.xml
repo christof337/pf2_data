@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>BARGHEST</name>
+    <type>CRÉATURE</type>
+    <level>4</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>BÊTE</trait>
+      <trait>IMPIE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <attributes STR="+5" DEX="+2" CON="+3" INT="+2" WIS="+2" CHA="+3"/>
+    <armorClass>20</armorClass>
+    <saves REF="+12" FOR="+11" WIL="+8"/>
+    <health>50</health>
+    <weaknesses>
+      <weakness>
+        <name>saint</name>
+        <value>5</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+13</bonus>
+        <traits>
+          <trait>impie</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+5</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+13</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>impie</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+5</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="primal" DD="21">
+      <rank rank="2">
+        <spells>
+          <spell>brume, invisibilité</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special>
+        <name>Blessure inguérissable</name>
+        <traits>
+          <trait>malédiction</trait>
+          <trait>primordiale</trait>
+        </traits>
+        <description>� Une créature blessée par les griffes d’un barghest doit réussir un jet de Vigueur DD 21 ou être maudite� La créature maudite ne peut pas regagner de points de vie, sauf par magie, jusqu’à ce qu’elle retrouve son maximum de points de vie� La créature peut tenter un nouveau jet de sauvegarde contre la malédiction toutes les 24 h�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Changement de forme</name>
+        <traits>
+          <trait>concentration</trait>
+          <trait>métamorphose</trait>
+          <trait>primordiale</trait>
+        </traits>
+        <description>� Le barghest prend la forme d’un humanoïde, d’un chien ou sa véritable forme (p� 358)� Sa taille s’adapte à sa nouvelle forme� Quand le barghest est sous forme humanoïde, sa Frappe de griffes inflige des dégâts contondants et il perd sa Frappe de mâchoires� Quand il est sous forme de chien, sa Vitesse augmente à 10,5 m� Chaque barghest a une seule forme d’humanoïde et de chien�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

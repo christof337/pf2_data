@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>AKHANA</name>
+    <type>CRÉATURE</type>
+    <level>12</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>ÉON</trait>
+      <trait>VEILLEUR</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <interactionAbilities>
+      <special>
+        <name>Langue</name>
+        <description>conceptualisation</description>
+      </special>
+      <special>
+        <name>Compétences</name>
+        <description>Acrobaties +25, Athlétisme +24, Connaissances sur Axis +23, Médecine +23, Occultisme +21, Religion +23</description>
+      </special>
+      <special>
+        <name>For</name>
+        <description>+6, **Dex **+6, **Con **+7, **Int **+3, **Sag **+5, **Cha **+4</description>
+      </special>
+      <special>
+        <name>Conceptualisation</name>
+        <traits>
+          <trait>aura</trait>
+          <trait>divine</trait>
+          <trait>mental</trait>
+        </traits>
+        <description>30 m� Un akhana peut communiquer mentalement avec toutes les créatures qui se trouvent dans son aura en utilisant des projections psy- chiques dénuées de paroles� S’il n’a pas besoin de partager une langue avec ses interlocu- teurs, le sens de ce qu’il communique est souvent mystérieux pour ces derniers� Un éon peut utiliser ce pouvoir pour établir une communication parfaite avec un autre éon situé sur le même plan�</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>32</armorClass>
+    <saves REF="+22" FOR="+23" WIL="+23" saveSpecial="bonus de statut de +1 à tous les jets de sauvegarde contre la magie"/>
+    <health>225</health>
+    <immunities>
+      <immunity>néant</immunity>
+      <immunity>vitalité</immunity>
+    </immunities>
+    <weaknesses>
+      <weakness>
+        <name>esprit</name>
+        <value>10</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>queue</name>
+        <bonus>+24</bonus>
+        <traits>
+          <trait>magique</trait>
+          <trait>néant</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>5d10</amount>
+            <damageType>de néant</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>poing</name>
+        <bonus>+24</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d6+12</amount>
+            <damageType>contondants</damageType>
+          </damage>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>de vitalité ou 1d6 de néant</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="divine" DD="32">
+      <rank rank="4">
+        <spells>
+          <spell spellSpecial="à volonté">guérison , mise à mal</spell>
+        </spells>
+      </rank>
+      <rank rank="2">
+        <spells>
+          <spell spellSpecial="à volonté">conservation du corps</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Poings volants</name>
+        <description>L’akhana vole et fait jusqu’à quatre attaques de poings contre autant de différentes cibles qui se trouvent à portée pendant son déplacement� Ces attaques sont comptées normalement dans le malus d’attaques multiples, qui n’augmente qu’une fois ce pouvoir résolu�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Reprendre la vie</name>
+        <traits>
+          <trait>divine</trait>
+          <trait>néant</trait>
+        </traits>
+        <description>; **Conditions.** L’akhana a saisi ou entravé une créature avec sa queue ;</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Explosion de vie</name>
+        <traits>
+          <trait>concentration</trait>
+          <trait>divine</trait>
+          <trait>plante</trait>
+          <trait>vitalité</trait>
+        </traits>
+        <description>� Dans un rayon de 30 m autour de l’akhana, une explosion de 1,5 m se remplit soudain d’une vie adaptée à cet environne- ment� S’il s’agit d’animaux, ceux-ci mordent les créatures qui se trouvent dans la zone, leur infligeant 7d6 dégâts perforants (jet de Réflexes basique DD 32)� L’akhana peut également décider que la zone se remplit de champignons ou de plantes (même volantes), qui en font alors un terrain difficile� Après leur apparition, les formes de vie créées par l’akhana vivent et meurent normalement�</description>
+      </special>
+      <special>
+        <name>Pléroma</name>
+        <description>Les pléromas, qui comptent parmi les plus puissants des véritables éons, sont la manifestation de la dualité de la création et de la destruction. Leur incarnation physique oscille perpétuellement entre ces deux extrêmes : leur silhouette est drapée d’une grande cape noire comme la nuit où apparaissent et disparaissent constamment des galaxie et d’autres corps célestes, comme si la vie, la mort et la renaissance d’un univers miniature s’y jouait constamment. Pour les pléromas, l’univers est à la fois éternel et cyclique, condamné et mal‑ léable, et il ne pourra disparaître que si ces cycles sont perturbés. Ils pensent que la Convergence actuelle est nécessaire pour obtenir cet équilibre essentiel, et ils agissent pour que le grand dessin de Monade soit accompli dans ses moindres détails.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

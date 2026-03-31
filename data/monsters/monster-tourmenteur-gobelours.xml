@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>TOURMENTEUR GOBELOURS</name>
+    <type>CRÉATURE</type>
+    <level>3</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>GOBELOURS</trait>
+      <trait>HUMANOÏDE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>commun</language>
+      <language>gobelin</language>
+    </languages>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+9</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Larcin</name>
+        <bonus>+8</bonus>
+      </skill>
+    </skills>
+    <armorClass>20</armorClass>
+    <saves REF="+10" FOR="+9" WIL="+6"/>
+    <health>44</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>dague</name>
+        <bonus>+11</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>polyvalent T</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+6</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>serpe</name>
+        <bonus>+11</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>croc-en-jambe</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+6</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>dague</name>
+        <bonus>+10</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>jet 3 m</trait>
+          <trait>polyvalent T</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+6</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Attaque sournoise</name>
+        <description>Le tourmenteur gobelours inflige 1d6 dégâts de précision supplémentaires aux créatures prises par surprise�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Feinte jumelée</name>
+        <description>Le tourmenteur gobelours utilise deux armes pour porter deux attaques à un adversaire : la première le distrait afin de le prendre par surprise avec la seconde, qui vient le frapper sous un autre angle� Il effectue une Frappe avec chacune de ses deux armes de corps à corps contre la même cible, qui est automatique- ment prise par surprise par la seconde attaque� Le tourmenteur gobelours applique normalement son malus d’attaques multiples à ces Frappes�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

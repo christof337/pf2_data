@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GOUDRON VIVANT</name>
+    <type>CRÉATURE</type>
+    <level>7</level>
+    <creatureTraits>
+      <trait type="size"/>
+    </creatureTraits>
+    <perception>
+      <bonus>+9</bonus>
+      <senses>
+        <sens>
+          <name>dénué de vision</name>
+        </sens>
+        <sens>
+          <name>perception du mouvement</name>
+          <range>18 m</range>
+          <source>précis</source>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <armorClass>14</armorClass>
+    <saves REF="+6" FOR="+18" WIL="+11"/>
+    <health>165</health>
+    <immunities>
+      <immunity>acide</immunity>
+      <immunity>contondants</immunity>
+      <immunity>coups critiques</immunity>
+      <immunity>inconscient</immunity>
+      <immunity>mental</immunity>
+      <immunity>précision</immunity>
+      <immunity>saignement</immunity>
+      <immunity>visuel</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>pseudopode</name>
+        <bonus>+18</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+7</amount>
+            <damageType>contondants</damageType>
+          </damage>
+          <damage>
+            <amount>2d6</amount>
+            <damageType>acide et Empoignade (p� 359)</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Constriction</name>
+        <description>1d8+7 contondants plus 1d6 acide, DD 26 (p� 359)</description>
+      </special>
+      <special type="activity" actions="3">
+        <name>Engloutir</name>
+        <description>DD 22, 4d6 acide, S’échapper DD 22, Rupture 15 (p� 359)</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

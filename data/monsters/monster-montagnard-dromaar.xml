@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>MONTAGNARD DROMAAR</name>
+    <type>CRÉATURE</type>
+    <level>2</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>DROMAAR</trait>
+      <trait>HUMAIN</trait>
+      <trait>HUMANOÏDE</trait>
+      <trait>ORC</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>commun</language>
+      <language>orquien</language>
+    </languages>
+    <armorClass>19</armorClass>
+    <saves REF="+9" FOR="+7" WIL="+8"/>
+    <health>28</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>pic de guerre</name>
+        <bonus>+9</bonus>
+        <traits>
+          <trait>fatal d10</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+3</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>poing</name>
+        <bonus>+9</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>pousser</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+3</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>bolas</name>
+        <bonus>+9</bonus>
+        <traits>
+          <trait>croc-en-jambe à distance</trait>
+          <trait>jet 6 m</trait>
+          <trait>non létal</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+3</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Proie enchevêtrée</name>
+        <description>Le dromaar arme des bolas et effectue une Frappe contre une cible dans un rayon de 6 m� En cas de succès, le dromaar effectue immédiatement un test d’Athlétisme contre le DD de Vigueur de la cible pour lui faire un Croc-en-jambe�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

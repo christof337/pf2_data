@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>LICHE</name>
+    <type>CRÉATURE</type>
+    <level>12</level>
+    <creatureTraits>
+      <trait type="size"/>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Arcanes</name>
+        <bonus>+28</bonus>
+      </skill>
+      <skill>
+        <name>Artisanat</name>
+        <bonus>+24</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+20</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+17</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+22</bonus>
+      </skill>
+    </skills>
+    <armorClass>31</armorClass>
+    <saves REF="+21" FOR="+17" WIL="+23" saveSpecial="bonus de statut de +1 aux jets de sauvegarde contre la vitalité"/>
+    <health>190</health>
+    <immunities>
+      <immunity>effets de mort</immunity>
+      <immunity>inconscient</immunity>
+      <immunity>maladie</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>saignement</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>main</name>
+        <bonus>+24</bonus>
+        <traits>
+          <trait>finesse</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>4d8</amount>
+            <damageType>néant</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="prepared" tradition="arcane" DD="36" attack="+26">
+      <rank rank="6">
+        <spells>
+          <spell>domination, éclairs multiples, saignée vam‑ pirique</spell>
+        </spells>
+      </rank>
+      <rank rank="5">
+        <spells>
+          <spell>blizzard hurlant (×2), mur de glace, nuage toxique</spell>
+        </spells>
+      </rank>
+      <rank rank="4">
+        <spells>
+          <spell>bouclier de feu, dissipation de la magie, translocation, vol</spell>
+        </spells>
+      </rank>
+      <rank rank="3">
+        <spells>
+          <spell>barrage de force, cécité, festin vampirique, localisation</spell>
+        </spells>
+      </rank>
+      <rank rank="2">
+        <spells>
+          <spell>fausse vitalité, flou, percevoir l’imperceptible, résistance à l’énergie</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="0">
+        <name>Canaliser la cage d’âme</name>
+        <description>rang 6</description>
+      </special>
+      <special>
+        <name>Incantation fiable</name>
+        <description>Si la réaction d’une créature devait interrompre l’action d’incantation de la liche, cette dernière tente un test nu DD 15� Si elle réussit, l’action n’est pas interrompue�</description>
+      </special>
+      <special>
+        <name>Siphonner la vie</name>
+        <description>DD 34</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>CAGE D’ÂME                          OBJET 12
+                               RARE ARCANIQUE VIDE
+                              Prix</name>
+        <description>600 po</description>
+      </special>
+      <special>
+        <name>Utilisation</name>
+        <description>tenue à une main ; **Encombrement **— Cet objet est fabriqué par un incantateur qui souhaite devenir une liche� Quand une liche est détruite, son âme se réfugie dans la *cage d’âme*� Puis la *cage d’âme* reconstitue le corps mort-vivant de la liche en 1d10 jours� Enfin, la liche se manifeste à côté de la *cage d’âme*, entièrement guérie et dans un nouveau corps (elle n’a donc plus aucun des équipements dont elle était équipée avec son ancien corps)� La *cage d’âme* doit être détruite pour empêcher le retour de la liche qui lui est associée� Une *cage d’âme* standard est une boîte métallique scellée renfermant des bandes de parche- mins sur lesquelles sont inscrites des phrases magiques� Cette boîte a Solidité 9 et 36 PV, mais certaines liches fabriquent des *cages de l’âme* plus résistantes et plus difficiles à obtenir� Une *cage d’âme* peut avoir la forme d’un anneau, d’une amulette ou de tout autre objet similaire ; c’est à son créateur d’en définir les détails�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

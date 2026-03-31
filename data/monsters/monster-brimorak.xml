@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>BRIMORAK</name>
+    <type>CRÉATURE</type>
+    <level>5</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>DÉMONS</trait>
+      <trait>FIÉLON</trait>
+      <trait>IMPIE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+12</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+12</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+11</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+10</bonus>
+      </skill>
+    </skills>
+    <armorClass>22</armorClass>
+    <saves/>
+    <health>80</health>
+    <weaknesses>
+      <weakness>
+        <name>fer froid</name>
+        <value>5</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>épée enflammée</name>
+        <bonus>+15</bonus>
+        <traits>
+          <trait>impie</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+4</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>feu</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>sabot</name>
+        <bonus>+15</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>impie</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d4+4</amount>
+            <damageType>contondants</damageType>
+          </damage>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>feu</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="divine" DD="21">
+      <rank rank="4">
+        <spells>
+          <spell>translocation</spell>
+        </spells>
+      </rank>
+      <rank rank="3">
+        <spells>
+          <spell>boule de feu, dissipation de la magie</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special>
+        <name>Rituel</name>
+        <description>DD 21 ; *pacte démoniaque* (p� 320)</description>
+      </special>
+      <special>
+        <name>Arme enflammée</name>
+        <traits>
+          <trait>divine</trait>
+          <trait>feu</trait>
+        </traits>
+        <description>� Les sabots d’un brimorak et les armes qu’il manie sont en feu� Il peut également Interagir pour créer une épée de feu et d’acier qui se dissout s’il la lâche�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Fumée</name>
+        <traits>
+          <trait>divine</trait>
+          <trait>feu</trait>
+        </traits>
+        <description>; **Fréquence** 1 fois/min ;</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Vomissure écumante</name>
+        <traits>
+          <trait>divine</trait>
+          <trait>feu</trait>
+          <trait>impie</trait>
+        </traits>
+        <description>� Le brimorak crache sur une ligne de 6 m son sang bouillant qui inflige 6d6 dégâts de feu (jet de Réflexes basique DD 21)� Les créatures qui ratent le jet de sauve- garde tombent également à terre en glissant sur le sang grais- seux� Le brimorak ne peut réutiliser Vomissure écumante avant 1d4 rounds�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>JANN</name>
+    <type>CRÉATURE</type>
+    <level>4</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>AIR</trait>
+      <trait>BOIS</trait>
+      <trait>EAU</trait>
+      <trait>ÉLÉMENTAIRE</trait>
+      <trait>FEU</trait>
+      <trait>GÉNIE</trait>
+      <trait>MÉTAL</trait>
+      <trait>TERRE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>commun</language>
+      <language>muane</language>
+      <language>pétran</language>
+      <language>pyrique</language>
+      <language>sussuran</language>
+      <language>talican</language>
+      <language>thalas-
+                                         sique</language>
+      <langSpecial>
+        <spell>langage universel</spell>
+      </langSpecial>
+    </languages>
+    <armorClass>20</armorClass>
+    <saves REF="+10" FOR="+10" WIL="+13"/>
+    <health>60</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>cimeterre</name>
+        <bonus>+14</bonus>
+        <traits>
+          <trait>balayage</trait>
+          <trait>percutant</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+7</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>poing</name>
+        <bonus>+14</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>magique</trait>
+          <trait>non létal</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+7</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>arc court composite</name>
+        <bonus>+12</bonus>
+        <traits>
+          <trait>facteur de portée 18 m</trait>
+          <trait>mortel d10</trait>
+          <trait>propulsif</trait>
+          <trait>rechar-
+                               gement 0</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+5</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="arcane" DD="21">
+      <rank rank="7">
+        <spells>
+          <spell>téléportation interplanaire (vers le plan astral, les plans élémentaires ou l’Univers uniquement)</spell>
+        </spells>
+      </rank>
+      <rank rank="4">
+        <spells>
+          <spell>lire les présages</spell>
+        </spells>
+      </rank>
+      <rank rank="2">
+        <spells>
+          <spell>invisibilité (×2)</spell>
+        </spells>
+      </rank>
+      <rank rank="5" constant="TRUE">
+        <spells>
+          <spell>langage universel</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Changement de forme</name>
+        <traits>
+          <trait>arcanique</trait>
+          <trait>concentration</trait>
+          <trait>métamorphose</trait>
+        </traits>
+        <description>� Le jann se transforme en n’importe quel animal de taille Petite ou Moyenne (p� 358)� Cela n’affecte pas ses statistiques, mais peut changer le type de dégâts de ses Frappes�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Fusion élémentaire</name>
+        <description>Le jann fait appel à tous les éléments qui le composent pour gagner un sort arcanique supplémentaire qu’il peut lancer à volonté et imprégner ses Frappes avec</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

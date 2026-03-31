@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>BANSHIE</name>
+    <type>CRÉATURE</type>
+    <level>17</level>
+    <creatureTraits>
+      <trait type="size"/>
+    </creatureTraits>
+    <perception>
+      <bonus>+32</bonus>
+      <senses>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+31</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+32</bonus>
+      </skill>
+      <skill>
+        <name>Occultisme</name>
+        <bonus>+25</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>–5, **Dex **+6, **Con **+2, **Int **+0, **Sag **+7, **Cha **+7</description>
+      </special>
+      <special>
+        <name>Perception des battements de cœur</name>
+        <description>Une banshie peut entendre le cœur d’un être vivant battre dans un rayon de 18 m� Il s’agit d’un sens imprécis�</description>
+      </special>
+      <special>
+        <name>Impuissance solaire</name>
+        <description>Une banshie exposée à la lumière du soleil est maladroite 2 et étourdie 2�</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>39</armorClass>
+    <saves/>
+    <health>250</health>
+    <immunities>
+      <immunity>effets de mort</immunity>
+      <immunity>inconscient</immunity>
+      <immunity>maladie</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>précision</immunity>
+      <immunity>saignement</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>main</name>
+        <bonus>+32</bonus>
+        <traits>
+          <trait>finesse</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>4d10+14</amount>
+            <damageType>néant</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Contact terrifiant</name>
+        <traits>
+          <trait>émotion</trait>
+          <trait>occulte</trait>
+          <trait>terreur</trait>
+        </traits>
+        <description>� Une créature blessée par le contact de la banshie et qui n’est pas encore effrayée doit effectuer un jet de Volonté DD 38 (DD 43 si l’attaque était un coup critique)� Si la créature rate son jet de sauvegarde, elle est effrayée 2 ; en cas d’échec critique, la créature tremble également de terreur et elle est étourdie 4� Si la créature est protégée de la terreur par un sort ou un objet magique, le contact de la banshie tente d’abord de contrer l’effet de protection avec l’effet d’un sort *dissipation de la magie* de rang 9�</description>
+      </special>
+      <special>
+        <name>Ondulation spectrale</name>
+        <description>Quand une banshie Marche rapidement sur au moins 3 m, elle est masquée jusqu’au début de son prochain tour�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Plainte</name>
+        <traits>
+          <trait>audible</trait>
+          <trait>concentration</trait>
+          <trait>mort</trait>
+          <trait>occulte</trait>
+        </traits>
+        <description>� La banshie émet une* plainte des damnés* (DD 38) qui glace le sang de ceux qui l’entendent� Cette Plainte prend le pas sur le *silence* ou les effets similaires de rang 5 ou inférieurs� La banshie peut aussi utiliser Plainte comme une activité à trois-actions pour ignorer de tels effets de rang 8 ou inférieurs� La Plainte de la banshie résonne pendant 1 round et toute créature qui pénètre dans la zone d’effet pendant ce temps doit effectuer un jet de sauvegarde� Une créature ne peut être affectée qu’une seule fois par la même Plainte� La banshie ne peut utiliser sa Plainte avant 1d4 rounds�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

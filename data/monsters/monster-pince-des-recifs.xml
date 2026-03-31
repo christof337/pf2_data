@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>PINCE DES RÉCIFS</name>
+    <type>CRÉATURE</type>
+    <level>1</level>
+    <creatureTraits>
+      <trait type="size">PETITE</trait>
+      <trait>ABERRATION</trait>
+      <trait>AQUATIQUE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+4</bonus>
+      </skill>
+    </skills>
+    <armorClass>20</armorClass>
+    <saves REF="+9" FOR="+7" WIL="+4"/>
+    <health>17</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>pince</name>
+        <bonus>+9</bonus>
+        <traits>
+          <trait>finesse</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+1</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Constriction</name>
+        <description>1d6 contondants, DD 17 (p� 359)</description>
+      </special>
+      <special>
+        <name>Venin de pince des récifs</name>
+        <traits>
+          <trait>poison</trait>
+        </traits>
+        <description>; **Jet de sauvegarde** Vigueur DD 17 ; **Durée maximale** 4 rounds ; **Stade 1** 1d6 dégâts de poison et affaibli 1 (1 round), **Stade 2** 1d6 dégâts de poison et affaibli 2 (1 round)�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>VER DES CAVERNES</name>
+    <type>CRÉATURE</type>
+    <level>13</level>
+    <creatureTraits>
+      <trait type="size">GIGANTESQUE</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+20</bonus>
+      <senses>
+        <sens>
+          <name>perception des vibrations</name>
+          <precision>imprécis</precision>
+          <range>30 m</range>
+        </sens>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <interactionAbilities>
+      <special>
+        <name>Compétence</name>
+        <description>Athlétisme +30</description>
+      </special>
+      <special>
+        <name>For</name>
+        <description>+9, **Dex** –1, **Con** +7, **Int** –5, **Sag** –1, **Cha** –1</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>32</armorClass>
+    <saves REF="+21" FOR="+28" WIL="+21"/>
+    <health>270</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special>
+        <name>DANS LE VENTRE DE LA BÊTE</name>
+        <description>Une aventure n’est pas nécessairement terminée simplement parce que votre groupe d’aventuriers a été gobé par un ver géant� Il se peut que les PJ trouvent un objet non digéré qui les aide à survivre à cet environnement inhospitalier, ou que le ver les régurgite dans une lointaine caverne� Quels que soient les détails, vous pouvez vous inspirer des légendes et des fictions populaires pour créer votre propre aventure « dans le ventre de la bête », si le hasard fait que vos héros se trouvent contraints d’explorer les entrailles du monstre�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

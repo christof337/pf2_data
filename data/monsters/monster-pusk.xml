@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>PUSK</name>
+    <type>CRÉATURE</type>
+    <level>2</level>
+    <creatureTraits>
+      <trait type="size">PETITE</trait>
+      <trait>DÉMON</trait>
+      <trait>FIÉLON</trait>
+      <trait>IMPIE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+6</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+6</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+6</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+4, **Dex** +0,** Con** +4, **Int** −3,** Sag** +0,** Cha** +0</description>
+      </special>
+      <special>
+        <name>Paresse</name>
+        <description>Quand un pusk récupère ses actions, lancez 1d4� Le pusk récupère ce nombre d’actions pour le tour (jusqu’à un maximum de 3, ou 2 si le pusk est un sbire)� Des effets comme l’état ralenti peuvent réduire encore plus leur nombre d’actions�</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>17</armorClass>
+    <saves/>
+    <health>36</health>
+    <weaknesses>
+      <weakness>
+        <name>fer froid</name>
+        <value>3</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+10</bonus>
+        <traits>
+          <trait>impie</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8+4</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+10</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>impie</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+4</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="divine" DD="16">
+      <rank rank="3">
+        <spells>
+          <spell>lenteur</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special>
+        <name>Rituel</name>
+        <description>DD 16 ; *pacte démoniaque* (p� 320)</description>
+      </special>
+      <special>
+        <name>Critiques vicieux</name>
+        <description>Un pusk tire profit de toute faiblesse qu’il découvre� Chaque fois qu’un pusk inflige un coup critique avec sa Frappe de griffes, la cible subit en plus 1d6 dégâts de saignement persistants�</description>
+      </special>
+      <special type="activity" actions="3">
+        <name>Lacérations frénétiques</name>
+        <description>Le pusk effectue trois Frappes de griffes contre la même créature, chacune avec un malus de −2� Le malus d’attaques multiples du pusk n’augmente qu’après avoir effectué ses trois attaques� Il subit l’état maladroit 2 jusqu’au début de son prochain tour�</description>
+      </special>
+      <special>
+        <name>QU’EST‑CE QU’UN PÉCHÉ ?</name>
+        <description>Certains considèrent qu’il y a sept catégories de péchés : l’envie, la gourmandise, l’avarice, la luxure, l’orgueil, la paresse et la colère� Bien que ces péchés soient incarnés par les démons les plus puissants et nombreux, il existe bien plus que sept types de démons� Tout acte de cruauté ou de destruction dont peut se réjouir un mortel au détriment des autres constitue un péché, et n’importe lequel de ces actes peut donner naissance à un démon formé à partir d’une âme�</description>
+      </special>
+      <special>
+        <name>PUSK PUSK</name>
+        <description>FRANCK PONT - lhanselo@hotmail.fr - 202602/3379711/4016001 [[PAGE 74]]</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

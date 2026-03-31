@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GÉANT DES MARAIS</name>
+    <type>CRÉATURE</type>
+    <level>8</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>AMPHIBIE</trait>
+      <trait>EAU</trait>
+      <trait>GÉANT</trait>
+      <trait>HUMANOÏDE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+16</bonus>
+      <senses>
+        <sens>
+          <name>vision nocturne</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+18</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+15</bonus>
+      </skill>
+      <skill>
+        <name>Nature</name>
+        <bonus>+15</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+17</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+6" DEX="+3" CON="+4" INT="+0" WIS="+3" CHA="+1"/>
+    <armorClass>27</armorClass>
+    <saves REF="+13" FOR="+18" WIL="+17"/>
+    <health>150</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>*gaffe*</name>
+        <bonus>+20</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+          <trait>croc-en-jambe</trait>
+          <trait>magique</trait>
+          <trait>polyvalent P</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+14</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>poing</name>
+        <bonus>+20</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+14</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>crachat</name>
+        <bonus>+20</bonus>
+        <traits>
+          <trait>eau</trait>
+          <trait>portée 18 m</trait>
+          <trait>primordiale</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>5d6</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="occult" DD="23">
+      <rank rank="5">
+        <spells>
+          <spell>malédiction du marin</spell>
+        </spells>
+      </rank>
+      <rank rank="2">
+        <spells>
+          <spell>augure, brume</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Noyer la proie</name>
+        <traits>
+          <trait>eau</trait>
+          <trait>primordiale</trait>
+        </traits>
+        <description>; **Conditions.** Une créature est à terre et à portée d’allonge du géant des marais ;</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Torsion du crochet</name>
+        <description>Le géant effectue une Frappe au corps à corps avec sa gaffe� S’il la réussit, il fait tourner sa gaffe puis tire d’un coup sec pour projeter la cible à terre et lui infliger une horrible blessure qui lui cause 2d6 dégâts de saignement persistants�</description>
+      </special>
+      <special>
+        <name>Géant des pierres</name>
+        <description>Les géants des pierres sont des gardiens de troupeaux et des artistes stoïques et solitaires, dotés d’une histoire riche et d’un ensemble varié de traditions. Ils vivent au fond de grottes dans les hautes montagnes escarpées où leur peau grise leur permet de se fondre dans leur environnement et de passer inaperçus malgré leur taille qui dépasse les 3,5 m. Les</description>
+      </special>
+      <special>
+        <name>GAFFES</name>
+        <description>De nombreux géants des marais combattent avec d’immenses gaffes, de longs bâtons en bois dotés d’une pointe en métal courbe à une extrémité� Là où les pêcheurs humanoïdes les utilisent pour sortir des poissons de l’eau, les géants s’en servent pour noyer leurs proies� Une gaffe est une arme de guerre commune du groupe des gourdins� Elle inflige 1d6 dégâts contondants et a un Encombrement de 1� Elle nécessite une main libre pour être utilisée et possède les traits Croc-en-jambe et polyvalent P� Les gaffes sont disponibles dans n’importe quel lieu où l’on trouve des pêcheurs et coûtent 1 po�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

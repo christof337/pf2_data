@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>AIGUILLONNEUR TOXIQUE</name>
+    <type>CRÉATURE</type>
+    <level>9</level>
+    <creatureTraits>
+      <trait type="size"/>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <interactionAbilities>
+      <special>
+        <name>Compétence</name>
+        <description>Athlétisme +22</description>
+      </special>
+      <special>
+        <name>For</name>
+        <description>+6, **Dex** +4, **Con** +3, **Int** –5, **Sag** +0, **Cha** –5</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>27</armorClass>
+    <saves REF="+19" FOR="+20" WIL="+15"/>
+    <health>150</health>
+    <immunities>
+      <immunity>attaques non létales</immunity>
+      <immunity>condamné</immunity>
+      <immunity>drainé</immunity>
+      <immunity>effets de mort</immunity>
+      <immunity>esprit</immunity>
+      <immunity>fatigué</immunity>
+      <immunity>guérison</immunity>
+      <immunity>inconscient</immunity>
+      <immunity>malade</immunity>
+      <immunity>maladie</immunity>
+      <immunity>mental</immunity>
+      <immunity>néant</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>saignement</immunity>
+      <immunity>vitalité</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>seringue</name>
+        <bonus>+22</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d10+6</amount>
+            <damageType>per- forants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>bombe</name>
+        <bonus>+20</bonus>
+        <traits>
+          <trait>jet 6 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages/>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Création de bombe</name>
+        <traits>
+          <trait>manipulation</trait>
+        </traits>
+        <description>� L’aiguillonneur remplit une fiole vide d’un de ses compartiments alchimiques pour créer une bombe puis effectue une Frappe de bombe� Lancez 1d6 sur la liste des compartiments alchimiques ci-dessus� Sur un résultat de 1–5, la bombe inflige 3d10 dégâts et 3 dégâts d’éclabous- sure, du type correspondant à celui du compartiment ; à la place, sur un résultat de 1, vous pouvez choisir de créer une bombe alchimique de niveau 11 ou inférieur qui inflige le même type de dégâts, comme une fiole d’acide� Sur un résultat de 6, il génère une bombe de maladie qui expose la cible et toutes les créatures dans le rayon d’éclaboussure à l’effet de maladie ; les créatures qui ne sont touchées que par les éclabous- sures bénéficient d’un bonus de circonstances de +2 à leur jet de Vigueur�</description>
+      </special>
+      <special>
+        <name>Injection alchimique</name>
+        <description>Quand un aiguillonneur toxique touche une créature avec une Frappe de seringue, lancez 1d6 sur la liste des compartiments alchimiques pour déterminer l’effet supplémentaire de l’attaque� La seringue inflige 2d6 dégâts supplémentaires du type approprié (ou expose la cible à l’effet de maladie, en fonction du résultat)�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

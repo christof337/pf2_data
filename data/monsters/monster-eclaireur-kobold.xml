@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>ÉCLAIREUR KOBOLD</name>
+    <type>CRÉATURE</type>
+    <level>1</level>
+    <creatureTraits>
+      <trait type="size">PETITE</trait>
+      <trait>HUMANOÏDE</trait>
+      <trait>KOBOLD</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>commun</language>
+      <language>sakvroth</language>
+    </languages>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Artisanat</name>
+        <bonus>+3</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Nature</name>
+        <bonus>+6</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+6</bonus>
+      </skill>
+    </skills>
+    <armorClass>16</armorClass>
+    <saves REF="+9" FOR="+5" WIL="+6" saveSpecial="bonus de circonstances de +1 à ses défenses contre les pièges"/>
+    <health>16</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>épée courte,</name>
+        <bonus>+9</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+          <trait>polyvalent T</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>arbalète</name>
+        <bonus>+9</bonus>
+        <traits>
+          <trait>facteur de portée 36 m</trait>
+          <trait>rechargement 1</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Attaque sournoise</name>
+        <description>L’éclaireur kobold inflige 1d6 dégâts de précision supplémentaires aux créatures prises par surprise�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Détaler</name>
+        <description>Comme pour le guerrier kobold�</description>
+      </special>
+      <special type="activity" actions="3">
+        <name>Fabriquer un piège</name>
+        <traits>
+          <trait>manipulation</trait>
+        </traits>
+        <description>� L’éclaireur kobold fabrique un piège rudimentaire sur une case adjacente� Il doit être posé sur une surface telle que le sol, un mur ou le pla- fond� Le piège se déclenche dès qu’une créature entre dans une case qui lui est adjacente� La créature subit 1d6 dégâts perforants et 1 dégât de saignement persistant (jet de Réflexes basique DD 16)� Le piège est détruit une fois déclenché ou au bout de 1 h, selon ce qui se produit en premier� L’éclaireur porte généralement sur lui suffisamment de matériaux bruts pour fabriquer un piège�</description>
+      </special>
+      <special>
+        <name>Mage des cavernes kobold</name>
+        <description>Éclos d’œufs ayant absorbé de grandes quantités d’énergie liée à la terre primor‑ diale, les mages des cavernes kobolds naissent avec leurs pouvoirs plus qu’ils ne les apprennent. Bien qu’il existe de nombreux élémentaires et même des caractéristiques environnementales naturelles pouvant donner naissance à des mages des cavernes, la plupart s’apparentent aux nymphes de la terre, appelées des lampades, vivant dans des cavernes. Ces fées solitaires et capricieuses sont aussi enthousiastes à l’idée de recevoir la compagnie d’une tribu kobolde que les kobolds le sont vis‑à‑vis de la protection qu’elles leur offrent en retour.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

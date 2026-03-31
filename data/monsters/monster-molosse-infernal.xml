@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>MOLOSSE INFERNAL</name>
+    <type>CRÉATURE</type>
+    <level>3</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>BÊTE</trait>
+      <trait>FEU</trait>
+      <trait>FIÉLON</trait>
+      <trait>IMPIE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+9</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>18 m</range>
+        </sens>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+9</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+9</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+4, **Dex **+3, **Con **+2, **Int **–2, **Sag **+2, **Cha **–2</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>17</armorClass>
+    <saves/>
+    <health>40</health>
+    <weaknesses>
+      <weakness>
+        <name>froid</name>
+        <value>5</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+13</bonus>
+        <traits>
+          <trait>impie</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8+4</amount>
+            <damageType>perforants</damageType>
+          </damage>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>de feu</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Attaque en meute</name>
+        <description>Les Frappes du molosse infernal infligent 1d4 dégâts supplémentaires aux créatures à portée d’au moins deux de ses alliés�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Souffle de feu infernal</name>
+        <traits>
+          <trait>divine</trait>
+          <trait>feu</trait>
+          <trait>impie</trait>
+        </traits>
+        <description>� Le molosse infernal souffle des flammes qui infligent 4d6 dégâts de feu à toutes les créatures dans un cône de 4,5 m (jet de Réflexes basique DD 19)� Le molosse infernal ne peut utiliser une nouvelle fois son Souffle avant 1d4 rounds� Si le molosse devait subir des dégâts de feu ou être ciblé par un effet de feu, cela recharge son Souffle de feu infernal�</description>
+      </special>
+      <special>
+        <name>Molosse infernal supérieur</name>
+        <description>On pense que les molosses infernaux supérieurs sont élevés par les rois des Enfers dans de vastes chenils. Ces molosses sont les gardes et les chiens de chasse préférés de puissants fiélons et, plus rarement, de mortels qui les vénèrent et ont gagné leurs faveurs.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

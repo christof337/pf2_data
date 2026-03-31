@@ -97,11 +97,12 @@ def parse_monster_md(content):
     main_section = content.split("# FLUX PRINCIPAL (STATS/BASE)")[1]
     
     # 2. Nom, Niveau et Traits globaux
-    header_match = re.search(r'([A-ZÀ-Ÿ\s\-]+?)\s+(CRÉATURE)\s+(\d+)', main_section)
+    # Note : le niveau peut être négatif (ex: CRÉATURE − 1) avec tiret spécial
+    header_match = re.search(r'([A-ZÀ-Ÿ\s\-]+?)\s+(CRÉATURE)\s+([−\-]?\s*\d+)', main_section)
     if header_match:
         monster_data['name'] = clean_text(header_match.group(1))
         monster_data['type'] = header_match.group(2).strip()
-        monster_data['level'] = header_match.group(3).strip()
+        monster_data['level'] = header_match.group(3).strip().replace('−', '-').replace(' ', '')
         
         traits_match = re.search(r'(TRÈS PETITE|PETITE|MOYENNE|GRANDE|TRÈS GRANDE|GIGANTESQUE)\s+([A-ZÀ-Ÿ\s]+)(?=\n|Perception)', main_section)
         if traits_match:

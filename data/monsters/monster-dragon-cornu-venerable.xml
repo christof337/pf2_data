@@ -1,0 +1,186 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>DRAGON CORNU VÉNÉRABLE</name>
+    <type>CRÉATURE</type>
+    <level>17</level>
+    <creatureTraits>
+      <trait type="size">GIGANTESQUE</trait>
+      <trait>AMPHIBIE</trait>
+      <trait>DRAGON</trait>
+      <trait>PRIMORDIALE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+30</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>18 m</range>
+        </sens>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+25</bonus>
+      </skill>
+      <skill>
+        <name>Arcanes</name>
+        <bonus>+32</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+30</bonus>
+      </skill>
+      <skill>
+        <name>Connaissances forestières</name>
+        <bonus>+31</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+31</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+29</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+27</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+31</bonus>
+      </skill>
+      <skill>
+        <name>Nature</name>
+        <bonus>+28</bonus>
+      </skill>
+      <skill>
+        <name>Occultisme</name>
+        <bonus>+34</bonus>
+      </skill>
+    </skills>
+    <armorClass>41</armorClass>
+    <saves REF="+29" FOR="+30" WIL="+32" saveSpecial="bonus de statut de +1 à tous les jets de sauvegarde contre la magie"/>
+    <health>315</health>
+    <immunities>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>sommeil</immunity>
+    </immunities>
+    <speeds speedSpecial="Passage en forêt, Déplacement sans trace">
+      <speed>15 m</speed>
+      <speed type="fly">60 m</speed>
+      <speed type="swim">15 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+33</bonus>
+        <traits>
+          <trait>allonge 6 m</trait>
+          <trait>magique</trait>
+          <trait>poison</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d12+15</amount>
+            <damageType>perforants</damageType>
+          </damage>
+          <damage>
+            <amount>4d4</amount>
+            <damageType>de poison</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+33</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 4,5 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d10+15</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>queue</name>
+        <bonus>+31</bonus>
+        <traits>
+          <trait>allonge 7,5 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d10+13</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>corne</name>
+        <bonus>+31</bonus>
+        <traits>
+          <trait>allonge 6 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d10+13</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Sorts innés primordiaux</name>
+        <description>* *DD 39 ; **6**e* domination* ; **4**e *charme *(à volonté),* suggestion* ; **2**e* enche‑ vêtrement végétal *(à volonté)</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Charge de l’empaleur</name>
+        <description>Comme le jeune dragon cornu�</description>
+      </special>
+      <special>
+        <name>Déplacement sans trace</name>
+        <description>Comme le dragon cornu adulte�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Frénésie draconique</name>
+        <description>Comme le jeune dragon cornu�</description>
+      </special>
+      <special>
+        <name>Impulsion draconique</name>
+        <description>Comme le jeune dragon cornu�</description>
+      </special>
+      <special>
+        <name>Passage en forêt</name>
+        <description>Comme le jeune dragon cornu�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Souffle empoisonné</name>
+        <traits>
+          <trait>poison</trait>
+          <trait>primordiale</trait>
+        </traits>
+        <description>Comme le jeune dragon cornu, mais cône de 18 m, 18d6 dégâts de poison et DD 37�</description>
+      </special>
+      <special>
+        <name>Dragon diabolique</name>
+        <description>Selon certains théologiens, les Enfers seraient une entité vivante à part entière. D’après eux, les dragons diaboliques seraient des extensions du plan envoyées pour exécuter sa volonté. Qu’ils soient effectivement une partie intégrante des Enfers ou simplement les âmes réincarnées de dragons envoyés dans ce plan à leur mort, ils n’en demeurent pas moins puissants, astucieux et tyranniques. Le but de chaque dragon diabolique est de favoriser les plans des Enfers, mais la tactique adoptée peut varier. Quels que soient leurs objectifs, ces créatures font toujours preuve d’un calme inquiétant face aux étrangers.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

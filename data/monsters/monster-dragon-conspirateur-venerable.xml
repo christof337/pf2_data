@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>DRAGON CONSPIRATEUR VÉNÉRABLE</name>
+    <type>CRÉATURE</type>
+    <level>17</level>
+    <creatureTraits>
+      <trait type="size">TRÈS GRANDE</trait>
+      <trait>DRAGON</trait>
+      <trait>OCCULTE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+30</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+30</bonus>
+      </skill>
+      <skill>
+        <name>Connaissances (région ou communauté)</name>
+        <bonus>+31</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+33</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+30</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+35</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+33</bonus>
+      </skill>
+      <skill>
+        <name>Occultisme</name>
+        <bonus>+31</bonus>
+      </skill>
+      <skill>
+        <name>Représentation</name>
+        <bonus>+35</bonus>
+      </skill>
+      <skill>
+        <name>Société</name>
+        <bonus>+31</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+9" DEX="+5" CON="+6" INT="+6" WIS="+7" CHA="+8"/>
+    <armorClass>40</armorClass>
+    <saves REF="+28" FOR="+27" WIL="+32" saveSpecial="bonus de statut de +2 à tous les jets de sauvegarde contre la magie occulte"/>
+    <health>345</health>
+    <immunities>
+      <immunity>contrôlé</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>sommeil</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+32</bonus>
+        <traits>
+          <trait>allonge 4,5 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d8+17</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+32</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 3 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d6+17</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>queue</name>
+        <bonus>+30</bonus>
+        <traits>
+          <trait>allonge 6 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d10+17</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>attaque mentale</name>
+        <bonus>+31</bonus>
+        <traits>
+          <trait>mental</trait>
+          <trait>portée 30 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>6d6+6</amount>
+            <damageType>mentaux</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Sorts innés occultes</name>
+        <description>* *DD 41 ; **9**e* domination*,* lecture des pensées *(à volonté),* mémoire réécrite, sonde mentale *; **4**e* charme *(à volonté),* mémoire réécrite *(à volonté)</description>
+      </special>
+      <special>
+        <name>Attaque sournoise</name>
+        <description>Les Frappes du dragon infligent 3d6 dégâts de précision supplémentaires aux créatures prises par surprise�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Explosion de déguisement</name>
+        <traits>
+          <trait>occulte</trait>
+        </traits>
+        <description>Comme le jeune dragon conspirateur, mais 18d6 dégâts contondants et DD 39�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Frénésie draconique</name>
+        <description>Comme le jeune dragon conspirateur�</description>
+      </special>
+      <special>
+        <name>Impulsion draconique</name>
+        <description>Comme le jeune dragon conspirateur�</description>
+      </special>
+      <special>
+        <name>Invocation de déguisement</name>
+        <traits>
+          <trait>manipulation</trait>
+          <trait>métamorphose</trait>
+          <trait>occulte</trait>
+        </traits>
+        <description>Comme le jeune dra- gon conspirateur�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Souffle de fumée</name>
+        <traits>
+          <trait>occulte</trait>
+          <trait>poison</trait>
+        </traits>
+        <description>Comme le jeune dragon conspirateur, mais dans un cône de 18 m, 16d6 dégâts de poison et DD 39�</description>
+      </special>
+      <special type="activity" actions="3">
+        <name>Transformation accélérée</name>
+        <description>Comme le jeune dragon conspirateur�</description>
+      </special>
+      <special>
+        <name>Dragon cornu</name>
+        <description>La magie qui imprègne les dragons primordiaux peut faire apparaître chez eux des traits plus bestiaux qui définissent alors d’autres types draconiques. On compte parmi ces signes distinctifs les deux larges cornes sur le museau du dragon cornu. Si sa carrure impressionnante, sa couleur naturelle et ses remarquables écailles striées sont toutes exceptionnelles à leur façon, ce sont tout d’abord ces cornes qui frappent généralement l’observateur. Il les utilise pour empaler sa proie dans une démonstration de puissance aussi rapide que brutale. Contrairement à ce que son apparence bestiale pourrait faire penser, le dragon cornu est généralement contemplatif et accorde la plus haute importance au savoir et à l’autodiscipline. C’est pourquoi il se montre traditionnellement plus ouvert que ses congénères à la discussion avec les étrangers.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

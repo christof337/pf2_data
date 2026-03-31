@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>MAIN RAMPANTE GÉANTE</name>
+    <type>CRÉATURE</type>
+    <level>5</level>
+    <creatureTraits>
+      <trait type="size"/>
+    </creatureTraits>
+    <perception>
+      <bonus>+12</bonus>
+      <senses>
+        <sens>
+          <name>perception de la vie</name>
+          <range>9 m</range>
+          <source>p� 360</source>
+        </sens>
+        <sens>
+          <name>perception des vibrations</name>
+          <precision>imprécis</precision>
+          <range>9 m</range>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+11</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+12</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+4, **Dex **+2, **Con **+4,** Int **−4,** Sag **+3, **Cha **+0</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>22</armorClass>
+    <saves/>
+    <health>75</health>
+    <immunities>
+      <immunity>saignement</immunity>
+      <immunity>effets de mort</immunity>
+      <immunity>maladie</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>inconscient</immunity>
+      <immunity>visuel</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special type="reaction">
+        <name>Éruption de pus</name>
+        <trigger>La main rampante géante subit des dégâts perforants ou tranchants ;</trigger>
+        <effect>Une créature choisie au hasard adjacente à la main rampante géante est aspergée de pus immonde infligeant 4d6 dégâts de néant� La créature affectée doit effectuer un jet de Réflexes DD 21�</effect>
+      </special>
+      <special>
+        <name>Succès critique</name>
+        <description>La créature ne subit pas de dégât�</description>
+      </special>
+      <special>
+        <name>Succès</name>
+        <description>La créature subit la moitié des dégâts et est malade 1�</description>
+      </special>
+      <special>
+        <name>Échec</name>
+        <description>La créature subit la totalité des dégâts et est malade 2�</description>
+      </special>
+      <special>
+        <name>Échec critique</name>
+        <description>La créature subit le double de dégâts et est malade 3�</description>
+      </special>
+      <special>
+        <name>Vitesse</name>
+        <description>6 m</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>griffes +15, **Dégâts** 2d6+7 tranchants plus Empoignade (p� 359)</description>
+      </special>
+      <special>
+        <name>Proie marquée</name>
+        <description>Comme la main rampante�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

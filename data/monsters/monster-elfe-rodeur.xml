@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>ELFE RÔDEUR</name>
+    <type>CRÉATURE</type>
+    <level>1</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>ELFE</trait>
+      <trait>HUMANOÏDE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <interactionAbilities>
+      <special>
+        <name>Langues</name>
+        <description>commun, elfique</description>
+      </special>
+      <special>
+        <name>Compétences</name>
+        <description>Acrobaties +7, Athlétisme +3, Diplomatie +3, Discrétion +7, Nature +6, Survie +6</description>
+      </special>
+      <special>
+        <name>For</name>
+        <description>+1, **Dex **+4, **Con **+1, **Int **+3, **Sag **+3, **Cha **+1</description>
+      </special>
+      <special>
+        <name>Objets</name>
+        <description>dague, arc court (20 flèches)</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>16</armorClass>
+    <saves/>
+    <health>17</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>dague</name>
+        <bonus>+9</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+          <trait>polyvalent T</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+2</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>arc court</name>
+        <bonus>+9</bonus>
+        <traits>
+          <trait>facteur de portée 18 m</trait>
+          <trait>mortel d8</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+2</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>dague</name>
+        <bonus>+9</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>jet 3 m</trait>
+          <trait>polyvalent T</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+2</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Déplacement sans entrave</name>
+        <description>L’elfe rôdeur ignore les terrains difficiles�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Double tir</name>
+        <description>L’elfe rôdeur effectue deux Frappes à l’arc court en ciblant deux créatures dif- férentes dans le premier facteur de portée de son arme� Les deux Frappes utilisent le malus d’attaques multiples actuel de l’elfe mais chacune subit un malus de −2�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Pas elfique</name>
+        <description>L’elfe Fait deux pas�</description>
+      </special>
+      <special>
+        <name>Aiuvarin élémentaliste</name>
+        <description>Plus communément appelés demi‑elfes, les aiuvarins ont souvent du mal à trouver leur place dans la société. Aussi, beaucoup se concentrent plutôt sur leurs propres objectifs, comme l’étude de la magie et des incantations.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

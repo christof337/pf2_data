@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>HOMONCULE</name>
+    <type>CRÉATURE</type>
+    <level>0</level>
+    <creatureTraits>
+      <trait type="size">TRÈS PETITE</trait>
+      <trait>CRÉATURE</trait>
+      <trait>ARTIFICIELLE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>commun (incapable de parler)</language>
+      <langSpecial>lien du maître</langSpecial>
+    </languages>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+5</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+5</bonus>
+      </skill>
+    </skills>
+    <armorClass>17</armorClass>
+    <saves REF="+7" FOR="+2" WIL="+3"/>
+    <health>17</health>
+    <immunities>
+      <immunity>attaques non létales</immunity>
+      <immunity>condamné</immunity>
+      <immunity>drainé</immunity>
+      <immunity>effets de mort</immunity>
+      <immunity>esprit</immunity>
+      <immunity>fatigué</immunity>
+      <immunity>guérison</immunity>
+      <immunity>inconscient</immunity>
+      <immunity>malade</immunity>
+      <immunity>maladie</immunity>
+      <immunity>néant</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>poi- son</immunity>
+      <immunity>saignement</immunity>
+      <immunity>vitalité</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+7</bonus>
+        <traits>
+          <trait>allonge 0 m</trait>
+          <trait>finesse</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4</amount>
+            <damageType>per- forants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Poison de l’homoncule</name>
+        <traits>
+          <trait>poison</trait>
+        </traits>
+        <description>� Un homoncule possède une dose de poison dans un réservoir situé dans sa tête� Une fois cette dose utilisée, il peut remplir de poison le réservoir par une action Interagir ; **Jet de sauvegarde** Vigueur DD 15 ; **Durée maximale** 6 rounds ; **Stade 1** 1d6 poison et affaibli 1 (1 round)�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

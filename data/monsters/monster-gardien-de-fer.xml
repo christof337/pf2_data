@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GARDIEN DE FER</name>
+    <type>CRÉATURE</type>
+    <level>13</level>
+    <creatureTraits>
+      <trait type="size"/>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <armorClass>33</armorClass>
+    <saves/>
+    <health>190</health>
+    <immunities>
+      <immunity>attaques non létales</immunity>
+      <immunity>condamné</immunity>
+      <immunity>drainé</immunity>
+      <immunity>effets de mort</immunity>
+      <immunity>esprit</immunity>
+      <immunity>fatigué</immunity>
+      <immunity>feu</immunity>
+      <immunity>guérison</immunity>
+      <immunity>inconscient</immunity>
+      <immunity>malade</immunity>
+      <immunity>maladie</immunity>
+      <immunity>mental</immunity>
+      <immunity>néant</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>saignement</immunity>
+      <immunity>vitalité</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>poing</name>
+        <bonus>+28</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d10+12</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Marche inexorable</name>
+        <description>Le gardien de fer Marche rapidement jusqu’à sa Vitesse maxi- male en repoussant toute créature dans l’espace de laquelle il pénètre et en leur infligeant des dégâts si elles tentent de l’arrêter� Une créature peut tenter de lui bloquer le chemin en réussissant un jet de Vigueur DD 37� Sur un succès cri- tique, la créature qui résiste ne subit aucun dégât ; sinon, elle subit des dégâts comme si elle avait été frappée par le poing du gardien de fer�</description>
+      </special>
+      <special>
+        <name>Poison du gardien de fer</name>
+        <traits>
+          <trait>poison</trait>
+        </traits>
+        <description>� L’intensité drainé qu’inflige ce poison dimi- nue de 1 par heure ; **Jet de sauvegarde** Vigueur DD 33 ; **Durée maximale** 4 rounds ; **Stade 1** 2d6 poison et drainé 1 (1 round) ; **Stade 2** 4d6 poison et drainé 2 (1 round) ; **Stade 3** 8d6 poison et drainé 3 (1 round)</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Souffle empoisonné</name>
+        <traits>
+          <trait>arcanique</trait>
+          <trait>poison</trait>
+        </traits>
+        <description>� Le gardien de fer exhale un gaz empoisonné dans une explosion de 3 m centrée sur l’un des angles d’une des cases qu’il occupe� Le gaz persiste jusqu’au début de son prochain tour� Toute créature dans la zone (ou qui y pénètre) est exposée au poison du gardien de fer� Le gardien ne peut plus utiliser Souffle empoisonné pendant 1d4 rounds�</description>
+      </special>
+      <special>
+        <name>FERRAILLE</name>
+        <description>Un gardien de fer peut être fondu pour récupérer la matière première ou vendu à des géants du feu pour qu’ils en fassent une armure pour une créature de Grande taille� [[PAGE 167]]</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>PUKWUDGIE</name>
+    <type>CRÉATURE</type>
+    <level>7</level>
+    <creatureTraits>
+      <trait type="size">PETITE</trait>
+      <trait>FÉE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>commun</language>
+      <language>elfique</language>
+      <language>féerique</language>
+      <language>gnomien</language>
+    </languages>
+    <skills>
+      <skill>
+        <name>Artisanat</name>
+        <bonus>+15</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+17</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+14</bonus>
+      </skill>
+      <skill>
+        <name>Larcin</name>
+        <bonus>+15</bonus>
+      </skill>
+      <skill>
+        <name>Médecine</name>
+        <bonus>+15</bonus>
+      </skill>
+      <skill>
+        <name>Nature</name>
+        <bonus>+17</bonus>
+      </skill>
+    </skills>
+    <armorClass>25</armorClass>
+    <saves REF="+15" FOR="+12" WIL="+17"/>
+    <health>100</health>
+    <weaknesses>
+      <weakness>
+        <name>fer froid</name>
+        <value>10</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>*hachette*</name>
+        <bonus>+17</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>balayage</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+10</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>*hachette*</name>
+        <bonus>+19</bonus>
+        <traits>
+          <trait>jet 3 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+10</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>arc court</name>
+        <bonus>+18</bonus>
+        <traits>
+          <trait>facteur de portée 18 m</trait>
+          <trait>mortel d10</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+6</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Sorts innés primordiaux</name>
+        <description>* *DD 25, attaque +17 ; **4**e* déplacement sans entrave, mirage *; **3**e* mur d’épines *; **2**e* invisibilité *(à volonté, soi uniquement)</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Changement de forme</name>
+        <description>(concentration, métamorphose, primor- diale)� Le pukwudgie prend l’apparence physique d’un porc-épic géant ou reprend sa forme d’origine (p� 358)� Sous sa forme de porc-épic, sa taille passe à Moyenne, il perd ses Frappes d’arme, mais gagne un Frappe de piquants (+18 pour 2d8+6 perforants plus 1d8 de poison persistants)�</description>
+      </special>
+      <special>
+        <name>Poison de pukwudgie</name>
+        <traits>
+          <trait>poison</trait>
+        </traits>
+        <description>; **Jet de sauvegarde** Vigueur DD 25 ; **Durée maximale** 6 rounds ;</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Stade 1</name>
+        <description>d6 dégâts de poison et stupéfié 1 (1 round) ; **Stade 2** 1d6 dégâts de poison et stupéfié 2 (1 round) ; **Stade 3** 1d6 dégâts de poison, confus et stupéfié 2 (1 round)</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

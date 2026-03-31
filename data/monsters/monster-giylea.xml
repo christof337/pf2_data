@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GIYLEA</name>
+    <type>CRÉATURE</type>
+    <level>16</level>
+    <creatureTraits>
+      <trait type="size">TRÈS GRANDE</trait>
+      <trait>ARCHON</trait>
+      <trait>CÉLESTE</trait>
+      <trait>SAINT</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <armorClass>41</armorClass>
+    <saves REF="+31" FOR="+26" WIL="+28" saveSpecial="bonus de statut +1 à tous les jets de sauvegarde contre la magie"/>
+    <health>230</health>
+    <weaknesses>
+      <weakness>
+        <name>impie</name>
+        <value>15</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>coup</name>
+        <bonus>+30</bonus>
+        <traits>
+          <trait>saint</trait>
+          <trait>magique) **Dégâts **3d12+14 contondants
+                                        plus 1d6 de feu
+                                      **À distance**
+                                           1
+                                             langue de flammes +33 (feu</trait>
+          <trait>sainte</trait>
+          <trait>magique</trait>
+          <trait>portée 9 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>7d6</amount>
+            <damageType>de feu</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="divine" DD="37" attack="+29">
+      <rank rank="9">
+        <spells>
+          <spell>détonation de la magie</spell>
+        </spells>
+      </rank>
+      <rank rank="8">
+        <spells>
+          <spell spellSpecial="à volonté">colère divine, tintement de vérité</spell>
+        </spells>
+      </rank>
+      <rank rank="7">
+        <spells>
+          <spell>conviction zélée, décret divin, immolation divine, œil‑éclaireur</spell>
+        </spells>
+      </rank>
+      <rank rank="8" constant="TRUE">
+        <spells>
+          <spell>discernement, langage universel, tintement de vérité</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Focaliser le regard</name>
+        <traits>
+          <trait>concentration</trait>
+          <trait>divine</trait>
+          <trait>mise hors de combat</trait>
+          <trait>visuel</trait>
+        </traits>
+        <description>� Le giylea regarde fixement une créature qu’il peut voir dans un rayon de 9 m� La cible effectue immédiatement un jet de Volonté DD 37 contre les yeux omniscients de l’archon� Si la créature est soumise à un effet magique qui la déguise ou modifie sa forme, le giylea tente de contrer cet effet de déguisement magique (contre +29, rang 8)� Une fois qu’elle a fait son jet de sauvegarde, la cible est immunisée contre le regard du giylea jusqu’au début du prochain tour de ce dernier�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Rayons enflammés</name>
+        <traits>
+          <trait>divine</trait>
+          <trait>feu</trait>
+          <trait>saint</trait>
+          <trait>esprit</trait>
+        </traits>
+        <description>� Le giylea se met à tourner furieusement sur lui-même, projetant une pluie de feu divin� Toutes les créatures dans une émanation de 18 m subissent 12d6 dégâts de feu et 5d6 dégâts d’esprit (jet de Réflexes basique DD 37)� Le doit alors attendre 1d4 rounds avant de pouvoir réutiliser ses Rayons enflammés�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

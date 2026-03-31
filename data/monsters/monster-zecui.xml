@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>ZÉCUI</name>
+    <type>CRÉATURE</type>
+    <level>6</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>ABERRATION</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <interactionAbilities>
+      <special>
+        <name>Langue</name>
+        <description>aklo</description>
+      </special>
+      <special>
+        <name>Compétences</name>
+        <description>Acrobaties +17, Artisanat +12, Athlétisme +15, Discrétion +17, Médecine +14</description>
+      </special>
+      <special>
+        <name>For</name>
+        <description>+3, **Dex** +5, **Con **+2, **Int **+0, **Sag **+2, **Cha **+0</description>
+      </special>
+      <special>
+        <name>Objets</name>
+        <description>épée courte (2)</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>23</armorClass>
+    <saves REF="+17" FOR="+14" WIL="+12"/>
+    <health>110</health>
+    <reactiveAbilities>
+      <special type="reaction">
+        <name>Préservation de proie</name>
+        <traits>
+          <trait>guérison</trait>
+          <trait>manipulation</trait>
+          <trait>occulte</trait>
+          <trait>vitalité</trait>
+        </traits>
+        <trigger>Une créa- ture vivante dans un rayon de 9 m est réduite à 0 point de vie ; **</trigger>
+        <effect>**Le zécui imprègne la créature ayant déclenché l’effet d’une forme de vitalité corrompue qui la plonge dans l’état inconscient au lieu de mourant� Tant que cette créature est inconsciente, l’énergie résiduelle transmise par le zécui tente de contrer tout sort de vitalité lancé pour tenter de soigner la créature, avec un modificateur de contre de +15�</effect>
+      </special>
+    </reactiveAbilities>
+    <speeds>
+      <speed>9 m</speed>
+      <speed type="burrow">6 m</speed>
+      <speed type="climb">6 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mandibules +15, **Dégâts** 2d8+7 perforants **Corps à corps** 1 épée courte</name>
+        <bonus>+17</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+          <trait>polyvalent T</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+7</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+17</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d4+7</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>À distance</name>
+        <description>crachat +17 (portée 9 m), **Effet ** cra- chat de mucus</description>
+      </special>
+      <special>
+        <name>Crachat de mucus</name>
+        <description>Une créature touchée par l’attaque de crachat d’un zécui se trouve collée à la surface la plus proche jusqu’à ce qu’elle réussisse à S’échapper (DD 25) ; elle est également couverte de mucus infesté de larves� Tant que la créature est immobilisée, elle est confrontée à une larve de zécui à la fin de chacun de ses tours�</description>
+      </special>
+      <special>
+        <name>Double estoc</name>
+        <description/>
+      </special>
+      <special type="activity" actions="1">
+        <name>Fréquence</name>
+        <description>1 fois/round ;</description>
+      </special>
+      <special>
+        <name>Larve de zécui</name>
+        <traits>
+          <trait>maladie</trait>
+        </traits>
+        <description>; **Jet de sauvegarde** Vigueur DD 25 ;</description>
+      </special>
+      <special>
+        <name>Stade 1</name>
+        <description>la larve déforme visiblement la peau de sa victime en se déplaçant, mais sans effet néfaste (1 jour) ; **Stade 2 **drainé 1 (1 jour) ; **Stade 3** drainé 2 (1 jour) ; **Stade 4** la victime est drainée 3 et contrôlée par la larve de zécui (1 jour) ;</description>
+      </special>
+      <special>
+        <name>Stade 5</name>
+        <description>la créature meurt et le zécui adulte peut en émerger grâce à l’action Interagir</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Renforcement de chitine</name>
+        <description>Le zécui modifie sa chitine de manière à ce qu’elle se présente comme une carapace métallique noire� Il gagne résistance 5 contre tous les dégâts (sauf les dégâts mentaux et d’esprit) jusqu’à ce qu’il utilise une action de déplacement�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

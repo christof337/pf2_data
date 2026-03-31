@@ -1,0 +1,215 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>VIDILETH</name>
+    <type>CRÉATURE</type>
+    <level>14</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>ABERRATION</trait>
+      <trait>AQUATIQUE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Arcanes</name>
+        <bonus>+27</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+24</bonus>
+      </skill>
+      <skill>
+        <name>Connaissances (n’importe quelle sous-catégo- rie)</name>
+        <bonus>+29</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+24</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+28</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+26</bonus>
+      </skill>
+      <skill>
+        <name>Occultisme</name>
+        <bonus>+29</bonus>
+      </skill>
+      <skill>
+        <name>Société</name>
+        <bonus>+27</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+6, **Dex **+6, **Con **+8, **Int **+7, **Sag **+5, **Cha **+6</description>
+      </special>
+      <special>
+        <name>Lumières engourdissantes</name>
+        <traits>
+          <trait>aura</trait>
+          <trait>lumière</trait>
+          <trait>visuel</trait>
+        </traits>
+        <description>9 m� Un vidileth éclaire l’espace qui l’entoure d’une lumière faible� Les créatures baignées par cette lumière effectuent un jet de Volonté DD 34 chaque round et, sur un échec, sombrent dans l’état stupéfié 1 (ou augmentent de 1 la valeur de l’état stupéfié causé par les Lumières engourdissantes, jusqu’à un maximum de 4)�</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>34</armorClass>
+    <saves REF="+22" FOR="+26" WIL="+24" saveSpecial="bonus de statut +2 à tous les jets de sauvegarde contre la magie"/>
+    <health>270</health>
+    <immunities>
+      <immunity>contrôlé</immunity>
+      <immunity>électricité</immunity>
+      <immunity>mental</immunity>
+    </immunities>
+    <speeds>
+      <speed>3 m</speed>
+      <speed type="swim">24 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>crocs</name>
+        <bonus>+28</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+          <trait>magique</trait>
+          <trait>polyvalent T</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d8+12</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+28</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 6 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d10+12</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>tentacule</name>
+        <bonus>+28</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 6 m</trait>
+          <trait>électricité</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>7d6</amount>
+            <damageType>d’élec- tricité</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="occult" DD="37">
+      <rank rank="9">
+        <spells>
+          <spell spellSpecial="à volonté">projection d’image</spell>
+        </spells>
+      </rank>
+      <rank rank="8">
+        <spells>
+          <spell spellSpecial="à volonté">scène illusoire , suggestion (×3)</spell>
+        </spells>
+      </rank>
+      <rank rank="7">
+        <spells>
+          <spell spellSpecial="à volonté">déguisement illusoire</spell>
+        </spells>
+      </rank>
+      <rank rank="6">
+        <spells>
+          <spell>domination (×3)</spell>
+        </spells>
+      </rank>
+      <rank rank="5">
+        <spells>
+          <spell spellSpecial="à volonté">communication à distance , mirage , objet illusoire , translocation (×3)</spell>
+        </spells>
+      </rank>
+      <rank rank="3">
+        <spells>
+          <spell spellSpecial="à volonté">hypnotiser , lecture des pensées , lévitation , respiration aquatique</spell>
+        </spells>
+      </rank>
+      <rank rank="5" constant="TRUE">
+        <spells>
+          <spell>langage universel</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special>
+        <name>Rituel</name>
+        <description>DD 37 ; *serment rituel* (5e)</description>
+      </special>
+      <special>
+        <name>Absorption de la mémoire</name>
+        <traits>
+          <trait>mental</trait>
+          <trait>occulte</trait>
+        </traits>
+        <description>� Quand un vidileth porte une Frappe de crocs, sa cible doit réussir un jet de Volonté DD 34 ou subir 3d6 dégâts mentaux� Le vidileth gagne une quantité de points de vie temporaires égale aux dégâts infligés, et il découvre certains souvenirs de la créature (au choix du MJ)�</description>
+      </special>
+      <special type="activity" actions="0">
+        <name>Changement de forme</name>
+        <description>(concentration, métamorphose, occulte) ; **Fréquence** 1 fois/round ;</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Déluge de tentacules</name>
+        <description>Le vidileth fait une Frappe de tentacule contre chaque créature à sa portée� Effectuez un seul jet d’attaque, puis déterminez une fois les dégâts pour toutes les cibles�</description>
+      </special>
+      <special>
+        <name>Lance mentale</name>
+        <traits>
+          <trait>malédiction</trait>
+          <trait>occulte</trait>
+        </traits>
+        <description>� Une créature touchée par les tentacules du vidileth doit réussir un jet de Volonté DD 34, ou être ralentie 1 en cas d’échec, ou ralentie 2 en cas d’échec critique� À la fin de chacun de ses tours, la victime réduit de 1 l’intensité de cet état�</description>
+      </special>
+      <special>
+        <name>Modeler la chair</name>
+        <traits>
+          <trait>malédiction</trait>
+          <trait>manipulation</trait>
+          <trait>occulte</trait>
+        </traits>
+        <description>�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Conditions</name>
+        <description>La dernière action d’un vidileth était une Frappe de griffes réussie ;</description>
+      </special>
+      <special>
+        <name>Suggestion retardée</name>
+        <traits>
+          <trait>occulte</trait>
+        </traits>
+        <description>� Quand un vidileth réussit à lancer le sort *domination* sur une créa- ture, le sort *suggestion* se déclenche à la fin de la durée du sort *domination*� Généralement, cette *suggestion* permet au vidileth de faire revenir sa cible à lui afin qu’il puisse à nouveau la soumettre à *domination*, mais il peut également lui donner d’autres ordres�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

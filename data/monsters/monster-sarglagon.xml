@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>SARGLAGON</name>
+    <type>CRÉATURE</type>
+    <level>8</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>AMPHIBIE</trait>
+      <trait>DIABLE</trait>
+      <trait>FIÉLON</trait>
+      <trait>IMPIE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+18</bonus>
+      <senses>
+        <sens>
+          <name>vision dans le noir supérieure</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <attributes STR="+6" DEX="+3" CON="+4" INT="+2" WIS="+4" CHA="+3"/>
+    <armorClass>27</armorClass>
+    <saves REF="+13" FOR="+18" WIL="+16" saveSpecial="bonus de statut de +1 à tous les jets de sauvegarde contre la magie"/>
+    <health>120</health>
+    <weaknesses>
+      <weakness>
+        <name>saint</name>
+        <value>5</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>crocs</name>
+        <bonus>+20</bonus>
+        <traits>
+          <trait>impie</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d12+9</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="divine" DD="23" attack="+18">
+      <rank rank="5">
+        <spells>
+          <spell>contrôle de l’eau, translocation</spell>
+        </spells>
+      </rank>
+      <rank rank="4">
+        <spells>
+          <spell spellSpecial="à volonté">déplacement sans entrave, translocation , torrent</spell>
+        </spells>
+      </rank>
+      <rank rank="2" constant="TRUE">
+        <spells>
+          <spell>percevoir l’imperceptible</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special>
+        <name>Rituel</name>
+        <description>DD 23 ; *pacte diabolique* (p� 320)</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Noyade</name>
+        <traits>
+          <trait>divine</trait>
+          <trait>eau</trait>
+          <trait>mise hors de combat</trait>
+        </traits>
+        <description>� Le sarglagon invoque de l’eau trouble dans les poumons d’une créature qui ne peut pas res- pirer dans l’eau dans un rayon de 9 m� La cible doit tenter un jet de Vigueur DD 26�</description>
+      </special>
+      <special>
+        <name>Succès critique</name>
+        <description>La cible n’est pas affectée�</description>
+      </special>
+      <special>
+        <name>Succès</name>
+        <description>La cible tousse pour recracher l’eau et tombe malade 1�</description>
+      </special>
+      <special>
+        <name>Échec</name>
+        <description>La cible retient sa respiration (*Livre des joueurs* p� 437)� La seule action qu’elle peut effectuer est de tenter avec une action unique un jet de Vigueur contre la Noyade pour expulser l’eau�</description>
+      </special>
+      <special>
+        <name>Échec critique</name>
+        <description>La créature sombre dans l’inconscience et commence à s’asphyxier� Si la cible réussit son jet de Vigueur alors qu’elle s’asphyxie, elle recrache l’eau et peut de nouveau respirer�</description>
+      </special>
+      <special>
+        <name>Venin de sarglagon</name>
+        <traits>
+          <trait>poison</trait>
+        </traits>
+        <description>; **Jet de sauvegarde** Vigueur DD 26 ;</description>
+      </special>
+      <special>
+        <name>Durée maximale</name>
+        <description>6 rounds ; **Stade 1 **2d6 de poison et maladroit 1 (1 round) ; **Stade 2** 3d6 de poison et maladroit 2 (1 round)</description>
+      </special>
+      <special>
+        <name>Phistophilus (diable des contrats)</name>
+        <description>Les diables des contrats sont des secrétaires, des scribes et des bureaucrates des Enfers que l’on rencontre rarement en dehors des cours infernales. Dans le cas contraire, c’est presque toujours pour négocier des contrats potentiels, en tentant les mortels</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

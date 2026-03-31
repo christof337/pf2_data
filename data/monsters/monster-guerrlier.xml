@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GUERRLIER</name>
+    <type>CRÉATURE</type>
+    <level>16</level>
+    <creatureTraits>
+      <trait type="size"/>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <attributes STR="+9" DEX="+5" CON="+7" INT="+0" WIS="+5" CHA="+5"/>
+    <armorClass>37</armorClass>
+    <saves REF="+25" FOR="+29" WIL="+27" saveSpecial="bonus de statut de +1 à tous les jets de sauvegarde contre vitalité"/>
+    <health>350</health>
+    <immunities>
+      <immunity>effets de mort</immunity>
+      <immunity>inconscient</immunity>
+      <immunity>maladie</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>saignement</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>vague de cadavres</name>
+        <bonus>+32</bonus>
+        <traits>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>4d12+9</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>arme animée</name>
+        <bonus>+30</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 30 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages/>
+      </strike>
+      <strike type="ranged">
+        <name>boule de ferraille</name>
+        <bonus>+28</bonus>
+        <traits>
+          <trait>facteur de portée 30 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>4d12+9</amount>
+            <damageType>contondant</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="0">
+        <name>Absorption</name>
+        <traits>
+          <trait>mort</trait>
+          <trait>divine</trait>
+          <trait>néant</trait>
+        </traits>
+        <trigger>Le guerrlier se déplace dans l’espace d’une créature mourante ;</trigger>
+        <effect>Le guerrlier absorbe la créature mourante dans son corps, ce qui tue cette der- nière immédiatement mais rend au guerrlier un nombre de PV égal au niveau de la créature� Tant que le guerrlier existe, il est impossible de ressusciter une créature absorbée, à moins d’user d’un *souhait *ou d’un effet tout aussi puissant�</effect>
+      </special>
+      <special>
+        <name>Absorption d’énergie</name>
+        <traits>
+          <trait>divin</trait>
+          <trait>néant</trait>
+        </traits>
+        <description>� Quand le guerr- lier touche avec une Frappe de vague de cadavres ou inflige des dégâts à une créature avec Piétinement, la cible doit réussir un jet de Vigueur DD 35, sinon elle est drainée 2 et condamnée 1� Sur un succès critique, la cible est immunisée contre l’ab- sorption d’énergie du guerrlier pendant 24 h�</description>
+      </special>
+      <special>
+        <name>Chute</name>
+        <description>Une créature touchée par la Frappe de boule de ferraille du guerrlier doit faire un jet de Réflexes DD 37� Sur un échec, elle tombe à terre� Si elle volait, elle tombe de 36 m� Elle subit des dégâts de chute et se retrouve à terre si cela lui fait atteindre le sol� Sur un échec critique, la cible est coincée sous un monticule de débris (DD 37 pour S’échapper)�</description>
+      </special>
+      <special type="activity" actions="3">
+        <name>Piétinement</name>
+        <description>Très Grande ou plus petite, vague de cadavres, DD 37 (p� 360)</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

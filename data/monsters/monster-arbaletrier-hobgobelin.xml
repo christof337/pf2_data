@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>ARBALÉTRIER HOBGOBELIN</name>
+    <type>CRÉATURE</type>
+    <level>4</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>HOBGOBELIN</trait>
+      <trait>HUMANOÏDE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>commun</language>
+      <language>gobelin</language>
+    </languages>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+10</bonus>
+      </skill>
+    </skills>
+    <armorClass>23</armorClass>
+    <saves/>
+    <health>50</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>épée courte</name>
+        <bonus>+12</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>polyvalent T</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+4</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>arbalète</name>
+        <bonus>+14</bonus>
+        <traits>
+          <trait>facteur de portée 36 m</trait>
+          <trait>rechargement 1</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8+2</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Précision à l’arbalète</name>
+        <description>La première fois lors d’un round que l’arbalétrier touche avec une attaque d’arbalète, il inflige 1d8 dégâts de précision supplémentaires�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Rechargement en courant</name>
+        <description>L’arbalétrier Marche rapidement, Fait un pas ou Est furtif puis Interagit pour recharger�</description>
+      </special>
+      <special>
+        <name>Visée parfaite</name>
+        <description>L’arbalétrier hobgobelin ignore l’état masqué� Ses cibles ne bénéficient pas des abris partiels et réduisent de 2 le bonus de CA d’un abri standard contre les attaques d’un arbalétrier hobgobelin�</description>
+      </special>
+      <special>
+        <name>Général hobgobelin</name>
+        <description>Les généraux hobgobelins sont les chefs d’armées entières et les seigneurs de leurs communautés. Ils ne peuvent se permettre que le luxe accompagnant leur fonction les adoucisse. Ils mènent leurs forces sur les champs de bataille et considèrent cette occasion qui leur est donnée d’exceller au combat à la tête de leurs troupes comme la véritable récompense d’une vie passée à maîtriser leurs compétences martiales.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

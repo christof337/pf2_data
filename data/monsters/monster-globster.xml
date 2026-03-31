@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GLOBSTER</name>
+    <type>CRÉATURE</type>
+    <level>5</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>AQUATIQUE</trait>
+      <trait>VASE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <interactionAbilities>
+      <special>
+        <name>Compétence</name>
+        <description>Athlétisme +15</description>
+      </special>
+      <special>
+        <name>For</name>
+        <description>+6, **Dex **–5, **Con** +5, **Int **–5, **Sag **+0, **Cha** –5</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>12</armorClass>
+    <saves REF="+6" FOR="+16" WIL="+9"/>
+    <health>170</health>
+    <immunities>
+      <immunity>coups critiques</immunity>
+      <immunity>inconscient</immunity>
+      <immunity>mental</immunity>
+    </immunities>
+    <weaknesses>
+      <weakness>
+        <name>électricité</name>
+        <value>10</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special>
+        <name>Puanteur</name>
+        <traits>
+          <trait>aura</trait>
+          <trait>olfactif</trait>
+        </traits>
+        <description>9 m, DD 19 (p� 360)</description>
+      </special>
+      <special>
+        <name>Vitesses</name>
+        <description>4,5 m, nage 9 m</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>vrille +15, **Dégâts **2d8+6 contondants plus Empoignade (p� 359) et frappe écœurante</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Constriction</name>
+        <description>1d8+6, DD 22 (p� 359)</description>
+      </special>
+      <special>
+        <name>Frappe écœurante</name>
+        <traits>
+          <trait>poison</trait>
+        </traits>
+        <description>� Une créature vivante touchée par une des vrilles du globster doit tenter un jet de Vigueur DD 19� En cas d’échec, la créature est malade 1� Si la créature est déjà malade, son état augmente de 1 jusqu’à un maximum de malade 4� Une créa- ture qui réussit son jet de sauvegarde est immunisée pendant 24 h�</description>
+      </special>
+      <special>
+        <name>Gorgé d’eau</name>
+        <description>Un globster peut survivre 1 h en dehors de l’eau, après quoi il risque de suffoquer�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

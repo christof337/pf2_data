@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>VIPÈRE</name>
+    <type>CRÉATURE</type>
+    <level>-1</level>
+    <creatureTraits>
+      <trait type="size">TRÈS PETITE</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+5</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>9 m</range>
+        </sens>
+        <sens>
+          <name>vision nocturne</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+5</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+1</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+5</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+3</bonus>
+      </skill>
+    </skills>
+    <armorClass>14</armorClass>
+    <saves REF="+7" FOR="+2" WIL="+5"/>
+    <health>8</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>crochets</name>
+        <bonus>+6</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 0 m</trait>
+          <trait>finesse</trait>
+        </traits>
+        <damages/>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Venin de vipère</name>
+        <traits>
+          <trait>poison</trait>
+        </traits>
+        <description>; **Jet de sauvegarde** Vigueur DD 16 ; **Durée maximale** 4 rounds ; **Stade 1** 1d8 poison (1 round)�</description>
+      </special>
+      <special>
+        <name>Python</name>
+        <description>Cette famille de serpents non venimeux constitue rarement une menace sauf pour les petits mammifères et les oiseaux. Ils chassent en s’enroulant autour de leurs proies et en les écrasant avec leurs muscles puissants. Cependant, les plus grands pythons peuvent être très dangereux à cause de leur force. Les herpétologistes gardent parfois des pythons comme animaux de compagnie.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

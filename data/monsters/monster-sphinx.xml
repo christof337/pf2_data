@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>SPHINX</name>
+    <type>CRÉATURE</type>
+    <level>8</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>BÊTE</trait>
+      <trait>HUMANOÏDE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+18</bonus>
+      <senses/>
+    </perception>
+    <languages/>
+    <interactionAbilities>
+      <special>
+        <name>Langues</name>
+        <description>commun, draconique, sphinx ; *langage universel*</description>
+      </special>
+      <special>
+        <name>Compétences</name>
+        <description>Arcanes +17, Athlétisme +18, Connaissances bardiques +19, Diplomatie +16, Duperie +16, Intimidation +18, Occultisme +17</description>
+      </special>
+      <special>
+        <name>For</name>
+        <description>+6, **Dex **+1, **Con **+3, **Int **+5, **Sag **+4, **Cha **+4</description>
+      </special>
+      <special>
+        <name>Connaissances bardiques</name>
+        <description>Les sphinx sont curieux par nature et leur amour pour les énigmes et les mystères les pousse à recueillir des informations de toutes sortes� Les sphinx bénéficient de Connaissances bardiques, une compétence de Connaissances spéciale qui peut être utilisée pour Se souvenir d’une information, quel que soit le sujet concerné�</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>27</armorClass>
+    <saves/>
+    <health>135</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+20</bonus>
+        <traits>
+          <trait>agile</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+9</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Sorts innés occultes</name>
+        <description>* *DD 27 ; **4**e *clairaudience* (à volonté), *clairvoyance* (à volonté), *lire les présages, purification des afflictions* ; **3**e* dissipation de la magie*, *localisation* ; **Tours de magie* *(4**e**) **détection de la magie ;</description>
+      </special>
+      <special>
+        <name>Constant (5</name>
+        <description>e**) ***langage universel* ; **(2**e**) ***percevoir l’imperceptible*</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Bond</name>
+        <description>Le sphinx Marche rapidement et effectue une Frappe à la fin de son déplacement� S’il commence son action en étant caché, il le reste jusqu’après l’attaque�</description>
+      </special>
+      <special type="activity" actions="3">
+        <name>Labourer à coups de griffes</name>
+        <description>Le sphinx se cabre et effectue deux Frappes de griffes sur la même cible, en utilisant le même bonus d’attaque que sa meil- leure attaque au corps à corps� Si les deux attaques infligent des dégâts, la cible subit un montant de dégâts supplémentaires égal à celui d’une Frappe de griffes�</description>
+      </special>
+      <special>
+        <name>Rune du sphinx</name>
+        <description>Une fois par semaine, un sphinx peut créer un symbole magique semblable au rituel *rune piégée* (*Livre des joueurs* p� 394)� Le sphinx lui donne généralement la forme d’une énigme écrite dont le mot de passe est la réponse� Une créature qui donne une mauvaise réponse ou tente de passer sans répondre doit réussir un jet de Volonté DD 26 ou être affectée par l’un des sorts suivants, choisi par le sphinx lorsqu’il crée le symbole : *pulsation synaptique* (5e), *charme *(4e), *terreur *(4e), *douleur fantôme* (4e), *sommeil *(4e)� Le sphinx apprend l’identité des créatures qui répondent correctement à l’énigme et a tendance à se montrer amical envers elles�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

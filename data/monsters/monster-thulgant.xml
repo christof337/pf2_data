@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>THULGANT</name>
+    <type>CRÉATURE</type>
+    <level>18</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>FIÉLON</trait>
+      <trait>IMPIE</trait>
+      <trait>QLIPPOTH</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <attributes STR="+9" DEX="+6" CON="+6" INT="+5" WIS="+6" CHA="+9"/>
+    <armorClass>42</armorClass>
+    <saves REF="+28" FOR="+30" WIL="+32"/>
+    <health>305</health>
+    <immunities>
+      <immunity>contrôlé</immunity>
+      <immunity>terreur</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>dard</name>
+        <bonus>+35</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+          <trait>impie</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d12+17</amount>
+            <damageType>perforants</damageType>
+          </damage>
+          <damage>
+            <amount>4d6</amount>
+            <damageType>mentaux et venin de thulgant</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>tentacule</name>
+        <bonus>+35</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 3 m</trait>
+          <trait>impie</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d8+17</amount>
+            <damageType>conton- dants</damageType>
+          </damage>
+          <damage>
+            <amount>3d6</amount>
+            <damageType>d’acide et Empoignade (p� 359)</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="occult" DD="40">
+      <rank rank="9">
+        <spells>
+          <spell>calamité imaginaire, pétrification (×3)</spell>
+        </spells>
+      </rank>
+      <rank rank="8">
+        <spells>
+          <spell>décret divin, dilemme, dissipation de la magie, douleur fantôme (×3)</spell>
+        </spells>
+      </rank>
+      <rank rank="7">
+        <spells>
+          <spell>téléportation interplanaire</spell>
+        </spells>
+      </rank>
+      <rank rank="6" constant="TRUE">
+        <spells>
+          <spell>discernement</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special>
+        <name>Rituel</name>
+        <description>DD 40 ; **9**e* emprisonnement*</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Chasseur de démon</name>
+        <traits>
+          <trait>occulte</trait>
+        </traits>
+        <description>� Le thulgant fait souffrir un démon situé dans les 9 m des effets de sa vulnérabilité au péché�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Constriction supérieure</name>
+        <description>2d6+17 contondants plus 1d6 d’acide, DD 40 (p� 359)</description>
+      </special>
+      <special>
+        <name>Dard déchireur d’esprit</name>
+        <description/>
+      </special>
+      <special type="activity" actions="1">
+        <name>Conditions</name>
+        <description>Le thulgant touche le même ennemi avec deux Frappes de dard consécutives au cours du même round ;</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Démonstration étourdissante</name>
+        <description>(concentration, émotion, mental, mise hors de combat, occulte, terreur, visuel)� Le thul- gant se dresse sur ses membres frémissants et expose ses nombreux dards et tentacules dans un ignoble étalage d’horreurs� Toute créature dans une émanation de 9 m doit faire un jet de Volonté DD 40� Ensuite, elle est immunisée contre la Démonstration étourdissante pendant 1 min�</description>
+      </special>
+      <special>
+        <name>Succès critique</name>
+        <description>La créature n’est pas affectée�</description>
+      </special>
+      <special>
+        <name>Succès</name>
+        <description>La créature est étourdie 1�</description>
+      </special>
+      <special>
+        <name>Échec</name>
+        <description>La créature est étourdie 4�</description>
+      </special>
+      <special>
+        <name>Échec critique</name>
+        <description>La créature est étourdie 8�</description>
+      </special>
+      <special>
+        <name>Venin de thulgant</name>
+        <traits>
+          <trait>poison</trait>
+        </traits>
+        <description>; **Jet de sauvegarde** Vigueur DD 40 ; **Durée maximale** 6 rounds ; **Stade 1** 3d6 dégâts de poison et la victime est au hasard maladroite 1 ou affaiblie 1 ou stupéfiée 1 (1 round) ; **Stade 2** 6d6 dégâts de poison et la victime subit deux des états suivants au hasard : maladroite 2, affaiblie 2, stupéfiée 2 (1 round) ; **Stade 3** 9d6 dégâts de poison et la vic- time subit les trois états suivants : maladroite 3, affaiblie 3, stupéfiée 3 (1 round)</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

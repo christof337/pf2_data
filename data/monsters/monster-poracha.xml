@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>PORACHA</name>
+    <type>CRÉATURE</type>
+    <level>4</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>BÊTE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+10</bonus>
+      <senses>
+        <sens>
+          <name>perception des vibrations</name>
+          <precision>imprécis</precision>
+          <range>3 m</range>
+        </sens>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+9</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+11</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+11</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+10</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+3" DEX="+5" CON="+3" INT="+0" WIS="+2" CHA="+3"/>
+    <armorClass>23</armorClass>
+    <saves REF="+13" FOR="+9" WIL="+10"/>
+    <health>50</health>
+    <weaknesses>
+      <weakness>
+        <name>son</name>
+        <value>5</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+13</bonus>
+        <traits>
+          <trait>finesse</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+7</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+13</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d4+7</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Escapade</name>
+        <description>(déplacement, primordiale, téléportation) Le poracha se téléporte vers un endroit qu’il peut voir situé jusqu’à 12 m� Il ne peut utiliser une nouvelle fois Escapade avant 1d4 rounds�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Fusion avec les objets</name>
+        <traits>
+          <trait>primordiale</trait>
+        </traits>
+        <description>Le poracha touche un objet adjacent qui a un volume suffisant pour le contenir� Il fusionne avec cet objet indéfiniment et tant qu’il est à l’intérieur, le temps passe pour lui exceptionnellement lentement et il n’a qu’une perception limitée du monde extérieur� Le poracha peut uniquement utiliser percep- tion des vibrations pour savoir ce qui se passe à l’extérieur de l’objet� Il ne peut utiliser que des actions mentales ou Escapade ; s’il utilise Escapade, il quitte l’objet et réapparaît où il veut� Si une créature effectue une Frappe contre l’objet, le poracha en est expulsé indemne�</description>
+      </special>
+      <special>
+        <name>QU’EST‑CE QU’UN KAMI ?</name>
+        <description>Les esprits connus collectivement sous le nom de kami étaient à l’origine les protecteurs du monde naturel, particulièrement des choses incapables de se défendre elles-mêmes� Avec le temps, cependant, leurs attributions se sont étendues et, désormais, les protecteurs kami veillent également sur des structures artificielles et des objets� En théorie, n’importe quel animal, plante, objet ou lieu peut potentiellement disposer de son propre kami, mais toutes ces choses ne bénéficient pas encore de cette bénédiction� La classification qui détermine quels objets méritent d’être protégés ou pas est assez confuse et compliquée, sauf aux yeux des kami qui trouvent ce système organisationnel parfaitement logique� [[PAGE 289]]</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

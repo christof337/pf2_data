@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>AOLAZ</name>
+    <type>CRÉATURE</type>
+    <level>18</level>
+    <creatureTraits>
+      <trait type="size">GIGANTESQUE</trait>
+      <trait>CRÉATURE</trait>
+      <trait>ARTIFICIELLE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+33</bonus>
+      <senses>
+        <sens>
+          <name>audition parfaite</name>
+        </sens>
+        <sens>
+          <name>vision nocturne</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <armorClass>42</armorClass>
+    <saves/>
+    <health>255</health>
+    <immunities>
+      <immunity>attaques non létales</immunity>
+      <immunity>condamné</immunity>
+      <immunity>drainé</immunity>
+      <immunity>effet de mort</immunity>
+      <immunity>esprit</immunity>
+      <immunity>fatigué</immunity>
+      <immunity>guérison</immunity>
+      <immunity>inconscient</immunity>
+      <immunity>malade</immunity>
+      <immunity>maladie</immunity>
+      <immunity>néant</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>sai- gnement</immunity>
+      <immunity>son</immunity>
+      <immunity>vitalité</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>trompe</name>
+        <bonus>+35</bonus>
+        <traits>
+          <trait>allonge 6 m</trait>
+          <trait>balayage</trait>
+          <trait>croc-en-jambe</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>5d10+17</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>patte</name>
+        <bonus>+33</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>5d8+15</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="arcane" DD="40">
+      <rank rank="9" constant="TRUE">
+        <spells>
+          <spell>marche sur l’eau, vol</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="3">
+        <name>Piétinement</name>
+        <description>Très Grande ou plus petite, patte, DD 40 (p� 360)</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Roulade</name>
+        <description>L’aolaz baisse la tête et se met en boule, formant une sphère caparaçonnée� Quand il roule, un aolaz a une CA de 44, Réf +29, Vig +37, Vol +33 et une Vitesse de 30 m, mais il ne peut pas utiliser ses Frappes de trompe ou son souffle ultrasonique� Il peut effectuer des Frappes de patte mais uniquement s’il piétine� L’aolaz peut utiliser cette action à nouveau pour arrêter de rouler et se redresser sur ses pattes�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Souffle ultrasonique</name>
+        <traits>
+          <trait>arcanique</trait>
+          <trait>son</trait>
+        </traits>
+        <description>� L’aolaz relâche par la trompe un impressionnant souffle d’énergie sonore sur une ligne de 45 m, infli- geant 12d10 dégâts de son� Si les humanoïdes ne peuvent pas percevoir la fréquence à laquelle ce son est émis, ils n’échappent pas à ses effets� Chaque créature dans la zone d’effet doit tenter un jet de Vigueur DD 40� L’aolaz doit attendre 1d4 rounds avant de pouvoir de nouveau utiliser son souffle ultrasonique�</description>
+      </special>
+      <special>
+        <name>Succès critique</name>
+        <description>La créature n’est pas affectée�</description>
+      </special>
+      <special>
+        <name>Succès</name>
+        <description>La créature subit la moitié des dégâts et est étourdie 1�</description>
+      </special>
+      <special>
+        <name>Échec</name>
+        <description>La créature subit la totalité des dégâts et est étourdie 2�</description>
+      </special>
+      <special>
+        <name>Échec critique</name>
+        <description>La créature subit le double de dégâts et est étourdie 3�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

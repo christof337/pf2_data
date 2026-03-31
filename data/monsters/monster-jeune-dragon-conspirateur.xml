@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>JEUNE DRAGON CONSPIRATEUR</name>
+    <type>CRÉATURE</type>
+    <level>8</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>DRAGON</trait>
+      <trait>OCCULTE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>commun</language>
+      <language>draconique</language>
+      <language>langue de l’ombre</language>
+      <langSpecial>télépathie 30 m (p� 316)</langSpecial>
+    </languages>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+15</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+16</bonus>
+      </skill>
+      <skill>
+        <name>Connaissances (région ou communauté)</name>
+        <bonus>+16</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+18</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+16</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+18</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+16</bonus>
+      </skill>
+      <skill>
+        <name>Occultisme</name>
+        <bonus>+16</bonus>
+      </skill>
+      <skill>
+        <name>Représentation</name>
+        <bonus>+18</bonus>
+      </skill>
+      <skill>
+        <name>Société</name>
+        <bonus>+16</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+5" DEX="+3" CON="+2" INT="+2" WIS="+4" CHA="+4"/>
+    <armorClass>27</armorClass>
+    <saves REF="+15" FOR="+14" WIL="+18" saveSpecial="bonus de statut de +2 aux jets de sauvegarde contre la magie occulte"/>
+    <health>135</health>
+    <immunities>
+      <immunity>contrôlé</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>sommeil</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+19</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+8</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+19</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+8</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>queue</name>
+        <bonus>+17</bonus>
+        <traits>
+          <trait>allonge 4,5 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d10+8</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>attaque mentale</name>
+        <bonus>+18</bonus>
+        <traits>
+          <trait>mental</trait>
+          <trait>portée 30 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d6+3</amount>
+            <damageType>mentaux</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Sorts innés occultes</name>
+        <description>* *DD 26 ; **4**e* charme*,* lecture des pensées *(à volonté),* mémoire réécrite *; **1**er* charme *(à volonté)</description>
+      </special>
+      <special>
+        <name>Attaque sournoise</name>
+        <description>Les Frappes du dragon infligent 2d6 dégâts de précision supplémentaires aux créatures prises par surprise�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Explosion de déguisement</name>
+        <traits>
+          <trait>occulte</trait>
+        </traits>
+        <description>**Condition.** Le dragon porte le déguisement qu’il a invo- qué�</description>
+      </special>
+      <special>
+        <name>DRAGONS D’ADAMANTIUM
+                   INCANTATEURS</name>
+        <description>Les dragons d’adamantium incantateurs lancent généralement les sorts suivants�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

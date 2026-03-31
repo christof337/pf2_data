@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>VADROUILLEUR XULGATH</name>
+    <type>CRÉATURE</type>
+    <level>2</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>HUMANOÏDE</trait>
+      <trait>XULGATH</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+7</bonus>
+      <senses>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Larcin</name>
+        <bonus>+8</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+3, **Dex **+4, **Con **+2, **Int **–1, **Sag **+1, **Cha **+0</description>
+      </special>
+      <special>
+        <name>Objets</name>
+        <description>dague (4)</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>17</armorClass>
+    <saves REF="+10" FOR="+8" WIL="+5"/>
+    <health>28</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>dague</name>
+        <bonus>+10</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+          <trait>polyvalent T</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+3</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>mâchoires +9, **Dégâts** 1d6+3 perforants **Corps à corps** 1 griffes</name>
+        <bonus>+10</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+3</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>dague</name>
+        <bonus>+10</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>jet 3 m</trait>
+          <trait>polyvalent T</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+3</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Attaque sournoise</name>
+        <description>Un vadrouilleur xulgath inflige 1d6 dégâts de précision supplémentaires aux créatures prises par surprise�</description>
+      </special>
+      <special>
+        <name>Déplacement caché</name>
+        <description>Si un vadrouilleur xulgath commence son tour sans être détecté ou en étant caché d’une créature, celle-ci est prise par surprise par les attaques du vadrouilleur jusqu’à la fin du tour de ce dernier�</description>
+      </special>
+      <special type="activity" actions="0">
+        <name>Puanteur masquée</name>
+        <description>Le vadrouilleur masque sa puanteur grâce à des plantes soigneusement sélectionnées qui suppriment son aura� Il peut rétablir celle-ci avec une action gratuite�</description>
+      </special>
+      <special>
+        <name>Chef xulgath</name>
+        <description>Les chefs xulgaths sont généralement les membres les plus forts et violents de leur communauté. Cela étant, il peut arriver qu’une couvée particulièrement grande soit menée par de puissants cultistes démoniaques ou d’autres monstres qui cherchent à faire des xulgaths leurs serviteurs ou leurs sacrifices.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>PLÉROMA</name>
+    <type>CRÉATURE</type>
+    <level>20</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>ÉON</trait>
+      <trait>VEILLEUR</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+37</bonus>
+      <senses>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+33</bonus>
+      </skill>
+      <skill>
+        <name>Arcanes</name>
+        <bonus>+38</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+34</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+35</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+34</bonus>
+      </skill>
+      <skill>
+        <name>Occultisme</name>
+        <bonus>+38</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+39</bonus>
+      </skill>
+    </skills>
+    <armorClass>45</armorClass>
+    <saves REF="+31" FOR="+32" WIL="+37" saveSpecial="bonus de statut +1 à tous les jets de sauvegarde contre la magie"/>
+    <health>335</health>
+    <immunities>
+      <immunity>néant</immunity>
+      <immunity>vitalité</immunity>
+    </immunities>
+    <weaknesses>
+      <weakness>
+        <name>esprit</name>
+        <value>20</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <spellList source="innate" tradition="divine" DD="47" attack="+39">
+      <rank rank="9">
+        <spells>
+          <spell>bannissement, détonation de la magie, présence écrasante, sphère bénie</spell>
+        </spells>
+      </rank>
+      <rank rank="8">
+        <spells>
+          <spell>désintégration (×2), observation implacable</spell>
+        </spells>
+      </rank>
+      <rank rank="7">
+        <spells>
+          <spell>rétrocognition, téléportation interplanaire</spell>
+        </spells>
+      </rank>
+      <rank rank="5">
+        <spells>
+          <spell spellSpecial="à volonté">création</spell>
+        </spells>
+      </rank>
+      <rank rank="4">
+        <spells>
+          <spell spellSpecial="à volonté">création de nour‑ riture , façonnage de la pierre</spell>
+        </spells>
+      </rank>
+      <rank rank="3">
+        <spells>
+          <spell spellSpecial="à volonté">hypercognition</spell>
+        </spells>
+      </rank>
+      <rank rank="2">
+        <spells>
+          <spell spellSpecial="à volonté">façonnage du bois</spell>
+        </spells>
+      </rank>
+      <rank rank="8" constant="TRUE">
+        <spells>
+          <spell>discernement</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Génération de sphère</name>
+        <traits>
+          <trait>concentration</trait>
+          <trait>divine</trait>
+        </traits>
+        <description>� Le pléroma crée une sphère d’énergie de 60 cm de diamètre� Il s’agit soit d’une sphère blanche de création flottant au-dessus de sa main gauche, soit d’une sphère noire d’oubli flottant au-dessus de sa main droite� Cette action possède le trait vitalité pour la sphère de création ou le trait néant pour la sphère de néant� La sphère disparaît au bout de 1 min, si elle se trouve à plus de 90 m du pléroma ou si ce dernier crée une nouvelle sphère du même type� Quand elle disparaît, une sphère d’oubli s’efface sans laisser de trace, mais une sphère de création explose en générant une lumière aveuglante : chaque créature qui se trouve dans une émanation de 9 m doit alors réussir un jet de Vigueur DD 43 ou être définitivement aveugle� Il s’agit d’un effet de lumière�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Déplacement de sphère</name>
+        <traits>
+          <trait>concentration</trait>
+          <trait>divine</trait>
+        </traits>
+        <description>; **Conditions.** Le pléroma a créé une sphère de création ou d’oubli et celle-ci est encore active ; **</description>
+      </special>
+      <special>
+        <name>Succès</name>
+        <description>La créature ne subit pas de dégâts et est repoussée par la sphère dans l’espace libre le plus proche désigné par le MJ�</description>
+      </special>
+      <special>
+        <name>Échec</name>
+        <description>La créature subit l’intégralité des dégâts ; il s’agit de dégâts de vitalité pour la sphère de création et de dégâts de néant pour la sphère d’oubli ; la sphère inflige ces dégâts à toutes les créatures, peu importe leurs immunités normales� La créature est alors repoussée hors de son espace, comme sur un succès� Si une créature est réduite à 0 PV, elle meurt au lieu d’être repoussée hors de son espace et son corps fusionne alors avec la nouvelle matière générée par la sphère de création ou est complétement détruit par la sphère d’oubli� Elle pourra seulement être ressuscitée à l’aide du rituel *souhait* ou d’un puissant effet de ce type� Il s’agit d’un effet de mort�</description>
+      </special>
+      <special>
+        <name>Échec critique</name>
+        <description>Comme un échec, mais la créature subit le double des dégâts�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

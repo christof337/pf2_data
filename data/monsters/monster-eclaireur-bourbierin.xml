@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>ÉCLAIREUR BOURBIÉRIN</name>
+    <type>CRÉATURE</type>
+    <level>1</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>AMPHIBIE</trait>
+      <trait>BOURBIÉRIN</trait>
+      <trait>HUMANOÏDE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+7</bonus>
+      <senses>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+5</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+7</bonus>
+      </skill>
+    </skills>
+    <armorClass>16</armorClass>
+    <saves/>
+    <health>24</health>
+    <speeds speedSpecial="passage dans les marais">
+      <speed>6 m</speed>
+      <speed type="swim">7</speed>
+      <speed>5 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>morgenstern</name>
+        <bonus>+8</bonus>
+        <traits>
+          <trait>polyvalent P</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+3</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>langue</name>
+        <bonus>+8</bonus>
+        <traits>
+          <trait>allonge 3 m)</trait>
+          <trait>**Effet** empoignade avec la langue
+                              **À distance**
+                                   1
+                                     fronde +7 (facteur de portée 15 m</trait>
+          <trait>propulsif</trait>
+          <trait>rechargement 1</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+1</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Coassement terrifiant</name>
+        <traits>
+          <trait>audible</trait>
+          <trait>émotion</trait>
+          <trait>mental</trait>
+          <trait>terreur</trait>
+        </traits>
+        <description>� Le bourbiérin émet un coassement terrifiant� Tout non-bourbiérin situé dans un rayon de 9 m est effrayé 1 à moins de réussir un jet de Volonté DD 17 ; sur une réussite critique, une créature est immunisée pendant 1 min�</description>
+      </special>
+      <special>
+        <name>Empoignade avec la langue</name>
+        <description>Si l’éclaireur bourbiérin touche une créature avec sa langue, elle se trouve empoignée� Contrairement à une empoignade normale, la créature n’est pas immobilisée mais elle ne peut pas s’éloigner au-delà de l’allonge de la langue du bourbiérin� La créature peut trancher la langue si elle réussit à la toucher (CA 13) et à lui infliger au moins 2 dégâts tranchants� Dans ce cas, le bourbiérin n’est pas blessé, mais il ne peut plus utiliser sa langue pour Frapper pendant une semaine, qui est le temps qu’il lui faut pour repousser�</description>
+      </special>
+      <special>
+        <name>Passage dans les marais</name>
+        <description>Un éclaireur bourbiérin ignore le terrain difficile provoqué par des éléments d’un marais�</description>
+      </special>
+      <special>
+        <name>Guerrier bourbiérin</name>
+        <description>Les guerriers bourbiérins valorisent le combat singulier et préfèrent se battre seuls afin que personne ne puisse contester leurs victoires. Ils sont réputés pour poursuivre avec une détermination presque surnaturelle les ennemis qui fuient un combat.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

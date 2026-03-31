@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>MANTE MEURTRIÈRE</name>
+    <type>CRÉATURE</type>
+    <level>11</level>
+    <creatureTraits>
+      <trait type="size">GIGANTESQUE</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <armorClass>31</armorClass>
+    <saves REF="+20" FOR="+24" WIL="+18"/>
+    <health>220</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mandibules</name>
+        <bonus>+25</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d12+14</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>patte</name>
+        <bonus>+24</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 6 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d10+14</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Empoignade bondissante</name>
+        <description>La mante Bondit jusqu’à 12 m à la verticale et 6 m à l’horizontale� Elle peut faire une Frappe de patte à n’importe quel stade de ce saut� Si elle touche, elle Empoigne automatiquement la cible et l’emporte jusqu’au point d’arrivée de son saut�</description>
+      </special>
+      <special>
+        <name>Frappe soudaine</name>
+        <description>Comme la mante géante�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Projection</name>
+        <description>La mante meurtrière projette une créature empoignée dans les airs, jusqu’à 9 m au-dessus d’elle et jusqu’à 9 m de distance (la créature subit des dégâts de chute normalement)� Si la créature projetée tombe sur une autre créature, cette dernière subit la même quantité de dégâts contondants (jet de Réflexes basique DD 31)�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Mandibules déchiqueteuses</name>
+        <description>La mante effectue une Frappe de mandibules contre une créature qu’elle a empoignée� Si cette Frappe touche et que la créa- ture porte une armure avec une Solidité de 12 ou moins, l’armure est brisée� Cette Frappe ne peut pas infliger de nouveaux dégâts à une armure déjà brisée�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

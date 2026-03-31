@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>AXIOMITE</name>
+    <type>CRÉATURE</type>
+    <level>8</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>ÉON</trait>
+      <trait>VEILLEUR</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+16</bonus>
+      </skill>
+      <skill>
+        <name>Artisanat</name>
+        <bonus>+21</bonus>
+      </skill>
+      <skill>
+        <name>Connaissances sur Axis</name>
+        <bonus>+17</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+15</bonus>
+      </skill>
+      <skill>
+        <name>Occultisme</name>
+        <bonus>+17</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+17</bonus>
+      </skill>
+    </skills>
+    <armorClass>26</armorClass>
+    <saves REF="+16" FOR="+13" WIL="+18" saveSpecial="bonus de statut +1 à tous les jets de sauvegarde contre la magie"/>
+    <health>155</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>*marteau de guerre*</name>
+        <bonus>+20</bonus>
+        <traits>
+          <trait>magique</trait>
+          <trait>pousser</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+11</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>poing</name>
+        <bonus>+17</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+9</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="divine" DD="27" attack="+17">
+      <rank rank="5">
+        <spells>
+          <spell>transport télékinésique</spell>
+        </spells>
+      </rank>
+      <rank rank="4">
+        <spells>
+          <spell>dissipation de la magie, éclair (×3)</spell>
+        </spells>
+      </rank>
+      <rank rank="3">
+        <spells>
+          <spell>paralysie, rapidité (×3)</spell>
+        </spells>
+      </rank>
+      <rank rank="2">
+        <spells>
+          <spell>manœuvre télékinésique</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Forme de poussière cristalline</name>
+        <traits>
+          <trait>métamorphose</trait>
+        </traits>
+        <description>� L’axiomite adopte la forme d’une nuée de poussière cristalline au sein de laquelle on peut apercevoir par moment d’étranges symboles et équations� Il gagne une Vitesse de vol de 12 m et peut se faufiler à travers de minuscules fissures, comme s’il se trouvait sous *forme gazeuse*� Sous cette forme, l’axiomite peut lancer des sorts mais ne peut pas faire d’attaque au corps à corps ou à distance� Il peut Révoquer cette forme pour retrouver une forme humanoïde�</description>
+      </special>
+      <special>
+        <name>Akhana</name>
+        <description>Les akhanas, qui ont l’aspect d’immenses yeux formés de matière cosmique, surveillent l’équilibre des naissances et des morts. Ils sont conscients de la profonde influence que les choses vivantes ont sur le cosmos et accomplissent discrètement leur devoir, qui consiste à préserver la vie et élaguer ses éléments superflus. Les akhanas se désinté‑ ressent de ce qu’il advient des âmes après la mort, c’est pourquoi on rencontre souvent des morts‑vivants ou des daémons charognards dans leur sillage. Les psychopompes sont généralement désemparés face aux actions incompréhensibles des akhanas, qui les forcent à devoir gérer de soudains afflux d’âmes, voire à affronter directement ces éons. Les akhanas ont une « queue » qui a l’aspect d’une vrille d’énergie cosmique capable d’absorber la vitalité des créatures et de sceller ainsi leur sort.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

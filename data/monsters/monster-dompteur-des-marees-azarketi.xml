@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>DOMPTEUR DES MARÉES AZARKETI</name>
+    <type>CRÉATURE</type>
+    <level>7</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>AMPHIBIE</trait>
+      <trait>AZARKETI</trait>
+      <trait>HUMANOÏDE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+15</bonus>
+      </skill>
+      <skill>
+        <name>Connaissances sous-marines</name>
+        <bonus>+11</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+15</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+15</bonus>
+      </skill>
+      <skill>
+        <name>Nature</name>
+        <bonus>+12</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+14</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+4, **Dex **+4, **Con **+2, **Int **+0, **Sag **+1, **Cha **+2</description>
+      </special>
+      <special>
+        <name>Objets</name>
+        <description>arbalète de poing (20 carreaux), armure de cuir clouté, *trident +1*</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>25</armorClass>
+    <saves REF="+18" FOR="+15" WIL="+12"/>
+    <health>115</health>
+    <reactiveAbilities>
+      <special>
+        <name>Hydratation</name>
+        <description>Comme le pêcheur de crabes azarketi�</description>
+      </special>
+      <special>
+        <name>Orateur des océans</name>
+        <description>Un dompteur des marées azarketi peut parler avec les animaux dotés du trait aquatique ou amphibie�</description>
+      </special>
+    </reactiveAbilities>
+    <speeds speedSpecial="nage 7,5 m">
+      <speed>7</speed>
+      <speed>5 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>*trident*</name>
+        <bonus>+18</bonus>
+        <traits>
+          <trait>jet 6 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8+7</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>*trident*</name>
+        <bonus>+18</bonus>
+        <traits>
+          <trait>jet 6 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8+7</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>arbalète de poing</name>
+        <bonus>+17</bonus>
+        <traits>
+          <trait>facteur de portée 18 m</trait>
+          <trait>rechargement 1</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Prédateur aquatique</name>
+        <description>Un azarketi inflige 2d8 dégâts supplémentaires s’il réussit une Frappe d’arme alors qu’il se trouve sous l’eau�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

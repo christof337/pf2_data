@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>POLTERGEIST</name>
+    <type>CRÉATURE</type>
+    <level>5</level>
+    <creatureTraits>
+      <trait type="size"/>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <interactionAbilities>
+      <special>
+        <name>Langue</name>
+        <description>commun</description>
+      </special>
+      <special>
+        <name>Compétences</name>
+        <description>Acrobaties +14, Discrétion +14, Intimidation +15</description>
+      </special>
+      <special>
+        <name>For</name>
+        <description>–5, **Dex **+5, **Con **+0, **Int **–1, **Sag **+2, **Cha **+4</description>
+      </special>
+      <special>
+        <name>Lié à un site</name>
+        <description>Un poltergeist est lié à un endroit et il ne peut s’éloigner de plus de 36 m du lieu où il s’est formé ou a été créé� Certains poltergeists sont liés à une pièce spécifique, à un bâtiment ou à un endroit similaire�</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>22</armorClass>
+    <saves REF="+14" FOR="+9" WIL="+13"/>
+    <health>55</health>
+    <immunities>
+      <immunity>effets de mort</immunity>
+      <immunity>inconscient</immunity>
+      <immunity>maladie</immunity>
+      <immunity>para- lysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>précision</immunity>
+      <immunity>saignement</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="ranged">
+        <name>objet télékinésique</name>
+        <bonus>+13</bonus>
+        <traits>
+          <trait>facteur de portée 18 m</trait>
+          <trait>magique</trait>
+          <trait>occulte</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d12</amount>
+            <damageType>contondants, perforants ou tranchants (en fonc- tion de l’objet)</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="occult" DD="23" attack="+13">
+      <rank rank="3">
+        <spells>
+          <spell spellSpecial="à volonté">manœuvre télékinésique</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Effrayer</name>
+        <description>(concentration, émotion, mental, mise hors de combat, terreur) **Conditions.** Le poltergeist doit être invisible�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Tempête télékinésique</name>
+        <traits>
+          <trait>concentration</trait>
+          <trait>occulte</trait>
+        </traits>
+        <description>� Le poltergeist pro- jette par télékinésie de nombreux petits objets comme des dizaines de pièces d’argenterie ou des livres, soit en les répartissant entre plusieurs cibles, soit en focalisant son attaque contre une cible�<list><listItem>Quand cet effet est réparti entre plusieurs cibles, le poltergeist effectue une Frappe d’objet télékinésique avec un malus de −2 contre chaque créature située dans un rayon de 9 m� Cela compte comme une seule attaque pour le malus d’attaques multiples du poltergeist et ce malus n’aug- mente qu’une fois toutes les attaques effectuées�</listItem><listItem>Quand cet effet n’affecte qu’une seule cible, le poltergeist effectue une Frappe d’objet télékinésique contre elle et les dégâts sont augmentés à 3d12� L’attaque inflige 1d12 dégâts en cas d’échec et aucun dégât en cas d’échec critique�</listItem></list></description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

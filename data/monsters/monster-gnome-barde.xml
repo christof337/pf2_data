@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GNOME BARDE</name>
+    <type>CRÉATURE</type>
+    <level>1</level>
+    <creatureTraits>
+      <trait type="size">PETITE</trait>
+      <trait>GNOME</trait>
+      <trait>HUMANOÏDE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>commun</language>
+      <language>féerique</language>
+      <language>gnomien</language>
+    </languages>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+5</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+5</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+5</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Représentation</name>
+        <bonus>+7</bonus>
+      </skill>
+    </skills>
+    <armorClass>16</armorClass>
+    <saves REF="+7" FOR="+5" WIL="+9"/>
+    <health>16</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>dague</name>
+        <bonus>+8</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+          <trait>jet 3 m</trait>
+          <trait>polyvalent T</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+2</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>fronde</name>
+        <bonus>+78</bonus>
+        <traits>
+          <trait>facteur de portée 15 m</trait>
+          <trait>propulsif</trait>
+          <trait>rechargement 1</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+1</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Sorts spontanés occultes</name>
+        <description>* *DD 19, attaque +11 ; **1**er* *(4 emplacements) *charme, injonction *;</description>
+      </special>
+      <special>
+        <name>Tours de magie (1</name>
+        <description>er**) ***chimère*,* convocation d’instrument, hébétement, hymne au courage * (*Livre des joueurs *p� 371),* message, prestidigitation*</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Dansons la gigue</name>
+        <traits>
+          <trait>audible</trait>
+          <trait>mental</trait>
+          <trait>mise hors de combat</trait>
+          <trait>occulte</trait>
+        </traits>
+        <description>� Le gnome barde joue une mélodie qui incite les autres à danser� Une créature à moins de 9 m doit effectuer un jet de Volonté DD 19�</description>
+      </special>
+      <special>
+        <name>Succès</name>
+        <description>la cible n’est pas affectée�</description>
+      </special>
+      <special>
+        <name>Échec</name>
+        <description>La cible doit dépenser une action de son prochain tour à danser�</description>
+      </special>
+      <special>
+        <name>Échec critique</name>
+        <description>La cible doit dépenser 2 actions de son prochain tour à danser�</description>
+      </special>
+      <special>
+        <name>Gnome ombral éclaireur</name>
+        <description>Les gnomes ombraux éclaireurs patrouillent dans les tunnels qui mènent jusqu’à leurs communautés.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

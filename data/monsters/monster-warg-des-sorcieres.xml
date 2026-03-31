@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>WARG DES SORCIÈRES</name>
+    <type>CRÉATURE</type>
+    <level>5</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>BÊTE</trait>
+      <trait>FROID</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+14</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>9 m</range>
+        </sens>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+11</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+11</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+12</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+6" DEX="+4" CON="+4" INT="+2" WIS="+3" CHA="+2"/>
+    <armorClass>23</armorClass>
+    <saves/>
+    <health>70</health>
+    <weaknesses>
+      <weakness>
+        <name>feu</name>
+        <value>5</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special type="reaction">
+        <name>Désarçonner</name>
+        <description>DD 21 (p� 359)</description>
+      </special>
+      <special type="reaction">
+        <name>Morsure vengeresse</name>
+        <description>Comme le warg�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Vitesse</name>
+        <description>2 m</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>mâchoires +15, **Dégâts **1d10+6 perfo- rants plus 1d6 froid et Renversement (p� 360)</description>
+      </special>
+      <special>
+        <name>Attaque en meute</name>
+        <description>Les Frappes du warg des sorcières infligent 1d6 dégâts supplémentaires aux créatures à por- tée d’au moins deux de ses alliés�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Souffle de l’hiver</name>
+        <traits>
+          <trait>froid</trait>
+          <trait>primordiale</trait>
+        </traits>
+        <description>� Le warg des sorcières souffle un nuage glacé dans un cône de 4,5 m qui inflige 5d8 dégâts de froid (jet de Réflexes basique DD 23)� Le warg des sorcières ne peut plus utiliser Souffle glacial pendant 1d4 rounds�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

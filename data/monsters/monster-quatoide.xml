@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>QUATOÏDE</name>
+    <type>CRÉATURE</type>
+    <level>7</level>
+    <creatureTraits>
+      <trait type="size">PETITE</trait>
+      <trait>AQUATIQUE</trait>
+      <trait>EAU</trait>
+      <trait>ÉLÉMENTAIRE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>commun</language>
+      <language>thalassique</language>
+    </languages>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+15</bonus>
+      </skill>
+      <skill>
+        <name>Connaissances élémentaires</name>
+        <bonus>+17</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+12</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Occultisme</name>
+        <bonus>+17</bonus>
+      </skill>
+      <skill>
+        <name>Société</name>
+        <bonus>+17</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+4" DEX="+2" CON="+0" INT="+4" WIS="+3" CHA="+1"/>
+    <armorClass>25</armorClass>
+    <saves/>
+    <health>120</health>
+    <immunities>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>saignement</immunity>
+      <immunity>sommeil</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>tentacule</name>
+        <bonus>+16</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d12+6</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="primal" DD="27" attack="+17">
+      <rank rank="2">
+        <spells>
+          <spell spellSpecial="à volonté">poussée hydraulique</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Constriction</name>
+        <description>1d12+6 contondants, DD 25 (p� 359)</description>
+      </special>
+      <special>
+        <name>Tsunami élémentaire</name>
+        <description>Aussi énormes que destructeurs, les tsunamis élémentaires ne démontrent aucune once des aspects doux et vitalisant de l’eau.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

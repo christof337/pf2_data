@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>BOURBOUIDE</name>
+    <type>CRÉATURE</type>
+    <level>5</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>ABERRATION</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+11</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+10</bonus>
+      </skill>
+    </skills>
+    <armorClass>20</armorClass>
+    <saves/>
+    <health>100</health>
+    <weaknesses>
+      <weakness>
+        <name>froid</name>
+        <value>5</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>tentacule +15, **Dégâts **2d8+8 contondants plus fièvre bourbouide **À distance** 1 crachat de larves</name>
+        <bonus>+14</bonus>
+        <traits>
+          <trait>facteur de portée 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8</amount>
+            <damageType>de saignement persistant</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Fièvre bourbouide</name>
+        <traits>
+          <trait>maladie</trait>
+        </traits>
+        <description>; **Jet de sauvegarde** Vigueur DD 20 ;</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Incubation</name>
+        <description>jour ; **Stade 1 **affaibli 1 (1 jour) ;</description>
+      </special>
+      <special>
+        <name>Stade 2</name>
+        <description>affaibli 2 et le DD pour se remettre du saignement persistant est augmenté de 2 (1 jour) ;</description>
+      </special>
+      <special>
+        <name>Stade 3</name>
+        <description>affaibli 3 et le DD pour se remettre du sai- gnement persistant est augmenté de 5 (1 jour) ;</description>
+      </special>
+      <special>
+        <name>Stade 4</name>
+        <description>affaibli 4, le DD pour se remettre du saignement persistant est augmenté de 5 et la victime subit 1d8 dégâts de saignement persistant toutes les 1d4 h (1 jour)</description>
+      </special>
+      <special>
+        <name>Rejeton vorace</name>
+        <description>Les larves lancées par le bour- bouide se fixent sur la cible et commencent à s’en nourrir� Une fois qu’une larve s’est fixée sur la cible, cette dernière devient drainée 1� Tant que la larve reste fixée sur elle, la cible ne peut pas se remettre du saignement persistant� Pour retirer la larve, la cible peut tenter un test pour S’échapper DD 21� Par ailleurs, tout dégât de zone subi par la cible détruit une larve fixée sur son corps�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

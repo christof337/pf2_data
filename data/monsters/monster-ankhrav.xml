@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>ANKHRAV</name>
+    <type>CRÉATURE</type>
+    <level>3</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+7</bonus>
+      <senses>
+        <sens>
+          <name>vision dans le noirm</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+6</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+11</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+8</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+4, **Dex **+1, **Con **+3, **Int **–4, **Sag **+0, **Cha **–2</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>18</armorClass>
+    <saves/>
+    <health>40</health>
+    <speeds>
+      <speed>7</speed>
+      <speed>5 m</speed>
+      <speed type="burrow">6 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mandibules</name>
+        <bonus>+13</bonus>
+        <traits>
+          <trait>acide</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8+4</amount>
+            <damageType>perforants</damageType>
+          </damage>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>d’acide</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>projection d’acide</name>
+        <bonus>+10</bonus>
+        <traits>
+          <trait>acide</trait>
+          <trait>portée 9 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d6</amount>
+            <damageType>d’acide</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>mandibules</name>
+        <bonus>+20</bonus>
+        <traits>
+          <trait>acide</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+6</amount>
+            <damageType>perforants</damageType>
+          </damage>
+          <damage>
+            <amount>2d6</amount>
+            <damageType>d’acide</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>projection d’acide</name>
+        <bonus>+17</bonus>
+        <traits>
+          <trait>acide</trait>
+          <trait>portée 9 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>5d6</amount>
+            <damageType>d’acide</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Aspersion d’acide</name>
+        <traits>
+          <trait>acide</trait>
+        </traits>
+        <description>� La mère de la ruche crache de l’acide dans un cône de 18 m, infligeant 8d6 dégâts d’acide et 1d6 dégâts d’acide persistants (jet de réflexes basique DD 26)� Elle ne peut plus cracher d’acide pendant 1d4 rounds�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Morsure de lacération d’armure</name>
+        <description>La mère de la ruche effectue une Frappe avec ses mandibules ; si la Frappe touche, l’armure de la cible subit les dégâts et les dégâts d’acide ignorent la Solidité de l’armure�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Phéromones de frénésie</name>
+        <description>La mère de la ruche libère des phéro- mones qui confèrent l’état accéléré 1 à tous les autres ankhravs situés dans une émanation de 30 m jusqu’au début de son prochain tour ; les ankhravs peuvent seulement utiliser leur action supplé- mentaire pour Creuser, Frapper ou Marcher rapidement� La mère de la ruche ne peut plus libérer ces phéromones avant 1d4 tours�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

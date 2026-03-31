@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>VÉLOCIRAPTOR</name>
+    <type>CRÉATURE</type>
+    <level>1</level>
+    <creatureTraits>
+      <trait type="size">PETITE</trait>
+      <trait>ANIMAL</trait>
+      <trait>DINOSAURE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+6</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>9 m</range>
+        </sens>
+        <sens>
+          <name>vision nocturne</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+5</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+6</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+0" DEX="+3" CON="+2" INT="+0" WIS="+1" CHA="+1"/>
+    <armorClass/>
+    <saves/>
+    <health/>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special>
+        <name>LES DINOSAURES
+                 DANS LA FANTAISIE</name>
+        <description>Au premier abord, inclure des dinosaures dans un univers de fantaisie peut paraître étrange, mais ce sont d’excellentes créatures à utiliser dans un jeu pour faire le lien entre des animaux du monde réel assez familiers et des monstres légendaires� Si mêler des dinosaures à des lions, des manticores et des dragons vous paraît tout de même étrange, considérez qu’ils vivent sur des terres primitives isolées comme cela est suggéré dans les encadrés p� 79−80�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GOGITETH</name>
+    <type>CRÉATURE</type>
+    <level>12</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>ABERRATION</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+19</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+24</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+21</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+17</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+6" DEX="+3" CON="+0" INT="+0" WIS="+0" CHA="+0"/>
+    <armorClass>31</armorClass>
+    <saves REF="+22" FOR="+25" WIL="+20"/>
+    <health>250</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires +26, **Dégâts** 3d10+12 perforants plus Empoignade améliorée (p� 359) **Corps à corps** 1 patte</name>
+        <bonus>+26</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d6+12</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Assaut hâtif</name>
+        <description>Le gogiteth Marche rapidement trois fois� Une fois par action Marcher rapidement, à n’importe quel moment pendant cette action, il peut tenter une Frappe avec une patte contre une créature à portée ; il doit effectuer chaque attaque contre une créa- ture différente mais il ne tient pas compte de son malus d’attaques multiples tant qu’il n’a pas effectué toutes ses Frappes� Si le résultat de l’une des Frappes est un échec critique, l’Assaut hâtif prend fin�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Constriction</name>
+        <description>3d6+12 contondants, DD 32 (p� 359)</description>
+      </special>
+      <special>
+        <name>Transporter une proie</name>
+        <description>Le gogiteth peut se déplacer à pleine Vitesse en ayant empoigné dans sa mâchoire une créature qu’il entraîne avec lui�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

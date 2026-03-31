@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>CHEVALIER ERRANT</name>
+    <type>CRÉATURE</type>
+    <level>4</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>ERRANT</trait>
+      <trait>ESPRIT</trait>
+      <trait>ÉTHÉRÉ</trait>
+      <trait>INTANGIBLE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <armorClass/>
+    <saves/>
+    <health/>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special>
+        <name>Langue</name>
+        <description>commun</description>
+      </special>
+      <special>
+        <name>Compétence</name>
+        <description>Intimidation +12</description>
+      </special>
+      <special>
+        <name>For</name>
+        <description>−5, **Dex **+4, **Con **+0, **Int **+0, **Sag **+5, **Cha** +4</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>HYAENODON</name>
+    <type>CRÉATURE</type>
+    <level>3</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <armorClass>18</armorClass>
+    <saves REF="+8" FOR="+10" WIL="+7"/>
+    <health>45</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Vitesse</name>
+        <description>2 m</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>mâchoires +12, **Dégâts** 1d10+5 perforants plus Renversement (p� 360) et broyage d’os</description>
+      </special>
+      <special>
+        <name>Attaque en meute</name>
+        <description>Les Frappes du hyaenodon infligent 1d6 dégâts sup- plémentaires aux créatures à portée d’au moins deux de ses alliés�</description>
+      </special>
+      <special>
+        <name>Broyage d’os</name>
+        <description>Une créature qui subit un coup critique à cause d’un hyae- nodon doit réussir un jet de Vigueur DD 20 ou être blessée 1 à cause de ses os broyés par les mâchoires de la bête�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Traîner</name>
+        <description>Comme la hyène�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

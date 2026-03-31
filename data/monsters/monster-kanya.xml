@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>KANYA</name>
+    <type>CRÉATURE</type>
+    <level>7</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>AZATA</trait>
+      <trait>CÉLESTE</trait>
+      <trait>SAINT</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+14</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+17</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+18</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+16</bonus>
+      </skill>
+      <skill>
+        <name>Nature</name>
+        <bonus>+14</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+14</bonus>
+      </skill>
+      <skill>
+        <name>Représentation</name>
+        <bonus>+20</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+12</bonus>
+      </skill>
+    </skills>
+    <armorClass>25</armorClass>
+    <saves REF="+16" FOR="+14" WIL="+16"/>
+    <health>135</health>
+    <weaknesses>
+      <weakness>
+        <name>fer froid</name>
+        <value>10</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>7</speed>
+      <speed>5 m</speed>
+      <speed type="fly">13</speed>
+      <speed>5 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>*épée longue*</name>
+        <bonus>+18</bonus>
+        <traits>
+          <trait>saint</trait>
+          <trait>magique</trait>
+          <trait>polyvalent P</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8+10</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>de son</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>queue</name>
+        <bonus>+17</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>saint</trait>
+          <trait>magique</trait>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+10</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="divine" DD="26">
+      <rank rank="4">
+        <spells>
+          <spell>apaiser, charme, clarté spirituelle, contre‑représentation (Livre des joueurs p� 371), explosion bruyante, suggestion</spell>
+        </spells>
+      </rank>
+      <rank rank="2">
+        <spells>
+          <spell>invisibilité</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special>
+        <name>Tours de magie (4</name>
+        <description>e**) ***chimère*, *convocation d’instrument*,* détection de la magie*, *hébétement*, *hymne au courage* (*Livre des joueurs* p� 371), *lumière, ouverture inspirante * (*Livre des joueurs* p� 371) ; **Constant* *(5**e**) ***langage universel*</description>
+      </special>
+      <special>
+        <name>Courage de la muse</name>
+        <description>Quand la kanya lance un *hymne au courage*, ce dernier confère un bonus de statut de +2 (au lieu de +1)�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

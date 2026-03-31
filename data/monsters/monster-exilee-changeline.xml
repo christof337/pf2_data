@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>EXILÉE CHANGELINE</name>
+    <type>CRÉATURE</type>
+    <level>3</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>CHANGELIN</trait>
+      <trait>HUMAIN</trait>
+      <trait>HUMANOÏDE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+11</bonus>
+      <senses>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+9</bonus>
+      </skill>
+      <skill>
+        <name>Médecine</name>
+        <bonus>+9</bonus>
+      </skill>
+      <skill>
+        <name>Nature</name>
+        <bonus>+11</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+9</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+4, **Dex **+1, **Con **+0, **Int **+0, **Sag **+4, **Cha **+2</description>
+      </special>
+      <special>
+        <name>Objets</name>
+        <description>armure de cuir, serpe, bâton</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>19</armorClass>
+    <saves REF="+8" FOR="+7" WIL="+11" saveSpecial="bonus de circonstances de +2 à tous les jets de sauvegarde contre les rêves et le sommeil"/>
+    <health>45</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+11</bonus>
+        <traits>
+          <trait>agile</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+4</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>bâton</name>
+        <bonus>+11</bonus>
+        <traits>
+          <trait>deux mains d8</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+4</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>serpe</name>
+        <bonus>+11</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>croc-en-jambe</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+4</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="prepared" tradition="primal" DD="21" attack="+11">
+      <rank rank="2">
+        <spells>
+          <spell>forme humanoïde, ténèbres</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Sorts d’ordre de druide</name>
+        <description>points de focalisation, DD 21 ; **2**e* forme indomptée* (*Livre des joueurs* p� 372), *transformation indomptée* (*Livre des joueurs* p� 373)</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

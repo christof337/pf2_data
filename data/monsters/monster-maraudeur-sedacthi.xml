@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>MARAUDEUR SÉDACTHI</name>
+    <type>CRÉATURE</type>
+    <level>4</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>AMPHIBIE</trait>
+      <trait>HUMANOÏDE</trait>
+      <trait>SÉDACTHI</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+9</bonus>
+      <senses>
+        <sens>
+          <name>perception des ondes</name>
+          <precision>précis</precision>
+          <range>9 m</range>
+          <source>p� 360</source>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+14</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+9</bonus>
+      </skill>
+    </skills>
+    <armorClass/>
+    <saves/>
+    <health/>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special>
+        <name>For</name>
+        <description>+6, **Dex **+3, **Con **+4, **Int **+0, **Sag **+1, **Cha **+3</description>
+      </special>
+      <special>
+        <name>Objets</name>
+        <description>cuirasse, lance (2)</description>
+      </special>
+      <special>
+        <name>Langage de la mer</name>
+        <description>Comme l’éclaireur sédacthi�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>CA</name>
+        <description>9 ; **Réf **+9, **Vig **+14, **Vol **+9</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

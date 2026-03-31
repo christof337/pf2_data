@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GÉANT DES RUNES</name>
+    <type>CRÉATURE</type>
+    <level>16</level>
+    <creatureTraits>
+      <trait type="size">GIGANTESQUE</trait>
+      <trait>GÉANT</trait>
+      <trait>HUMANOÏDE</trait>
+      <trait>IMPIE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <interactionAbilities>
+      <special>
+        <name>Langues</name>
+        <description>commun, jotun, pétran</description>
+      </special>
+      <special>
+        <name>Compétences</name>
+        <description>Arcanes +28, Artisanat +28, Athlétisme +32, Intimidation +28, Société +27</description>
+      </special>
+      <special>
+        <name>For</name>
+        <description>+9, **Dex **+2, **Con **+7, **Int **+2, **Sag **+6, **Cha **+4</description>
+      </special>
+      <special>
+        <name>Objets</name>
+        <description>*clibanion +1, épée à deux mains de frappe supérieure +2*, *pique de frappe +1*</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>38</armorClass>
+    <saves/>
+    <health>330</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>*épée à deux mains*</name>
+        <bonus>+33</bonus>
+        <traits>
+          <trait>allonge 6 m</trait>
+          <trait>magique</trait>
+          <trait>polyvalent P</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d12+17</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>*pique*</name>
+        <bonus>+32</bonus>
+        <traits>
+          <trait>allonge 7,5 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+17</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>poing</name>
+        <bonus>+31</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 6 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d8+17</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Sorts innés arcaniques</name>
+        <description>* *DD 35 ; **8**e* charme*, *suggestion* ; **6**e *discer‑ nement, domination *(×3) ; **5**e* communication à distance *; **4**e* charme *(à volonté),* suggestion *(à volonté) ; **Constant (7**e**) ***vol*</description>
+      </special>
+      <special>
+        <name>Contrôle des géants</name>
+        <description>Quand un géant des runes lance un sort mental sur un autre géant que lui, le DD est de 39 au lieu de 35�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Coup élargi</name>
+        <description>Le géant des runes effectue une unique Frappe d’épée à deux mains et compare le résultat de son jet d’attaque à la CA d’un maximum de deux adversaires à portée� Cette frappe compte comme deux attaques pour le malus d’attaques multiples du géant�</description>
+      </special>
+      <special type="activity" actions="0">
+        <name>Exigence</name>
+        <traits>
+          <trait>arcanique</trait>
+          <trait>mental</trait>
+        </traits>
+        <description>� Quand un géant des runes lance son sort inné *communication à distance*, il peut aussi lancer *suggestion *sur la cible�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Invoquer une rune</name>
+        <traits>
+          <trait>arcanique</trait>
+          <trait>concentration</trait>
+          <trait>électricité</trait>
+        </traits>
+        <description>� Le géant des runes invoque l’une des runes sur son corps pour qu’elle projette un cône d’étincelles de 9 m qui inflige 6d12 dégâts d’électricité à toutes les créatures situées dans le cône (jet de Réflexes basique DD 37)� Le géant doit attendre 1d4 rounds avant de pouvoir de nouveau Invoquer une rune� Une réplique luisante de la rune invoquée apparaît sur l’une des armes que tient le géant� Elle lui confère un effet choisi par le géant parmi ceux de la liste suivante� L’effet sur l’arme dure 1 min� Si le géant place une nouvelle rune sur l’arme, toute rune précédemment placée disparaît immédiatement, ce qui met fin à son effet�<list><listItem>**Rune de destruction.** L’arme obtient le trait mortel avec trois dés de dégâts d’arme du même type que ceux de l’arme de base, et une créature touchée par l’arme est drainée 1 à moins qu’elle ne réussisse un jet de Vigueur DD 35�</listItem><listItem>**Rune de flammes.** L’arme inflige 3d6 dégâts de feu supplémentaires sur toutes les attaques�</listItem><listItem>**Rune de choc.** Quand l’arme touche, le géant peut Bousculer la cible sur 3 m ou sur 6 m en cas de coup critique�</listItem><listItem>**Rune d’espace.** Pendant le tour du géant des runes, l’allonge de l’arme passe à 18 m�</listItem></list></description>
+      </special>
+      <special type="activity" actions="0">
+        <name>Runes étincelantes</name>
+        <traits>
+          <trait>arcanique</trait>
+          <trait>lumière</trait>
+        </traits>
+        <trigger>Le géant des runes utilise un pouvoir arcanique ou lance un sort arcanique ;</trigger>
+        <effect>Les runes sur le corps du géant brillent d’une énergie magique� Chaque créature dans une émanation de 3 m doit faire un jet de Vigueur DD 35�</effect>
+      </special>
+      <special>
+        <name>Succès critique</name>
+        <description>La créature n’est pas affectée�</description>
+      </special>
+      <special>
+        <name>Succès</name>
+        <description>La créature est éblouie pendant 1 round�</description>
+      </special>
+      <special>
+        <name>Échec</name>
+        <description>La créature est aveugle pendant 1 round�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

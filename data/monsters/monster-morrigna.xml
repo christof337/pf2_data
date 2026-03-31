@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>MORRIGNA</name>
+    <type>CRÉATURE</type>
+    <level>15</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>PSYCHOPOMPE</trait>
+      <trait>VEILLEUR</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+27</bonus>
+      </skill>
+      <skill>
+        <name>Connaissances sur le Cimetière</name>
+        <bonus>+28</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+27</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+27</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+29</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+29</bonus>
+      </skill>
+      <skill>
+        <name>Société</name>
+        <bonus>+24</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+8, **Dex **+4, **Con **+4, **Int **+3, **Sag **+6, **Cha **+4</description>
+      </special>
+      <special>
+        <name>Objet</name>
+        <description>* Bô de frappe +2*</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>38</armorClass>
+    <saves REF="+27" FOR="+25" WIL="+29" saveSpecial="bonus de statut de +1 à tous les jets de sauvegarde contre la magie"/>
+    <health>240</health>
+    <immunities>
+      <immunity>effets de mort</immunity>
+      <immunity>maladie</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>*Bô*</name>
+        <bonus>+31</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+          <trait>croc-en-jambe</trait>
+          <trait>magique</trait>
+          <trait>parade</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+14</amount>
+            <damageType>conton- dants</damageType>
+          </damage>
+          <damage>
+            <amount>4d6</amount>
+            <damageType>de toucher du berger</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>bandelettes de toile</name>
+        <bonus>+29</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d12+14</amount>
+            <damageType>contondants</damageType>
+          </damage>
+          <damage>
+            <amount>4d6</amount>
+            <damageType>de toucher du berger</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="spontaneous" tradition="divine" DD="35" attack="+30">
+      <rank rank="6">
+        <spells>
+          <spell>(4 emplacements) champ de vie, coup spiri‑ tuel, guérison</spell>
+        </spells>
+      </rank>
+      <rank rank="5">
+        <spells>
+          <spell>(4 emplacements) communication à distance, dissipation de la magie, œil‑éclaireur</spell>
+        </spells>
+      </rank>
+      <rank rank="4">
+        <spells>
+          <spell>(4 emplacements) déplacement sans entrave, globe de dissipation, lire les présages</spell>
+        </spells>
+      </rank>
+      <rank rank="3">
+        <spells>
+          <spell>(4 emplacements) cécité, manque de foi, message onirique</spell>
+        </spells>
+      </rank>
+      <rank rank="2">
+        <spells>
+          <spell>(4 emplacements) percevoir l’imperceptible, silence, tranquilliser</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special>
+        <name>Sorts innés divins</name>
+        <description>DD 37 ; **4**e *cadavre loquace* ; **Constant (5**e**) ***langage universel* ; **(2**e**) ** *communication avec les animaux*</description>
+      </special>
+      <special>
+        <name>Rituel</name>
+        <description>DD 37 ; *appel d’un esprit*</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Changement de forme</name>
+        <traits>
+          <trait>concentration</trait>
+          <trait>divine</trait>
+          <trait>métamorphose</trait>
+        </traits>
+        <description>� Une morrigna peut prendre l’apparence de n’importe quel animal ou humanoïde de Petite ou Moyenne taille (p� 358)� Cela ne modifie pas sa Vitesse ni le bonus à l’attaque et aux dégâts de ses Frappes, mais peut modifier le type de dégâts infligés avec ses Frappes� À moins de choisir de conserver ses bandelettes de toile avec sa nouvelle forme, elle ne peut pas utiliser de Frappes de bandelettes�</description>
+      </special>
+      <special type="activity" actions="3">
+        <name>Serviteurs arachnides</name>
+        <traits>
+          <trait>convocation</trait>
+          <trait>divine</trait>
+        </traits>
+        <description>� La morrigna convoque une tarentule géante (p� 22) ou une nuée d’araignées (p� 21)� Ces araignées ont le trait convoqué et restent 10 min ou jusqu’à ce qu’elles tombent à 0 PV� La morrigna n’a pas besoin de Maintenir le sort pour commander ces créatures convoquées, et elle peut avoir n’importe quel nombre d’araignées convoquées en même temps� À n’importe quel moment, elle peut voir à travers les yeux de n’importe laquelle des araignées convoquées�</description>
+      </special>
+      <special>
+        <name>Toucher du berger</name>
+        <description>Comme le nosoi, mais 4d6�</description>
+      </special>
+      <special>
+        <name>Yamaraje</name>
+        <description>Les juges les plus importants des psychopompes sont les yamarajes dont la sagesse est légendaire et les édits irrévocables (sauf intervention de guides ou de Pharasma elle‑même). Un yamaraje ressemble à un immense dragon avec des écailles plumeuses noires et un regard impassible et froid ressortant</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GLISSEMENT DE TERRAIN VIVANT</name>
+    <type>CRÉATURE</type>
+    <level>5</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>ÉLÉMENTAIRE</trait>
+      <trait>TERRE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+12</bonus>
+      <senses>
+        <sens>
+          <name>perception des vibrations</name>
+          <precision>imprécis</precision>
+          <range>18 m</range>
+        </sens>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <armorClass>21</armorClass>
+    <saves REF="+8" FOR="+15" WIL="+10"/>
+    <health>90</health>
+    <immunities>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>saignement</immunity>
+      <immunity>sommeil</immunity>
+    </immunities>
+    <speeds speedSpecial="glisse à travers la terre">
+      <speed>7</speed>
+      <speed>5 m</speed>
+      <speed type="burrow">7</speed>
+      <speed>5 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>poing</name>
+        <bonus>+16</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+8</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Glisse à travers la terre</name>
+        <description>Comme le molosse de tourbe�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Terrain instable</name>
+        <description>Le glissement de terrain vivant Marche rapidement jusqu’à deux fois sa Vitesse normale sur une ligne droite puis effectue un Croc-en-jambe contre une créature à portée� Si une créature tombe à terre à cause de son Croc-en-jambe, elle subit 1d4 dégâts contondants par tranche de 3 m parcourue par le glissement de terrain vivant�</description>
+      </special>
+      <special>
+        <name>Broyeur de pierre</name>
+        <description>Ces monceaux de terre imposants peuvent infliger de terribles dégâts aussi bien à courte portée qu’à distance.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>RAT DES BRAISES</name>
+    <type>CRÉATURE</type>
+    <level>3</level>
+    <creatureTraits>
+      <trait type="size">PETITE</trait>
+      <trait>ÉLÉMENTAIRE</trait>
+      <trait>FEU</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+10</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+10</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+9</bonus>
+      </skill>
+    </skills>
+    <armorClass>18</armorClass>
+    <saves REF="+12" FOR="+9" WIL="+6"/>
+    <health>45</health>
+    <immunities>
+      <immunity>feu</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>saignement</immunity>
+      <immunity>sommeil</immunity>
+    </immunities>
+    <weaknesses>
+      <weakness>
+        <name>eau</name>
+        <value>5</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+10</bonus>
+        <traits>
+          <trait>finesse</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8+4</amount>
+            <damageType>de feu</damageType>
+          </damage>
+          <damage>
+            <amount>1d4</amount>
+            <damageType>de feu persistants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Incendie vivant</name>
+        <description>Les incendies vivants ressemblent à des humanoïdes constitués de feu qui brûlent tout ce qu’il croise pour le plaisir. Les individus qui les convoquent tirent profit de ce trait de caractère et de leur nature explosive pour semer le chaos.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

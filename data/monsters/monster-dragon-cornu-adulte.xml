@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>DRAGON CORNU ADULTE</name>
+    <type>CRÉATURE</type>
+    <level>12</level>
+    <creatureTraits>
+      <trait type="size">TRÈS GRANDE</trait>
+      <trait>AMPHIBIE</trait>
+      <trait>DRAGON</trait>
+      <trait>PRIMORDIALE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+19</bonus>
+      </skill>
+      <skill>
+        <name>Arcanes</name>
+        <bonus>+22</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+24</bonus>
+      </skill>
+      <skill>
+        <name>Connaissances forestières</name>
+        <bonus>+22</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+23</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+21</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+19</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+23</bonus>
+      </skill>
+      <skill>
+        <name>Nature</name>
+        <bonus>+20</bonus>
+      </skill>
+      <skill>
+        <name>Occultisme</name>
+        <bonus>+24</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+6" DEX="+3" CON="+3" INT="+4" WIS="+4" CHA="+5"/>
+    <armorClass>34</armorClass>
+    <saves REF="+22" FOR="+20" WIL="+23" saveSpecial="bonus de statut de +1 à tous les jets de sauvegarde contre la magie"/>
+    <health>215</health>
+    <immunities>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>sommeil</immunity>
+    </immunities>
+    <reactiveAbilities>
+      <special>
+        <name>Présence terrifiante</name>
+        <traits>
+          <trait>aura</trait>
+          <trait>émotion</trait>
+          <trait>mental</trait>
+          <trait>terreur</trait>
+        </traits>
+        <description>30 m, DD 31 (p� 360)</description>
+      </special>
+      <special type="reaction">
+        <name>Queue sinueuse</name>
+        <description>Comme le jeune dragon cornu�</description>
+      </special>
+    </reactiveAbilities>
+    <speeds speedSpecial="Passage en forêt,">
+      <speed>12 m</speed>
+      <speed type="fly">48 m</speed>
+      <speed type="swim">12 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+26</bonus>
+        <traits>
+          <trait>allonge 4,5 m</trait>
+          <trait>magique</trait>
+          <trait>poison</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d10+12</amount>
+            <damageType>perforants</damageType>
+          </damage>
+          <damage>
+            <amount>3d4</amount>
+            <damageType>de poison</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+26</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 3 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d8+12</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+  </monster>
+</monsters>

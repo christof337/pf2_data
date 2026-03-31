@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GÉANT DU FEU</name>
+    <type>CRÉATURE</type>
+    <level>10</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>FEU</trait>
+      <trait>GÉANT</trait>
+      <trait>HUMANOÏDE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <armorClass/>
+    <saves/>
+    <health/>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special>
+        <name>Langues</name>
+        <description>commun, jotun, pyrique</description>
+      </special>
+      <special>
+        <name>Compétences</name>
+        <description>Athlétisme +25, Artisanat +22, Intimidation +23, Nature +18</description>
+      </special>
+      <special>
+        <name>For</name>
+        <description>+7, **Dex **+0, **Con **+5, **Int **+2, **Sag **+2, **Cha **+0</description>
+      </special>
+      <special>
+        <name>Objets</name>
+        <description>armure de plates +1, épée à deux mains de frappe +1, sac contenant 5 rochers</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

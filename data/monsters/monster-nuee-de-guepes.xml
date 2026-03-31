@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>NUÉE DE GUÊPES</name>
+    <type>CRÉATURE</type>
+    <level>4</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>ANIMAL</trait>
+      <trait>NUÉE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <interactionAbilities>
+      <special>
+        <name>Compétence</name>
+        <description>Acrobaties +12</description>
+      </special>
+      <special>
+        <name>For</name>
+        <description>–4, **Dex** +4, **Con** +2, **Int** –5, **Sag** +2, **Cha** –1</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>18</armorClass>
+    <saves REF="+12" FOR="+10" WIL="+8"/>
+    <health>45</health>
+    <immunities>
+      <immunity>à terre</immunity>
+      <immunity>empoigné</immunity>
+      <immunity>entravé</immunity>
+      <immunity>esprit de la nuée (p� 359)</immunity>
+      <immunity>précision</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special>
+        <name>Faiblesses</name>
+        <description>dégâts de zone 5, dégâts d’éclaboussure 5 ; **Résistances** contondants 7, perfo- rants 7, tranchants 3</description>
+      </special>
+      <special>
+        <name>Vitesses</name>
+        <description>6 m, vol 12 m</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Nuée de perforations</name>
+        <description>Chaque ennemi dans l’espace de la nuée subit 2d8 dégâts perforants (jet de Réflexes basique DD 21)� Une créature qui rate son jet de sauvegarde est également exposée au venin de la guêpe�</description>
+      </special>
+      <special>
+        <name>Venin de guêpe</name>
+        <traits>
+          <trait>poison</trait>
+        </traits>
+        <description>; **Jet de sauvegarde** Vigueur DD 21 ; **Durée maximale** 6 rounds ; **Stade 1 ** 1d6 de poison (1 round) ; **Stade 2 **2d6 de poison et maladroit 2 (2 rounds)</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

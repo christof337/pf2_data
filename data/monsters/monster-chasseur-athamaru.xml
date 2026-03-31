@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>CHASSEUR ATHAMARU</name>
+    <type>CRÉATURE</type>
+    <level>3</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>AMPHIBIE</trait>
+      <trait>ATHAMARU</trait>
+      <trait>HUMANOÏDE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>commun</language>
+      <language>thalassique</language>
+    </languages>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+11</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+5</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Nature</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+7</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+4, **Dex **+3, **Con **+0, **Int **+1, **Sag **+2, **Cha **+0</description>
+      </special>
+      <special>
+        <name>Objets</name>
+        <description>arbalète (12 carreaux éventails), armure d’écailles, pique</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>20</armorClass>
+    <saves/>
+    <health>38</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>pique</name>
+        <bonus>+11</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8+4</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>arbalète</name>
+        <bonus>+10</bonus>
+        <traits>
+          <trait>facteur de portée 36 m</trait>
+          <trait>rechargement 1</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Attaque en meute</name>
+        <description>Les Frappes du chasseur infligent 1d8 dégâts supplémentaires aux créatures qui se trouvent à portée d’au moins deux de ses alliés�</description>
+      </special>
+      <special>
+        <name>Carreaux éventails</name>
+        <description>Le chasseur fixe à ses carreaux d’arbalètes barbelés des algues tressées� Sur une Frappe d’arbalète réussie, le carreau s’enfonce et l’éventail d’algues se déploie� La cible subit un malus de statut de −3 m à sa Vitesse de nage� Une créature peut Interagir pour tenter un test d’Ath- létisme et ôter le carreau en cas de réussite�</description>
+      </special>
+      <special>
+        <name>Chasser en coopération</name>
+        <description>Après que le chasseur a tenté une Frappe (réussie ou non) contre une cible de taille Grande ou supérieure, la prochaine Frappe effectuée par l’un des alliés du chasseur contre la même cible bénéficie d’un bonus de circonstances de +2 au jet d’attaque�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Chasser une proie</name>
+        <traits>
+          <trait>concentration</trait>
+        </traits>
+        <description>� Le chasseur athamaru désigne une unique créature qu’il peut voir ou entendre ou qu’il Piste, et elle devient sa proie� Le chas- seur gagne un bonus de circonstances de +2 aux tests de Perception pour Chercher sa proie et aux tests de Survie pour la Pister� À chaque round, la première fois que l’athamaru touche la proie désignée, il lui inflige 1d8 dégâts de précision supplémentaires� Ces effets s’appliquent jusqu’à ce que le chasseur utilise de nouveau Chasser une proie�</description>
+      </special>
+      <special>
+        <name>Nageur expérimenté</name>
+        <description>Le chasseur athamaru ignore les terrains difficiles causés par les caractéristiques des terrains aquatiques�</description>
+      </special>
+      <special>
+        <name>XIDAO</name>
+        <description>La nation sous-marine de Xidao se trouve au Tian Xia, dans le golfe peu profond qui sépare le Minkaï et le continent� Si les nations-états qui constituent Xidao sont indépendantes, les athamarus en représentent la majorité de la population et, en pratique, ce sont eux qui le dirigent� Des obélisques de pierre, appelés tours de commerce, dont la cime émerge de la surface des du golfe servent à récupérer les offrandes des voyageurs� Ces points de repère sont gardés par des athamarus, qui guident les donateurs ou commercent avec eux� FRANCK PONT - lhanselo@hotmail.fr - 202602/3379711/4016001 [[PAGE 32]]</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

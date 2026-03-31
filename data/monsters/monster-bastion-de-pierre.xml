@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>BASTION DE PIERRE</name>
+    <type>CRÉATURE</type>
+    <level>11</level>
+    <creatureTraits>
+      <trait type="size"/>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <armorClass>30</armorClass>
+    <saves/>
+    <health>175</health>
+    <immunities>
+      <immunity>attaques non létales</immunity>
+      <immunity>condamné</immunity>
+      <immunity>drainé</immunity>
+      <immunity>effets de mort</immunity>
+      <immunity>esprit</immunity>
+      <immunity>fatigué</immunity>
+      <immunity>guérison</immunity>
+      <immunity>inconscient</immunity>
+      <immunity>malade</immunity>
+      <immunity>maladie</immunity>
+      <immunity>mental</immunity>
+      <immunity>néant</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>saignement</immunity>
+      <immunity>vitalité</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>poing</name>
+        <bonus>+24</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d10+13</amount>
+            <damageType>contondants et étreinte rocheuse</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>rocher</name>
+        <bonus>+22</bonus>
+        <traits>
+          <trait>brutal</trait>
+          <trait>facteur de portée 36 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+11</amount>
+            <damageType>conton- dants et étreinte rocheuse</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Étreinte rocheuse</name>
+        <traits>
+          <trait>arcanique</trait>
+          <trait>terre</trait>
+        </traits>
+        <description>� Toute créature touchée par une Frappe de poing ou de rocher du bastion de pierre est affectée par un sort *cloué à terre* DD 30�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Marche inexorable</name>
+        <description>Le bastion de pierre Marche rapidement jusqu’à sa Vitesse maximale en repoussant toute créature dans l’espace de laquelle il pénètre et en leur infligeant des dégâts si elles tentent de l’arrêter� Une créature peut tenter de lui bloquer le chemin en réussissant un jet de Vigueur DD 34� Sur un succès critique, la créature qui résiste ne subit aucun dégât ; sinon, elle subit des dégâts comme si elle avait été frappée par le poing du bastion�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Projection de rochers</name>
+        <traits>
+          <trait>p� 360</trait>
+        </traits>
+        <description/>
+      </special>
+      <special>
+        <name>Variantes de bastions</name>
+        <description>On trouve dans d’anciennes ruines, d’immenses bastions de pierre, les survivants de civilisations oubliées chargés d’exécuter les ordres de maîtres disparus depuis longtemps. Ces bastions sont au moins de niveau 15 et la plupart sont Gigantesques. Ils sont tellement grands, et les structures dans lesquelles ils résident tellement abîmées, que le simple fait de les réveiller peut provoquer la destruction des bâtiments environnants, l’affaissement des fondations ou l’ef‑ fondrement des plafonds. Ils peuvent attaquer avec des frappes de balayage très étendues capables d’abattre plusieurs cibles à la fois. Les bastions serpents‑de‑pierre sont des variantes ayant la forme de serpents ou d’hydres qui ont été créées par les artisans hommes‑serpents (p. 263). Ces bastions sont dotés du Souffle du serpent‑de‑pierre, mais ils n’ont pas étreinte rocheuse et Marche inexorable.</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Souffle du serpent‑de‑pierre</name>
+        <traits>
+          <trait>mise hors de combat</trait>
+          <trait>primordiale</trait>
+          <trait>terre</trait>
+        </traits>
+        <description>� Le bastion souffle un gaz vert dans un cône de 18 m� Chaque créature dans la zone d’effet doit faire un jet de Vigueur DD 34� Le bastion ne peut plus utiliser Souffle du serpent-de-pierre pendant 1d4 rounds�</description>
+      </special>
+      <special>
+        <name>Succès critique</name>
+        <description>La créature n’est pas affectée�</description>
+      </special>
+      <special>
+        <name>Succès</name>
+        <description>Le corps de la créature se rigidifie� Elle est ralentie 1 pendant 1 round�</description>
+      </special>
+      <special>
+        <name>Échec</name>
+        <description>La créature est pétrifiée pendant 1 min� Elle peut tenter un nouveau jet de sauvegarde à la fin de chacun de ses tours�</description>
+      </special>
+      <special>
+        <name>Échec critique</name>
+        <description>La créature est définitivement pétrifiée�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

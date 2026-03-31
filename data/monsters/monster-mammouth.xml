@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>MAMMOUTH</name>
+    <type>CRÉATURE</type>
+    <level>10</level>
+    <creatureTraits>
+      <trait type="size">TRÈS GRANDE</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+22</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+19</bonus>
+      </skill>
+    </skills>
+    <armorClass>29</armorClass>
+    <saves REF="+15" FOR="+21" WIL="+18" saveSpecial="bonus de statut de +2 aux jets de sauvegarde contre le froid"/>
+    <health>190</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>défense</name>
+        <bonus>+22</bonus>
+        <traits>
+          <trait>allonge 4,5 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d8+12</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>trompe</name>
+        <bonus>+22</bonus>
+        <traits>
+          <trait>allonge 4,5 m)</trait>
+          <trait>**Effet** Empoignade
+                                         à la trompe
+                                         **Corps à corps**
+                                               1
+                                                patte +22 (allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d10+12</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Double défenses</name>
+        <description>Le mammouth effectue deux Frappes de défense, chaque attaque étant dirigée contre une créature différente� Ces Frappes comptent comme une seule attaque pour le malus d’at- taques multiples du mammouth et le malus n’augmente pas avant que les deux attaques n’aient été effectuées�</description>
+      </special>
+      <special type="activity" actions="3">
+        <name>Piétinement</name>
+        <description>Grande ou plus petite, patte, DD 28 (p� 360)</description>
+      </special>
+      <special>
+        <name>Trompe constrictive</name>
+        <description>Comme l’éléphant�</description>
+      </special>
+      <special>
+        <name>IVOIRE</name>
+        <description>Les défenses d’éléphant sont des trésors très recherchés, l’ivoire d’une seule défense pouvant valoir des centaines de pièces d’or� Ceux qui accordent de l’importance à la présence majestueuse des éléphants sont d’irréductibles défenseurs de ces créatures, rendant très dangereuse la quête de l’ivoire�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

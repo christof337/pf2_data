@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>ARBRE ÉVEILLÉ</name>
+    <type>CRÉATURE</type>
+    <level>6</level>
+    <creatureTraits>
+      <trait type="size">TRÈS GRANDE</trait>
+      <trait>BOIS</trait>
+      <trait>PLANTE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+14</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+9</bonus>
+      </skill>
+    </skills>
+    <armorClass>22</armorClass>
+    <saves REF="+9" FOR="+16" WIL="+13"/>
+    <health>100</health>
+    <weaknesses>
+      <weakness>
+        <name>feu</name>
+        <value>10</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>branche</name>
+        <bonus>+16</bonus>
+        <traits>
+          <trait>allonge 4,5 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+6</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>racine</name>
+        <bonus>+16</bonus>
+        <traits>
+          <trait>croc-en-jambe</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+6</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Régent arboréen</name>
+        <description>Les régents arboréens, également appelés sylvaniens, sont de grandes créa‑ tures solitaires responsables de la protection de forêts entières. Ils ont une vision à très long terme et n’agissent jamais hâtivement ou sans avoir pris le temps de longuement réfléchir. Les régents se réunissent parfois en petits groupes appelés des bosquets pour échanger des nouvelles et partager leur sagesse avec les gardiens arboréens qui ont poussé sous leur garde. En cas de grand danger, tous les bosquets d’une région peuvent se réunir pour un conciliabule de plusieurs mois au cours duquel ils échafaudent un plan qu’ils finissent toujours par appliquer. Un régent arboréen typique mesure 9 m de haut, a un tronc de 60 cm de diamètre et pèse environ deux tonnes.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

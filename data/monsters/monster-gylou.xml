@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GYLOU</name>
+    <type>CRÉATURE</type>
+    <level>14</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>DIABLE</trait>
+      <trait>FIÉLON</trait>
+      <trait>IMPIE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+28</bonus>
+      </skill>
+      <skill>
+        <name>Arcanes</name>
+        <bonus>+25</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+28</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+28</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+28</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+30</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+26</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+4, **Dex **+8, **Con **+4,** Int **+5,** Sag **+6, **Cha **+8</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>36</armorClass>
+    <saves REF="+25" FOR="+22" WIL="+28" saveSpecial="bonus de statut de +1 aux jets de sauvegarde contre la magie"/>
+    <health>240</health>
+    <weaknesses>
+      <weakness>
+        <name>saint</name>
+        <value>10</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>tentacule</name>
+        <bonus>+30</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+          <trait>finesse</trait>
+          <trait>impie</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d12+12</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>griffe</name>
+        <bonus>+30</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+          <trait>impie</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d8+12</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="divine" DD="36" attack="+28">
+      <rank rank="7">
+        <spells>
+          <spell>dissipation de la magie, domination</spell>
+        </spells>
+      </rank>
+      <rank rank="5">
+        <spells>
+          <spell spellSpecial="à volonté">objet illusoire , serpents d’ombre, translocation</spell>
+        </spells>
+      </rank>
+      <rank rank="4">
+        <spells>
+          <spell spellSpecial="à volonté">charme (×3), discours captivant , translocation</spell>
+        </spells>
+      </rank>
+      <rank rank="7" constant="TRUE">
+        <spells>
+          <spell>discernement</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Cage tentaculaire</name>
+        <traits>
+          <trait>attaque</trait>
+        </traits>
+        <description>; **Conditions.** Une créature de Petite ou Moyenne taille est empoignée ou entravée par le gylou ;</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Changement de forme</name>
+        <traits>
+          <trait>concentration</trait>
+          <trait>divine</trait>
+          <trait>métamorphose</trait>
+        </traits>
+        <description>� Le gylou peut prendre l’apparence de n’importe quel humanoïde de Petite ou Moyenne taille (p� 358)� Cela ne modifie pas sa Vitesse ou les modificateurs à l’attaque et aux dégâts de sa Frappe mais cela peut modifier le type de dégâts infligés avec une Frappe (géné- ralement contondants)�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

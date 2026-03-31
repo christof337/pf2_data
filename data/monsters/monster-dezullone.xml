@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>DÉZULLONE</name>
+    <type>CRÉATURE</type>
+    <level>10</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>PLANTE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+21</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+19</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+21</bonus>
+      </skill>
+    </skills>
+    <armorClass>30</armorClass>
+    <saves REF="+21" FOR="+17" WIL="+16"/>
+    <health>130</health>
+    <speeds>
+      <speed>7</speed>
+      <speed>5 m</speed>
+      <speed type="climb">9 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>liane</name>
+        <bonus>+21</bonus>
+        <traits>
+          <trait>acide</trait>
+          <trait>agile</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d6+8</amount>
+            <damageType>contondants</damageType>
+          </damage>
+          <damage>
+            <amount>3d6</amount>
+            <damageType>d’acide et Empoignade (p� 359)</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>globe d’acide</name>
+        <bonus>+23</bonus>
+        <traits>
+          <trait>acide</trait>
+          <trait>portée 9 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>4d8</amount>
+            <damageType>d’acide</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Constriction</name>
+        <description>2d6+2 contondants, DD 29 (p� 359)</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Enracinement</name>
+        <traits>
+          <trait>concentration</trait>
+        </traits>
+        <description>� Jusqu’à sa prochaine action, la dézullone a l’air d’une plante carnivore normale� Elle dispose d’un résultat automatique de 41 (44 dans les forêts et les marais) pour les tests de Duperie et les DD visant à se faire passer pour une plante normale�</description>
+      </special>
+      <special>
+        <name>Venin d’amnésie</name>
+        <traits>
+          <trait>mental</trait>
+          <trait>poison</trait>
+        </traits>
+        <description>; **Jet de sauvegarde** Vigueur DD 29 ;</description>
+      </special>
+      <special>
+        <name>Durée maximum</name>
+        <description>6 rounds ; **Stade 1** pris par surprise (1 round) ;</description>
+      </special>
+      <special>
+        <name>Stade 2</name>
+        <description>pris par surprise et maladroit 1 (1 round) ; **Stade 3** confus, pris par surprise et maladroit 2 (1 round) ; **Stade 4** comme le stade 3 et oubli définitif de la dernière heure écoulée (1 round)</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

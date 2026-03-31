@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>OURAGAN ÉLÉMENTAIRE</name>
+    <type>CRÉATURE</type>
+    <level>11</level>
+    <creatureTraits>
+      <trait type="size">TRÈS GRANDE</trait>
+      <trait>AIR</trait>
+      <trait>ÉLÉMENTAIRE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+24</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+21</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+22</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+6" DEX="+7" CON="+4" INT="+0" WIS="+3" CHA="+0"/>
+    <armorClass>32</armorClass>
+    <saves REF="+24" FOR="+19" WIL="+18"/>
+    <health>140</health>
+    <immunities>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>saignement</immunity>
+      <immunity>sommeil</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>rafale</name>
+        <bonus>+24</bonus>
+        <traits>
+          <trait>allonge 6 m</trait>
+          <trait>finesse</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d10+12</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>décharge de foudre</name>
+        <bonus>+24</bonus>
+        <traits>
+          <trait>facteur de portée
+ 22,5 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d12+6</amount>
+            <damageType>d’électricité</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Célérité</name>
+        <description>Le déplacement de l’élémentaire ne déclenche pas de réaction�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Souffle de tempête</name>
+        <traits>
+          <trait>air</trait>
+        </traits>
+        <description>L’élémentaire souffle un cône d’air de 9 m� Les créatures dans le cône doivent réussir un jet de Vigueur DD 29 ou être repoussées par rapport à l’élémentaire� Une créature poussée contre un objet solide est arrêtée dans son mouvement et subit 10d6 dégâts contondants (lancez une seule fois les dégâts pour toutes les créatures)� L’ouragan élémentaire ne peut plus utiliser Souffle de tempête pendant 1d4 rounds�</description>
+      </special>
+      <special>
+        <name>Succès critique</name>
+        <description>La créature n’est pas affectée�</description>
+      </special>
+      <special>
+        <name>Succès</name>
+        <description>La créature est bousculée sur 6 m�</description>
+      </special>
+      <special>
+        <name>Échec</name>
+        <description>La créature est bousculée de 12 m�</description>
+      </special>
+      <special>
+        <name>Échec critique</name>
+        <description>La créature est bousculée sur 12 m et tombe à terre�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

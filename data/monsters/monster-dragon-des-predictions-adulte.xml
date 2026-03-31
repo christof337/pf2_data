@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>DRAGON DES PRÉDICTIONS ADULTE</name>
+    <type>CRÉATURE</type>
+    <level>11</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>DRAGON</trait>
+      <trait>OCCULTE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+21</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>18 m</range>
+        </sens>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+21</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+22</bonus>
+      </skill>
+      <skill>
+        <name>Connaissances (n’importe quelle sous-catégo- rie)</name>
+        <bonus>+24</bonus>
+      </skill>
+      <skill>
+        <name>Connaissances sur la voyance</name>
+        <bonus>+26</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+20</bonus>
+      </skill>
+      <skill>
+        <name>Occultisme</name>
+        <bonus>+24</bonus>
+      </skill>
+      <skill>
+        <name>Société</name>
+        <bonus>+22</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+7" DEX="+4" CON="+5" INT="+7" WIS="+6" CHA="+3"/>
+    <armorClass>30</armorClass>
+    <saves REF="+19" FOR="+20" WIL="+23" saveSpecial="bonus de statut de +2 à tous les jets de sauvegarde contre la magie occulte"/>
+    <health>185</health>
+    <immunities>
+      <immunity>condamné</immunity>
+      <immunity>confus</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>sommeil</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+22</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+11</amount>
+            <damageType>perforants</damageType>
+          </damage>
+          <damage>
+            <amount>1d8</amount>
+            <damageType>mental</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+22</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+11</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+          <damage>
+            <amount>1d8</amount>
+            <damageType>mental</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>queue</name>
+        <bonus>+20</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+11</amount>
+            <damageType>contondants</damageType>
+          </damage>
+          <damage>
+            <amount>1d8</amount>
+            <damageType>mental</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>aile</name>
+        <bonus>+20</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 3 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8+11</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+          <damage>
+            <amount>1d8</amount>
+            <damageType>mental</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="occult" DD="30">
+      <rank rank="5">
+        <spells>
+          <spell spellSpecial="à volonté">mauvais augure , frappe infaillible (x2), lien mental</spell>
+        </spells>
+      </rank>
+    </spellList>
+  </monster>
+</monsters>

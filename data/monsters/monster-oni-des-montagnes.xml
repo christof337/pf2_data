@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>ONI DES MONTAGNES</name>
+    <type>CRÉATURE</type>
+    <level>8</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>GÉANT</trait>
+      <trait>HUMANOÏDE</trait>
+      <trait>ONI</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+17</bonus>
+      <senses>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages>
+      <language>commun</language>
+    </languages>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+16</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+18</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+18</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+17</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+6" DEX="+3" CON="+4" INT="+0" WIS="+3" CHA="+4"/>
+    <interactionAbilities>
+      <special>
+        <name>Objet</name>
+        <description>* tetsubo de frappe +1* (voir encadré)</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>26</armorClass>
+    <saves REF="+15" FOR="+18" WIL="+14"/>
+    <health>165</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>*tetsubo*</name>
+        <bonus>+21</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+          <trait>balayage</trait>
+          <trait>démoli-
+ tion</trait>
+          <trait>magique</trait>
+          <trait>pousser) **Dégâts** 2d10+9 contondants
+**Corps à corps**
+      1
+        mâchoires +20 (allonge 3 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+9</amount>
+            <damageType>perforants</damageType>
+          </damage>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>de saignement persistants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="primal" DD="25"/>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Changement de forme</name>
+        <description>(concentration, métamorphose, primor- diale) L’oni des montagnes peut prendre l’apparence de n’importe</description>
+      </special>
+      <special>
+        <name>TETSUBO</name>
+        <description>Un oni des montagnes manie un tetsubo� Cette arme de guerre inhabituelle coûte 3 po, inflige 1d10 dégâts contondants, a un Encombrement de 3 et doit être utilisée à deux mains� Elle fait partie du groupe d’armes des gourdins et a les traits démolition, pousser et balayage� Le trait démolition signifie qu’à chaque fois que l’arme inflige des dégâts à un objet, ce dernier subit un nombre de dégâts supplémentaires égal au double du nombre de dés de dégâts�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

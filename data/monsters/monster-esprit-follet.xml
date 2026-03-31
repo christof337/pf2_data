@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>ESPRIT FOLLET</name>
+    <type>CRÉATURE</type>
+    <level>-1</level>
+    <creatureTraits>
+      <trait type="size">TRÈS PETITE</trait>
+      <trait>ESPRIT</trait>
+      <trait>FOLLET</trait>
+      <trait>ESPRIT</trait>
+      <trait>FOLLET</trait>
+      <trait>FÉE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <armorClass>15</armorClass>
+    <saves REF="+8" FOR="+2" WIL="+4"/>
+    <health>7</health>
+    <weaknesses>
+      <weakness>
+        <name>fer froid</name>
+        <value>3</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>rapière</name>
+        <bonus>+8</bonus>
+        <traits>
+          <trait>allonge 0 m</trait>
+          <trait>désarmer</trait>
+          <trait>feu</trait>
+          <trait>finesse</trait>
+          <trait>magique</trait>
+          <trait>mortel 1d8</trait>
+        </traits>
+        <damages/>
+      </strike>
+      <strike type="ranged">
+        <name>étincelle lumineuse</name>
+        <bonus>+8</bonus>
+        <traits>
+          <trait>feu</trait>
+          <trait>lumière</trait>
+          <trait>portée 6 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4</amount>
+            <damageType>de feu</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="primal" DD="16"/>
+    <offensiveAbilities>
+      <special>
+        <name>Draxie</name>
+        <description>Les malicieux esprits follets dragons appelés draxies se battent depuis des siècles avec leurs cousins les pixies pour le titre de meilleurs farceurs. Les draxies font preuve de patience et d’organi‑ sation pour créer les farces parfaites et passent des mois, voire des années, à les élaborer. L’élucréa, un lien à vie formé entre un draxie et une ou plusieurs créatures qu’il aime particulièrement (généralement celles avec un bon sens de l’humour), est la seule chose allant à l’encontre du caractère volage de cette créature. Selon les légendes draxies, un petit morceau de l’esprit d’un draxie se rappelle encore avoir été uni à l’ancien dragonneau féerique Élucrédassa et ce serait la raison de leur envie de forger de tels liens avec d’autres créatures.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

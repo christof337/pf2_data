@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>BONNET ROUGE</name>
+    <type>CRÉATURE</type>
+    <level>5</level>
+    <creatureTraits>
+      <trait type="size">PETITE</trait>
+      <trait>FÉE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+15</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+11</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Nature</name>
+        <bonus>+10</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+4, **Dex **+4, **Con **+2, **Int **+1, **Sag **+1, **Cha **+2</description>
+      </special>
+      <special>
+        <name>Objets</name>
+        <description>bonnet rouge, bottes ferrées, hallebarde, serpe</description>
+      </special>
+      <special>
+        <name>Bonnet rouge</name>
+        <traits>
+          <trait>primordiale</trait>
+        </traits>
+        <description>� Le bonnet de laine d’un bonnet rouge est imprégné du sang de ses victimes� Si le bonnet rouge perd son bonnet, il ne bénéficie plus des effets de sa guérison accélérée et subit un malus de −4 à ses jets de dégâts� Il peut créer un nouveau bonnet en 10 min mais ce bonnet ne lui confère aucun pouvoir tant qu’il l’a pas coloré de rouge avec une Imbibition de sang� Un bonnet ne confère ses pouvoirs à aucune autre créature que le bonnet rouge qui l’a créé�</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>21</armorClass>
+    <saves REF="+15" FOR="+11" WIL="+10"/>
+    <health>60</health>
+    <weaknesses>
+      <weakness>
+        <name>fer froid</name>
+        <value>5</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>hallebarde</name>
+        <bonus>+15</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+          <trait>polyvalent T</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d10+10</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>serpe</name>
+        <bonus>+15</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>croc-en-jambe</trait>
+          <trait>finesse</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+10</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>botte ferrée</name>
+        <bonus>+13</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>polyvalent C</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+8</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="reaction">
+        <name>Coup tranchant mortel</name>
+        <trigger>Le bonnet rouge réduit une créature à 0 point de vie grâce à une Frappe de serpe ;</trigger>
+        <effect>Le bonnet rouge porte une autre Frappe de serpe contre une créature différente, avec le même malus d’attaques multiples que la Frappe qui a déclenché cette réaction� Cette attaque est prise en compte dans son malus d’attaques multiples�</effect>
+      </special>
+      <special type="activity" actions="1">
+        <name>Fouler du pied</name>
+        <description>Le bonnet rouge Marche rapidement sur une distance maximale égale à la moitié de sa Vitesse et porte une Frappe avec sa chaussure à n’im- porte quel moment lors de ce déplacement� Si la Frappe de chaussure touche une créature à terre, elle lui inflige 2d6 dégâts de saignement persistants�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Imbibition de sang</name>
+        <traits>
+          <trait>manipulation</trait>
+        </traits>
+        <description>� Le bonnet rouge trempe son bonnet dans le sang d’un ennemi qu’il a tué� Cet ennemi doit être mort au cours de la dernière minute écoulée et le bonnet rouge doit avoir participé à sa mise à mort� Le bonnet rouge gagne un bonus de statut de +4 à ses jets de dégâts pendant 1 min�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

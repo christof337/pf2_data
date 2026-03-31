@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>VÉNÉDAÉMON</name>
+    <type>CRÉATURE</type>
+    <level>5</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>DAÉMONS</trait>
+      <trait>FIÉLON</trait>
+      <trait>IMPIE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+12</bonus>
+      <senses>
+        <sens>
+          <name>sentir la magie</name>
+          <precision>imprécis</precision>
+          <range>18 m</range>
+        </sens>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <interactionAbilities>
+      <special>
+        <name>Langues</name>
+        <description>aklo, commun, chthonien, daémonique, diabolique, draconique, réquien ; télépathie 30 m (p� 316)</description>
+      </special>
+      <special>
+        <name>Compétences</name>
+        <description>Acrobaties+13, Arcanes 16, Connaissances sur le métier de scribe +14, Duperie +12, Occultisme +14, Religion +13</description>
+      </special>
+      <special>
+        <name>For</name>
+        <description>+2, **Dex **+4,** Con **+2, **Int **+5, **Sag **+3, **Cha **+3</description>
+      </special>
+      <special>
+        <name>Sentir la magie</name>
+        <description>Un vénédaémon renifle la présence d’objets magiques et de sorts actifs comme s’il utilisait un sens imprécis� Les subtiles différences d’odeurs lui révèlent la tradition et les traits de la magie�</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>21</armorClass>
+    <saves REF="+11" FOR="+9" WIL="+14" saveSpecial="bonus de statut de +1 aux jets de sauvegarde contre la magie"/>
+    <health>75</health>
+    <immunities>
+      <immunity>effets de mort</immunity>
+    </immunities>
+    <weaknesses>
+      <weakness>
+        <name>saint</name>
+        <value>5</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>tentacule</name>
+        <bonus>+13</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 3 m</trait>
+          <trait>finesse</trait>
+          <trait>impie</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+5</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="divine" DD="22">
+      <rank rank="4">
+        <spells>
+          <spell>translocation</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Chuchotements malsains</name>
+        <description>(arcanique, audible, concentration, linguistique, mental)� Le vénédaémon chuchote à une créature dans un rayon de 4,5 m qui doit réussir un jet de Volonté DD 22 ou être stupéfiée 2 pendant 1 min (ou stupéfiée 3 en cas d’échec critique)� La créature est immunisée aux chuchotements malsains pendant 24 h, quel que soit le résultat du jet de sauvegarde�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Force résiduelle</name>
+        <traits>
+          <trait>arcanique</trait>
+          <trait>force</trait>
+        </traits>
+        <description>; **Conditions.** La dernière action du véné- daémon consistait à Lancer un sort ;</description>
+      </special>
+      <special>
+        <name>Sort d’âme</name>
+        <description>Si un vénédaémon dévore une gemme d’âme d’un cacodaémon, il peut récupérer un emplacement de sort dépensé au lieu de gagner guérison accélérée� Le rang de l’emplacement de sort ne peut pas être supérieur à la moitié du niveau (arrondie au supérieur) de la créature dont l’âme a été ingérée�</description>
+      </special>
+      <special>
+        <name>GEMMES D’ÂME
+                                            EN TANT QUE TRÉSOR</name>
+        <description>Les gemmes d’âmes sont vendues dans des marchés illégaux, une tradition que les célestes et les psychopompes considèrent comme vile� La valeur des gemmes d’âme est très variable mais leur montant dépend généralement du niveau de l’âme qui y est emprisonnée�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

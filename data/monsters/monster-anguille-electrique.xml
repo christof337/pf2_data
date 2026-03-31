@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>ANGUILLE ÉLECTRIQUE</name>
+    <type>CRÉATURE</type>
+    <level>1</level>
+    <creatureTraits>
+      <trait type="size">PETITE</trait>
+      <trait>ANIMAL</trait>
+      <trait>AQUATIQUE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+4</bonus>
+      <senses>
+        <sens>
+          <name>vision nocturne</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+6</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+7</bonus>
+      </skill>
+    </skills>
+    <armorClass>16</armorClass>
+    <saves REF="+7" FOR="+7" WIL="+4"/>
+    <health>18</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires +6, **Dégâts** 1d6+3 perforants **Corps à corps** 1 queue</name>
+        <bonus>+6</bonus>
+        <traits>
+          <trait>agile</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+1</amount>
+            <damageType>contondants</damageType>
+          </damage>
+          <damage>
+            <amount>1d4</amount>
+            <damageType>électricité et choc étourdissant</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Choc étourdissant</name>
+        <traits>
+          <trait>mise hors de combat</trait>
+        </traits>
+        <description>Une créature qui subit une attaque critique à cause de la queue d’une anguille électrique doit effectuer un jet de Vigueur DD 17�</description>
+      </special>
+      <special>
+        <name>Succès critique</name>
+        <description>La créature n’est pas affectée�</description>
+      </special>
+      <special>
+        <name>Succès</name>
+        <description>La créature est étourdie 1�</description>
+      </special>
+      <special>
+        <name>Échec</name>
+        <description>La créature est étourdie 2�</description>
+      </special>
+      <special>
+        <name>Échec critique</name>
+        <description>La créature est étourdie 3�</description>
+      </special>
+      <special>
+        <name>Murène géante</name>
+        <description>Les murènes géantes vivent en eaux tropicales chaudes et construisent leur antre dans d’étroites et sinueuses grottes constituées de coraux. Leur taille, leur vitesse et leurs puissantes mâchoires les rendent dangereuses pour les plongeurs et les pêcheurs. Elles ont une peau caoutchouteuse qui sécrète une couche de mucus et les rend difficiles à blesser avec certaines armes.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

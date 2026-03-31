@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>OMOX</name>
+    <type>CRÉATURE</type>
+    <level>12</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>DÉMONS</trait>
+      <trait>FIÉLON</trait>
+      <trait>IMPIE</trait>
+      <trait>VASE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+21</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+23</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+24</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+20</bonus>
+      </skill>
+    </skills>
+    <armorClass>25</armorClass>
+    <saves REF="+21" FOR="+23" WIL="+20" saveSpecial="bonus de statut de +1 aux jets de sau- vegarde contre la magie"/>
+    <health>395</health>
+    <immunities>
+      <immunity>acide</immunity>
+      <immunity>coups critiques</immunity>
+      <immunity>maladie</immunity>
+      <immunity>poison</immunity>
+      <immunity>précision</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>tentacule de vase</name>
+        <bonus>+25</bonus>
+        <traits>
+          <trait>acide</trait>
+          <trait>impie</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+13</amount>
+            <damageType>contondants</damageType>
+          </damage>
+          <damage>
+            <amount>2d6</amount>
+            <damageType>acide et Empoignade (p� 359)</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+  </monster>
+</monsters>

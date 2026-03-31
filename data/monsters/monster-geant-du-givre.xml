@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GÉANT DU GIVRE</name>
+    <type>CRÉATURE</type>
+    <level>9</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>FROID</trait>
+      <trait>GÉANT</trait>
+      <trait>HUMANOÏDE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <armorClass>29</armorClass>
+    <saves/>
+    <health>150</health>
+    <weaknesses>
+      <weakness>
+        <name>feu</name>
+        <value>10</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>*grande hache*</name>
+        <bonus>+21</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+          <trait>balayage</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d12+12</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>poing</name>
+        <bonus>+21</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+12</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>stalactite</name>
+        <bonus>+19</bonus>
+        <traits>
+          <trait>froid</trait>
+          <trait>portée 36 m</trait>
+          <trait>primordiale</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8</amount>
+            <damageType>perforants</damageType>
+          </damage>
+          <damage>
+            <amount>3d6</amount>
+            <damageType>de froid</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Coup élargi</name>
+        <description>Le géant du givre effectue une unique Frappe de grande hache et compare le résultat de son jet d’attaque à la CA d’un maximum de deux adversaires à portée� Cette frappe compte comme deux attaques pour le malus d’attaques multiples du géant du givre�</description>
+      </special>
+      <special>
+        <name>Marche sur la glace</name>
+        <description>Un géant du givre n’est pas ralenti par un terrain rendu difficile par la neige ou la glace� Il n’a pas non plus à faire de tests d’Acrobaties pour éviter de tomber en glissant sur du verglas�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Souffle glacial</name>
+        <traits>
+          <trait>froid</trait>
+          <trait>primordiale</trait>
+        </traits>
+        <description>� Le géant du givre souffle un cône de 4,5 m d’humidité extrêmement froide qui se transforme rapidement en glace et inflige 4d6 dégâts de froid� Chaque créature dans le cône doit faire un jet de Réflexes basique DD 28� Une créature qui rate son jet de sauvegarde est également immobilisée et subit 2d6 dégâts de froid à la fin de chacun de ses tours jusqu’à ce qu’elle se libère (S’échapper DD 28)� Le géant doit attendre 1d4 rounds avant de pouvoir réutiliser son Souffle glacial�</description>
+      </special>
+      <special>
+        <name>Géant du feu</name>
+        <description>Les géants du feu, les plus militaristes de tous les géants, se concentrent de manière obses‑ sionnelle sur l’apprentissage de techniques de combat, sur la maîtrise de la forge d’armes et d’armures et sur la recherche de nouvelles techniques pour dominer leurs ennemis. La plupart de leurs communautés sont bâties autour de failles élémentaires, de sources d’eau chaude ou de caldeiras volcaniques. Il leur est donc difficile de changer de lieu de vie, ce qui les encourage à chercher des systèmes de défense infaillibles contre les intrus. C’est pourquoi leurs structures sociale et politique sont basées sur des hiérarchies martiales strictes, dont chaque membre sait qu’il se doit de suivre les ordres de son supérieur. Un géant du feu enfile sa première armure forgée dès ses premiers pas. Celle‑ci est ensuite constamment remodelée et modifiée à mesure qu’il grandit. En dehors de tous les armements qu’ils forgent dans leurs fourneaux volcaniques, les géants du feu aiment également utiliser sur les champs de bataille des dinosaures, des drakes et des molosses infernaux dressés. Les géants du feu sont généralement faciles à reconnaître grâce à leur stature imposante et à leurs cheveux orange vif qui brillent et vacillent comme des flammes. En moyenne, un géant du feu mesure plus de 4 m, pèse autour des 3 500 kg et vit environ 350 ans.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

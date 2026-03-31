@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>DRYADE SOUVERAINE</name>
+    <type>CRÉATURE</type>
+    <level>13</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>BOIS</trait>
+      <trait>FÉE</trait>
+      <trait>NYMPHE</trait>
+      <trait>PLANTE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>commun</language>
+      <language>elfique</language>
+      <language>féerique</language>
+      <language>muane</language>
+    </languages>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+25</bonus>
+      </skill>
+      <skill>
+        <name>Artisanat</name>
+        <bonus>+23</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+19</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+30</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+25</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+30</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+27</bonus>
+      </skill>
+      <skill>
+        <name>Nature</name>
+        <bonus>+24</bonus>
+      </skill>
+      <skill>
+        <name>Représentation</name>
+        <bonus>+28</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+24</bonus>
+      </skill>
+    </skills>
+    <armorClass>35</armorClass>
+    <saves REF="+26" FOR="+24" WIL="+24"/>
+    <health>220</health>
+    <weaknesses>
+      <weakness>
+        <name>fer froid</name>
+        <value>10</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>branche</name>
+        <bonus>+27</bonus>
+        <traits>
+          <trait>finesse</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d12+8</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>feuilles</name>
+        <bonus>+27</bonus>
+        <traits>
+          <trait>facteur de portée 18 m</trait>
+          <trait>plante</trait>
+          <trait>primordiale</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d8+6</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="prepared" tradition="primal" DD="35" attack="+25">
+      <rank rank="7">
+        <spells>
+          <spell>convocation de plante ou de champi‑ gnon, régénération</spell>
+        </spells>
+      </rank>
+      <rank rank="5">
+        <spells>
+          <spell>bannissement, blizzard hurlant, guérison</spell>
+        </spells>
+      </rank>
+      <rank rank="4">
+        <spells>
+          <spell>résilience de la montagne, résistance à l’énergie, vol</spell>
+        </spells>
+      </rank>
+      <rank rank="3">
+        <spells>
+          <spell>cloué à terre, mur d’épines, rapidité</spell>
+        </spells>
+      </rank>
+      <rank rank="2">
+        <spells>
+          <spell>délivrance de la peur, lumière révélatrice, messager animal</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special>
+        <name>Sorts innés primordiaux</name>
+        <description>DD 35, attaque +25 ; **8**e* ronces empaleuses* (*Livre des Joueurs* p� 372), **5 e*** passage sylvestre* (×3),* symbiose végétale* (à volonté) ; **4**e* charme* (à volonté), *enchevê‑ trement végétal* (à volonté) ; *façonnage du bois* (à volonté), *suggestion* (à volonté) ; **Tours de magie (5**e**) ***piège de liane*</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Changement de forme</name>
+        <traits>
+          <trait>primordiale</trait>
+        </traits>
+        <description>(p� 358)</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Focaliser la beauté</name>
+        <traits>
+          <trait>émotion</trait>
+          <trait>mental</trait>
+          <trait>mise hors de combat</trait>
+          <trait>primordiale</trait>
+          <trait>visuel</trait>
+        </traits>
+        <description>� En cas d’échec au jet de sauvegarde, si la cible était déjà affectée par la beauté de la dryade souveraine, elle ne peut utiliser d’action hostile contre elle pendant 1 h�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Fusion avec les arbres</name>
+        <traits>
+          <trait>primordiale</trait>
+        </traits>
+        <description>� Comme la dryade, mais la dryade souveraine peut entrer dans son domaine extradimensionnel, et le quit- ter, à partir de n’importe quel arbre de son domaine et, quand elle le fait, elle peut amener avec elle jusqu’à huit autres créatures�</description>
+      </special>
+      <special type="activity" actions="3">
+        <name>Inspiration</name>
+        <traits>
+          <trait>émotion</trait>
+          <trait>mental</trait>
+          <trait>primordiale</trait>
+        </traits>
+        <description/>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

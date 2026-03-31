@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>SERGENT KHOLO</name>
+    <type>CRÉATURE</type>
+    <level>4</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>HUMANOÏDE</trait>
+      <trait>KHOLO</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>commun</language>
+      <language>kholo</language>
+    </languages>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+11</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+9</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+10</bonus>
+      </skill>
+    </skills>
+    <armorClass>21</armorClass>
+    <saves REF="+10" FOR="+12" WIL="+8"/>
+    <health>60</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>cimeterre</name>
+        <bonus>+14</bonus>
+        <traits>
+          <trait>percutant</trait>
+          <trait>balayage</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+7</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+14</bonus>
+        <traits>
+          <trait>agile</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+7</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>arc court composite</name>
+        <bonus>+12</bonus>
+        <traits>
+          <trait>mortel d10</trait>
+          <trait>propulsif</trait>
+          <trait>facteur de portée
+                                      18 m</trait>
+          <trait>rechargement 0</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+4</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Aboyer des ordres</name>
+        <traits>
+          <trait>audible</trait>
+          <trait>linguistique</trait>
+        </traits>
+        <description>� Le sergent kholo donne des ordres pour mettre ses alliés en position� Tout allié qui entend et comprend ces ordres peut utiliser une réaction pour Faire un pas�</description>
+      </special>
+      <special>
+        <name>Attaque en meute</name>
+        <description>Comme le chasseur kholo�</description>
+      </special>
+      <special>
+        <name>Tout terrain</name>
+        <description>Comme le chasseur kholo�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

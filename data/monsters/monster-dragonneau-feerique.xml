@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>DRAGONNEAU FÉERIQUE</name>
+    <type>CRÉATURE</type>
+    <level>2</level>
+    <creatureTraits>
+      <trait type="size">TRÈS PETITE</trait>
+      <trait>DRAGON</trait>
+      <trait>FÉE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>commun</language>
+      <language>draconique</language>
+      <language>féerique</language>
+      <langSpecial>télépathie 30 m</langSpecial>
+    </languages>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+10</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Nature</name>
+        <bonus>+4</bonus>
+      </skill>
+    </skills>
+    <armorClass>18</armorClass>
+    <saves REF="+12" FOR="+5" WIL="+11"/>
+    <health>30</health>
+    <immunities>
+      <immunity>paralysé</immunity>
+      <immunity>sommeil</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+8</bonus>
+        <traits>
+          <trait>allonge 0 m</trait>
+          <trait>finesse</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="arcane" DD="21">
+      <rank rank="4">
+        <spells>
+          <spell>invisibilité (soi uniquement)</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special>
+        <name>Sorts spontanés arcaniques</name>
+        <description>* *DD 18, attaque +10 ; **1**er* *(4 emplacements) *graisse*,* objet illusoire*,* sommeil *; **Tours de magie (1**er**) ***chimère*,* lumière*,* piège de liane*,* prestidigitation*,* projec‑ tile télékinésique*</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Souffle euphorique</name>
+        <traits>
+          <trait>arcanique</trait>
+          <trait>poison</trait>
+        </traits>
+        <description>Le dragonneau souffle un gaz euphorique dans un cône de 4,5 m� Chaque créature dans la zone doit réussir un jet de Vigueur DD 18 ou être stupéfiée 2 et ralentie 1 pendant 1d4 rounds ; en cas d’échec critique, la durée est de 1 min� Le dragonneau féerique ne peut plus utiliser souffle d’euphorie pendant 1d4 rounds�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

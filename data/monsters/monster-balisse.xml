@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>BALISSE</name>
+    <type>CRÉATURE</type>
+    <level>8</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>ANGE</trait>
+      <trait>CÉLESTE</trait>
+      <trait>SAINT</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+14</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+17</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+18</bonus>
+      </skill>
+    </skills>
+    <armorClass>26</armorClass>
+    <saves REF="+12" FOR="+16" WIL="+18" saveSpecial="bonus de statut +1 à tous les jets de sauvegarde contre la magie"/>
+    <health>145</health>
+    <weaknesses>
+      <weakness>
+        <name>impie</name>
+        <value>10</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>*cimeterre*</name>
+        <bonus>+20</bonus>
+        <traits>
+          <trait>balayage</trait>
+          <trait>feu</trait>
+          <trait>magique</trait>
+          <trait>per-
+                                             cutant</trait>
+          <trait>saint</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+8</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>de feu</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="divine" DD="26">
+      <rank rank="4">
+        <spells>
+          <spell>colère divine, guérison, para‑ lysie, purification des afflictions</spell>
+        </spells>
+      </rank>
+      <rank rank="3">
+        <spells>
+          <spell spellSpecial="à volonté">clarté spirituelle</spell>
+        </spells>
+      </rank>
+      <rank rank="2">
+        <spells>
+          <spell>invisibilité (à volonté, soi uniquement)</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special>
+        <name>Constant (5</name>
+        <description>e**) ***langage universel*</description>
+      </special>
+      <special>
+        <name>Rituels</name>
+        <description>DD 26 ; *messager angélique* (p� 319), *pénitence*, *ser‑ ment rituel*</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Guide angélique</name>
+        <traits>
+          <trait>divine</trait>
+          <trait>transmutation</trait>
+        </traits>
+        <description>; **Conditions.** Le balisse est invisible ;</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Marque de l’impénitent</name>
+        <traits>
+          <trait>divine</trait>
+          <trait>malédiction</trait>
+        </traits>
+        <description>; **Fréquence** 1 fois/jour ;</description>
+      </special>
+      <special>
+        <name>Succès critique</name>
+        <description>La créature n’est pas affectée�</description>
+      </special>
+      <special>
+        <name>Succès</name>
+        <description>La durée est de 1 round�</description>
+      </special>
+      <special>
+        <name>Échec</name>
+        <description>La durée est de 1 jour�</description>
+      </special>
+      <special>
+        <name>Échec critique</name>
+        <description>Pas de limite de durée�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

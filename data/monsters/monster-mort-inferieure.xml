@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>MORT INFÉRIEURE</name>
+    <type>CRÉATURE</type>
+    <level>16</level>
+    <creatureTraits>
+      <trait type="size"/>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+33</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+28</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+35</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+30</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+30</bonus>
+      </skill>
+      <skill>
+        <name>Société</name>
+        <bonus>+26</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+6" DEX="+0" CON="+0" INT="+0" WIS="+0" CHA="+6"/>
+    <interactionAbilities>
+      <special>
+        <name>Objet</name>
+        <description>faux</description>
+      </special>
+      <special>
+        <name>Vision du statut</name>
+        <description>Comme la faucheuse�</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>39</armorClass>
+    <saves REF="+33" FOR="+30" WIL="+32" saveSpecial="bonus de statut de +1 aux jets de sauvegarde contre la magie"/>
+    <health>255</health>
+    <immunities>
+      <immunity>effets de mort</immunity>
+      <immunity>inconscient</immunity>
+      <immunity>maladie</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>saignement</immunity>
+    </immunities>
+    <reactiveAbilities>
+      <special>
+        <name>Aura d’infortune</name>
+        <traits>
+          <trait>aura</trait>
+          <trait>divine</trait>
+          <trait>infortune</trait>
+        </traits>
+        <description>6 m� Comme la Faucheuse�</description>
+      </special>
+      <special>
+        <name>Grâce de la mort</name>
+        <description>Comme la Faucheuse�</description>
+      </special>
+      <special type="reaction">
+        <name>Mort qui rôde</name>
+        <traits>
+          <trait>divine</trait>
+          <trait>téléportation</trait>
+        </traits>
+        <description>� Comme la Faucheuse mais la créature qui déclenche cet effet doit se trouver dans un rayon de 18 m�</description>
+      </special>
+      <special>
+        <name>Soins du néant</name>
+        <description>Une mort inférieure peut choisir ou non de subir des dégâts de vitalité�</description>
+      </special>
+    </reactiveAbilities>
+    <speeds>
+      <speed>15 m</speed>
+      <speed type="fly">12 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>*faux acérée*</name>
+        <bonus>+32</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 3 m</trait>
+          <trait>croc-en-jambe</trait>
+          <trait>magique</trait>
+          <trait>mortel 2d10</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d10+14</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+          <damage>
+            <amount>1d12</amount>
+            <damageType>de néant</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="divine" DD="38">
+      <rank rank="6" constant="TRUE">
+        <spells>
+          <spell>discernement</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special>
+        <name>Imprégnation d’armes</name>
+        <traits>
+          <trait>divine</trait>
+        </traits>
+        <description>� Entre les mains d’une mort inférieure, n’importe quelle faux gagne le trait agile, ne peut être désarmée et devient une* faux acérée de frappe supérieure +2*�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>LION</name>
+    <type>CRÉATURE</type>
+    <level>3</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+9</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+10</bonus>
+      </skill>
+    </skills>
+    <armorClass>18</armorClass>
+    <saves/>
+    <health>45</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special type="reaction">
+        <name>Vitesse</name>
+        <description>m</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>mâchoires +11, **Dégâts** 1d10+6 perfo- rants plus Empoignade (p� 359)</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>griffes +11 (agile) ; **Dégâts** 1d8+6 tranchants</description>
+      </special>
+      <special>
+        <name>Attaque en meute</name>
+        <description>Un lion inflige 1d4 dégâts supplé- mentaires à toute créature qui se trouve à portée d’au moins deux de ses alliés�</description>
+      </special>
+      <special>
+        <name>Attaque sournoise</name>
+        <description>Le lion inflige 1d6 dégâts de précision supplémentaires aux créatures prises par surprise�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Bond</name>
+        <description>Le lion Marche rapidement et effectue une Frappe à la fin de son dépla- cement� Si le lion est caché au début de son action, il le reste jusqu’à ce qu’il ait effectué la Frappe de ce pouvoir�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

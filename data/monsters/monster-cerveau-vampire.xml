@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>CERVEAU VAMPIRE</name>
+    <type>CRÉATURE</type>
+    <level>9</level>
+    <creatureTraits>
+      <trait type="size"/>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+17</bonus>
+      </skill>
+      <skill>
+        <name>Arcanes</name>
+        <bonus>+21</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+18</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+20</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+19</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+20</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+22</bonus>
+      </skill>
+      <skill>
+        <name>Société</name>
+        <bonus>+19</bonus>
+      </skill>
+    </skills>
+    <armorClass>27</armorClass>
+    <saves REF="+18" FOR="+15" WIL="+20"/>
+    <health>115</health>
+    <immunities>
+      <immunity>effets de mort</immunity>
+      <immunity>maladie</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>sommeil</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+18</bonus>
+        <traits>
+          <trait>agile</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+9</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="prepared" tradition="arcane" DD="29" attack="+19">
+      <rank rank="4">
+        <spells>
+          <spell>bouclier de feu, déguisement illu‑ soire, mur de feu, présage de mort</spell>
+        </spells>
+      </rank>
+      <rank rank="3">
+        <spells>
+          <spell>boule de feu, dissipation de la magie, éclair, rapidité</spell>
+        </spells>
+      </rank>
+      <rank rank="2">
+        <spells>
+          <spell>flammes ondoyantes, flou, invisibilité, stupéfaction</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Boire le sang</name>
+        <traits>
+          <trait>divin</trait>
+        </traits>
+        <description>� Quand le vampire Boit le sang, il récupère 10 PV�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Changement de forme</name>
+        <traits>
+          <trait>concentration</trait>
+          <trait>divin</trait>
+          <trait>métamorphose</trait>
+        </traits>
+        <description>� Chauve-souris géante avec crocs +19 pour 2d8+9 perforants (p� 358)�</description>
+      </special>
+      <special>
+        <name>Création de serviteurs</name>
+        <traits>
+          <trait>divin</trait>
+          <trait>intermède</trait>
+        </traits>
+        <description/>
+      </special>
+      <special type="activity" actions="2">
+        <name>Domination</name>
+        <traits>
+          <trait>divin</trait>
+          <trait>mental</trait>
+          <trait>mise hors de combat</trait>
+          <trait>visuel</trait>
+        </traits>
+        <description>DD 26</description>
+      </special>
+      <special type="activity" actions="0">
+        <name>Drain d’objet lié</name>
+        <traits>
+          <trait>arcanique</trait>
+        </traits>
+        <description>; **Fréquence** 1 fois/jour ; **Conditions.** Le vampire n’a pas encore agi pendant ce tour ;</description>
+      </special>
+      <special>
+        <name>Incantation fiable</name>
+        <description>Si la réaction d’une créature devrait interrompre l’action d’incantation du cerveau vampire, ce dernier a droit à un test nu DD 15� S’il le réussit, son action n’est pas interrompue�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Se changer en brume</name>
+        <description>(air, concentration, divin, métamorphose)</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

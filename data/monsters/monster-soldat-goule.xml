@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>SOLDAT GOULE</name>
+    <type>CRÉATURE</type>
+    <level>2</level>
+    <creatureTraits>
+      <trait type="size"/>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <interactionAbilities>
+      <special>
+        <name>Langues</name>
+        <description>commun, nécril</description>
+      </special>
+      <special>
+        <name>Compétences</name>
+        <description>Acrobaties +8, Athlétisme +9, Discrétion +8, Survie +6</description>
+      </special>
+      <special>
+        <name>For</name>
+        <description>+3, **Dex **+2, **Con **+2, **Int **+1, **Sag **+2, **Cha **+3</description>
+      </special>
+      <special>
+        <name>Objets</name>
+        <description>cuirasse, épée bâtarde</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>17</armorClass>
+    <saves REF="+8" FOR="+8" WIL="+6"/>
+    <health>28</health>
+    <immunities>
+      <immunity>effets de mort</immunity>
+      <immunity>inconscient</immunity>
+      <immunity>maladie</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>saignement</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires +11, **Dégâts **1d10+3 perforants **Corps à corps** 1 épée bâtarde</name>
+        <bonus>+11</bonus>
+        <traits>
+          <trait>deux mains d12</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8+3</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+11</bonus>
+        <traits>
+          <trait>agile</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8+3</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Bond rapide</name>
+        <traits>
+          <trait>déplacement</trait>
+        </traits>
+        <description/>
+      </special>
+      <special type="activity" actions="1">
+        <name>Dévorer la chair</name>
+        <traits>
+          <trait>manipulation</trait>
+        </traits>
+        <description>2d6 PV</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Murmures de la goule</name>
+        <traits>
+          <trait>audible</trait>
+          <trait>linguistique</trait>
+          <trait>occulte</trait>
+        </traits>
+        <description>DD 18</description>
+      </special>
+      <special>
+        <name>Savoir d’outre‑tombe</name>
+        <traits>
+          <trait>occulte</trait>
+        </traits>
+        <description>modificateur de compétence +8</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>VEILLEUR DE RUE HALFELIN</name>
+    <type>CRÉATURE</type>
+    <level>-1</level>
+    <creatureTraits>
+      <trait type="size">PETITE</trait>
+      <trait>HALFELIN</trait>
+      <trait>HUMANOÏDE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+3</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+5</bonus>
+      </skill>
+      <skill>
+        <name>Larcin</name>
+        <bonus>+7</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+1" DEX="+4" CON="+1" INT="+0" WIS="+0" CHA="+3"/>
+    <armorClass>16</armorClass>
+    <saves/>
+    <health>18</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>fourchette du chapardeur</name>
+        <bonus>+9</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+          <trait>jet 6 m</trait>
+          <trait>mortel d6</trait>
+          <trait>traître</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+1</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>fourchette du chapardeur</name>
+        <bonus>+9</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+          <trait>jet 6 m</trait>
+          <trait>mortel d6</trait>
+          <trait>traître</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+1</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Attaque sournoise</name>
+        <description>Le trouble-fête inflige 1d6 dégâts de précision supplémentaires aux créatures prises par surprise�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Œuf graffiti</name>
+        <description>Le trouble-fête halfelin lance un œuf rempli de peinture, de paillettes et de confettis sur une créature dans un rayon de 9 m� La cible doit réussir un jet de Réflexes DD 17 ou être éblouie pendant 1 round (ou 1 min en cas d’échec critique)�</description>
+      </special>
+      <special>
+        <name>Yeux perçants</name>
+        <description>Le halfelin gagne un bonus de circonstances de +2 quand il utilise l’action Chercher pour trouver des créatures cachées ou non détectées dans un rayon de 9 m autour de lui� Quand le halfelin prend pour cible une créature mas- quée ou cachée, réduisez le DD du test nu à 3 pour une cible masquée ou à 9 pour une cible cachée�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

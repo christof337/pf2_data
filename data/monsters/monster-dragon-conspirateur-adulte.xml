@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>DRAGON CONSPIRATEUR ADULTE</name>
+    <type>CRÉATURE</type>
+    <level>12</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>DRAGON</trait>
+      <trait>OCCULTE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>commun</language>
+      <language>draconique</language>
+      <language>langue de l’ombre</language>
+      <language>sussuran</language>
+      <langSpecial>télépathie 30 m (p� 316)</langSpecial>
+    </languages>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+21</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+23</bonus>
+      </skill>
+      <skill>
+        <name>Connaissances (région ou com- munauté)</name>
+        <bonus>+25</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+25</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+21</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+25</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+23</bonus>
+      </skill>
+      <skill>
+        <name>Occultisme</name>
+        <bonus>+23</bonus>
+      </skill>
+      <skill>
+        <name>Représentation</name>
+        <bonus>+25</bonus>
+      </skill>
+      <skill>
+        <name>Société</name>
+        <bonus>+23</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+5, **Dex **+3, **Con **+4, **Int **+5, **Sag **+5, **Cha **+7</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>33</armorClass>
+    <saves REF="+21" FOR="+20" WIL="+25" saveSpecial="bonus de statut de +2 à tous les jets de sauvegarde contre la magie occulte"/>
+    <health>215</health>
+    <immunities>
+      <immunity>contrôlé</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>sommeil</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+25</bonus>
+        <traits>
+          <trait>magique</trait>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d8+11</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+25</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d6+11</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>queue</name>
+        <bonus>+23</bonus>
+        <traits>
+          <trait>allonge 4,5 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d10+11</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>attaque mentale</name>
+        <bonus>+25</bonus>
+        <traits>
+          <trait>mental</trait>
+          <trait>portée 30 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d6+6</amount>
+            <damageType>mentaux</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Sorts innés occultes</name>
+        <description>* *DD 32 ; **6**e* charme*,* lecture des pensées *(à volonté),* mémoire réécrite, sonde mentale *; **1**er* charme *(à volonté)</description>
+      </special>
+      <special>
+        <name>DRAGON D’ADAMANTIUM ADULTE DRAGON D’ADAMANTIUM ADULTE</name>
+        <description>FRANCK PONT - lhanselo@hotmail.fr - 202602/3379711/4016001 [[PAGE 108]]</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

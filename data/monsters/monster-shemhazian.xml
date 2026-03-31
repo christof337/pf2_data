@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>SHEMHAZIAN</name>
+    <type>CRÉATURE</type>
+    <level>16</level>
+    <creatureTraits>
+      <trait type="size">GIGANTESQUE</trait>
+      <trait>DÉMONS</trait>
+      <trait>FIÉLON</trait>
+      <trait>IMPIE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+31</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+25</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+27</bonus>
+      </skill>
+      <skill>
+        <name>Médecine</name>
+        <bonus>+28</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+30</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+9" DEX="+5" CON="+7" INT="+0" WIS="+6" CHA="+3"/>
+    <armorClass>39</armorClass>
+    <saves REF="+26" FOR="+32" WIL="+27" saveSpecial="bonus de statut de +1 aux jets de sauvegarde contre la magie"/>
+    <health>350</health>
+    <weaknesses>
+      <weakness>
+        <name>fer froid</name>
+        <value>15</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special type="reaction">
+        <name>Fouet caudal</name>
+        <trigger>Une créature à portée d’allonge de la queue du shemhazian quitte une case lors de l’une de ses actions de déplacement ;</trigger>
+        <effect/>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>MAGE DES CAVERNES KOBOLD</name>
+    <type>CRÉATURE</type>
+    <level>2</level>
+    <creatureTraits>
+      <trait type="size">PETITE</trait>
+      <trait>HUMANOÏDE</trait>
+      <trait>KOBOLD</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>commun</language>
+      <language>féerique</language>
+      <language>pétran</language>
+      <language>sakvroth</language>
+    </languages>
+    <armorClass>16</armorClass>
+    <saves REF="+6" FOR="+5" WIL="+7"/>
+    <health>20</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>marteau léger</name>
+        <bonus>+6</bonus>
+        <traits>
+          <trait>agile</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+2</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+6</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+2</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>marteau léger</name>
+        <bonus>+6</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>jet 6m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+2</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="spontaneous" tradition="primal" DD="18"/>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Démonstration inspirante</name>
+        <traits>
+          <trait>audible</trait>
+          <trait>émotion</trait>
+          <trait>linguistique</trait>
+          <trait>mental</trait>
+        </traits>
+        <description>; **Conditions.** Le mage des cavernes a Lancé un sort lors de son action précédente ;</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Détaler</name>
+        <description>Comme pour le guerrier kobold�</description>
+      </special>
+      <special>
+        <name>TOUCHE‑À‑TOUT EN SOCIÉTÉ</name>
+        <description>De nombreuses tribus de kobolds apprécient les grandes villes, attirées par les écoles de magie ou par la simple commodité qu’offre la vie urbaine� Elles préfèrent souvent les habitats souterrains, se cachant dans les égouts ou les ruines souterraines� En Avistan, cela les place souvent dans une zone grise sur le plan légal où les kobolds des cités sont généralement acceptés mais ont peu de droits sur le papier� Les kobolds d’Absalom ont commencé à défier cet état de fait et d’autres pourraient suivre�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

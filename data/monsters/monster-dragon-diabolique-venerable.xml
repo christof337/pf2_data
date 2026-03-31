@@ -1,0 +1,194 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>DRAGON DIABOLIQUE VÉNÉRABLE</name>
+    <type>CRÉATURE</type>
+    <level>20</level>
+    <creatureTraits>
+      <trait type="size">GIGANTESQUE</trait>
+      <trait>DIVIN</trait>
+      <trait>DRAGON</trait>
+      <trait>IMPIE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>aklo</language>
+      <language>chthonien</language>
+      <language>commun</language>
+      <language>diabolique</language>
+      <language>draconique</language>
+      <language>empyréen</language>
+      <language>nécril</language>
+      <language>pyrique</language>
+    </languages>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+33</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+38</bonus>
+      </skill>
+      <skill>
+        <name>Connaissances sur les Enfers</name>
+        <bonus>+33</bonus>
+      </skill>
+      <skill>
+        <name>Connaissances juridiques</name>
+        <bonus>+35</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+36</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+34</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+34</bonus>
+      </skill>
+      <skill>
+        <name>Larcin</name>
+        <bonus>+33</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+35</bonus>
+      </skill>
+      <skill>
+        <name>Société</name>
+        <bonus>+33</bonus>
+      </skill>
+    </skills>
+    <armorClass>44</armorClass>
+    <saves REF="+32" FOR="+36" WIL="+32" saveSpecial="bonus de statut de +2 à tous les jets de sauvegarde contre la magie divine"/>
+    <health>390</health>
+    <immunities>
+      <immunity>feu</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>sommeil</immunity>
+    </immunities>
+    <weaknesses>
+      <weakness>
+        <name>saint</name>
+        <value>15</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+38</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+          <trait>feu</trait>
+          <trait>impie</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>4d12+18</amount>
+            <damageType>perforants</damageType>
+          </damage>
+          <damage>
+            <amount>2d6</amount>
+            <damageType>de feu</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+38</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>feu</trait>
+          <trait>impie</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>4d8+18</amount>
+            <damageType>perforants</damageType>
+          </damage>
+          <damage>
+            <amount>2d6</amount>
+            <damageType>de feu et Empoignade améliorée (p� 359</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>queue</name>
+        <bonus>+36</bonus>
+        <traits>
+          <trait>allonge 4,5 m</trait>
+          <trait>feu</trait>
+          <trait>impie</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>4d8+18</amount>
+            <damageType>contondants</damageType>
+          </damage>
+          <damage>
+            <amount>2d6</amount>
+            <damageType>de feu et Renversement amélioré (p� 359)</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="divine" DD="40" attack="+32">
+      <rank rank="9">
+        <spells>
+          <spell spellSpecial="à volonté">immolation divine , pluie d’étoiles (feu unique- ment), mur de feu</spell>
+        </spells>
+      </rank>
+      <rank rank="8">
+        <spells>
+          <spell>convocation de fiélon (phistophilus uniquement</spell>
+        </spells>
+      </rank>
+      <rank rank="7">
+        <spells>
+          <spell>téléportation interplanaire (à volonté, soi uniquement)</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special>
+        <name>Feu diabolique</name>
+        <description>Comme le jeune dragon diabolique�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Frénésie draconique</name>
+        <description>Comme le jeune dragon diabolique�</description>
+      </special>
+      <special>
+        <name>Impulsion draconique</name>
+        <description>Comme le jeune dragon diabolique�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Souffle de feu infernal</name>
+        <traits>
+          <trait>divine</trait>
+          <trait>feu</trait>
+          <trait>impie</trait>
+        </traits>
+        <description>Comme le jeune dragon diabolique, mais dans un cône de 18 m, 21d6 dégâts de feu et DD 42�</description>
+      </special>
+      <special>
+        <name>Dragon empyréen</name>
+        <description>Les trois plans célestes majeurs (Paradis, Nirvana et Élysée) ont chacun leurs dragons respectifs. Les dragons empyréens sont liés au Paradis et utilisent ses bénédictions pour protéger les autres créatures ainsi que pour lutter contre le mal. Les dragons</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

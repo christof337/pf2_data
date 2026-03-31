@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>HERBORISTE CENTAURE</name>
+    <type>CRÉATURE</type>
+    <level>3</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>BÊTE</trait>
+      <trait>CENTAURE</trait>
+      <trait>HUMANOÏDE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+10</bonus>
+      <senses>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages>
+      <language>commun</language>
+      <language>elfique</language>
+      <language>féerique</language>
+    </languages>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+11</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+6</bonus>
+      </skill>
+      <skill>
+        <name>Médecine</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Nature</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+7</bonus>
+      </skill>
+    </skills>
+    <armorClass>18</armorClass>
+    <saves REF="+9" FOR="+8" WIL="+10"/>
+    <health>36</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>sabot</name>
+        <bonus>+9</bonus>
+        <traits>
+          <trait>agile</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d10+4</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>fronde</name>
+        <bonus>+78</bonus>
+        <traits>
+          <trait>facteur de portée 15 m</trait>
+          <trait>propulsif</trait>
+          <trait>rechargement 1</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+1</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Charger un sachet</name>
+        <description/>
+      </special>
+      <special type="activity" actions="1">
+        <name>Conditions</name>
+        <description>L’herboriste centaure possède au moins un sachet d’herbes ;</description>
+      </special>
+      <special type="activity" actions="3">
+        <name>Piétinement</name>
+        <description>Moyenne ou plus petite, sabot, DD 18 (p� 360)</description>
+      </special>
+      <special>
+        <name>L’ARTISANAT DES CENTAURES</name>
+        <description>Les centaures apprécient généralement les belles armes et armures� Certains confectionnent leur propre équipement, en se transmettant des modèles traditionnels au sein de leur communauté, tandis que d’autres récupèrent de l’équipement de qualité sur leurs ennemis ; cela dit, étant donné leur apparence, les centaures qui veulent utiliser une armure plus lourde qu’une cuirasse doivent la faire fabriquer sur mesure� [[PAGE 51]]</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>OURS DES CAVERNES</name>
+    <type>CRÉATURE</type>
+    <level>6</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+16</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+11</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+6, **Dex** +1, **Con** +6, **Int** –4, **Sag** +1, **Cha** –1</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>24</armorClass>
+    <saves REF="+11" FOR="+16" WIL="+13"/>
+    <health>95</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires +16, **Dégâts** 2d10+6 perforants **Corps à corps** 1 griffes</name>
+        <bonus>+16</bonus>
+        <traits>
+          <trait>agile</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+6</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Écharpeur</name>
+        <description>L’ours gagne un bonus de circonstances de +4 à ses jets de dégâts contre une créature qu’il a empoignée�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Ruée</name>
+        <description>L’ours Marche rapidement et effectue une Frappe à la fin de ce déplacement� Pendant la Marche rapide, il bénéficie d’un bonus de circonstances de +3 m à sa Vitesse�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

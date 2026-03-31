@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>CHŒUR</name>
+    <type>CRÉATURE</type>
+    <level>6</level>
+    <creatureTraits>
+      <trait type="size">PETITE</trait>
+      <trait>ANGE</trait>
+      <trait>CÉLESTE</trait>
+      <trait>SAINT</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+12</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+15</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+14</bonus>
+      </skill>
+      <skill>
+        <name>Représentation</name>
+        <bonus>+17</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+1" DEX="+4" CON="+2" INT="+3" WIS="+4" CHA="+5"/>
+    <armorClass>24</armorClass>
+    <saves REF="+14" FOR="+10" WIL="+16" saveSpecial="bonus de statut +1 à tous les jets de sauvegarde contre la magie"/>
+    <health>100</health>
+    <weaknesses>
+      <weakness>
+        <name>impie</name>
+        <value>5</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>poing</name>
+        <bonus>+14</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+          <trait>magique</trait>
+          <trait>saint</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+5</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>hymne perçant</name>
+        <bonus>+17</bonus>
+        <traits>
+          <trait>magique</trait>
+          <trait>portée 27 m</trait>
+          <trait>saint</trait>
+          <trait>son</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>4d6</amount>
+            <damageType>dégâts de son</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="divine" DD="23" attack="+15">
+      <rank rank="3">
+        <spells>
+          <spell spellSpecial="à volonté">clarté spirituelle , explosion bruyante, guérison, purification des afflictions</spell>
+        </spells>
+      </rank>
+      <rank rank="2">
+        <spells>
+          <spell spellSpecial="à volonté">explosion bruyante , invisibi‑ lité (à volonté, soi uniquement)</spell>
+        </spells>
+      </rank>
+      <rank rank="5" constant="TRUE">
+        <spells>
+          <spell>langage universel</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special>
+        <name>Rituel</name>
+        <description>DD 23 ; *messager angélique* (p� 319)</description>
+      </special>
+      <special>
+        <name>Aria assourdissante</name>
+        <description>Sur un coup critique avec hymne perçant, la cible est sourde pendant 1 min�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Harmoniser</name>
+        <traits>
+          <trait>concentration</trait>
+          <trait>divine</trait>
+          <trait>son</trait>
+        </traits>
+        <description>� L’ange du Chœur fait bénéficier de son harmonie à un autre ange du Chœur allié qui se trouve dans son aura d’harmonisation� Lors de son pro- chain tour, cet allié peut dépenser son sort de rang 3 *explo‑ sion bruyante* pour lancer à la place *tranquiliser*, *heroïsme*, ou *explosion bruyante* au rang 4� Si cet allié cumule les effets de l’action Harmoniser d’au moins cinq autres anges du Chœur, il peut choisir de lancer à la place *décret divin*�</description>
+      </special>
+      <special>
+        <name>Balisse (confesseur angélique)</name>
+        <description>Les balisses, ou confesseurs angéliques, cherchent à aider les mortels empêtrés dans des dilemmes moraux ou doutant de leur foi. Ils préfèrent aider les indi‑ vidus à prendre leur propres décisions plutôt que d’exiger d’eux qu’ils se soumettent à</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

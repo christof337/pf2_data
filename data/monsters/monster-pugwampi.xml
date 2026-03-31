@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>PUGWAMPI</name>
+    <type>CRÉATURE</type>
+    <level>0</level>
+    <creatureTraits>
+      <trait type="size">TRÈS PETITE</trait>
+      <trait>FÉE</trait>
+      <trait>GREMLIN</trait>
+      <trait>GREMLIN</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Artisanat</name>
+        <bonus>+2</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+5</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+2</bonus>
+      </skill>
+      <skill>
+        <name>Larcin</name>
+        <bonus>+5</bonus>
+      </skill>
+      <skill>
+        <name>Nature</name>
+        <bonus>+4</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>–3**, Dex **+3**, Con **+0**, Int **+0**, Sag **+2**, Cha **–2</description>
+      </special>
+      <special>
+        <name>Objets</name>
+        <description>arc court (60 flèches), épée courte</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>14</armorClass>
+    <saves REF="+8" FOR="+5" WIL="+6"/>
+    <health>17</health>
+    <weaknesses>
+      <weakness>
+        <name>fer froid</name>
+        <value>2</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>épée courte</name>
+        <bonus>+8</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 0 m</trait>
+          <trait>finesse</trait>
+          <trait>polyvalent T</trait>
+        </traits>
+        <damages/>
+      </strike>
+      <strike type="ranged">
+        <name>arc court</name>
+        <bonus>+8</bonus>
+        <traits>
+          <trait>facteur de portée 18 m</trait>
+          <trait>mortel d10</trait>
+          <trait>rechargement 0</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="primal" DD="16">
+      <rank rank="2">
+        <spells>
+          <spell spellSpecial="à volonté">communication avec les animaux</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special>
+        <name>Jinkin</name>
+        <description>Les jinkins sont des bricoleurs sadiques qui volent et sabotent les objets et qui tirent une grande fierté de leur pouvoir de maudire les objets précieux. Ils sont extrêmement rancuniers et imaginent des plans alambiqués pour se venger quand ils se sentent offensés, comme lorsqu’une créature ose lever l’une de leurs malédictions. Se conten‑ tant rarement de semer la pagaille, les jinkins prennent un plaisir immense à torturer et assassiner même s’ils préfèrent mener leurs victimes vers des pièges prévus pour les capturer ou les neutraliser, et non les tuer d’un coup. Ils apprécient particulièrement les fosses profondes, car les victimes qui survivent à la chute meurent lentement de faim et de soif, tandis que les jinkins se réunissent au bord pour se moquer de la victime, la provoquer et la tourmenter.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

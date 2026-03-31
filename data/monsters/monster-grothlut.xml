@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GROTHLUT</name>
+    <type>CRÉATURE</type>
+    <level>3</level>
+    <creatureTraits>
+      <trait type="size"/>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <armorClass>17</armorClass>
+    <saves/>
+    <health>50</health>
+    <immunities>
+      <immunity>acide</immunity>
+      <immunity>mental</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+11</bonus>
+        <traits>
+          <trait>agile</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d10+8</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>régurgitation digestive</name>
+        <bonus>+7</bonus>
+        <traits>
+          <trait>acide</trait>
+          <trait>éclabous-
+                                                 sure</trait>
+          <trait>facteur de portée 4,5 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6</amount>
+            <damageType>d’acide</damageType>
+          </damage>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>d’éclaboussure d’acide</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Plainte pitoyable</name>
+        <description>(audible, aura, concentra- tion, émotion, mental, occulte) 18 m� Toute créature qui n’est pas un grothlut qui entre ou commence son tour dans la zone doit réussir un jet de Volonté DD 17 ou être malade 1 (malade 2</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

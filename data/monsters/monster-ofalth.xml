@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>OFALTH</name>
+    <type>CRÉATURE</type>
+    <level>10</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>ABERRATION</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+23</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+19</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+7, **Dex **+3, **Con **+6, **Int **–2, **Sag **+2, **Cha **–2</description>
+      </special>
+      <special>
+        <name>Tas de déchets</name>
+        <description>Quand il n’est pas en danger, un ofalth peut passer 1 min à prendre la forme d’un tas de déchets de 3 m qui ressemble à un simple monceau d’ordures� Jusqu’à ce qu’il effectue une action, il gagne un bonus de circonstances de +2 à sa CA� Une créature qui pénètre dans la zone du tas de déchets ou qui interagit avec doit tenter un jet de sauvegarde contre la puanteur putride de l’ofalth�</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>31</armorClass>
+    <saves REF="+17" FOR="+22" WIL="+18"/>
+    <health>170</health>
+    <immunities>
+      <immunity>maladie</immunity>
+      <immunity>poison</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>poing</name>
+        <bonus>+23</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d12+13</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>abats</name>
+        <bonus>+19</bonus>
+        <traits>
+          <trait>facteur de portée 9 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d10+9</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Suintements effroyables</name>
+        <traits>
+          <trait>maladie</trait>
+        </traits>
+        <description>**Jet de sauvegarde** comme pour l’ofalth larvaire, mais avec un DD 26�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

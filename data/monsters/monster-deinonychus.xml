@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>DEINONYCHUS</name>
+    <type>CRÉATURE</type>
+    <level>2</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>ANIMAL</trait>
+      <trait>DINOSAURE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+9</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+7</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+3" DEX="+3" CON="+4" INT="+0" WIS="+1" CHA="+2"/>
+    <armorClass>17</armorClass>
+    <saves/>
+    <health>30</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires +9, **Dégâts** 2d6+3 perforants **Corps à corps** 1 serres</name>
+        <bonus>+9</bonus>
+        <traits>
+          <trait>agile</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+3</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+          <damage>
+            <amount>1d4</amount>
+            <damageType>de saignement persistants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Attaque foudroyante</name>
+        <description>Le deinonychus Marche rapidement sur une distance maximale de 3 m puis effectue une Frappe, ou il effectue une Frappe puis Marche rapidement sur 3 m�</description>
+      </special>
+      <special>
+        <name>Avantage du prédateur</name>
+        <description>Les créatures qui saignent sont considérées comme prises par surprise par le deinonychus�</description>
+      </special>
+      <special>
+        <name>Pachycéphalosaure</name>
+        <description>Les pachycéphalosaures sont normalement des herbivores pacifiques, mais ils deviennent beaucoup plus violents pendant la saison de reproduction quand ils se battent entre eux pour conqué‑ rir une femelle et éloigner les intrus. Ils se défendent également férocement quand des prédateurs s’approchent trop de leur troupeau. Le crâne du pachycéphalosaure est caractérisé par une calotte en forme de dôme entourée de nombreuses petites cornes épointées. Cette caractéristique, combinée à son puissant cou compact, lui permet de charger comme un bélier et d’infliger de terribles dégâts. Certains humanoïdes sont parvenus à dresser des pachycéphalosaures qu’ils utilisent comme montures, mais ces créatures ne sont pas particulièrement adaptées à cette tâche. Un pachycéphalosaure peut atteindre une taille de 4,5 m et peser jusqu’à 634 kg.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

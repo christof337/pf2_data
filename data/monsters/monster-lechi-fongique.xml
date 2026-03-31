@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>LÉCHI FONGIQUE</name>
+    <type>CRÉATURE</type>
+    <level>2</level>
+    <creatureTraits>
+      <trait type="size">PETITE</trait>
+      <trait>CHAMPIGNON</trait>
+      <trait>LÉCHI</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>commun</language>
+      <language>féerique</language>
+      <langSpecial>
+        <spell>communication avec les plantes</spell>
+      </langSpecial>
+    </languages>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+6</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Nature</name>
+        <bonus>+6</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+2" DEX="+4" CON="+2" INT="+0" WIS="+2" CHA="+0"/>
+    <armorClass>19</armorClass>
+    <saves REF="+10" FOR="+8" WIL="+6"/>
+    <health>30</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>poing</name>
+        <bonus>+10</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+2</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>cosse de spores</name>
+        <bonus>+10</bonus>
+        <traits>
+          <trait>facteur de portée 9 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+2</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Sort inné primordial</name>
+        <description>DD 16 ; **Constant (3**e**) ***communication avec les plantes* (champi- gnons uniquement)</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Changement de forme</name>
+        <traits>
+          <trait>concentration</trait>
+          <trait>métamorphose</trait>
+          <trait>primordiale</trait>
+        </traits>
+        <description>� Comme le léchi de feuilles, mais la créature se transforme en champignon géant ou en une parcelle de champignons (p� 358)�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Nuage de spores</name>
+        <traits>
+          <trait>poison</trait>
+        </traits>
+        <description>� Un léchi fongique peut projeter un nuage de spores qui irritent les yeux et la gorge de toutes les créatures qui ne sont pas des champignons situées dans une émanation de 4,5 m� Chaque créature doit réussir un jet de Vigueur DD 16 ou subir 1 point de dégâts de poison persistants� Une créature voit sa vision réduite à 6 m tant que dure le dégât persistant�</description>
+      </special>
+      <special>
+        <name>Spores</name>
+        <description>Une créature qui subit des dégâts à cause de la Frappe de cosse de spores du léchi doit ten- ter un jet de sauvegarde avec le même DD et les mêmes effets que le pouvoir Nuage de spores�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

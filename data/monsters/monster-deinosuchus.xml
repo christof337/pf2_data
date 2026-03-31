@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>DEINOSUCHUS</name>
+    <type>CRÉATURE</type>
+    <level>9</level>
+    <creatureTraits>
+      <trait type="size">TRÈS GRANDE</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+20</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+16</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+7, **Dex** +3, **Con** +5, **Int** –5, **Sag** +2, **Cha** –4</description>
+      </special>
+      <special>
+        <name>Inspiration profonde</name>
+        <description>Le deinosuchus peut retenir sa respiration pendant environ 2 h�</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>26</armorClass>
+    <saves/>
+    <health>175</health>
+    <speeds>
+      <speed>9 m</speed>
+      <speed type="swim">12 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+22</bonus>
+        <traits>
+          <trait>allonge
+ 4,5 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d10+13</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>queue</name>
+        <bonus>+20</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 4,5 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d10+11</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Embuscade aquatique</name>
+        <description>15 m (p� 359)</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Gober</name>
+        <traits>
+          <trait>attaque</trait>
+        </traits>
+        <description>� Grande, 2d8+7 contondants, Rupture 18 (p� 359)</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

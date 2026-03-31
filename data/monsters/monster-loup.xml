@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>LOUP</name>
+    <type>CRÉATURE</type>
+    <level>1</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <armorClass>15</armorClass>
+    <saves/>
+    <health>24</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Vitesse</name>
+        <description>0,5 m</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>mâchoire +9, **Dégâts **1d6+2 perforants plus Renversement (p� 360)</description>
+      </special>
+      <special>
+        <name>Attaque en meute</name>
+        <description>Les Frappes du loup infligent 1d4 dégâts supplémentaires aux créatures à portée d’au moins deux de ses alliés�</description>
+      </special>
+      <special>
+        <name>Loup sanguinaire</name>
+        <description>Plus grands et plus agressifs que leurs cousins ordinaires, les loups sanguinaires rôdent dans les étendues vierges capables de fournir un terrain de chasse adapté à leur appétit et leur grande taille. Les orcs aiment s’en servir comme monture et trouvent leur tempérament vicieux idéal pour la chasse et la guerre. Les loups san‑ guinaires sont bien plus susceptibles de chasser des humanoïdes que leurs cousins ordinaires car ils les considèrent tout bonnement comme un autre type d’animal petit mais nutritif.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

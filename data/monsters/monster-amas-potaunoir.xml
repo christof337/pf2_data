@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>AMAS POTAUNOIR</name>
+    <type>CRÉATURE</type>
+    <level>9</level>
+    <creatureTraits>
+      <trait type="size">TRÈS GRANDE</trait>
+      <trait>AMPHIBIE</trait>
+      <trait>PLANTE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+15</bonus>
+      <senses>
+        <sens>
+          <name>perception des ondes</name>
+          <precision>précis</precision>
+          <range>36 m</range>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <armorClass>16</armorClass>
+    <saves/>
+    <health>300</health>
+    <immunities>
+      <immunity>coups critiques</immunity>
+      <immunity>inconscient</immunity>
+      <immunity>mental</immunity>
+      <immunity>préci- sion</immunity>
+    </immunities>
+    <weaknesses>
+      <weakness>
+        <name>tranchants</name>
+        <value>10</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>vrille</name>
+        <bonus>+21</bonus>
+        <traits>
+          <trait>allonge 4,5 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d12+10</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Constriction</name>
+        <description>1d12+10 contondants, DD 28 (p� 359)</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Attirer à soi</name>
+        <description>L’amas potaunoir tente de Repositionner jusqu’à trois créatures qu’il a empoignées ou entravées� Ces tentatives ne sont ni soumises au malus d’attaques multiples du monstre ni comptabilisées dans celui-ci� S’il réussit, il peut déplacer les créatures dans son espace, leur infligeant au passage 1d12+10 dégâts contondants�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

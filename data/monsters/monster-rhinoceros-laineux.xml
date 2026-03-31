@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>RHINOCÉROS LAINEUX</name>
+    <type>CRÉATURE</type>
+    <level>6</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+16</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+13</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+6, **Dex **+1, **Con **+5, **Int ** –4,</description>
+      </special>
+      <special>
+        <name>Sag</name>
+        <description>+3, **Cha **–1</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>25</armorClass>
+    <saves saveSpecial="bonus de statut de +2 à tous les jets de sauve- garde contre le froid"/>
+    <health>100</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>corne</name>
+        <bonus>+16</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d12+6</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>pied +16, **Dégâts** 2d8+6 contondants</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Charge du rhinocéros</name>
+        <description>Comme le rhinocéros, mais 3d12+6 dégâts et DD 24�</description>
+      </special>
+      <special type="activity" actions="3">
+        <name>Piétinement</name>
+        <description>Moyenne ou plus petite, patte, DD 21 (p� 360)</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

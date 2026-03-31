@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>LEUKODAÉMON</name>
+    <type>CRÉATURE</type>
+    <level>9</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>DAÉMONS</trait>
+      <trait>FIÉLON</trait>
+      <trait>IMPIE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+20</bonus>
+      <senses>
+        <sens>
+          <name>perception des maladies</name>
+          <precision>imprécis</precision>
+          <range>18 m</range>
+        </sens>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+18</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+18</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+18</bonus>
+      </skill>
+      <skill>
+        <name>Médecine</name>
+        <bonus>+20</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+20</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+16</bonus>
+      </skill>
+    </skills>
+    <armorClass>28</armorClass>
+    <saves REF="+21" FOR="+15" WIL="+19" saveSpecial="bonus de statut de +1 aux jets de sauvegarde contre la magie"/>
+    <health>155</health>
+    <immunities>
+      <immunity>effets de mort</immunity>
+      <immunity>maladie</immunity>
+    </immunities>
+    <weaknesses>
+      <weakness>
+        <name>saint</name>
+        <value>10</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+21</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+          <trait>impie</trait>
+          <trait>magique</trait>
+          <trait>maladie</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d12+9</amount>
+            <damageType>per- forants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+21</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 3 m</trait>
+          <trait>impie</trait>
+          <trait>magique</trait>
+          <trait>maladie</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+9</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>*arc long composite*</name>
+        <bonus>+21</bonus>
+        <traits>
+          <trait>facteur de portée 30 m</trait>
+          <trait>impie</trait>
+          <trait>magique</trait>
+          <trait>maladie</trait>
+          <trait>mortel d10</trait>
+          <trait>propulsif</trait>
+          <trait>rechargement 0</trait>
+          <trait>volée 9 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+9</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="divine" DD="26">
+      <rank rank="5">
+        <spells>
+          <spell>translocation</spell>
+        </spells>
+      </rank>
+      <rank rank="4">
+        <spells>
+          <spell spellSpecial="à volonté">dissipation de la magie (×2), translocation</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Pestilence accélérée</name>
+        <traits>
+          <trait>divine</trait>
+          <trait>manipulation</trait>
+        </traits>
+        <description>� Le leu- kodaémon favorise le développement des maladies jusqu’à des stades plus graves� Il choisit une cible située dans son aura de pestilence et affectée par une maladie� Cette créature doit tenter un jet de Vigueur contre la maladie comme si l’intervalle du stade actuel de cette maladie était passé�</description>
+      </special>
+      <special>
+        <name>Pestilence daémonique</name>
+        <traits>
+          <trait>maladie</trait>
+        </traits>
+        <description>� Le leukodaémon peut communiquer télépathiquement avec la créature affligée à n’importe quelle distance sur le même plan ; **Jet de sauvegarde** Vigueur DD 28 ; **Stade 1** por- teur (1 jour) ; **Stade 2** drainé 1 (1 jour) ; **Stade 3** drainé 2 (1 jour) ; **Stade 4** drainé 2 (1 jour) ; **Stade 5** drainé 3 (1 semaine) ; **Stade 6 **mort</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Souffle pestilentiel</name>
+        <traits>
+          <trait>divine</trait>
+          <trait>impie</trait>
+        </traits>
+        <description>� Le leukodaémon exhale une nuée de mouches noires agressives et bouffies dans un cône de 6 m� Les créatures dans le cône subissent 4d8 dégâts perforants (jet de Réflexes basique DD 28)� Une créature qui rate son jet de sauvegarde tombe malade 1 (ou malade 2 en cas d’échec critique)�</description>
+      </special>
+      <special>
+        <name>Astradaémon (daémon du néant)</name>
+        <description>Ces daémons déconcertants représentent la mort par assaut direct contre une âme ou une force vitale. Rarement aperçus dans l’Univers des mortels, ils passent le plus clair de leur temps à chasser dans les passages entre le monde des vivants et l’après‑vie. Là, ils capturent des âmes en train de migrer, les arrachant à leur juste récompense ou</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

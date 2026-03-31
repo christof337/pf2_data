@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>AUGNAGAR</name>
+    <type>CRÉATURE</type>
+    <level>14</level>
+    <creatureTraits>
+      <trait type="size">TRÈS GRANDE</trait>
+      <trait>FIÉLON</trait>
+      <trait>IMPIE</trait>
+      <trait>QLIPPOTH</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+27</bonus>
+      <senses>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <attributes STR="+8" DEX="+5" CON="+8" INT="+0" WIS="+5" CHA="+4"/>
+    <armorClass>36</armorClass>
+    <saves REF="+23" FOR="+28" WIL="+25"/>
+    <health>225</health>
+    <immunities>
+      <immunity>contrôlé</immunity>
+      <immunity>terreur</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+28</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+          <trait>impie</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d12+14</amount>
+            <damageType>perforants</damageType>
+          </damage>
+          <damage>
+            <amount>3d6</amount>
+            <damageType>de saignement persistants et malédiction de pourriture</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>griffe courbée</name>
+        <bonus>+28</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 4,5 m</trait>
+          <trait>finesse</trait>
+          <trait>impie</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d8+14</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+          <damage>
+            <amount>3d6</amount>
+            <damageType>de saignement persistants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="occult" DD="31">
+      <rank rank="5">
+        <spells>
+          <spell>translocation (×3)</spell>
+        </spells>
+      </rank>
+      <rank rank="7" constant="TRUE">
+        <spells>
+          <spell>discernement</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Démonstration déroutante</name>
+        <description>(concentration, émotion, mental, mise hors de combat, occulte, terreur, visuel)� L’augnagar tortille et fait bouillonner ses membres et sa chair frémissante en un spectacle tellement dérangeant qu’il désoriente tous ceux qui le voient� Toute créature dans une émanation de 9 m doit faire un jet de Volonté DD 34� Ensuite, elle est immunisée contre la Démonstration déroutante pendant 1 min�</description>
+      </special>
+      <special>
+        <name>Succès critique</name>
+        <description>La créature n’est pas affectée�</description>
+      </special>
+      <special>
+        <name>Succès</name>
+        <description>La créature est stupéfiée 1 pendant 1 round�</description>
+      </special>
+      <special>
+        <name>Échec</name>
+        <description>La créature est stupéfiée 1 et confuse pendant 1 min�</description>
+      </special>
+      <special>
+        <name>Échec critique</name>
+        <description>Comme l’échec, mais la créature n’a pas droit à un test nu pour se remettre de sa confusion lorsqu’elle subit des dégâts à cause d’une attaque ou d’un sort�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Inhaler la vitalité</name>
+        <traits>
+          <trait>néant</trait>
+          <trait>occulte</trait>
+        </traits>
+        <description>; **Fréquence** 1 fois/jour ;</description>
+      </special>
+      <special>
+        <name>Malédiction de pourriture</name>
+        <description>(maladie, malédiction, occulte) ; **Jet de sauve‑ garde** Vigueur DD 32 ; **Stade 1** drainé 1 (1 jour) ; **Stade 2** drainé 2 et la créature présente d’immondes plaies purulentes qui dégagent une odeur atroce� Quand la créature subit des dégâts perforants ou tranchants, toutes les créatures dans un rayon de 9 m doivent réussir un jet de Vigueur DD 32 ou être malades 1� La victime rate automatiquement ce jet de sauvegarde (1 jour)�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

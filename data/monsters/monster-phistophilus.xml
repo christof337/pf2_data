@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>PHISTOPHILUS</name>
+    <type>CRÉATURE</type>
+    <level>10</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>DIABLE</trait>
+      <trait>FIÉLON</trait>
+      <trait>IMPIE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Arcanes</name>
+        <bonus>+19</bonus>
+      </skill>
+      <skill>
+        <name>Connaissances juridiques</name>
+        <bonus>+25</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+21</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+18</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+23</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+21</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+19</bonus>
+      </skill>
+      <skill>
+        <name>Société</name>
+        <bonus>+19</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+3" DEX="+4" CON="+4" INT="+7" WIS="+5" CHA="+5"/>
+    <armorClass>30</armorClass>
+    <saves REF="+18" FOR="+18" WIL="+23" saveSpecial="bonus de statut de +1 aux jets de sauvegarde contre la magie"/>
+    <health>150</health>
+    <immunities>
+      <immunity>feu</immunity>
+      <immunity>protection des contrats</immunity>
+    </immunities>
+    <weaknesses>
+      <weakness>
+        <name>saint</name>
+        <value>10</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>entrave contractuelle</name>
+        <bonus>+23</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 3 m</trait>
+          <trait>croc-en-jambe</trait>
+          <trait>désarmement</trait>
+          <trait>impie</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d6+11</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>corne</name>
+        <bonus>+21</bonus>
+        <traits>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d10+11</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Sorts innés divins</name>
+        <description>* *DD 31 ; **10**e* scrutation *(à volonté, voir investissement infernal) *; ***7**e* télé‑ portation interplanaire* ; **5**e* boule de feu*, *éclair*, *communication à distance* (à volonté), *localisation* (à volonté), *scène illusoire*, *sonde mentale*, *translo‑ cation* ; **4**e* bulle de paix*, *silence*, *translocation* (à volonté) ; **3**e *lecture des pensées* (à volonté) ; **Tours de magie (7**e**) ***détection de la magie* ; **Constant (5**e**) ***langage universel*</description>
+      </special>
+      <special>
+        <name>Rituel</name>
+        <description>DD 31 ; *pacte diabolique* (p� 320)</description>
+      </special>
+      <special>
+        <name>Blessure infernale</name>
+        <traits>
+          <trait>divine</trait>
+        </traits>
+        <description>� Les blessures infligées par les Frappes d’un diable des contrats sont difficiles à soigner� Un incantateur ou un objet qui tente d’utiliser la magie de guérison sur une créature victime de ces blessures doit d’abord contrer la blessure infernale (DD 29)� Les soins n’ont aucun effet si le contre est raté�</description>
+      </special>
+      <special>
+        <name>Investissement infernal</name>
+        <description>Un diable des contrats peut lancer un sort inné *scrutation* de rang 10 à volonté mais uniquement pour cibler une créature à laquelle il est lié par contrat� La cible obtient automatiquement un échec critique à son jet de sauvegarde�</description>
+      </special>
+      <special type="activity" actions="3">
+        <name>Rédaction de contrats</name>
+        <traits>
+          <trait>divine</trait>
+          <trait>manipulation</trait>
+        </traits>
+        <description>� Le diable des contrats crée un contrat infernal pour un unique mortel vivant� Ce contrat peut octroyer une grande variété de capacités et d’effets de manière similaire au rituel *souhait* mais qui sont accomplis à la lettre par le diable� Pour bénéficier de ces avantages, le mortel doit volontairement signer le contrat avec son véritable nom� À partir de ce moment, l’âme du mortel est liée au diable des contrats et aux Enfers� Tant que le contrat est effectif, la victime ne peut être ramenée à la vie que par un *souhait* ou une magie similaire� Si un mortel est ramené à la vie de cette manière, le diable des contrats sait quel mortel est de nouveau vivant et il peut localiser la ou les créatures qui lui ont rendu la vie pendant 1 an ; il gagne les effets du sort *localisation* sans limites de portée� Il est difficile et bien souvent risqué de ne pas respecter les termes d’un contrat infernal�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

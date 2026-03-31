@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>MUKRADI</name>
+    <type>CRÉATURE</type>
+    <level>15</level>
+    <creatureTraits>
+      <trait type="size">GIGANTESQUE</trait>
+      <trait>BÊTE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <attributes STR="+9" DEX="+0" CON="+7" INT="+0" WIS="+3" CHA="+0"/>
+    <armorClass>37</armorClass>
+    <saves REF="+23" FOR="+32" WIL="+26"/>
+    <health>300</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>gueule acide</name>
+        <bonus>+32</bonus>
+        <traits>
+          <trait>allonge 6 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d12+17</amount>
+            <damageType>perforants</damageType>
+          </damage>
+          <damage>
+            <amount>3d6</amount>
+            <damageType>acide</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>gueule enflammée</name>
+        <bonus>+32</bonus>
+        <traits>
+          <trait>allonge 6 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d12+17</amount>
+            <damageType>perforants</damageType>
+          </damage>
+          <damage>
+            <amount>3d6</amount>
+            <damageType>de feu</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>gueule électrique</name>
+        <bonus>+32</bonus>
+        <traits>
+          <trait>allonge 6 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d12+17</amount>
+            <damageType>perforants</damageType>
+          </damage>
+          <damage>
+            <amount>3d6</amount>
+            <damageType>électricité</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>patte</name>
+        <bonus>+32</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 4,5 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d10+17</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>queue fouettante</name>
+        <bonus>+32</bonus>
+        <traits>
+          <trait>allonge 9 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d10+17</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Mettre en pièces</name>
+        <description>Le mukradi fait deux Frappes avec différentes gueules contre une même cible� Si les deux touchent, la cible subit 2d12+13 dégâts tranchants supplé- mentaires, avec un jet de Vigueur basique DD 36� Sur un échec cri- tique, la créature est mise en pièces et meurt� Le malus d’attaques multiples du mukradi augmente seulement après qu’il a porté toutes ses attaques�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Rosser</name>
+        <description>Le mukradi effectue une Frappe contre chaque créature à portée� Il peut effectuer une de ces Frappes avec chacune de ses gueules, une avec son coup de queue et le reste avec ses pattes� Chaque attaque s’accompagne d’un malus de circonstances de −2 et augmente son malus d’attaques multiples, mais ce dernier augmente seulement une fois toutes les attaques effectuées�</description>
+      </special>
+      <special type="activity" actions="3">
+        <name>Piétinement</name>
+        <description>Très Grande ou plus petite, patte, DD 36 (p� 360)</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Souffle d’énergie</name>
+        <traits>
+          <trait>primordiale</trait>
+        </traits>
+        <description>Le mukradi libère un souffle d’énergie par l’une de ses trois gueules� Chaque créa- ture dans la zone doit faire un jet de Réflexes basique DD 36� Il ne peut plus utiliser Souffle d’énergie pendant 1d4 rounds�<list><listItem>**Gueule acide** (acide) ligne d’acide de 3 m de large pour 18 m de long, infligeant 16d6 dégâts d’acide�</listItem><listItem>**Gueule électrique** (électricité) ligne d’électricité de 36 m infligeant 16d6 dégâts d’électricité�</listItem><listItem>**Gueule enflammée** (feu) cône de feu de 18 m infligeant 16d6 dégâts de feu�</listItem></list></description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

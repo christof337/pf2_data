@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>CHEVAL SQUELETTIQUE</name>
+    <type>CRÉATURE</type>
+    <level>2</level>
+    <creatureTraits>
+      <trait type="size"/>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <attributes STR="+5" DEX="+3" CON="+2" INT="+0" WIS="+2" CHA="+0"/>
+    <armorClass>16</armorClass>
+    <saves REF="+9" FOR="+6" WIL="+8"/>
+    <health>33</health>
+    <immunities>
+      <immunity>effets de mort</immunity>
+      <immunity>inconscient</immunity>
+      <immunity>maladie</immunity>
+      <immunity>mental</immunity>
+      <immunity>para- lysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>saignement</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Vitesse</name>
+        <description>2 m</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>sabot +9, **Dégâts** 1d8+5 contondants</description>
+      </special>
+      <special>
+        <name>Destrier mort‑vivant</name>
+        <description>Les morts-vivants et leurs alliés peuvent Diriger un cheval squelettique sans avoir besoin de faire de test de compétence�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Galop</name>
+        <description>Le cheval Marche rapidement deux fois, avec sa Vitesse augmentée de 3 m�</description>
+      </special>
+      <special>
+        <name>Géant squelettique</name>
+        <description>Les os animés de géants font d’excellents esclaves nécromantiques.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

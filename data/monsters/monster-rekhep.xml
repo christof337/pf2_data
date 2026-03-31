@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>REKHEP</name>
+    <type>CRÉATURE</type>
+    <level>10</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>ARCHON</trait>
+      <trait>CÉLESTE</trait>
+      <trait>SAINT</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+21</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+19</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+19</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+19</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+17</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+5, **Dex **+1, **Con **+7, **Int **+2, **Sag **+3, **Cha **+3</description>
+      </special>
+      <special>
+        <name>Objet</name>
+        <description>* lance d’arçon de frappe +1*</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>31</armorClass>
+    <saves REF="+15" FOR="+23" WIL="+19" saveSpecial="bonus de statut +1 à tous les jets de sauvegarde contre la magie"/>
+    <health>150</health>
+    <weaknesses>
+      <weakness>
+        <name>impie</name>
+        <value>10</value>
+      </weakness>
+    </weaknesses>
+    <reactiveAbilities>
+      <special type="reaction">
+        <name>Protection des archons</name>
+        <description>Comme le zoaem, avec résistance 15�</description>
+      </special>
+    </reactiveAbilities>
+    <speeds>
+      <speed>9 m</speed>
+      <speed type="fly">18 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>*lance d’arçon sainte*</name>
+        <bonus>+22</bonus>
+        <traits>
+          <trait>mortel d8</trait>
+          <trait>divine</trait>
+          <trait>saint</trait>
+          <trait>joute d6</trait>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+11</amount>
+            <damageType>perforants</damageType>
+          </damage>
+          <damage>
+            <amount>1d4</amount>
+            <damageType>d’esprit (ou 2d4 d’esprit contre des cibles non saintes)</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="divine" DD="27">
+      <rank rank="4">
+        <spells>
+          <spell spellSpecial="à volonté">translocation</spell>
+        </spells>
+      </rank>
+      <rank rank="2">
+        <spells>
+          <spell>partage de la force vitale (×3)</spell>
+        </spells>
+      </rank>
+      <rank rank="5" constant="TRUE">
+        <spells>
+          <spell>lan‑ gage universel</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special>
+        <name>Armement saint</name>
+        <traits>
+          <trait>divine</trait>
+          <trait>saint</trait>
+        </traits>
+        <description>� Une arme maniée par un rekhep gagne la rune *sainte* tant qu’il l’utilise�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

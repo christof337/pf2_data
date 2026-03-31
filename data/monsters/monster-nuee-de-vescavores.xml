@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>NUÉE DE VESCAVORES</name>
+    <type>CRÉATURE</type>
+    <level>5</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>FIÉLON</trait>
+      <trait>IMPIE</trait>
+      <trait>NUÉE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <interactionAbilities>
+      <special>
+        <name>Langue</name>
+        <description>chthonien</description>
+      </special>
+      <special>
+        <name>Compétences</name>
+        <description>Acrobaties +13, Athlétisme +10, Discrétion +13</description>
+      </special>
+      <special>
+        <name>For</name>
+        <description>–2, **Dex **+5, **Con **+4, **Int **–3, **Sag **+1, **Cha **+1</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>21</armorClass>
+    <saves/>
+    <health>60</health>
+    <immunities>
+      <immunity>esprit de la nuée (p� 359)</immunity>
+      <immunity>précision</immunity>
+    </immunities>
+    <weaknesses>
+      <weakness>
+        <name>dégâts de zone</name>
+        <value>5</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special>
+        <name>Vitesses</name>
+        <description>6 m, vol 12 m</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Appétit dévastateur</name>
+        <description>La nuée dévore jusqu’à la terre autour d’elle� La nuée Marche rapi- dement� Toutes les cases qu’elle occupe pendant ce déplacement deviennent un terrain dif- ficile� Les créatures sur leur chemin doivent réussir un jet de Réflexes DD 21 ou tomber à terre�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Baragouin démentiel</name>
+        <traits>
+          <trait>audible</trait>
+          <trait>mental</trait>
+        </traits>
+        <description>� Chaque créature stupéfiée dans l’espace de la nuée doit effectuer un jet de Volonté DD 21 tandis que la nuée fredonne les interminables chansons des Failles extérieures�</description>
+      </special>
+      <special>
+        <name>Succès critique</name>
+        <description>La cible n’est pas affectée et est immunisée contre Baragouin démentiel pendant 1 min�</description>
+      </special>
+      <special>
+        <name>Succès</name>
+        <description>La cible n’est pas affectée et est immunisée contre Baragouin démentiel pendant 1 round�</description>
+      </special>
+      <special>
+        <name>Échec</name>
+        <description>La cible est confuse pendant 1 round�</description>
+      </special>
+      <special>
+        <name>Échec critique</name>
+        <description>La cible est confuse pendant 1 round et ne peut pas cibler de démons tant qu’elle est dans cet état�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Morsures dévoratrices</name>
+        <description>Chaque ennemi dans l’espace de la nuée subit 3d6 dégâts perforants (jet de Vigueur basique DD 20)� Si la créature rate son jet de sauvegarde, elle est également stupéfiée 1 pendant 1 round�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

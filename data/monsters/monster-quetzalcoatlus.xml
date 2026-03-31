@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>QUETZALCOATLUS</name>
+    <type>CRÉATURE</type>
+    <level>7</level>
+    <creatureTraits>
+      <trait type="size">TRÈS GRANDE</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+15</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>9 m</range>
+        </sens>
+        <sens>
+          <name>vision nocturne</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+14</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+17</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+6, **Dex** +4, **Con** +3, **Int** –4, **Sag** +2, **Cha** –1</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>25</armorClass>
+    <saves/>
+    <health>110</health>
+    <speeds>
+      <speed>4</speed>
+      <speed>5 m</speed>
+      <speed type="fly">15 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>bec</name>
+        <bonus>+17</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+          <trait>mortel 1d10</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d10+10</amount>
+            <damageType>perforants</damageType>
+          </damage>
+          <damage>
+            <amount>1d8</amount>
+            <damageType>de saignement persistants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>serres +17, **Dégâts** 2d8+10 perforants plus Empoignade (p� 359)</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Piqué</name>
+        <description>Le quetzalcoatlus Vole sur une distance maximale égale à sa Vitesse et porte une Frappe de bec ou de serre à n’importe quel moment de son déplacement�</description>
+      </special>
+      <special>
+        <name>Saisir</name>
+        <description>Un quetzalcoatlus peut Voler à la moitié de sa Vitesse en portant une créature empoignée ou entravée� Ses deux serres sont utilisées par cette action�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

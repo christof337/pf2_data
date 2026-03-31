@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>ÉTRANGLEUR DERO</name>
+    <type>CRÉATURE</type>
+    <level>3</level>
+    <creatureTraits>
+      <trait type="size">PETITE</trait>
+      <trait>DERO</trait>
+      <trait>HUMANOÏDE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+6</bonus>
+      <senses>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages>
+      <language>aklo</language>
+      <language>sakvroth</language>
+    </languages>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+11</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+10</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Médecine</name>
+        <bonus>+6</bonus>
+      </skill>
+    </skills>
+    <armorClass>19</armorClass>
+    <saves REF="+8" FOR="+10" WIL="+6"/>
+    <health>45</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="ranged">
+        <name>arbalète de poing</name>
+        <bonus>+10</bonus>
+        <traits>
+          <trait>facteur de portée 18 m</trait>
+          <trait>rechargement 1</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+2</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Sorts innés occultes</name>
+        <description>* *DD 19 ; **2**e *lumière révélatrice, ténèbres* ; **Tours de magie (2**e**) ***hébétement*, *lecture de l’aura*, *lumière*</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Étranglement</name>
+        <traits>
+          <trait>attaque</trait>
+          <trait>non létal</trait>
+        </traits>
+        <description>; **Conditions.** Le dero doit avoir ses deux mains libres ou manier une chaîne cloutée ;</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Médecine dero</name>
+        <description>Comme le traqueur dero�</description>
+      </special>
+      <special>
+        <name>Magister dero</name>
+        <description>Les magisters sont les dirigeants au sein de la société dero. Ils s’occupent de la majeure partie des opérations cruelles et des procédures altérant la mémoire infligées à leurs victimes.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

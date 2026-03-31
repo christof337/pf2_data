@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>LINNORM DES FALAISES</name>
+    <type>CRÉATURE</type>
+    <level>14</level>
+    <creatureTraits>
+      <trait type="size">GIGANTESQUE</trait>
+      <trait>DRAGON</trait>
+      <trait>FEU</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>aklo</language>
+      <language>draconique</language>
+      <language>féerique</language>
+    </languages>
+    <attributes STR="+8" DEX="+4" CON="+6" INT="+0" WIS="+0" CHA="+5"/>
+    <armorClass>37</armorClass>
+    <saves REF="+24" FOR="+28" WIL="+22" saveSpecial="bonus de statut de +1 aux jets de sauvegarde contre la magie"/>
+    <health>270</health>
+    <immunities>
+      <immunity>feu</immunity>
+      <immunity>malédiction</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>sommeil</immunity>
+    </immunities>
+    <weaknesses>
+      <weakness>
+        <name>fer froid</name>
+        <value>10</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+30</bonus>
+        <traits>
+          <trait>allonge 6 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d12+14</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+30</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 6 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d8+14</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>queue</name>
+        <bonus>+30</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 6 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d6+14</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="primal" DD="33">
+      <rank rank="6" constant="TRUE">
+        <spells>
+          <spell>déplacement sans entrave</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Constriction</name>
+        <description>2d6+14 contondants, DD 34 (p� 359)</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Souffle magmatique</name>
+        <traits>
+          <trait>feu</trait>
+          <trait>primordiale</trait>
+        </traits>
+        <description>� Le linnorm des falaises souffle un jet de magma sur une ligne de 36 m qui inflige 12d6 dégâts de feu aux créatures dans la zone (jet de Réflexes basique DD 34)� Chaque créature qui rate son jet de sauvegarde subit 4d6 dégâts de feu persistants� Le linnorm ne peut plus utiliser Souffle mag- matique pendant 1d4 rounds� Le magma persiste jusqu’au début du prochain tour du linnorm� Si le linnorm était au sol, le magma persiste sous forme de ligne brûlante sur le sol directement sous la trajectoire du Souffle magmatique, si le linnorm était dans les airs, le magma tombe comme un rideau de pluie de 18 m de haut� Toute créature qui traverse le magma subit 6d6 dégâts de feu (jet de Réflexes basique DD 34)� Au début du prochain tour du linnorm, le magma refroidit et forme une mince couche de roche friable au sol ou le rideau de pluie magmatique arrête de tomber et se change en graviers inoffensifs� Le magma refroidi se désa- grège en sable et en poudre en quelques heures�</description>
+      </special>
+      <special>
+        <name>Venin de linnorm des falaises</name>
+        <traits>
+          <trait>feu</trait>
+          <trait>poison</trait>
+        </traits>
+        <description>; **Jet de sauve‑ garde** Vigueur DD 34 ; **Durée maximale** 10 rounds ; **Stade 1** 4d6 dégâts de feu et drainé 1 (1 round) ; **Stade 2** 6d6 dégâts de feu et drainé 2 (1 round)</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

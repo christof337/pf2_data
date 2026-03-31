@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>LÉCHI DE FEUILLES</name>
+    <type>CRÉATURE</type>
+    <level>0</level>
+    <creatureTraits>
+      <trait type="size">PETITE</trait>
+      <trait>LÉCHI</trait>
+      <trait>PLANTE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <interactionAbilities>
+      <special>
+        <name>Langues</name>
+        <description>commun, féerique ; *communication avec les plantes* (arbres uniquement)</description>
+      </special>
+      <special>
+        <name>Compétence</name>
+        <description>Acrobaties +4, Discrétion +4, Nature +4</description>
+      </special>
+      <special>
+        <name>For</name>
+        <description>–1, **Dex** +2,** Con** +2, **Int** –2, **Sag** +2,** Cha** +1</description>
+      </special>
+      <special>
+        <name>Objets</name>
+        <description>pique</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>18</armorClass>
+    <saves REF="+6" FOR="+6" WIL="+4"/>
+    <health>15</health>
+    <weaknesses>
+      <weakness>
+        <name>feu</name>
+        <value>2</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>pique</name>
+        <bonus>+3</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages/>
+      </strike>
+      <strike type="ranged">
+        <name>cosse de graine</name>
+        <bonus>+6</bonus>
+        <traits>
+          <trait>facteur de portée 9 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+1</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Sort inné primordial</name>
+        <description>DD 14 ; **Constant (3**e**) ***communication avec les plantes* (arbres uniquement)</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Changement de forme</name>
+        <description>(concentration, métamorphose, pri- mordiale)� Le léchi de feuilles se transforme en Petit arbre (p� 358)� Pour le reste, ce pouvoir utilise les effets de *sym‑ biose végétale*�</description>
+      </special>
+      <special>
+        <name>Coup assourdissant</name>
+        <description>Quand un léchi de feuilles réussit une Frappe de cosse de graine, celle-ci explose bruyamment� La cible doit tenter un jet de Vigueur DD 16�</description>
+      </special>
+      <special>
+        <name>Succès critique</name>
+        <description>La cible ne subit aucun effet et est immunisée pendant 24 h�</description>
+      </special>
+      <special>
+        <name>Succès</name>
+        <description>La cible n’est pas affectée�</description>
+      </special>
+      <special>
+        <name>Échec</name>
+        <description>La cible est sourde pendant 1 round�</description>
+      </special>
+      <special>
+        <name>Échec critique</name>
+        <description>La cible est sourde pendant 1 min�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Planer</name>
+        <traits>
+          <trait>déplacement</trait>
+        </traits>
+        <description>� Le léchi plane dans les airs se déplaçant horizontalement de 7,5 m et de 1,5 m vers le sol� Tant que le léchi uti- lise au moins 1 action pour planer au cours de chaque round, il reste dans les airs à la fin de chaque tour� Pour déterminer les dégâts d’une chute, le léchi de feuilles réduit toujours la hauteur de chute de 6 m�</description>
+      </special>
+      <special>
+        <name>Léchi calebasse</name>
+        <description>Les léchis calebasses sont les gardiens des champs, des jardins et des fermes. De nombreux villages bénéficient de la protection d’un léchi calebasse même si ses habitants l’ignorent.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

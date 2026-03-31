@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>CHEVALIER SÉPULCRE</name>
+    <type>CRÉATURE</type>
+    <level>10</level>
+    <creatureTraits>
+      <trait type="size"/>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+23</bonus>
+      </skill>
+      <skill>
+        <name>Connaissances en art de la guerre</name>
+        <bonus>+20</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+22</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+19</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+7" DEX="+4" CON="+4" INT="+2" WIS="+3" CHA="+5"/>
+    <interactionAbilities>
+      <special>
+        <name>Objets</name>
+        <description>arc long composite (20 flèches), épée à deux mains, *harnois de résilience +1*</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>31</armorClass>
+    <saves/>
+    <health>175</health>
+    <immunities>
+      <immunity>effets de mort</immunity>
+      <immunity>froid</immunity>
+      <immunity>inconscient</immunity>
+      <immunity>maladie</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>saignement</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>*épée à deux mains de froid*</name>
+        <bonus>+24</bonus>
+        <traits>
+          <trait>froid</trait>
+          <trait>magique</trait>
+          <trait>polyvalent P</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d12+10</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>froid</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>poing</name>
+        <bonus>+23</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>froid</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+10</amount>
+            <damageType>contondants</damageType>
+          </damage>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>froid</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>*arc long composite de froid*</name>
+        <bonus>+21</bonus>
+        <traits>
+          <trait>facteur de portée 30 m</trait>
+          <trait>froid</trait>
+          <trait>magique</trait>
+          <trait>mortel
+ d10</trait>
+          <trait>propulsif</trait>
+          <trait>rechargement 0</trait>
+          <trait>volée 9 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+6</amount>
+            <damageType>perforants</damageType>
+          </damage>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>froid</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Déflagration dévastatrice</name>
+        <traits>
+          <trait>arcanique</trait>
+          <trait>froid</trait>
+        </traits>
+        <description>11d6 froid, DD 29</description>
+      </special>
+      <special>
+        <name>Maître d’armes
+Malédiction du chevalier sépulcre</name>
+        <description>DD 33</description>
+      </special>
+      <special type="activity" actions="3">
+        <name>Monture fantôme</name>
+        <traits>
+          <trait>arcanique</trait>
+        </traits>
+        <description>**PV **58 ; **CA **27, **Réf **+15, **Vig **+17, **Vol**+14</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

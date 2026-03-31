@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>ENFANT LUMINEUX</name>
+    <type>CRÉATURE</type>
+    <level>12</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>ASTRAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Arcanes</name>
+        <bonus>+18</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+21</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+23</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+21</bonus>
+      </skill>
+      <skill>
+        <name>Occultisme</name>
+        <bonus>+18</bonus>
+      </skill>
+    </skills>
+    <armorClass>33</armorClass>
+    <saves/>
+    <health>215</health>
+    <immunities>
+      <immunity>aveuglé</immunity>
+      <immunity>ébloui</immunity>
+      <immunity>feu</immunity>
+    </immunities>
+    <speeds>
+      <speed>9 m</speed>
+      <speed type="fly">15 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>poing</name>
+        <bonus>+25</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d4+5</amount>
+            <damageType>contondants</damageType>
+          </damage>
+          <damage>
+            <amount>4d6</amount>
+            <damageType>de feu et 2d4 de feu persistants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>rayon de feu</name>
+        <bonus>+25</bonus>
+        <traits>
+          <trait>arcanique</trait>
+          <trait>magique</trait>
+          <trait>portée 30 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d10+3</amount>
+            <damageType>feu,</damageType>
+          </damage>
+          <damage>
+            <amount>2d10</amount>
+            <damageType>dégâts de vitalité si la cible est morte-vivante</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="occult" DD="33">
+      <rank rank="7">
+        <spells>
+          <spell>explosion de lumière, riposte de sort</spell>
+        </spells>
+      </rank>
+      <rank rank="6">
+        <spells>
+          <spell>dissipation de la magie, motif éclatant, mur de force</spell>
+        </spells>
+      </rank>
+      <rank rank="5">
+        <spells>
+          <spell>mirage, translocation, vision faussée</spell>
+        </spells>
+      </rank>
+      <rank rank="4">
+        <spells>
+          <spell spellSpecial="à volonté">translocation</spell>
+        </spells>
+      </rank>
+      <rank rank="2">
+        <spells>
+          <spell spellSpecial="à volonté">objet illusoire</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special>
+        <name>D’ANTIQUES GARDIENS</name>
+        <description>Au Thassilon, il était courant de convoquer des enfants lumineux et de les asservir afin qu’ils gardent des lieux importants� Aujourd’hui encore, des milliers d’années après la chute de l’empire, il arrive encore aux aventuriers de rencontrer des enfants lumineux au milieu de ruines antiques, condamnés à garder des trésors et des savoirs oubliés d’un lointain passé� [[PAGE 145]]</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

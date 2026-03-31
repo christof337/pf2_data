@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>VILDERAVN</name>
+    <type>CRÉATURE</type>
+    <level>16</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>FÉE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+30</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+32</bonus>
+      </skill>
+      <skill>
+        <name>Connaissances en art de la guerre</name>
+        <bonus>+26</bonus>
+      </skill>
+      <skill>
+        <name>Connaissances en héraldique</name>
+        <bonus>+26</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+32</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+29</bonus>
+      </skill>
+      <skill>
+        <name>Société</name>
+        <bonus>+24</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+8, **Dex **+6, **Con **+5, **Int **+4, **Sag **+4, **Cha **+7</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>40</armorClass>
+    <saves/>
+    <health>300</health>
+    <immunities>
+      <immunity>drainé</immunity>
+      <immunity>effets de mort</immunity>
+      <immunity>malédiction</immunity>
+      <immunity>terreur</immunity>
+    </immunities>
+    <weaknesses>
+      <weakness>
+        <name>fer froid</name>
+        <value>10</value>
+      </weakness>
+    </weaknesses>
+    <reactiveAbilities>
+      <special>
+        <name>Aura d’anxiété</name>
+        <traits>
+          <trait>aura</trait>
+          <trait>émotion</trait>
+          <trait>mental</trait>
+          <trait>terreur</trait>
+        </traits>
+        <description>9 m, DD 35� Comme présence terrifiante (p� 360) et la créatureeffrayée par l’aura devient méfiante : elle ne considère plus aucune créature comme un allié et ne peut ni Aider ni Prendre en tenaille� Sur un échec critique, la créature ne peut également plus être une cible volontaire pour de la magie inoffensive ou pouvant l’aider�</description>
+      </special>
+      <special type="reaction">
+        <name>Frappe réflexe</name>
+        <traits>
+          <trait>p� 359</trait>
+        </traits>
+        <description/>
+      </special>
+    </reactiveAbilities>
+    <speeds>
+      <speed>12 m</speed>
+      <speed type="fly">36 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>*épée à deux mains*</name>
+        <bonus>+34</bonus>
+        <traits>
+          <trait>magique</trait>
+          <trait>polyvalent P</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d12+16</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+32</bonus>
+        <traits>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d8+16</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>serres</name>
+        <bonus>+32</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d8+16</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Sorts innés occultes</name>
+        <description>* *DD 37 ; **8**e* suggestion *; **5**e* malédiction du paria *(à volonté), *mémoire réécrite*,* suggestion *(à volonté),* translocation*,* vague de désespoir *(à volonté) ;</description>
+      </special>
+      <special>
+        <name>Constant (6</name>
+        <description>e**) ***discernement*,* langage universel*</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Changement de forme</name>
+        <traits>
+          <trait>concentration</trait>
+          <trait>métamorphose</trait>
+          <trait>occulte</trait>
+        </traits>
+        <description>� Le vilderavn prend l’apparence d’un humanoïde, d’un loup, d’un loup sanguinaire ou d’un hybride avec des traits de corbeau et de loup de taille Petite ou Moyenne (p� 358)� Le vilderavn ne peut utiliser son attaque de mâchoires que lors- qu’il a une tête de loup et son attaque de serres que lorsqu’il a des traits de corbeau� Il peut prendre sa forme de chevalier corbeau : un humanoïde de taille Moyenne avec un harnois noir et une épée à deux mains� Il peut utiliser ses Frappes de mâchoires ou de serres uniquement sous une forme présentant ces traits et son épée à deux mains uniquement sous la forme de chevalier�</description>
+      </special>
+      <special>
+        <name>Dévoreur d’âme</name>
+        <traits>
+          <trait>occulte</trait>
+        </traits>
+        <description>� Si le vilderavn tue une cible humanoïde avec un coup cri- tique en utilisant sa Frappe de mâchoires, il arrache son cœur et son âme et les dévore pendant son attaque� Tant que sa cible est morte, le vilderavn peut utiliser Changement de forme pour prendre celle du défunt, et il gagne un bonus de statut de +4 aux tests de Duperie pour se faire passer pour la cible� Si quelqu’un tente de ressusciter cette cible par magie, il doit réussir un test de contre DD 34 pour récupérer l’âme de la cible au vilderavn ; sinon, le sort échoue�</description>
+      </special>
+      <special>
+        <name>Oiseau sanguinaire</name>
+        <traits>
+          <trait>malédiction</trait>
+          <trait>occulte</trait>
+        </traits>
+        <description>� Une créature touchée par une attaque au corps à corps du vilderavn est maudite� Elle subit 2d6 dégâts de saignement persistants qui sont difficiles à arrêter� Le DD pour stopper le saignement en utilisant Prodiguer les premiers soins est de 35, et guérir la créature en lui rendant tous ses PV n’y met pas automatiquement fin� Délivrer la créature de la malédiction met fin au saignement�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

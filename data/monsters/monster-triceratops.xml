@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>TRICÉRATOPS</name>
+    <type>CRÉATURE</type>
+    <level>8</level>
+    <creatureTraits>
+      <trait type="size">TRÈS GRANDE</trait>
+      <trait>ANIMAL</trait>
+      <trait>DINOSAURE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+16</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>9 m</range>
+        </sens>
+        <sens>
+          <name>vision nocturne</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <armorClass>26</armorClass>
+    <saves REF="+12" FOR="+18" WIL="+14"/>
+    <health>140</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>cornes</name>
+        <bonus>+19</bonus>
+        <traits>
+          <trait>allonge 4,5 m)</trait>
+          <trait>**Damage** 2d8+9 perforants plus
+                               Renversement (p� 360)
+                              **Corps à corps**
+                                    1
+                                      patte +19 (allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+9</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Charge lourde</name>
+        <description>Le tricératops Marche rapidement sur une distance maximale de 3 m puis effectue une Frappe�</description>
+      </special>
+      <special>
+        <name>Éventration brutale</name>
+        <description>Un tricératops inflige 2d6 dégâts de saignement persistants supplémen- taires aux cibles à terre qu’il frappe avec ses cornes�</description>
+      </special>
+      <special type="activity" actions="3">
+        <name>Piétinement</name>
+        <description>Grande ou plus petite, patte, DD 26 (p� 360)</description>
+      </special>
+      <special>
+        <name>Brontosaure</name>
+        <description>Les brontosaures sont des mastodontes véritablement gigan‑ tesques, des herbivores massifs suffisamment grands pour ne pas redouter les prédateurs les plus mas‑ sifs. Leur corps est fort et robuste, avec une queue et un cou longs et sinueux. Bien qu’ils soient capables d’écraser des bâtiments entiers, ces herbivores sont généralement paisibles et font attention où ils marchent.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

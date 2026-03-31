@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GOULE HARCELEUSE</name>
+    <type>CRÉATURE</type>
+    <level>1</level>
+    <creatureTraits>
+      <trait type="size"/>
+    </creatureTraits>
+    <perception>
+      <bonus>+7</bonus>
+      <senses>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <interactionAbilities>
+      <special>
+        <name>Langues</name>
+        <description>commun, nécril</description>
+      </special>
+      <special>
+        <name>Compétences</name>
+        <description>Acrobaties +7, Athlétisme +8, Discrétion +7, Survie +5</description>
+      </special>
+      <special>
+        <name>For</name>
+        <description>+1, **Dex **+4, **Con **+1, **Int **+1, **Sag **+2, **Cha **+2</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>17</armorClass>
+    <saves REF="+9" FOR="+4" WIL="+5"/>
+    <health>16</health>
+    <immunities>
+      <immunity>effets de mort</immunity>
+      <immunity>inconscient</immunity>
+      <immunity>maladie</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>saignement</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+9</bonus>
+        <traits>
+          <trait>finesse</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+1</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+9</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+1</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Bond rapide</name>
+        <traits>
+          <trait>déplacement</trait>
+        </traits>
+        <description/>
+      </special>
+      <special type="activity" actions="1">
+        <name>Dévorer la chair</name>
+        <traits>
+          <trait>manipulation</trait>
+        </traits>
+        <description>1d6 PV</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Murmures de la goule</name>
+        <traits>
+          <trait>audible</trait>
+          <trait>linguistique</trait>
+          <trait>occulte</trait>
+        </traits>
+        <description>DD 17</description>
+      </special>
+      <special>
+        <name>Savoir d’outre‑tombe</name>
+        <traits>
+          <trait>occulte</trait>
+        </traits>
+        <description>modificateur de compétence +7</description>
+      </special>
+      <special>
+        <name>Soldat goule</name>
+        <description>Ayant conservé leurs aptitudes martiales, ces puissantes goules n’ont pas peur d’affronter leurs ennemis à découvert et apprennent les compétences de combat de leurs adversaires tombés en consommant leur chair.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

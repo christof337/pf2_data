@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>MÉGALODON</name>
+    <type>CRÉATURE</type>
+    <level>9</level>
+    <creatureTraits>
+      <trait type="size">GIGANTESQUE</trait>
+      <trait>ANIMAL</trait>
+      <trait>AQUATIQUE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+20</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>30 m</range>
+        </sens>
+        <sens>
+          <name>perception du sang</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+21</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+19</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+16</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+8, **Dex **+2, **Con **+5, **Int **–4, **Sag **+3, **Cha **–2</description>
+      </special>
+      <special>
+        <name>Perception du sang</name>
+        <description>Comme le grand requin blanc�</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>27</armorClass>
+    <saves/>
+    <health>180</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+22</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d12+10</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>queue</name>
+        <bonus>+22</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 4,5 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+10</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Attaque féroce</name>
+        <description>Comme le grand requin blanc, mais 2d12 dégâts tranchants�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Brèche</name>
+        <traits>
+          <trait>attaque</trait>
+          <trait>déplacement</trait>
+        </traits>
+        <description>� Comme le grand requin blanc, mais l’allonge du mégalodon lui permet d’attaquer une créature qui se trouve jusqu’à 10,5 m au-dessus de l’eau (ou à 12 m s’il utilise sa queue)�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Gober</name>
+        <traits>
+          <trait>attaque</trait>
+        </traits>
+        <description>Très grande, 2d8+5 contondants, Rupture 20 (p� 359)</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

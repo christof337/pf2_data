@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>DRAGON DE MIRAGE ADULTE</name>
+    <type>CRÉATURE</type>
+    <level>13</level>
+    <creatureTraits>
+      <trait type="size">TRÈS GRANDE</trait>
+      <trait>ARCANIQUE</trait>
+      <trait>DRAGON</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+25</bonus>
+      <senses>
+        <sens>
+          <name>odorat perception des illusions</name>
+        </sens>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+25</bonus>
+      </skill>
+      <skill>
+        <name>Arcanes</name>
+        <bonus>+24</bonus>
+      </skill>
+      <skill>
+        <name>Artisanat</name>
+        <bonus>+24</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+25</bonus>
+      </skill>
+      <skill>
+        <name>Connaissances des illusions</name>
+        <bonus>+26</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+27</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+27</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+29</bonus>
+      </skill>
+      <skill>
+        <name>Larcin</name>
+        <bonus>+25</bonus>
+      </skill>
+      <skill>
+        <name>Représentation</name>
+        <bonus>+27</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+6" DEX="+6" CON="+5" INT="+5" WIS="+6" CHA="+8"/>
+    <armorClass>33</armorClass>
+    <saves REF="+23" FOR="+22" WIL="+25" saveSpecial="bonus de statut de +2 à tous les jets de sauvegarde contre la magie arcanique"/>
+    <health>235</health>
+    <immunities>
+      <immunity>fasciné</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>sommeil</immunity>
+    </immunities>
+    <speeds>
+      <speed>15 m</speed>
+      <speed type="climb">9 m</speed>
+      <speed type="fly">45 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+25</bonus>
+        <traits>
+          <trait>allonge 4,5 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d10+12</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+25</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 3 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d6+12</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>queue</name>
+        <bonus>+23</bonus>
+        <traits>
+          <trait>allonge 6 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d8+12</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Sorts innés arcaniques</name>
+        <description>* *DD 35 ; **6**e* créature illusoire*,* mirage*,* motif éclatant, scène illusoire *; **4**e* invisibilité, objet illusoire *(à volonté) ; **2e ***invisibilité *(à volonté) ; **Tours de magie (7**e**) ** *chimère*,* message*</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Allonger le cou et mordre</name>
+        <description>Le dragon allonge le cou et effectue une Frappe de mâchoires avec une allonge étendue de 7,5 m�</description>
+      </special>
+      <special>
+        <name>Attaque sournoise</name>
+        <description>Les Frappes du dragon infligent 2d6 dégâts de précision supplémentaires aux créatures prises par surprise�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Démonstration captivante</name>
+        <traits>
+          <trait>arcanique</trait>
+          <trait>visuelle</trait>
+        </traits>
+        <description>**Fréquence.** Une fois toutes les 10 min�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

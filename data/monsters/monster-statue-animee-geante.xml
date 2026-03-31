@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>STATUE ANIMÉE GÉANTE</name>
+    <type>CRÉATURE</type>
+    <level>7</level>
+    <creatureTraits>
+      <trait type="size"/>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <armorClass>26</armorClass>
+    <saves REF="+10" FOR="+17" WIL="+9"/>
+    <health>100</health>
+    <immunities>
+      <immunity>attaques non létales</immunity>
+      <immunity>condamné</immunity>
+      <immunity>drainé</immunity>
+      <immunity>effets de mort</immunity>
+      <immunity>esprit</immunity>
+      <immunity>fatigué</immunity>
+      <immunity>guérison</immunity>
+      <immunity>inconscient</immunity>
+      <immunity>malade</immunity>
+      <immunity>maladie</immunity>
+      <immunity>mental</immunity>
+      <immunity>néant</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>saignement</immunity>
+      <immunity>vitalité</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>poing en pierre</name>
+        <bonus>+19</bonus>
+        <traits>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d12+6</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>charbons incandescents</name>
+        <bonus>+12</bonus>
+        <traits>
+          <trait>facteur de portée 24 m</trait>
+          <trait>feu</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+6</amount>
+            <damageType>contondants et 2d8 de feu</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Brasero</name>
+        <description>La statue porte un grand brasero rempli de charbons incandescents� Pour porter des Frappes de charbons incandescents ou utiliser Brûler vif, la statue doit tenir le brasero dans une main ou l’avoir au moins à portée� Au lieu d’attaquer la statue, une créature peut directement viser le brasero� Ce dernier a la même CA et les mêmes jets de sauvegarde que la statue� Il est possible d’éteindre les braises en infligeant 15 points de dégâts de froid au brasero, ou en l’arrosant avec au moins 7 L d’eau� La statue ne peut alors plus utiliser son pouvoir Brûler vif et ses attaques à distance n’infligent plus de dégâts de feu�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Brûler vif</name>
+        <traits>
+          <trait>feu</trait>
+        </traits>
+        <description>� La statue plonge une créature qu’elle a empoignée ou entravée dans les char- bons incandescents de son brasero� La cible subit 3d8 dégâts de feu et 1d8 dégâts de feu persistants�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

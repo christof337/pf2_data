@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GRINDYLOW</name>
+    <type>CRÉATURE</type>
+    <level>0</level>
+    <creatureTraits>
+      <trait type="size">PETITE</trait>
+      <trait>ABERRATION</trait>
+      <trait>AMPHIBIE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+5</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+5</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+1" DEX="+3" CON="+2" INT="+0" WIS="+3" CHA="+0"/>
+    <armorClass>15</armorClass>
+    <saves/>
+    <health>14</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>morsure</name>
+        <bonus>+7</bonus>
+        <traits>
+          <trait>finesse</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+1</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>tentacule</name>
+        <bonus>+7</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>croc-en-jambe</trait>
+          <trait>finesse</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+1</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>lance +5, **Dégâts** 1d6+1 perforants **À distance** 1 lance</name>
+        <bonus>+7</bonus>
+        <traits>
+          <trait>jet 6 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+1</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Propulsion</name>
+        <traits>
+          <trait>déplacement</trait>
+        </traits>
+        <description>� Le grindylow se déplace dans l’eau jusqu’à 18 m en ligne droite sans déclencher de réactions�</description>
+      </special>
+      <special>
+        <name>Ventouses de fixation</name>
+        <description>Quand un grindylow Empoigne une créature plus grande que lui, il s’y attache� La créa- ture empoignée n’est pas immobilisée, mais si elle se déplace, le grindylow se déplace avec elle� Si la créa- ture est de taille Moyenne ou plus petite, elle subit un malus de statut de −1,5 m à ses Vitesses tant que le grindylow est attaché� Le grindylow est pris par surprise lorsqu’il est attaché à une créature�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

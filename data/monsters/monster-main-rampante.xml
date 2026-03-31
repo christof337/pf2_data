@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>MAIN RAMPANTE</name>
+    <type>CRÉATURE</type>
+    <level>-1</level>
+    <creatureTraits>
+      <trait type="size"/>
+    </creatureTraits>
+    <perception>
+      <bonus>+5</bonus>
+      <senses>
+        <sens>
+          <name>perception de la vie</name>
+          <range>9 m</range>
+          <source>p� 360</source>
+        </sens>
+        <sens>
+          <name>perception des vibrations</name>
+          <precision>imprécis</precision>
+          <range>9 m</range>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+5</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+6</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+2</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+1, **Dex** +3, **Con** +0, **Int** −4, **Sag** +0,** Cha** +0</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>12</armorClass>
+    <saves/>
+    <health>8</health>
+    <immunities>
+      <immunity>effets de mort</immunity>
+      <immunity>inconscient</immunity>
+      <immunity>maladie</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>saignement</immunity>
+      <immunity>visuel</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+7</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+1</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Empoignade à la gorge</name>
+        <description>Ce pouvoir fonctionne comme Empoignade (p� 359), mais la main ram- pante saisit la gorge d’une créature de taille Moyenne ou plus petite� Une créature empoignée ou entravée de cette façon éprouve des difficultés à parler et doit dépenser une action supplé- mentaire pour accomplir une action nécessitant la parole, notamment lorsqu’elle lance un sort�</description>
+      </special>
+      <special>
+        <name>Proie marquée</name>
+        <description>Lorsqu’une main rampante est maculée du sang d’une créature désignée, cette dernière peut lui être assignée en tant que proie� Si la main n’a pas de proie, la prochaine créature qu’elle blesse devient automatiquement sa proie� La main gagne un bonus de circonstances de +1 à ses tests de Perception lorsqu’elle Cherche sa proie, à ses tests de Survie lorsqu’elle la Piste et à ses jets de dégâts lorsqu’elle la Frappe�</description>
+      </special>
+      <special>
+        <name>Main rampante géante</name>
+        <description>Ces mains monstrueuses se forment à partir des membres d’un géant ou d’autres créatures de grande taille.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

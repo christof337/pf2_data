@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GARDIEN ARBORÉEN</name>
+    <type>CRÉATURE</type>
+    <level>4</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>BOIS</trait>
+      <trait>PLANTE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+9</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+5, **Dex **+1, **Con **+3, **Int **+1, **Sag **+3, **Cha **+1</description>
+      </special>
+      <special>
+        <name>Objets</name>
+        <description>épée longue en pierre, grand bouclier en écorce (Solidité 3, 20 PV, SR 10)</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>20</armorClass>
+    <saves REF="+9" FOR="+13" WIL="+11"/>
+    <health>75</health>
+    <weaknesses>
+      <weakness>
+        <name>feu</name>
+        <value>10</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>épée longue en pierre</name>
+        <bonus>+13</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8+10</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>coup de bouclier +13, **Dégâts** 1d6+10 contondants</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Poussée de bouclier</name>
+        <description>Le gardien arboréen Marche rapidement puis effectue une Frappe de coup de bouclier� Si l’attaque touche, la cible est repous- sée de 3 m�</description>
+      </special>
+      <special>
+        <name>Arbre éveillé</name>
+        <description>Les régents arboréens et d’autres détenteurs d’une puissante magie primitive peuvent tem‑ porairement octroyer une conscience à des arbres pour qu’ils protègent la forêt. Dotés</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

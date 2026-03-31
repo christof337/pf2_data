@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GUENAUDE MARINE</name>
+    <type>CRÉATURE</type>
+    <level>3</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>AMPHIBIE</trait>
+      <trait>GUENAUDE</trait>
+      <trait>HUMANOÏDE</trait>
+      <trait>HUMANOÏDE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+10</bonus>
+      <senses>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+11</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+10</bonus>
+      </skill>
+      <skill>
+        <name>Occultisme</name>
+        <bonus>+8</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+4" DEX="+3" CON="+4" INT="+1" WIS="+3" CHA="+3"/>
+    <armorClass/>
+    <saves/>
+    <health/>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special>
+        <name>Cercle</name>
+        <description>Une guenaude marine ajoute *forme humanoïde*, *malédiction du marin* et *marche sur l’eau* à ses sorts de cercle (p� 358)� Le DD de ses sorts s’élève à 20 quand elle dirige un cercle�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

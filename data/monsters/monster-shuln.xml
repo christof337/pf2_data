@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>SHULN</name>
+    <type>CRÉATURE</type>
+    <level>12</level>
+    <creatureTraits>
+      <trait type="size">TRÈS GRANDE</trait>
+      <trait>BÊTE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+20</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <range>9 m</range>
+        </sens>
+        <sens>
+          <name>perception des vibrations</name>
+          <precision>imprécis</precision>
+          <range>18 m</range>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+25</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+22</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+7, **Dex **+4, **Con **+6, **Int **–3, **Sag **+4, **Cha **+1</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>33</armorClass>
+    <saves REF="+19" FOR="+25" WIL="+21"/>
+    <health>195</health>
+    <speeds speedSpecial="creusement inexorable">
+      <speed>12 m</speed>
+      <speed type="burrow">6 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>griffes en adamantium</name>
+        <bonus>+25</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 4,5 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d8+10</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>crocs en adamantium</name>
+        <bonus>+25</bonus>
+        <traits>
+          <trait>allonge 4,5 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d10+10</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Creusement inexorable</name>
+        <description>Les shulns peuvent creuser dans la pierre brute et à travers tout métal dont la solidité est inférieure à celle de l’ada- mantium comme s’il s’agissait de sol meuble ou de gravats, en laissant derrière eux un tunnel de 3 m de diamètre�</description>
+      </special>
+      <special>
+        <name>Frappes de lacération d’armure</name>
+        <description>Chaque fois que le shuln réussit un coup critique avec une Frappe au corps à corps, il inflige la même quantité de dégâts à l’armure de la cible en outrepassant toute Solidité inférieure à 10, comme de l’adamantium�</description>
+      </special>
+      <special>
+        <name>Salive de shuln</name>
+        <traits>
+          <trait>mise hors de combat</trait>
+          <trait>poison</trait>
+        </traits>
+        <description>; **Jet de sauvegarde** Vigueur DD 32 ; **Durée maximale** 6 rounds ; **Stade 1** 2d6 dégâts de poi- son et ralenti 1 (1 round) ; **Stade 2** 3d6 dégâts de poison et ralenti 1 (1 round) ; **Stade 3** 4d6 dégâts de poison et paralysé pendant 2d6 heures� La salive de shuln prend le pas sur le pouvoir inexorable�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

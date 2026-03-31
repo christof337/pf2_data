@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>AESRA</name>
+    <type>CRÉATURE</type>
+    <level>7</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>ARCHON</trait>
+      <trait>CÉLESTE</trait>
+      <trait>SAINT</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+14</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+16</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+16</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+14</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+5, **Dex **+2, **Con **+4, **Int **+1, **Sag **+2, **Cha **+5</description>
+      </special>
+      <special>
+        <name>Objet</name>
+        <description>harnois</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>27</armorClass>
+    <saves REF="+11" FOR="+17" WIL="+15" saveSpecial="bonus de statut +1 à tous les jets de sauvegarde contre la magie"/>
+    <health>100</health>
+    <weaknesses>
+      <weakness>
+        <name>impie</name>
+        <value>10</value>
+      </weakness>
+    </weaknesses>
+    <reactiveAbilities>
+      <special type="reaction">
+        <name>Protection des archons</name>
+        <description>Comme le zoaem, avec résistance 10�</description>
+      </special>
+    </reactiveAbilities>
+    <speeds>
+      <speed>9 m</speed>
+      <speed type="fly">18 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>flamme de justice</name>
+        <bonus>+18</bonus>
+        <traits>
+          <trait>saint</trait>
+          <trait>magique</trait>
+          <trait>polyvalent P</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d10+5</amount>
+            <damageType>tran- chants</damageType>
+          </damage>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>de feu et flamme de justice</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>flamme de justice</name>
+        <bonus>+15</bonus>
+        <traits>
+          <trait>saint</trait>
+          <trait>magique</trait>
+          <trait>facteur de portée 9 m</trait>
+          <trait>polyvalent P</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d10+5</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>de feu et flamme de justice</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="divine" DD="24">
+      <rank rank="4">
+        <spells>
+          <spell spellSpecial="à volonté">translocation</spell>
+        </spells>
+      </rank>
+      <rank rank="5" constant="TRUE">
+        <spells>
+          <spell>langage universel</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special>
+        <name>Conserver la formation</name>
+        <description>Quand un aesra lance *translocation*, il peut emmener avec lui un autre archon consentant qui se trouve dans un espace adjacent� Cet archon apparaît dans un espace libre adjacent à l’espace d’arrivée de l’aesra�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Coup de taille enflammé</name>
+        <traits>
+          <trait>divine</trait>
+          <trait>feu</trait>
+          <trait>saint</trait>
+          <trait>manipulation</trait>
+        </traits>
+        <description>� L’aesra balaie l’air de son épée, créant un cône de flammes sacrées de 4,5 m qui inflige 5d6 dégâts de feu (jet de Réflexes basique DD 23)�</description>
+      </special>
+      <special>
+        <name>Flamme de justice</name>
+        <traits>
+          <trait>divine</trait>
+          <trait>saint</trait>
+        </traits>
+        <description>� La vertu d’un aesra se manifeste sous la forme d’une épée de feu à deux mains� S’il est désarmé ou s’il la lance comme une arme à distance, la flamme de justice disparaît après être tombée par terre ou avoir infligé des dégâts, et elle réapparaît instantanément dans les mains de l’aesra� Sur un succès critique, la cible subit également 2d6 dégâts de feu persistants�</description>
+      </special>
+      <special>
+        <name>Rekhep (archon bouclier)</name>
+        <description>Les rekheps sont des boucliers vivants qui défendent le Paradis des incursions fiélones. Ils peuvent se réunir pour former un mur de boucliers capable de résister à n’importe quel assaut. Étant donné leur force extraordinaire et leur stature imposante, les archons boucliers sont les gardiens idéaux des faibles et ils sont parfois invoqués dans l’Univers mortel afin de faire face à des êtres maléfiques qui n’hésitent pas à attaquer en grand nombre.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>JABALI</name>
+    <type>CRÉATURE</type>
+    <level>7</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>ÉLÉMENTAIRE</trait>
+      <trait>GÉNIE</trait>
+      <trait>TERRE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+15</bonus>
+      <senses>
+        <sens>
+          <name>perception des vibrations</name>
+          <precision>imprécis</precision>
+          <range>18 m</range>
+        </sens>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages>
+      <language>commun</language>
+      <language>pétran</language>
+      <langSpecial>
+        <spell>langage universel</spell>
+      </langSpecial>
+    </languages>
+    <armorClass>25</armorClass>
+    <saves/>
+    <health>110</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>*cimeterre à deux mains*</name>
+        <bonus>+20</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+          <trait>balayage</trait>
+          <trait>magique</trait>
+          <trait>percutant +1</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d10+12</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>poing</name>
+        <bonus>+19</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 3 m</trait>
+          <trait>magique</trait>
+          <trait>non létal</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d4+12</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="arcane" DD="24">
+      <rank rank="7">
+        <spells>
+          <spell>téléportation interplanaire (vers le plan astral, les plans élé- mentaires ou l’Univers uniquement)</spell>
+        </spells>
+      </rank>
+      <rank rank="5">
+        <spells>
+          <spell>mur de pierre</spell>
+        </spells>
+      </rank>
+      <rank rank="4">
+        <spells>
+          <spell spellSpecial="à volonté">façonnage de la pierre</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special>
+        <name>Tours de magie (4</name>
+        <description>e**) ***détection de la magie* ; **Constant (5**e**) ***langage universel*</description>
+      </special>
+      <special>
+        <name>Empoigne de la roche</name>
+        <traits>
+          <trait>arcanique</trait>
+          <trait>terre</trait>
+        </traits>
+        <description>� Lorsque le jabali Bouscule une créature contre une barrière de pierre, la surface l’enserre avec des doigts faits de roche� La cible doit réussir un jet de Réflexes DD 22 ou être empoignée par la surface (DD 28 pour S’échapper)�</description>
+      </special>
+      <special>
+        <name>Glisse à travers la terre</name>
+        <description>Le jabali peut se déplacer à sa Vitesse de creuse- ment normale en Creusant à travers la terre et la pierre en ne laissant derrière lui aucun tunnel ou signe de son passage�</description>
+      </special>
+      <special>
+        <name>Faydhaan</name>
+        <description>Les faydhaans du plan de l’eau sont plus puissants que les autres génies vivant au sein des plans élémentaires, mais ils préfèrent l’utilisation de la diplomatie et de la flatterie à celle de la force brute pour forger des alliances.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>OMBRE MAJEURE</name>
+    <type>CRÉATURE</type>
+    <level>7</level>
+    <creatureTraits>
+      <trait type="size"/>
+    </creatureTraits>
+    <perception>
+      <bonus>+14</bonus>
+      <senses>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+16</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+20</bonus>
+      </skill>
+    </skills>
+    <armorClass>24</armorClass>
+    <saves REF="+18" FOR="+11" WIL="+15"/>
+    <health>75</health>
+    <immunities>
+      <immunity>effets de mort</immunity>
+      <immunity>inconscient</immunity>
+      <immunity>maladie</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>précision</immunity>
+      <immunity>saignement</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>main d’ombre</name>
+        <bonus>+18</bonus>
+        <traits>
+          <trait>finesse</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d10+6</amount>
+            <damageType>de néant</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="divine" DD="25">
+      <rank rank="2">
+        <spells>
+          <spell spellSpecial="à volonté">ténèbres</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special>
+        <name>Rejeton d’ombre</name>
+        <description>Comme l’ombre, mais le rejeton d’ombre n’est pas maladroit�</description>
+      </special>
+      <special>
+        <name>Se glisser dans les ombres</name>
+        <description>Comme l’ombre�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Vol d’ombre</name>
+        <traits>
+          <trait>divine</trait>
+        </traits>
+        <description>� Comme l’ombre, mais la cible devient affaiblie 2 (ou affaiblie 3 sur un coup critique)�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

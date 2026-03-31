@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>HIPPOGRIFFE</name>
+    <type>CRÉATURE</type>
+    <level>2</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+6</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+3" DEX="+3" CON="+0" INT="+0" WIS="+0" CHA="+0"/>
+    <armorClass>18</armorClass>
+    <saves REF="+9" FOR="+8" WIL="+6"/>
+    <health>32</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>bec +9, **Dégâts** 1d10+3 perforants **Corps à corps** 1 serres</name>
+        <bonus>+9</bonus>
+        <traits>
+          <trait>agile</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+3</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>aile</name>
+        <bonus>+9</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+3</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Frappes en vol</name>
+        <description>L’hippogriffe Vole jusqu’à sa Vitesse maximale et effectue deux Frappes de serres à n’importe quel moment durant son déplacement� Chaque Frappe doit cibler une créature différente� Les attaques subissent le malus normal d’attaques multiples�</description>
+      </special>
+      <special>
+        <name>ŒUFS D’HIPPOGRIFFE</name>
+        <description>Les hippogriffes ne donnent pas naissance à des petits déjà formés, mais pondent un seul œuf� Ces œufs sont très recherchés par les dresseurs potentiels, mais aussi par les opportunistes� [[PAGE 211]]</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

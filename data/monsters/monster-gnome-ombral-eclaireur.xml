@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GNOME OMBRAL ÉCLAIREUR</name>
+    <type>CRÉATURE</type>
+    <level>1</level>
+    <creatureTraits>
+      <trait type="size">PETITE</trait>
+      <trait>GNOME</trait>
+      <trait>HUMANOÏDE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+7</bonus>
+      <senses>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <armorClass/>
+    <saves/>
+    <health/>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special>
+        <name>ON PARIE ?</name>
+        <description>De nombreux gnomes adorent tellement le frisson qui accompagne les jeux et les paris, que ces derniers n’ont même pas nécessairement besoin de tourner autour de l’argent� Un gnome peut tout à fait parier des objets intéressants, l’enseignement de nouvelles compétences, voire une humiliation publique�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

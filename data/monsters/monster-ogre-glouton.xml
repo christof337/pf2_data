@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>OGRE GLOUTON</name>
+    <type>CRÉATURE</type>
+    <level>4</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>GÉANT</trait>
+      <trait>HUMANOÏDE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+12</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+10</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+6</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+6, **Dex **–1, **Con **+4, **Int **–2, **Sag **+0, **Cha **–2</description>
+      </special>
+      <special>
+        <name>Objets</name>
+        <description>armure de cuir, grande hache</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>18</armorClass>
+    <saves REF="+7" FOR="+14" WIL="+6"/>
+    <health>70</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>grande hache</name>
+        <bonus>+14</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+          <trait>balayage</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d12+8</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>mâchoires +14, **Dégâts** 1d8+8 perforants plus Empoignade (p� 359) et festin du glouton</description>
+      </special>
+      <special>
+        <name>Festin du glouton</name>
+        <description>Si l’ogre glouton inflige des dégâts à une créature vivante avec sa Frappe de mâchoires, il gagne 1d4 points de vie temporaires pendant 1 min�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Gober</name>
+        <traits>
+          <trait>attaque</trait>
+        </traits>
+        <description>Petite, 2d4+4 contondants, Rupture 14 (p� 359)</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Ruée du glouton</name>
+        <description>L’ogre glouton Marche rapidement deux fois et effectue une Frappe de mâchoires� S’il inflige des dégâts à une créature vivante avec cette Frappe, les points de vie qu’il gagne grâce à Festin du glouton sont augmentés à 2d4�</description>
+      </special>
+      <special>
+        <name>Boss ogre</name>
+        <description>Dans la société des ogres, la loi du plus fort est non seulement la meilleure, mais elle permet aussi d’imposer les règles. L’ogre le plus violent ou le plus fort au sein d’une famille (c’est généralement le même ogre) est toujours le boss du clan. N’hésitant pas à embrocher ses adversaires vaincus sur ses armes, même les autres ogres redoutent de contrarier un boss. Quand ce dernier aboie ses ordres, les autres membres de la famille lui obéissent rapidement.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

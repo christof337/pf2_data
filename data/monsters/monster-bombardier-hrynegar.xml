@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>BOMBARDIER HRYNEGAR</name>
+    <type>CRÉATURE</type>
+    <level>1</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>HRYNEGAR</trait>
+      <trait>HUMANOÏDE</trait>
+      <trait>NAIN</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+4</bonus>
+      <senses>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages>
+      <language>commun</language>
+      <language>nain</language>
+      <language>sakvroth</language>
+    </languages>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+6</bonus>
+      </skill>
+      <skill>
+        <name>Artisanat</name>
+        <bonus>+6</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+6</bonus>
+      </skill>
+      <skill>
+        <name>Occultisme</name>
+        <bonus>+6</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+4</bonus>
+      </skill>
+    </skills>
+    <armorClass>18</armorClass>
+    <saves REF="+8" FOR="+7" WIL="+4" saveSpecial="bonus de statut de +2 aux jets de sauvegarde contre la magie"/>
+    <health>20</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>marteau de guerre</name>
+        <bonus>+4</bonus>
+        <traits>
+          <trait>pousser</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8+1</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>grenade alchimique</name>
+        <bonus>+8</bonus>
+        <traits>
+          <trait>éclaboussure</trait>
+          <trait>facteur de portée 6 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>d’acide, de froid ou de feu</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="occult" DD="17">
+      <rank rank="2">
+        <spells>
+          <spell>paranoïa, vendetta sanglante</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Bombardier rapide</name>
+        <description>Par une action Interagir, le bombardier hrynegar prend une grenade alchimique et la lance en effectuant une Frappe à distance�</description>
+      </special>
+      <special>
+        <name>Maître de corvée hrynegar</name>
+        <description>Les prêtres hrynegars du tyrannique dieu Droskar ont souvent des rôles de dirigeants au sein de leur communauté pour servir les objectifs de leur divinité par la contrainte et les démonstrations de force. Souvent appelés maîtres de corvée, ces leaders donnent leurs ordres de la même manière à leurs subordonnés hrynegars et à leurs clients contractuels asservis, les traitant comme s’ils étaient interchangeables. De fait, ils sont détestés par pratiquement tout le monde.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

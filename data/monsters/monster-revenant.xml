@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>REVENANT</name>
+    <type>CRÉATURE</type>
+    <level>6</level>
+    <creatureTraits>
+      <trait type="size"/>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <armorClass>23</armorClass>
+    <saves REF="+13" FOR="+14" WIL="+17"/>
+    <health>115</health>
+    <immunities>
+      <immunity>effets de mort</immunity>
+      <immunity>maladie</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>saignement</immunity>
+      <immunity>sommeil</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+17</bonus>
+        <traits>
+          <trait>agile</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+5</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Constriction</name>
+        <description>2d6+5 contondants, DD 24 (p� 359)</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Hurlement sinistre</name>
+        <traits>
+          <trait>audible</trait>
+          <trait>émotion</trait>
+          <trait>mental</trait>
+          <trait>mise hors de combat</trait>
+          <trait>terreur</trait>
+        </traits>
+        <description>� Le revenant pousse une plainte atroce� Chaque créature dans une explosion de 18 m doit faire un jet de Volonté DD 23� Quel que soit le résultat, la créature est ensuite immunisée contre Hurlement sinistre pendant 1 h� L’assassin du revenant n’améliore jamais son degré de succès comme l’y autorise normalement le trait mise hors de combat de ce pouvoir� Le revenant ne peut plus utiliser Hurlement sinistre pendant 1d4 rounds�</description>
+      </special>
+      <special>
+        <name>Succès critique</name>
+        <description>La créature n’est pas affectée�</description>
+      </special>
+      <special>
+        <name>Succès</name>
+        <description>La créature est effrayée 2�</description>
+      </special>
+      <special>
+        <name>Échec</name>
+        <description>La créature est effrayée 2 et paralysée pendant 1 round�</description>
+      </special>
+      <special>
+        <name>Échec critique</name>
+        <description>La créature est effrayée 3 et en paralysée pendant 1d4 rounds�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

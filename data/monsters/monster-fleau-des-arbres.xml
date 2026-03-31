@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>FLÉAU DES ARBRES</name>
+    <type>CRÉATURE</type>
+    <level>25</level>
+    <creatureTraits>
+      <trait type="size">TRÈS GRANDE</trait>
+      <trait>AMPHIBIE</trait>
+      <trait>DÉMON</trait>
+      <trait>FIÉLON</trait>
+      <trait>IMPIE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <interactionAbilities>
+      <special>
+        <name>Langues</name>
+        <description>chthonien, commun, elfique, féerique, télépathie 90 m (p� 360)</description>
+      </special>
+      <special>
+        <name>Compétences</name>
+        <description>Acrobaties +40, Arcanes +38, Athlétisme +45, Discrétion +40, Intimidation +46, Nature +49, Occultisme +38, Religion +45</description>
+      </special>
+      <special>
+        <name>For</name>
+        <description>+12, **Dex **+9, **Con **+11, **Int **+7, **Sag **+8, **Cha **+8</description>
+      </special>
+      <special>
+        <name>Objet</name>
+        <description>*Hache‑noire* (p� 162)</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>54</armorClass>
+    <saves REF="+40" FOR="+42" WIL="+43" saveSpecial="bonus de statut de +2 aux jets de sauvegarde contre la magie"/>
+    <health>550</health>
+    <immunities>
+      <immunity>effets de mort</immunity>
+      <immunity>maladie</immunity>
+      <immunity>mental</immunity>
+      <immunity>poison</immunity>
+    </immunities>
+    <weaknesses>
+      <weakness>
+        <name>saint</name>
+        <value>20</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>*Hache‑noire *+47 (acide, allonge 5,5 m, balayage, impie, magique ; p� 162), **Dégâts **5d12+18 tranchants plus 1d6 d’acide (plus 2d6 dégâts tranchants supplémentaires contre les plantes)� **Corps à corps** 1 griffes</name>
+        <bonus>+45</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 4,5 m</trait>
+          <trait>impie</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>5d10+20</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="primal" DD="49" attack="+43">
+      <rank rank="9">
+        <spells>
+          <spell spellSpecial="à volonté">dissipation de la magie</spell>
+        </spells>
+      </rank>
+      <rank rank="6">
+        <spells>
+          <spell spellSpecial="à volonté">entraves végétales</spell>
+        </spells>
+      </rank>
+      <rank rank="3">
+        <spells>
+          <spell spellSpecial="à volonté">cloué à terre</spell>
+        </spells>
+      </rank>
+      <rank rank="2">
+        <spells>
+          <spell spellSpecial="à volonté">manœuvre télékinésique</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special>
+        <name>Constant (8e)</name>
+        <description>*discernement* ; **(4e) ***déplacement sans entrave*</description>
+      </special>
+      <special>
+        <name>Rituel</name>
+        <description>DD 49 ; *pacte démoniaque *(p� 364), *serviteur planaire*</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Défoliation</name>
+        <traits>
+          <trait>plante</trait>
+          <trait>primordiale</trait>
+          <trait>impie</trait>
+        </traits>
+        <description>� Fléau des Arbres libère une vague de lumière d’un vert maladif dans une émanation de 9 m de rayon� Toutes les plantes dans la zone (y compris les créatures sous l’effet de son aura de corruption) noircissent et se flétrissent� Les plantes autres que des créatures végétales se flétrissent et meurent� Les plantes et les champignons subissent 20d8 dégâts de néant (jet de Vigueur basique DD 49)� Une créature est également condamnée 1 pendant 1 min et malade 3 si elle rate son jet de sauvegarde� Fléau des Arbres peut choisir d’exclure n’importe quel nombre de plantes et de champignons de la zone pour qu’elles ne subissent pas cet effet� Il le fait généralement pour préserver les champignons et les végétaux corrompus et difformes, ou les créatures végétales qui le soutiennent� Fléau des Arbres doit attendre 1d4 rounds avant de pouvoir réutiliser ce pouvoir�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

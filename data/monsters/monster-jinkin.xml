@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>JINKIN</name>
+    <type>CRÉATURE</type>
+    <level>1</level>
+    <creatureTraits>
+      <trait type="size">TRÈS PETITE</trait>
+      <trait>FÉE</trait>
+      <trait>GREMLIN</trait>
+      <trait>GREMLIN</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+7</bonus>
+      <senses>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Artisanat</name>
+        <bonus>+5</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+5</bonus>
+      </skill>
+      <skill>
+        <name>Larcin</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Nature</name>
+        <bonus>+5</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>–2,** Dex** +4,** Con** +0,** Int** +2,** Sag** +2,** Cha** +2</description>
+      </special>
+      <special>
+        <name>Objet</name>
+        <description>épée courte</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>15</armorClass>
+    <saves REF="+10" FOR="+6" WIL="+7"/>
+    <health>19</health>
+    <weaknesses>
+      <weakness>
+        <name>fer froid</name>
+        <value>2</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>épée courte</name>
+        <bonus>+9</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 0 m</trait>
+          <trait>finesse</trait>
+          <trait>polyvalent T</trait>
+        </traits>
+        <damages/>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="primal" DD="17"/>
+    <offensiveAbilities>
+      <special>
+        <name>Attaque sournoise</name>
+        <description>Le jinkin inflige 1d6 dégâts de précision supplémentaires aux créatures prises par surprise�</description>
+      </special>
+      <special>
+        <name>Bricoler</name>
+        <traits>
+          <trait>malédiction</trait>
+          <trait>primordiale</trait>
+        </traits>
+        <description>� Six jinkins peuvent travailler ensemble pendant une heure pour insuffler à un objet une malédiction à une portée de 18 m� Bien que ce processus soit long, il est également discret et peut être accompli alors qu’ils Se cachent� Les jinkins préfèrent utiliser ce pouvoir sur les objets magiques� La malédiction rend l’objet peu fiable (test nu DD 5 ou toute action pour Interagir avec l’objet ou l’Activer est perdue), ajoute une condition bizarre pour l’utiliser ou octroie une autre malédiction du même genre� **« TRÉSORS » DE GREMLINS** Tous les gremlins accumulent des trésors, et leur nid est rempli d’objets aussi bien précieux que sans valeur� Fouiller un nid de gremlin peut permettre de découvrir des trésors inattendus comme des joyaux ou des objets magiques mineurs� Cependant, il faut se montrer prudent pour éviter de se couper sur des éclats de métaux rouillés, de prendre un objet maudit ou de troubler un nid caché de vermine venimeuse�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

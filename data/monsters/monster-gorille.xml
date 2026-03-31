@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GORILLE</name>
+    <type>CRÉATURE</type>
+    <level>3</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+8</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>9 m</range>
+        </sens>
+        <sens>
+          <name>vision nocturne</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+9</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+11</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+7</bonus>
+      </skill>
+    </skills>
+    <armorClass>18</armorClass>
+    <saves REF="+9" FOR="+12" WIL="+6"/>
+    <health>45</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>poing</name>
+        <bonus>+11</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+4</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+11</bonus>
+        <traits>
+          <trait>allonge 1,5 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8+4</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Posture effrayante</name>
+        <traits>
+          <trait>audible</trait>
+          <trait>émotion</trait>
+          <trait>mental</trait>
+          <trait>terreur</trait>
+        </traits>
+        <description>� Le gorille adopte une pos- ture intimidante et se frappe le torse� Les créatures dans un rayon de 9 m doivent effectuer un jet de Volonté DD 20� Tant qu’une créature est effrayée par ce pouvoir, elle est prise par surprise face au gorille�</description>
+      </special>
+      <special>
+        <name>Succès critique</name>
+        <description>Aucun effet et immunité pendant 1 min�</description>
+      </special>
+      <special>
+        <name>Succès</name>
+        <description>La créature n’est pas affectée�</description>
+      </special>
+      <special>
+        <name>Échec</name>
+        <description>La créature est effrayée 1�</description>
+      </special>
+      <special>
+        <name>Échec critique</name>
+        <description>La créature est effrayée 2�</description>
+      </special>
+      <special>
+        <name>Megaprimatus</name>
+        <description>Le megaprimatus, un des primates les plus impressionnants, réagit promptement à tout ce qu’il identifie comme une intrusion dans son domaine. Avec une hauteur de 12 m, il domine même la plupart des géants et est généralement le plus grand prédateur de sa région.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

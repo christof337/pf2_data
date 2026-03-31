@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GIMMERLING</name>
+    <type>CRÉATURE</type>
+    <level>12</level>
+    <creatureTraits>
+      <trait type="size">PETITE</trait>
+      <trait>FÉE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <armorClass>34</armorClass>
+    <saves/>
+    <health>235</health>
+    <weaknesses>
+      <weakness>
+        <name>fer froid</name>
+        <value>10</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+26</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+7</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+26</bonus>
+        <traits>
+          <trait>finesse</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d8+7</amount>
+            <damageType>perforants</damageType>
+          </damage>
+          <damage>
+            <amount>2d6</amount>
+            <damageType>de poison</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>*arbalète de poing*</name>
+        <bonus>+28</bonus>
+        <traits>
+          <trait>facteur de portée 18 m</trait>
+          <trait>rechargement 1</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+3</amount>
+            <damageType>perforants</damageType>
+          </damage>
+          <damage>
+            <amount>2d6</amount>
+            <damageType>de poison</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Attaque sournoise</name>
+        <description>Le gimmerling inflige 2d6 dégâts de précision supplémentaires aux créa- tures prises par surprise�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Changement de forme</name>
+        <traits>
+          <trait>concentration</trait>
+          <trait>métamorphose</trait>
+          <trait>primordiale</trait>
+        </traits>
+        <description>� Le gimmerling peut prendre l’apparence de n’importe quel humanoïde (p� 358)� Sous forme humanoïde, il perd son aura semée d’embûches et son équipement prend l’aspect de babioles et de jouets� Si la forme choisie n’a ni griffe ni crocs, il perd la Frappe correspondante� S’il perd sa Frappe de griffes, il gagne une Frappe de poing qui est identique si ce n’est qu’elle inflige des dégâts contondants�</description>
+      </special>
+      <special>
+        <name>Démarche de filou</name>
+        <description>Le gimmerling ignore le terrain difficile et ne déclenche pas de piège en se déplaçant�</description>
+      </special>
+      <special>
+        <name>Désarmement sournois</name>
+        <description/>
+      </special>
+      <special type="activity" actions="1">
+        <name>Conditions</name>
+        <description>La dernière action du gimmerling était une Frappe de griffes réussie ;</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

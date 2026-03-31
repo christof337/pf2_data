@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>CHIMÈRE</name>
+    <type>CRÉATURE</type>
+    <level>8</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>BÊTE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+16</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>9 m</range>
+        </sens>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+14</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+18</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+18</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+6" DEX="+2" CON="+4" INT="+0" WIS="+2" CHA="+0"/>
+    <armorClass>27</armorClass>
+    <saves REF="+16" FOR="+18" WIL="+14"/>
+    <health>135</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires de dragon +20, **Dégâts** 2d6+9 perforants plus 2d6 d’énergie (voir morsure draconique) **Corps à corps** 1 mâchoires de lion +20, **Dégâts** 2d10+9 perforants **Corps à corps** 1 mâchoires de chèvre +20, **Dégâts** 2d10+9 perforants **Corps à corps** 1 griffes</name>
+        <bonus>+20</bonus>
+        <traits>
+          <trait>agile</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+9</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Frappe à trois têtes</name>
+        <description>La chimère effectue une Frappe avec ses mâchoires de dragon, ses mâchoires de lion et ses mâchoires de chèvre, chacune avec un malus de −2 et contre une créature différente� Ces Frappes comptent comme une seule attaque dans le malus d’attaques multiples de la chimère, et ce malus n’augmente pas avant que les trois attaques aient été effectuées�</description>
+      </special>
+      <special>
+        <name>Morsure draconique</name>
+        <description>La tête de dragon de la chimère inflige 2d6 dégâts supplémentaires d’un type corres- pondant aux dégâts de son Souffle de dragon�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Souffle de dragon</name>
+        <description>La chimère souffle dans un cône ou sur une ligne et inflige 9d6 dégâts à toutes les créa- tures dans la zone affectée (jet de sauvegarde basique DD 26 d’un type indiqué ci-après)� La tête de dragon de la chimère est associée à une tradition magique qui détermine la zone d’effet de son Souffle, le type de dégâts qu’il inflige et le jet de sauvegarde à réussir pour y échap- per� Ce pouvoir gagne les traits associés à cette tradition� Une fois que la tête de dragon de la chimère a utilisé son Souffle, elle ne peut plus l’utiliser pendant 1d4 rounds�<list><listItem>**Arcanique** ligne de 18 m, dégâts de force (Réflexes)</listItem><listItem>**Divine** ligne de 18 m, dégâts d’esprit (Réflexes) ; ce pouvoir peut également être associé aux traits saint ou impie</listItem><listItem>**Occulte** cône de 9 m, dégâts mentaux (Volonté)</listItem><listItem>**Primordiale** cône de 9 m, dégâts d’acide, de froid, d’électricité, de feu, ou de son (Réflexes) ; ou de dégâts de poison (Vigueur)</listItem></list></description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

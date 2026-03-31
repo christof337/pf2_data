@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>CHANTRE DE GUERRE GOBELIN</name>
+    <type>CRÉATURE</type>
+    <level>1</level>
+    <creatureTraits>
+      <trait type="size">PETITE</trait>
+      <trait>GOBELIN</trait>
+      <trait>HUMANOÏDE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>commun</language>
+      <language>gobelin</language>
+    </languages>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+6</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+6</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Occultisme</name>
+        <bonus>+4</bonus>
+      </skill>
+      <skill>
+        <name>Représentation</name>
+        <bonus>+7</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+2, **Dex **+3, **Con **+2, **Int **+1, **Sag **+0, **Cha **+4</description>
+      </special>
+      <special>
+        <name>Objets</name>
+        <description>arc court (10 flèches), armure de cuir, tranchechien</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>17</armorClass>
+    <saves REF="+8" FOR="+7" WIL="+5"/>
+    <health>16</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>tranchechien</name>
+        <bonus>+8</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+          <trait>traître</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+2</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>arc court</name>
+        <bonus>+8</bonus>
+        <traits>
+          <trait>facteur de portée 18 m</trait>
+          <trait>mortel d10</trait>
+          <trait>rechargement
+ 0</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Sorts spontanés occultes</name>
+        <description>* *DD 17, attaque +7 ; **1**er* *(2 emplacements) *apaiser, bénédiction *; **Tours de magie (1**er**) ***chimère*,* hymne au courage *(*Livre des joueurs* p� 371), *main télékinésique*,* message*,* projectile télékinésique*</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Chant gobelin</name>
+        <description>Le chantre de guerre interprète des chansons gobelines énervantes dont les paroles répétitives et stupides distraient les adversaires� Le chantre tente un test de Représentation contre le DD de Volonté d’un maximum de deux ennemis situés dans un rayon de 9 m� Ce test possède tous les traits et restrictions normalement associés à un test de Représentation�</description>
+      </special>
+      <special>
+        <name>Succès critique</name>
+        <description>La cible subit un malus de −1 à ses tests de Perception et à ses jets de sauvegarde de Volonté pendant 1 min�</description>
+      </special>
+      <special>
+        <name>Succès</name>
+        <description>Comme le succès critique mais la cible n’est affectée que pendant 1 round�</description>
+      </special>
+      <special>
+        <name>Échec critique</name>
+        <description>La cible est immunisée au Chant gobelin pendant 1 h�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

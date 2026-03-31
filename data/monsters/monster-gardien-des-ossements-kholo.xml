@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GARDIEN DES OSSEMENTS KHOLO</name>
+    <type>CRÉATURE</type>
+    <level>3</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>HUMANOÏDE</trait>
+      <trait>KHOLO</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>chthonien</language>
+      <language>commun</language>
+      <language>kholo</language>
+    </languages>
+    <skills>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Médecine</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+10</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+8</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+2" DEX="+2" CON="+0" INT="+0" WIS="+0" CHA="+0"/>
+    <armorClass>19</armorClass>
+    <saves REF="+6" FOR="+8" WIL="+10"/>
+    <health>45</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>cimeterre à deux mains</name>
+        <bonus>+10</bonus>
+        <traits>
+          <trait>balayage</trait>
+          <trait>percutant</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d10+3</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+10</bonus>
+        <traits>
+          <trait>agile</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+3</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Sorts préparés divins</name>
+        <description>* *DD 20, attaque +12 ; **2**e *arsenal fantomatique, mise à mal* (×4), *ténèbres* ; **1**er* arme runique, injonction*, *terreur* ; **Tours de magie (2**e**) ***détection de la magie*, *hébétement*, *lecture de l’aura*, *lumière*, *symbole*</description>
+      </special>
+      <special>
+        <name>Attaque en meute</name>
+        <description>Comme le chasseur kholo�</description>
+      </special>
+      <special>
+        <name>Tout terrain</name>
+        <description>Comme le chasseur kholo�</description>
+      </special>
+      <special>
+        <name>Sergent kholo</name>
+        <description>Quand les kholos se rassemblent pour former des groupes de mercenaires ou de pillards, les plus forts parmi eux sont souvent désignés comme chefs de chasse ou comme sergents. Ces kholos sont responsables de la sécurité et de la réussite de leur meute et ils s’entraînent intensément dans l’art de la guerre. Leurs compétences dans le maniement des armes en font de puissants adversaires. Un sergent kholo peut aussi jouer le rôle de chef de groupe dans d’autres domaines comme régler les disputes familiales ou négocier avec un clan kholo rival.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>SÉRAPTIS</name>
+    <type>CRÉATURE</type>
+    <level>15</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>DÉMONS</trait>
+      <trait>FIÉLON</trait>
+      <trait>IMPIE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <interactionAbilities>
+      <special>
+        <name>Langues</name>
+        <description>chthonien, draconique, empyréen ; télépathie 30 m (p� 316), *lan‑ gage universel*</description>
+      </special>
+      <special>
+        <name>Compétences</name>
+        <description>Acrobaties +30, Athlétisme +31, Discrétion +28, Duperie +29, Religion +27</description>
+      </special>
+      <special>
+        <name>For</name>
+        <description>+8, **Dex** +7, **Con** +6, **Int** +3,** Sag** +4,** Cha** +6</description>
+      </special>
+      <special>
+        <name>Objets</name>
+        <description>*cimeterre sanglant de frappe +1* (2)</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>37</armorClass>
+    <saves REF="+28" FOR="+27" WIL="+25" saveSpecial="bonus de statut de +1 aux jets de sauvegarde contre la magie"/>
+    <health>340</health>
+    <weaknesses>
+      <weakness>
+        <name>fer froid</name>
+        <value>15</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>*cimeterre sanglant*</name>
+        <bonus>+32</bonus>
+        <traits>
+          <trait>percutant</trait>
+          <trait>magique</trait>
+          <trait>balayage</trait>
+          <trait>impie</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+16</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+          <damage>
+            <amount>2d6</amount>
+            <damageType>mentaux et 1d6 de saignement persistants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+  </monster>
+</monsters>

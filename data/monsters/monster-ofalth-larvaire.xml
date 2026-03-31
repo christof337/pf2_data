@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>OFALTH LARVAIRE</name>
+    <type>CRÉATURE</type>
+    <level>4</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>ABERRATION</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <interactionAbilities>
+      <special>
+        <name>Langue</name>
+        <description>commun</description>
+      </special>
+      <special>
+        <name>Compétences</name>
+        <description>Athlétisme +13, Discrétion +9 (+13 dans des détritus et des ordures)</description>
+      </special>
+      <special>
+        <name>For</name>
+        <description>+5, **Dex **+1, **Con **+3, **Int **–2, **Sag **+1, **Cha **–2</description>
+      </special>
+      <special>
+        <name>Dissimulation dans les ordures</name>
+        <description>Un ofalth larvaire peut se cacher dans n’importe quel tas d’or- dures ou de détritus de sa taille ou plus grand, ce qui lui permet d’utiliser la Discrétion pour son initiative� S’il fait un jet de Discrétion pour son initiative, au premier round de combat, les créa- tures qui n’ont pas encore agi sont considérées par rapport à lui comme prises par surprises�</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>20</armorClass>
+    <saves REF="+9" FOR="+11" WIL="+9"/>
+    <health>60</health>
+    <immunities>
+      <immunity>maladie</immunity>
+      <immunity>poison</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>griffe +13, **Dégâts** 2d8+5 tranchants plus suintements effroyables **À distance** 1 lixiviat</name>
+        <bonus>+11</bonus>
+        <traits>
+          <trait>portée 6 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d8</amount>
+            <damageType>d’acide</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Suintements effroyables</name>
+        <traits>
+          <trait>maladie</trait>
+        </traits>
+        <description>**Jet de sauvegarde** Vigueur DD 19 ; **Stade 1** porteur sans effet néfaste (1 jour) ; **Stade 2** 2d4 dégâts de saignement persistants toutes les heures et affaibli 1 (1 jour) ; **Stade 3** 2d6 dégâts de saignement persistants toutes les heures et affaibli 2 (1 jour)</description>
+      </special>
+      <special>
+        <name>Ofalth</name>
+        <description>Les ofalths qui ont terminé leur croissance capturent leurs victimes et, lentement, les dévorent vivantes.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

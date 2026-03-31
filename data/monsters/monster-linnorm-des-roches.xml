@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>LINNORM DES ROCHES</name>
+    <type>CRÉATURE</type>
+    <level>21</level>
+    <creatureTraits>
+      <trait type="size">GIGANTESQUE</trait>
+      <trait>DRAGON</trait>
+      <trait>FEU</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>aklo</language>
+      <language>draconique</language>
+      <language>féerique</language>
+    </languages>
+    <armorClass>47</armorClass>
+    <saves REF="+35" FOR="+38" WIL="+33" saveSpecial="bonus de statut +1 aux jets de sauvegarde contre la magie"/>
+    <health>440</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special>
+        <name>Immunités</name>
+        <description>feu, malédiction, paralysé, sommeil ; **Faiblesse ** fer froid 15</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

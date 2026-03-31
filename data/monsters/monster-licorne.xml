@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>LICORNE</name>
+    <type>CRÉATURE</type>
+    <level>3</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>BÊTE</trait>
+      <trait>FÉE</trait>
+      <trait>SAINT</trait>
+      <trait>SAINT</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+13</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>9 m</range>
+        </sens>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <interactionAbilities>
+      <special>
+        <name>Langues</name>
+        <description>commun, féerique</description>
+      </special>
+      <special>
+        <name>Compétences</name>
+        <description>Acrobaties +10, Diplomatie +11, Discrétion +8, Survie +9</description>
+      </special>
+      <special>
+        <name>For</name>
+        <description>+4, **Dex **+3, **Con **+3, **Int **+0, **Sag **+4, **Cha **+4</description>
+      </special>
+      <special>
+        <name>Empathie animale</name>
+        <description>La licorne entretient un lien avec les créatures du monde naturel qui lui permet de communiquer avec elles� Elles peuvent poser des questions, recevoir des réponses et utiliser la compétence Diplomatie avec les animaux�</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>20</armorClass>
+    <saves REF="+8" FOR="+10" WIL="+11"/>
+    <health>45</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>corne</name>
+        <bonus>+12</bonus>
+        <traits>
+          <trait>magique</trait>
+          <trait>saint</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d10+4</amount>
+            <damageType>perforants</damageType>
+          </damage>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>d’esprit et spectrale</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>sabot</name>
+        <bonus>+12</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8+4</amount>
+            <damageType>contondants et spectrale</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="primal" DD="21">
+      <rank rank="5">
+        <spells>
+          <spell>passage sylvestre</spell>
+        </spells>
+      </rank>
+      <rank rank="3">
+        <spells>
+          <spell>guérison (×2), purification des afflic‑ tions</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Charge puissante</name>
+        <description>La licorne Marche rapidement jusqu’au double de sa Vitesse en ligne droite puis effectue une Frappe de corne� Si la licorne se déplace d’au moins 6 m, elle inflige 2d6 dégâts supplémentaires en cas d’attaque réussie�</description>
+      </special>
+      <special>
+        <name>Spectrale</name>
+        <description>Les Frappes d’une licorne ont les effets d’une rune de propriété *spectrale*�</description>
+      </special>
+      <special>
+        <name>L’ALICORNE</name>
+        <description>Dans les cercles d’alchimistes et d’occultistes, l’alicorne est le terme utilisé pour désigner le matériau dont est fait la corne de licorne� Il est également utilisé pour désigner tout objet fait avec une telle corne� Remarquez que la vente d’alicorne est illégale sur de nombreux marchés et que les éventuels vendeurs sont considérés avec répugnance, ou pire� FRANCK PONT - lhanselo@hotmail.fr - 202602/3379711/4016001 [[PAGE 242]]</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

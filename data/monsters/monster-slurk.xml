@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>SLURK</name>
+    <type>CRÉATURE</type>
+    <level>2</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+6</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+5</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+4" DEX="+2" CON="+4" INT="+0" WIS="+0" CHA="+0"/>
+    <armorClass>17</armorClass>
+    <saves REF="+6" FOR="+10" WIL="+4"/>
+    <health>35</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>défenses</name>
+        <bonus>+11</bonus>
+        <traits>
+          <trait>mortel 1d10</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8+4</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>À distance</name>
+        <description>giclée muqueuse +9 (facteur de portée 9 m),</description>
+      </special>
+      <special type="activity" actions="3">
+        <name>Graisse ventrale</name>
+        <description>Le slurk sécrète de la graisse par ses glandes ven- trales et en enduit le sol dans une émanation de 1,5 m� La zone recouverte est alors considérée comme un sol inégal pendant 10 min, après quoi la graisse sèche et forme une croûte putride� Le DD pour Garder l’équilibre sur la graisse est de 18�</description>
+      </special>
+      <special>
+        <name>Mucosité enchevêtrante</name>
+        <description>Une créature frappée par la giclée muqueuse d’un slurk devient maladroite 1 et subit un malus de −1,5 m à sa Vitesse pour une durée de 1 h ou jusqu’à ce qu’elle soit débarrassée du mucus� Pour ôter le mucus, la créature enchevêtrée ou une créature adjacente à celle-ci doit accomplir trois actions d’Interaction dans ce sens� Ces actions n’ont pas besoin d’être consécutives ou accomplies par la même créature�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

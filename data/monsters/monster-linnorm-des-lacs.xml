@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>LINNORM DES LACS</name>
+    <type>CRÉATURE</type>
+    <level>20</level>
+    <creatureTraits>
+      <trait type="size">GIGANTESQUE</trait>
+      <trait>ACIDE</trait>
+      <trait>AMPHIBIE</trait>
+      <trait>DRAGON</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>aklo</language>
+      <language>draconique</language>
+      <language>féerique</language>
+    </languages>
+    <attributes STR="+10" DEX="+6" CON="+8" INT="+0" WIS="+7" CHA="+8"/>
+    <armorClass/>
+    <saves/>
+    <health/>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special>
+        <name>CA</name>
+        <description>46 ; vision à 360° (p� 316) ; **Réf **+32, **Vig **+36, **Vol **+31 ; bonus de statut de +1 aux jets de sauvegarde contre la magie</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

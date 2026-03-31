@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>MASTODONTE SQUELETTIQUE</name>
+    <type>CRÉATURE</type>
+    <level>7</level>
+    <creatureTraits>
+      <trait type="size"/>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <attributes STR="+7" DEX="+2" CON="+4" INT="+0" WIS="+2" CHA="+2"/>
+    <armorClass>25</armorClass>
+    <saves REF="+15" FOR="+15" WIL="+13"/>
+    <health>105</health>
+    <immunities>
+      <immunity>effets de mort</immunity>
+      <immunity>inconscient</immunity>
+      <immunity>maladie</immunity>
+      <immunity>mental</immunity>
+      <immunity>para- lysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>saignement</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+18</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+11</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Grande frappe transversale</name>
+        <description>Comme le géant squelettique, mais avec sa Frappe de griffes�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Ruée massive</name>
+        <description>Le mastodonte Marche rapidement et porte une Frappe de griffes avec un bonus de circonstances de +4 aux dégâts� Si le coup porte, le mastodonte fait automati- quement reculer la cible de 3 m�</description>
+      </special>
+      <special>
+        <name>LA NON‑VIE SANS LA CHAIR</name>
+        <description>Les énergies nécromantiques qui imprègnent les squelettes morts-vivants et les animent leur donnent la capacité de voir sans yeux et de se déplacer sans muscles� Bien qu’ils soient dénués d’intelligence, l’appétence des squelettes pour le mal leur vient de leur essence vitale corrompue, qui exploite de manière pervertie l’énergie du néant pour créer plutôt que pour détruire�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

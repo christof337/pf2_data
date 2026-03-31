@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>YAMARAJE</name>
+    <type>CRÉATURE</type>
+    <level>20</level>
+    <creatureTraits>
+      <trait type="size">TRÈS GRANDE</trait>
+      <trait>PSYCHOPOMPE</trait>
+      <trait>VEILLEUR</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+33</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+36</bonus>
+      </skill>
+      <skill>
+        <name>Connaissances sur le Cimetière</name>
+        <bonus>+40</bonus>
+      </skill>
+      <skill>
+        <name>Connaissances juridiques</name>
+        <bonus>+40</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+34</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+34</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+36</bonus>
+      </skill>
+      <skill>
+        <name>Occultisme</name>
+        <bonus>+38</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+38</bonus>
+      </skill>
+      <skill>
+        <name>Société</name>
+        <bonus>+38</bonus>
+      </skill>
+    </skills>
+    <armorClass>45</armorClass>
+    <saves REF="+31" FOR="+33" WIL="+35" saveSpecial="bonus de statut de +1 à tous les jets de sauvegarde contre la magie"/>
+    <health>375</health>
+    <immunities>
+      <immunity>effets de mort</immunity>
+      <immunity>électricité (voir buveur de foudre)</immunity>
+      <immunity>maladie</immunity>
+    </immunities>
+    <speeds>
+      <speed>10</speed>
+      <speed>5 m</speed>
+      <speed type="fly">15 m</speed>
+      <speed type="swim">9 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+38</bonus>
+        <traits>
+          <trait>allonge 4,5 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>4d8+18</amount>
+            <damageType>perforants</damageType>
+          </damage>
+          <damage>
+            <amount>3d6</amount>
+            <damageType>de toucher du berger</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+38</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 4,5 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>4d4+18</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+          <damage>
+            <amount>3d6</amount>
+            <damageType>de toucher du berger</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>queue</name>
+        <bonus>+38</bonus>
+        <traits>
+          <trait>allonge 6 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>4d10+18</amount>
+            <damageType>contondants</damageType>
+          </damage>
+          <damage>
+            <amount>3d6</amount>
+            <damageType>de toucher du berger</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="divine" DD="44">
+      <rank rank="9">
+        <spells>
+          <spell>coup spirituel, enfermer l’âme, guérison, mise à mal, plainte des damnés</spell>
+        </spells>
+      </rank>
+      <rank rank="8">
+        <spells>
+          <spell>dissipation de la magie (×3), éclairs multiples (×3), mur de force</spell>
+        </spells>
+      </rank>
+      <rank rank="5">
+        <spells>
+          <spell spellSpecial="à volonté">sonde mentale , translocation</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special>
+        <name>Constant (10</name>
+        <description>e**) ***discernement*</description>
+      </special>
+      <special>
+        <name>Rituels</name>
+        <description>* *DD 44 ; *appel d’un esprit*, *résurrection*</description>
+      </special>
+      <special>
+        <name>Jugement dernier</name>
+        <description>Les sorts *manifestation* d’un yamaraje sont uniquement utilisés pour pro- noncer ses jugements, généralement pour ramener à la vie une créature morte ou détruite, lier une créature au Cimetière ou l’en bannir�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Souffle de coléoptères</name>
+        <traits>
+          <trait>divine</trait>
+        </traits>
+        <description>� Le yamaraje pro- jette un souffle de coléoptères dans un cône de 15 m qui inflige 14d8 dégâts tranchants et 4d8 dégâts tranchants persistants à toutes les créatures dans la zone (jet de Réflexes DD 42)� Il ne peut plus utiliser ce pouvoir pendant 1d4 rounds�</description>
+      </special>
+      <special>
+        <name>Succès critique</name>
+        <description>La créature n’est pas affectée�</description>
+      </special>
+      <special>
+        <name>Succès</name>
+        <description>La créature subit la moitié des dégâts et est malade 1�</description>
+      </special>
+      <special>
+        <name>Échec</name>
+        <description>La créature subit la totalité des dégâts et est malade 2�</description>
+      </special>
+      <special>
+        <name>Échec critique</name>
+        <description>La créature subit le double de dégâts et est malade 3�</description>
+      </special>
+      <special>
+        <name>Toucher du berger</name>
+        <description>Comme le nosoi, mais 3d6�</description>
+      </special>
+      <special>
+        <name>Venin du yamaraje</name>
+        <traits>
+          <trait>poison</trait>
+        </traits>
+        <description>� Tant qu’une créature est maladroite à cause de ce poison, elle est condamnée avec la même intensité ; **Jet de sauvegarde** Vigueur DD 42 ; **Durée maximale** 10 rounds ; **Stade 1** 3d8 dégâts de poison et maladroit 1 (1 round) ;</description>
+      </special>
+      <special>
+        <name>Stade 2</name>
+        <description>5d8 dégâts de poison et mala- droit 2 (1 round) ; **Stade 3** 7d8 dégâts de poison et maladroit 3 (1 round)</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

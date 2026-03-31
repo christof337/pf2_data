@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>DRYADE</name>
+    <type>CRÉATURE</type>
+    <level>3</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>BOIS</trait>
+      <trait>FÉE</trait>
+      <trait>NYMPHE</trait>
+      <trait>PLANTE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>commun</language>
+      <language>elfique</language>
+      <language>féerique</language>
+      <language>muane</language>
+    </languages>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+9</bonus>
+      </skill>
+      <skill>
+        <name>Artisanat</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+5</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+9</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+9</bonus>
+      </skill>
+      <skill>
+        <name>Nature</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+12</bonus>
+      </skill>
+    </skills>
+    <armorClass>17</armorClass>
+    <saves REF="+11" FOR="+6" WIL="+10"/>
+    <health>55</health>
+    <weaknesses>
+      <weakness>
+        <name>fer froid</name>
+        <value>5</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>branche</name>
+        <bonus>+12</bonus>
+        <traits>
+          <trait>finesse</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d12+2</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="primal" DD="20" attack="+12">
+      <rank rank="5">
+        <spells>
+          <spell>passage sylvestre (×2)</spell>
+        </spells>
+      </rank>
+      <rank rank="4">
+        <spells>
+          <spell>charme (×3), sug‑ gestion</spell>
+        </spells>
+      </rank>
+      <rank rank="2">
+        <spells>
+          <spell spellSpecial="à volonté">enchevêtrement végétal , symbiose végétale (à volonté</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Fusion avec les arbres</name>
+        <description>Le sort *symbiose végétale *lancé par une dryade a une durée illimitée� De plus, si la dryade fusionne avec l’arbre qui lui est lié, elle peut à la place choisir d’entrer dans un espace extradimensionnel qui se trouve dans l’arbre� Elle peut emmener dans cet espace de vie jusqu’à deux créatures adjacentes et consentantes ; le sort gagne le trait extradimensionnel� La dryade peut toujours être expulsée de cet espace�</description>
+      </special>
+      <special>
+        <name>Nymphes souveraines</name>
+        <description>Les nymphes souveraines sont de puissantes nymphes qui règnent sur des régions sauvages entières et pas uniquement sur un seul arbre ou une seule étendue d’eau. Chaque variété de nymphes peut avoir une souveraine. Les naïades souveraines font partie des plus connues et interagissent plus souvent avec les mortels proches. Aussi, certains érudits se réfèrent aux naïades souveraines tout simplement sous le nom de « nymphes ».</description>
+      </special>
+      <special>
+        <name>Pouvoirs des nymphes souveraines</name>
+        <description>Une nymphe souveraine a 6 à 10 niveaux de plus qu’une nymphe ordinaire du même type, avec les caractéristiques et les Frappes augmentées appropriées. La charge de ces créatures s’étend sur une région de taille significative ; leur présence renforce et vivifie ce territoire. Les souveraines ne sont pas dépendantes de ce dont elles ont la charge et perdent donc la capacité qui s’y rapporte (comme la capacité tributaire de l’arbre de la dryade) ; à la place, elles gagnent la capacité liée à la région qui est décrite ci‑dessous. Une souveraine gagne également l’aura de beauté de la nymphe et l’action Focaliser la beauté qui ont différents effets en fonction du type d’origine de la souveraine. Elle gagne le pouvoir d’Inspiration qui lui permet d’accorder l’inspi‑ ration à ceux qui attirent son attention et le pouvoir de Changement de forme pour modifier son apparence. Enfin, elle gagne des sorts préparés primordiaux comme un druide de son niveau.</description>
+      </special>
+      <special>
+        <name>Liée à la région</name>
+        <description>Une nymphe souveraine est étroitement liée à une région précise� Tant qu’elle est en bonne santé, l’environnement est exceptionnellement vigoureux, ce qui permet à la nymphe souveraine de tenter automatiquement de contrer des sorts et des rituels tels que *flétrissement végétal* qui nuiraient à l’environnement� Elle utilise son DD des sorts avec un rang de contre égal au plus haut rang de sort de druide qu’elle peut lancer� Quand la nymphe souveraine est malade physiquement ou psychologiquement, cependant, la région qu’elle protège finit elle aussi par devenir malade et pervertie� Dans ce cas, guérir la souveraine permet de soigner rapidement toute la région�</description>
+      </special>
+      <special>
+        <name>Beauté de la nymphe</name>
+        <traits>
+          <trait>aura</trait>
+          <trait>émotion</trait>
+          <trait>mental</trait>
+          <trait>primordiale</trait>
+          <trait>visuel</trait>
+        </traits>
+        <description>9 m� Les créatures qui com- mencent leur tour dans l’aura doivent réussir un jet de Volonté ou subir un effet décrit dans la section consacrée à la nymphe souveraine�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Changement de forme</name>
+        <traits>
+          <trait>métamorphose</trait>
+          <trait>primordiale</trait>
+        </traits>
+        <description>� Les nymphes souveraines peuvent alterner entre leur forme d’origine, qui ressemble beaucoup à celle d’une</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

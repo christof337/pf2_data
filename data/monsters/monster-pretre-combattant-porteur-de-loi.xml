@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>PRÊTRE COMBATTANT PORTEUR DE LOI</name>
+    <type>CRÉATURE</type>
+    <level>5</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>HUMAIN</trait>
+      <trait>HUMANOÏDE</trait>
+      <trait>NÉPHILIM</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+11</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+11</bonus>
+      </skill>
+      <skill>
+        <name>Médecine</name>
+        <bonus>+10</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+12</bonus>
+      </skill>
+      <skill>
+        <name>Société</name>
+        <bonus>+7</bonus>
+      </skill>
+    </skills>
+    <armorClass>23</armorClass>
+    <saves REF="+8" FOR="+12" WIL="+12"/>
+    <health>64</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>épée à deux mains,</name>
+        <bonus>+13</bonus>
+        <traits>
+          <trait>polyvalent P</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d12+7</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>arbalète</name>
+        <bonus>+11</bonus>
+        <traits>
+          <trait>facteur de portée 36 m</trait>
+          <trait>rechargement 1</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8+3</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="prepared" tradition="divine" DD="20" attack="+12">
+      <rank rank="3">
+        <spells>
+          <spell>cécité, rapidité</spell>
+        </spells>
+      </rank>
+      <rank rank="2">
+        <spells>
+          <spell>agran‑ dissement, guérison, mise à mal</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Sorts de domaine</name>
+        <description>point de focalisation, DD 20 ; **3**e *athlétisme poussé* (*Livre des joueurs *p� 380)</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

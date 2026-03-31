@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>CACODAÉMON</name>
+    <type>CRÉATURE</type>
+    <level>1</level>
+    <creatureTraits>
+      <trait type="size">TRÈS PETITE</trait>
+      <trait>DAÉMON</trait>
+      <trait>FIÉLON</trait>
+      <trait>IMPIE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+5</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+6</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+0" DEX="+3" CON="+2" INT="+0" WIS="+1" CHA="+2"/>
+    <armorClass>16</armorClass>
+    <saves REF="+8" FOR="+7" WIL="+6"/>
+    <health>22</health>
+    <immunities>
+      <immunity>effets de mort</immunity>
+    </immunities>
+    <weaknesses>
+      <weakness>
+        <name>saint</name>
+        <value>3</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>1</speed>
+      <speed>5 m</speed>
+      <speed type="fly">12 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+8</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 0 m</trait>
+          <trait>finesse</trait>
+          <trait>impie</trait>
+          <trait>magique</trait>
+          <trait>maladie</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+8</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8+1</amount>
+            <damageType>perforants • **Pieuvre** Petite taille ; Vitesse 6 m, nage 9 m ; **Compétences **Athlétisme +6 ; **Corps à corps** tentacule +8 (finesse), **Dégâts **1d8+1 contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>bec</name>
+        <bonus>+8</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>perforants</damageType>
+          </damage>
+          <damage>
+            <amount>1d6+1</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Dégâts</name>
+        <description>d6+1 perforants plus 1d4 de poison</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

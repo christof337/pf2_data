@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>QARNA</name>
+    <type>CRÉATURE</type>
+    <level>4</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>ARCHON</trait>
+      <trait>CÉLESTE</trait>
+      <trait>SAINT</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+12</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+10</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+11</bonus>
+      </skill>
+      <skill>
+        <name>Nature</name>
+        <bonus>+11</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+9</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+11</bonus>
+      </skill>
+    </skills>
+    <armorClass>22</armorClass>
+    <saves REF="+10" FOR="+11" WIL="+11" saveSpecial="bonus de statut +1 à tous les jets de sauvegarde contre la magie"/>
+    <health>65</health>
+    <weaknesses>
+      <weakness>
+        <name>impie</name>
+        <value>5</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>corne</name>
+        <bonus>+13</bonus>
+        <traits>
+          <trait>saint</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8+9</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>arc long composite</name>
+        <bonus>+14</bonus>
+        <traits>
+          <trait>saint</trait>
+          <trait>mortel d10</trait>
+          <trait>magique</trait>
+          <trait>propulsif</trait>
+          <trait>facteur de portée
+                                 30 m</trait>
+          <trait>volée 9 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8+7</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="divine" DD="21">
+      <rank rank="4">
+        <spells>
+          <spell>translocation (×3)</spell>
+        </spells>
+      </rank>
+      <rank rank="2">
+        <spells>
+          <spell>messager animal (×3)</spell>
+        </spells>
+      </rank>
+      <rank rank="5" constant="TRUE">
+        <spells>
+          <spell>langage universel</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Flèche de distraction</name>
+        <traits>
+          <trait>divine</trait>
+          <trait>mental</trait>
+        </traits>
+        <description>� Le qarna fait une Frappe d’arc composite� Si la Frappe touche, la flèche se plante dans la cible, qui tourne tous ses sens vers l’archon, le reste devenant flou� Cette créature subit un malus de statut de –2 à ses jets d’attaque et de Perception contre les créatures qui ne sont pas le qarna� Elle peut Interagir pour retirer la flèche, ce qui met un terme à l’effet�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Toucher de charité</name>
+        <traits>
+          <trait>divine</trait>
+          <trait>guérison</trait>
+          <trait>manipulation</trait>
+          <trait>vitalité</trait>
+        </traits>
+        <description>� Le qarna touche une créature vivante et consentante afin d’endosser ses souffrances� Il transfert alors jusqu’à 30 de ses PV à la créature qu’il touche (le qarna ne peut pas transférer plus de PV qu’il n’en possède)�</description>
+      </special>
+      <special>
+        <name>Traque de l’archon</name>
+        <description/>
+      </special>
+      <special type="activity" actions="2">
+        <name>Fréquence</name>
+        <description>1 fois/jour ; **Conditions.** Le qarna a vu une autre créature se téléporter au cours du dernier round et il a encore au moins une utilisation du sort *translocation* à disposition ;</description>
+      </special>
+      <special>
+        <name>Aesra (archon légionnaire)</name>
+        <description>Malgré leurs lames enflammées et leur anneau d’yeux au regard fixe, les aesras sont les émissaires de la paix des archons et ils préfèrent rétablir la justice à l’aide de compromis permettant des bénéfices mutuels plutôt que par le fil de l’épée. Néanmoins, ils n’hésitent pas à prendre les armes sous les ordres de commandants divins comme Iomédae pour aller affronter des fiélons.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

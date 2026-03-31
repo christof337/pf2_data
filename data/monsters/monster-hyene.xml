@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>HYÈNE</name>
+    <type>CRÉATURE</type>
+    <level>1</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+6</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>9 m</range>
+        </sens>
+        <sens>
+          <name>vision nocturne</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <armorClass>16</armorClass>
+    <saves REF="+8" FOR="+7" WIL="+4"/>
+    <health>20</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Vitesse</name>
+        <description>2 m</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>mâchoires +8, **Dégâts** 1d8+3 perforants plus Renversement (p� 360)</description>
+      </special>
+      <special>
+        <name>Attaque en meute</name>
+        <description>Les Frappes de la hyène infligent 1d4 dégâts supplémentaires aux créatures à portée d’au moins deux de ses alliés�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Traîner</name>
+        <description>La hyène effectue une Frappe de mâchoires contre un ennemi à terre� Si elle touche, en plus d’infliger des dégâts, elle Marche rapidement jusqu’à 3 m en traî- nant sa cible�</description>
+      </special>
+      <special>
+        <name>Hyaenodon</name>
+        <description>Les hyaenodons sont de féroces créatures primitives ressemblant aux hyènes. Animaux menaçants aux poils hirsutes et presque aussi grands qu’un cheval, les hyaenodons sont des prédateurs véritablement formidables qu’il ne faut pas sous‑estimer en raison de leur taille et de leurs mâchoires capables de déchiqueter les chairs. Les hyaenodons s’attaquent aux petits chevaux, aux chameaux et même aux jeunes rhinocéros. Les clans kholos trouvent ces créatures particulièrement utiles comme montures et gardiennes.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

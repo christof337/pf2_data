@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GALAPIAT DE TERRE</name>
+    <type>CRÉATURE</type>
+    <level>1</level>
+    <creatureTraits>
+      <trait type="size">PETITE</trait>
+      <trait>ÉLÉMENTAIRE</trait>
+      <trait>TERRE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+3</bonus>
+      <senses>
+        <sens>
+          <name>perception des vibrations</name>
+          <precision>imprécis</precision>
+          <range>9 m</range>
+        </sens>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+6</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+2</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+3, **Dex** –1, **Con** +2, **Int** –2, **Sag** +0, **Cha** –1</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>15</armorClass>
+    <saves REF="+4" FOR="+8" WIL="+3"/>
+    <health>20</health>
+    <immunities>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>saignement</immunity>
+      <immunity>sommeil</immunity>
+    </immunities>
+    <speeds>
+      <speed>6 m</speed>
+      <speed type="burrow">6 m</speed>
+      <speed type="fly">4</speed>
+      <speed>5 m</speed>
+    </speeds>
+    <strikes/>
+    <spellList source="innate" tradition="arcane" DD="17">
+      <rank rank="3">
+        <spells>
+          <spell>symbiose minérale</spell>
+        </spells>
+      </rank>
+      <rank rank="2">
+        <spells>
+          <spell>agrandissement (soi uniquement)</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Souffle de pierraille</name>
+        <traits>
+          <trait>arcanique</trait>
+          <trait>terre</trait>
+        </traits>
+        <description>� Le galapiat de terre crache de la pierraille dans un cône de 4,5 m qui inflige 2d6 dégâts contondants à chaque créature dans la zone (jet de Réflexes basique DD 17)� Le galapiat de terre ne peut plus utiliser souffle de pierraille pendant 1d4 rounds�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

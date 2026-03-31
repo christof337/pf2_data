@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>DRAKE DU DÉSERT</name>
+    <type>CRÉATURE</type>
+    <level>8</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>DRAGON</trait>
+      <trait>TERRE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+15</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>9 m</range>
+        </sens>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+        <sens>
+          <name>vision malgré les tempêtes de sable</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+17</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+18</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+15</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+13</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+15</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+6" DEX="+3" CON="+5" INT="+0" WIS="+3" CHA="+1"/>
+    <armorClass>27</armorClass>
+    <saves REF="+15" FOR="+17" WIL="+13"/>
+    <health>135</health>
+    <immunities>
+      <immunity>paralysé</immunity>
+      <immunity>sommeil</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>crocs +19, **Dégâts **2d12+10 perforants **Corps à corps** 1 queue,</name>
+        <bonus>+19</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d8+10</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Agresseur surprise</name>
+        <description>Au premier round de combat, les créatures qui n’ont pas encore agi sont prises par surprise par le drake du désert�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Frénésie draconique</name>
+        <description>Le drake du désert effectue deux Frappes de crocs et une Frappe de queue dans l’ordre qu’il veut�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Souffle des sables</name>
+        <traits>
+          <trait>primordiale</trait>
+          <trait>terre</trait>
+        </traits>
+        <description>Le drake du désert projette une boule de sable abrasif qui traverse une distance de 18 m avant de former un nuage en une explosion de 4,5 m de rayon� Les créatures dans la zone d’effet subissent 9d6 dégâts tranchants (jet de Réflexes basique DD 27)� Le drake du désert ne peut plus utiliser Souffle des sables pendant 1d6 rounds� Durant ce laps de temps, la tempête de sable reste dans la zone� Ceci confère l’état masqué à tout ce qui se trouve à l’intérieur de la zone, mais ce qui se trouve à l’extérieur de la tempête bénéficie de l’état masqué pour les créatures situées à l’intérieur�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Vitesse augmentée</name>
+        <traits>
+          <trait>déplacement</trait>
+        </traits>
+        <description>**Fréquence** trois fois par jour�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

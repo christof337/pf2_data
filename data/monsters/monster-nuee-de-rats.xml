@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>NUÉE DE RATS</name>
+    <type>CRÉATURE</type>
+    <level>1</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>ANIMAL</trait>
+      <trait>NUÉE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+5</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>9 m</range>
+        </sens>
+        <sens>
+          <name>vision nocturne</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+4</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+6</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>–2, **Dex** +3, **Con** +1, **Int** –4, **Sag** +1, **Cha** –3</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>14</armorClass>
+    <saves REF="+7" FOR="+2" WIL="+4"/>
+    <health>14</health>
+    <immunities>
+      <immunity>à terre</immunity>
+      <immunity>empoigné</immunity>
+      <immunity>entravé</immunity>
+      <immunity>esprit de la nuée (p� 359)</immunity>
+      <immunity>précision</immunity>
+    </immunities>
+    <weaknesses>
+      <weakness>
+        <name>dégâts de zone</name>
+        <value>3</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special type="reaction">
+        <name>Vitesses</name>
+        <description>m, escalade 3 m</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Nuée de morsures</name>
+        <description>Chaque ennemi qui se trouve dans l’espace de la nuée subit 1d6 dégâts perforants et doit tenter un jet de Réflexes basique DD 17� Une créature qui échoue à son jet de sauvegarde se trouve exposée à la peste putride�</description>
+      </special>
+      <special>
+        <name>Peste putride</name>
+        <traits>
+          <trait>maladie</trait>
+        </traits>
+        <description>� Comme le rat géant�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

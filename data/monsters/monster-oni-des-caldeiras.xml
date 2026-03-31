@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>ONI DES CALDEIRAS</name>
+    <type>CRÉATURE</type>
+    <level>14</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>FEU</trait>
+      <trait>GÉANT</trait>
+      <trait>HUMANOÏDE</trait>
+      <trait>ONI</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>commun</language>
+    </languages>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+23</bonus>
+      </skill>
+      <skill>
+        <name>Artisanat</name>
+        <bonus>+25</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+27</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+27</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+27</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+8" DEX="+6" CON="+6" INT="+0" WIS="+6" CHA="+8"/>
+    <interactionAbilities>
+      <special>
+        <name>Objets</name>
+        <description>* cuirasse de résilience +1, katana de frappe +2*</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>35</armorClass>
+    <saves REF="+25" FOR="+28" WIL="+23"/>
+    <health>315</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>*katana*</name>
+        <bonus>+30</bonus>
+        <traits>
+          <trait>deux mains d10</trait>
+          <trait>magique</trait>
+          <trait>mortel d8</trait>
+          <trait>polyvalent P</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+14</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+          <damage>
+            <amount>2d6</amount>
+            <damageType>de feu</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+28</bonus>
+        <traits>
+          <trait>allonge 3 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d6+14</amount>
+            <damageType>perforants</damageType>
+          </damage>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>de saignement persistants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="primal" DD="34">
+      <rank rank="2">
+        <spells>
+          <spell>invisibilité (à volonté, soi uniquement)</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Changement de forme</name>
+        <traits>
+          <trait>concentration</trait>
+          <trait>métamorphose</trait>
+          <trait>primordiale</trait>
+        </traits>
+        <description>� Comme un oni des montagnes�</description>
+      </special>
+      <special>
+        <name>Danse de la guerre ardente</name>
+        <description/>
+      </special>
+      <special type="activity" actions="3">
+        <name>Fréquence</name>
+        <description>une fois par minute�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Forme de cendres</name>
+        <traits>
+          <trait>métamorphose</trait>
+          <trait>primordiale</trait>
+        </traits>
+        <description>**Fréquence** une fois par minute�</description>
+      </special>
+      <special>
+        <name>Oni des îles</name>
+        <description>Les oni des îles sont assez puissants pour s’approprier de petites îles côtières, réunissant souvent autour d’eux une armée disparate d’oni inférieurs qui pillent les terres et les eaux environnantes. Ils s’emparent de toutes les richesses qu’ils peuvent, s’habillent de vêtements luxueux et ornent leur visage monstrueux de toutes sortes de bijoux. Les oni des îles fouillent généralement les épaves pour y trouver des armes, des armures et des trésors. Cela peut les mettre en contact avec des marins morts‑vivants, qu’ils recrutent souvent à leur service.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

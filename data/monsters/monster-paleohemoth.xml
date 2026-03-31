@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>PALÉOHEMOTH</name>
+    <type>CRÉATURE</type>
+    <level>12</level>
+    <creatureTraits>
+      <trait type="size"/>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <armorClass>33</armorClass>
+    <saves/>
+    <health>195</health>
+    <immunities>
+      <immunity>attaques non létales</immunity>
+      <immunity>condamné</immunity>
+      <immunity>drainé</immunity>
+      <immunity>effets de mort</immunity>
+      <immunity>esprit</immunity>
+      <immunity>fatigué</immunity>
+      <immunity>guérison</immunity>
+      <immunity>inconscient</immunity>
+      <immunity>malade</immunity>
+      <immunity>maladie</immunity>
+      <immunity>mental</immunity>
+      <immunity>néant</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>saignement</immunity>
+      <immunity>vitalité</immunity>
+    </immunities>
+    <weaknesses>
+      <weakness>
+        <name>eau</name>
+        <value>10</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+26</bonus>
+        <traits>
+          <trait>allonge
+                                                    4,5 m</trait>
+          <trait>magique</trait>
+          <trait>mortel 2d10</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d10+13</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Fossilisation</name>
+        <traits>
+          <trait>arcanique</trait>
+          <trait>mise hors de combat</trait>
+        </traits>
+        <description>� La première fois à chaque round qu’une créature subit des dégâts des mâchoires d’un paléohemoth, elle doit effectuer un jet de Vigueur DD 32� Si elle échoue et qu’elle n’a pas déjà été ralentie par ce pouvoir, elle est ralentie 1 pendant 1 min� Si une créature déjà ralentie par ce pouvoir rate son jet de sauvegarde, elle est pétrifiée de manière permanente�</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Reconfiguration</name>
+        <description>Le paléohemoth réorganise ses os pour accroître son allonge jusqu’à 7,5 m et réduire sa Vitesse à 4,5 m� Il peut reprendre sa forme normale en utilisant une nouvelle fois cette action�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

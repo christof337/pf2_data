@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>DRAGON DE MIRAGE VÉNÉRABLE</name>
+    <type>CRÉATURE</type>
+    <level>18</level>
+    <creatureTraits>
+      <trait type="size">TRÈS GRANDE</trait>
+      <trait>ARCANIQUE</trait>
+      <trait>DRAGON</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+33</bonus>
+      <senses>
+        <sens>
+          <name>odorat</name>
+          <precision>imprécis</precision>
+          <range>18 m</range>
+        </sens>
+        <sens>
+          <name>perception des illusions</name>
+        </sens>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+33</bonus>
+      </skill>
+      <skill>
+        <name>Arcanes</name>
+        <bonus>+32</bonus>
+      </skill>
+      <skill>
+        <name>Artisanat</name>
+        <bonus>+32</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+34</bonus>
+      </skill>
+      <skill>
+        <name>Connaissances des illusions</name>
+        <bonus>+34</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+35</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+35</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+37</bonus>
+      </skill>
+      <skill>
+        <name>Larcin</name>
+        <bonus>+33</bonus>
+      </skill>
+      <skill>
+        <name>Représentation</name>
+        <bonus>+35</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+7" DEX="+7" CON="+6" INT="+6" WIS="+7" CHA="+9"/>
+    <interactionAbilities>
+      <special>
+        <name>Camouflage</name>
+        <description>Comme le jeune dragon de mirage�</description>
+      </special>
+      <special>
+        <name>Perception des illusions</name>
+        <description>Comme le dragon de mirage adulte�</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>41</armorClass>
+    <saves REF="+29" FOR="+28" WIL="+33" saveSpecial="bonus de statut de +2 à tous les jets de sauvegarde contre la magie arcanique"/>
+    <health>345</health>
+    <immunities>
+      <immunity>fasciné</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>sommeil</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires</name>
+        <bonus>+33</bonus>
+        <traits>
+          <trait>allonge 4,5 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d10+15</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+33</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>allonge 3 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d6+15</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>queue</name>
+        <bonus>+31</bonus>
+        <traits>
+          <trait>allonge 6 m</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>3d8+15</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special>
+        <name>Sorts innés arcaniques</name>
+        <description>* *DD 43 ; **8**e* créature illusoire*,* objet illusoire * (à volonté),* mirage*,* motif éclatant, scène illusoire *(à volonté) ; **4**e* invisibilité *(à volonté) ; **Tours de magie (9**e**) ***chimère*,* message*</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Allonger le cou et mordre</name>
+        <description>Comme le dragon de mirage adulte�</description>
+      </special>
+      <special>
+        <name>Attaque sournoise</name>
+        <description>Les Frappes du dragon infligent 3d6 dégâts de préci- sion supplémentaires aux créatures prises par surprise�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Démonstration captivante</name>
+        <description>Comme le dragon de mirage adulte, mais DD 41�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Frénésie draconique</name>
+        <description>Comme le jeune dragon de mirage�</description>
+      </special>
+      <special>
+        <name>Impulsion draconique</name>
+        <description>Comme le jeune dragon de mirage�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Souffle hallucinatoire</name>
+        <traits>
+          <trait>arcanique</trait>
+          <trait>émotion</trait>
+          <trait>mental</trait>
+        </traits>
+        <description>Comme le jeune dragon de mirage mais 17d6 dégâts mentaux, cône de 15 m et DD 41�</description>
+      </special>
+      <special>
+        <name>Dragon des prédictions</name>
+        <description>Plus qu’ailleurs, le destin est incertain sur Golarion. Malgré l’époque actuelle définie, non sans raison, comme celle des prédictions perdues, il existe encore quelques façons d’obtenir un aperçu du futur immédiat ou une idée vague d’événements sur le long terme. Les dragons des prédictions sont capables de voir le futur, aussi nébuleux soit‑il, à chaque instant. Des visions d’événements à venir les hantent comme une mélodie tournant sans cesse dans leur esprit. Bien qu’ils soient capables de se concentrer sur la musique du destin ou bien de l’ignorer, elle est constamment présente. À première vue, les dragons des prédictions ressemblent physiquement aux autres dragons occultes, si ce n’est la membrane miroitante qui constitue l’intérieur de leurs ailes. Grâce à cette caractéristique, ces dernières peuvent lais‑ ser entrapercevoir des fragments du futur. Ces visions sont brumeuses et vagues, mais généralement véridiques. Les dragons des prédictions ressentent l’envie irrépressible de faire part de leurs visions. Ils n’accordent aucune importance morale à celles‑ci et les par‑ tagent donc aussi bien avec des villageois innocents qu’avec de cruels tyrans.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

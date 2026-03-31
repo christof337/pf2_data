@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>NILITH</name>
+    <type>CRÉATURE</type>
+    <level>10</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>ABERRATION</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+21</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+17</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+21</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+23</bonus>
+      </skill>
+      <skill>
+        <name>Occultisme</name>
+        <bonus>+19</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+17</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+3" DEX="+5" CON="+4" INT="+3" WIS="+3" CHA="+5"/>
+    <armorClass>32</armorClass>
+    <saves REF="+20" FOR="+17" WIL="+20"/>
+    <health>150</health>
+    <speeds>
+      <speed>7</speed>
+      <speed>5 m</speed>
+      <speed type="climb">9 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>griffes</name>
+        <bonus>+23</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>finesse</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d10+9</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>crocs</name>
+        <bonus>+23</bonus>
+        <traits>
+          <trait>finesse</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>2d12+9</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="occult" DD="29">
+      <rank rank="5">
+        <spells>
+          <spell>hallucination, sonde men‑ tale</spell>
+        </spells>
+      </rank>
+      <rank rank="4">
+        <spells>
+          <spell>cauchemar, confusion, fluctuation, invisibilité (à volonté, soi uniquement), message onirique, vague de désespoir</spell>
+        </spells>
+      </rank>
+      <rank rank="3">
+        <spells>
+          <spell spellSpecial="à volonté">lecture des pensées</spell>
+        </spells>
+      </rank>
+    </spellList>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Broyage mental</name>
+        <traits>
+          <trait>mental</trait>
+          <trait>occulte</trait>
+        </traits>
+        <description>**Conditions.** Le nilith a empoigné une créature�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

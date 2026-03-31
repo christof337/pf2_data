@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>ARAIGNÉE CHASSEUSE</name>
+    <type>CRÉATURE</type>
+    <level>1</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+7</bonus>
+      <senses>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+        <sens>
+          <name>perception sur les toiles</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <interactionAbilities>
+      <special>
+        <name>Compétences</name>
+        <description>Acrobaties +7, Athlétisme +5, Discrétion +7</description>
+      </special>
+      <special>
+        <name>For</name>
+        <description>+2, **Dex **+4, **Con **+1, **Int **–5, **Sag **+2, **Cha **–4</description>
+      </special>
+      <special>
+        <name>Perception sur les toiles</name>
+        <description>Comme la nuée d’araignées�</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>17</armorClass>
+    <saves REF="+9" FOR="+6" WIL="+5"/>
+    <health>16</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>crocs</name>
+        <bonus>+9</bonus>
+        <traits>
+          <trait>finesse</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+2</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>À distance</name>
+        <description>toile +7 (facteur de portée 9 m), **Effet **piège de toile</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Descendre sur un fil de toile</name>
+        <traits>
+          <trait>déplacement</trait>
+        </traits>
+        <description>� L’araignée chas- seuse descend à la verticale d’une distance maximale de 12 m, suspendue à un fil de toile� Elle peut rester accrochée au fil ou s’en détacher� La distance descendue avec cette action ne compte pas dans le calcul des dégâts de chute� Une créature qui réussit à Frapper le fil de toile (CA 20, Solidité 3, 5 PV) le tranche et fait chuter l’araignée�</description>
+      </special>
+      <special>
+        <name>Piège de toile</name>
+        <description>Une créature touchée par l’attaque de toile de l’araignée chasseuse est immobilisée et collée à la surface la plus proche (DD 17 pour S’échapper)�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

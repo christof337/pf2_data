@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>FAUCHEUSE</name>
+    <type>CRÉATURE</type>
+    <level>21</level>
+    <creatureTraits>
+      <trait type="size"/>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+43</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+38</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+43</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+40</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+39</bonus>
+      </skill>
+      <skill>
+        <name>Société</name>
+        <bonus>+36</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+8" DEX="+10" CON="+8" INT="+5" WIS="+7" CHA="+8"/>
+    <armorClass>47</armorClass>
+    <saves REF="+41" FOR="+37" WIL="+38" saveSpecial="bonus de statut de +1 aux jets de sauve- garde contre la magie"/>
+    <health>320</health>
+    <immunities>
+      <immunity>effets de mort</immunity>
+      <immunity>inconscient</immunity>
+      <immunity>maladie</immunity>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>saignement</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special>
+        <name>Aura d’infortune</name>
+        <traits>
+          <trait>aura</trait>
+          <trait>divine</trait>
+          <trait>infortune</trait>
+        </traits>
+        <description>6 m� Les créatures vivantes dans l’aura doivent lancer deux fois tous leurs d20 et utiliser le moins bon résultat�</description>
+      </special>
+      <special>
+        <name>Grâce de la mort</name>
+        <description>La Faucheuse peut choisir ou non d’être considérée comme une morte-vivante pour les effets qui affectent différemment les morts-vivants� Même si elle choisit de ne pas être considérée comme morte-vivante, elle n’est jamais considérée comme une créature vivante�</description>
+      </special>
+      <special type="reaction">
+        <name>Mort qui rôde</name>
+        <traits>
+          <trait>divine</trait>
+          <trait>téléportation</trait>
+        </traits>
+        <trigger>Une créature dans un rayon de 30 m effectue une attaque à distance ou utilise une action dotée du trait concentration, mani- pulation ou déplacement ;</trigger>
+        <effect>La Faucheuse se téléporte dans une case adjacente à la créature ayant déclenché cet effet et effectue une Frappe au corps à corps contre elle� Si sa Frappe touche, la Faucheuse interrompt l’action�</effect>
+      </special>
+      <special>
+        <name>Soins du néant</name>
+        <description>La Faucheuse peut choisir ou non de subir des dégâts de vitalité�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

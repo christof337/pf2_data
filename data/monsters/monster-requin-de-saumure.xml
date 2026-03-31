@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>REQUIN DE SAUMURE</name>
+    <type>CRÉATURE</type>
+    <level>3</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>AQUATIQUE</trait>
+      <trait>EAU</trait>
+      <trait>ÉLÉMENTAIRE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+10</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+11</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+8</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+3" DEX="+2" CON="+2" INT="+0" WIS="+1" CHA="+0"/>
+    <armorClass>19</armorClass>
+    <saves REF="+11" FOR="+9" WIL="+6"/>
+    <health>45</health>
+    <immunities>
+      <immunity>paralysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>saignement</immunity>
+      <immunity>sommeil</immunity>
+    </immunities>
+    <speeds>
+      <speed>4</speed>
+      <speed>5 m</speed>
+      <speed type="swim">15 m</speed>
+    </speeds>
+    <strikes/>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Corps à corps</name>
+        <description>mâchoires +11, **Dégâts** 1d12+7 perforants plus Empoignade (p� 359)</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Plongée profonde</name>
+        <description>Le requin de saumure plonge dans l’eau et Nage deux fois vers le fond� S’il empoigne ou entrave une créature avant cela, il l’emporte avec lui�</description>
+      </special>
+      <special>
+        <name>Cascade vivante</name>
+        <description>Les cascades vivantes sont des colonnes d’eau bouillonnante de forme humanoïde. Elles considèrent l’eau comme leur domaine naturel et vont même jusqu’à traiter les animaux aquatiques comme des intrus. Si elles n’apprécient vraiment pas d’être convoquées, elles accompliront (bien qu’à contrecœur) leur rôle de gardiennes sur toutes sortes de sites aquatiques.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

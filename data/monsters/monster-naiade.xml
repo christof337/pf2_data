@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>NAÏADE</name>
+    <type>CRÉATURE</type>
+    <level>1</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>AMPHIBIE</trait>
+      <trait>EAU</trait>
+      <trait>FÉE</trait>
+      <trait>NYMPHE</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages>
+      <language>commun</language>
+      <language>elfique</language>
+      <language>féerique</language>
+      <language>thalassique</language>
+    </languages>
+    <skills>
+      <skill>
+        <name>Acrobaties</name>
+        <bonus>+6</bonus>
+      </skill>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+3</bonus>
+      </skill>
+      <skill>
+        <name>Diplomatie</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+6</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+4</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+0, **Dex **+3, **Con **+0, **Int **+1, **Sag **+1, **Cha **+4</description>
+      </special>
+      <special>
+        <name>Empathie animale</name>
+        <description>Vous pouvez poser des questions, recevoir des réponses et utiliser la compétence Diplomatie avec les animaux�</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>14</armorClass>
+    <saves REF="+6" FOR="+3" WIL="+8"/>
+    <health>20</health>
+    <weaknesses>
+      <weakness>
+        <name>fer froid</name>
+        <value>3</value>
+      </weakness>
+    </weaknesses>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>poing aqueux</name>
+        <bonus>+8</bonus>
+        <traits>
+          <trait>agile</trait>
+          <trait>eau</trait>
+          <trait>finesse</trait>
+          <trait>magique</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="ranged">
+        <name>orbe d’eau</name>
+        <bonus>+8</bonus>
+        <traits>
+          <trait>eau</trait>
+          <trait>magique</trait>
+          <trait>portée 18 m</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="innate" tradition="primal" DD="17"/>
+    <offensiveAbilities>
+      <special>
+        <name>Dryade</name>
+        <description>Les dryades sont les fées gardiennes des arbres et des créatures qui vivent dans des régions boisées. Elles préfèrent utiliser des méthodes indirectes pour dissuader ceux qui voudraient nuire à leurs bosquets sacrés et leurs bien‑aimées forêts, mais elles n’hésitent pas à recourir à des enchantements pour s’assurer l’aide d’alliés quand une menace maléfique ne peut être dissuadée par le simple dialogue. En temps de paix, les dryades mènent une existence heureuse et recluse à l’intérieur de leurs arbres et une communauté en harmonie avec la nature peut ne jamais se rendre compte que des dryades vivent à proximité. Bien qu’elles veillent sur l’ensemble de la forêt qui les entoure, les dyades sont intimement liées à un arbre précis, généralement un chêne. Les dryades liées à un autre type d’arbre sont fondamentalement les mêmes, mais elles peuvent avoir une appa‑ rence et un tempérament différents en rapport avec leur charge. Par exemple, les kranéiaïs, ou dryades des cerisiers, ont une magnifique teinte rosée et se préoccupent de la beauté fragile de la vie.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

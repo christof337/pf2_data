@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>GÉANT SQUELETTIQUE</name>
+    <type>CRÉATURE</type>
+    <level>3</level>
+    <creatureTraits>
+      <trait type="size"/>
+    </creatureTraits>
+    <perception>
+      <bonus>+7</bonus>
+      <senses>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages/>
+    <interactionAbilities>
+      <special>
+        <name>Compétences</name>
+        <description>Athlétisme +12, Intimidation +9</description>
+      </special>
+      <special>
+        <name>For</name>
+        <description>+5, **Dex **+1, **Con **+3, **Int **–5, **Sag **+0, **Cha **+2</description>
+      </special>
+      <special>
+        <name>Objets</name>
+        <description>armure de plates, coutille</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>17</armorClass>
+    <saves REF="+8" FOR="+8" WIL="+7"/>
+    <health>50</health>
+    <immunities>
+      <immunity>effets de mort</immunity>
+      <immunity>inconscient</immunity>
+      <immunity>maladie</immunity>
+      <immunity>mental</immunity>
+      <immunity>para- lysé</immunity>
+      <immunity>poison</immunity>
+      <immunity>saignement</immunity>
+    </immunities>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>coutille</name>
+        <bonus>+12</bonus>
+        <traits>
+          <trait>allonge 4,50 m</trait>
+          <trait>mortel d8</trait>
+          <trait>percutant</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d8+7</amount>
+            <damageType>tranchants</damageType>
+          </damage>
+        </damages>
+      </strike>
+      <strike type="melee">
+        <name>cornes</name>
+        <bonus>+12</bonus>
+        <traits>
+          <trait>agile</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d10+5</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="2">
+        <name>Charge terrifiante</name>
+        <description>Le géant Marche rapidement et porte une Frappe de cornes avec un bonus de circonstances de +4 aux dégâts� Si le coup porte, le géant tente de Démoraliser sa cible�</description>
+      </special>
+      <special type="activity" actions="2">
+        <name>Grande frappe transversale</name>
+        <description>Le géant porte deux Frappes de coutille contre deux adversaires adjacents qui se trouvent à sa portée� Les deux attaques comptent pour son malus d’attaques multiples, mais ce dernier n’augmente qu’après les deux attaques�</description>
+      </special>
+      <special>
+        <name>Mastodonte squelettique</name>
+        <description>Il est possible de créer de puissants squelettes à partir de géants particuliè‑ rement grands et d’autres énormes créatures.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

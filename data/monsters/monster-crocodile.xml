@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>CROCODILE</name>
+    <type>CRÉATURE</type>
+    <level>2</level>
+    <creatureTraits>
+      <trait type="size">GRANDE</trait>
+      <trait>ANIMAL</trait>
+    </creatureTraits>
+    <perception>
+      <bonus/>
+      <senses/>
+    </perception>
+    <languages/>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+8</bonus>
+      </skill>
+      <skill>
+        <name>Discrétion</name>
+        <bonus>+7</bonus>
+      </skill>
+    </skills>
+    <interactionAbilities>
+      <special>
+        <name>For</name>
+        <description>+4, **Dex** +1,** Con** +3,** Int** –5,** Sag** +1, **Cha** –4</description>
+      </special>
+      <special>
+        <name>Inspiration profonde</name>
+        <description>Le crocodile peut retenir sa respiration pendant environ 2 h�</description>
+      </special>
+    </interactionAbilities>
+    <armorClass>17</armorClass>
+    <saves REF="+7" FOR="+9" WIL="+5"/>
+    <health>30</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>mâchoires +10, **Dégâts** 1d10+4 perforants plus Empoignade (p� 359) **Corps à corps** 1 queue</name>
+        <bonus>+10</bonus>
+        <traits>
+          <trait>agile</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+4</amount>
+            <damageType>contondants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <offensiveAbilities>
+      <special type="activity" actions="1">
+        <name>Embuscade aquatique</name>
+        <description>10,5 m (p� 359)</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Tournoiement mortel</name>
+        <traits>
+          <trait>attaque</trait>
+        </traits>
+        <description>; **Conditions.** Le crocodile doit avoir empoigné une créature ;</description>
+      </special>
+      <special>
+        <name>Deinosuchus</name>
+        <description>Le deinosuchus est le cousin préhistorique du cro‑ codile, un énorme prédateur capable d’attraper et de dévorer des dinosaures qui s’approchent trop de son domaine ! Il vit beaucoup plus longtemps que les autres crocodiles et peut atteindre une longueur d’une dizaine de mètres.</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>

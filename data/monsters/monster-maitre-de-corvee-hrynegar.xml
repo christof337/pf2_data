@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../../xslt/decodeMonster.xsl" type="text/xsl"?>
+<monsters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/monster.xsd">
+  <monster>
+    <name>MAÎTRE DE CORVÉE HRYNEGAR</name>
+    <type>CRÉATURE</type>
+    <level>2</level>
+    <creatureTraits>
+      <trait type="size">MOYENNE</trait>
+      <trait>HRYNEGAR</trait>
+      <trait>HUMANOÏDE</trait>
+      <trait>NAIN</trait>
+    </creatureTraits>
+    <perception>
+      <bonus>+8</bonus>
+      <senses>
+        <sens>
+          <name>vision dans le noir</name>
+        </sens>
+      </senses>
+    </perception>
+    <languages>
+      <language>commun</language>
+      <language>nain</language>
+      <language>sakvroth</language>
+    </languages>
+    <skills>
+      <skill>
+        <name>Athlétisme</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Duperie</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Intimidation</name>
+        <bonus>+7</bonus>
+      </skill>
+      <skill>
+        <name>Occultisme</name>
+        <bonus>+5</bonus>
+      </skill>
+      <skill>
+        <name>Religion</name>
+        <bonus>+6</bonus>
+      </skill>
+      <skill>
+        <name>Survie</name>
+        <bonus>+6</bonus>
+      </skill>
+    </skills>
+    <attributes STR="+2" DEX="+0" CON="+2" INT="+0" WIS="+2" CHA="+3"/>
+    <armorClass>18</armorClass>
+    <saves REF="+4" FOR="+8" WIL="+8" saveSpecial="bonus de statut de +2 aux jets de sauvegarde contre la magie, esprit de fer"/>
+    <health>30</health>
+    <speeds>
+      <speed>0 m</speed>
+    </speeds>
+    <strikes>
+      <strike type="melee">
+        <name>pic de guerre</name>
+        <bonus>+8</bonus>
+        <traits>
+          <trait>fatal d10</trait>
+        </traits>
+        <damages>
+          <damage>
+            <amount>1d6+6</amount>
+            <damageType>perforants</damageType>
+          </damage>
+        </damages>
+      </strike>
+    </strikes>
+    <spellList source="prepared" tradition="divine" DD="18"/>
+    <offensiveAbilities>
+      <special>
+        <name>Sorts innés occultes</name>
+        <description>DD 18 ; **2**e *vendetta sanglante*, *paranoïa *; **Tour de magie (1**er**) ***symbole*</description>
+      </special>
+      <special type="activity" actions="1">
+        <name>Abattez‑les !</name>
+        <description>Le maître de corvée hrynegar frappe le sol avec son pic de guerre en invoquant le nom de Droskar pour que ses alliés passent à l’action� Tous les hrynegars alliés d’un niveau égal ou inférieur situés dans un rayon de 6 m autour du maître de corvée gagnent un bonus de statut de +1 aux jets d’attaque et de dégâts jusqu’à la fin du prochain tour du maître de corvée�</description>
+      </special>
+    </offensiveAbilities>
+  </monster>
+</monsters>
