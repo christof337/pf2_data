@@ -1,0 +1,93 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+    {
+        "label": "1. Extract PDF --> md",
+        "group": "build",
+        "command": "${workspaceFolder}/.venv/bin/python",
+        "args": [
+          "${workspaceFolder}/scripts/extract_pdf.py",
+          "${workspaceFolder}/pdf_sources/monstre_unique.pdf",
+          "./output/subset_3"
+        ],
+        "presentation": {
+          "reveal": "always",
+          "panel": "dedicated"
+        }
+    },
+      {
+        "label": "2. Mapping XML (Python)",
+        "type": "shell",
+        "command": "${workspaceFolder}/.venv/bin/python",
+        "args": [
+          "${workspaceFolder}/scripts/monster_mapper.py",
+          "${workspaceFolder}/output/subset_3/monstre_unique.md",
+        ],
+        "group": "build",
+        "presentation": {
+          "reveal": "always",
+          "panel": "dedicated"
+        }
+      },
+      {
+        "label": "3bis. DO NOT USE Transformation Obsidian (Saxon)",
+        "type": "xslt",
+        "saxonJar": "${config:XSLT.tasks.saxonJar}",
+        "xsltFile": "${workspaceFolder}/xslt/monster_to_obsidian.xsl",
+        "xmlSource": "${workspaceFolder}/data/unique.xml",
+        "resultPath": "${workspaceFolder}/obsidian_vault/Bestiaire/log.txt",
+        "group": "build",
+        "presentation": {
+          "reveal": "always",
+          "panel": "dedicated"
+        }
+      },
+      {
+        "label": "3. Java transformation Obsidian (Saxon)",
+        "type": "shell",
+        "command": "java",
+        "args": [
+          "-jar",
+          "${config:XSLT.tasks.saxonJar}",
+          "-s:${workspaceFolder}/data/monsters/JEUNE DRAGON EMPYRÉEN.xml",
+          "-xsl:${workspaceFolder}/xslt/monster_to_obsidian.xsl",
+          "-o:${workspaceFolder}/obsidian_vault/Bestiaire/JEUNE DRAGON EMPYRÉEN.md"
+        ],
+        "group": "build",
+        "presentation": {
+          "reveal": "always",
+          "panel": "dedicated"
+        }
+      },
+      {
+        "label": "PIPELINE COMPLET (POC)",
+        "dependsOrder": "sequence",
+        "dependsOn": [
+          "1. Extract PDF --> md",
+          "2. Mapping XML (Python)",
+          "3. Java transformation Obsidian (Saxon)"
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      },
+      {
+        "label": "spell Transformation Obsidian (Saxon)",
+        "type": "shell",
+        "command": "java",
+        "args": [
+          "-jar",
+          "${config:XSLT.tasks.saxonJar}",
+          "-s:${workspaceFolder}/data/spells/all_spells.xml",
+          "-xsl:${workspaceFolder}/xslt/spell_to_obsidian.xsl",
+          "-o:${workspaceFolder}/obsidian_vault/Sorts/sorts_MD.md"
+        ],
+        "group": "build",
+        "presentation": {
+          "reveal": "always",
+          "panel": "dedicated"
+        }
+      }
+    ]
+  }

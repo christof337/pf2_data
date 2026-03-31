@@ -1,3 +1,18 @@
-pdf_sources
+# Sources lourdes (PDFs)
+pdf_sources/
+
+# Artefacts de pipeline (fichiers intermédiaires, recréables depuis les PDFs)
+output/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+
+# macOS
 .DS_Store
-obsidian_vault/.obsidian
+
+# Obsidian vault (sortie de build — ignorée sauf le dossier preview)
+obsidian_vault/*
+!obsidian_vault/preview/
