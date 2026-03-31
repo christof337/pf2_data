@@ -22,7 +22,12 @@
     </xsl:if>
     <xsl:text>&#10;</xsl:text>
     
-    <xsl:text>## SORT </xsl:text><xsl:value-of select="rank"/><xsl:text>&#10;</xsl:text>
+    <xsl:text>## </xsl:text>
+    <xsl:choose>
+      <xsl:when test="@type='cantrip'">TOUR DE MAGIE </xsl:when>
+      <xsl:when test="@type='focus'">FOCALISÉ </xsl:when>
+      <xsl:when test="@type='spell'">SORT </xsl:when>
+    </xsl:choose><xsl:value-of select="rank"/><xsl:text>&#10;</xsl:text>
     <xsl:text>----&#10;</xsl:text>
     
     <xsl:for-each select="traits/trait">

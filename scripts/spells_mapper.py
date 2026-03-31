@@ -25,6 +25,10 @@ UPPER = r'A-ZÀÂÄÆÇÉÈÊËÎÏÔÖŒÙÛÜŸ'
 # PRÉ-NETTOYAGE DU PDF
 # ==========================================
 
+# ==========================================
+# PRÉ-NETTOYAGE DU PDF
+# ==========================================
+
 def clean_pdf_artifacts(content):
     """Purge les filigranes, numéros de page et sommaires avant traitement."""
     # 1. Gestion des retours à la ligne litéraux
@@ -32,7 +36,6 @@ def clean_pdf_artifacts(content):
     
     # 2. Purge des en-têtes/pieds de page et filigranes
     content = re.sub(r'\[\[PAGE \d+\]\]', '', content)
-    #content = re.sub(r'(?m)^\s*\d+\s*$', '', content)
     content = re.sub(r'(?m)^\s*Sorts\s*$', '', content, flags=re.IGNORECASE)
     content = re.sub(r'(?m)^\s*# FLUX PRINCIPAL \(STATS/BASE\)\s*$\n*\s*\d{1,3}', '', content)
     content = re.sub(r'(?m)^.*[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}.*$\n?', '', content)
@@ -41,21 +44,39 @@ def clean_pdf_artifacts(content):
     lines = content.split('\n')
     cleaned_lines = []
     streak = []
+    empty_count = 0
     
     for line in lines:
         stripped = line.strip()
-        # Si la ligne est courte et ne ressemble pas à un titre de sort
-        if 0 < len(stripped) < 25 and not re.search(r'\b(?:SORT|TOUR DE MAGIE)\s+\d+', stripped):
+        
+        if len(stripped) == 0:
+            empty_count += 1
             streak.append(line)
-        elif len(stripped) == 0:
-            streak.append(line)
+            # Sécurité 1 : Deux lignes vides consécutives brisent la série
+            if empty_count >= 2:
+                if len([l for l in streak if l.strip()]) >= 5:
+                    pass # On jette le sommaire
+                else:
+                    cleaned_lines.extend(streak)
+                streak = []
         else:
-            if len([l for l in streak if l.strip()]) >= 5:
-                pass # C'était un sommaire, on l'ignore
+            empty_count = 0
+            is_short = len(stripped) < 30
+            is_title = re.search(r'\b(?:SORT|TOUR DE MAGIE)\s+\d+', stripped)
+            # Sécurité 2 : Un point final signifie que c'est une vraie phrase
+            ends_with_dot = stripped.endswith('.')
+            
+            if is_short and not is_title and not ends_with_dot:
+                streak.append(line)
             else:
-                cleaned_lines.extend(streak)
-            cleaned_lines.append(line)
-            streak = []
+                # C'est une ligne longue, un titre, ou une fin de phrase => on casse la série
+                if len([l for l in streak if l.strip()]) >= 5:
+                    pass # C'était un sommaire, on l'ignore
+                else:
+                    cleaned_lines.extend(streak)
+                
+                cleaned_lines.append(line)
+                streak = []
             
     if len([l for l in streak if l.strip()]) < 5:
         cleaned_lines.extend(streak)

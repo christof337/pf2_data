@@ -150,7 +150,7 @@
     <targets>1 créature vivante</targets>
     <defense>Vigueur</defense>
     <duration>1 jour</duration>
-    <description>La cible maudite est prise d’une soif qu’aucune boisson ne peut étancher. Vous pouvez Révoquer le sort. La cible doit faire un jet</description>
+    <description>La cible maudite est prise d’une soif qu’aucune boisson ne peut étancher. Vous pouvez Révoquer le sort. La cible doit faire un jet de Vigueur.</description>
     <savingThrow>
       <criticalSuccess>La créature n’est pas affectée et est immunisée pendant 1 h.</criticalSuccess>
       <success>La créature est fatiguée pendant 1 round.</success>
