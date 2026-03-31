@@ -110,6 +110,7 @@ def add_rich_text(parent, text_content, tag_name=None):
         spell_el.text = parts[i]
         if i + 1 < len(parts):
             spell_el.tail = parts[i+1]
+
 # ==========================================
 # PARSING D'UN BLOC DE SORT
 # ==========================================
@@ -252,7 +253,7 @@ def generate_spells_xml(spells_data, output_path):
         etree.SubElement(s_el, "name").text = data['name']
 
         if data['type']: 
-            etree.SubElement(s_el, "type").set('type',"spell" if data['type']=="SORT" else "cantrip" if data['type']=="TOUR DE MAGIE" else "unknown")
+            s_el.set('type',"spell" if data['type']=="SORT" else "cantrip" if data['type']=="TOUR DE MAGIE" else "unknown")
         etree.SubElement(s_el, "rank").text = data['rank']
         if data['actions']: etree.SubElement(s_el, "actions").text = data['actions']
         

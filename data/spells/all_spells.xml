@@ -1,8 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <spells xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/spell.xsd">
-  <spell id="spell-agitation">
+  <spell id="spell-agitation" type="spell">
     <name>AGITATION</name>
-    <type type="spell"/>
     <rank>1</rank>
     <actions>2</actions>
     <traits>
@@ -30,9 +29,8 @@
       <heighten type="+1">Les dégâts sont augmentés de 2d8.</heighten>
     </heightenList>
   </spell>
-  <spell id="spell-anticipation-du-danger">
+  <spell id="spell-anticipation-du-danger" type="spell">
     <name>ANTICIPATION DU DANGER</name>
-    <type type="spell"/>
     <rank>1</rank>
     <actions>2</actions>
     <traits>
@@ -52,9 +50,8 @@
       <heighten type="+2">Le bonus de statut augmente de 1, jusqu’à un maximum de +4 au rang 7.</heighten>
     </heightenList>
   </spell>
-  <spell id="spell-attache">
+  <spell id="spell-attache" type="spell">
     <name>ATTACHE</name>
-    <type type="spell"/>
     <rank>1</rank>
     <actions>2</actions>
     <traits>
@@ -80,9 +77,8 @@
       <heighten type="+1">La CA des liens augmente de 3, et leurs points de vie augmentent de 10.</heighten>
     </heightenList>
   </spell>
-  <spell id="spell-balise-temporelle">
+  <spell id="spell-balise-temporelle" type="spell">
     <name>BALISE TEMPORELLE</name>
-    <type type="spell"/>
     <rank>7</rank>
     <actions>1</actions>
     <traits>
@@ -95,9 +91,8 @@
     <duration>jusqu’à la fin de votre tour</duration>
     <description>Vous posez une balise dans le flux du temps, dans le but de la rejoindre si les choses tournent mal. Vous ne pouvez lancer balise temporelle qu’à votre tour. Notez bien tout ce qui se passe au tour suivant l’incantation de la balise temporelle. À la fin de votre tour, vous pouvez choisir de remonter le temps jusqu’à l’instant suivant le lancement de la balise temporelle, annulant ainsi tout ce qui s’est passé depuis. Les malédictions, les pièges et autres effets néfastes survenus pendant votre tour pourraient vous empêcher, s’ils sont suffisamment puissants, de rejoindre la balise. Si vous avez subi de quelconques effets néfastes pendant votre tour après avoir lancé balise temporelle, le sort fait un test de contre pour chacun de ces effets afin de vous permettre de rejoindre la balise. S’il rate un seul de ces tests, le retour est impossible. Après être retourné à la balise temporelle, le sort prend fin.</description>
   </spell>
-  <spell id="spell-sacrement">
+  <spell id="spell-sacrement" type="spell">
     <name>SACREMENT</name>
-    <type type="spell"/>
     <rank>1</rank>
     <actions>2</actions>
     <traits>
@@ -113,9 +108,8 @@
     <duration>1 min</duration>
     <description>La protection divine permet de protéger vos compagnons. Vos alliés et vous-même gagnez un bonus de statut de +1 à la CA tant que vous êtes dans l’émanation. Une fois par round lors des tours suivants, vous pouvez Maintenir le sort pour augmenter le rayon de l’émanation de 3 m. <spellRef>Sacrement</spellRef> peut contrer <spellRef>malédiction.</spellRef></description>
   </spell>
-  <spell id="spell-champ-radiant">
+  <spell id="spell-champ-radiant" type="spell">
     <name>CHAMP RADIANT</name>
-    <type type="spell"/>
     <rank>2</rank>
     <actions>3</actions>
     <traits>
@@ -138,9 +132,8 @@
       <heighten type="4e">Les créatures vues à travers la zone sont masquées par rapport à celles qui se trouvent à l’extérieur. Les créatures aveuglées par la lumière peuvent continuer à être aveuglées par le champ tant que celui-ci est visible, même lorsqu’elles se trouvent à l’extérieur du champ.</heighten>
     </heightenList>
   </spell>
-  <spell id="spell-coupe-de-poussiere">
+  <spell id="spell-coupe-de-poussiere" type="spell">
     <name>COUPE DE POUSSIÈRE</name>
-    <type type="spell"/>
     <rank>3</rank>
     <actions>3</actions>
     <traits>
@@ -168,9 +161,8 @@
       <heighten type="+3">La soif devient de plus en plus insupportable, augmentant les dégâts chaque heure de 1d4, ou de 2d4 en cas d’échec critique.</heighten>
     </heightenList>
   </spell>
-  <spell id="spell-deguisement-de-penombre">
+  <spell id="spell-deguisement-de-penombre" type="spell">
     <name>DÉGUISEMENT DE PÉNOMBRE</name>
-    <type type="spell"/>
     <rank>2</rank>
     <actions>2</actions>
     <traits>
@@ -193,9 +185,8 @@
       <heighten type="8e">Comme le rang 6, mais le bonus de statut est de +4, et même les créatures dotées de vision dans le noir supérieure doivent Chercher pour discerner les détails de la cible lorsque celle-ci se trouve dans une lumière faible ou dans les ténèbres.</heighten>
     </heightenList>
   </spell>
-  <spell id="spell-ecailles-reflechissantes">
+  <spell id="spell-ecailles-reflechissantes" type="spell">
     <name>ÉCAILLES RÉFLÉCHISSANTES</name>
-    <type type="spell"/>
     <rank>4</rank>
     <actions>2</actions>
     <traits>
@@ -212,9 +203,8 @@
       <heighten type="+2">La résistance augmente de 5, et le maximum de dégâts de la déflagration d’écailles augmente de 5d6.</heighten>
     </heightenList>
   </spell>
-  <spell id="spell-eclat-de-lune">
+  <spell id="spell-eclat-de-lune" type="spell">
     <name>ÉCLAT DE LUNE</name>
-    <type type="spell"/>
     <rank>7</rank>
     <actions>2</actions>
     <traits>
@@ -242,9 +232,8 @@
       <heighten type="+1">Les dégâts de froid augmentent de 1d10, et les dégâts de vitalité contre les morts-vivants augmentent de 1d10.</heighten>
     </heightenList>
   </spell>
-  <spell id="spell-embellissement">
+  <spell id="spell-embellissement" type="cantrip">
     <name>EMBELLISSEMENT</name>
-    <type type="cantrip"/>
     <rank>1</rank>
     <actions>2</actions>
     <traits>
@@ -261,9 +250,8 @@
     <duration>1 h</duration>
     <description>Par de simples gestes magiques, vous modifiez un détail mineur de votre apparence (ajouter ou enlever des reflets à la couleur de vos cheveux, appliquer ou enlever des produits de beauté, ajouter du vernis ou des accessoires à vos ongles, etc.) ou créez un petit effet environnemental limité à votre personne (ajuster l’éclairage environnant pour favoriser votre bon profil, faire souffler une petite brise pour faire voler vos cheveux de façon spectaculaire, faire entendre un petit carillon lorsque vous souriez, etc.) Pendant que le sort est actif, vous pouvez le Maintenir pour effectuer d’autres ajustements. Les changements persistent jusqu’à la fin de la durée du sort. À la discrétion du MJ, de telles altérations peuvent accorder un bonus de statut de +1 à certaines tâches, telles que Se déguiser ou Se produire.</description>
   </spell>
-  <spell id="spell-embrouiller">
+  <spell id="spell-embrouiller" type="spell">
     <name>EMBROUILLER</name>
-    <type type="spell"/>
     <rank>1</rank>
     <actions>2</actions>
     <traits>
@@ -288,9 +276,8 @@
       <criticalFailure>La cible est maladroite 3, stupéfiée 3 et confuse.</criticalFailure>
     </savingThrow>
   </spell>
-  <spell id="spell-excavation-expeditive">
+  <spell id="spell-excavation-expeditive" type="spell">
     <name>EXCAVATION EXPÉDITIVE</name>
-    <type type="spell"/>
     <rank>2</rank>
     <actions>2</actions>
     <traits>
@@ -314,9 +301,8 @@
       <heighten type="+2">Le sort permet de dégager un cube de terre supplémentaire de 1,5 m de côté. Si vous excavez les quatre cubes de 1,5 m de côté sous une créature de Grande taille, celle-ci doit faire un jet de Réflexes ou un test d’Acrobaties, comme indiqué précédemment.</heighten>
     </heightenList>
   </spell>
-  <spell id="spell-explosion-acide">
+  <spell id="spell-explosion-acide" type="spell">
     <name>EXPLOSION ACIDE</name>
-    <type type="spell"/>
     <rank>1</rank>
     <actions>2</actions>
     <traits>
@@ -335,9 +321,8 @@
       <heighten type="+1">Les dégâts augmentent de 2d6.</heighten>
     </heightenList>
   </spell>
-  <spell id="spell-festin-de-cendres">
+  <spell id="spell-festin-de-cendres" type="spell">
     <name>FESTIN DE CENDRES</name>
-    <type type="spell"/>
     <rank>2</rank>
     <actions>3</actions>
     <traits>
@@ -365,9 +350,8 @@
       <heighten type="+1">La faim devient de plus en plus intolérable, augmentant les dégâts chaque jour de 1d4, ou de 2d4 en cas d’échec critique.</heighten>
     </heightenList>
   </spell>
-  <spell id="spell-gemme-explosive">
+  <spell id="spell-gemme-explosive" type="spell">
     <name>GEMME EXPLOSIVE</name>
-    <type type="spell"/>
     <rank>1</rank>
     <actions>2</actions>
     <traits>
@@ -387,9 +371,8 @@
       <heighten type="+1">La gemme a 5 PV supplémentaires, et les dégâts infligés par son explosion augmentent de 1d8.</heighten>
     </heightenList>
   </spell>
-  <spell id="spell-hyphe-fongique">
+  <spell id="spell-hyphe-fongique" type="spell">
     <name>HYPHE FONGIQUE</name>
-    <type type="spell"/>
     <rank>2</rank>
     <actions>2</actions>
     <traits>
@@ -407,9 +390,8 @@
       <heighten type="6e">Comme le rang 4, mais vous pouvez effectuer d’autres manipulations simples via les plantes, comme ramasser un objet ou ouvrir une porte avec une branche. Toutefois, les actions plus complexes, comme crocheter une serrure ou désamorcer un piège, demeurent impossibles.</heighten>
     </heightenList>
   </spell>
-  <spell id="spell-injonction-liberatrice">
+  <spell id="spell-injonction-liberatrice" type="spell">
     <name>INJONCTION LIBÉRATRICE</name>
-    <type type="spell"/>
     <rank>1</rank>
     <actions>1</actions>
     <traits>
@@ -423,9 +405,8 @@
     <range>18 m</range>
     <description>; **Cible** 1 créature Vous poussez un cri libérateur, pressant un allié de se libérer d’un effet qui le cloue sur place. Si la cible est empoignée, immobilisée ou entravée, elle peut immédiatement utiliser une réaction pour tenter de S’échapper.</description>
   </spell>
-  <spell id="spell-malediction">
+  <spell id="spell-malediction" type="spell">
     <name>MALÉDICTION</name>
-    <type type="spell"/>
     <rank>1</rank>
     <actions>2</actions>
     <traits>
@@ -442,9 +423,8 @@
     <duration>1 min</duration>
     <description>Vous suscitez le désarroi dans l’esprit de vos ennemis qui ont plus de mal à se défendre. Les ennemis dans la zone d’effet doivent réussir un jet de Volonté ou subir un malus de statut de −1 à la CA tant qu’ils sont dans la zone. Une fois par round lors des tours suivants, vous pouvez Maintenir le sort pour augmenter le rayon de l’émanation de 3 m et forcer les ennemis de la zone qui n’étaient pas encore affectés à tenter un jet de sauvegarde. <spellRef>Malédiction</spellRef> peut contrer <spellRef>sacrement</spellRef>.</description>
   </spell>
-  <spell id="spell-manteau-de-lumiere">
+  <spell id="spell-manteau-de-lumiere" type="spell">
     <name>MANTEAU DE LUMIÈRE</name>
-    <type type="spell"/>
     <rank>4</rank>
     <actions>2</actions>
     <traits>
@@ -464,9 +444,8 @@
       <heighten type="+2">Les guérisons sont augmentées de 2d6 et les dégâts infligés aux morts-vivants de 2d6.</heighten>
     </heightenList>
   </spell>
-  <spell id="spell-mine-immaterielle">
+  <spell id="spell-mine-immaterielle" type="spell">
     <name>MINE IMMATÉRIELLE</name>
-    <type type="spell"/>
     <rank>2</rank>
     <actions>2</actions>
     <traits>
@@ -490,9 +469,8 @@
       <heighten type="+1">Les dégâts sont augmentés de 2d8.</heighten>
     </heightenList>
   </spell>
-  <spell id="spell-montrer-le-chemin">
+  <spell id="spell-montrer-le-chemin" type="spell">
     <name>MONTRER LE CHEMIN</name>
-    <type type="spell"/>
     <rank>3</rank>
     <traits>
       <trait>CONCENTRATION</trait>
@@ -511,9 +489,8 @@
       <heighten type="6e">Au cours d’un long voyage par voie terrestre en mode exploration, votre Vitesse de voyage en terrain difficile n’est pas réduite du tout, et vous vous déplacez aux trois quarts de votre vitesse normale en terrain très difficile (au lieu du tiers).</heighten>
     </heightenList>
   </spell>
-  <spell id="spell-mue">
+  <spell id="spell-mue" type="spell">
     <name>MUE</name>
-    <type type="spell"/>
     <rank>2</rank>
     <actions>2</actions>
     <traits>
@@ -527,9 +504,8 @@
     <duration>1 h</duration>
     <description>Vous vous dépouillez de façon continue et sans dommage de la couche supérieure de votre épiderme qui se régénère immédiatement, éloignant ainsi rapidement toute substance nuisible de votre corps. Le test nu pour mettre fin aux dégâts persistants dus aux effets couvrant votre peau (comme la plupart des dégâts persistants d’acide) est réduit à 5, et vous bénéficiez d’un bonus de statut de +2 pour votre jet de sauvegarde initial contre les poisons de contact (mais pas aux jets ultérieurs, puisque la toxine aura déjà pénétré votre système). Si vous souffrez d’un effet agissant par contact permanent avec la peau, autre que les dégâts persistants, vous bénéficiez d’un nouveau jet de sauvegarde contre cet effet à la fin de chaque tour quand vous faites vos tests nus contre les dégâts persistants, ainsi que d’un bonus de statut +2 à ces jets — mais seulement si cet effet permet des jets de sauvegarde. Tant que vous êtes affecté par ce sort, le fait de perdre votre peau en permanence vous rend beaucoup plus facile à Pister. Quiconque tente de vous Pister gagne un bonus de circonstances de +2, et vous ne pouvez pas Dissimuler vos traces.</description>
   </spell>
-  <spell id="spell-mur-de-radiance">
+  <spell id="spell-mur-de-radiance" type="spell">
     <name>MUR DE RADIANCE</name>
-    <type type="spell"/>
     <rank>3</rank>
     <actions>3</actions>
     <traits>
@@ -550,9 +526,8 @@
       <heighten type="4e">Il est difficile de discerner les créatures de l’autre côté à cause de cette lumière vive. Les créatures sont masquées pour celles qui se trouvent du côté opposé du mur. Les dégâts de feu passent à 3d6.</heighten>
     </heightenList>
   </spell>
-  <spell id="spell-mur-dombre">
+  <spell id="spell-mur-dombre" type="spell">
     <name>MUR D’OMBRE</name>
-    <type type="spell"/>
     <rank>3</rank>
     <actions>3</actions>
     <traits>
@@ -572,9 +547,8 @@
       <heighten type="7e">Les créatures dotées de vision dans le noir supérieure peuvent à peine voir à travers l’obscurité. Elles considèrent les cibles qu’elles voient à travers le mur comme étant masquées. Toutes les autres créatures sont incapables de voir à travers les ténèbres.</heighten>
     </heightenList>
   </spell>
-  <spell id="spell-onde-tellurique">
+  <spell id="spell-onde-tellurique" type="spell">
     <name>ONDE TELLURIQUE</name>
-    <type type="spell"/>
     <rank>1</rank>
     <actions>2</actions>
     <traits>
@@ -599,9 +573,8 @@
       <heighten type="+1">La taille de la zone augmente de 1,5 m par rang (le cône passe à 6 m au rang 2, etc.)</heighten>
     </heightenList>
   </spell>
-  <spell id="spell-outil-ephemere">
+  <spell id="spell-outil-ephemere" type="spell">
     <name>OUTIL ÉPHÉMÈRE</name>
-    <type type="spell"/>
     <rank>1</rank>
     <traits>
       <trait>CONCENTRATION</trait>
@@ -614,9 +587,8 @@
     <duration>1 min ou jusqu’à utilisation (voir texte)</duration>
     <description>Vous invoquez temporairement un outil simple, comme une pelle ou une corde, qui apparaît dans vos mains. Il reste 1 min ou jusqu’à ce qu’il soit utilisé pour une seule activité, selon ce qui se produit en premier, après quoi il disparaît. L’outil est manifestement invoqué temporairement et ne peut donc pas être vendu ou présenté comme un objet authentique.</description>
   </spell>
-  <spell id="spell-partage-de-connaissances">
+  <spell id="spell-partage-de-connaissances" type="spell">
     <name>PARTAGE DE CONNAISSANCES</name>
-    <type type="spell"/>
     <rank>1</rank>
     <traits>
       <trait>CONCENTRATION</trait>
@@ -629,7 +601,6 @@
     </traditions>
     <cast>1 min</cast>
     <range>contact</range>
-    <targets>jusqu’à 3 créatures</targets>
     <duration>10 min</duration>
     <description>Vous partagez votre savoir avec les créatures touchées. Choisissez une compétence de Connaissances pour laquelle vous êtes qualifié. Les cibles sont qualifiées pour cette compétence de Connaissances pour la durée du sort.</description>
     <heightenList>
@@ -637,9 +608,8 @@
       <heighten type="5e">La durée du sort est de 8 h, vous pouvez cibler jusqu’à cinq créatures, et vous pouvez partager jusqu’à deux compétences de Connaissances pour lesquelles vous êtes qualifié.</heighten>
     </heightenList>
   </spell>
-  <spell id="spell-rayon-de-lune">
+  <spell id="spell-rayon-de-lune" type="spell">
     <name>RAYON DE LUNE</name>
-    <type type="spell"/>
     <rank>3</rank>
     <actions>2</actions>
     <traits>
@@ -666,9 +636,8 @@
       <heighten type="+1">Les dégâts de froid augmentent de 2d6, et les dégâts d’esprit contre les créatures impies augmentent de 2d6.</heighten>
     </heightenList>
   </spell>
-  <spell id="spell-rune-messagere">
+  <spell id="spell-rune-messagere" type="spell">
     <name>RUNE MESSAGÈRE</name>
-    <type type="spell"/>
     <rank>1</rank>
     <traits>
       <trait>CONCENTRATION</trait>
@@ -682,15 +651,15 @@
     </traditions>
     <cast>5 min</cast>
     <range>contact</range>
+    <targets>1 surface plane non portée ou un objet non magique avec un Encombrement léger.</targets>
     <duration>1 jour</duration>
     <description>Vous enregistrez un message d’une durée maximale de 5 min et inscrivez une rune spéciale sur toute surface plane et non portée ou sur un petit objet à portée de main. La nature de l’apparence de la rune dépend de vous, mais elle est visible par tout le monde et son diamètre ne doit pas être inférieur à 5 cm. Vous spécifiez également un déclencheur pour que les créatures activent la rune (Livre des joueurs p. 303). Pendant la durée du sort, les créatures qui répondent aux critères du déclencheur peuvent entrer en contact avec la rune pour entendre dans leur tête le message enregistré, comme si vous leur parliez par télépathie. Vous savez quand quelqu’un écoute le message, mais vous ne savez pas de qui il s’agit. Vous pouvez Révoquer le sort.</description>
     <heightenList>
       <heighten type="+2">La durée augmente tous les 2 rangs, devenant respectivement 1 semaine, 1 mois, 1 an ou illimitée.</heighten>
     </heightenList>
   </spell>
-  <spell id="spell-sables-mouvants">
+  <spell id="spell-sables-mouvants" type="spell">
     <name>SABLES MOUVANTS</name>
-    <type type="spell"/>
     <rank>3</rank>
     <actions>3</actions>
     <traits>
@@ -719,9 +688,8 @@
       <heighten type="9e">Le malus de statut passe à −4, la portée du sort 18 m et la zone d’effet du sort à une explosion de 12 m.</heighten>
     </heightenList>
   </spell>
-  <spell id="spell-sensibilite-au-soleil">
+  <spell id="spell-sensibilite-au-soleil" type="spell">
     <name>SENSIBILITÉ AU SOLEIL</name>
-    <type type="spell"/>
     <rank>2</rank>
     <actions>2</actions>
     <traits>
@@ -749,9 +717,8 @@
       <heighten type="6e">Vous pouvez cibler jusqu’à 10 créatures.</heighten>
     </heightenList>
   </spell>
-  <spell id="spell-soutenir">
+  <spell id="spell-soutenir" type="spell">
     <name>SOUTENIR</name>
-    <type type="spell"/>
     <rank>1</rank>
     <actions>1</actions>
     <traits>
@@ -770,9 +737,8 @@
       <heighten type="+1">Les points de vie temporaires augmentent de 5.</heighten>
     </heightenList>
   </spell>
-  <spell id="spell-tempete-dacide">
+  <spell id="spell-tempete-dacide" type="spell">
     <name>TEMPÊTE D’ACIDE</name>
-    <type type="spell"/>
     <rank>5</rank>
     <actions>2</actions>
     <traits>
@@ -793,9 +759,8 @@
       <heighten type="+2">Les dégâts sont augmentés de 1d8.</heighten>
     </heightenList>
   </spell>
-  <spell id="spell-tourbillon-de-foulards">
+  <spell id="spell-tourbillon-de-foulards" type="spell">
     <name>TOURBILLON DE FOULARDS</name>
-    <type type="spell"/>
     <rank>3</rank>
     <actions>2</actions>
     <traits>
@@ -813,9 +778,8 @@
       <heighten type="+2">Le malus de circonstances pour les attaques ultérieures contre les écharpes avec une arme ou une attaque à mains nues augmente de 1. Le DD du test nu des attaques à distance face à l’état masqué augmente de 1.</heighten>
     </heightenList>
   </spell>
-  <spell id="spell-voile-de-penombre">
+  <spell id="spell-voile-de-penombre" type="spell">
     <name>VOILE DE PÉNOMBRE</name>
-    <type type="spell"/>
     <rank>1</rank>
     <actions>2</actions>
     <traits>
