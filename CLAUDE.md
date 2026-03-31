@@ -131,6 +131,23 @@ Si un test échoue → **s'arrêter, signaler la régression à l'utilisateur, n
 
 ---
 
+## Backlog — Known issues (à traiter plus tard, ne pas toucher sans instruction explicite)
+
+Ces problèmes sont **identifiés et documentés**, mais délibérément différés. Ne pas les corriger de manière proactive.
+
+### Sorts — Pipeline XML → Obsidian
+
+1. **Superscript "e" dans les entrées intensifiées** (`spell_to_obsidian.xsl`)
+   Les entrées de type `Intensifié (4e)` devraient afficher le "e" en exposant. Actuellement rendu en texte plat. Correction à apporter dans le XSLT.
+
+2. **Sauts de ligne non préservés** (`spells_mapper.py` + `spell_to_obsidian.xsl`)
+   Les descriptions sont aplaties en un seul bloc de texte. La mise en page originale du PDF (listes, paragraphes distincts) est perdue. À corriger dans le parsing et/ou le rendu XSLT.
+
+3. **⚠️ Bug parsing — texte post-bloc SCSEEC perdu** (`spells_mapper.py`) — *plus grave*
+   Si une description contient du texte **après** le bloc Succès critique / Succès / Échec / Échec critique, ce texte n'est pas capturé dans un champ dédié : il se retrouve accolé à la dernière entrée du bloc (typiquement `<criticalFailure>`). Correction à apporter dans la logique de délimitation de `parse_spell_block()`, probablement en ajoutant un champ `descriptionPost` ou en revoyant les bornes des regex de sauvegardes.
+
+---
+
 ## Objectif site web (horizon Phase 3+)
 
 Le site cible est fonctionnellement équivalent à [Archives of Nethys](https://2e.aonprd.com/) mais en français :
