@@ -30,7 +30,7 @@ Compiler l'intégralité du contenu technique de **Pathfinder 2e (version franç
 ## Architecture des données
 
 ```
-pdf_sources/          → PDFs originaux (source of truth physique)
+pdf_sources/          → PDFs originaux (source of truth physique) [gitignored]
 scripts/              → Pipeline Python (extraction, mapping, validation)
   extract_pdf.py      → PDF → Markdown brut structuré
   monster_mapper.py   → Markdown → XML monstres
@@ -49,10 +49,12 @@ data/
   monsters/           → XMLs monstres individuels
   spells/             → all_spells.xml (fichier agrégé)
   traits/             → traits.xml
-output/               → Fichiers intermédiaires de travail (temporaires)
-obsidian_vault/       → Notes Obsidian générées (sortie finale actuelle)
+output/               → Fichiers intermédiaires de travail (temporaires) [gitignored]
+obsidian_vault/       → Notes Obsidian générées [gitignored sauf preview/]
+  preview/            → Quelques exemples trackés manuellement
 tests/
-  fixtures/           → XMLs de test/référence
+  fixtures/           → Inputs MD + golden XML de référence [ZONE PROTÉGÉE]
+  test_runner.py      → Runner de non-régression [ZONE PROTÉGÉE]
 ```
 
 ---
@@ -89,9 +91,40 @@ tests/
 
 ---
 
+## Stratégie de test — règles non négociables
+
+Le projet utilise du **golden master testing** (snapshot testing) : chaque mapper est testé en comparant sa sortie XML contre un fichier de référence validé manuellement par le propriétaire du projet.
+
+### Règles pour Claude
+
+**`tests/` est une zone protégée.** Ne jamais modifier :
+- `tests/fixtures/*.md` — inputs de référence
+- `tests/fixtures/*_ok.xml` ou tout fichier XML de référence — golden masters
+- `tests/test_runner.py` — le runner lui-même
+
+La seule exception est un refactoring structurel explicitement demandé par l'utilisateur.
+
+**Avant tout commit touchant un mapper ou une regex :**
+```bash
+python tests/test_runner.py
+```
+Si un test échoue → **s'arrêter, signaler la régression à l'utilisateur, ne pas continuer**. Ne jamais régénérer un golden master pour "faire passer" un test — ce serait exactement contourner le système.
+
+**Seul l'utilisateur peut bénir un nouveau golden master.** Si une amélioration change légitimement la sortie XML, c'est lui qui valide le nouveau fichier de référence et le commite.
+
+### Logique du runner
+
+`test_runner.py` fait : input MD → `parse_*()` → `generate_*_xml()` dans un fichier temporaire → comparaison stricte caractère par caractère avec le golden XML. La comparaison est intentionnellement stricte : tout écart, même cosmétique, est une régression jusqu'à preuve du contraire.
+
+### Périmètre actuel des tests
+
+- Monstres : `test_dragon.md` / `test_dragon_ok.xml` (Jeune Dragon Empyréen)
+- Sorts et traits : pas encore couverts — à enrichir progressivement par l'utilisateur
+
+---
+
 ## Points de vigilance
 
-- **`xslt/` contient les XSD** : mélange de rôles (transformation + schéma). À factoriser en `schema/` si la complexité augmente.
 - **`spell_to_obsidian.xsl` est en XSLT 1.0** alors que le README annonce Saxon (XSLT 3.0). Fonctionne en dégradé, mais ne profite pas des fonctionnalités 3.0.
 - **`scripts/old/`** : à archiver ou supprimer quand les mappers courants sont stabilisés.
 - Les **IDs XML sont des `xs:ID`** : unicité garantie par le XSD, mais le slug doit être stable entre les runs (actuellement basé sur le nom, pas sur un identifiant canonique PF2e).
