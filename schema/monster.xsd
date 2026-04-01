@@ -26,7 +26,7 @@
       <xs:element name="armorClass" type="xs:integer"/>
       <xs:element name="saves" type="savesType"/>
       <xs:element name="health" type="xs:integer"/>
-      <xs:element name="immunities" type="simpleListType" minOccurs="0"/>
+      <xs:element name="immunities" type="immunityListType" minOccurs="0"/>
       <xs:element name="weaknesses" type="valueListType" minOccurs="0"/>
       <xs:element name="resistances" type="resistanceListType" minOccurs="0"/>
       <xs:element name="reactiveAbilities" type="abilityContainerType" minOccurs="0"/>
@@ -147,7 +147,7 @@
     <xs:sequence>
       <xs:element name="action" type="xs:string" minOccurs="0"/>
       <xs:element name="name" type="xs:string" minOccurs="0"/>
-      <xs:element name="traits" type="simpleListType" minOccurs="0"/>
+      <xs:element name="traits" type="traitListType" minOccurs="0"/>
       <xs:element name="requirements" type="xs:string" minOccurs="0"/>
       <xs:element name="trigger" type="xs:string" minOccurs="0"/>
       <xs:element name="frequency" type="xs:string" minOccurs="0"/>
@@ -227,10 +227,16 @@
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="simpleListType">
+  <!-- Liste de traits avec référence optionnelle (utilisée dans les frappes et capacités) -->
+  <xs:complexType name="traitListType">
     <xs:sequence>
       <xs:element name="trait" type="traitRefType" minOccurs="0" maxOccurs="unbounded"/>
-      <xs:element name="language" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Liste d'immunités (insensibilité à un type de dégât ou condition) -->
+  <xs:complexType name="immunityListType">
+    <xs:sequence>
       <xs:element name="immunity" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
@@ -250,7 +256,7 @@
           <xs:sequence>
             <xs:element name="name" type="xs:string"/>
             <xs:element name="bonus" type="xs:string"/>
-            <xs:element name="traits" type="simpleListType" minOccurs="0"/>
+            <xs:element name="traits" type="traitListType" minOccurs="0"/>
             <xs:element name="damages">
               <xs:complexType>
                 <xs:sequence>

@@ -732,7 +732,7 @@
                 <name>Frappe sismique</name>
                 <frequency>1 fois/min</frequency>
                 <effect>
-                    Le titanosaure se dresse sur ses pattes arrière avant d’abattre ses pattes avant sur le sol dans un bruit de tonnerre, créant une secousse localisée avec les effets du sort <spell>tremblement de terre</spell> centré sur lui-même, bien que l’effet ne soit pas magique. Aucune fissure ne se forme sous le titanosaure.
+                    Le titanosaure se dresse sur ses pattes arrière avant d’abattre ses pattes avant sur le sol dans un bruit de tonnerre, créant une secousse localisée avec les effets du sort <spellRef>tremblement de terre</spellRef> centré sur lui-même, bien que l’effet ne soit pas magique. Aucune fissure ne se forme sous le titanosaure.
                 </effect>
             </special>
             <special type="activity" actions="3">

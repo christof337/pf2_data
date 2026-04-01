@@ -33,13 +33,15 @@ Résolution : richTextType dans monster.xsd utilise désormais <spellRef> (avec 
 optionnel) au lieu de <spell>, aligné sur spell.xsd. langSpecial dans monster_mapper.py
 génère maintenant <spellRef>. listType également mis à jour. Fixture du dragon mise à jour.
 
-### 3. monster.xsd — simpleListType mélange trait/language/immunity
+### 3. monster.xsd — simpleListType mélange trait/language/immunity  ✅ RÉSOLU 2026-04-01
 
-Fichier : schema/monster.xsd, ligne 232
-Observation : simpleListType accepte indistinctement <trait>, <language> et <immunity>.
-Cette permissivité empêche la validation fine. Idéalement, chaque type de liste
-devrait avoir son propre type XSD.
-Non modifié : risque de casser la validation du dragon de référence.
+Fichier : schema/monster.xsd
+Résolution : simpleListType supprimé et remplacé par deux types dédiés :
+- traitListType   → séquence de <trait type="traitRefType"> (frappes, capacités)
+- immunityListType → séquence de <immunity type="xs:string"> (<immunities>)
+Fixtures mises à jour : test_dragon_ok.xml et monsters_sample.xml validés
+contre le nouveau schéma (aucun contenu XML à modifier — le split était
+déjà respecté dans les données).
 
 ### 4. ability_mapper.py — clean_text() préserve les sauts de ligne
 
