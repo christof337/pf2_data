@@ -36,10 +36,15 @@ scripts/              → Pipeline Python (extraction, mapping, validation)
   monster_mapper.py   → Markdown → XML monstres
   spells_mapper.py    → Markdown → XML sorts
   trait_mapper.py     → Markdown → XML traits
+  ability_mapper.py   → Markdown → XML capacités universelles
+  batch_monster_mapper.py → Traitement en lot du Bestiaire complet
+  linker.py           → Post-processing : ajout des ref= croisés (traits/sorts/capacités)
+  merge_xml.py        → Fusion de fichiers XML par attribut id
+  utils.py            → Utilitaires partagés (clean_text basique)
   xml_validator.py    → Validation XSD
   slug_generator.py   → Génération d'IDs normalisés
   old/                → Anciens scripts (archivés, ne pas modifier)
-schema/               → Schémas XSD (monster.xsd, spell.xsd, trait.xsd)
+schema/               → Schémas XSD (monster.xsd, spell.xsd, trait.xsd, ability.xsd)
 xslt/                 → Transformations XSLT uniquement
   monster_to_obsidian.xsl
   spell_to_obsidian.xsl
@@ -73,12 +78,15 @@ tests/
 
 ### Terminé
 - Pipeline monstres complet (extraction → XML → Obsidian). Monstre de référence : **Jeune Dragon Empyréen**.
-- Infrastructure transversale : `xml_validator.py`, `slug_generator.py`, XSD pour monstres/sorts/traits.
+- Infrastructure transversale : `xml_validator.py`, `slug_generator.py`, XSD pour monstres/sorts/traits/capacités.
 - Pipeline sorts : `spells_mapper.py` fonctionnel, `all_spells.xml` peuplé, `spell_to_obsidian.xsl` présent.
 - Pipeline traits : `trait_mapper.py` + `traits.xml`.
+- Pipeline capacités : `ability_mapper.py` + `abilities.xml`.
+- Post-processing cross-liens : `linker.py` (traits, sorts, capacités, spellRefs).
+- Fusion XML : `merge_xml.py` (arbitrage par description, rapport de conflits).
+- **Refactoring Phase 2** (2026-04-01) : extraction de `utils.py`, nettoyage code mort, correction bug double-write batch, consolidation index loaders linker.
 
 ### En cours
-- Itération sur `spells_mapper.py` et `all_spells.xml` (fichiers modifiés non commités).
 - Génération des notes Obsidian pour les sorts (`obsidian_vault/Sorts/`).
 
 ### À faire
@@ -119,7 +127,9 @@ Si un test échoue → **s'arrêter, signaler la régression à l'utilisateur, n
 ### Périmètre actuel des tests
 
 - Monstres : `test_dragon.md` / `test_dragon_ok.xml` (Jeune Dragon Empyréen)
-- Sorts et traits : pas encore couverts — à enrichir progressivement par l'utilisateur
+- Sorts : `test_sorts_ldj.md` / `test_sorts_ldj_ok.xml` (334 sorts LdJ)
+- Traits LdM : `test_traits_ldm.md` / `test_traits_ldm_ok.xml` (11 traits format LdM)
+- Traits LdJ : `test_traits_ldj.md` / `test_traits_ldj_ok.xml` (153 traits format LdJ)
 
 ---
 
@@ -145,6 +155,11 @@ Ces problèmes sont **identifiés et documentés**, mais délibérément différ
 
 3. **⚠️ Bug parsing — texte post-bloc SCSEEC perdu** (`spells_mapper.py`) — *plus grave*
    Si une description contient du texte **après** le bloc Succès critique / Succès / Échec / Échec critique, ce texte n'est pas capturé dans un champ dédié : il se retrouve accolé à la dernière entrée du bloc (typiquement `<criticalFailure>`). Correction à apporter dans la logique de délimitation de `parse_spell_block()`, probablement en ajoutant un champ `descriptionPost` ou en revoyant les bornes des regex de sauvegardes.
+
+### Prochain type de données à intégrer
+
+5. **Actions nommées** (Se cacher, Saisir, Se mettre à l'abri, Faire un pas, Aider, Chercher, Intimider, etc.)
+   Ce sont les actions génériques disponibles à toutes les créatures. Elles apparaissent dans le LdJ (chapitre Actions). Nécessitera : un nouveau XSD (`action.xsd`), un `action_mapper.py`, et un `actions.xml` agrégé. Les monstres et sorts y font parfois référence → le linker devra être étendu.
 
 ### Architecture données — Questions ouvertes
 
