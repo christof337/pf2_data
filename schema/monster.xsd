@@ -139,7 +139,6 @@
 
   <xs:complexType name="abilityContainerType">
     <xs:sequence>
-      <!-- <xs:element name="spellList" type="spellListType" minOccurs="0" maxOccurs="unbounded"/> -->
       <xs:element name="special" type="specialAbilityType" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
@@ -158,7 +157,6 @@
     <xs:attribute name="type" type="xs:string"/>
     <xs:attribute name="actions" type="xs:string"/>
     <xs:attribute name="ref" type="xs:string"/>
-    <!-- <xs:assert test="if (@type = 'activity') then exists(@actions) else empty(@actions)"/> -->
   </xs:complexType>
 
   <xs:complexType name="spellListType">
