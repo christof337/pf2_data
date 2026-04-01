@@ -122,7 +122,12 @@ Si un test échoue → **s'arrêter, signaler la régression à l'utilisateur, n
 
 ### Logique du runner
 
-`test_runner.py` fait : input MD → `parse_*()` → `generate_*_xml()` dans un fichier temporaire → comparaison stricte caractère par caractère avec le golden XML. La comparaison est intentionnellement stricte : tout écart, même cosmétique, est une régression jusqu'à preuve du contraire.
+`test_runner.py` fait, pour chaque test :
+1. input MD → `parse_*()` → `generate_*_xml()` dans un fichier temporaire
+2. Comparaison stricte caractère par caractère avec le golden XML
+3. Validation XSD du fichier généré contre le schéma correspondant (`monster.xsd`, `spell.xsd`, `trait.xsd`)
+
+La comparaison est intentionnellement stricte : tout écart, même cosmétique, est une régression. La validation XSD garantit qu'un changement de schéma qui invaliderait un golden master existant est détecté immédiatement.
 
 ### Périmètre actuel des tests
 
