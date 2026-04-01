@@ -29,6 +29,10 @@ def parse_traits_md(content):
     traits_data = []
     print("[PARSING] Début de l'analyse des traits...")
 
+    # 0. Normalisation : tiret non-sécable (U+2011) → tiret ordinaire
+    # Certains PDFs (LdM complet) utilisent ‑ dans les noms de traits (âme‑en‑peine, etc.)
+    content = content.replace('\u2011', '-')
+
     # 1. Isolation de la zone utile (DÉBUT)
     start_match = re.search(r'TRAITS\s+DES\s+CRÉATURES', content)
     if start_match:
@@ -39,7 +43,7 @@ def parse_traits_md(content):
         content = content.split("RITUELS")[0]
 
     # 3. Regex de capture des traits
-    pattern = r'^[ \t]*\*\*([A-ZÀ-Ÿa-zà-ÿ\s\-]+?)\.\*\*\s*(.*?)(?=(?:^[ \t]*\*\*|\Z))'
+    pattern = r'^[ \t]*\*\*([A-ZÀ-Ÿa-zà-ÿ\s\-]+?)\.\s*\*\*\s*(.*?)(?=(?:^[ \t]*\*\*|\Z))'
     
     matches = re.finditer(pattern, content, flags=re.MULTILINE | re.DOTALL)
     
