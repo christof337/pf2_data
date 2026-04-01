@@ -10,6 +10,7 @@ Sortie  : data/monsters/{slug}.xml pour chaque monstre
 Log     : output/ldm_full/batch_report.log
 """
 
+import io
 import re
 import os
 import sys
@@ -123,18 +124,12 @@ def process_monsters_batch(md_content, output_dir, log_path):
         slug = generate_slug('monster', name)
         output_file = os.path.join(output_dir, f"{slug}.xml")
 
-        # Si le fichier existe déjà, on le saute (évite de re-traiter)
-        # Commentez cette ligne pour forcer le re-traitement complet
-        # if os.path.exists(output_file):
-        #     continue
-
         print(f"[BATCH] [{idx}/{len(blocks)}] {name}...", end=' ', flush=True)
 
         try:
             mini_md = build_parseable_md(block)
 
-            # Désactiver les print() verbeux du parser pour le batch
-            import io
+            # Silencer les print() verbeux du parser et du générateur XML
             old_stdout = sys.stdout
             sys.stdout = io.StringIO()
 
@@ -149,9 +144,7 @@ def process_monsters_batch(md_content, output_dir, log_path):
             if not monster_data.get('level'):
                 raise ValueError("Niveau du monstre non extrait")
 
-            generate_monster_xml(monster_data, output_file)
-
-            # Désactiver la sortie verbeux de generate_monster_xml aussi
+            # Silencer la sortie verbeuse de generate_monster_xml
             sys.stdout = io.StringIO()
             try:
                 generate_monster_xml(monster_data, output_file)
