@@ -8,7 +8,7 @@
     <creatureTraits>
       <trait type="size" ref="trait-moyenne">MOYENNE</trait>
       <trait ref="trait-aquatique">AQUATIQUE</trait>
-      <trait>EAU</trait>
+      <trait ref="trait-eau">EAU</trait>
       <trait ref="trait-elementaire">ÉLÉMENTAIRE</trait>
     </creatureTraits>
     <perception>

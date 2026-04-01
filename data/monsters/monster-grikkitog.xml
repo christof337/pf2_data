@@ -8,8 +8,8 @@
     <creatureTraits>
       <trait type="size" ref="trait-tres-grande">TRÈS GRANDE</trait>
       <trait ref="trait-aberration">ABERRATION</trait>
-      <trait>TERRE</trait>
-      <trait>TERRE</trait>
+      <trait ref="trait-terre">TERRE</trait>
+      <trait ref="trait-terre">TERRE</trait>
     </creatureTraits>
     <perception>
       <bonus>+29</bonus>
@@ -63,9 +63,9 @@
       <special>
         <name>Aura d’infestation</name>
         <traits>
-          <trait>aura</trait>
+          <trait ref="trait-aura">aura</trait>
           <trait ref="trait-occulte">occulte</trait>
-          <trait>terre</trait>
+          <trait ref="trait-terre">terre</trait>
         </traits>
         <description>36 m� Tant que son cœur est implanté, un grikkitog infecte toute la terre et toutes les pierres situées dans un rayon de 36 m tant qu’il a un lien physique direct avec ces substances, y compris les objets en pierre en contact avec le sol� Cet effet se propage même si le grikkitog n’a pas de ligne d’effet� Il ne peut cependant affecter la terre et la pierre à la surface et exposées à l’air que si au moins une partie de son cœur est également exposée� Dans son aura, il peut générer des gueules et des yeux partout où il veut� Il peut effectuer des attaques avec ses mâchoires contre n’importe quelle créature, attaques provenant d’une zone de pierre ou de terre comprise dans l’aura et adjacente à cette créature� Déterminez l’abri en fonction du point d’origine de l’attaque et non du cœur du grikkitog�</description>
       </special>
@@ -79,7 +79,7 @@
         <name>mâchoires</name>
         <bonus>+29</bonus>
         <traits>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>

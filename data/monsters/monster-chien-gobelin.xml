@@ -82,7 +82,7 @@
       <special>
         <name>Variole gobeline</name>
         <traits>
-          <trait>maladie</trait>
+          <trait ref="trait-maladie">maladie</trait>
         </traits>
         <description>� Les gobelins et les chiens gobelins sont immunisés contre la variole gobeline ; **Jet de sauvegarde** Vigueur DD 17 ; **Stade 1** malade 1 (1 round) ; **Stade 2** malade 1 et ralenti 1 (1 round) ; **Stade 3** malade 2 et ne peut réduire l’intensité de son état malade en dessous de 1 (1 jour)�</description>
       </special>

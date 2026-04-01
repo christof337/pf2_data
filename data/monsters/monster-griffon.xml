@@ -93,10 +93,10 @@
       <special type="activity" actions="1">
         <name>Cri régalien</name>
         <traits>
-          <trait>audible</trait>
-          <trait>émotion</trait>
-          <trait>mental</trait>
-          <trait>terreur</trait>
+          <trait ref="trait-audible">audible</trait>
+          <trait ref="trait-emotion">émotion</trait>
+          <trait ref="trait-mental">mental</trait>
+          <trait ref="trait-terreur">terreur</trait>
         </traits>
         <description>� Le griffon pousse un cri qui se transforme en un rugissement terrifiant� Chaque créature dans une émana- tion de 18 m doit effectuer un jet de Volonté DD 20� Quel que soit le résultat, les créatures sont immunisées contre le Cri régalien de tous les griffons pendant 10 min�</description>
       </special>

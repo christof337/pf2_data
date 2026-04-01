@@ -58,7 +58,7 @@
         <traits>
           <trait>allonge 0 m</trait>
           <trait ref="trait-finesse">finesse</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -72,7 +72,7 @@
       <special>
         <name>Poison de l’homoncule</name>
         <traits>
-          <trait>poison</trait>
+          <trait ref="trait-poison">poison</trait>
         </traits>
         <description>� Un homoncule possède une dose de poison dans un réservoir situé dans sa tête� Une fois cette dose utilisée, il peut remplir de poison le réservoir par une action Interagir ; **Jet de sauvegarde** Vigueur DD 15 ; **Durée maximale** 6 rounds ; **Stade 1** 1d6 poison et affaibli 1 (1 round)�</description>
       </special>

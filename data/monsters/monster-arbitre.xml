@@ -68,7 +68,7 @@
           <trait>agile</trait>
           <trait>allonge 0 m</trait>
           <trait ref="trait-finesse">finesse</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait>polyvalent T</trait>
         </traits>
         <damages>
@@ -82,7 +82,7 @@
     <spellList source="innate" tradition="divine" DD="17">
       <rank rank="4">
         <spells>
-          <spell>lire les présages</spell>
+          <spell ref="spell-lire-les-presages">lire les présages</spell>
         </spells>
       </rank>
     </spellList>
@@ -91,7 +91,7 @@
         <name>Projection électrique</name>
         <traits>
           <trait ref="trait-divine">divine</trait>
-          <trait>électricité</trait>
+          <trait ref="trait-electricite">électricité</trait>
         </traits>
         <description>� L’arbitre projette un arc électrique qui inflige 3d6 dégâts d’électricité à toutes les créatures dans une émanation de 3 m (jet de Réflexes basique DD 17)� L’arbitre se trouve ensuite dans l’état étourdi pendant 24 h�</description>
       </special>

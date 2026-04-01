@@ -8,7 +8,7 @@
     <creatureTraits>
       <trait type="size" ref="trait-petite">PETITE</trait>
       <trait ref="trait-gnome">GNOME</trait>
-      <trait>HUMANOÏDE</trait>
+      <trait ref="trait-humanoide">HUMANOÏDE</trait>
     </creatureTraits>
     <perception>
       <bonus>+7</bonus>

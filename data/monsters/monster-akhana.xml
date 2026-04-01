@@ -31,9 +31,9 @@
       <special>
         <name>Conceptualisation</name>
         <traits>
-          <trait>aura</trait>
+          <trait ref="trait-aura">aura</trait>
           <trait ref="trait-divine">divine</trait>
-          <trait>mental</trait>
+          <trait ref="trait-mental">mental</trait>
         </traits>
         <description>30 m� Un akhana peut communiquer mentalement avec toutes les créatures qui se trouvent dans son aura en utilisant des projections psy- chiques dénuées de paroles� S’il n’a pas besoin de partager une langue avec ses interlocu- teurs, le sens de ce qu’il communique est souvent mystérieux pour ces derniers� Un éon peut utiliser ce pouvoir pour établir une communication parfaite avec un autre éon situé sur le même plan�</description>
       </special>
@@ -59,8 +59,8 @@
         <name>queue</name>
         <bonus>+24</bonus>
         <traits>
-          <trait>magique</trait>
-          <trait>néant</trait>
+          <trait ref="trait-magique">magique</trait>
+          <trait ref="trait-neant">néant</trait>
         </traits>
         <damages>
           <damage>
@@ -74,7 +74,7 @@
         <bonus>+24</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -96,7 +96,7 @@
       </rank>
       <rank rank="2">
         <spells>
-          <spell spellSpecial="à volonté">conservation du corps</spell>
+          <spell spellSpecial="à volonté" ref="spell-conservation-du-corps">conservation du corps</spell>
         </spells>
       </rank>
     </spellList>
@@ -109,17 +109,17 @@
         <name>Reprendre la vie</name>
         <traits>
           <trait ref="trait-divine">divine</trait>
-          <trait>néant</trait>
+          <trait ref="trait-neant">néant</trait>
         </traits>
         <description>; **Conditions.** L’akhana a saisi ou entravé une créature avec sa queue ;</description>
       </special>
       <special type="activity" actions="2">
         <name>Explosion de vie</name>
         <traits>
-          <trait>concentration</trait>
+          <trait ref="trait-concentration">concentration</trait>
           <trait ref="trait-divine">divine</trait>
-          <trait>plante</trait>
-          <trait>vitalité</trait>
+          <trait ref="trait-plante">plante</trait>
+          <trait ref="trait-vitalite">vitalité</trait>
         </traits>
         <description>� Dans un rayon de 30 m autour de l’akhana, une explosion de 1,5 m se remplit soudain d’une vie adaptée à cet environne- ment� S’il s’agit d’animaux, ceux-ci mordent les créatures qui se trouvent dans la zone, leur infligeant 7d6 dégâts perforants (jet de Réflexes basique DD 32)� L’akhana peut également décider que la zone se remplit de champignons ou de plantes (même volantes), qui en font alors un terrain difficile� Après leur apparition, les formes de vie créées par l’akhana vivent et meurent normalement�</description>
       </special>

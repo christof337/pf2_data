@@ -37,7 +37,7 @@
       <language>draconique</language>
       <language>empyréen</language>
       <langSpecial>
-        <spell>langage universel</spell>
+        <spell ref="spell-langage-universel">langage universel</spell>
       </langSpecial>
     </languages>
     <skills>
@@ -176,12 +176,12 @@
       </rank>
       <rank rank="5">
         <spells>
-          <spell spellSpecial="à volonté">lumière sainte</spell>
+          <spell spellSpecial="à volonté" ref="spell-lumiere-sainte">lumière sainte</spell>
         </spells>
       </rank>
       <rank rank="5" constant="TRUE">
         <spells>
-          <spell>langage universel</spell>
+          <spell ref="spell-langage-universel">langage universel</spell>
         </spells>
       </rank>
     </spellList>
@@ -201,7 +201,7 @@
       <special type="activity" actions="2">
         <name>Pulsation du halo</name>
         <traits>
-          <trait>concentration</trait>
+          <trait ref="trait-concentration">concentration</trait>
           <trait ref="trait-divine">divine</trait>
         </traits>
         <description>Comme le jeune dragon empyréen, mais répul- sion DD 34 et restauration soigne 7d8 PV�</description>

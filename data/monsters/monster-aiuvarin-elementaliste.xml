@@ -10,7 +10,7 @@
       <trait ref="trait-aiuvarin">AIUVARIN</trait>
       <trait ref="trait-elfe">ELFE</trait>
       <trait ref="trait-humain">HUMAIN</trait>
-      <trait>HUMANOÏDE</trait>
+      <trait ref="trait-humanoide">HUMANOÏDE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -103,9 +103,9 @@
       <special type="activity" actions="2">
         <name>Champ élémentaire</name>
         <traits>
-          <trait>arcanique</trait>
-          <trait>concentration</trait>
-          <trait>électricité</trait>
+          <trait ref="trait-arcanique">arcanique</trait>
+          <trait ref="trait-concentration">concentration</trait>
+          <trait ref="trait-electricite">électricité</trait>
         </traits>
         <description>� L’élémentaliste envoie une puissante charge électrostatique dans une émanation de 6 m qui dure pendant 1 min� Toutes les cases de la zone deviennent un terrain dangereux pour les autres créatures� Une créature subit 1 dégât d’élec- tricité chaque fois qu’elle se déplace sur l’une de ces cases� Tant qu’elle demeure dans la zone, une créature subit un malus de statut de −1 aux jets de sauvegarde contre les sorts d’électricité�</description>
       </special>

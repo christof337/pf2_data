@@ -7,8 +7,8 @@
     <level>6</level>
     <creatureTraits>
       <trait type="size" ref="trait-grande">GRANDE</trait>
-      <trait>BÊTE</trait>
-      <trait>HUMANOÏDE</trait>
+      <trait ref="trait-bete">BÊTE</trait>
+      <trait ref="trait-humanoide">HUMANOÏDE</trait>
     </creatureTraits>
     <perception>
       <bonus>+13</bonus>
@@ -73,7 +73,7 @@
         <name>*lance*</name>
         <bonus>+17</bonus>
         <traits>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -100,7 +100,7 @@
         <bonus>+14</bonus>
         <traits>
           <trait>jet 3 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>

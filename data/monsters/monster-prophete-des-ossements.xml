@@ -74,7 +74,7 @@
         <bonus>+18</bonus>
         <traits>
           <trait>deux mains d8</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -133,7 +133,7 @@
       <special>
         <name>Venin des hommes‑serpents</name>
         <traits>
-          <trait>poison</trait>
+          <trait ref="trait-poison">poison</trait>
         </traits>
         <description>� Comme les hommes-serpents zyss, mais DD 26�</description>
       </special>

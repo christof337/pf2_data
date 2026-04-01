@@ -42,7 +42,7 @@
         <name>poing</name>
         <bonus>+11</bonus>
         <traits>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>

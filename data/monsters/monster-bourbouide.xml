@@ -59,7 +59,7 @@
       <special>
         <name>Fièvre bourbouide</name>
         <traits>
-          <trait>maladie</trait>
+          <trait ref="trait-maladie">maladie</trait>
         </traits>
         <description>; **Jet de sauvegarde** Vigueur DD 20 ;</description>
       </special>

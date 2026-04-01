@@ -8,7 +8,7 @@
     <creatureTraits>
       <trait type="size" ref="trait-moyenne">MOYENNE</trait>
       <trait ref="trait-guenaude">GUENAUDE</trait>
-      <trait>HUMANOÏDE</trait>
+      <trait ref="trait-humanoide">HUMANOÏDE</trait>
     </creatureTraits>
     <perception>
       <bonus>+18</bonus>
@@ -37,7 +37,7 @@
         <bonus>+20</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -74,7 +74,7 @@
       </rank>
       <rank rank="2">
         <spells>
-          <spell spellSpecial="à volonté">invisibilité</spell>
+          <spell spellSpecial="à volonté" ref="spell-invisibilite">invisibilité</spell>
         </spells>
       </rank>
     </spellList>
@@ -86,7 +86,7 @@
       <special type="activity" actions="1">
         <name>Changement de forme</name>
         <traits>
-          <trait>concentration</trait>
+          <trait ref="trait-concentration">concentration</trait>
           <trait>métamorphose</trait>
           <trait ref="trait-occulte">occulte</trait>
         </traits>

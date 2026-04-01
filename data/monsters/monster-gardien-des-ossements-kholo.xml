@@ -7,7 +7,7 @@
     <level>3</level>
     <creatureTraits>
       <trait type="size" ref="trait-moyenne">MOYENNE</trait>
-      <trait>HUMANOÏDE</trait>
+      <trait ref="trait-humanoide">HUMANOÏDE</trait>
       <trait ref="trait-kholo">KHOLO</trait>
     </creatureTraits>
     <perception>

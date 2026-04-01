@@ -7,8 +7,8 @@
     <level>4</level>
     <creatureTraits>
       <trait type="size" ref="trait-moyenne">MOYENNE</trait>
-      <trait>BÊTE</trait>
-      <trait>TERRE</trait>
+      <trait ref="trait-bete">BÊTE</trait>
+      <trait ref="trait-terre">TERRE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -63,7 +63,7 @@
       <special type="activity" actions="1">
         <name>Statue</name>
         <traits>
-          <trait>concentration</trait>
+          <trait ref="trait-concentration">concentration</trait>
         </traits>
         <description>� Jusqu’à la prochaine fois qu’elle agit, la gargouille semble être une statue� C’est un résultat automatique de 32 pour les tests de Duperie et les DD pour se faire passer pour une statue�</description>
       </special>

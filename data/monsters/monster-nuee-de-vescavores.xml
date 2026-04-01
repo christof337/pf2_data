@@ -7,7 +7,7 @@
     <level>5</level>
     <creatureTraits>
       <trait type="size" ref="trait-grande">GRANDE</trait>
-      <trait>FIÉLON</trait>
+      <trait ref="trait-fielon">FIÉLON</trait>
       <trait ref="trait-impie">IMPIE</trait>
       <trait ref="trait-nuee">NUÉE</trait>
     </creatureTraits>
@@ -59,8 +59,8 @@
       <special type="activity" actions="1">
         <name>Baragouin démentiel</name>
         <traits>
-          <trait>audible</trait>
-          <trait>mental</trait>
+          <trait ref="trait-audible">audible</trait>
+          <trait ref="trait-mental">mental</trait>
         </traits>
         <description>� Chaque créature stupéfiée dans l’espace de la nuée doit effectuer un jet de Volonté DD 21 tandis que la nuée fredonne les interminables chansons des Failles extérieures�</description>
       </special>

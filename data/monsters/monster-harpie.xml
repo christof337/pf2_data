@@ -7,9 +7,9 @@
     <level>5</level>
     <creatureTraits>
       <trait type="size" ref="trait-moyenne">MOYENNE</trait>
-      <trait>AIR</trait>
-      <trait>BÊTE</trait>
-      <trait>HUMANOÏDE</trait>
+      <trait ref="trait-air">AIR</trait>
+      <trait ref="trait-bete">BÊTE</trait>
+      <trait ref="trait-humanoide">HUMANOÏDE</trait>
     </creatureTraits>
     <perception>
       <bonus>+12</bonus>
@@ -36,7 +36,7 @@
       <special>
         <name>Murmures du vent</name>
         <traits>
-          <trait>air</trait>
+          <trait ref="trait-air">air</trait>
           <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>� Quand une harpie parle, elle peut désigner une créature dans un rayon de 27 m� Cette créature peut entendre les paroles de la harpie par-dessus n’importe quel autre son, mais aucune autre créature ne les entend�</description>
@@ -49,8 +49,8 @@
       <special ref="ability-puanteur">
         <name>Puanteur</name>
         <traits>
-          <trait>aura</trait>
-          <trait>olfactif</trait>
+          <trait ref="trait-aura">aura</trait>
+          <trait ref="trait-olfactif">olfactif</trait>
         </traits>
         <description>9 m, DD 21 (p� 360)</description>
       </special>
@@ -92,7 +92,7 @@
       <special>
         <name>Peste putride</name>
         <traits>
-          <trait>maladie</trait>
+          <trait ref="trait-maladie">maladie</trait>
         </traits>
         <description>� Les états malade et inconscient de cette maladie ne peuvent se terminer ni être atté- nués tant que la maladie n’est pas guérie ; **Jet de sauve‑ garde** Vigueur DD 19 ; **Stade 1 **porteur sain (1d4 heures) ;</description>
       </special>
@@ -103,8 +103,8 @@
       <special type="activity" actions="2">
         <name>Vents affamés</name>
         <traits>
-          <trait>air</trait>
-          <trait>concentration</trait>
+          <trait ref="trait-air">air</trait>
+          <trait ref="trait-concentration">concentration</trait>
           <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>� La har- pie utilise le vent pour rapprocher sa proie� Une cible dans un rayon de 6 m doit réussir un jet de Vigueur DD 21 ou être attirée vers une case adjacente à la harpie qui effectue une Frappe de mâchoires contre elle� Si la cible est soulevée du sol et ne peut pas voler, elle tombe ensuite normalement�</description>

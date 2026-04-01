@@ -56,7 +56,7 @@
         <traits>
           <trait>agile</trait>
           <trait ref="trait-finesse">finesse</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -70,7 +70,7 @@
         <bonus>+23</bonus>
         <traits>
           <trait ref="trait-finesse">finesse</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -93,7 +93,7 @@
       </rank>
       <rank rank="3">
         <spells>
-          <spell spellSpecial="à volonté">lecture des pensées</spell>
+          <spell spellSpecial="à volonté" ref="spell-lecture-des-pensees">lecture des pensées</spell>
         </spells>
       </rank>
     </spellList>
@@ -101,7 +101,7 @@
       <special type="activity" actions="1">
         <name>Broyage mental</name>
         <traits>
-          <trait>mental</trait>
+          <trait ref="trait-mental">mental</trait>
           <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>**Conditions.** Le nilith a empoigné une créature�</description>

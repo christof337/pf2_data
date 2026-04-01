@@ -77,10 +77,10 @@
       <special type="activity" actions="2">
         <name>Posture effrayante</name>
         <traits>
-          <trait>audible</trait>
-          <trait>émotion</trait>
-          <trait>mental</trait>
-          <trait>terreur</trait>
+          <trait ref="trait-audible">audible</trait>
+          <trait ref="trait-emotion">émotion</trait>
+          <trait ref="trait-mental">mental</trait>
+          <trait ref="trait-terreur">terreur</trait>
         </traits>
         <description>� Le megaprimatus adopte une posture intimidante et se frappe le torse� Les créatures dans un rayon de 15 m doivent effectuer un jet de Volonté DD 27� Tant qu’une créature est effrayée par ce pouvoir, elle est prise par surprise face au megaprimatus et aux gorilles�</description>
       </special>

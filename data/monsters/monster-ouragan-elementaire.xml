@@ -7,7 +7,7 @@
     <level>11</level>
     <creatureTraits>
       <trait type="size" ref="trait-tres-grande">TRÈS GRANDE</trait>
-      <trait>AIR</trait>
+      <trait ref="trait-air">AIR</trait>
       <trait ref="trait-elementaire">ÉLÉMENTAIRE</trait>
     </creatureTraits>
     <perception>
@@ -80,7 +80,7 @@
       <special type="activity" actions="2">
         <name>Souffle de tempête</name>
         <traits>
-          <trait>air</trait>
+          <trait ref="trait-air">air</trait>
         </traits>
         <description>L’élémentaire souffle un cône d’air de 9 m� Les créatures dans le cône doivent réussir un jet de Vigueur DD 29 ou être repoussées par rapport à l’élémentaire� Une créature poussée contre un objet solide est arrêtée dans son mouvement et subit 10d6 dégâts contondants (lancez une seule fois les dégâts pour toutes les créatures)� L’ouragan élémentaire ne peut plus utiliser Souffle de tempête pendant 1d4 rounds�</description>
       </special>

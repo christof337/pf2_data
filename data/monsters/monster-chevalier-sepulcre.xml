@@ -58,8 +58,8 @@
         <name>*épée à deux mains de froid*</name>
         <bonus>+24</bonus>
         <traits>
-          <trait>froid</trait>
-          <trait>magique</trait>
+          <trait ref="trait-froid">froid</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait>polyvalent P</trait>
         </traits>
         <damages>
@@ -78,7 +78,7 @@
         <bonus>+23</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>froid</trait>
+          <trait ref="trait-froid">froid</trait>
         </traits>
         <damages>
           <damage>
@@ -96,8 +96,8 @@
         <bonus>+21</bonus>
         <traits>
           <trait>facteur de portée 30 m</trait>
-          <trait>froid</trait>
-          <trait>magique</trait>
+          <trait ref="trait-froid">froid</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait>mortel
  d10</trait>
           <trait>propulsif</trait>
@@ -120,8 +120,8 @@
       <special type="activity" actions="2">
         <name>Déflagration dévastatrice</name>
         <traits>
-          <trait>arcanique</trait>
-          <trait>froid</trait>
+          <trait ref="trait-arcanique">arcanique</trait>
+          <trait ref="trait-froid">froid</trait>
         </traits>
         <description>11d6 froid, DD 29</description>
       </special>
@@ -133,7 +133,7 @@ Malédiction du chevalier sépulcre</name>
       <special type="activity" actions="3">
         <name>Monture fantôme</name>
         <traits>
-          <trait>arcanique</trait>
+          <trait ref="trait-arcanique">arcanique</trait>
         </traits>
         <description>**PV **58 ; **CA **27, **Réf **+15, **Vig **+17, **Vol**+14</description>
       </special>

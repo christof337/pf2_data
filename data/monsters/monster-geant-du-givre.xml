@@ -7,9 +7,9 @@
     <level>9</level>
     <creatureTraits>
       <trait type="size" ref="trait-grande">GRANDE</trait>
-      <trait>FROID</trait>
+      <trait ref="trait-froid">FROID</trait>
       <trait ref="trait-geant">GÉANT</trait>
-      <trait>HUMANOÏDE</trait>
+      <trait ref="trait-humanoide">HUMANOÏDE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -35,7 +35,7 @@
         <traits>
           <trait>allonge 3 m</trait>
           <trait>balayage</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -62,7 +62,7 @@
         <name>stalactite</name>
         <bonus>+19</bonus>
         <traits>
-          <trait>froid</trait>
+          <trait ref="trait-froid">froid</trait>
           <trait>portée 36 m</trait>
           <trait ref="trait-primordiale">primordiale</trait>
         </traits>
@@ -90,7 +90,7 @@
       <special type="activity" actions="1">
         <name>Souffle glacial</name>
         <traits>
-          <trait>froid</trait>
+          <trait ref="trait-froid">froid</trait>
           <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>� Le géant du givre souffle un cône de 4,5 m d’humidité extrêmement froide qui se transforme rapidement en glace et inflige 4d6 dégâts de froid� Chaque créature dans le cône doit faire un jet de Réflexes basique DD 28� Une créature qui rate son jet de sauvegarde est également immobilisée et subit 2d6 dégâts de froid à la fin de chacun de ses tours jusqu’à ce qu’elle se libère (S’échapper DD 28)� Le géant doit attendre 1d4 rounds avant de pouvoir réutiliser son Souffle glacial�</description>

@@ -8,7 +8,7 @@
     <creatureTraits>
       <trait type="size" ref="trait-grande">GRANDE</trait>
       <trait ref="trait-dragon">DRAGON</trait>
-      <trait>TERRE</trait>
+      <trait ref="trait-terre">TERRE</trait>
     </creatureTraits>
     <perception>
       <bonus>+15</bonus>
@@ -88,14 +88,14 @@
         <name>Souffle des sables</name>
         <traits>
           <trait ref="trait-primordiale">primordiale</trait>
-          <trait>terre</trait>
+          <trait ref="trait-terre">terre</trait>
         </traits>
         <description>Le drake du désert projette une boule de sable abrasif qui traverse une distance de 18 m avant de former un nuage en une explosion de 4,5 m de rayon� Les créatures dans la zone d’effet subissent 9d6 dégâts tranchants (jet de Réflexes basique DD 27)� Le drake du désert ne peut plus utiliser Souffle des sables pendant 1d6 rounds� Durant ce laps de temps, la tempête de sable reste dans la zone� Ceci confère l’état masqué à tout ce qui se trouve à l’intérieur de la zone, mais ce qui se trouve à l’extérieur de la tempête bénéficie de l’état masqué pour les créatures situées à l’intérieur�</description>
       </special>
       <special type="activity" actions="1">
         <name>Vitesse augmentée</name>
         <traits>
-          <trait>déplacement</trait>
+          <trait ref="trait-deplacement">déplacement</trait>
         </traits>
         <description>**Fréquence** trois fois par jour�</description>
       </special>

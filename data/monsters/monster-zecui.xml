@@ -39,10 +39,10 @@
       <special type="reaction">
         <name>Préservation de proie</name>
         <traits>
-          <trait>guérison</trait>
+          <trait ref="trait-guerison">guérison</trait>
           <trait>manipulation</trait>
           <trait ref="trait-occulte">occulte</trait>
-          <trait>vitalité</trait>
+          <trait ref="trait-vitalite">vitalité</trait>
         </traits>
         <trigger>Une créa- ture vivante dans un rayon de 9 m est réduite à 0 point de vie ; **</trigger>
         <effect>**Le zécui imprègne la créature ayant déclenché l’effet d’une forme de vitalité corrompue qui la plonge dans l’état inconscient au lieu de mourant� Tant que cette créature est inconsciente, l’énergie résiduelle transmise par le zécui tente de contrer tout sort de vitalité lancé pour tenter de soigner la créature, avec un modificateur de contre de +15�</effect>
@@ -104,7 +104,7 @@
       <special>
         <name>Larve de zécui</name>
         <traits>
-          <trait>maladie</trait>
+          <trait ref="trait-maladie">maladie</trait>
         </traits>
         <description>; **Jet de sauvegarde** Vigueur DD 25 ;</description>
       </special>

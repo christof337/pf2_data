@@ -9,7 +9,7 @@
       <trait type="size" ref="trait-moyenne">MOYENNE</trait>
       <trait ref="trait-amphibie">AMPHIBIE</trait>
       <trait ref="trait-dragon">DRAGON</trait>
-      <trait>EAU</trait>
+      <trait ref="trait-eau">EAU</trait>
     </creatureTraits>
     <perception>
       <bonus>+9</bonus>
@@ -80,7 +80,7 @@
       <special type="activity" actions="2">
         <name>Mucus corrosif</name>
         <traits>
-          <trait>acide</trait>
+          <trait ref="trait-acide">acide</trait>
           <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>Le drake des rivières crache une boule de mucus corrosif qui traverse une distance maximale de 15 m avant de former une explosion de 3 m à l’impact� Les créatures dans la zone d’explosion subissent 4d6 dégâts d’acide (jet de Réflexes basique DD 19)� Celles qui échouent subissent également 1d6 dégâts d’acide persistants et un malus de statut de −1,5 m à leur Vitesse� Cette réduction de la Vitesse se termine avec la fin des dégâts d’acide persistants� Le drake des rivières ne peut utiliser de nouveau ce pouvoir avant 1d6 rounds�</description>
@@ -88,7 +88,7 @@
       <special type="activity" actions="1">
         <name>Vitesse augmentée</name>
         <traits>
-          <trait>déplacement</trait>
+          <trait ref="trait-deplacement">déplacement</trait>
         </traits>
         <description>**Fréquence** trois fois par jour�</description>
       </special>

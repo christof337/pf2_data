@@ -51,7 +51,7 @@
         <name>mandibules</name>
         <bonus>+13</bonus>
         <traits>
-          <trait>acide</trait>
+          <trait ref="trait-acide">acide</trait>
         </traits>
         <damages>
           <damage>
@@ -68,7 +68,7 @@
         <name>projection d’acide</name>
         <bonus>+10</bonus>
         <traits>
-          <trait>acide</trait>
+          <trait ref="trait-acide">acide</trait>
           <trait>portée 9 m</trait>
         </traits>
         <damages>
@@ -82,7 +82,7 @@
         <name>mandibules</name>
         <bonus>+20</bonus>
         <traits>
-          <trait>acide</trait>
+          <trait ref="trait-acide">acide</trait>
         </traits>
         <damages>
           <damage>
@@ -99,7 +99,7 @@
         <name>projection d’acide</name>
         <bonus>+17</bonus>
         <traits>
-          <trait>acide</trait>
+          <trait ref="trait-acide">acide</trait>
           <trait>portée 9 m</trait>
         </traits>
         <damages>
@@ -114,7 +114,7 @@
       <special type="activity" actions="2">
         <name>Aspersion d’acide</name>
         <traits>
-          <trait>acide</trait>
+          <trait ref="trait-acide">acide</trait>
         </traits>
         <description>� La mère de la ruche crache de l’acide dans un cône de 18 m, infligeant 8d6 dégâts d’acide et 1d6 dégâts d’acide persistants (jet de réflexes basique DD 26)� Elle ne peut plus cracher d’acide pendant 1d4 rounds�</description>
       </special>

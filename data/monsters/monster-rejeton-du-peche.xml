@@ -83,8 +83,8 @@
         <name>Morsure du péché</name>
         <traits>
           <trait>arcane</trait>
-          <trait>émotion</trait>
-          <trait>mental</trait>
+          <trait ref="trait-emotion">émotion</trait>
+          <trait ref="trait-mental">mental</trait>
         </traits>
         <description>� Une créature mordue par un rejeton du péché doit faire un jet de Volonté DD 18 pour lutter contre les pensées pécheresses qui l’assaillent�</description>
       </special>

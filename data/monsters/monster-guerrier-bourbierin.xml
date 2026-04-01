@@ -9,7 +9,7 @@
       <trait type="size" ref="trait-moyenne">MOYENNE</trait>
       <trait ref="trait-amphibie">AMPHIBIE</trait>
       <trait ref="trait-bourbierin">BOURBIÉRIN</trait>
-      <trait>HUMANOÏDE</trait>
+      <trait ref="trait-humanoide">HUMANOÏDE</trait>
     </creatureTraits>
     <perception>
       <bonus/>

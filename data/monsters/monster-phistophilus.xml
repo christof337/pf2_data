@@ -8,7 +8,7 @@
     <creatureTraits>
       <trait type="size" ref="trait-moyenne">MOYENNE</trait>
       <trait ref="trait-diable">DIABLE</trait>
-      <trait>FIÉLON</trait>
+      <trait ref="trait-fielon">FIÉLON</trait>
       <trait ref="trait-impie">IMPIE</trait>
     </creatureTraits>
     <perception>
@@ -77,7 +77,7 @@
           <trait>croc-en-jambe</trait>
           <trait>désarmement</trait>
           <trait ref="trait-impie">impie</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -90,7 +90,7 @@
         <name>corne</name>
         <bonus>+21</bonus>
         <traits>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>

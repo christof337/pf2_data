@@ -7,7 +7,7 @@
     <level>5</level>
     <creatureTraits>
       <trait type="size" ref="trait-moyenne">MOYENNE</trait>
-      <trait>AIR</trait>
+      <trait ref="trait-air">AIR</trait>
       <trait ref="trait-elementaire">ÉLÉMENTAIRE</trait>
     </creatureTraits>
     <perception>
@@ -62,7 +62,7 @@
       <special type="activity" actions="2">
         <name>Vents violents</name>
         <traits>
-          <trait>air</trait>
+          <trait ref="trait-air">air</trait>
         </traits>
         <description>Le tourbillon vivant crée une ligne de 18 m parcourue par des vents violents� Les créatures dans la zone doivent réussir un jet de Vigueur DD 25 ou être repous- sées sur 3 m et projetées à terre�</description>
       </special>

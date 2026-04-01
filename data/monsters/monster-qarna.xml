@@ -7,7 +7,7 @@
     <level>4</level>
     <creatureTraits>
       <trait type="size" ref="trait-moyenne">MOYENNE</trait>
-      <trait>ARCHON</trait>
+      <trait ref="trait-archon">ARCHON</trait>
       <trait ref="trait-celeste">CÉLESTE</trait>
       <trait ref="trait-saint">SAINT</trait>
     </creatureTraits>
@@ -60,7 +60,7 @@
         <bonus>+13</bonus>
         <traits>
           <trait ref="trait-saint">saint</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -75,7 +75,7 @@
         <traits>
           <trait ref="trait-saint">saint</trait>
           <trait>mortel d10</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait>propulsif</trait>
           <trait>facteur de portée
                                  30 m</trait>
@@ -102,7 +102,7 @@
       </rank>
       <rank rank="5" constant="TRUE">
         <spells>
-          <spell>langage universel</spell>
+          <spell ref="spell-langage-universel">langage universel</spell>
         </spells>
       </rank>
     </spellList>
@@ -111,7 +111,7 @@
         <name>Flèche de distraction</name>
         <traits>
           <trait ref="trait-divine">divine</trait>
-          <trait>mental</trait>
+          <trait ref="trait-mental">mental</trait>
         </traits>
         <description>� Le qarna fait une Frappe d’arc composite� Si la Frappe touche, la flèche se plante dans la cible, qui tourne tous ses sens vers l’archon, le reste devenant flou� Cette créature subit un malus de statut de –2 à ses jets d’attaque et de Perception contre les créatures qui ne sont pas le qarna� Elle peut Interagir pour retirer la flèche, ce qui met un terme à l’effet�</description>
       </special>
@@ -119,9 +119,9 @@
         <name>Toucher de charité</name>
         <traits>
           <trait ref="trait-divine">divine</trait>
-          <trait>guérison</trait>
+          <trait ref="trait-guerison">guérison</trait>
           <trait>manipulation</trait>
-          <trait>vitalité</trait>
+          <trait ref="trait-vitalite">vitalité</trait>
         </traits>
         <description>� Le qarna touche une créature vivante et consentante afin d’endosser ses souffrances� Il transfert alors jusqu’à 30 de ses PV à la créature qu’il touche (le qarna ne peut pas transférer plus de PV qu’il n’en possède)�</description>
       </special>

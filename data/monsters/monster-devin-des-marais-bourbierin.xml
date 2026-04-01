@@ -9,7 +9,7 @@
       <trait type="size" ref="trait-moyenne">MOYENNE</trait>
       <trait ref="trait-amphibie">AMPHIBIE</trait>
       <trait ref="trait-bourbierin">BOURBIÉRIN</trait>
-      <trait>HUMANOÏDE</trait>
+      <trait ref="trait-humanoide">HUMANOÏDE</trait>
     </creatureTraits>
     <perception>
       <bonus>+11</bonus>
@@ -94,8 +94,8 @@
       <special type="reaction">
         <name>Bourdonnement parasite</name>
         <traits>
-          <trait>audible</trait>
-          <trait>mental</trait>
+          <trait ref="trait-audible">audible</trait>
+          <trait ref="trait-mental">mental</trait>
         </traits>
         <trigger>Le devin des marais ou un de ses alliés dans un rayon de 18 m fait un jet de sauvegarde contre un effet audible ou de son ;</trigger>
         <effect>Le devin des marais pousse un coassement qui couvre les autres sons� Il fait pour cela un test de Représentation� Le devin des marais et les autres bourbiérins dans la zone choisissent quel résultat utiliser entre celui du jet de sauvegarde et celui du test de Représentation afin de résoudre l’effet audible ou sonique�</effect>
@@ -103,17 +103,17 @@
       <special type="activity" actions="2">
         <name>Coassement destructeur</name>
         <traits>
-          <trait>son</trait>
+          <trait ref="trait-son">son</trait>
         </traits>
         <description>� Le devin des marais émet un puissant coassement qui inflige 4d6 dégâts de son à tout non bourbiérin situé dans une émanation de 4,5 m (jet de Vigueur basique DD 19) ; toute créature se trouvant dans l’état effrayé subit une quantité de dégâts de son supplémentaires égale à deux fois l’intensité de son état effrayé� Le bourbiérin ne peut plus utiliser Coassement destructeur avant 1d4 rounds�</description>
       </special>
       <special type="activity" actions="1">
         <name>Coassement terrifiant</name>
         <traits>
-          <trait>audible</trait>
-          <trait>émotion</trait>
-          <trait>mental</trait>
-          <trait>terreur</trait>
+          <trait ref="trait-audible">audible</trait>
+          <trait ref="trait-emotion">émotion</trait>
+          <trait ref="trait-mental">mental</trait>
+          <trait ref="trait-terreur">terreur</trait>
         </traits>
         <description>� Comme l’éclaireur bourbiérin mais DD 19�</description>
       </special>

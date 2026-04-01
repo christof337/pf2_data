@@ -70,7 +70,7 @@
         <bonus>+25</bonus>
         <traits>
           <trait ref="trait-brutal">brutal</trait>
-          <trait>eau</trait>
+          <trait ref="trait-eau">eau</trait>
           <trait>facteur de portée 30 m</trait>
         </traits>
         <damages>
@@ -85,8 +85,8 @@
       <special>
         <name>Algues de serpent de mer</name>
         <traits>
-          <trait>mise hors de combat</trait>
-          <trait>poison</trait>
+          <trait ref="trait-mise-hors-de-combat">mise hors de combat</trait>
+          <trait ref="trait-poison">poison</trait>
         </traits>
         <description>� L’eau contenue dans les organes qui permettent d’assurer la stabilité du serpent et qui sont situés au niveau de son cou est satu- rée d’algues psychotropes� **Jet de sauvegarde** DD 34 Vigueur ; **Durée maximale** 6 rounds ;</description>
       </special>
@@ -97,7 +97,7 @@
       <special type="activity" actions="1">
         <name>Chavirer</name>
         <traits>
-          <trait>attaque</trait>
+          <trait ref="trait-attaque">attaque</trait>
         </traits>
         <description>� Le serpent de mer tente de faire chavirer une embarcation d’une taille inférieure ou égale à la sienne et qui se trouve dans un espace adjacent� Pour cela, il doit réussir un test d’Athlé- tisme DD 35 (réduit de 5 par catégorie de taille du navire inférieure à la sienne) ou égal au DD de Connaissances en navigation maritime du pilote (le plus élevé des deux)�</description>
       </special>
@@ -108,14 +108,14 @@
       <special type="activity" actions="2">
         <name>Extension des pointes dorsales</name>
         <traits>
-          <trait>attaque</trait>
+          <trait ref="trait-attaque">attaque</trait>
         </traits>
         <description>� Le serpent de mer déploie les épines qui lui couvrent le dos et Nage ou Marche rapidement� Toutes les créatures qui se trouvent dans un espace adjacent au serpent à n’importe quel moment de son déplacement subissent 4d6+8 dégâts tranchants (jet de Réflexes basique DD 32)�</description>
       </special>
       <special type="activity" actions="1" ref="ability-gober">
         <name>Gober</name>
         <traits>
-          <trait>attaque</trait>
+          <trait ref="trait-attaque">attaque</trait>
         </traits>
         <description>Très Grande, 2d10+6 dégâts contondants, Rupture 20 (p� 359)</description>
       </special>

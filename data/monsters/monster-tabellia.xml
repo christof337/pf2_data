@@ -64,7 +64,7 @@
       <special>
         <name>Aura du voyageur</name>
         <traits>
-          <trait>aura</trait>
+          <trait ref="trait-aura">aura</trait>
           <trait ref="trait-divine">divine</trait>
         </traits>
         <description>6 m� Les créatures qui se trouvent dans l’aura d’un tabellia sont protégées contre les dégâts environnementaux des plans, dont la cha- leur ou le froid importants ou extrêmes ainsi que des dangers plus exotiques� Un tabellia ne peut pas être pris par surprise par les créatures qui se trouvent dans son aura�</description>
@@ -80,7 +80,7 @@
         <name>*marteau de guerre saint*</name>
         <bonus>+30</bonus>
         <traits>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait>pousser</trait>
           <trait ref="trait-saint">saint</trait>
         </traits>
@@ -104,7 +104,7 @@
       </rank>
       <rank rank="3">
         <spells>
-          <spell spellSpecial="à volonté">tintement de vérité</spell>
+          <spell spellSpecial="à volonté" ref="spell-tintement-de-verite">tintement de vérité</spell>
         </spells>
       </rank>
       <rank rank="2">

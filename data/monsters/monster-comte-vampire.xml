@@ -53,7 +53,7 @@
         <name>Enfants de la nuit</name>
         <traits>
           <trait>divin</trait>
-          <trait>mental</trait>
+          <trait ref="trait-mental">mental</trait>
         </traits>
         <description/>
       </special>

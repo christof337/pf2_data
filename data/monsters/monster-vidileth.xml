@@ -57,9 +57,9 @@
       <special>
         <name>Lumières engourdissantes</name>
         <traits>
-          <trait>aura</trait>
-          <trait>lumière</trait>
-          <trait>visuel</trait>
+          <trait ref="trait-aura">aura</trait>
+          <trait ref="trait-lumiere">lumière</trait>
+          <trait ref="trait-visuel">visuel</trait>
         </traits>
         <description>9 m� Un vidileth éclaire l’espace qui l’entoure d’une lumière faible� Les créatures baignées par cette lumière effectuent un jet de Volonté DD 34 chaque round et, sur un échec, sombrent dans l’état stupéfié 1 (ou augmentent de 1 la valeur de l’état stupéfié causé par les Lumières engourdissantes, jusqu’à un maximum de 4)�</description>
       </special>
@@ -82,7 +82,7 @@
         <bonus>+28</bonus>
         <traits>
           <trait>allonge 3 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait>polyvalent T</trait>
         </traits>
         <damages>
@@ -98,7 +98,7 @@
         <traits>
           <trait>agile</trait>
           <trait>allonge 6 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -113,8 +113,8 @@
         <traits>
           <trait>agile</trait>
           <trait>allonge 6 m</trait>
-          <trait>électricité</trait>
-          <trait>magique</trait>
+          <trait ref="trait-electricite">électricité</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -127,7 +127,7 @@
     <spellList source="innate" tradition="occult" DD="37">
       <rank rank="9">
         <spells>
-          <spell spellSpecial="à volonté">projection d’image</spell>
+          <spell spellSpecial="à volonté" ref="spell-projection-dimage">projection d’image</spell>
         </spells>
       </rank>
       <rank rank="8">
@@ -137,7 +137,7 @@
       </rank>
       <rank rank="7">
         <spells>
-          <spell spellSpecial="à volonté">déguisement illusoire</spell>
+          <spell spellSpecial="à volonté" ref="spell-deguisement-illusoire">déguisement illusoire</spell>
         </spells>
       </rank>
       <rank rank="6">
@@ -157,7 +157,7 @@
       </rank>
       <rank rank="5" constant="TRUE">
         <spells>
-          <spell>langage universel</spell>
+          <spell ref="spell-langage-universel">langage universel</spell>
         </spells>
       </rank>
     </spellList>
@@ -169,7 +169,7 @@
       <special>
         <name>Absorption de la mémoire</name>
         <traits>
-          <trait>mental</trait>
+          <trait ref="trait-mental">mental</trait>
           <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>� Quand un vidileth porte une Frappe de crocs, sa cible doit réussir un jet de Volonté DD 34 ou subir 3d6 dégâts mentaux� Le vidileth gagne une quantité de points de vie temporaires égale aux dégâts infligés, et il découvre certains souvenirs de la créature (au choix du MJ)�</description>
@@ -185,7 +185,7 @@
       <special>
         <name>Lance mentale</name>
         <traits>
-          <trait>malédiction</trait>
+          <trait ref="trait-malediction">malédiction</trait>
           <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>� Une créature touchée par les tentacules du vidileth doit réussir un jet de Volonté DD 34, ou être ralentie 1 en cas d’échec, ou ralentie 2 en cas d’échec critique� À la fin de chacun de ses tours, la victime réduit de 1 l’intensité de cet état�</description>
@@ -193,7 +193,7 @@
       <special>
         <name>Modeler la chair</name>
         <traits>
-          <trait>malédiction</trait>
+          <trait ref="trait-malediction">malédiction</trait>
           <trait>manipulation</trait>
           <trait ref="trait-occulte">occulte</trait>
         </traits>

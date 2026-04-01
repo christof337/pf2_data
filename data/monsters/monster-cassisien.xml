@@ -54,7 +54,7 @@
           <trait>agile</trait>
           <trait>allonge 0 m</trait>
           <trait ref="trait-finesse">finesse</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait ref="trait-saint">saint</trait>
         </traits>
         <damages/>
@@ -63,7 +63,7 @@
     <spellList source="innate" tradition="divine" DD="16">
       <rank rank="4">
         <spells>
-          <spell>lire les présages</spell>
+          <spell ref="spell-lire-les-presages">lire les présages</spell>
         </spells>
       </rank>
     </spellList>
@@ -71,7 +71,7 @@
       <special type="activity" actions="1">
         <name>Changement de forme</name>
         <traits>
-          <trait>concentration</trait>
+          <trait ref="trait-concentration">concentration</trait>
           <trait ref="trait-divine">divine</trait>
           <trait>métamorphose</trait>
         </traits>
@@ -84,7 +84,7 @@
       <special type="activity" actions="2">
         <name>Rayons oculaires</name>
         <traits>
-          <trait>concentration</trait>
+          <trait ref="trait-concentration">concentration</trait>
           <trait ref="trait-divine">divine</trait>
           <trait ref="trait-saint">saint</trait>
         </traits>

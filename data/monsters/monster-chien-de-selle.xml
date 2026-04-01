@@ -59,7 +59,7 @@
       <special>
         <name>Rage</name>
         <traits>
-          <trait>maladie</trait>
+          <trait ref="trait-maladie">maladie</trait>
         </traits>
         <description>; **Jet de sauvegarde** Vigueur DD 17 ; **Stade 1** malade 1 (1 jour) ; **Stade 2** malade 2 (1 jour) ;</description>
       </special>

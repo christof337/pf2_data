@@ -67,7 +67,7 @@
         <name>*épée longue acérée*</name>
         <bonus>+18</bonus>
         <traits>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait>polyvalent P</trait>
         </traits>
         <damages>

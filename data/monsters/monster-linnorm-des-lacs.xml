@@ -7,7 +7,7 @@
     <level>20</level>
     <creatureTraits>
       <trait type="size" ref="trait-gigantesque">GIGANTESQUE</trait>
-      <trait>ACIDE</trait>
+      <trait ref="trait-acide">ACIDE</trait>
       <trait ref="trait-amphibie">AMPHIBIE</trait>
       <trait ref="trait-dragon">DRAGON</trait>
     </creatureTraits>

@@ -63,7 +63,7 @@
       <special type="activity" actions="1">
         <name>Tournoiement mortel</name>
         <traits>
-          <trait>attaque</trait>
+          <trait ref="trait-attaque">attaque</trait>
         </traits>
         <description>; **Conditions.** Le crocodile doit avoir empoigné une créature ;</description>
       </special>

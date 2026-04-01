@@ -18,7 +18,7 @@
       <language>commun</language>
       <language>féerique</language>
       <langSpecial>
-        <spell>communication avec les plantes</spell>
+        <spell ref="spell-communication-avec-les-plantes">communication avec les plantes</spell>
       </langSpecial>
     </languages>
     <skills>
@@ -79,7 +79,7 @@
       <special type="activity" actions="1">
         <name>Changement de forme</name>
         <traits>
-          <trait>concentration</trait>
+          <trait ref="trait-concentration">concentration</trait>
           <trait>métamorphose</trait>
           <trait ref="trait-primordiale">primordiale</trait>
         </traits>
@@ -88,7 +88,7 @@
       <special type="activity" actions="2">
         <name>Nuage de spores</name>
         <traits>
-          <trait>poison</trait>
+          <trait ref="trait-poison">poison</trait>
         </traits>
         <description>� Un léchi fongique peut projeter un nuage de spores qui irritent les yeux et la gorge de toutes les créatures qui ne sont pas des champignons situées dans une émanation de 4,5 m� Chaque créature doit réussir un jet de Vigueur DD 16 ou subir 1 point de dégâts de poison persistants� Une créature voit sa vision réduite à 6 m tant que dure le dégât persistant�</description>
       </special>

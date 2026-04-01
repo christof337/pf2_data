@@ -7,8 +7,8 @@
     <level>8</level>
     <creatureTraits>
       <trait type="size" ref="trait-grande">GRANDE</trait>
-      <trait>BÊTE</trait>
-      <trait>HUMANOÏDE</trait>
+      <trait ref="trait-bete">BÊTE</trait>
+      <trait ref="trait-humanoide">HUMANOÏDE</trait>
     </creatureTraits>
     <perception>
       <bonus>+15</bonus>
@@ -69,7 +69,7 @@
         <bonus>+19</bonus>
         <traits>
           <trait>balayage</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait>percutant +2</trait>
         </traits>
         <damages>
@@ -104,8 +104,8 @@
       <special type="activity" actions="2">
         <name>Caresse de la matriarche</name>
         <traits>
-          <trait>malédiction</trait>
-          <trait>mental</trait>
+          <trait ref="trait-malediction">malédiction</trait>
+          <trait ref="trait-mental">mental</trait>
           <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>� Comme la Caresse de la lamie mais DD 28 et la créature est stupéfiée 2 (ou l’intensité de son état stupéfié augmente de 2) si elle obtient un échec critique à son jet de sauvegarde�</description>
@@ -113,7 +113,7 @@
       <special type="activity" actions="1">
         <name>Changement de forme</name>
         <traits>
-          <trait>concentration</trait>
+          <trait ref="trait-concentration">concentration</trait>
           <trait>métamorphose</trait>
           <trait ref="trait-occulte">occulte</trait>
         </traits>

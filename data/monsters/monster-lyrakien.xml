@@ -7,7 +7,7 @@
     <level>1</level>
     <creatureTraits>
       <trait type="size" ref="trait-tres-petite">TRÈS PETITE</trait>
-      <trait>AZATA</trait>
+      <trait ref="trait-azata">AZATA</trait>
       <trait ref="trait-celeste">CÉLESTE</trait>
       <trait ref="trait-saint">SAINT</trait>
     </creatureTraits>
@@ -60,7 +60,7 @@
           <trait>agile</trait>
           <trait ref="trait-finesse">finesse</trait>
           <trait ref="trait-saint">saint</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait>allonge 0 m</trait>
         </traits>
         <damages/>
@@ -70,7 +70,7 @@
         <bonus>+7</bonus>
         <traits>
           <trait ref="trait-saint">saint</trait>
-          <trait>lumière</trait>
+          <trait ref="trait-lumiere">lumière</trait>
           <trait>portée 9 m</trait>
         </traits>
         <damages>
@@ -84,12 +84,12 @@
     <spellList source="innate" tradition="divine" DD="17">
       <rank rank="4">
         <spells>
-          <spell>lire les présages</spell>
+          <spell ref="spell-lire-les-presages">lire les présages</spell>
         </spells>
       </rank>
       <rank rank="4" constant="TRUE">
         <spells>
-          <spell>déplacement sans entrave</spell>
+          <spell ref="spell-deplacement-sans-entrave">déplacement sans entrave</spell>
         </spells>
       </rank>
     </spellList>
@@ -98,7 +98,7 @@
         <name>Déflagration de lumière stellaire</name>
         <traits>
           <trait ref="trait-saint">saint</trait>
-          <trait>lumière</trait>
+          <trait ref="trait-lumiere">lumière</trait>
         </traits>
         <description>� Le lyrakien libère une déflagration de lumière stellaire sainte dans une émanation de 1,5 m� Les ennemis dans la zone d’effet subissent 2d6 dégâts d’esprit (jet de Réflexes basique DD 17)� Le lyrakien doit ensuite attendre 1d4 rounds pour pouvoir utiliser de nouveau Déflagration de lumière stellaire ou son attaque à distance rayon de lumière stellaire�</description>
       </special>

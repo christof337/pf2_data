@@ -7,8 +7,8 @@
     <level>6</level>
     <creatureTraits>
       <trait type="size" ref="trait-tres-grande">TRÈS GRANDE</trait>
-      <trait>BOIS</trait>
-      <trait>PLANTE</trait>
+      <trait ref="trait-bois">BOIS</trait>
+      <trait ref="trait-plante">PLANTE</trait>
     </creatureTraits>
     <perception>
       <bonus/>

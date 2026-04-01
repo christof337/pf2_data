@@ -8,7 +8,7 @@
     <creatureTraits>
       <trait type="size" ref="trait-moyenne">MOYENNE</trait>
       <trait ref="trait-diable">DIABLE</trait>
-      <trait>FIÉLON</trait>
+      <trait ref="trait-fielon">FIÉLON</trait>
       <trait ref="trait-impie">IMPIE</trait>
     </creatureTraits>
     <perception>
@@ -52,7 +52,7 @@
         <bonus>+15</bonus>
         <traits>
           <trait ref="trait-impie">impie</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -67,7 +67,7 @@
         <traits>
           <trait>agile</trait>
           <trait ref="trait-impie">impie</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -89,13 +89,13 @@
           <trait>désarmer</trait>
           <trait ref="trait-finesse">finesse</trait>
           <trait ref="trait-impie">impie</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait>non létal) ; **Dégâts** 1d4+10 tranchants
 **À distance**
      1
        trident +13 (impie</trait>
           <trait>jet 6 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>

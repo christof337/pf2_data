@@ -8,9 +8,9 @@
     <creatureTraits>
       <trait type="size" ref="trait-grande">GRANDE</trait>
       <trait ref="trait-amphibie">AMPHIBIE</trait>
-      <trait>EAU</trait>
+      <trait ref="trait-eau">EAU</trait>
       <trait ref="trait-geant">GÉANT</trait>
-      <trait>HUMANOÏDE</trait>
+      <trait ref="trait-humanoide">HUMANOÏDE</trait>
     </creatureTraits>
     <perception>
       <bonus>+16</bonus>
@@ -53,7 +53,7 @@
         <traits>
           <trait>allonge 3 m</trait>
           <trait>croc-en-jambe</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait>polyvalent P</trait>
         </traits>
         <damages>
@@ -81,7 +81,7 @@
         <name>crachat</name>
         <bonus>+20</bonus>
         <traits>
-          <trait>eau</trait>
+          <trait ref="trait-eau">eau</trait>
           <trait>portée 18 m</trait>
           <trait ref="trait-primordiale">primordiale</trait>
         </traits>
@@ -96,7 +96,7 @@
     <spellList source="innate" tradition="occult" DD="23">
       <rank rank="5">
         <spells>
-          <spell>malédiction du marin</spell>
+          <spell ref="spell-malediction-du-marin">malédiction du marin</spell>
         </spells>
       </rank>
       <rank rank="2">
@@ -109,7 +109,7 @@
       <special type="activity" actions="1">
         <name>Noyer la proie</name>
         <traits>
-          <trait>eau</trait>
+          <trait ref="trait-eau">eau</trait>
           <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>; **Conditions.** Une créature est à terre et à portée d’allonge du géant des marais ;</description>

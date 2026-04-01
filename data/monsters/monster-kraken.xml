@@ -8,7 +8,7 @@
     <creatureTraits>
       <trait type="size" ref="trait-gigantesque">GIGANTESQUE</trait>
       <trait ref="trait-aquatique">AQUATIQUE</trait>
-      <trait>BÊTE</trait>
+      <trait ref="trait-bete">BÊTE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -58,7 +58,7 @@
         <bonus>+37</bonus>
         <traits>
           <trait>allonge 12 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -73,7 +73,7 @@
         <traits>
           <trait>agile</trait>
           <trait>allonge 18 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -87,7 +87,7 @@
         <bonus>+37</bonus>
         <traits>
           <trait>allonge 6 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -100,12 +100,12 @@
     <spellList source="innate" tradition="primal" DD="40">
       <rank rank="8">
         <spells>
-          <spell>vents punitifs</spell>
+          <spell ref="spell-vents-punitifs">vents punitifs</spell>
         </spells>
       </rank>
       <rank rank="7">
         <spells>
-          <spell>résistance à l’énergie</spell>
+          <spell ref="spell-resistance-a-lenergie">résistance à l’énergie</spell>
         </spells>
       </rank>
     </spellList>
@@ -121,7 +121,7 @@
       <special>
         <name>Encre de kraken</name>
         <traits>
-          <trait>poison</trait>
+          <trait ref="trait-poison">poison</trait>
         </traits>
         <description>� Les krakens sont immunisés contre ce poison ; **Jet de sau‑ vegarde** Vigueur DD 39 ; **Durée maximale** 10 rounds ; **Stade 1** 4d6 dégâts de poison et malade 1 (1 round) ; **Stade 2** 5d6 dégâts de poison et malade 2 (1 round)�</description>
       </special>
@@ -132,7 +132,7 @@
       <special type="activity" actions="1">
         <name>Propulsion</name>
         <traits>
-          <trait>déplacement</trait>
+          <trait ref="trait-deplacement">déplacement</trait>
         </traits>
         <description>� Le kraken se déplace dans l’eau à une vitesse maximale de 84 m en ligne droite sans déclencher de réactions�</description>
       </special>

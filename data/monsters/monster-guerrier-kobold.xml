@@ -7,7 +7,7 @@
     <level>-1</level>
     <creatureTraits>
       <trait type="size" ref="trait-petite">PETITE</trait>
-      <trait>HUMANOÏDE</trait>
+      <trait ref="trait-humanoide">HUMANOÏDE</trait>
       <trait ref="trait-kobold">KOBOLD</trait>
     </creatureTraits>
     <perception>

@@ -38,7 +38,7 @@
         <traits>
           <trait>agile</trait>
           <trait ref="trait-finesse">finesse</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -63,11 +63,11 @@
       <special type="activity" actions="1">
         <name>Lamentation d’épouvante</name>
         <traits>
-          <trait>audible</trait>
+          <trait ref="trait-audible">audible</trait>
           <trait ref="trait-divine">divine</trait>
-          <trait>émotion</trait>
-          <trait>mental</trait>
-          <trait>terreur</trait>
+          <trait ref="trait-emotion">émotion</trait>
+          <trait ref="trait-mental">mental</trait>
+          <trait ref="trait-terreur">terreur</trait>
         </traits>
         <description>DD 29</description>
       </special>

@@ -7,7 +7,7 @@
     <level>5</level>
     <creatureTraits>
       <trait type="size" ref="trait-grande">GRANDE</trait>
-      <trait>HUMANOÏDE</trait>
+      <trait ref="trait-humanoide">HUMANOÏDE</trait>
     </creatureTraits>
     <perception>
       <bonus>+15</bonus>

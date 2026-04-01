@@ -109,7 +109,7 @@
       <special type="activity" actions="2">
         <name>Malédiction du vanth</name>
         <traits>
-          <trait>malédiction</trait>
+          <trait ref="trait-malediction">malédiction</trait>
           <trait ref="trait-divine">divine</trait>
           <trait>infortune</trait>
         </traits>

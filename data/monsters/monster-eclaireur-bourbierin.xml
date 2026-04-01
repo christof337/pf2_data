@@ -9,7 +9,7 @@
       <trait type="size" ref="trait-moyenne">MOYENNE</trait>
       <trait ref="trait-amphibie">AMPHIBIE</trait>
       <trait ref="trait-bourbierin">BOURBIÉRIN</trait>
-      <trait>HUMANOÏDE</trait>
+      <trait ref="trait-humanoide">HUMANOÏDE</trait>
     </creatureTraits>
     <perception>
       <bonus>+7</bonus>
@@ -80,10 +80,10 @@
       <special type="activity" actions="1">
         <name>Coassement terrifiant</name>
         <traits>
-          <trait>audible</trait>
-          <trait>émotion</trait>
-          <trait>mental</trait>
-          <trait>terreur</trait>
+          <trait ref="trait-audible">audible</trait>
+          <trait ref="trait-emotion">émotion</trait>
+          <trait ref="trait-mental">mental</trait>
+          <trait ref="trait-terreur">terreur</trait>
         </traits>
         <description>� Le bourbiérin émet un coassement terrifiant� Tout non-bourbiérin situé dans un rayon de 9 m est effrayé 1 à moins de réussir un jet de Volonté DD 17 ; sur une réussite critique, une créature est immunisée pendant 1 min�</description>
       </special>

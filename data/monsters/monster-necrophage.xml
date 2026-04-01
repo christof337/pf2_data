@@ -91,8 +91,8 @@
         <name>Malveillance corruptrice</name>
         <traits>
           <trait ref="trait-divine">divine</trait>
-          <trait>malédiction</trait>
-          <trait>néant</trait>
+          <trait ref="trait-malediction">malédiction</trait>
+          <trait ref="trait-neant">néant</trait>
         </traits>
         <description>Les attaques à mains nues du nécrophage et ses armes liées infligent une malédiction qui rend la victime faible et malveillante� Si un nécro- phage inflige malveillance corruptrice à une créature qui en souffre déjà, elle effectue un nouveau jet de sauvegarde et ignore le résultat s’il est meilleur qu’un échec� Un humanoïde vivant qui meurt alors qu’il souffrait de cette malédiction revient sous la forme d’un nécrophage soumis à son meurtrier au bout de 1d4 rounds� Ce rejeton de nécrophage ne peut pas infliger malveillance corruptrice et est maladroit 2� Si son créateur meurt ou s’il existe sous cette forme depuis un mois, il devient un nécrophage à part entière et autonome ; **Jet de sauvegarde** Vigueur DD 17 ; **Stade 1** drainé 1 (1 round) ; **Stade 2** drainé 2 et ne traite aucune créature comme son allié (1 round) ;</description>
       </special>

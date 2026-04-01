@@ -8,7 +8,7 @@
     <creatureTraits>
       <trait type="size" ref="trait-gigantesque">GIGANTESQUE</trait>
       <trait ref="trait-geant">GÉANT</trait>
-      <trait>HUMANOÏDE</trait>
+      <trait ref="trait-humanoide">HUMANOÏDE</trait>
       <trait ref="trait-impie">IMPIE</trait>
     </creatureTraits>
     <perception>
@@ -46,7 +46,7 @@
         <bonus>+33</bonus>
         <traits>
           <trait>allonge 6 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait>polyvalent P</trait>
         </traits>
         <damages>
@@ -61,7 +61,7 @@
         <bonus>+32</bonus>
         <traits>
           <trait>allonge 7,5 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -101,25 +101,25 @@
       <special type="activity" actions="0">
         <name>Exigence</name>
         <traits>
-          <trait>arcanique</trait>
-          <trait>mental</trait>
+          <trait ref="trait-arcanique">arcanique</trait>
+          <trait ref="trait-mental">mental</trait>
         </traits>
         <description>� Quand un géant des runes lance son sort inné *communication à distance*, il peut aussi lancer *suggestion *sur la cible�</description>
       </special>
       <special type="activity" actions="1">
         <name>Invoquer une rune</name>
         <traits>
-          <trait>arcanique</trait>
-          <trait>concentration</trait>
-          <trait>électricité</trait>
+          <trait ref="trait-arcanique">arcanique</trait>
+          <trait ref="trait-concentration">concentration</trait>
+          <trait ref="trait-electricite">électricité</trait>
         </traits>
         <description>� Le géant des runes invoque l’une des runes sur son corps pour qu’elle projette un cône d’étincelles de 9 m qui inflige 6d12 dégâts d’électricité à toutes les créatures situées dans le cône (jet de Réflexes basique DD 37)� Le géant doit attendre 1d4 rounds avant de pouvoir de nouveau Invoquer une rune� Une réplique luisante de la rune invoquée apparaît sur l’une des armes que tient le géant� Elle lui confère un effet choisi par le géant parmi ceux de la liste suivante� L’effet sur l’arme dure 1 min� Si le géant place une nouvelle rune sur l’arme, toute rune précédemment placée disparaît immédiatement, ce qui met fin à son effet�<list><listItem>**Rune de destruction.** L’arme obtient le trait mortel avec trois dés de dégâts d’arme du même type que ceux de l’arme de base, et une créature touchée par l’arme est drainée 1 à moins qu’elle ne réussisse un jet de Vigueur DD 35�</listItem><listItem>**Rune de flammes.** L’arme inflige 3d6 dégâts de feu supplémentaires sur toutes les attaques�</listItem><listItem>**Rune de choc.** Quand l’arme touche, le géant peut Bousculer la cible sur 3 m ou sur 6 m en cas de coup critique�</listItem><listItem>**Rune d’espace.** Pendant le tour du géant des runes, l’allonge de l’arme passe à 18 m�</listItem></list></description>
       </special>
       <special type="activity" actions="0">
         <name>Runes étincelantes</name>
         <traits>
-          <trait>arcanique</trait>
-          <trait>lumière</trait>
+          <trait ref="trait-arcanique">arcanique</trait>
+          <trait ref="trait-lumiere">lumière</trait>
         </traits>
         <trigger>Le géant des runes utilise un pouvoir arcanique ou lance un sort arcanique ;</trigger>
         <effect>Les runes sur le corps du géant brillent d’une énergie magique� Chaque créature dans une émanation de 3 m doit faire un jet de Vigueur DD 35�</effect>

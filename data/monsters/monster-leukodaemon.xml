@@ -8,7 +8,7 @@
     <creatureTraits>
       <trait type="size" ref="trait-grande">GRANDE</trait>
       <trait>DAÉMONS</trait>
-      <trait>FIÉLON</trait>
+      <trait ref="trait-fielon">FIÉLON</trait>
       <trait ref="trait-impie">IMPIE</trait>
     </creatureTraits>
     <perception>
@@ -74,8 +74,8 @@
         <traits>
           <trait>allonge 3 m</trait>
           <trait ref="trait-impie">impie</trait>
-          <trait>magique</trait>
-          <trait>maladie</trait>
+          <trait ref="trait-magique">magique</trait>
+          <trait ref="trait-maladie">maladie</trait>
         </traits>
         <damages>
           <damage>
@@ -91,8 +91,8 @@
           <trait>agile</trait>
           <trait>allonge 3 m</trait>
           <trait ref="trait-impie">impie</trait>
-          <trait>magique</trait>
-          <trait>maladie</trait>
+          <trait ref="trait-magique">magique</trait>
+          <trait ref="trait-maladie">maladie</trait>
         </traits>
         <damages>
           <damage>
@@ -107,8 +107,8 @@
         <traits>
           <trait>facteur de portée 30 m</trait>
           <trait ref="trait-impie">impie</trait>
-          <trait>magique</trait>
-          <trait>maladie</trait>
+          <trait ref="trait-magique">magique</trait>
+          <trait ref="trait-maladie">maladie</trait>
           <trait>mortel d10</trait>
           <trait>propulsif</trait>
           <trait>rechargement 0</trait>
@@ -146,7 +146,7 @@
       <special>
         <name>Pestilence daémonique</name>
         <traits>
-          <trait>maladie</trait>
+          <trait ref="trait-maladie">maladie</trait>
         </traits>
         <description>� Le leukodaémon peut communiquer télépathiquement avec la créature affligée à n’importe quelle distance sur le même plan ; **Jet de sauvegarde** Vigueur DD 28 ; **Stade 1** por- teur (1 jour) ; **Stade 2** drainé 1 (1 jour) ; **Stade 3** drainé 2 (1 jour) ; **Stade 4** drainé 2 (1 jour) ; **Stade 5** drainé 3 (1 semaine) ; **Stade 6 **mort</description>
       </special>

@@ -58,7 +58,7 @@
       <special>
         <name>Choc étourdissant</name>
         <traits>
-          <trait>mise hors de combat</trait>
+          <trait ref="trait-mise-hors-de-combat">mise hors de combat</trait>
         </traits>
         <description>Une créature qui subit une attaque critique à cause de la queue d’une anguille électrique doit effectuer un jet de Vigueur DD 17�</description>
       </special>

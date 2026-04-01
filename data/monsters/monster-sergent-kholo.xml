@@ -7,7 +7,7 @@
     <level>4</level>
     <creatureTraits>
       <trait type="size" ref="trait-moyenne">MOYENNE</trait>
-      <trait>HUMANOÏDE</trait>
+      <trait ref="trait-humanoide">HUMANOÏDE</trait>
       <trait ref="trait-kholo">KHOLO</trait>
     </creatureTraits>
     <perception>
@@ -92,8 +92,8 @@
       <special type="activity" actions="1">
         <name>Aboyer des ordres</name>
         <traits>
-          <trait>audible</trait>
-          <trait>linguistique</trait>
+          <trait ref="trait-audible">audible</trait>
+          <trait ref="trait-linguistique">linguistique</trait>
         </traits>
         <description>� Le sergent kholo donne des ordres pour mettre ses alliés en position� Tout allié qui entend et comprend ces ordres peut utiliser une réaction pour Faire un pas�</description>
       </special>

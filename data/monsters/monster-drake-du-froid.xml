@@ -8,7 +8,7 @@
     <creatureTraits>
       <trait type="size" ref="trait-grande">GRANDE</trait>
       <trait ref="trait-dragon">DRAGON</trait>
-      <trait>FROID</trait>
+      <trait ref="trait-froid">FROID</trait>
     </creatureTraits>
     <perception>
       <bonus>+14</bonus>
@@ -106,7 +106,7 @@
       <special type="activity" actions="2">
         <name>Souffle de brume glacée</name>
         <traits>
-          <trait>froid</trait>
+          <trait ref="trait-froid">froid</trait>
           <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>Le drake de froid crache une sphère de liquide qui traverse une distance maximale de 18 m avant de former une explosion de brume glacée de 6 m à l’impact� Les créatures dans la zone d’effet subissent 8d6 dégâts de froid (jet de Réflexes basique DD 25)� Le drake du froid ne peut plus utiliser son Souffle de brume glacée pendant 1d6 rounds� Dans ce laps de temps, la brume recouvre toute la surface de la zone d’une couche de verglas, créant ainsi un terrain difficile�</description>
@@ -114,7 +114,7 @@
       <special type="activity" actions="1">
         <name>Vitesse augmentée</name>
         <traits>
-          <trait>déplacement</trait>
+          <trait ref="trait-deplacement">déplacement</trait>
         </traits>
         <description>**Fréquence** trois fois par jour�</description>
       </special>

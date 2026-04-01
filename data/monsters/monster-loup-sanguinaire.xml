@@ -52,7 +52,7 @@
       <special type="activity" actions="1">
         <name>Malmener</name>
         <traits>
-          <trait>attaque</trait>
+          <trait ref="trait-attaque">attaque</trait>
         </traits>
         <description>; **Conditions.** Le loup sanguinaire tient une créa- ture empoignée ou entravée entre ses mâchoires ;</description>
       </special>

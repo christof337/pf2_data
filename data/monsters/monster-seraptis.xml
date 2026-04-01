@@ -8,7 +8,7 @@
     <creatureTraits>
       <trait type="size" ref="trait-moyenne">MOYENNE</trait>
       <trait>DÉMONS</trait>
-      <trait>FIÉLON</trait>
+      <trait ref="trait-fielon">FIÉLON</trait>
       <trait ref="trait-impie">IMPIE</trait>
     </creatureTraits>
     <perception>
@@ -52,7 +52,7 @@
         <bonus>+32</bonus>
         <traits>
           <trait>percutant</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait>balayage</trait>
           <trait ref="trait-impie">impie</trait>
         </traits>

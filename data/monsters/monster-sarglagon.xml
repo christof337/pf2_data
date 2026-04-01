@@ -9,7 +9,7 @@
       <trait type="size" ref="trait-grande">GRANDE</trait>
       <trait ref="trait-amphibie">AMPHIBIE</trait>
       <trait ref="trait-diable">DIABLE</trait>
-      <trait>FIÉLON</trait>
+      <trait ref="trait-fielon">FIÉLON</trait>
       <trait ref="trait-impie">IMPIE</trait>
     </creatureTraits>
     <perception>
@@ -40,7 +40,7 @@
         <bonus>+20</bonus>
         <traits>
           <trait ref="trait-impie">impie</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -63,7 +63,7 @@
       </rank>
       <rank rank="2" constant="TRUE">
         <spells>
-          <spell>percevoir l’imperceptible</spell>
+          <spell ref="spell-percevoir-limperceptible">percevoir l’imperceptible</spell>
         </spells>
       </rank>
     </spellList>
@@ -76,8 +76,8 @@
         <name>Noyade</name>
         <traits>
           <trait ref="trait-divine">divine</trait>
-          <trait>eau</trait>
-          <trait>mise hors de combat</trait>
+          <trait ref="trait-eau">eau</trait>
+          <trait ref="trait-mise-hors-de-combat">mise hors de combat</trait>
         </traits>
         <description>� Le sarglagon invoque de l’eau trouble dans les poumons d’une créature qui ne peut pas res- pirer dans l’eau dans un rayon de 9 m� La cible doit tenter un jet de Vigueur DD 26�</description>
       </special>
@@ -100,7 +100,7 @@
       <special>
         <name>Venin de sarglagon</name>
         <traits>
-          <trait>poison</trait>
+          <trait ref="trait-poison">poison</trait>
         </traits>
         <description>; **Jet de sauvegarde** Vigueur DD 26 ;</description>
       </special>

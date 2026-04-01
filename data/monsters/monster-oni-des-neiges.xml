@@ -7,9 +7,9 @@
     <level>13</level>
     <creatureTraits>
       <trait type="size" ref="trait-grande">GRANDE</trait>
-      <trait>FROID</trait>
+      <trait ref="trait-froid">FROID</trait>
       <trait ref="trait-geant">GÉANT</trait>
-      <trait>HUMANOÏDE</trait>
+      <trait ref="trait-humanoide">HUMANOÏDE</trait>
       <trait ref="trait-impie">IMPIE</trait>
       <trait ref="trait-oni">ONI</trait>
     </creatureTraits>
@@ -43,7 +43,7 @@
         <traits>
           <trait>agile</trait>
           <trait>allonge 3 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -61,7 +61,7 @@
         <bonus>+27</bonus>
         <traits>
           <trait>allonge 3 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -79,8 +79,8 @@
         <bonus>+25</bonus>
         <traits>
           <trait>facteur de portée 18 m</trait>
-          <trait>froid</trait>
-          <trait>magique</trait>
+          <trait ref="trait-froid">froid</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -105,7 +105,7 @@
       <special type="activity" actions="1">
         <name>Changement de forme</name>
         <traits>
-          <trait>concentration</trait>
+          <trait ref="trait-concentration">concentration</trait>
           <trait>métamorphose</trait>
           <trait ref="trait-primordiale">primordiale</trait>
         </traits>
@@ -114,7 +114,7 @@
       <special type="activity" actions="2">
         <name>Chute d’éclair givrant</name>
         <traits>
-          <trait>froid</trait>
+          <trait ref="trait-froid">froid</trait>
           <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>� L’oni des neiges convoque un éclair glacé aussi blanc que de la neige� L’éclair frappe un emplacement situé dans un rayon de 18 m, transformant l’air en un nuage de neige dans une explosion de 6 m pendant 1 min� Toutes les créatures dans la neige deviennent masquées, et toutes celles à l’extérieur deviennent masquées vis-à-vis des créatures à l’intérieur� Une créature qui entre dans le nuage de neige ou qui y commence son tour subit 15 dégâts de froid avec un jet de Vigueur basique DD 33�</description>
@@ -122,7 +122,7 @@
       <special type="activity" actions="1">
         <name>Combo réfrigérant</name>
         <traits>
-          <trait>froid</trait>
+          <trait ref="trait-froid">froid</trait>
         </traits>
         <description>� L’oni des neiges effectue deux Frappes de poing ciblant la même créature� Si les deux attaques touchent, la cible est ralentie 1 pendant 1 round�</description>
       </special>

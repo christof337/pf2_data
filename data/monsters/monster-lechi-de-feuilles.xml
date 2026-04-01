@@ -8,7 +8,7 @@
     <creatureTraits>
       <trait type="size" ref="trait-petite">PETITE</trait>
       <trait ref="trait-lechi">LÉCHI</trait>
-      <trait>PLANTE</trait>
+      <trait ref="trait-plante">PLANTE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -100,7 +100,7 @@
       <special type="activity" actions="1">
         <name>Planer</name>
         <traits>
-          <trait>déplacement</trait>
+          <trait ref="trait-deplacement">déplacement</trait>
         </traits>
         <description>� Le léchi plane dans les airs se déplaçant horizontalement de 7,5 m et de 1,5 m vers le sol� Tant que le léchi uti- lise au moins 1 action pour planer au cours de chaque round, il reste dans les airs à la fin de chaque tour� Pour déterminer les dégâts d’une chute, le léchi de feuilles réduit toujours la hauteur de chute de 6 m�</description>
       </special>

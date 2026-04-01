@@ -348,4 +348,356 @@
     <name>Finesse</name>
     <description>Cette attaque au corps à corps est basée sur la Dextérité. Même si une arme est normalement dotée du trait finesse, celui-ci n’est pas indiqué dans le descriptif d’une Frappe si le monstre utilise sa Force.</description>
   </trait>
+  <trait id="trait-acide">
+    <name>acide</name>
+    <description>Les effets possédant ce trait infligent des dégâts d’acide. Les créatures qui possèdent ce trait ont un lien avec l’acide magique.</description>
+  </trait>
+  <trait id="trait-air">
+    <name>air</name>
+    <description>Les effets dotés du trait air permettent de manipuler ou de créer de l’air. Ceux qui permettent de manipuler l’air n’ont aucun effet dans le vide ou une zone dépourvue d’air. Les créatures dotées de ce trait sont essentiellement constituées d’air ou ont une connexion magique avec cet élément.</description>
+  </trait>
+  <trait id="trait-apogee">
+    <name>apogée</name>
+    <description/>
+  </trait>
+  <trait id="trait-apparition">
+    <name>apparition</name>
+    <description>Un danger doté de ce trait est bien souvent l’écho de quelqu’un qui a connu une fin tragique.</description>
+  </trait>
+  <trait id="trait-arcanique">
+    <name>arcanique</name>
+    <description>Cette magie découle de la tradition arcanique, qui repose sur la logique et la rationalité. Tout ce qui est doté de ce trait est magique. 299 liste des sorts arcaniques</description>
+  </trait>
+  <trait id="trait-archetype">
+    <name>archétype</name>
+    <description>Ce don est associé à un archétype.</description>
+  </trait>
+  <trait id="trait-archon">
+    <name>archon</name>
+    <description>Cette famille de célestes protège le Paradis.</description>
+  </trait>
+  <trait id="trait-attaque">
+    <name>attaque</name>
+    <description>Un pouvoir doté de ce trait implique une attaque. Pour chaque attaque que vous effectuez au-delà de la première lors de votre tour, vous subissez un malus d’attaques multiples.</description>
+  </trait>
+  <trait id="trait-audible">
+    <name>audible</name>
+    <description>Les actions et les effets audibles dépendent du son. Une action possédant le trait audible peut seulement être accomplie avec succès si la créature qui y fait appel peut parler ou produire autrement les sons nécessaires. Un sort ou un effet doté du trait audible affecte seulement les cibles qui peuvent l’entendre. Cela ne s’applique qu’aux parties sonores de l’effet, telles que déterminées par le MJ. Cet effet est différent d’un effet de son, ce dernier affectant même les cibles qui ne peuvent pas l’entendre (comme les cibles sourdes) tant que l’effet lui-même produit un son.</description>
+  </trait>
+  <trait id="trait-aura">
+    <name>aura</name>
+    <description>Une aura est une émanation qui se dégage de vous en permanence et affecte les créatures qui se trouvent dans un certain rayon autour de vous. Une aura peut aussi faire référence à la signature magique d’un objet.</description>
+  </trait>
+  <trait id="trait-azata">
+    <name>azata</name>
+    <description>Cette famille de célestes est originaire de l’Élysée.</description>
+  </trait>
+  <trait id="trait-baguette">
+    <name>baguette</name>
+    <description>Une baguette contient un unique sort que vous pouvez lancer une fois par jour.</description>
+  </trait>
+  <trait id="trait-barde">
+    <name>barde</name>
+    <description>Ce trait caractérise les pouvoirs liés à la classe de barde.</description>
+  </trait>
+  <trait id="trait-baton">
+    <name>bâton</name>
+    <description>Cet objet magique permet à un incantateur de lancer des sorts supplémentaires en préparant le bâton.</description>
+  </trait>
+  <trait id="trait-bete">
+    <name>bête</name>
+    <description>Une bête est généralement une créature comparable à un animal, mais dont le modificateur d’Intelligence est supérieur ou égal à −3. À la différence d’un animal, une bête pourra être capable de parler et de raisonner.</description>
+  </trait>
+  <trait id="trait-blessure">
+    <name>blessure</name>
+    <description>Ce poison est inoculé par le biais de dégâts infligés à sa cible.</description>
+  </trait>
+  <trait id="trait-bois">
+    <name>bois</name>
+    <description>Les effets dotés de ce trait invoquent ou manipulent du bois. Ceux qui permettent de manipuler du bois n’ont aucun effet dans une zone dépourvue de bois. Les créatures dotées de ce trait sont essentiellement constituées de bois ou ont une connexion magique avec cet élément.</description>
+  </trait>
+  <trait id="trait-bombe">
+    <name>bombe</name>
+    <description>Une bombe alchimique réunit des composants alchimiques volatils qui explosent quand la bombe percute une créature ou un objet. La plupart de ces bombes infligent des dégâts, mais quelques-unes produisent d’autres effets.</description>
+  </trait>
+  <trait id="trait-competence">
+    <name>compétence</name>
+    <description>Un don général doté du trait compétence améliore vos compétences et leurs actions, ou vous confère de nouvelles actions liées à une compétence. Un don doté de ce trait peut être sélectionné quand votre classe vous confère un don de compétence ou un don général. Un don d’archétype doté du trait compétence peut être sélectionné à la place d’un don de compétence si vous possédez le don de dévouement de cet archétype.</description>
+  </trait>
+  <trait id="trait-concentration">
+    <name>concentration</name>
+    <description>Une action dotée de ce trait nécessite de faire appel à un degré important de concentration mentale et de discipline.</description>
+  </trait>
+  <trait id="trait-consecration">
+    <name>consécration</name>
+    <description>Un sort de consécration améliore une zone pendant une durée étendue. Une zone ne peut bénéficier que d’un seul effet de consécration à la fois. Si des portions de la zone sont déjà soumises à un effet de consécration, le nouvel effet tente de les contrer.</description>
+  </trait>
+  <trait id="trait-consommable">
+    <name>consommable</name>
+    <description>Un objet doté du trait consommable ne peut être utilisé qu’une seule fois. Sauf indication contraire, il est détruit après son activation. Les objets consommables comprennent les objets alchimiques et les objets magiques consommables, tels que les parchemins et les talismans. Un personnage peut Fabriquer des consommables par lots de quatre.</description>
+  </trait>
+  <trait id="trait-contact">
+    <name>contact</name>
+    <description>Ce poison est inoculé par contact avec la peau.</description>
+  </trait>
+  <trait id="trait-deplacement">
+    <name>déplacement</name>
+    <description>Une action dotée de ce trait consiste en un déplacement d’un espace à un autre.</description>
+  </trait>
+  <trait id="trait-detection">
+    <name>détection</name>
+    <description>Les effets possédant ce trait tentent de déterminer la présence ou l’emplacement d’une personne, d’un objet ou d’une aura.</description>
+  </trait>
+  <trait id="trait-discret">
+    <name>discret</name>
+    <description>Un sort doté du trait discret se lance sans paroles ni gestes incantatoires, et ne s’accompagne pas de manifestations sensorielles évidentes.</description>
+  </trait>
+  <trait id="trait-dromaar">
+    <name>dromaar</name>
+    <description>Une créature dotée de ce trait à l’héritage polyvalent dromaar. Les dromaars ont des origines mixtes comprenant un parent orc ou dromaar. Un pouvoir doté de ce trait peut seulement être choisi ou utilisé par des dromaars.</description>
+  </trait>
+  <trait id="trait-druide">
+    <name>druide</name>
+    <description>Ce trait caractérise les pouvoirs liés à la classe de druide.</description>
+  </trait>
+  <trait id="trait-eau">
+    <name>eau</name>
+    <description>Les effets dotés du trait eau permettent de manipuler ou de créer de l’eau. Ceux qui permettent de manipuler de l’eau n’ont aucun effet dans une zone dépourvue d’eau. Les créatures dotées de ce trait sont essentiellement constituées d’air ou ont une connexion magique avec cet élément.</description>
+  </trait>
+  <trait id="trait-electricite">
+    <name>électricité</name>
+    <description>Les effets qui possèdent ce trait infligent des dégâts d’électricité. Une créature dotée de ce trait a une connexion avec l’électricité magique.</description>
+  </trait>
+  <trait id="trait-elixir">
+    <name>élixir</name>
+    <description>Les élixirs sont des liquides alchimiques qui s’utilisent en se buvant.</description>
+  </trait>
+  <trait id="trait-emotion">
+    <name>émotion</name>
+    <description>Cet effet altère les émotions d’une créature. Les effets dotés de ce trait possèdent toujours le trait mental. Certaines créatures qui ont subi un entraînement spécial ou qui sont douées d’une intelligence mécanique ou artificielle sont immunisées contre les effets d’émotion.</description>
+  </trait>
+  <trait id="trait-exploration">
+    <name>exploration</name>
+    <description>Une activité dotée de ce trait se déroule en plus d’un tour et ne peut généralement être entreprise que pendant le mode exploration.</description>
+  </trait>
+  <trait id="trait-extradimensionnel">
+    <name>extradimensionnel</name>
+    <description>Cet effet ou objet crée un espace extradimensionnel. Un effet extradimensionnel placé dans un autre espace extradimensionnel cesse de fonctionner jusqu’à ce qu’il en soit retiré.</description>
+  </trait>
+  <trait id="trait-fielon">
+    <name>fiélon</name>
+    <description>Les créatures originaires des plans impies ou qui possèdent une forte connexion à ceux-ci sont appelées des fiélons. Les fiélons peuvent survivre aux effets environnementaux de base des plans de la Sphère extérieure.</description>
+  </trait>
+  <trait id="trait-focalise">
+    <name>focalisé</name>
+    <description>Un sort que vous pouvez lancer en dépensant 1 point de focalisation et qui est automatiquement intensifié à la moitié de votre niveau arrondi à l’entier supérieur.</description>
+  </trait>
+  <trait id="trait-force">
+    <name>force</name>
+    <description>Les effets qui possèdent ce trait infligent des dégâts de force ou créent des objets faits de force magique pure.</description>
+  </trait>
+  <trait id="trait-froid">
+    <name>froid</name>
+    <description>Les effets possédant ce trait infligent des dégâts de froid. Les créatures qui possèdent ce trait ont une connexion magique au froid.</description>
+  </trait>
+  <trait id="trait-general">
+    <name>général</name>
+    <description>Un type de don qui peut être choisi par tous les personnages, peu importe leur ascendance et leur classe, tant qu’ils possèdent les prérequis. Vous pouvez sélectionner un don doté de ce trait quand votre classe vous confère un don général.</description>
+  </trait>
+  <trait id="trait-guerison">
+    <name>guérison</name>
+    <description>Un effet de guérison soigne le corps d’une créature, généralement en lui permettant de regagner des points de vie, mais parfois en le soignant de maladies ou d’autres effets handicapants.</description>
+  </trait>
+  <trait id="trait-guerrier">
+    <name>guerrier</name>
+    <description>Ce trait caractérise les pouvoirs liés à la classe de guerrier.</description>
+  </trait>
+  <trait id="trait-halfelin">
+    <name>halfelin</name>
+    <description>Une créature dotée de ce trait appartient à l’ascendance des halfelins. Ces petits êtres sont de sympathiques vagabonds qui ont la réputation d’être chanceux. Un pouvoir doté de ce trait peut seulement être choisi ou utilisé par des halfelins. Une arme dotée de ce trait a été créée et est utilisée par des halfelins.</description>
+  </trait>
+  <trait id="trait-hostile">
+    <name>hostile</name>
+    <description>Un PNJ hostile est susceptible de vous attaquer.</description>
+  </trait>
+  <trait id="trait-hryngar">
+    <name>hryngar</name>
+    <description>Ethnie souterraine de nains, les hryngars possèdent généralement vision dans le noir, résistent au poison et reculent face à la lumière vive.</description>
+  </trait>
+  <trait id="trait-huile">
+    <name>huile</name>
+    <description>Les huiles regroupent des consommables magiques, tels que les gels, les pommades, les pâtes ou les onguents qui sont généralement appliqué sur un objet.</description>
+  </trait>
+  <trait id="trait-humanoide">
+    <name>humanoïde</name>
+    <description>Les créatures humanoïdes raisonnent et agissent de manière comparable aux humains. Elles ont généralement deux bras et deux jambes sur lesquelles elles se dressent.</description>
+  </trait>
+  <trait id="trait-illusion">
+    <name>illusion</name>
+    <description>Les effets et objets magiques dotés du trait illusion influent sur les stimuli sensoriels.</description>
+  </trait>
+  <trait id="trait-inhale">
+    <name>inhalé</name>
+    <description>Ce trait caractérise un poison inoculé par inhalation.</description>
+  </trait>
+  <trait id="trait-intermede">
+    <name>intermède</name>
+    <description>Une activité dotée de ce trait dure au moins une journée et peut seulement être entreprise lors d’un intermède.</description>
+  </trait>
+  <trait id="trait-lignee">
+    <name>lignée</name>
+    <description>Un don doté de ce trait indique qu’un personnage descend d’un type particulier de créature. Vous ne pouvez avoir qu’un don de lignée. Vous pouvez choisir un don de lignée seulement au niveau 1 et vous ne pouvez pas utiliser un réapprentissage pour perdre ou gagner ce don.</description>
+  </trait>
+  <trait id="trait-linguistique">
+    <name>linguistique</name>
+    <description>Un effet doté de ce trait repose sur la compréhension d’une langue. Un effet linguistique qui cible une créature fonctionne seulement si la cible comprend la langue que vous parlez.</description>
+  </trait>
+  <trait id="trait-lumiere">
+    <name>lumière</name>
+    <description>Les effets de lumière prennent le pas sur les ténèbres non magiques qui couvrent une zone et peuvent contrer les ténèbres magiques. Vous devez généralement cibler directement de la magie de ténèbres avec votre magie de lumière afin de la contrer, mais certains sorts tentent automatiquement de contrer ces ténèbres.</description>
+  </trait>
+  <trait id="trait-magicien">
+    <name>magicien</name>
+    <description>Ce trait caractérise les pouvoirs liés à la classe de magicien.</description>
+  </trait>
+  <trait id="trait-magique">
+    <name>magique</name>
+    <description>Quelque chose doté du trait magique est imprégné d’énergies magiques qui ne sont pas liées à une tradition magique spécifique. Certains objets ou effets sont étroitement liés à une tradition magique particulière. L’objet possède alors le trait arcanique, divine, occulte ou primordiale au lieu de magique. Ces traits indiquent tous que l’objet est magique.</description>
+  </trait>
+  <trait id="trait-maladie">
+    <name>maladie</name>
+    <description>Un effet doté de ce trait est capable de transmettre une ou plusieurs maladies. Une maladie est généralement une affliction.</description>
+  </trait>
+  <trait id="trait-malediction">
+    <name>malédiction</name>
+    <description>Une malédiction est un effet qui inflige une affliction de longue durée à une créature. Les malédictions sont toujours magiques. Elles sont généralement causées par un sort ou un piège. Les effets dotés de ce trait ne peuvent être annulés que par des effets qui ciblent spécifiquement les malédictions.</description>
+  </trait>
+  <trait id="trait-mecanique">
+    <name>mécanique</name>
+    <description>Un danger doté de ce trait est un objet physique artificiel.</description>
+  </trait>
+  <trait id="trait-mental">
+    <name>mental</name>
+    <description>Un effet mental peut influencer l’esprit de sa cible. Il n’aura aucun effet sur un objet ou une créature dénuée d’intelligence.</description>
+  </trait>
+  <trait id="trait-mise-hors-de-combat">
+    <name>mise hors de combat</name>
+    <description>Un pouvoir doté de ce trait peut mettre un personnage hors de combat ou même le tuer, mais il est plus difficile à utiliser contre une créature plus puissante que soi. Si un sort est doté du trait mise hors de combat, une créature dont le niveau est supérieur à deux fois le rang du sort considère le résultat de son test pour éviter d’être mise hors de combat comme un degré de succès supérieur à son résultat réel, ou considère le résultat du test de l’incantateur pour la mettre hors de combat comme un degré de succès inférieur à son résultat réel. Si un autre effet est doté du trait mise hors de combat, une créature de plus haut niveau que l’objet, l’être ou le danger qui génère l’effet bénéficie des mêmes avantages.</description>
+  </trait>
+  <trait id="trait-mort">
+    <name>mort</name>
+    <description>Un effet doté du trait mort vous tue instantanément s’il vous réduit à 0 point de vie. Certains effets de mort peuvent vous rapprocher du seuil de la mort ou vous tuer sur-le-champ sans avoir besoin de vous réduire à 0 PV.</description>
+  </trait>
+  <trait id="trait-neant">
+    <name>néant</name>
+    <description>Les effets dotés de ce trait soignent les créatures mortes-vivantes grâce à de l’énergie du néant, infligent des dégâts de néant aux créatures vivantes ou permettent de manipuler l’énergie du néant.</description>
+  </trait>
+  <trait id="trait-olfactif">
+    <name>olfactif</name>
+    <description>Un effet olfactif ne peut affecter que les créatures qui peuvent le sentir. Il ne s’applique qu’aux éléments olfactifs de l’effet, qui sont déterminés par le MJ.</description>
+  </trait>
+  <trait id="trait-ombre">
+    <name>ombre</name>
+    <description>Cette magie est liée aux ombres ou à l’énergie du Monde des ténèbres.</description>
+  </trait>
+  <trait id="trait-parchemin">
+    <name>parchemin</name>
+    <description>Un parchemin contient un unique sort que vous pouvez lancer sans utiliser d’emplacement de sort.</description>
+  </trait>
+  <trait id="trait-piege">
+    <name>piège</name>
+    <description>Un danger conçu pour faire obstacle aux intrus.</description>
+  </trait>
+  <trait id="trait-plante">
+    <name>plante</name>
+    <description>Les créatures végétales sont dotées du trait plante. Elles sont différentes des plantes normales. Les effets magiques dotés de ce trait permettent de manipuler ou de créer des plantes. Les effets qui manipulent des plantes n’ont aucun effet dans une zone dépourvue de plantes.</description>
+  </trait>
+  <trait id="trait-poison">
+    <name>poison</name>
+    <description>Un effet doté de ce trait inocule un poison ou inflige des dégâts de poison. Un objet doté de ce trait est empoisonné et peut causer une affliction.</description>
+  </trait>
+  <trait id="trait-possession">
+    <name>possession</name>
+    <description>Les effets dotés de ce trait permettent à une créature de projeter son intellect et son esprit dans une cible. Une créature immunisée contre les effets mentaux ne peut pas utiliser un effet de possession. Quand une créature possède une cible, le corps d’origine du possesseur est inconscient (et ne peut pas se réveiller normalement), sauf si l’effet de possession lui permet de pénétrer physiquement dans sa cible. Quand la cible subit des dégâts, le possesseur en subit la moitié sous la forme de dégâts mentaux. Le possesseur perd tous les avantages liés aux sorts ou pouvoirs actifs qui affectent son enveloppe physique, mais il bénéficie en contrepartie de tous les avantages liés aux sorts et pouvoirs qui affectent l’enveloppe physique de sa cible. Un possesseur peut utiliser tous les pouvoirs purement physiques de sa cible. Il ne peut par contre pas utiliser ses propres pouvoirs, à l’exception de ses sorts et de ses pouvoirs purement mentaux. Le MJ décide si un pouvoir est purement physique ou mental. Le possesseur utilise le modificateur d’attaque, la CA, le jet de Vigueur, le jet de Réflexes, la Perception et les compétences physiques de sa cible. Il conserve cependant son propre jet de Volonté, ses compétences mentales, ses jets d’attaques de sorts et son DD de sorts. Les avantages conférés par les objets investis s’appliquent en fonction de la situation : le possesseur bénéficie de ses propres objets investis quand il utilise ses statistiques et des objets investis de la créature possédée quand il utilise les statistiques de cette dernière. Le possesseur ne gagne aucun des avantages liés aux sorts qui affectent seulement l’incantateur, car il ne se trouve pas dans son propre corps. Le possesseur doit utiliser ses propres actions pour faire agir la créature possédée. Si le possesseur se trouve réduit à 0 point de vie par une combinaison de dégâts infligés à son enveloppe corporelle et de dégâts mentaux subis par l’intermédiaire de la possession, il se trouve alors assommé et la possession prend immédiatement fin. Si la cible se [[PAGE 463]] # FLUX PRINCIPAL (STATS/BASE) Glossaire et index **461 461 Introduction Ascendances &amp; Historiques Classes Compétences Dons Équipement Sorts Jouer une partie Annexe des États Feuille de personnage Glossaire et index** trouve réduite à 0 point de vie en premier, le possesseur a le choix entre perdre connaissance avec le corps et continuer de le posséder ou mettre fin à l’effet par une action gratuite et retourner dans son propre corps. Si la cible meurt, la possession prend immédiatement fin et le possesseur est étourdi pendant 1 min.</description>
+  </trait>
+  <trait id="trait-potion">
+    <name>potion</name>
+    <description>Une potion est un liquide magique qui s’active quand vous le consommez.</description>
+  </trait>
+  <trait id="trait-prediction">
+    <name>prédiction</name>
+    <description>Les effets dotés de ce trait permettent de déterminer ce qui va probablement se produire dans un futur proche.</description>
+  </trait>
+  <trait id="trait-pretre">
+    <name>prêtre</name>
+    <description>Ce trait caractérise les pouvoirs liés à la classe de prêtre.</description>
+  </trait>
+  <trait id="trait-rage">
+    <name>rage</name>
+    <description>Vous devez être enragé pour utiliser les pouvoirs qui possèdent le trait rage, et les effets de ceux-ci prennent automatiquement fin quand vous n’êtes plus enragé.</description>
+  </trait>
+  <trait id="trait-rodeur">
+    <name>rôdeur</name>
+    <description>Ce trait caractérise les pouvoirs liés à la classe de rôdeur.</description>
+  </trait>
+  <trait id="trait-roublard">
+    <name>roublard</name>
+    <description>Ce trait caractérise les pouvoirs liés à la classe de roublard.</description>
+  </trait>
+  <trait id="trait-scrutation">
+    <name>scrutation</name>
+    <description>Un effet de scrutation vous permet de voir, d’entendre ou d’obtenir une information sensorielle à distance à l’aide d’un capteur ou d’un autre dispositif remplaçant vos propres yeux et oreilles.</description>
+  </trait>
+  <trait id="trait-secret">
+    <name>secret</name>
+    <description>Le MJ effectue secrètement le test correspondant à ce pouvoir.</description>
+  </trait>
+  <trait id="trait-sommeil">
+    <name>sommeil</name>
+    <description>Cet effet peut plonger une créature dans le sommeil ou dans un état somnolent.</description>
+  </trait>
+  <trait id="trait-son">
+    <name>son</name>
+    <description>Un effet doté du trait son fonctionne seulement s’il peut produire un son et il se trouve ainsi inopérant dans une zone de silence ou dans le vide. Il s’agit d’un fonctionnement différent de celui d’un sort audible, qui est seulement efficace contre une cible capable de l’entendre. Un effet de son peut infliger des dégâts de son.</description>
+  </trait>
+  <trait id="trait-sorcier">
+    <name>sorcier</name>
+    <description>Ce trait caractérise les pouvoirs liés à la classe de sorcier.</description>
+  </trait>
+  <trait id="trait-structure">
+    <name>structure</name>
+    <description>Un objet doté du trait structure crée une bâtisse magique ou une autre structure quand il est activé. Il faut activer l’objet sur une portion de terrain sur lequel ne se trouve aucune autre structure. La structure s’adapte au terrain naturel en répondant aux conditions structurelles permettant sa construction sur ce terrain. La structure ajuste sa forme autour de petits éléments comme des mares ou des excroissances rocheuses, mais on ne peut pas la créer sur l’eau ou d’autres surfaces non solides. Si elle est activée sur de la neige, des dunes de sable ou d’autres surfaces meubles avec une surface solide en dessous, les fondations de la structure (le cas échéant) s’enracinent dans cette surface compacte. Si un objet doté du trait structure est activé sur une surface solide mais instable, telle qu’un marais ou une zone soumise à des secousses, effectuez un test nu DD 3 chaque jour ; en cas d’échec, la structure commence à s’enfoncer ou à s’effondrer. La structure ne blesse pas les créatures situées dans la zone où elle apparaît et l’on ne peut pas la créer au sein d’une foule ou d’une zone densément peuplée. Toute créature prise par inadvertance à l’intérieur de la structure lorsque l’objet est activé se retrouve saine et sauve à l’intérieur de la structure achevée et peut toujours trouver un moyen évident d’en sortir. Une créature à l’intérieur de la structure quand l’activation se termine n’est pas blessée et se retrouve sur le sol, sans subir de dégât, si elle se trouvait dans l’un des étages de la bâtisse.</description>
+  </trait>
+  <trait id="trait-talisman">
+    <name>talisman</name>
+    <description>Un talisman est un consommable qui doit être attaché à un objet.</description>
+  </trait>
+  <trait id="trait-teleportation">
+    <name>téléportation</name>
+    <description>Les effets de téléportation vous permettent de vous déplacer instantanément d’un point donné à un autre. La téléportation ne déclenche généralement pas de réactions causées par les déplacements.</description>
+  </trait>
+  <trait id="trait-tenebres">
+    <name>ténèbres</name>
+    <description>Les effets de ténèbres éteignent les lumières non magiques d’une zone et peuvent contrer des effets de lumière magique moins puissants qu’eux. Vous devez généralement cibler une magie de lumière avec votre magie de ténèbres afin de la contrer, mais certains sorts de ténèbres tentent automatiquement de contrer la lumière.</description>
+  </trait>
+  <trait id="trait-terre">
+    <name>terre</name>
+    <description>Les effets associés au trait terre permettent de manipuler ou de créer de la terre. Ceux qui permettent de manipuler la terre n’ont aucun effet dans une zone dépourvue de terre. Les créatures dotées de ce trait sont essentiellement constituées de terre ou ont une connexion magique avec cet élément.</description>
+  </trait>
+  <trait id="trait-terreur">
+    <name>terreur</name>
+    <description>Les effets de terreur suscitent cette émotion. Les effets dotés ce trait possèdent toujours les traits mental et émotion.</description>
+  </trait>
+  <trait id="trait-tour-de-magie">
+    <name>tour de magie</name>
+    <description>Un sort que vous pouvez lancer à volonté et qui est automatiquement intensifié de la moitié de votre niveau arrondi à l’entier supérieur.</description>
+  </trait>
+  <trait id="trait-visuel">
+    <name>visuel</name>
+    <description>Un effet visuel affecte seulement les créatures qui peuvent le voir. Il ne s’applique qu’aux éléments visibles de l’effet, qui sont déterminés par le MJ.</description>
+  </trait>
+  <trait id="trait-vitalite">
+    <name>vitalité</name>
+    <description>Les effets dotés du trait vitalité guérissent les créatures vivantes grâce à l’énergie issue de la forge de la Création, infligent des dégâts d’énergie de vitalité aux morts-vivants, ou manipulent l’énergie de vitalité.</description>
+  </trait>
 </traits>

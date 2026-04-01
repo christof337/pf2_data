@@ -70,7 +70,7 @@
       <special>
         <name>Peste putride</name>
         <traits>
-          <trait>maladie</trait>
+          <trait ref="trait-maladie">maladie</trait>
         </traits>
         <description>� Les états malade et inconscient de cette maladie ne peuvent se termi- ner ni être atténués tant que la maladie n’est pas guérie ; **Jet de sauvegarde** Vigueur DD 14 ;</description>
       </special>

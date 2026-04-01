@@ -72,7 +72,7 @@
         <traits>
           <trait>allonge 3 m</trait>
           <trait>croc-en-jambe</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait>parade</trait>
         </traits>
         <damages>
@@ -91,7 +91,7 @@
         <bonus>+29</bonus>
         <traits>
           <trait>allonge 3 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -144,7 +144,7 @@
       <special type="activity" actions="1">
         <name>Changement de forme</name>
         <traits>
-          <trait>concentration</trait>
+          <trait ref="trait-concentration">concentration</trait>
           <trait ref="trait-divine">divine</trait>
           <trait>métamorphose</trait>
         </traits>

@@ -7,7 +7,7 @@
     <level>3</level>
     <creatureTraits>
       <trait type="size" ref="trait-petite">PETITE</trait>
-      <trait>AIR</trait>
+      <trait ref="trait-air">AIR</trait>
       <trait ref="trait-elementaire">ÉLÉMENTAIRE</trait>
     </creatureTraits>
     <perception>

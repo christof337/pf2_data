@@ -7,14 +7,14 @@
     <level>4</level>
     <creatureTraits>
       <trait type="size" ref="trait-moyenne">MOYENNE</trait>
-      <trait>AIR</trait>
-      <trait>BOIS</trait>
-      <trait>EAU</trait>
+      <trait ref="trait-air">AIR</trait>
+      <trait ref="trait-bois">BOIS</trait>
+      <trait ref="trait-eau">EAU</trait>
       <trait ref="trait-elementaire">ÉLÉMENTAIRE</trait>
       <trait ref="trait-feu">FEU</trait>
       <trait>GÉNIE</trait>
       <trait ref="trait-metal">MÉTAL</trait>
-      <trait>TERRE</trait>
+      <trait ref="trait-terre">TERRE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -30,7 +30,7 @@
       <language>thalas-
                                          sique</language>
       <langSpecial>
-        <spell>langage universel</spell>
+        <spell ref="spell-langage-universel">langage universel</spell>
       </langSpecial>
     </languages>
     <armorClass>20</armorClass>
@@ -59,7 +59,7 @@
         <bonus>+14</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait>non létal</trait>
         </traits>
         <damages>
@@ -95,7 +95,7 @@
       </rank>
       <rank rank="4">
         <spells>
-          <spell>lire les présages</spell>
+          <spell ref="spell-lire-les-presages">lire les présages</spell>
         </spells>
       </rank>
       <rank rank="2">
@@ -105,7 +105,7 @@
       </rank>
       <rank rank="5" constant="TRUE">
         <spells>
-          <spell>langage universel</spell>
+          <spell ref="spell-langage-universel">langage universel</spell>
         </spells>
       </rank>
     </spellList>
@@ -113,8 +113,8 @@
       <special type="activity" actions="1">
         <name>Changement de forme</name>
         <traits>
-          <trait>arcanique</trait>
-          <trait>concentration</trait>
+          <trait ref="trait-arcanique">arcanique</trait>
+          <trait ref="trait-concentration">concentration</trait>
           <trait>métamorphose</trait>
         </traits>
         <description>� Le jann se transforme en n’importe quel animal de taille Petite ou Moyenne (p� 358)� Cela n’affecte pas ses statistiques, mais peut changer le type de dégâts de ses Frappes�</description>

@@ -69,10 +69,10 @@
       <special>
         <name>Aura d’anxiété</name>
         <traits>
-          <trait>aura</trait>
-          <trait>émotion</trait>
-          <trait>mental</trait>
-          <trait>terreur</trait>
+          <trait ref="trait-aura">aura</trait>
+          <trait ref="trait-emotion">émotion</trait>
+          <trait ref="trait-mental">mental</trait>
+          <trait ref="trait-terreur">terreur</trait>
         </traits>
         <description>9 m, DD 35� Comme présence terrifiante (p� 360) et la créatureeffrayée par l’aura devient méfiante : elle ne considère plus aucune créature comme un allié et ne peut ni Aider ni Prendre en tenaille� Sur un échec critique, la créature ne peut également plus être une cible volontaire pour de la magie inoffensive ou pouvant l’aider�</description>
       </special>
@@ -93,7 +93,7 @@
         <name>*épée à deux mains*</name>
         <bonus>+34</bonus>
         <traits>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait>polyvalent P</trait>
         </traits>
         <damages>
@@ -107,7 +107,7 @@
         <name>mâchoires</name>
         <bonus>+32</bonus>
         <traits>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -121,7 +121,7 @@
         <bonus>+32</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -143,7 +143,7 @@
       <special type="activity" actions="1">
         <name>Changement de forme</name>
         <traits>
-          <trait>concentration</trait>
+          <trait ref="trait-concentration">concentration</trait>
           <trait>métamorphose</trait>
           <trait ref="trait-occulte">occulte</trait>
         </traits>
@@ -159,7 +159,7 @@
       <special>
         <name>Oiseau sanguinaire</name>
         <traits>
-          <trait>malédiction</trait>
+          <trait ref="trait-malediction">malédiction</trait>
           <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>� Une créature touchée par une attaque au corps à corps du vilderavn est maudite� Elle subit 2d6 dégâts de saignement persistants qui sont difficiles à arrêter� Le DD pour stopper le saignement en utilisant Prodiguer les premiers soins est de 35, et guérir la créature en lui rendant tous ses PV n’y met pas automatiquement fin� Délivrer la créature de la malédiction met fin au saignement�</description>

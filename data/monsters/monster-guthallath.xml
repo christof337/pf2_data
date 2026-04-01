@@ -59,7 +59,7 @@
       <special>
         <name>Aura d’érosion</name>
         <traits>
-          <trait>aura</trait>
+          <trait ref="trait-aura">aura</trait>
           <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>36 m� Le guthallath érode l’intégrité physique de tout ce qui se trouve autour de lui� Les créatures et les objets autres que le guthallath qui se trouvent dans l’émanation voient leur Solidité et leurs résistances réduites de 10� Au début de son tour, une créature dans l’aura d’érosion subit 6d6 dégâts contondants (jet de Vigueur basique DD 39)�</description>
@@ -79,7 +79,7 @@
         <bonus>+38</bonus>
         <traits>
           <trait>allonge 6 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait>mortel 3d12</trait>
         </traits>
         <damages>
@@ -94,7 +94,7 @@
         <bonus>+38</bonus>
         <traits>
           <trait>allonge 6 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait>mortel 3d12</trait>
         </traits>
         <damages>
@@ -108,7 +108,7 @@
     <spellList source="innate" tradition="primal" DD="37">
       <rank rank="8" constant="TRUE">
         <spells>
-          <spell>discernement</spell>
+          <spell ref="spell-discernement">discernement</spell>
         </spells>
       </rank>
     </spellList>

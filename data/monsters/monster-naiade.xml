@@ -8,7 +8,7 @@
     <creatureTraits>
       <trait type="size" ref="trait-moyenne">MOYENNE</trait>
       <trait ref="trait-amphibie">AMPHIBIE</trait>
-      <trait>EAU</trait>
+      <trait ref="trait-eau">EAU</trait>
       <trait ref="trait-fee">FÉE</trait>
       <trait>NYMPHE</trait>
     </creatureTraits>
@@ -72,9 +72,9 @@
         <bonus>+8</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>eau</trait>
+          <trait ref="trait-eau">eau</trait>
           <trait ref="trait-finesse">finesse</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -87,8 +87,8 @@
         <name>orbe d’eau</name>
         <bonus>+8</bonus>
         <traits>
-          <trait>eau</trait>
-          <trait>magique</trait>
+          <trait ref="trait-eau">eau</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait>portée 18 m</trait>
         </traits>
         <damages>

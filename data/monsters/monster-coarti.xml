@@ -8,7 +8,7 @@
     <creatureTraits>
       <trait type="size" ref="trait-moyenne">MOYENNE</trait>
       <trait ref="trait-diable">DIABLE</trait>
-      <trait>FIÉLON</trait>
+      <trait ref="trait-fielon">FIÉLON</trait>
       <trait ref="trait-impie">IMPIE</trait>
     </creatureTraits>
     <perception>
@@ -36,7 +36,7 @@
         <bonus>+18</bonus>
         <traits>
           <trait ref="trait-impie">impie</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait>polyvalent P</trait>
         </traits>
         <damages>
@@ -99,7 +99,7 @@
         <traits>
           <trait ref="trait-divine">divine</trait>
           <trait ref="trait-impie">impie</trait>
-          <trait>son</trait>
+          <trait ref="trait-son">son</trait>
         </traits>
         <description>� Le coarti pousse un horrible cri qui inflige 4d6 dégâts de son à toutes les créatures dans une émanation de 9 m (jet de Volonté basique DD 25)� Les créatures saintes qui ratent ce jeu de sauvegarde sont également effrayées 2 ; cet effet supplémentaire a les traits émotion, terreur et mental� Le coarti ne peut plus utiliser Cri de désespoir pendant 1d4 rounds�</description>
       </special>

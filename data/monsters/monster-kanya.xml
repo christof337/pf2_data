@@ -7,7 +7,7 @@
     <level>7</level>
     <creatureTraits>
       <trait type="size" ref="trait-grande">GRANDE</trait>
-      <trait>AZATA</trait>
+      <trait ref="trait-azata">AZATA</trait>
       <trait ref="trait-celeste">CÉLESTE</trait>
       <trait ref="trait-saint">SAINT</trait>
     </creatureTraits>
@@ -71,7 +71,7 @@
         <bonus>+18</bonus>
         <traits>
           <trait ref="trait-saint">saint</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait>polyvalent P</trait>
         </traits>
         <damages>
@@ -91,7 +91,7 @@
         <traits>
           <trait>agile</trait>
           <trait ref="trait-saint">saint</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait>allonge 3 m</trait>
         </traits>
         <damages>
@@ -110,7 +110,7 @@
       </rank>
       <rank rank="2">
         <spells>
-          <spell>invisibilité</spell>
+          <spell ref="spell-invisibilite">invisibilité</spell>
         </spells>
       </rank>
     </spellList>

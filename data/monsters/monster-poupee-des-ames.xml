@@ -64,7 +64,7 @@
           <trait>agile</trait>
           <trait>allonge 0 m</trait>
           <trait ref="trait-finesse">finesse</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -77,7 +77,7 @@
     <spellList source="innate" tradition="occult" DD="18" attack="+10">
       <rank rank="3">
         <spells>
-          <spell>lévitation</spell>
+          <spell ref="spell-levitation">lévitation</spell>
         </spells>
       </rank>
       <rank rank="2">

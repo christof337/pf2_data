@@ -48,7 +48,7 @@
         <bonus>+18</bonus>
         <traits>
           <trait ref="trait-finesse">finesse</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -61,7 +61,7 @@
     <spellList source="innate" tradition="divine" DD="25">
       <rank rank="2">
         <spells>
-          <spell spellSpecial="à volonté">ténèbres</spell>
+          <spell spellSpecial="à volonté" ref="spell-tenebres">ténèbres</spell>
         </spells>
       </rank>
     </spellList>

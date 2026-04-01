@@ -63,7 +63,7 @@
       <special>
         <name>Venin de vipère</name>
         <traits>
-          <trait>poison</trait>
+          <trait ref="trait-poison">poison</trait>
         </traits>
         <description>; **Jet de sauvegarde** Vigueur DD 16 ; **Durée maximale** 4 rounds ; **Stade 1** 1d8 poison (1 round)�</description>
       </special>

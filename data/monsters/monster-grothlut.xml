@@ -41,7 +41,7 @@
         <name>régurgitation digestive</name>
         <bonus>+7</bonus>
         <traits>
-          <trait>acide</trait>
+          <trait ref="trait-acide">acide</trait>
           <trait>éclabous-
                                                  sure</trait>
           <trait>facteur de portée 4,5 m</trait>

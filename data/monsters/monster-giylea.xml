@@ -7,7 +7,7 @@
     <level>16</level>
     <creatureTraits>
       <trait type="size" ref="trait-tres-grande">TRÈS GRANDE</trait>
-      <trait>ARCHON</trait>
+      <trait ref="trait-archon">ARCHON</trait>
       <trait ref="trait-celeste">CÉLESTE</trait>
       <trait ref="trait-saint">SAINT</trait>
     </creatureTraits>
@@ -40,7 +40,7 @@
                                            1
                                              langue de flammes +33 (feu</trait>
           <trait>sainte</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait>portée 9 m</trait>
         </traits>
         <damages>
@@ -54,7 +54,7 @@
     <spellList source="innate" tradition="divine" DD="37" attack="+29">
       <rank rank="9">
         <spells>
-          <spell>détonation de la magie</spell>
+          <spell ref="spell-detonation-de-la-magie">détonation de la magie</spell>
         </spells>
       </rank>
       <rank rank="8">
@@ -77,10 +77,10 @@
       <special type="activity" actions="1">
         <name>Focaliser le regard</name>
         <traits>
-          <trait>concentration</trait>
+          <trait ref="trait-concentration">concentration</trait>
           <trait ref="trait-divine">divine</trait>
-          <trait>mise hors de combat</trait>
-          <trait>visuel</trait>
+          <trait ref="trait-mise-hors-de-combat">mise hors de combat</trait>
+          <trait ref="trait-visuel">visuel</trait>
         </traits>
         <description>� Le giylea regarde fixement une créature qu’il peut voir dans un rayon de 9 m� La cible effectue immédiatement un jet de Volonté DD 37 contre les yeux omniscients de l’archon� Si la créature est soumise à un effet magique qui la déguise ou modifie sa forme, le giylea tente de contrer cet effet de déguisement magique (contre +29, rang 8)� Une fois qu’elle a fait son jet de sauvegarde, la cible est immunisée contre le regard du giylea jusqu’au début du prochain tour de ce dernier�</description>
       </special>

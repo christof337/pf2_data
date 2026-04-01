@@ -9,7 +9,7 @@
       <trait type="size" ref="trait-grande">GRANDE</trait>
       <trait ref="trait-elementaire">ÉLÉMENTAIRE</trait>
       <trait>GÉNIE</trait>
-      <trait>TERRE</trait>
+      <trait ref="trait-terre">TERRE</trait>
     </creatureTraits>
     <perception>
       <bonus>+15</bonus>
@@ -28,7 +28,7 @@
       <language>commun</language>
       <language>pétran</language>
       <langSpecial>
-        <spell>langage universel</spell>
+        <spell ref="spell-langage-universel">langage universel</spell>
       </langSpecial>
     </languages>
     <armorClass>25</armorClass>
@@ -44,7 +44,7 @@
         <traits>
           <trait>allonge 3 m</trait>
           <trait>balayage</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait>percutant +1</trait>
         </traits>
         <damages>
@@ -60,7 +60,7 @@
         <traits>
           <trait>agile</trait>
           <trait>allonge 3 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait>non létal</trait>
         </traits>
         <damages>
@@ -79,12 +79,12 @@
       </rank>
       <rank rank="5">
         <spells>
-          <spell>mur de pierre</spell>
+          <spell ref="spell-mur-de-pierre">mur de pierre</spell>
         </spells>
       </rank>
       <rank rank="4">
         <spells>
-          <spell spellSpecial="à volonté">façonnage de la pierre</spell>
+          <spell spellSpecial="à volonté" ref="spell-faconnage-de-la-pierre">façonnage de la pierre</spell>
         </spells>
       </rank>
     </spellList>
@@ -96,8 +96,8 @@
       <special>
         <name>Empoigne de la roche</name>
         <traits>
-          <trait>arcanique</trait>
-          <trait>terre</trait>
+          <trait ref="trait-arcanique">arcanique</trait>
+          <trait ref="trait-terre">terre</trait>
         </traits>
         <description>� Lorsque le jabali Bouscule une créature contre une barrière de pierre, la surface l’enserre avec des doigts faits de roche� La cible doit réussir un jet de Réflexes DD 22 ou être empoignée par la surface (DD 28 pour S’échapper)�</description>
       </special>

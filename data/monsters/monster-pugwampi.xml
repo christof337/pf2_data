@@ -91,7 +91,7 @@
     <spellList source="innate" tradition="primal" DD="16">
       <rank rank="2">
         <spells>
-          <spell spellSpecial="à volonté">communication avec les animaux</spell>
+          <spell spellSpecial="à volonté" ref="spell-communication-avec-les-animaux">communication avec les animaux</spell>
         </spells>
       </rank>
     </spellList>

@@ -55,7 +55,7 @@
       <special type="reaction">
         <name>Poussée soudaine</name>
         <traits>
-          <trait>attaque</trait>
+          <trait ref="trait-attaque">attaque</trait>
         </traits>
         <trigger>Le pachycéphalosaure inflige des dégâts à un adversaire de taille Moyenne ou plus petite avec sa Frappe de crâne ;</trigger>
         <effect>Le pachycépha- losaure se cabre et dresse sa tête vers le haut en projetant son adversaire� Il tente un test d’Athlétisme contre le DD de Vigueur de la cible�</effect>

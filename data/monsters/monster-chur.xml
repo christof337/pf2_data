@@ -54,7 +54,7 @@
         <traits>
           <trait>agile</trait>
           <trait ref="trait-finesse">finesse</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait ref="trait-saint">saint</trait>
         </traits>
         <damages>
@@ -68,10 +68,10 @@
         <name>hymne perçant</name>
         <bonus>+17</bonus>
         <traits>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait>portée 27 m</trait>
           <trait ref="trait-saint">saint</trait>
-          <trait>son</trait>
+          <trait ref="trait-son">son</trait>
         </traits>
         <damages>
           <damage>
@@ -94,7 +94,7 @@
       </rank>
       <rank rank="5" constant="TRUE">
         <spells>
-          <spell>langage universel</spell>
+          <spell ref="spell-langage-universel">langage universel</spell>
         </spells>
       </rank>
     </spellList>
@@ -110,9 +110,9 @@
       <special type="activity" actions="1">
         <name>Harmoniser</name>
         <traits>
-          <trait>concentration</trait>
+          <trait ref="trait-concentration">concentration</trait>
           <trait ref="trait-divine">divine</trait>
-          <trait>son</trait>
+          <trait ref="trait-son">son</trait>
         </traits>
         <description>� L’ange du Chœur fait bénéficier de son harmonie à un autre ange du Chœur allié qui se trouve dans son aura d’harmonisation� Lors de son pro- chain tour, cet allié peut dépenser son sort de rang 3 *explo‑ sion bruyante* pour lancer à la place *tranquiliser*, *heroïsme*, ou *explosion bruyante* au rang 4� Si cet allié cumule les effets de l’action Harmoniser d’au moins cinq autres anges du Chœur, il peut choisir de lancer à la place *décret divin*�</description>
       </special>

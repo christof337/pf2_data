@@ -7,7 +7,7 @@
     <level>1</level>
     <creatureTraits>
       <trait type="size" ref="trait-moyenne">MOYENNE</trait>
-      <trait>HUMANOÏDE</trait>
+      <trait ref="trait-humanoide">HUMANOÏDE</trait>
       <trait ref="trait-nain">NAIN</trait>
     </creatureTraits>
     <perception>

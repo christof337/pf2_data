@@ -73,7 +73,7 @@
       <special>
         <name>Venin de fourmi géante</name>
         <traits>
-          <trait>poison</trait>
+          <trait ref="trait-poison">poison</trait>
         </traits>
         <description>**Jet de sauvegarde** Vigueur DD 18 ; **Durée maximale** 4 rounds ;</description>
       </special>

@@ -83,7 +83,7 @@
       <special type="activity" actions="2">
         <name>Propulsion</name>
         <traits>
-          <trait>déplacement</trait>
+          <trait ref="trait-deplacement">déplacement</trait>
         </traits>
         <description>� Le grindylow se déplace dans l’eau jusqu’à 18 m en ligne droite sans déclencher de réactions�</description>
       </special>

@@ -61,7 +61,7 @@
       <special>
         <name>Suintements effroyables</name>
         <traits>
-          <trait>maladie</trait>
+          <trait ref="trait-maladie">maladie</trait>
         </traits>
         <description>**Jet de sauvegarde** Vigueur DD 19 ; **Stade 1** porteur sans effet néfaste (1 jour) ; **Stade 2** 2d4 dégâts de saignement persistants toutes les heures et affaibli 1 (1 jour) ; **Stade 3** 2d6 dégâts de saignement persistants toutes les heures et affaibli 2 (1 jour)</description>
       </special>

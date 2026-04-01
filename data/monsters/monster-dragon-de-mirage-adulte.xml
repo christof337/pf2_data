@@ -7,7 +7,7 @@
     <level>13</level>
     <creatureTraits>
       <trait type="size" ref="trait-tres-grande">TRÈS GRANDE</trait>
-      <trait>ARCANIQUE</trait>
+      <trait ref="trait-arcanique">ARCANIQUE</trait>
       <trait ref="trait-dragon">DRAGON</trait>
     </creatureTraits>
     <perception>
@@ -84,7 +84,7 @@
         <bonus>+25</bonus>
         <traits>
           <trait>allonge 4,5 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -99,7 +99,7 @@
         <traits>
           <trait>agile</trait>
           <trait>allonge 3 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -113,7 +113,7 @@
         <bonus>+23</bonus>
         <traits>
           <trait>allonge 6 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -139,7 +139,7 @@
       <special type="activity" actions="1">
         <name>Démonstration captivante</name>
         <traits>
-          <trait>arcanique</trait>
+          <trait ref="trait-arcanique">arcanique</trait>
           <trait>visuelle</trait>
         </traits>
         <description>**Fréquence.** Une fois toutes les 10 min�</description>

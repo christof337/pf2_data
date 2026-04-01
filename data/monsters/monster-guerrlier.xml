@@ -33,7 +33,7 @@
         <name>vague de cadavres</name>
         <bonus>+32</bonus>
         <traits>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -48,7 +48,7 @@
         <traits>
           <trait>agile</trait>
           <trait>allonge 30 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages/>
       </strike>
@@ -57,7 +57,7 @@
         <bonus>+28</bonus>
         <traits>
           <trait>facteur de portée 30 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -71,9 +71,9 @@
       <special type="activity" actions="0">
         <name>Absorption</name>
         <traits>
-          <trait>mort</trait>
+          <trait ref="trait-mort">mort</trait>
           <trait ref="trait-divine">divine</trait>
-          <trait>néant</trait>
+          <trait ref="trait-neant">néant</trait>
         </traits>
         <trigger>Le guerrlier se déplace dans l’espace d’une créature mourante ;</trigger>
         <effect>Le guerrlier absorbe la créature mourante dans son corps, ce qui tue cette der- nière immédiatement mais rend au guerrlier un nombre de PV égal au niveau de la créature� Tant que le guerrlier existe, il est impossible de ressusciter une créature absorbée, à moins d’user d’un *souhait *ou d’un effet tout aussi puissant�</effect>
@@ -82,7 +82,7 @@
         <name>Absorption d’énergie</name>
         <traits>
           <trait>divin</trait>
-          <trait>néant</trait>
+          <trait ref="trait-neant">néant</trait>
         </traits>
         <description>� Quand le guerr- lier touche avec une Frappe de vague de cadavres ou inflige des dégâts à une créature avec Piétinement, la cible doit réussir un jet de Vigueur DD 35, sinon elle est drainée 2 et condamnée 1� Sur un succès critique, la cible est immunisée contre l’ab- sorption d’énergie du guerrlier pendant 24 h�</description>
       </special>

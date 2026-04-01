@@ -8,7 +8,7 @@
     <creatureTraits>
       <trait type="size" ref="trait-petite">PETITE</trait>
       <trait ref="trait-aberration">ABERRATION</trait>
-      <trait>AIR</trait>
+      <trait ref="trait-air">AIR</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -44,8 +44,8 @@
         <name>foudre</name>
         <bonus>+17</bonus>
         <traits>
-          <trait>électricité</trait>
-          <trait>magique</trait>
+          <trait ref="trait-electricite">électricité</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -59,14 +59,14 @@
       <special type="activity" actions="1">
         <name>Se nourrir de la terreur</name>
         <traits>
-          <trait>concentration</trait>
+          <trait ref="trait-concentration">concentration</trait>
         </traits>
         <description>; **Fréquence** 1 fois/round ; **Conditions.** Un ennemi à moins de 4,5 m est affecté par un effet de terreur ou mourant ;</description>
       </special>
       <special type="activity" actions="1">
         <name>S’éteindre</name>
         <traits>
-          <trait>concentration</trait>
+          <trait ref="trait-concentration">concentration</trait>
         </traits>
         <description>� Le feu follet éteint sa lumière et devient invisible� Il peut mettre un terme à cet effet en utilisant de nouveau cette action� S’il utilise son attaque de foudre alors qu’il est invisible, l’arc électrique permet aux observateur de déterminer sa position� Il est alors seulement caché jusqu’à ce qu’il se déplace�</description>
       </special>

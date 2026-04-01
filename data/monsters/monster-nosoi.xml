@@ -68,7 +68,7 @@
         <traits>
           <trait>allonge 0 m</trait>
           <trait ref="trait-finesse">finesse</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -94,7 +94,7 @@
       <special type="activity" actions="1">
         <name>Changement de forme</name>
         <traits>
-          <trait>concentration</trait>
+          <trait ref="trait-concentration">concentration</trait>
           <trait ref="trait-divine">divine</trait>
           <trait>métamorphose</trait>
         </traits>
@@ -103,11 +103,11 @@
       <special type="activity" actions="1">
         <name>Mélodie envoûtante</name>
         <traits>
-          <trait>audible</trait>
-          <trait>concentration</trait>
+          <trait ref="trait-audible">audible</trait>
+          <trait ref="trait-concentration">concentration</trait>
           <trait ref="trait-divine">divine</trait>
-          <trait>mental</trait>
-          <trait>mise hors de combat</trait>
+          <trait ref="trait-mental">mental</trait>
+          <trait ref="trait-mise-hors-de-combat">mise hors de combat</trait>
         </traits>
         <description>� Le nosoi fredonne une chanson captivante� Chaque créature vivante ou morte-vivante dans une émanation de 18 m doit tenter un jet de Volonté DD 18� L’effet dure jusqu’à la fin du prochain tour du nosoi, mais ce dernier peut le Maintenir� Une créature qui réussit son jet de sauvegarde est immunisée pendant 24 h� Bien qu’il s’agisse d’un effet mental, ce pouvoir affecte les morts-vivants dénués d’intelligence� Les psychopompes sont immu- nisés contre ce pouvoir�</description>
       </special>

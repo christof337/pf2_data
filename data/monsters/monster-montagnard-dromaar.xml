@@ -7,9 +7,9 @@
     <level>2</level>
     <creatureTraits>
       <trait type="size" ref="trait-moyenne">MOYENNE</trait>
-      <trait>DROMAAR</trait>
+      <trait ref="trait-dromaar">DROMAAR</trait>
       <trait ref="trait-humain">HUMAIN</trait>
-      <trait>HUMANOÏDE</trait>
+      <trait ref="trait-humanoide">HUMANOÏDE</trait>
       <trait ref="trait-orc">ORC</trait>
     </creatureTraits>
     <perception>

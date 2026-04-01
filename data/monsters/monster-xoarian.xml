@@ -99,7 +99,7 @@
       <special type="activity" actions="1">
         <name>Extraction du corps</name>
         <traits>
-          <trait>déplacement</trait>
+          <trait ref="trait-deplacement">déplacement</trait>
         </traits>
         <description>**Condition.** Le xoarian contrôle un hôte avec Voleur de corps�</description>
       </special>
@@ -112,7 +112,7 @@
         <traits>
           <trait>manipulation</trait>
           <trait ref="trait-occulte">occulte</trait>
-          <trait>possession</trait>
+          <trait ref="trait-possession">possession</trait>
         </traits>
         <description>Le xoarian com- presse son corps pour entrer dans la tête d’une créature morte depuis moins d’un jour, consomme le cerveau encore présent et prend sa place� Au début du prochain tour du xoarian, le corps est réanimé avec son maximum de points de vie et il est contrôlé par le voleur de chair� Ce dernier est conscient et peut ressentir tout ce que ressentirait son hôte� Tout effet mettant fin à cette possession tue l’hôte avec les mêmes effets qu’Extraction du corps� Le xoarian ne peut pas utiliser les sorts de la créature hôte avec Voleur de corps, mais il peut utiliser ses propres sorts innés�</description>
       </special>

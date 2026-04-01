@@ -7,9 +7,9 @@
     <level>5</level>
     <creatureTraits>
       <trait type="size" ref="trait-grande">GRANDE</trait>
-      <trait>BOIS</trait>
+      <trait ref="trait-bois">BOIS</trait>
       <trait ref="trait-geant">GÉANT</trait>
-      <trait>HUMANOÏDE</trait>
+      <trait ref="trait-humanoide">HUMANOÏDE</trait>
       <trait>TROLLS</trait>
     </creatureTraits>
     <perception>

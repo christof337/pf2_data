@@ -7,7 +7,7 @@
     <level>14</level>
     <creatureTraits>
       <trait type="size" ref="trait-tres-grande">TRÈS GRANDE</trait>
-      <trait>ARCANIQUE</trait>
+      <trait ref="trait-arcanique">ARCANIQUE</trait>
       <trait ref="trait-dragon">DRAGON</trait>
     </creatureTraits>
     <perception>
@@ -67,7 +67,7 @@
         <bonus>+27</bonus>
         <traits>
           <trait>allonge 4,5 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -104,7 +104,7 @@
         <bonus>+25</bonus>
         <traits>
           <trait>allonge 6 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -142,8 +142,8 @@
       <special type="activity" actions="2">
         <name>Souffle perturbateur</name>
         <traits>
-          <trait>arcanique</trait>
-          <trait>force</trait>
+          <trait ref="trait-arcanique">arcanique</trait>
+          <trait ref="trait-force">force</trait>
         </traits>
         <description>Comme le jeune dragon de fortune, mais 13d6 dégâts de force, le cône fait 12 m et le DD est de 36�</description>
       </special>

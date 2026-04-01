@@ -7,7 +7,7 @@
     <level>2</level>
     <creatureTraits>
       <trait type="size" ref="trait-petite">PETITE</trait>
-      <trait>HUMANOÏDE</trait>
+      <trait ref="trait-humanoide">HUMANOÏDE</trait>
       <trait ref="trait-kobold">KOBOLD</trait>
     </creatureTraits>
     <perception>
@@ -74,10 +74,10 @@
       <special type="activity" actions="1">
         <name>Démonstration inspirante</name>
         <traits>
-          <trait>audible</trait>
-          <trait>émotion</trait>
-          <trait>linguistique</trait>
-          <trait>mental</trait>
+          <trait ref="trait-audible">audible</trait>
+          <trait ref="trait-emotion">émotion</trait>
+          <trait ref="trait-linguistique">linguistique</trait>
+          <trait ref="trait-mental">mental</trait>
         </traits>
         <description>; **Conditions.** Le mage des cavernes a Lancé un sort lors de son action précédente ;</description>
       </special>

@@ -8,7 +8,7 @@
     <creatureTraits>
       <trait type="size" ref="trait-grande">GRANDE</trait>
       <trait ref="trait-guenaude">GUENAUDE</trait>
-      <trait>HUMANOÏDE</trait>
+      <trait ref="trait-humanoide">HUMANOÏDE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -36,7 +36,7 @@
           <trait>agile</trait>
           <trait>allonge 3 m</trait>
           <trait>fer froid</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -50,7 +50,7 @@
         <bonus>+16</bonus>
         <traits>
           <trait>fer froid</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -64,7 +64,7 @@
       <special type="activity" actions="1">
         <name>Changement de forme</name>
         <traits>
-          <trait>concentration</trait>
+          <trait ref="trait-concentration">concentration</trait>
           <trait>métamorphose</trait>
           <trait ref="trait-occulte">occulte</trait>
         </traits>
@@ -81,7 +81,7 @@
       <special type="activity" actions="2">
         <name>Liens de fer</name>
         <traits>
-          <trait>attaque</trait>
+          <trait ref="trait-attaque">attaque</trait>
           <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>; **Fréquence **1 fois/jour ;</description>

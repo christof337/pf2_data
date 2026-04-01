@@ -8,7 +8,7 @@
     <creatureTraits>
       <trait type="size" ref="trait-tres-grande">TRÈS GRANDE</trait>
       <trait ref="trait-aquatique">AQUATIQUE</trait>
-      <trait>EAU</trait>
+      <trait ref="trait-eau">EAU</trait>
       <trait ref="trait-elementaire">ÉLÉMENTAIRE</trait>
     </creatureTraits>
     <perception>
@@ -49,8 +49,8 @@
       <special>
         <name>Vortex</name>
         <traits>
-          <trait>aura</trait>
-          <trait>eau</trait>
+          <trait ref="trait-aura">aura</trait>
+          <trait ref="trait-eau">eau</trait>
         </traits>
         <description>15 m� Comme la cas- cade vivante�</description>
       </special>
@@ -84,7 +84,7 @@
       <special type="activity" actions="1">
         <name>Tremper</name>
         <traits>
-          <trait>eau</trait>
+          <trait ref="trait-eau">eau</trait>
           <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>� Comme la cascade vivante mais avec une émanation de 6 m et un modificateur de contre de +20�</description>

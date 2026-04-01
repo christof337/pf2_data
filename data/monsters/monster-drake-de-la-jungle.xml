@@ -7,7 +7,7 @@
     <level>6</level>
     <creatureTraits>
       <trait type="size" ref="trait-grande">GRANDE</trait>
-      <trait>BOIS</trait>
+      <trait ref="trait-bois">BOIS</trait>
       <trait ref="trait-dragon">DRAGON</trait>
     </creatureTraits>
     <perception>
@@ -86,21 +86,21 @@
       <special type="activity" actions="2">
         <name>Projection de venin</name>
         <traits>
-          <trait>poison</trait>
+          <trait ref="trait-poison">poison</trait>
         </traits>
         <description>Un drake de la jungle peut cracher une masse gluante de venin qui traverse une distance maximale de 15 m avant de former une explosion de 3 m à l’impact� Les créatures prises dans la zone d’effet doivent réussir un jet de Réflexes DD 24 ou être exposées au venin du drake� Le drake de la jungle ne peut utiliser de nouveau ce pouvoir avant 1d6 rounds�</description>
       </special>
       <special>
         <name>Venin de drake de la jungle</name>
         <traits>
-          <trait>poison</trait>
+          <trait ref="trait-poison">poison</trait>
         </traits>
         <description>**Jet de sauvegarde** Vigueur DD 24 ; **Durée maxi‑ male** 6 rounds ; **Stade 1** 1d6 de poison et affaibli 1 (1 round) ; **Stade 2** 1d6 de poison et affaibli 2 (1 round)</description>
       </special>
       <special type="activity" actions="1">
         <name>Vitesse augmentée</name>
         <traits>
-          <trait>déplacement</trait>
+          <trait ref="trait-deplacement">déplacement</trait>
         </traits>
         <description>**Fréquence** trois fois par jour�</description>
       </special>

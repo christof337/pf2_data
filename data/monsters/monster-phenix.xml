@@ -7,7 +7,7 @@
     <level>15</level>
     <creatureTraits>
       <trait type="size" ref="trait-gigantesque">GIGANTESQUE</trait>
-      <trait>BÊTE</trait>
+      <trait ref="trait-bete">BÊTE</trait>
       <trait ref="trait-feu">FEU</trait>
     </creatureTraits>
     <perception>
@@ -58,7 +58,7 @@
           <trait>allonge 6 m</trait>
           <trait ref="trait-feu">feu</trait>
           <trait ref="trait-finesse">finesse</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -79,7 +79,7 @@
           <trait>allonge 6 m</trait>
           <trait ref="trait-feu">feu</trait>
           <trait ref="trait-finesse">finesse</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -119,7 +119,7 @@
       </rank>
       <rank rank="7">
         <spells>
-          <spell spellSpecial="à volonté">dissipation de la magie</spell>
+          <spell spellSpecial="à volonté" ref="spell-dissipation-de-la-magie">dissipation de la magie</spell>
         </spells>
       </rank>
       <rank rank="6">
@@ -129,7 +129,7 @@
       </rank>
       <rank rank="8" constant="TRUE">
         <spells>
-          <spell>détection de la magie</spell>
+          <spell ref="spell-detection-de-la-magie">détection de la magie</spell>
         </spells>
       </rank>
     </spellList>

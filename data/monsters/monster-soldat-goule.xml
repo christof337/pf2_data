@@ -77,7 +77,7 @@
       <special type="activity" actions="1">
         <name>Bond rapide</name>
         <traits>
-          <trait>déplacement</trait>
+          <trait ref="trait-deplacement">déplacement</trait>
         </traits>
         <description/>
       </special>
@@ -91,8 +91,8 @@
       <special type="activity" actions="1">
         <name>Murmures de la goule</name>
         <traits>
-          <trait>audible</trait>
-          <trait>linguistique</trait>
+          <trait ref="trait-audible">audible</trait>
+          <trait ref="trait-linguistique">linguistique</trait>
           <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>DD 18</description>

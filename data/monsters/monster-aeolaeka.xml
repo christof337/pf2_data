@@ -7,10 +7,10 @@
     <level>12</level>
     <creatureTraits>
       <trait type="size" ref="trait-grande">GRANDE</trait>
-      <trait>AZATA</trait>
+      <trait ref="trait-azata">AZATA</trait>
       <trait ref="trait-celeste">CÉLESTE</trait>
       <trait ref="trait-saint">SAINT</trait>
-      <trait>TERRE</trait>
+      <trait ref="trait-terre">TERRE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -64,7 +64,7 @@
       </rank>
       <rank rank="3">
         <spells>
-          <spell spellSpecial="à volonté">cloué à terre</spell>
+          <spell spellSpecial="à volonté" ref="spell-cloue-a-terre">cloué à terre</spell>
         </spells>
       </rank>
       <rank rank="5" constant="TRUE">
@@ -81,9 +81,9 @@
       <special type="activity" actions="2">
         <name>Libérer la terre</name>
         <traits>
-          <trait>concentration</trait>
+          <trait ref="trait-concentration">concentration</trait>
           <trait ref="trait-divine">divine</trait>
-          <trait>terre</trait>
+          <trait ref="trait-terre">terre</trait>
         </traits>
         <description>� L’aeolaeka invoque un tourbillon de pierres et crée une avalanche de pierres sur une ligne de 18 m� Les créatures qui se trouvent sur la ligne d’effet subissent 10d6 dégâts contondants (jet de Réflexes DD 35)� La zone affectée devient un terrain difficile pendant 24 h au terme desquelles les pierres se désagrègent� L’aeolaeka ne peut plus Libérer la terre pen- dant 1d4 rounds�</description>
       </special>
@@ -106,7 +106,7 @@
       <special type="activity" actions="1">
         <name>Statue</name>
         <traits>
-          <trait>concentration</trait>
+          <trait ref="trait-concentration">concentration</trait>
         </traits>
         <description>� L’aeolaeka ressemble en tout point à une statue jusqu’à sa prochaine action� Il bénéficie d’un résultat automatique de 45 à ses tests de Duperie et à ses DD pour se faire passer pour une statue�</description>
       </special>

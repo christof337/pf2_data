@@ -76,7 +76,7 @@
       <special type="activity" actions="2">
         <name>Souffle de flammes</name>
         <traits>
-          <trait>arcanique</trait>
+          <trait ref="trait-arcanique">arcanique</trait>
           <trait ref="trait-feu">feu</trait>
         </traits>
         <description>� Le galapiat de feu crache des flammes dans un cône de 4,5 m qui inflige 2d4 dégâts de feu à chaque créature dans la zone (jet de Réflexes basique DD 17)� Les créatures qui ratent leur jet de sauvegarde subissent également 1d4 dégâts de feu persistants� Le galapiat de feu ne peut plus utiliser souffle de flammes pendant 1d4 rounds�</description>

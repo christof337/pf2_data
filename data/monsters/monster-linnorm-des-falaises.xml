@@ -44,7 +44,7 @@
         <bonus>+30</bonus>
         <traits>
           <trait>allonge 6 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -59,7 +59,7 @@
         <traits>
           <trait>agile</trait>
           <trait>allonge 6 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -74,7 +74,7 @@
         <traits>
           <trait>agile</trait>
           <trait>allonge 6 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -87,7 +87,7 @@
     <spellList source="innate" tradition="primal" DD="33">
       <rank rank="6" constant="TRUE">
         <spells>
-          <spell>déplacement sans entrave</spell>
+          <spell ref="spell-deplacement-sans-entrave">déplacement sans entrave</spell>
         </spells>
       </rank>
     </spellList>
@@ -108,7 +108,7 @@
         <name>Venin de linnorm des falaises</name>
         <traits>
           <trait ref="trait-feu">feu</trait>
-          <trait>poison</trait>
+          <trait ref="trait-poison">poison</trait>
         </traits>
         <description>; **Jet de sauve‑ garde** Vigueur DD 34 ; **Durée maximale** 10 rounds ; **Stade 1** 4d6 dégâts de feu et drainé 1 (1 round) ; **Stade 2** 6d6 dégâts de feu et drainé 2 (1 round)</description>
       </special>

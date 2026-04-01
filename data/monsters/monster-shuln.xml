@@ -7,7 +7,7 @@
     <level>12</level>
     <creatureTraits>
       <trait type="size" ref="trait-tres-grande">TRÈS GRANDE</trait>
-      <trait>BÊTE</trait>
+      <trait ref="trait-bete">BÊTE</trait>
     </creatureTraits>
     <perception>
       <bonus>+20</bonus>
@@ -88,8 +88,8 @@
       <special>
         <name>Salive de shuln</name>
         <traits>
-          <trait>mise hors de combat</trait>
-          <trait>poison</trait>
+          <trait ref="trait-mise-hors-de-combat">mise hors de combat</trait>
+          <trait ref="trait-poison">poison</trait>
         </traits>
         <description>; **Jet de sauvegarde** Vigueur DD 32 ; **Durée maximale** 6 rounds ; **Stade 1** 2d6 dégâts de poi- son et ralenti 1 (1 round) ; **Stade 2** 3d6 dégâts de poison et ralenti 1 (1 round) ; **Stade 3** 4d6 dégâts de poison et paralysé pendant 2d6 heures� La salive de shuln prend le pas sur le pouvoir inexorable�</description>
       </special>

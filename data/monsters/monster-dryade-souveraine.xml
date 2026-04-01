@@ -7,10 +7,10 @@
     <level>13</level>
     <creatureTraits>
       <trait type="size" ref="trait-moyenne">MOYENNE</trait>
-      <trait>BOIS</trait>
+      <trait ref="trait-bois">BOIS</trait>
       <trait ref="trait-fee">FÉE</trait>
       <trait>NYMPHE</trait>
-      <trait>PLANTE</trait>
+      <trait ref="trait-plante">PLANTE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -82,7 +82,7 @@
         <bonus>+27</bonus>
         <traits>
           <trait ref="trait-finesse">finesse</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -96,7 +96,7 @@
         <bonus>+27</bonus>
         <traits>
           <trait>facteur de portée 18 m</trait>
-          <trait>plante</trait>
+          <trait ref="trait-plante">plante</trait>
           <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <damages>
@@ -149,11 +149,11 @@
       <special type="activity" actions="1">
         <name>Focaliser la beauté</name>
         <traits>
-          <trait>émotion</trait>
-          <trait>mental</trait>
-          <trait>mise hors de combat</trait>
+          <trait ref="trait-emotion">émotion</trait>
+          <trait ref="trait-mental">mental</trait>
+          <trait ref="trait-mise-hors-de-combat">mise hors de combat</trait>
           <trait ref="trait-primordiale">primordiale</trait>
-          <trait>visuel</trait>
+          <trait ref="trait-visuel">visuel</trait>
         </traits>
         <description>� En cas d’échec au jet de sauvegarde, si la cible était déjà affectée par la beauté de la dryade souveraine, elle ne peut utiliser d’action hostile contre elle pendant 1 h�</description>
       </special>
@@ -167,8 +167,8 @@
       <special type="activity" actions="3">
         <name>Inspiration</name>
         <traits>
-          <trait>émotion</trait>
-          <trait>mental</trait>
+          <trait ref="trait-emotion">émotion</trait>
+          <trait ref="trait-mental">mental</trait>
           <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description/>

@@ -8,7 +8,7 @@
     <creatureTraits>
       <trait type="size" ref="trait-petite">PETITE</trait>
       <trait ref="trait-gnome">GNOME</trait>
-      <trait>HUMANOÏDE</trait>
+      <trait ref="trait-humanoide">HUMANOÏDE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -96,9 +96,9 @@
       <special type="activity" actions="1">
         <name>Dansons la gigue</name>
         <traits>
-          <trait>audible</trait>
-          <trait>mental</trait>
-          <trait>mise hors de combat</trait>
+          <trait ref="trait-audible">audible</trait>
+          <trait ref="trait-mental">mental</trait>
+          <trait ref="trait-mise-hors-de-combat">mise hors de combat</trait>
           <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>� Le gnome barde joue une mélodie qui incite les autres à danser� Une créature à moins de 9 m doit effectuer un jet de Volonté DD 19�</description>

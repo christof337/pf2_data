@@ -8,7 +8,7 @@
     <creatureTraits>
       <trait type="size" ref="trait-petite">PETITE</trait>
       <trait>DERO</trait>
-      <trait>HUMANOÏDE</trait>
+      <trait ref="trait-humanoide">HUMANOÏDE</trait>
     </creatureTraits>
     <perception>
       <bonus>+5</bonus>
@@ -95,7 +95,7 @@
       <special type="activity" actions="1">
         <name>Médecine dero</name>
         <traits>
-          <trait>guérison</trait>
+          <trait ref="trait-guerison">guérison</trait>
           <trait>manipulation</trait>
         </traits>
         <description>; **Conditions.** Le dero porte sur lui du matériel en cytillesh et a une main libre ;</description>

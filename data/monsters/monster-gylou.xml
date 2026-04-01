@@ -8,7 +8,7 @@
     <creatureTraits>
       <trait type="size" ref="trait-moyenne">MOYENNE</trait>
       <trait ref="trait-diable">DIABLE</trait>
-      <trait>FIÉLON</trait>
+      <trait ref="trait-fielon">FIÉLON</trait>
       <trait ref="trait-impie">IMPIE</trait>
     </creatureTraits>
     <perception>
@@ -72,7 +72,7 @@
           <trait>allonge 3 m</trait>
           <trait ref="trait-finesse">finesse</trait>
           <trait ref="trait-impie">impie</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -88,7 +88,7 @@
           <trait>agile</trait>
           <trait ref="trait-finesse">finesse</trait>
           <trait ref="trait-impie">impie</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -116,7 +116,7 @@
       </rank>
       <rank rank="7" constant="TRUE">
         <spells>
-          <spell>discernement</spell>
+          <spell ref="spell-discernement">discernement</spell>
         </spells>
       </rank>
     </spellList>
@@ -124,14 +124,14 @@
       <special type="activity" actions="1">
         <name>Cage tentaculaire</name>
         <traits>
-          <trait>attaque</trait>
+          <trait ref="trait-attaque">attaque</trait>
         </traits>
         <description>; **Conditions.** Une créature de Petite ou Moyenne taille est empoignée ou entravée par le gylou ;</description>
       </special>
       <special type="activity" actions="1">
         <name>Changement de forme</name>
         <traits>
-          <trait>concentration</trait>
+          <trait ref="trait-concentration">concentration</trait>
           <trait ref="trait-divine">divine</trait>
           <trait>métamorphose</trait>
         </traits>

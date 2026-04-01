@@ -7,7 +7,7 @@
     <level>1</level>
     <creatureTraits>
       <trait type="size" ref="trait-tres-petite">TRÈS PETITE</trait>
-      <trait>FIÉLON</trait>
+      <trait ref="trait-fielon">FIÉLON</trait>
       <trait ref="trait-impie">IMPIE</trait>
       <trait ref="trait-qlippoth">QLIPPOTH</trait>
     </creatureTraits>
@@ -44,7 +44,7 @@
           <trait>allonge 0 m</trait>
           <trait ref="trait-finesse">finesse</trait>
           <trait ref="trait-impie">impie</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -62,12 +62,12 @@
       <special type="activity" actions="1">
         <name>Démonstration écœurante</name>
         <traits>
-          <trait>concentration</trait>
-          <trait>émotion</trait>
-          <trait>mental</trait>
+          <trait ref="trait-concentration">concentration</trait>
+          <trait ref="trait-emotion">émotion</trait>
+          <trait ref="trait-mental">mental</trait>
           <trait ref="trait-occulte">occulte</trait>
-          <trait>terreur</trait>
-          <trait>visuel</trait>
+          <trait ref="trait-terreur">terreur</trait>
+          <trait ref="trait-visuel">visuel</trait>
         </traits>
         <description>� Le cythnigote révèle toute l’horreur de son apparence et oblige les créatures situées dans une émanation de 3 m à faire un jet de Volonté DD 17� Une fois qu’une créature a fait ce jet, elle est immunisée contre la Démonstration écœurante pendant 1 min�</description>
       </special>
@@ -90,7 +90,7 @@
       <special>
         <name>Enchevêtrement de spores</name>
         <traits>
-          <trait>maladie</trait>
+          <trait ref="trait-maladie">maladie</trait>
         </traits>
         <description>� Si un cythnigote mord une créature, il lui inocule des spores qui se développent rapidement et forment des épines frémissantes et des paquets de hideuses fibres blafardes aussi fines que des cheveux� Ces excroissances poussent au niveau de la plaie et s’enroulent autour des membres de la créature� Les créatures végétales subissent un malus de circonstances de −2 au jet de sauvegarde contre ce pouvoir ; **Jet de sauvegarde** Vigueur DD 17 ; **Durée maximale** 6 rounds ; **Stade 1** mala- droit 1 (1 round) ; **Stade 2** maladroit 1 et pris par surprise (1 round) ; **Stade 3 **maladroit 2, pris par surprise et si vous tentez une action de manipulation, vous devez réussir un test nu DD 5, sinon cette action est perdue� Le dé se lance après avoir dépensé l’action, mais avant d’appliquer un quelconque effet (1 round)�</description>
       </special>

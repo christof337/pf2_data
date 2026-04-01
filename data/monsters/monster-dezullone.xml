@@ -7,7 +7,7 @@
     <level>10</level>
     <creatureTraits>
       <trait type="size" ref="trait-moyenne">MOYENNE</trait>
-      <trait>PLANTE</trait>
+      <trait ref="trait-plante">PLANTE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -41,7 +41,7 @@
         <name>liane</name>
         <bonus>+21</bonus>
         <traits>
-          <trait>acide</trait>
+          <trait ref="trait-acide">acide</trait>
           <trait>agile</trait>
         </traits>
         <damages>
@@ -59,7 +59,7 @@
         <name>globe d’acide</name>
         <bonus>+23</bonus>
         <traits>
-          <trait>acide</trait>
+          <trait ref="trait-acide">acide</trait>
           <trait>portée 9 m</trait>
         </traits>
         <damages>
@@ -78,15 +78,15 @@
       <special type="activity" actions="1">
         <name>Enracinement</name>
         <traits>
-          <trait>concentration</trait>
+          <trait ref="trait-concentration">concentration</trait>
         </traits>
         <description>� Jusqu’à sa prochaine action, la dézullone a l’air d’une plante carnivore normale� Elle dispose d’un résultat automatique de 41 (44 dans les forêts et les marais) pour les tests de Duperie et les DD visant à se faire passer pour une plante normale�</description>
       </special>
       <special>
         <name>Venin d’amnésie</name>
         <traits>
-          <trait>mental</trait>
-          <trait>poison</trait>
+          <trait ref="trait-mental">mental</trait>
+          <trait ref="trait-poison">poison</trait>
         </traits>
         <description>; **Jet de sauvegarde** Vigueur DD 29 ;</description>
       </special>

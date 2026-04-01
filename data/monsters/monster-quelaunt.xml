@@ -47,7 +47,7 @@
         <traits>
           <trait>agile</trait>
           <trait>allonge 3 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -65,17 +65,17 @@
       </rank>
       <rank rank="3">
         <spells>
-          <spell spellSpecial="à volonté">terreur</spell>
+          <spell spellSpecial="à volonté" ref="spell-terreur">terreur</spell>
         </spells>
       </rank>
       <rank rank="2">
         <spells>
-          <spell>rire incontrôlable</spell>
+          <spell ref="spell-rire-incontrolable">rire incontrôlable</spell>
         </spells>
       </rank>
       <rank rank="4" constant="TRUE">
         <spells>
-          <spell>vol</spell>
+          <spell ref="spell-vol">vol</spell>
         </spells>
       </rank>
     </spellList>
@@ -83,9 +83,9 @@
       <special type="activity" actions="1">
         <name>Absorption des émotions</name>
         <traits>
-          <trait>émotion</trait>
-          <trait>mental</trait>
-          <trait>mise hors de combat</trait>
+          <trait ref="trait-emotion">émotion</trait>
+          <trait ref="trait-mental">mental</trait>
+          <trait ref="trait-mise-hors-de-combat">mise hors de combat</trait>
         </traits>
         <description>;</description>
       </special>
@@ -100,7 +100,7 @@
       <special type="activity" actions="2">
         <name>Frappes rapides</name>
         <traits>
-          <trait>attaque</trait>
+          <trait ref="trait-attaque">attaque</trait>
         </traits>
         <description>� Le quelaunt porte trois Frappe au corps à corps� Chacune est dirigée contre une cible différente qui se trouve à portée� Le malus d’attaques multiples s’applique à chaque attaque mais n’augmente qu’une fois toutes les attaques portées�</description>
       </special>
@@ -111,8 +111,8 @@
       <special type="activity" actions="0">
         <name>Spirale du désespoir</name>
         <traits>
-          <trait>émotion</trait>
-          <trait>mental</trait>
+          <trait ref="trait-emotion">émotion</trait>
+          <trait ref="trait-mental">mental</trait>
         </traits>
         <trigger>Une créature échoue à un jet de sauvegarde contre un sort inné ou un sort de focalisation émotionnelle du quelaunt ;</trigger>
         <effect>En même temps que le quelaunt envahit l’esprit de la créature ayant déclenché l’effet pour y implanter les graines d’émotions négatives, il la dépouille de tout sentiment d’espoir ou d’optimisme� Le quelaunt peut immédiatement mettre un terme à un effet émotionnel dont bénéficie cette créature�</effect>

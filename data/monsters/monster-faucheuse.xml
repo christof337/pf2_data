@@ -59,7 +59,7 @@
       <special>
         <name>Aura d’infortune</name>
         <traits>
-          <trait>aura</trait>
+          <trait ref="trait-aura">aura</trait>
           <trait ref="trait-divine">divine</trait>
           <trait>infortune</trait>
         </traits>
@@ -73,7 +73,7 @@
         <name>Mort qui rôde</name>
         <traits>
           <trait ref="trait-divine">divine</trait>
-          <trait>téléportation</trait>
+          <trait ref="trait-teleportation">téléportation</trait>
         </traits>
         <trigger>Une créature dans un rayon de 30 m effectue une attaque à distance ou utilise une action dotée du trait concentration, mani- pulation ou déplacement ;</trigger>
         <effect>La Faucheuse se téléporte dans une case adjacente à la créature ayant déclenché cet effet et effectue une Frappe au corps à corps contre elle� Si sa Frappe touche, la Faucheuse interrompt l’action�</effect>

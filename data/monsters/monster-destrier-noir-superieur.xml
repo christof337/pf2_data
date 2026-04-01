@@ -7,8 +7,8 @@
     <level>11</level>
     <creatureTraits>
       <trait type="size" ref="trait-tres-grande">TRÈS GRANDE</trait>
-      <trait>BÊTE</trait>
-      <trait>FIÉLON</trait>
+      <trait ref="trait-bete">BÊTE</trait>
+      <trait ref="trait-fielon">FIÉLON</trait>
       <trait ref="trait-impie">IMPIE</trait>
     </creatureTraits>
     <perception>
@@ -42,7 +42,7 @@
       <special>
         <name>Fumée</name>
         <traits>
-          <trait>aura</trait>
+          <trait ref="trait-aura">aura</trait>
         </traits>
         <description>6 m� Comme le destrier noir, mais DD 28�</description>
       </special>
@@ -60,7 +60,7 @@
         <bonus>+24</bonus>
         <traits>
           <trait ref="trait-impie">impie</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -76,7 +76,7 @@
           <trait>agile</trait>
           <trait ref="trait-feu">feu</trait>
           <trait ref="trait-impie">impie</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>

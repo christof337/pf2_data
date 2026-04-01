@@ -7,7 +7,7 @@
     <level>4</level>
     <creatureTraits>
       <trait type="size" ref="trait-moyenne">MOYENNE</trait>
-      <trait>HUMANOÏDE</trait>
+      <trait ref="trait-humanoide">HUMANOÏDE</trait>
       <trait ref="trait-nain">NAIN</trait>
     </creatureTraits>
     <perception>
@@ -93,7 +93,7 @@
         <name>Pas du roc</name>
         <traits>
           <trait ref="trait-primordiale">primordiale</trait>
-          <trait>terre</trait>
+          <trait ref="trait-terre">terre</trait>
         </traits>
         <description>Le maître de la roche invoque un rocher qui se met à rouler et inflige 5d6 dégâts contondants à chaque créature sur une ligne de 18 m (jet de Réflexes basique DD 21)� Le maître de la roche ne peut plus utiliser Pas du roc pendant 1d4 rounds�</description>
       </special>
@@ -101,7 +101,7 @@
         <name>Séisme</name>
         <traits>
           <trait ref="trait-primordiale">primordiale</trait>
-          <trait>terre</trait>
+          <trait ref="trait-terre">terre</trait>
         </traits>
         <description>Le maître de la roche fait trembler la terre� Chaque créa- ture en contact avec le sol dans une émanation de 3 m subit 2d8 dégâts contondants (jet de Vigueur basique DD 21)� Une créature qui obtient un échec critique à ce test est également projetée à terre�</description>
       </special>

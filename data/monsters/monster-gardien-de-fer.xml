@@ -44,7 +44,7 @@
         <bonus>+28</bonus>
         <traits>
           <trait>allonge 3 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -62,15 +62,15 @@
       <special>
         <name>Poison du gardien de fer</name>
         <traits>
-          <trait>poison</trait>
+          <trait ref="trait-poison">poison</trait>
         </traits>
         <description>� L’intensité drainé qu’inflige ce poison dimi- nue de 1 par heure ; **Jet de sauvegarde** Vigueur DD 33 ; **Durée maximale** 4 rounds ; **Stade 1** 2d6 poison et drainé 1 (1 round) ; **Stade 2** 4d6 poison et drainé 2 (1 round) ; **Stade 3** 8d6 poison et drainé 3 (1 round)</description>
       </special>
       <special type="activity" actions="2">
         <name>Souffle empoisonné</name>
         <traits>
-          <trait>arcanique</trait>
-          <trait>poison</trait>
+          <trait ref="trait-arcanique">arcanique</trait>
+          <trait ref="trait-poison">poison</trait>
         </traits>
         <description>� Le gardien de fer exhale un gaz empoisonné dans une explosion de 3 m centrée sur l’un des angles d’une des cases qu’il occupe� Le gaz persiste jusqu’au début de son prochain tour� Toute créature dans la zone (ou qui y pénètre) est exposée au poison du gardien de fer� Le gardien ne peut plus utiliser Souffle empoisonné pendant 1d4 rounds�</description>
       </special>

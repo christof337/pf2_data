@@ -98,7 +98,7 @@
       <special type="activity" actions="1" ref="ability-gober">
         <name>Gober</name>
         <traits>
-          <trait>attaque</trait>
+          <trait ref="trait-attaque">attaque</trait>
         </traits>
         <description>Grande, 1d10+7 contondants, Rupture 21 (p� 359)</description>
       </special>

@@ -50,11 +50,11 @@
       <special type="activity" actions="2">
         <name>Hurlement sinistre</name>
         <traits>
-          <trait>audible</trait>
-          <trait>émotion</trait>
-          <trait>mental</trait>
-          <trait>mise hors de combat</trait>
-          <trait>terreur</trait>
+          <trait ref="trait-audible">audible</trait>
+          <trait ref="trait-emotion">émotion</trait>
+          <trait ref="trait-mental">mental</trait>
+          <trait ref="trait-mise-hors-de-combat">mise hors de combat</trait>
+          <trait ref="trait-terreur">terreur</trait>
         </traits>
         <description>� Le revenant pousse une plainte atroce� Chaque créature dans une explosion de 18 m doit faire un jet de Volonté DD 23� Quel que soit le résultat, la créature est ensuite immunisée contre Hurlement sinistre pendant 1 h� L’assassin du revenant n’améliore jamais son degré de succès comme l’y autorise normalement le trait mise hors de combat de ce pouvoir� Le revenant ne peut plus utiliser Hurlement sinistre pendant 1d4 rounds�</description>
       </special>

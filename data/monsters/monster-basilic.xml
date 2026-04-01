@@ -7,7 +7,7 @@
     <level>5</level>
     <creatureTraits>
       <trait type="size" ref="trait-moyenne">MOYENNE</trait>
-      <trait>BÊTE</trait>
+      <trait ref="trait-bete">BÊTE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -41,9 +41,9 @@
       <special type="reaction">
         <name>Coup d’œil pétrifiant</name>
         <traits>
-          <trait>arcanique</trait>
-          <trait>aura</trait>
-          <trait>visuel</trait>
+          <trait ref="trait-arcanique">arcanique</trait>
+          <trait ref="trait-aura">aura</trait>
+          <trait ref="trait-visuel">visuel</trait>
         </traits>
         <trigger>� Une créature qui se trouve dans un rayon de 9 m autour du basilic commence son tour ;</trigger>
         <effect>La cible fait un jet de Vigueur DD 20� En cas d’échec, elle est ralentie 1 pendant 1 min alors que son corps se raidit progressivement�</effect>

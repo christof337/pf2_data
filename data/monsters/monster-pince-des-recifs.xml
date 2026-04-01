@@ -54,7 +54,7 @@
       <special>
         <name>Venin de pince des récifs</name>
         <traits>
-          <trait>poison</trait>
+          <trait ref="trait-poison">poison</trait>
         </traits>
         <description>; **Jet de sauvegarde** Vigueur DD 17 ; **Durée maximale** 4 rounds ; **Stade 1** 1d6 dégâts de poison et affaibli 1 (1 round), **Stade 2** 1d6 dégâts de poison et affaibli 2 (1 round)�</description>
       </special>

@@ -8,7 +8,7 @@
     <creatureTraits>
       <trait type="size" ref="trait-gigantesque">GIGANTESQUE</trait>
       <trait>DÉMONS</trait>
-      <trait>FIÉLON</trait>
+      <trait ref="trait-fielon">FIÉLON</trait>
       <trait ref="trait-impie">IMPIE</trait>
     </creatureTraits>
     <perception>

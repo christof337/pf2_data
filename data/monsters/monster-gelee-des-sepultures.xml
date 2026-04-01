@@ -54,8 +54,8 @@
       <special type="activity" actions="1">
         <name>Liés dans la mort</name>
         <traits>
-          <trait>guérison</trait>
-          <trait>néant</trait>
+          <trait ref="trait-guerison">guérison</trait>
+          <trait ref="trait-neant">néant</trait>
         </traits>
         <description>� La gelée des sépultures projette un peu de sa substance sur une créature morte-vivante consentante qui se trouve à sa portée� La cible regagne 5 PV et ses Frappes de corps à corps gagnent le pouvoir malédiction des sépultures jusqu’à la fin de son prochain tour�</description>
       </special>
@@ -63,8 +63,8 @@
         <name>Malédiction des sépultures</name>
         <traits>
           <trait ref="trait-divine">divine</trait>
-          <trait>malédiction</trait>
-          <trait>néant</trait>
+          <trait ref="trait-malediction">malédiction</trait>
+          <trait ref="trait-neant">néant</trait>
         </traits>
         <description>� Une créature touchée par un pseudo- pode d’une gelée des sépultures subit 1d6 dégâts persistants de néant� Si la créature meurt alors qu’elle subit ces dégâts persistants, son cadavre est affecté par *conservation du corps*, sauf que la gelée des sépultures peut encore dissoudre sa chair�</description>
       </special>

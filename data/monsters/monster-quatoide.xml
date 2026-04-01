@@ -8,7 +8,7 @@
     <creatureTraits>
       <trait type="size" ref="trait-petite">PETITE</trait>
       <trait ref="trait-aquatique">AQUATIQUE</trait>
-      <trait>EAU</trait>
+      <trait ref="trait-eau">EAU</trait>
       <trait ref="trait-elementaire">ÉLÉMENTAIRE</trait>
     </creatureTraits>
     <perception>
@@ -76,7 +76,7 @@
     <spellList source="innate" tradition="primal" DD="27" attack="+17">
       <rank rank="2">
         <spells>
-          <spell spellSpecial="à volonté">poussée hydraulique</spell>
+          <spell spellSpecial="à volonté" ref="spell-poussee-hydraulique">poussée hydraulique</spell>
         </spells>
       </rank>
     </spellList>

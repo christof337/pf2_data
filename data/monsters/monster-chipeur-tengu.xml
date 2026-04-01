@@ -7,7 +7,7 @@
     <level>2</level>
     <creatureTraits>
       <trait type="size" ref="trait-moyenne">MOYENNE</trait>
-      <trait>HUMANOÏDE</trait>
+      <trait ref="trait-humanoide">HUMANOÏDE</trait>
       <trait>TENGU</trait>
     </creatureTraits>
     <perception>
@@ -80,7 +80,7 @@
       <special type="activity" actions="2">
         <name>Poussière d’éventail</name>
         <traits>
-          <trait>air</trait>
+          <trait ref="trait-air">air</trait>
           <trait ref="trait-divine">divine</trait>
         </traits>
         <description>; **Fréquence** 1 fois toutes les 10 min ;</description>

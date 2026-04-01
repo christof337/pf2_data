@@ -8,7 +8,7 @@
     <creatureTraits>
       <trait type="size" ref="trait-moyenne">MOYENNE</trait>
       <trait>DAÉMONS</trait>
-      <trait>FIÉLON</trait>
+      <trait ref="trait-fielon">FIÉLON</trait>
       <trait ref="trait-impie">IMPIE</trait>
     </creatureTraits>
     <perception>
@@ -67,7 +67,7 @@
           <trait>allonge 3 m</trait>
           <trait ref="trait-finesse">finesse</trait>
           <trait ref="trait-impie">impie</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -92,8 +92,8 @@
       <special type="activity" actions="1">
         <name>Force résiduelle</name>
         <traits>
-          <trait>arcanique</trait>
-          <trait>force</trait>
+          <trait ref="trait-arcanique">arcanique</trait>
+          <trait ref="trait-force">force</trait>
         </traits>
         <description>; **Conditions.** La dernière action du véné- daémon consistait à Lancer un sort ;</description>
       </special>

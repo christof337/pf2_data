@@ -50,7 +50,7 @@
         <traits>
           <trait>allonge
                                                     4,5 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait>mortel 2d10</trait>
         </traits>
         <damages>
@@ -65,8 +65,8 @@
       <special>
         <name>Fossilisation</name>
         <traits>
-          <trait>arcanique</trait>
-          <trait>mise hors de combat</trait>
+          <trait ref="trait-arcanique">arcanique</trait>
+          <trait ref="trait-mise-hors-de-combat">mise hors de combat</trait>
         </traits>
         <description>� La première fois à chaque round qu’une créature subit des dégâts des mâchoires d’un paléohemoth, elle doit effectuer un jet de Vigueur DD 32� Si elle échoue et qu’elle n’a pas déjà été ralentie par ce pouvoir, elle est ralentie 1 pendant 1 min� Si une créature déjà ralentie par ce pouvoir rate son jet de sauvegarde, elle est pétrifiée de manière permanente�</description>
       </special>

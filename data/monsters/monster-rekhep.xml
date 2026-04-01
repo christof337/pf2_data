@@ -7,7 +7,7 @@
     <level>10</level>
     <creatureTraits>
       <trait type="size" ref="trait-grande">GRANDE</trait>
-      <trait>ARCHON</trait>
+      <trait ref="trait-archon">ARCHON</trait>
       <trait ref="trait-celeste">CÉLESTE</trait>
       <trait ref="trait-saint">SAINT</trait>
     </creatureTraits>

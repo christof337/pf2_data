@@ -8,7 +8,7 @@
     <creatureTraits>
       <trait type="size" ref="trait-petite">PETITE</trait>
       <trait ref="trait-demon">DÉMON</trait>
-      <trait>FIÉLON</trait>
+      <trait ref="trait-fielon">FIÉLON</trait>
       <trait ref="trait-impie">IMPIE</trait>
     </creatureTraits>
     <perception>
@@ -62,7 +62,7 @@
         <bonus>+10</bonus>
         <traits>
           <trait ref="trait-impie">impie</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -77,7 +77,7 @@
         <traits>
           <trait>agile</trait>
           <trait ref="trait-impie">impie</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -90,7 +90,7 @@
     <spellList source="innate" tradition="divine" DD="16">
       <rank rank="3">
         <spells>
-          <spell>lenteur</spell>
+          <spell ref="spell-lenteur">lenteur</spell>
         </spells>
       </rank>
     </spellList>

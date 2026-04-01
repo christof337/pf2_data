@@ -55,7 +55,7 @@
         <traits>
           <trait>agile</trait>
           <trait ref="trait-finesse">finesse</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -72,8 +72,8 @@
         <name>rayon de feu</name>
         <bonus>+25</bonus>
         <traits>
-          <trait>arcanique</trait>
-          <trait>magique</trait>
+          <trait ref="trait-arcanique">arcanique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait>portée 30 m</trait>
         </traits>
         <damages>
@@ -111,7 +111,7 @@
       </rank>
       <rank rank="2">
         <spells>
-          <spell spellSpecial="à volonté">objet illusoire</spell>
+          <spell spellSpecial="à volonté" ref="spell-objet-illusoire">objet illusoire</spell>
         </spells>
       </rank>
     </spellList>

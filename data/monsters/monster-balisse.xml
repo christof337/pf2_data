@@ -49,7 +49,7 @@
         <traits>
           <trait>balayage</trait>
           <trait ref="trait-feu">feu</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait>per-
                                              cutant</trait>
           <trait ref="trait-saint">saint</trait>
@@ -74,7 +74,7 @@
       </rank>
       <rank rank="3">
         <spells>
-          <spell spellSpecial="à volonté">clarté spirituelle</spell>
+          <spell spellSpecial="à volonté" ref="spell-clarte-spirituelle">clarté spirituelle</spell>
         </spells>
       </rank>
       <rank rank="2">
@@ -104,7 +104,7 @@
         <name>Marque de l’impénitent</name>
         <traits>
           <trait ref="trait-divine">divine</trait>
-          <trait>malédiction</trait>
+          <trait ref="trait-malediction">malédiction</trait>
         </traits>
         <description>; **Fréquence** 1 fois/jour ;</description>
       </special>

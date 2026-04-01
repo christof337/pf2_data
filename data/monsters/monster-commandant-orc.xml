@@ -7,7 +7,7 @@
     <level>2</level>
     <creatureTraits>
       <trait type="size" ref="trait-moyenne">MOYENNE</trait>
-      <trait>HUMANOÏDE</trait>
+      <trait ref="trait-humanoide">HUMANOÏDE</trait>
       <trait ref="trait-orc">ORC</trait>
     </creatureTraits>
     <perception>
@@ -85,10 +85,10 @@
       <special type="activity" actions="1">
         <name>Cri de guerre</name>
         <traits>
-          <trait>audible</trait>
-          <trait>concentration</trait>
-          <trait>émotion</trait>
-          <trait>mental</trait>
+          <trait ref="trait-audible">audible</trait>
+          <trait ref="trait-concentration">concentration</trait>
+          <trait ref="trait-emotion">émotion</trait>
+          <trait ref="trait-mental">mental</trait>
         </traits>
         <description>� En beuglant puissamment, le commandant orc se confère, ainsi qu’à tous les orcs situés dans un rayon de 18 m, un bonus de statut de +1 à leurs jets d’attaque et de dégâts jusqu’au début du prochain tour du commandant orc�</description>
       </special>

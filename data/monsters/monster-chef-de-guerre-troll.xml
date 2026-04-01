@@ -7,9 +7,9 @@
     <level>10</level>
     <creatureTraits>
       <trait type="size" ref="trait-grande">GRANDE</trait>
-      <trait>BOIS</trait>
+      <trait ref="trait-bois">BOIS</trait>
       <trait ref="trait-geant">GÉANT</trait>
-      <trait>HUMANOÏDE</trait>
+      <trait ref="trait-humanoide">HUMANOÏDE</trait>
       <trait>TROLLS</trait>
     </creatureTraits>
     <perception>
@@ -49,7 +49,7 @@
         <traits>
           <trait>allonge 3 m</trait>
           <trait>balayage</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -92,10 +92,10 @@
       <special type="activity" actions="1">
         <name>Rugissement primordial</name>
         <traits>
-          <trait>audible</trait>
-          <trait>émotion</trait>
-          <trait>mental</trait>
-          <trait>terreur</trait>
+          <trait ref="trait-audible">audible</trait>
+          <trait ref="trait-emotion">émotion</trait>
+          <trait ref="trait-mental">mental</trait>
+          <trait ref="trait-terreur">terreur</trait>
         </traits>
         <description>� Le chef de guerre troll pousse un rugissement bestial� Chaque ennemi qui n’est pas un troll dans une émanation de 30 m effectue un jet de Volonté DD 29� La créature est ensuite immunisée pendant 10 min�</description>
       </special>

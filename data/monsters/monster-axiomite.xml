@@ -52,7 +52,7 @@
         <name>*marteau de guerre*</name>
         <bonus>+20</bonus>
         <traits>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait>pousser</trait>
         </traits>
         <damages>
@@ -67,7 +67,7 @@
         <bonus>+17</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -80,7 +80,7 @@
     <spellList source="innate" tradition="divine" DD="27" attack="+17">
       <rank rank="5">
         <spells>
-          <spell>transport télékinésique</spell>
+          <spell ref="spell-transport-telekinesique">transport télékinésique</spell>
         </spells>
       </rank>
       <rank rank="4">
@@ -95,7 +95,7 @@
       </rank>
       <rank rank="2">
         <spells>
-          <spell>manœuvre télékinésique</spell>
+          <spell ref="spell-manuvre-telekinesique">manœuvre télékinésique</spell>
         </spells>
       </rank>
     </spellList>

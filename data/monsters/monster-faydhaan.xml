@@ -7,7 +7,7 @@
     <level>9</level>
     <creatureTraits>
       <trait type="size" ref="trait-grande">GRANDE</trait>
-      <trait>EAU</trait>
+      <trait ref="trait-eau">EAU</trait>
       <trait ref="trait-elementaire">ÉLÉMENTAIRE</trait>
       <trait>GÉNIE</trait>
     </creatureTraits>
@@ -24,7 +24,7 @@
       <language>talican</language>
       <language>thalassique</language>
       <langSpecial>
-        <spell>langage universel</spell>
+        <spell ref="spell-langage-universel">langage universel</spell>
       </langSpecial>
     </languages>
     <skills>
@@ -74,7 +74,7 @@
         <traits>
           <trait>agile</trait>
           <trait>allonge 3 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait>non létal</trait>
         </traits>
         <damages>

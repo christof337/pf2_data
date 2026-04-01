@@ -59,7 +59,7 @@
         <traits>
           <trait>allonge 0 m</trait>
           <trait ref="trait-finesse">finesse</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -84,8 +84,8 @@
       <special type="activity" actions="2">
         <name>Souffle euphorique</name>
         <traits>
-          <trait>arcanique</trait>
-          <trait>poison</trait>
+          <trait ref="trait-arcanique">arcanique</trait>
+          <trait ref="trait-poison">poison</trait>
         </traits>
         <description>Le dragonneau souffle un gaz euphorique dans un cône de 4,5 m� Chaque créature dans la zone doit réussir un jet de Vigueur DD 18 ou être stupéfiée 2 et ralentie 1 pendant 1d4 rounds ; en cas d’échec critique, la durée est de 1 min� Le dragonneau féerique ne peut plus utiliser souffle d’euphorie pendant 1d4 rounds�</description>
       </special>

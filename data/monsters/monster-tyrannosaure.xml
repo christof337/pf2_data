@@ -74,7 +74,7 @@
       <special type="activity" actions="1" ref="ability-gober">
         <name>Gober</name>
         <traits>
-          <trait>attaque</trait>
+          <trait ref="trait-attaque">attaque</trait>
         </traits>
         <description>� Moyenne, 3d6+8 contondants, Rupture 26 (p� 359)</description>
       </special>

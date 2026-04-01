@@ -52,7 +52,7 @@
         <bonus>+13</bonus>
         <traits>
           <trait>facteur de portée 18 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait ref="trait-occulte">occulte</trait>
         </traits>
         <damages>
@@ -66,7 +66,7 @@
     <spellList source="innate" tradition="occult" DD="23" attack="+13">
       <rank rank="3">
         <spells>
-          <spell spellSpecial="à volonté">manœuvre télékinésique</spell>
+          <spell spellSpecial="à volonté" ref="spell-manuvre-telekinesique">manœuvre télékinésique</spell>
         </spells>
       </rank>
     </spellList>
@@ -78,7 +78,7 @@
       <special type="activity" actions="2">
         <name>Tempête télékinésique</name>
         <traits>
-          <trait>concentration</trait>
+          <trait ref="trait-concentration">concentration</trait>
           <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>� Le poltergeist pro- jette par télékinésie de nombreux petits objets comme des dizaines de pièces d’argenterie ou des livres, soit en les répartissant entre plusieurs cibles, soit en focalisant son attaque contre une cible�<list><listItem>Quand cet effet est réparti entre plusieurs cibles, le poltergeist effectue une Frappe d’objet télékinésique avec un malus de −2 contre chaque créature située dans un rayon de 9 m� Cela compte comme une seule attaque pour le malus d’attaques multiples du poltergeist et ce malus n’aug- mente qu’une fois toutes les attaques effectuées�</listItem><listItem>Quand cet effet n’affecte qu’une seule cible, le poltergeist effectue une Frappe d’objet télékinésique contre elle et les dégâts sont augmentés à 3d12� L’attaque inflige 1d12 dégâts en cas d’échec et aucun dégât en cas d’échec critique�</listItem></list></description>

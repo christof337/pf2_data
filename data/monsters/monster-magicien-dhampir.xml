@@ -9,7 +9,7 @@
       <trait type="size" ref="trait-moyenne">MOYENNE</trait>
       <trait ref="trait-dhampir">DHAMPIR</trait>
       <trait ref="trait-humain">HUMAIN</trait>
-      <trait>HUMANOÏDE</trait>
+      <trait ref="trait-humanoide">HUMANOÏDE</trait>
     </creatureTraits>
     <perception>
       <bonus/>

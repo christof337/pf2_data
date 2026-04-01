@@ -7,7 +7,7 @@
     <level>12</level>
     <creatureTraits>
       <trait type="size" ref="trait-moyenne">MOYENNE</trait>
-      <trait>BÊTE</trait>
+      <trait ref="trait-bete">BÊTE</trait>
     </creatureTraits>
     <perception>
       <bonus>+22</bonus>
@@ -39,7 +39,7 @@
         <name>Perception des pensées</name>
         <traits>
           <trait>divination</trait>
-          <trait>mental</trait>
+          <trait ref="trait-mental">mental</trait>
           <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>� Un cauthooj détecte toutes les créatures non dénuées d’intelligence qui se trouvent à la portée mentionnée�</description>
@@ -72,18 +72,18 @@
       <special type="activity" actions="1">
         <name>Frappe staccato</name>
         <traits>
-          <trait>mental</trait>
+          <trait ref="trait-mental">mental</trait>
           <trait ref="trait-primordiale">primordiale</trait>
-          <trait>son</trait>
+          <trait ref="trait-son">son</trait>
         </traits>
         <description>� Par de subtiles altérations de l’intensité et de la tonalité de son chant, le cauthooj pousse une créature rendue confuse par son Gazouillement mélodieux à effectuer une Frappe� Cela fonctionne comme les autres Frappes effectuées par des créatures confuses sauf que le cauthooj choisit la cible� S’il n’y a aucune cible à portée, ou si la créature est incapable de Frapper pour une raison ou pour une autre, ce pouvoir n’a aucun effet�</description>
       </special>
       <special type="activity" actions="2">
         <name>Gazouillement mélodieux</name>
         <traits>
-          <trait>audible</trait>
-          <trait>mental</trait>
-          <trait>mise hors de combat</trait>
+          <trait ref="trait-audible">audible</trait>
+          <trait ref="trait-mental">mental</trait>
+          <trait ref="trait-mise-hors-de-combat">mise hors de combat</trait>
           <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>� Le cauthooj émet un étrange ululement qui provoque des réactions violentes et incontrôlées chez les créatures à proximité� Chaque créature qui peut entendre le cauthooj dans une émanation de 36 m fait un jet de Volonté DD 32 pour tenter de résister à cet effet�</description>

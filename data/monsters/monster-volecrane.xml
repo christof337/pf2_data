@@ -60,7 +60,7 @@
         <bonus>+35</bonus>
         <traits>
           <trait>allonge 3 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait>mortel 2d12</trait>
         </traits>
         <damages>
@@ -80,7 +80,7 @@
         <traits>
           <trait>agile</trait>
           <trait>allonge 4,5 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait>mortel 2d12</trait>
         </traits>
         <damages>
@@ -99,7 +99,7 @@
         <bonus>+33</bonus>
         <traits>
           <trait>jet 30 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -121,7 +121,7 @@
       </rank>
       <rank rank="6" constant="TRUE">
         <spells>
-          <spell>discernement</spell>
+          <spell ref="spell-discernement">discernement</spell>
         </spells>
       </rank>
     </spellList>

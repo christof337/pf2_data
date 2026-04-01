@@ -87,7 +87,7 @@
       </rank>
       <rank rank="3">
         <spells>
-          <spell>dissipation de la magie</spell>
+          <spell ref="spell-dissipation-de-la-magie">dissipation de la magie</spell>
         </spells>
       </rank>
       <rank rank="2">

@@ -72,7 +72,7 @@
         <name>Perception de l’entropie</name>
         <traits>
           <trait ref="trait-divine">divine</trait>
-          <trait>prédiction</trait>
+          <trait ref="trait-prediction">prédiction</trait>
         </traits>
         <description>� Comme le ver du néant�</description>
       </special>

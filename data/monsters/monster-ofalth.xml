@@ -76,7 +76,7 @@
       <special>
         <name>Suintements effroyables</name>
         <traits>
-          <trait>maladie</trait>
+          <trait ref="trait-maladie">maladie</trait>
         </traits>
         <description>**Jet de sauvegarde** comme pour l’ofalth larvaire, mais avec un DD 26�</description>
       </special>

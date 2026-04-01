@@ -8,7 +8,7 @@
     <creatureTraits>
       <trait type="size" ref="trait-petite">PETITE</trait>
       <trait ref="trait-elementaire">ÉLÉMENTAIRE</trait>
-      <trait>TERRE</trait>
+      <trait ref="trait-terre">TERRE</trait>
     </creatureTraits>
     <perception>
       <bonus>+3</bonus>
@@ -72,8 +72,8 @@
       <special type="activity" actions="2">
         <name>Souffle de pierraille</name>
         <traits>
-          <trait>arcanique</trait>
-          <trait>terre</trait>
+          <trait ref="trait-arcanique">arcanique</trait>
+          <trait ref="trait-terre">terre</trait>
         </traits>
         <description>� Le galapiat de terre crache de la pierraille dans un cône de 4,5 m qui inflige 2d6 dégâts contondants à chaque créature dans la zone (jet de Réflexes basique DD 17)� Le galapiat de terre ne peut plus utiliser souffle de pierraille pendant 1d4 rounds�</description>
       </special>

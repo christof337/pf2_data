@@ -20,19 +20,31 @@ def clean_text(text):
 # PARSING SPÉCIFIQUE TRAITS
 # ==========================================
 
-def parse_traits_md(content):
+def parse_traits_md(content, format="ldm"):
     """
     Extrait la liste des traits depuis le Markdown.
-    Ignore le texte avant "TRAITS DES CRÉATURES",
-    saute les textes d'introduction, et s'arrête avant "RITUELS".
+
+    format="ldm" (défaut) :
+        Livre des Monstres — section "TRAITS DES CRÉATURES", toutes les entrées **Nom.**
+    format="ldj" :
+        Livre des Joueurs — section GLOSSAIRE, uniquement les entrées **Nom (trait).**
+        Le suffixe " (trait)" est supprimé du nom ; les numéros de page en fin de
+        description sont tronqués.
     """
     traits_data = []
-    print("[PARSING] Début de l'analyse des traits...")
+    print(f"[PARSING] Début de l'analyse des traits (format={format})...")
 
     # 0. Normalisation : tiret non-sécable (U+2011) → tiret ordinaire
-    # Certains PDFs (LdM complet) utilisent ‑ dans les noms de traits (âme‑en‑peine, etc.)
     content = content.replace('\u2011', '-')
 
+    if format == "ldj":
+        return _parse_traits_ldj(content, traits_data)
+    else:
+        return _parse_traits_ldm(content, traits_data)
+
+
+def _parse_traits_ldm(content, traits_data):
+    """Parser format LdM : section TRAITS DES CRÉATURES … RITUELS."""
     # 1. Isolation de la zone utile (DÉBUT)
     start_match = re.search(r'TRAITS\s+DES\s+CRÉATURES', content)
     if start_match:
@@ -44,29 +56,78 @@ def parse_traits_md(content):
 
     # 3. Regex de capture des traits
     pattern = r'^[ \t]*\*\*([A-ZÀ-Ÿa-zà-ÿ\s\-]+?)\.\s*\*\*\s*(.*?)(?=(?:^[ \t]*\*\*|\Z))'
-    
     matches = re.finditer(pattern, content, flags=re.MULTILINE | re.DOTALL)
-    
+
     count = 0
     for m in matches:
         name = clean_text(m.group(1))
         desc = clean_text(m.group(2))
-        
-        # Sécurité : on ignore les captures accidentelles trop longues pour être un nom de trait
+
         if len(name) > 40:
             continue
-            
-        # Génération de l'ID dynamique
+
         trait_id = generate_slug("trait", name)
-            
-        traits_data.append({
-            'id': trait_id,
-            'name': name,
-            'description': desc
-        })
+        traits_data.append({'id': trait_id, 'name': name, 'description': desc})
         count += 1
-        
+
     print(f"[PARSING] ✓ {count} traits détectés et extraits.")
+    return traits_data
+
+
+def _parse_traits_ldj(content, traits_data):
+    """
+    Parser format LdJ : glossaire mixte, seules les entrées suffixées (trait) sont retenues.
+
+    Format réel dans le MD :
+      **Nom **(trait). Description... numéros de page
+      **Nom** (trait). Description... numéros de page
+
+    Le `(trait)` apparaît APRÈS le `**` fermant, pas à l'intérieur.
+    La regex ci-dessous encode ce format directement : le filtre est structurel,
+    pas textuel — pas besoin de vérifier '(trait)' dans le nom capturé.
+    """
+    # Regex adaptée au format LdJ : **Nom **(trait). ou **Nom** (trait).
+    pattern = (
+        r'[ \t]*\*\*([A-ZÀ-Ÿa-zà-ÿ\s\-]+?)\s*\*\*\s*\(trait\)\.\s*'
+        r'(.*?)(?=(?:[ \t]*\*\*[A-ZÀ-Ÿa-zà-ÿ]|\Z))'
+    )
+    matches = re.finditer(pattern, content, flags=re.MULTILINE | re.DOTALL)
+
+    count = 0
+    for m in matches:
+        name = clean_text(m.group(1))
+
+        if len(name) > 40:
+            continue
+
+        desc_raw = clean_text(m.group(2))
+
+        # 1. Normaliser les marqueurs gras dans les plages de pages (**‑**, **,**)
+        desc_raw = re.sub(r'\*\*[\-–,]\*\*', '-', desc_raw)
+
+        # 2. Corriger les césures PDF : "réac- tions" → "réactions"
+        desc_raw = re.sub(r'(\w)- (\w)', r'\1\2', desc_raw)
+
+        # 3. Supprimer les numéros de page en fin de description
+        #    Motifs : "215", "LMJ 276", "10, 402-403", "p. 76–77"
+        #    Passe 1 : refs en fin après du contenu textuel
+        desc = re.sub(
+            r'(?:\s+(?:(?:p\.\s*)?(?:LMJ\s+)?[\d][\d\-–,\s]*)+)+$',
+            '',
+            desc_raw
+        ).strip()
+        #    Passe 2 : description entièrement composée de refs de page (ex: "LMJ 276" → "")
+        desc = re.sub(
+            r'^(?:(?:p\.\s*)?(?:LMJ\s+)?[\d][\d\-–,\s]*|LMJ)+$',
+            '',
+            desc
+        ).strip()
+
+        trait_id = generate_slug("trait", name)
+        traits_data.append({'id': trait_id, 'name': name, 'description': desc})
+        count += 1
+
+    print(f"[PARSING] ✓ {count} traits (trait) retenus depuis le glossaire LdJ.")
     return traits_data
 
 # ==========================================
@@ -105,8 +166,16 @@ def generate_trait_xml(traits_data, output_path):
 # ==========================================
 
 if __name__ == "__main__":
-    input_file = sys.argv[1] if len(sys.argv) > 1 else "./output/subset_3/traits_LdM.md"
-    output_file = sys.argv[2] if len(sys.argv) > 2 else "./output/subset_3/traits.xml"
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("input", nargs="?", default="./output/subset_3/traits_LdM.md")
+    ap.add_argument("output", nargs="?", default="./output/subset_3/traits.xml")
+    ap.add_argument("--format", choices=["ldm", "ldj"], default="ldm",
+                    help="Format source : ldm (Livre des Monstres, défaut) ou ldj (Livre des Joueurs)")
+    args = ap.parse_args()
+
+    input_file = args.input
+    output_file = args.output
 
     print("="*60)
     print("DÉBUT DU TRAITEMENT (TRAIT MAPPER)")
@@ -117,8 +186,8 @@ if __name__ == "__main__":
     if os.path.exists(input_file):
         with open(input_file, 'r', encoding='utf-8') as f:
             md_content = f.read()
-        
-        traits_data = parse_traits_md(md_content)
+
+        traits_data = parse_traits_md(md_content, format=args.format)
         generate_trait_xml(traits_data, output_file)
 
         xsd_file = "./schema/trait.xsd"

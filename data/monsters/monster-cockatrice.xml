@@ -7,7 +7,7 @@
     <level>3</level>
     <creatureTraits>
       <trait type="size" ref="trait-petite">PETITE</trait>
-      <trait>BÊTE</trait>
+      <trait ref="trait-bete">BÊTE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -36,7 +36,7 @@
         <bonus>+13</bonus>
         <traits>
           <trait ref="trait-finesse">finesse</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages/>
       </strike>
@@ -45,7 +45,7 @@
       <special>
         <name>Calcification</name>
         <traits>
-          <trait>mise hors de combat</trait>
+          <trait ref="trait-mise-hors-de-combat">mise hors de combat</trait>
           <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>� Un coup de bec de cockatrice solidifie les chairs de la créature touchée� La cible doit réussir un jet de Vigueur DD 20 ou être ralentie 1 (ou ralentie 2 en cas d’échec critique)� Si elle échoue à de nouveaux jets de sauvegarde contre la calcification, la valeur de son état ralenti augmente� La créature devient pétrifiée si les effets de la calcification réduisent ses actions à 0� Si la créature n’est pas pétrifiée et qu’elle n’échoue pas à de nouveaux jets de sauvegarde contre la pétrification, son état ralenti se dissipe au bout de 1 min� Une créature pétrifiée peut effectuer un jet de Vigueur DD 20 toutes les 24 h afin de tenter de se remettre de cet état� Si elle réussit, elle retrouve sa chair mais reste ralentie 1 pour 24 h� Sur un succès critique, elle perd l’état pétrifié et n’est pas ralentie� Sur un échec, la créature reste pétrifiée, mais elle peut refaire le jet de sauvegarde au bout de 24 h� En cas d’échec critique, la pétrification est permanente et la créature ne peut plus faire de jets de sauvegarde pour se débarrasser de cet état�</description>

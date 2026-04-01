@@ -7,7 +7,7 @@
     <level>1</level>
     <creatureTraits>
       <trait type="size" ref="trait-tres-petite">TRÈS PETITE</trait>
-      <trait>FIÉLON</trait>
+      <trait ref="trait-fielon">FIÉLON</trait>
       <trait ref="trait-impie">IMPIE</trait>
     </creatureTraits>
     <perception>
@@ -58,7 +58,7 @@
           <trait>allonge 0 m</trait>
           <trait ref="trait-finesse">finesse</trait>
           <trait ref="trait-impie">impie</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages/>
       </strike>
@@ -66,7 +66,7 @@
     <spellList source="innate" tradition="divine" DD="17">
       <rank rank="4">
         <spells>
-          <spell>lire les présages</spell>
+          <spell ref="spell-lire-les-presages">lire les présages</spell>
         </spells>
       </rank>
       <rank rank="2">
@@ -79,7 +79,7 @@
       <special type="activity" actions="1">
         <name>Changement de forme</name>
         <traits>
-          <trait>concentration</trait>
+          <trait ref="trait-concentration">concentration</trait>
           <trait ref="trait-divine">divine</trait>
           <trait>métamorphose</trait>
         </traits>
@@ -96,7 +96,7 @@
       <special>
         <name>Venin de diablotin</name>
         <traits>
-          <trait>poison</trait>
+          <trait ref="trait-poison">poison</trait>
         </traits>
         <description>; **Jet de sauvegarde** Vigueur DD 16 ; **Durée maximale** 6 rounds ; **Stade 1** 1d6 poison et maladroit 1 (1 round) ; **Stade 2** 1d6 poison, maladroit 1 et ralenti 1 (1 round)</description>
       </special>

@@ -67,7 +67,7 @@
       <special>
         <name>Venin de vipère géante</name>
         <traits>
-          <trait>poison</trait>
+          <trait ref="trait-poison">poison</trait>
         </traits>
         <description>; **Jet de sauvegarde** Vigueur DD 17 ; **Durée maximale** 6 rounds ;</description>
       </special>

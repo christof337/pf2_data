@@ -92,8 +92,8 @@
       <special>
         <name>Colère vengeresse</name>
         <traits>
-          <trait>émotion</trait>
-          <trait>mental</trait>
+          <trait ref="trait-emotion">émotion</trait>
+          <trait ref="trait-mental">mental</trait>
         </traits>
         <description>� Tant qu’il n’est pas effrayé, un mitflit gagne un bonus de statut de +2 à ses jets de dégâts contre une créature qui l’a blessé ou tourmenté�</description>
       </special>

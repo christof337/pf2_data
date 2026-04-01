@@ -85,7 +85,7 @@
         <name>mâchoires</name>
         <bonus>+25</bonus>
         <traits>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait>allonge 3 m</trait>
         </traits>
         <damages>
@@ -100,7 +100,7 @@
         <bonus>+25</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -114,7 +114,7 @@
         <bonus>+23</bonus>
         <traits>
           <trait>allonge 4,5 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -127,7 +127,7 @@
         <name>attaque mentale</name>
         <bonus>+25</bonus>
         <traits>
-          <trait>mental</trait>
+          <trait ref="trait-mental">mental</trait>
           <trait>portée 30 m</trait>
         </traits>
         <damages>

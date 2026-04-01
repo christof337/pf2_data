@@ -9,7 +9,7 @@
       <trait type="size" ref="trait-grande">GRANDE</trait>
       <trait ref="trait-feu">FEU</trait>
       <trait ref="trait-geant">GÉANT</trait>
-      <trait>HUMANOÏDE</trait>
+      <trait ref="trait-humanoide">HUMANOÏDE</trait>
       <trait ref="trait-oni">ONI</trait>
     </creatureTraits>
     <perception>
@@ -60,7 +60,7 @@
         <bonus>+30</bonus>
         <traits>
           <trait>deux mains d10</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait>mortel d8</trait>
           <trait>polyvalent P</trait>
         </traits>
@@ -80,7 +80,7 @@
         <bonus>+28</bonus>
         <traits>
           <trait>allonge 3 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -105,7 +105,7 @@
       <special type="activity" actions="1">
         <name>Changement de forme</name>
         <traits>
-          <trait>concentration</trait>
+          <trait ref="trait-concentration">concentration</trait>
           <trait>métamorphose</trait>
           <trait ref="trait-primordiale">primordiale</trait>
         </traits>

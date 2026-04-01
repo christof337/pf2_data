@@ -83,14 +83,14 @@
       <special type="activity" actions="2">
         <name>Propulsion</name>
         <traits>
-          <trait>déplacement</trait>
+          <trait ref="trait-deplacement">déplacement</trait>
         </traits>
         <description>� La pieuvre se déplace à travers l’eau jusqu’à 60 m en ligne droite sans déclencher de réactions�</description>
       </special>
       <special>
         <name>Venin de pieuvre géante</name>
         <traits>
-          <trait>poison</trait>
+          <trait ref="trait-poison">poison</trait>
         </traits>
         <description>**Jet de sauvegarde** Vigueur DD 26 ; **Durée maximale** 6 rounds ; **Stade 1 **2d6 dégâts de poison et pris par surprise (1 round) ; **Stade 2** 2d6 dégâts de poison, maladroit 1 et pris par surprise (1 round) ; **Stade 3** 2d6 dégâts de poison, maladroit 2 et pris par surprise (1 round)</description>
       </special>

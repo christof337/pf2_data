@@ -8,7 +8,7 @@
     <creatureTraits>
       <trait type="size" ref="trait-grande">GRANDE</trait>
       <trait ref="trait-geant">GÉANT</trait>
-      <trait>HUMANOÏDE</trait>
+      <trait ref="trait-humanoide">HUMANOÏDE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -85,11 +85,11 @@
       <special type="activity" actions="1">
         <name>Beugler un ordre</name>
         <traits>
-          <trait>audible</trait>
-          <trait>émotion</trait>
-          <trait>linguistique</trait>
-          <trait>mental</trait>
-          <trait>terreur</trait>
+          <trait ref="trait-audible">audible</trait>
+          <trait ref="trait-emotion">émotion</trait>
+          <trait ref="trait-linguistique">linguistique</trait>
+          <trait ref="trait-mental">mental</trait>
+          <trait ref="trait-terreur">terreur</trait>
         </traits>
         <description>� Le boss donne un ordre pour que les siens se déplacent plus rapidement� Chaque allié ogre qui entend et comprend cet ordre est accéléré jusqu’à la fin de son prochain tour, mais il ne peut utiliser cette action supplémen- taire que pour Faire un pas ou Marcher rapidement�</description>
       </special>

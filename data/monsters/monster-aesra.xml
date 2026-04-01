@@ -7,7 +7,7 @@
     <level>7</level>
     <creatureTraits>
       <trait type="size" ref="trait-moyenne">MOYENNE</trait>
-      <trait>ARCHON</trait>
+      <trait ref="trait-archon">ARCHON</trait>
       <trait ref="trait-celeste">CÉLESTE</trait>
       <trait ref="trait-saint">SAINT</trait>
     </creatureTraits>
@@ -77,7 +77,7 @@
         <bonus>+18</bonus>
         <traits>
           <trait ref="trait-saint">saint</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait>polyvalent P</trait>
         </traits>
         <damages>
@@ -96,7 +96,7 @@
         <bonus>+15</bonus>
         <traits>
           <trait ref="trait-saint">saint</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait>facteur de portée 9 m</trait>
           <trait>polyvalent P</trait>
         </traits>
@@ -120,7 +120,7 @@
       </rank>
       <rank rank="5" constant="TRUE">
         <spells>
-          <spell>langage universel</spell>
+          <spell ref="spell-langage-universel">langage universel</spell>
         </spells>
       </rank>
     </spellList>

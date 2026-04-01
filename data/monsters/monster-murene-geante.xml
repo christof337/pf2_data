@@ -54,7 +54,7 @@
       <special type="activity" actions="1" ref="ability-gober">
         <name>Gober</name>
         <traits>
-          <trait>attaque</trait>
+          <trait ref="trait-attaque">attaque</trait>
         </traits>
         <description>Petite, 1d6+6 contondants, Rupture 12 (p� 359)</description>
       </special>

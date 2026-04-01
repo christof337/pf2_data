@@ -7,7 +7,7 @@
     <level>18</level>
     <creatureTraits>
       <trait type="size" ref="trait-tres-grande">TRÈS GRANDE</trait>
-      <trait>ARCANIQUE</trait>
+      <trait ref="trait-arcanique">ARCANIQUE</trait>
       <trait ref="trait-dragon">DRAGON</trait>
     </creatureTraits>
     <perception>
@@ -97,7 +97,7 @@
         <bonus>+33</bonus>
         <traits>
           <trait>allonge 4,5 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -112,7 +112,7 @@
         <traits>
           <trait>agile</trait>
           <trait>allonge 3 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -126,7 +126,7 @@
         <bonus>+31</bonus>
         <traits>
           <trait>allonge 6 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -164,9 +164,9 @@
       <special type="activity" actions="2">
         <name>Souffle hallucinatoire</name>
         <traits>
-          <trait>arcanique</trait>
-          <trait>émotion</trait>
-          <trait>mental</trait>
+          <trait ref="trait-arcanique">arcanique</trait>
+          <trait ref="trait-emotion">émotion</trait>
+          <trait ref="trait-mental">mental</trait>
         </traits>
         <description>Comme le jeune dragon de mirage mais 17d6 dégâts mentaux, cône de 15 m et DD 41�</description>
       </special>

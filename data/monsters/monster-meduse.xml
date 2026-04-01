@@ -7,7 +7,7 @@
     <level>7</level>
     <creatureTraits>
       <trait type="size" ref="trait-moyenne">MOYENNE</trait>
-      <trait>HUMANOÏDE</trait>
+      <trait ref="trait-humanoide">HUMANOÏDE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -69,7 +69,7 @@
         <bonus>+19</bonus>
         <traits>
           <trait>facteur de portée 18 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait>mortel d10</trait>
           <trait>propulsif</trait>
           <trait>rechargement 0</trait>
@@ -86,17 +86,17 @@
       <special type="activity" actions="2">
         <name>Focaliser le regard</name>
         <traits>
-          <trait>arcanique</trait>
-          <trait>concentration</trait>
-          <trait>mise hors de combat</trait>
-          <trait>visuel</trait>
+          <trait ref="trait-arcanique">arcanique</trait>
+          <trait ref="trait-concentration">concentration</trait>
+          <trait ref="trait-mise-hors-de-combat">mise hors de combat</trait>
+          <trait ref="trait-visuel">visuel</trait>
         </traits>
         <description>La méduse fixe son regard sur une créature située dans son champ de vision et dans un rayon de 9 m� Cette créature doit faire immédiatement un jet de Vigueur contre le regard pétrifiant de la méduse� Si la créature était déjà ralentie par ce pouvoir avant de faire son jet, elle est pétrifiée de manière permanente si elle le rate� Une fois qu’elle a fait son jet de sauvegarde, elle est temporairement immunisée jusqu’au début du prochain tour de la méduse�</description>
       </special>
       <special>
         <name>Venin de serpent</name>
         <traits>
-          <trait>poison</trait>
+          <trait ref="trait-poison">poison</trait>
         </traits>
         <description>**Jet de sauvegarde** Vigueur DD 25 ; **Durée maximale** 6 rounds ; **Stade 1 **1d6 dégâts de poison et affaibli 1 (1 round) ; **Stade 2** 2d6 dégâts de poison et affaibli 2 (1 round)</description>
       </special>

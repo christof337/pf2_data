@@ -7,7 +7,7 @@
     <level>9</level>
     <creatureTraits>
       <trait type="size" ref="trait-grande">GRANDE</trait>
-      <trait>ARCANIQUE</trait>
+      <trait ref="trait-arcanique">ARCANIQUE</trait>
       <trait ref="trait-dragon">DRAGON</trait>
     </creatureTraits>
     <perception>

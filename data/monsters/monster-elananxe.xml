@@ -52,7 +52,7 @@
         <name>mâchoires</name>
         <bonus>+16</bonus>
         <traits>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>

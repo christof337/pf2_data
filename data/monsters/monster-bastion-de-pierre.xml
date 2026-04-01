@@ -43,7 +43,7 @@
         <bonus>+24</bonus>
         <traits>
           <trait>allonge 3 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -58,7 +58,7 @@
         <traits>
           <trait ref="trait-brutal">brutal</trait>
           <trait>facteur de portée 36 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -72,8 +72,8 @@
       <special>
         <name>Étreinte rocheuse</name>
         <traits>
-          <trait>arcanique</trait>
-          <trait>terre</trait>
+          <trait ref="trait-arcanique">arcanique</trait>
+          <trait ref="trait-terre">terre</trait>
         </traits>
         <description>� Toute créature touchée par une Frappe de poing ou de rocher du bastion de pierre est affectée par un sort *cloué à terre* DD 30�</description>
       </special>
@@ -95,9 +95,9 @@
       <special type="activity" actions="2">
         <name>Souffle du serpent‑de‑pierre</name>
         <traits>
-          <trait>mise hors de combat</trait>
+          <trait ref="trait-mise-hors-de-combat">mise hors de combat</trait>
           <trait ref="trait-primordiale">primordiale</trait>
-          <trait>terre</trait>
+          <trait ref="trait-terre">terre</trait>
         </traits>
         <description>� Le bastion souffle un gaz vert dans un cône de 18 m� Chaque créature dans la zone d’effet doit faire un jet de Vigueur DD 34� Le bastion ne peut plus utiliser Souffle du serpent-de-pierre pendant 1d4 rounds�</description>
       </special>

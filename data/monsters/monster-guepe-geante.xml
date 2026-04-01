@@ -26,7 +26,7 @@
         <name>dard</name>
         <bonus>+12</bonus>
         <traits>
-          <trait>poison</trait>
+          <trait ref="trait-poison">poison</trait>
         </traits>
         <damages>
           <damage>
@@ -44,15 +44,15 @@
       <special>
         <name>Larve de guêpe</name>
         <traits>
-          <trait>maladie</trait>
+          <trait ref="trait-maladie">maladie</trait>
         </traits>
         <description>; **Jet de sauvegarde** Vigueur DD 21 ; **Stade 1** porteur sans effet néfaste (1d6 jours) ; **Stade 2** drainé 1 (1d4 jours) ; **Stade 3** 5d6 dégâts, la larve émerge (fin de la maladie)</description>
       </special>
       <special>
         <name>Venin de guêpe géante</name>
         <traits>
-          <trait>mise hors de combat</trait>
-          <trait>poison</trait>
+          <trait ref="trait-mise-hors-de-combat">mise hors de combat</trait>
+          <trait ref="trait-poison">poison</trait>
         </traits>
         <description>; **Jet de sauvegarde** Vigueur DD 19 ; **Durée maximale** 6 rounds ; **Stade 1** aucun effet (1 round) ; **Stade 2** maladroit 2 (1 round) ; **Stade 3** paralysé (1 round)</description>
       </special>

@@ -64,7 +64,7 @@
         <traits>
           <trait>agile</trait>
           <trait>balayage</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -78,7 +78,7 @@
         <bonus>+19</bonus>
         <traits>
           <trait>jet 3 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -114,7 +114,7 @@
       <special>
         <name>Poison de pukwudgie</name>
         <traits>
-          <trait>poison</trait>
+          <trait ref="trait-poison">poison</trait>
         </traits>
         <description>; **Jet de sauvegarde** Vigueur DD 25 ; **Durée maximale** 6 rounds ;</description>
       </special>

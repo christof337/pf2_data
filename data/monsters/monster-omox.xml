@@ -8,7 +8,7 @@
     <creatureTraits>
       <trait type="size" ref="trait-moyenne">MOYENNE</trait>
       <trait>DÉMONS</trait>
-      <trait>FIÉLON</trait>
+      <trait ref="trait-fielon">FIÉLON</trait>
       <trait ref="trait-impie">IMPIE</trait>
       <trait ref="trait-vase">VASE</trait>
     </creatureTraits>
@@ -53,7 +53,7 @@
         <name>tentacule de vase</name>
         <bonus>+25</bonus>
         <traits>
-          <trait>acide</trait>
+          <trait ref="trait-acide">acide</trait>
           <trait ref="trait-impie">impie</trait>
         </traits>
         <damages>

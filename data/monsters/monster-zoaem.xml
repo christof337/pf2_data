@@ -7,7 +7,7 @@
     <level>1</level>
     <creatureTraits>
       <trait type="size" ref="trait-petite">PETITE</trait>
-      <trait>ARCHON</trait>
+      <trait ref="trait-archon">ARCHON</trait>
       <trait ref="trait-celeste">CÉLESTE</trait>
       <trait ref="trait-saint">SAINT</trait>
     </creatureTraits>
@@ -58,7 +58,7 @@
         <traits>
           <trait>agile</trait>
           <trait ref="trait-feu">feu</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait>portée 9 m</trait>
           <trait ref="trait-saint">saint</trait>
         </traits>
@@ -73,7 +73,7 @@
     <spellList source="innate" tradition="divine" DD="17">
       <rank rank="4">
         <spells>
-          <spell>lire les présages</spell>
+          <spell ref="spell-lire-les-presages">lire les présages</spell>
         </spells>
       </rank>
     </spellList>
@@ -81,19 +81,19 @@
       <special type="activity" actions="1">
         <name>Lumière de la vérité</name>
         <traits>
-          <trait>concentration</trait>
+          <trait ref="trait-concentration">concentration</trait>
           <trait ref="trait-divine">divine</trait>
-          <trait>lumière</trait>
+          <trait ref="trait-lumiere">lumière</trait>
         </traits>
         <description>� Le zoaem émet une intense lumière qui fonctionne comme *lumière révélatrice*, mais sur une ligne de 18 m� Le zoaem et ses alliés gagnent un bonus de statut de +1 à leurs jets de dégâts et à leurs tests pour Se souvenir face aux créatures affectées par cette lumière� Le zoaem doit alors attendre 1d4 rounds pour réutiliser Lumière de la vérité�</description>
       </special>
       <special type="activity" actions="2">
         <name>Regardez !</name>
         <traits>
-          <trait>concentration</trait>
-          <trait>illusion</trait>
-          <trait>mise hors de combat</trait>
-          <trait>visuel</trait>
+          <trait ref="trait-concentration">concentration</trait>
+          <trait ref="trait-illusion">illusion</trait>
+          <trait ref="trait-mise-hors-de-combat">mise hors de combat</trait>
+          <trait ref="trait-visuel">visuel</trait>
         </traits>
         <description>; **Fréquence** 1 fois/h ;</description>
       </special>

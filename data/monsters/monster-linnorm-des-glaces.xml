@@ -8,7 +8,7 @@
     <creatureTraits>
       <trait type="size" ref="trait-gigantesque">GIGANTESQUE</trait>
       <trait ref="trait-dragon">DRAGON</trait>
-      <trait>FROID</trait>
+      <trait ref="trait-froid">FROID</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -44,7 +44,7 @@
         <bonus>+34</bonus>
         <traits>
           <trait>allonge 7,5 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -59,7 +59,7 @@
         <traits>
           <trait>agile</trait>
           <trait>allonge 6 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -74,7 +74,7 @@
         <traits>
           <trait>agile</trait>
           <trait>allonge 7,5 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -87,7 +87,7 @@
     <spellList source="innate" tradition="primal" DD="38">
       <rank rank="8" constant="TRUE">
         <spells>
-          <spell>déplacement sans entrave</spell>
+          <spell ref="spell-deplacement-sans-entrave">déplacement sans entrave</spell>
         </spells>
       </rank>
     </spellList>
@@ -99,7 +99,7 @@
       <special type="activity" actions="2">
         <name>Souffle de mucus glacé</name>
         <traits>
-          <trait>froid</trait>
+          <trait ref="trait-froid">froid</trait>
           <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>� Le linnorm des glaces souffle un jet de mucus glacial dans un cône de 18 m qui inflige 15d6 dégâts de froid aux créatures dans la zone (jet de Réflexes basique DD 38)� Ce mucus colle à tout ce qu’il touche et se solidifie en une épaisse couche de glace� Si une créature rate son jet de sauvegarde, la glace l’immobilise jusqu’à ce qu’elle réussisse un test pour S’échapper ou qu’un allié Ouvre de force la gangue de glace (DD 34 dans les deux cas)� Au début de son tour, une créature encore immobilisée par la glace subit 4d6 dégâts de froid� Un tiers peut libérer la cible gelée en lui infligeant 20 dégâts de feu� Si rien n’interfère avec la glace, elle s’effrite au bout de 1 min� Une créature dotée du trait feu ne peut pas être gelée sur place à cause du souffle� Si une créature est gelée en plein vol, elle tombe, tandis que si elle nageait, elle remonte à la surface à une vitesse de 18 m par round� Le linnorm ne peut plus utiliser Souffle de mucus glacial pendant 1d4 rounds�</description>
@@ -107,8 +107,8 @@
       <special>
         <name>Venin de linnorm des glaces</name>
         <traits>
-          <trait>froid</trait>
-          <trait>poison</trait>
+          <trait ref="trait-froid">froid</trait>
+          <trait ref="trait-poison">poison</trait>
         </traits>
         <description>; **Jet de sauvegarde** Vigueur DD 38 ; **Durée maximale** 10 rounds ; **Stade 1** 5d6 dégâts de froid et drainé 1 (1 round) ; **Stade 2** 7d6 dégâts de froid et drainé 2 (1 round)</description>
       </special>

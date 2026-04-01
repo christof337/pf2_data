@@ -9,7 +9,7 @@
       <trait type="size" ref="trait-tres-grande">TRÈS GRANDE</trait>
       <trait ref="trait-amphibie">AMPHIBIE</trait>
       <trait ref="trait-demon">DÉMON</trait>
-      <trait>FIÉLON</trait>
+      <trait ref="trait-fielon">FIÉLON</trait>
       <trait ref="trait-impie">IMPIE</trait>
     </creatureTraits>
     <perception>
@@ -61,7 +61,7 @@
           <trait>agile</trait>
           <trait>allonge 4,5 m</trait>
           <trait ref="trait-impie">impie</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -74,22 +74,22 @@
     <spellList source="innate" tradition="primal" DD="49" attack="+43">
       <rank rank="9">
         <spells>
-          <spell spellSpecial="à volonté">dissipation de la magie</spell>
+          <spell spellSpecial="à volonté" ref="spell-dissipation-de-la-magie">dissipation de la magie</spell>
         </spells>
       </rank>
       <rank rank="6">
         <spells>
-          <spell spellSpecial="à volonté">entraves végétales</spell>
+          <spell spellSpecial="à volonté" ref="spell-entraves-vegetales">entraves végétales</spell>
         </spells>
       </rank>
       <rank rank="3">
         <spells>
-          <spell spellSpecial="à volonté">cloué à terre</spell>
+          <spell spellSpecial="à volonté" ref="spell-cloue-a-terre">cloué à terre</spell>
         </spells>
       </rank>
       <rank rank="2">
         <spells>
-          <spell spellSpecial="à volonté">manœuvre télékinésique</spell>
+          <spell spellSpecial="à volonté" ref="spell-manuvre-telekinesique">manœuvre télékinésique</spell>
         </spells>
       </rank>
     </spellList>
@@ -105,7 +105,7 @@
       <special type="activity" actions="2">
         <name>Défoliation</name>
         <traits>
-          <trait>plante</trait>
+          <trait ref="trait-plante">plante</trait>
           <trait ref="trait-primordiale">primordiale</trait>
           <trait ref="trait-impie">impie</trait>
         </traits>

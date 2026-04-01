@@ -9,7 +9,7 @@
       <trait type="size" ref="trait-grande">GRANDE</trait>
       <trait ref="trait-feu">FEU</trait>
       <trait ref="trait-geant">GÉANT</trait>
-      <trait>HUMANOÏDE</trait>
+      <trait ref="trait-humanoide">HUMANOÏDE</trait>
     </creatureTraits>
     <perception>
       <bonus/>

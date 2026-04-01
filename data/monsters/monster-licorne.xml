@@ -7,7 +7,7 @@
     <level>3</level>
     <creatureTraits>
       <trait type="size" ref="trait-grande">GRANDE</trait>
-      <trait>BÊTE</trait>
+      <trait ref="trait-bete">BÊTE</trait>
       <trait ref="trait-fee">FÉE</trait>
       <trait ref="trait-saint">SAINT</trait>
       <trait ref="trait-saint">SAINT</trait>
@@ -55,7 +55,7 @@
         <name>corne</name>
         <bonus>+12</bonus>
         <traits>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait ref="trait-saint">saint</trait>
         </traits>
         <damages>
@@ -74,7 +74,7 @@
         <bonus>+12</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -87,7 +87,7 @@
     <spellList source="innate" tradition="primal" DD="21">
       <rank rank="5">
         <spells>
-          <spell>passage sylvestre</spell>
+          <spell ref="spell-passage-sylvestre">passage sylvestre</spell>
         </spells>
       </rank>
       <rank rank="3">

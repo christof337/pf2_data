@@ -8,7 +8,7 @@
     <creatureTraits>
       <trait type="size" ref="trait-moyenne">MOYENNE</trait>
       <trait ref="trait-demon">DÉMON</trait>
-      <trait>FIÉLON</trait>
+      <trait ref="trait-fielon">FIÉLON</trait>
       <trait ref="trait-impie">IMPIE</trait>
     </creatureTraits>
     <perception>
@@ -67,7 +67,7 @@
           <trait>agile</trait>
           <trait ref="trait-finesse">finesse</trait>
           <trait ref="trait-impie">impie</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -90,10 +90,10 @@
         <name>Baiser passionné</name>
         <traits>
           <trait ref="trait-divine">divine</trait>
-          <trait>émotion</trait>
+          <trait ref="trait-emotion">émotion</trait>
           <trait ref="trait-impie">impie</trait>
-          <trait>mental</trait>
-          <trait>néant</trait>
+          <trait ref="trait-mental">mental</trait>
+          <trait ref="trait-neant">néant</trait>
         </traits>
         <description>; **Fréquence **1 fois/ round ;</description>
       </special>

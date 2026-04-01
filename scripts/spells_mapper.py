@@ -151,7 +151,7 @@ def parse_spell_block(content):
 
     # 2. Rang (Gère Sort et Tour de Magie)
     rank_match = re.search(r'\b(SORT|TOUR DE MAGIE)\s+(\d+)', content)
-    spell_data['type'] = rank_match.group(1)
+    spell_data['type'] = rank_match.group(1) if rank_match else "SORT"
     spell_data['rank'] = rank_match.group(2) if rank_match else "1"
 
     # 3. Actions (Isolé entre le Nom et le Rang)
@@ -184,8 +184,10 @@ def parse_spell_block(content):
 
     # 5. Traditions
     trad_match = re.search(mech_prefix + r'Traditions?\s?\**[\s:]*([a-zA-Zà-ÿ,\s]+?)(?=\s*(?:;|\n|$))', content, re.IGNORECASE)
+    VALID_TRADITIONS = {'arcanique', 'occulte', 'primordiale', 'divine'}
     if trad_match:
-        spell_data['traditions'] = [clean_value(t).lower() for t in trad_match.group(1).split(',')]
+        parsed = [clean_value(t).lower() for t in trad_match.group(1).split(',')]
+        spell_data['traditions'] = [t for t in parsed if t in VALID_TRADITIONS]
         mech_ends.append(trad_match.end())
     else:
         spell_data['traditions'] = []
@@ -252,6 +254,9 @@ def parse_spells_md(content):
     print(f"[PARSING] {len(spell_blocks)} sorts isolés.")
 
     for block in spell_blocks:
+        if not re.search(r'\b(?:SORT|TOUR DE MAGIE)\s+\d+', block):
+            print(f"[PARSING]   ⚠ bloc sans rang ignoré: {block[:80].strip()!r}")
+            continue
         data = parse_spell_block(block)
         spells_data.append(data)
         print(f"[PARSING]   ✓ {data['name']}")
@@ -271,9 +276,17 @@ def generate_spells_xml(spells_data, output_path):
     root = etree.Element("spells", nsmap={'xsi': XSI_NS})
     root.set(f"{{{XSI_NS}}}noNamespaceSchemaLocation", "../../schema/spell.xsd")
 
+    seen_ids: set = set()
     for data in spells_data:
-        # Génération de l'ID dynamique
-        trait_id = generate_slug("spell", data['name'])
+        # Génération de l'ID dynamique (dédupliqué si nom INCONNU ou collision)
+        base_id = generate_slug("spell", data['name'])
+        trait_id = base_id
+        if trait_id in seen_ids:
+            counter = 2
+            while f"{base_id}-{counter}" in seen_ids:
+                counter += 1
+            trait_id = f"{base_id}-{counter}"
+        seen_ids.add(trait_id)
         s_el = etree.SubElement(root, "spell", id=trait_id)
 
         etree.SubElement(s_el, "name").text = data['name']
@@ -296,7 +309,11 @@ def generate_spells_xml(spells_data, output_path):
         for field in ['cast', 'range', 'area', 'targets', 'defense', 'duration']:
             if data.get(field): etree.SubElement(s_el, field).text = data[field]
         
-        add_rich_text(s_el, data['description'], "description")
+        # description est requise par le XSD — on la crée même si vide
+        if data.get('description'):
+            add_rich_text(s_el, data['description'], "description")
+        else:
+            etree.SubElement(s_el, "description")
 
         if data['savingThrows']:
             st_el = etree.SubElement(s_el, "savingThrow")

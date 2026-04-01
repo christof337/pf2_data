@@ -55,7 +55,7 @@
         <traits>
           <trait>allonge 6 m</trait>
           <trait ref="trait-impie">impie</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -75,7 +75,7 @@
           <trait ref="trait-brutal">brutal</trait>
           <trait>facteur de portée 24 m</trait>
           <trait ref="trait-impie">impie</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -93,7 +93,7 @@
       <special>
         <name>Flétrissement sporifère</name>
         <traits>
-          <trait>maladie</trait>
+          <trait ref="trait-maladie">maladie</trait>
         </traits>
         <description>� Les plantes et les champignons sont immunisés ; **Jet de sauvegarde** Vigueur DD 40 ; **Stade 1** affaibli 2 (1 jour) ; **Stade 2** affaibli 4 et ralenti 1 (1 jour) ; **Stade 3** contrôlé par le terotricus (comme *domination* ; 5d8 jours) ;</description>
       </special>

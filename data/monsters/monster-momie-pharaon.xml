@@ -78,7 +78,7 @@
         <bonus>+21</bonus>
         <traits>
           <trait>allonge 3 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -113,19 +113,19 @@
       <special type="activity" actions="2">
         <name>Fureur du sable</name>
         <traits>
-          <trait>concentration</trait>
+          <trait ref="trait-concentration">concentration</trait>
           <trait ref="trait-divine">divine</trait>
           <trait ref="trait-feu">feu</trait>
-          <trait>terre</trait>
+          <trait ref="trait-terre">terre</trait>
         </traits>
         <description>La momie pharaon exhale un cône de 18 m de sable surchauffé qui inflige 5d6 dégâts de feu et 5d6 dégâts tranchants (jet de Réflexes basique DD 28)� La momie pharaon ne peut pas réutiliser Fureur du sable pendant 1d4 rounds�</description>
       </special>
       <special type="activity" actions="1">
         <name>Voile de sable</name>
         <traits>
-          <trait>aura</trait>
+          <trait ref="trait-aura">aura</trait>
           <trait ref="trait-divine">divine</trait>
-          <trait>terre</trait>
+          <trait ref="trait-terre">terre</trait>
         </traits>
         <description>Du sable tourbillonne autour de la momie pharaon dans une émanation de 1,5 m jusqu’au début de son prochain tour� Les créatures dans le sable sont masquées par rapport à celles qui se trouvent à l’extérieur, et toute créature qui termine son tour dans le tourbillon subit 4d6 dégâts tranchants avec un jet de Vigueur basique DD 28� Le voile de sable se termine si la momie subit des dégâts à cause de sa faiblesse à l’eau�</description>
       </special>

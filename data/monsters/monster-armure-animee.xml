@@ -55,7 +55,7 @@
           <trait>allonge 3 m</trait>
           <trait>mortel d8</trait>
           <trait>percutant</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -69,7 +69,7 @@
         <bonus>+9</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait>main-libre</trait>
         </traits>
         <damages>

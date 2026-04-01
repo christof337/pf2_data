@@ -76,7 +76,7 @@
       <special>
         <name>Peste putride</name>
         <traits>
-          <trait>maladie</trait>
+          <trait ref="trait-maladie">maladie</trait>
         </traits>
         <description>� Comme le rat géant�</description>
       </special>

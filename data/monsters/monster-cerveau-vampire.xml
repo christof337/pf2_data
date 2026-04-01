@@ -103,7 +103,7 @@
       <special type="activity" actions="1">
         <name>Changement de forme</name>
         <traits>
-          <trait>concentration</trait>
+          <trait ref="trait-concentration">concentration</trait>
           <trait>divin</trait>
           <trait>métamorphose</trait>
         </traits>
@@ -113,7 +113,7 @@
         <name>Création de serviteurs</name>
         <traits>
           <trait>divin</trait>
-          <trait>intermède</trait>
+          <trait ref="trait-intermede">intermède</trait>
         </traits>
         <description/>
       </special>
@@ -121,16 +121,16 @@
         <name>Domination</name>
         <traits>
           <trait>divin</trait>
-          <trait>mental</trait>
-          <trait>mise hors de combat</trait>
-          <trait>visuel</trait>
+          <trait ref="trait-mental">mental</trait>
+          <trait ref="trait-mise-hors-de-combat">mise hors de combat</trait>
+          <trait ref="trait-visuel">visuel</trait>
         </traits>
         <description>DD 26</description>
       </special>
       <special type="activity" actions="0">
         <name>Drain d’objet lié</name>
         <traits>
-          <trait>arcanique</trait>
+          <trait ref="trait-arcanique">arcanique</trait>
         </traits>
         <description>; **Fréquence** 1 fois/jour ; **Conditions.** Le vampire n’a pas encore agi pendant ce tour ;</description>
       </special>

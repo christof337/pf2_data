@@ -77,14 +77,14 @@
       <special type="activity" actions="2">
         <name>Piqué en puissance</name>
         <traits>
-          <trait>déplacement</trait>
+          <trait ref="trait-deplacement">déplacement</trait>
         </traits>
         <description>La vouivre Vole jusqu’à sa Vitesse de vol maximale et doit se déplacer en ligne droite d’au moins 6 m tout en réduisant son altitude d’au moins 3 m� Si elle termine son déplacement dans la zone d’allonge d’au moins un ennemi de sa taille ou plus petit, elle peut effec- tuer une Frappe de griffes contre lui� Si les griffes touchent, la vouivre peut, en tant qu’action gratuite, soit Empoigner automatiquement sa proie, soit la mettre à terre�</description>
       </special>
       <special>
         <name>Venin de vouivre</name>
         <traits>
-          <trait>poison</trait>
+          <trait ref="trait-poison">poison</trait>
         </traits>
         <description>**Jet de sauvegarde** Vigueur DD 22 ; **Durée maximale** 6 rounds ;</description>
       </special>

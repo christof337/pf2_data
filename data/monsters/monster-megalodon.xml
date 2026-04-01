@@ -91,15 +91,15 @@
       <special type="activity" actions="1">
         <name>Brèche</name>
         <traits>
-          <trait>attaque</trait>
-          <trait>déplacement</trait>
+          <trait ref="trait-attaque">attaque</trait>
+          <trait ref="trait-deplacement">déplacement</trait>
         </traits>
         <description>� Comme le grand requin blanc, mais l’allonge du mégalodon lui permet d’attaquer une créature qui se trouve jusqu’à 10,5 m au-dessus de l’eau (ou à 12 m s’il utilise sa queue)�</description>
       </special>
       <special type="activity" actions="1" ref="ability-gober">
         <name>Gober</name>
         <traits>
-          <trait>attaque</trait>
+          <trait ref="trait-attaque">attaque</trait>
         </traits>
         <description>Très grande, 2d8+5 contondants, Rupture 20 (p� 359)</description>
       </special>

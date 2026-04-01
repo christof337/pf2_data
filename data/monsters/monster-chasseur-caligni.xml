@@ -8,7 +8,7 @@
     <creatureTraits>
       <trait type="size" ref="trait-moyenne">MOYENNE</trait>
       <trait ref="trait-caligni">CALIGNI</trait>
-      <trait>HUMANOÏDE</trait>
+      <trait ref="trait-humanoide">HUMANOÏDE</trait>
     </creatureTraits>
     <perception>
       <bonus>+10</bonus>
@@ -89,7 +89,7 @@
       <special type="activity" actions="1">
         <name>Ordre d’encerclement</name>
         <traits>
-          <trait>audible</trait>
+          <trait ref="trait-audible">audible</trait>
         </traits>
         <description>� Chaque maraudeur caligni dans un rayon de 9 m autour du chasseur peut Faire un pas� Un maraudeur ne peut pas profiter de l’effet de plus d’un seul Ordre d’encerclement par round�</description>
       </special>

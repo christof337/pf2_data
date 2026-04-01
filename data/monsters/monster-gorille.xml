@@ -76,10 +76,10 @@
       <special type="activity" actions="2">
         <name>Posture effrayante</name>
         <traits>
-          <trait>audible</trait>
-          <trait>émotion</trait>
-          <trait>mental</trait>
-          <trait>terreur</trait>
+          <trait ref="trait-audible">audible</trait>
+          <trait ref="trait-emotion">émotion</trait>
+          <trait ref="trait-mental">mental</trait>
+          <trait ref="trait-terreur">terreur</trait>
         </traits>
         <description>� Le gorille adopte une pos- ture intimidante et se frappe le torse� Les créatures dans un rayon de 9 m doivent effectuer un jet de Volonté DD 20� Tant qu’une créature est effrayée par ce pouvoir, elle est prise par surprise face au gorille�</description>
       </special>

@@ -9,7 +9,7 @@
       <trait type="size" ref="trait-moyenne">MOYENNE</trait>
       <trait ref="trait-amphibie">AMPHIBIE</trait>
       <trait ref="trait-athamaru">ATHAMARU</trait>
-      <trait>HUMANOÏDE</trait>
+      <trait ref="trait-humanoide">HUMANOÏDE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -102,7 +102,7 @@
       <special type="activity" actions="1">
         <name>Chasser une proie</name>
         <traits>
-          <trait>concentration</trait>
+          <trait ref="trait-concentration">concentration</trait>
         </traits>
         <description>� Le chasseur athamaru désigne une unique créature qu’il peut voir ou entendre ou qu’il Piste, et elle devient sa proie� Le chas- seur gagne un bonus de circonstances de +2 aux tests de Perception pour Chercher sa proie et aux tests de Survie pour la Pister� À chaque round, la première fois que l’athamaru touche la proie désignée, il lui inflige 1d8 dégâts de précision supplémentaires� Ces effets s’appliquent jusqu’à ce que le chasseur utilise de nouveau Chasser une proie�</description>
       </special>

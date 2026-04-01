@@ -7,7 +7,7 @@
     <level>11</level>
     <creatureTraits>
       <trait type="size" ref="trait-moyenne">MOYENNE</trait>
-      <trait>FIÉLON</trait>
+      <trait ref="trait-fielon">FIÉLON</trait>
       <trait ref="trait-impie">IMPIE</trait>
       <trait ref="trait-qlippoth">QLIPPOTH</trait>
     </creatureTraits>
@@ -56,7 +56,7 @@
         <bonus>+23</bonus>
         <traits>
           <trait ref="trait-impie">impie</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -76,7 +76,7 @@
           <trait>agile</trait>
           <trait>allonge 3 m</trait>
           <trait ref="trait-impie">impie</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -94,7 +94,7 @@
         <bonus>+23</bonus>
         <traits>
           <trait ref="trait-impie">impie</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -117,7 +117,7 @@
       </rank>
       <rank rank="4" constant="TRUE">
         <spells>
-          <spell>déplacement sans entrave</spell>
+          <spell ref="spell-deplacement-sans-entrave">déplacement sans entrave</spell>
         </spells>
       </rank>
     </spellList>
@@ -125,10 +125,10 @@
       <special type="activity" actions="2">
         <name>Démonstration inquiétante</name>
         <traits>
-          <trait>concentration</trait>
-          <trait>mental</trait>
+          <trait ref="trait-concentration">concentration</trait>
+          <trait ref="trait-mental">mental</trait>
           <trait ref="trait-occulte">occulte</trait>
-          <trait>visuel</trait>
+          <trait ref="trait-visuel">visuel</trait>
         </traits>
         <description>� Le gongorinan ouvre sa gueule pour y révéler les formes qui s’y cachent poussant les observateurs à s’interroger sur leur propre corps� Toute créature dans une émanation de 9 m doit faire un jet de Volonté DD 30� Ensuite, elle est immunisée contre la Démonstration inquiétante pendant 1 min�</description>
       </special>
@@ -155,7 +155,7 @@
       <special>
         <name>Rejet des outils</name>
         <traits>
-          <trait>mental</trait>
+          <trait ref="trait-mental">mental</trait>
           <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>� Une créature touchée par le gourdin du gongorinan doit réussir un jet de Volonté DD 30 ou Relâcher tous les objets fabriqués qu’il tient�</description>
@@ -164,7 +164,7 @@
         <name>Venin de gongorinan</name>
         <traits>
           <trait>métamorphose</trait>
-          <trait>poison</trait>
+          <trait ref="trait-poison">poison</trait>
         </traits>
         <description>; **Jet de sauvegarde** Vigueur DD 30 ; **Stade 1 ** stupéfié 1 et apparition de certains signes indiquant une transformation en animal, champignon ou plante (1 round) ; **Stade 2** stupéfié 2 et mala- droit 2 (1 round) ; **Stade 3** stupéfié 4 et maladroit 4 (1 round) ; **Stade 4** paralysé par les transforma- tions qui affectent tout le corps (1 round) ; **Stade 5** la victime est transformée physiquement et mentalement de manière permanente en un animal, un cham- pignon ou une plante et l’affliction cesse� C’est une malédiction permanente�</description>
       </special>

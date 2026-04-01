@@ -8,7 +8,7 @@
     <creatureTraits>
       <trait type="size" ref="trait-tres-petite">TRÈS PETITE</trait>
       <trait ref="trait-daemon">DAÉMON</trait>
-      <trait>FIÉLON</trait>
+      <trait ref="trait-fielon">FIÉLON</trait>
       <trait ref="trait-impie">IMPIE</trait>
     </creatureTraits>
     <perception>
@@ -61,8 +61,8 @@
           <trait>allonge 0 m</trait>
           <trait ref="trait-finesse">finesse</trait>
           <trait ref="trait-impie">impie</trait>
-          <trait>magique</trait>
-          <trait>maladie</trait>
+          <trait ref="trait-magique">magique</trait>
+          <trait ref="trait-maladie">maladie</trait>
         </traits>
         <damages>
           <damage>

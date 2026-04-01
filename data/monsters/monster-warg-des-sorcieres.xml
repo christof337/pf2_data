@@ -7,8 +7,8 @@
     <level>5</level>
     <creatureTraits>
       <trait type="size" ref="trait-grande">GRANDE</trait>
-      <trait>BÊTE</trait>
-      <trait>FROID</trait>
+      <trait ref="trait-bete">BÊTE</trait>
+      <trait ref="trait-froid">FROID</trait>
     </creatureTraits>
     <perception>
       <bonus>+14</bonus>
@@ -88,7 +88,7 @@
       <special type="activity" actions="2">
         <name>Souffle de l’hiver</name>
         <traits>
-          <trait>froid</trait>
+          <trait ref="trait-froid">froid</trait>
           <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>� Le warg des sorcières souffle un nuage glacé dans un cône de 4,5 m qui inflige 5d8 dégâts de froid (jet de Réflexes basique DD 23)� Le warg des sorcières ne peut plus utiliser Souffle glacial pendant 1d4 rounds�</description>

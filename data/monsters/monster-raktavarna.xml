@@ -72,7 +72,7 @@
     <spellList source="innate" tradition="divine" DD="16">
       <rank rank="4">
         <spells>
-          <spell>lire les présages</spell>
+          <spell ref="spell-lire-les-presages">lire les présages</spell>
         </spells>
       </rank>
     </spellList>
@@ -80,7 +80,7 @@
       <special type="activity" actions="1">
         <name>Changement de forme</name>
         <traits>
-          <trait>concentration</trait>
+          <trait ref="trait-concentration">concentration</trait>
           <trait>métamorphose</trait>
           <trait ref="trait-occulte">occulte</trait>
         </traits>
@@ -90,7 +90,7 @@
         <name>Désignation d’un maître</name>
         <traits>
           <trait ref="trait-divine">divine</trait>
-          <trait>exploration</trait>
+          <trait ref="trait-exploration">exploration</trait>
         </traits>
         <description>� Le raktavarna passe 10 min à psalmodier des invocations en compagnie d’une autre créature� Cette créature devient le maître du raktavarna jusqu’à ce que ce dernier meure ou Révoque cet effet� Le maître gagne l’activité Yeux du maître tant que ce lien perdure�</description>
       </special>
@@ -101,7 +101,7 @@
       <special>
         <name>Venin de raktavarna</name>
         <traits>
-          <trait>poison</trait>
+          <trait ref="trait-poison">poison</trait>
         </traits>
         <description>; **Jet de sauvegarde** Vigueur DD 16 ; **Durée maximale** 6 rounds ;</description>
       </special>
@@ -112,9 +112,9 @@
       <special type="activity" actions="3">
         <name>Yeux du maître</name>
         <traits>
-          <trait>concentration</trait>
+          <trait ref="trait-concentration">concentration</trait>
           <trait ref="trait-divine">divine</trait>
-          <trait>scrutation</trait>
+          <trait ref="trait-scrutation">scrutation</trait>
         </traits>
         <description>� Le maître observe le monde à travers les yeux du raktavarna au lieu des siens ; il utilise la Perception et la vision dans le noir du raktavarna� Cet effet dure jusqu’à la fin du prochain tour du maître, mais ce dernier peut Maintenir l’activation� Ce pouvoir fonctionne à n’importe quelle distance et</description>
       </special>

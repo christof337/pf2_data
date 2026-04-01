@@ -64,7 +64,7 @@
       <special type="activity" actions="1">
         <name>Descendre sur un fil de toile</name>
         <traits>
-          <trait>déplacement</trait>
+          <trait ref="trait-deplacement">déplacement</trait>
         </traits>
         <description>� L’araignée chas- seuse descend à la verticale d’une distance maximale de 12 m, suspendue à un fil de toile� Elle peut rester accrochée au fil ou s’en détacher� La distance descendue avec cette action ne compte pas dans le calcul des dégâts de chute� Une créature qui réussit à Frapper le fil de toile (CA 20, Solidité 3, 5 PV) le tranche et fait chuter l’araignée�</description>
       </special>

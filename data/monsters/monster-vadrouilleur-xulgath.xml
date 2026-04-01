@@ -7,7 +7,7 @@
     <level>2</level>
     <creatureTraits>
       <trait type="size" ref="trait-moyenne">MOYENNE</trait>
-      <trait>HUMANOÏDE</trait>
+      <trait ref="trait-humanoide">HUMANOÏDE</trait>
       <trait>XULGATH</trait>
     </creatureTraits>
     <perception>

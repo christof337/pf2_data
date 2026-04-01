@@ -77,7 +77,7 @@
         <bonus>+38</bonus>
         <traits>
           <trait>allonge 4,5 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -96,7 +96,7 @@
         <traits>
           <trait>agile</trait>
           <trait>allonge 4,5 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -114,7 +114,7 @@
         <bonus>+38</bonus>
         <traits>
           <trait>allonge 6 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -188,7 +188,7 @@
       <special>
         <name>Venin du yamaraje</name>
         <traits>
-          <trait>poison</trait>
+          <trait ref="trait-poison">poison</trait>
         </traits>
         <description>� Tant qu’une créature est maladroite à cause de ce poison, elle est condamnée avec la même intensité ; **Jet de sauvegarde** Vigueur DD 42 ; **Durée maximale** 10 rounds ; **Stade 1** 3d8 dégâts de poison et maladroit 1 (1 round) ;</description>
       </special>

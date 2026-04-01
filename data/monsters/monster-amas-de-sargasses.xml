@@ -8,7 +8,7 @@
     <creatureTraits>
       <trait type="size" ref="trait-grande">GRANDE</trait>
       <trait ref="trait-amphibie">AMPHIBIE</trait>
-      <trait>PLANTE</trait>
+      <trait ref="trait-plante">PLANTE</trait>
     </creatureTraits>
     <perception>
       <bonus>+10</bonus>

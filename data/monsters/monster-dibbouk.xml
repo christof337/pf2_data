@@ -64,7 +64,7 @@
           <trait>agile</trait>
           <trait ref="trait-finesse">finesse</trait>
           <trait ref="trait-impie">impie</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -91,12 +91,12 @@
       </rank>
       <rank rank="4">
         <spells>
-          <spell>mémoire réécrite</spell>
+          <spell ref="spell-memoire-reecrite">mémoire réécrite</spell>
         </spells>
       </rank>
       <rank rank="3">
         <spells>
-          <spell spellSpecial="à volonté">terreur</spell>
+          <spell spellSpecial="à volonté" ref="spell-terreur">terreur</spell>
         </spells>
       </rank>
     </spellList>

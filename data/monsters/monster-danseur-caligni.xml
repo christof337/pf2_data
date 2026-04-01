@@ -8,7 +8,7 @@
     <creatureTraits>
       <trait type="size" ref="trait-petite">PETITE</trait>
       <trait ref="trait-caligni">CALIGNI</trait>
-      <trait>HUMANOÏDE</trait>
+      <trait ref="trait-humanoide">HUMANOÏDE</trait>
     </creatureTraits>
     <perception>
       <bonus>+10</bonus>
@@ -116,8 +116,8 @@
       <special type="activity" actions="1">
         <name>Malédiction du danseur</name>
         <traits>
-          <trait>malédiction</trait>
-          <trait>mental</trait>
+          <trait ref="trait-malediction">malédiction</trait>
+          <trait ref="trait-mental">mental</trait>
           <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>� Le danseur caligni touche un adversaire et le maudit� La cible doit réussir un jet de Volonté DD 18 ou devenir maladroite 1 et stupéfiée 1� La cible est immunisée contre ce pouvoir pendant 24 h� Ces états persistent jusqu’à ce que la malédiction soit levée� La victime peut tenter un nouveau jet de Volonté DD 18 une fois par heure pour tenter de lever la malédiction�</description>

@@ -8,7 +8,7 @@
     <creatureTraits>
       <trait type="size" ref="trait-moyenne">MOYENNE</trait>
       <trait ref="trait-amphibie">AMPHIBIE</trait>
-      <trait>HUMANOÏDE</trait>
+      <trait ref="trait-humanoide">HUMANOÏDE</trait>
       <trait ref="trait-sedacthi">SÉDACTHI</trait>
     </creatureTraits>
     <perception>
@@ -56,7 +56,7 @@
         <name>*trident*</name>
         <bonus>+17</bonus>
         <traits>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -82,7 +82,7 @@
         <name>*trident*</name>
         <bonus>+14</bonus>
         <traits>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait>jet 6 m</trait>
         </traits>
         <damages>
@@ -105,8 +105,8 @@
       <special type="activity" actions="2">
         <name>Cri douloureux</name>
         <traits>
-          <trait>mental</trait>
-          <trait>son</trait>
+          <trait ref="trait-mental">mental</trait>
+          <trait ref="trait-son">son</trait>
         </traits>
         <description>� Le sédacthi pousse un cri aigu sur une plage de fréquences douloureuse, infligeant 3d6 dégâts de son et 1d6 dégâts mentaux à toutes les créatures dans un cône de 9 m (jet de Vigueur basique DD 23)� Une créature qui échoue son jet de sauvegarde se trouve dans l’état malade 1�</description>
       </special>

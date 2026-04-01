@@ -7,7 +7,7 @@
     <level>10</level>
     <creatureTraits>
       <trait type="size" ref="trait-grande">GRANDE</trait>
-      <trait>ARCANIQUE</trait>
+      <trait ref="trait-arcanique">ARCANIQUE</trait>
       <trait ref="trait-dragon">DRAGON</trait>
     </creatureTraits>
     <perception>
@@ -70,7 +70,7 @@
       <special type="reaction">
         <name>Vol d’énergie magique</name>
         <traits>
-          <trait>arcanique</trait>
+          <trait ref="trait-arcanique">arcanique</trait>
         </traits>
         <trigger>Le dragon obtient une réussite normale ou critique sur un jet de sauvegarde contre un sort�</trigger>
         <effect>Le dragon tente d’absorber une partie de l’éner- gie magique du sort pour s’en nourrir� Il tente de contrer le sort (rang de contre 5, modifi- cateur de contre +20)� S’il réussit, le dragon n’est pas affecté par le sort et regagne un emplacement de sort spontané dépensé ; les autres cibles sont affectées par le sort comme d’habitude�</effect>
@@ -86,7 +86,7 @@
         <bonus>+21</bonus>
         <traits>
           <trait>allonge 3 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -104,7 +104,7 @@
         <bonus>+21</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -122,7 +122,7 @@
         <bonus>+19</bonus>
         <traits>
           <trait>allonge 4,5 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>

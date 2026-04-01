@@ -7,7 +7,7 @@
     <level>18</level>
     <creatureTraits>
       <trait type="size" ref="trait-grande">GRANDE</trait>
-      <trait>FIÉLON</trait>
+      <trait ref="trait-fielon">FIÉLON</trait>
       <trait ref="trait-impie">IMPIE</trait>
       <trait ref="trait-qlippoth">QLIPPOTH</trait>
     </creatureTraits>
@@ -34,7 +34,7 @@
         <traits>
           <trait>allonge 3 m</trait>
           <trait ref="trait-impie">impie</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -54,7 +54,7 @@
           <trait>agile</trait>
           <trait>allonge 3 m</trait>
           <trait ref="trait-impie">impie</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -81,12 +81,12 @@
       </rank>
       <rank rank="7">
         <spells>
-          <spell>téléportation interplanaire</spell>
+          <spell ref="spell-teleportation-interplanaire">téléportation interplanaire</spell>
         </spells>
       </rank>
       <rank rank="6" constant="TRUE">
         <spells>
-          <spell>discernement</spell>
+          <spell ref="spell-discernement">discernement</spell>
         </spells>
       </rank>
     </spellList>
@@ -137,7 +137,7 @@
       <special>
         <name>Venin de thulgant</name>
         <traits>
-          <trait>poison</trait>
+          <trait ref="trait-poison">poison</trait>
         </traits>
         <description>; **Jet de sauvegarde** Vigueur DD 40 ; **Durée maximale** 6 rounds ; **Stade 1** 3d6 dégâts de poison et la victime est au hasard maladroite 1 ou affaiblie 1 ou stupéfiée 1 (1 round) ; **Stade 2** 6d6 dégâts de poison et la victime subit deux des états suivants au hasard : maladroite 2, affaiblie 2, stupéfiée 2 (1 round) ; **Stade 3** 9d6 dégâts de poison et la vic- time subit les trois états suivants : maladroite 3, affaiblie 3, stupéfiée 3 (1 round)</description>
       </special>

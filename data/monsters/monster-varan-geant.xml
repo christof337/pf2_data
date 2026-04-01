@@ -42,7 +42,7 @@
       <special>
         <name>Venin de varan</name>
         <traits>
-          <trait>poison</trait>
+          <trait ref="trait-poison">poison</trait>
         </traits>
         <description>**Jet de sauvegarde** Vigueur DD 17 ; **Durée maximale** 6 rounds ; **Stade 1** affaibli 1 (1 round) ; **Stade 2** 1d6 de poison et affaibli 2 (1 round)</description>
       </special>

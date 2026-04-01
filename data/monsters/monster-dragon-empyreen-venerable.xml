@@ -99,7 +99,7 @@
         <bonus>+35</bonus>
         <traits>
           <trait>allonge 6 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait ref="trait-saint">saint</trait>
         </traits>
         <damages>
@@ -119,7 +119,7 @@
         <traits>
           <trait>agile</trait>
           <trait>allonge 4,5 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait ref="trait-saint">saint</trait>
         </traits>
         <damages>
@@ -138,7 +138,7 @@
         <bonus>+33</bonus>
         <traits>
           <trait>allonge 7,5 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait ref="trait-saint">saint</trait>
         </traits>
         <damages>
@@ -158,7 +158,7 @@
         <traits>
           <trait>agile</trait>
           <trait>allonge 6 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -175,7 +175,7 @@
     <spellList source="innate" tradition="divine" DD="41" attack="+33">
       <rank rank="9">
         <spells>
-          <spell>guérison</spell>
+          <spell ref="spell-guerison">guérison</spell>
         </spells>
       </rank>
       <rank rank="7">
@@ -185,7 +185,7 @@
       </rank>
       <rank rank="5" constant="TRUE">
         <spells>
-          <spell>langage universel</spell>
+          <spell ref="spell-langage-universel">langage universel</spell>
         </spells>
       </rank>
     </spellList>

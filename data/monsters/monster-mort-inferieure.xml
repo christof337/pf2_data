@@ -65,7 +65,7 @@
       <special>
         <name>Aura d’infortune</name>
         <traits>
-          <trait>aura</trait>
+          <trait ref="trait-aura">aura</trait>
           <trait ref="trait-divine">divine</trait>
           <trait>infortune</trait>
         </traits>
@@ -79,7 +79,7 @@
         <name>Mort qui rôde</name>
         <traits>
           <trait ref="trait-divine">divine</trait>
-          <trait>téléportation</trait>
+          <trait ref="trait-teleportation">téléportation</trait>
         </traits>
         <description>� Comme la Faucheuse mais la créature qui déclenche cet effet doit se trouver dans un rayon de 18 m�</description>
       </special>
@@ -100,7 +100,7 @@
           <trait>agile</trait>
           <trait>allonge 3 m</trait>
           <trait>croc-en-jambe</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
           <trait>mortel 2d10</trait>
         </traits>
         <damages>
@@ -118,7 +118,7 @@
     <spellList source="innate" tradition="divine" DD="38">
       <rank rank="6" constant="TRUE">
         <spells>
-          <spell>discernement</spell>
+          <spell ref="spell-discernement">discernement</spell>
         </spells>
       </rank>
     </spellList>

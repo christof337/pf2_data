@@ -47,8 +47,8 @@
       <special ref="ability-puanteur">
         <name>Puanteur</name>
         <traits>
-          <trait>aura</trait>
-          <trait>olfactif</trait>
+          <trait ref="trait-aura">aura</trait>
+          <trait ref="trait-olfactif">olfactif</trait>
         </traits>
         <description>9 m, DD 19 (p� 360)</description>
       </special>
@@ -67,7 +67,7 @@
       <special>
         <name>Frappe écœurante</name>
         <traits>
-          <trait>poison</trait>
+          <trait ref="trait-poison">poison</trait>
         </traits>
         <description>� Une créature vivante touchée par une des vrilles du globster doit tenter un jet de Vigueur DD 19� En cas d’échec, la créature est malade 1� Si la créature est déjà malade, son état augmente de 1 jusqu’à un maximum de malade 4� Une créa- ture qui réussit son jet de sauvegarde est immunisée pendant 24 h�</description>
       </special>

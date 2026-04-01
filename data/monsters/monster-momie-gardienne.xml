@@ -64,9 +64,9 @@
         <name>Douleur suffocante</name>
         <traits>
           <trait>divin</trait>
-          <trait>illusion</trait>
-          <trait>mental</trait>
-          <trait>néant</trait>
+          <trait ref="trait-illusion">illusion</trait>
+          <trait ref="trait-mental">mental</trait>
+          <trait ref="trait-neant">néant</trait>
         </traits>
         <description>**Conditions.** La dernière action de la momie était une Frappe de poing réussie�</description>
       </special>

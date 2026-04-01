@@ -7,8 +7,8 @@
     <level>6</level>
     <creatureTraits>
       <trait type="size" ref="trait-grande">GRANDE</trait>
-      <trait>BÊTE</trait>
-      <trait>FIÉLON</trait>
+      <trait ref="trait-bete">BÊTE</trait>
+      <trait ref="trait-fielon">FIÉLON</trait>
       <trait ref="trait-impie">IMPIE</trait>
     </creatureTraits>
     <perception>
@@ -42,7 +42,7 @@
       <special>
         <name>Fumée</name>
         <traits>
-          <trait>aura</trait>
+          <trait ref="trait-aura">aura</trait>
         </traits>
         <description>4,5 m� Le destrier noir exhale continuellement une fumée noire� Les créatures dans l’aura sont masquées par rapport à celles qui sont à l’extérieur, et inversement� Les des- triers noirs et leurs cavaliers peuvent voir à travers cette fumée� Une créature qui commence son tour dans l’aura doit réussir un jet de Vigueur DD 22 ou être malade 2� Puis elle est temporairement immunisée contre l’effet de la fumée pendant 1 min� C’est un poison inhalé et le destrier noir ainsi que son cavalier y sont immunisés�</description>
       </special>
@@ -60,7 +60,7 @@
         <bonus>+16</bonus>
         <traits>
           <trait ref="trait-impie">impie</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -76,7 +76,7 @@
           <trait>agile</trait>
           <trait ref="trait-feu">feu</trait>
           <trait ref="trait-impie">impie</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>

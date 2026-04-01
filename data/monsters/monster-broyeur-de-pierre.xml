@@ -8,7 +8,7 @@
     <creatureTraits>
       <trait type="size" ref="trait-grande">GRANDE</trait>
       <trait ref="trait-elementaire">ÉLÉMENTAIRE</trait>
-      <trait>TERRE</trait>
+      <trait ref="trait-terre">TERRE</trait>
     </creatureTraits>
     <perception>
       <bonus>+16</bonus>
@@ -61,9 +61,9 @@
       <special>
         <name>Pointes de pierre</name>
         <traits>
-          <trait>aura</trait>
+          <trait ref="trait-aura">aura</trait>
           <trait ref="trait-primordiale">primordiale</trait>
-          <trait>terre</trait>
+          <trait ref="trait-terre">terre</trait>
         </traits>
         <description>1,5 m� Des pointes de pierre jaillissent de toutes les surfaces en pierre situées dans l’émanation et créent un terrain difficile� Une créature qui se déplace sur ce terrain subit 2d6 dégâts perforants par case contenant des pointes dans laquelle il se déplace (une créature de taille au moins Grande ne subit des dégâts qu’une seule fois pour chaque case de déplacement même si son espace couvre plusieurs cases de pointes de pierre)� Les créatures dotées du trait terre ignorent cet effet dans la zone affectée� Le broyeur de pierre peut activer ou désactiver cette aura avec une action unique dotée du trait concentration�</description>
       </special>

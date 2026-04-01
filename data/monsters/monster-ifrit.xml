@@ -19,7 +19,7 @@
       <language>commun</language>
       <language>pyrique</language>
       <langSpecial>
-        <spell>langage universel</spell>
+        <spell ref="spell-langage-universel">langage universel</spell>
       </langSpecial>
     </languages>
     <skills>
@@ -81,7 +81,7 @@
         <traits>
           <trait>agile</trait>
           <trait>allonge 3 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -108,7 +108,7 @@
       </rank>
       <rank rank="5" constant="TRUE">
         <spells>
-          <spell>langage universel</spell>
+          <spell ref="spell-langage-universel">langage universel</spell>
         </spells>
       </rank>
     </spellList>
@@ -116,7 +116,7 @@
       <special type="activity" actions="1">
         <name>Ailes de flammes</name>
         <traits>
-          <trait>arcanique</trait>
+          <trait ref="trait-arcanique">arcanique</trait>
           <trait ref="trait-feu">feu</trait>
         </traits>
         <description>� L’ifrit fait pousser des ailes de flammes dans son dos� Il gagne une Vitesse de vol de 10,5 m pen- dant 1 min� Les flammes créent également une aura dans une éma- nation de 1,5 m autour de l’ifrit� Toute créature qui termine son tour dans l’aura subit 2d6 dégâts de feu (jet de Réflexes basique DD 25)�</description>
@@ -124,8 +124,8 @@
       <special type="activity" actions="1">
         <name>Changement de forme</name>
         <traits>
-          <trait>arcanique</trait>
-          <trait>concentration</trait>
+          <trait ref="trait-arcanique">arcanique</trait>
+          <trait ref="trait-concentration">concentration</trait>
           <trait>métamorphose</trait>
         </traits>
         <description>� L’ifrit se transforme en un élémentaire de feu ou un reptile de taille Petite ou Moyenne, comme un serpent (p� 358)� Cela n’affecte pas ses statis- tiques, mais peut changer le type de dégâts de ses Frappes�</description>

@@ -7,7 +7,7 @@
     <level>7</level>
     <creatureTraits>
       <trait type="size" ref="trait-moyenne">MOYENNE</trait>
-      <trait>AIR</trait>
+      <trait ref="trait-air">AIR</trait>
       <trait ref="trait-elementaire">ÉLÉMENTAIRE</trait>
     </creatureTraits>
     <perception>
@@ -70,7 +70,7 @@
       <special type="activity" actions="1">
         <name>Son étouffé</name>
         <traits>
-          <trait>air</trait>
+          <trait ref="trait-air">air</trait>
           <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>Le phade calme l’air dans une émanation de 9 m jusqu’au début de son prochain tour, réduisant tous les sons à l’état de murmures ne pouvant pas être entendus hors de l’émanation� Ceci n’empêche pas de lancer des sorts, mais un phade tente de contrer (*Livre des joueurs* p� 431) tout effet audible ou de son originaire de la zone avec un modificateur de contre de +17� Si la tentative de contre échoue, Son étouffé prend fin immédiatement�</description>

@@ -7,9 +7,9 @@
     <level>11</level>
     <creatureTraits>
       <trait type="size" ref="trait-tres-grande">TRÈS GRANDE</trait>
-      <trait>AIR</trait>
+      <trait ref="trait-air">AIR</trait>
       <trait ref="trait-geant">GÉANT</trait>
-      <trait>HUMANOÏDE</trait>
+      <trait ref="trait-humanoide">HUMANOÏDE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -63,17 +63,17 @@
     <spellList source="innate" tradition="primal" DD="30">
       <rank rank="4">
         <spells>
-          <spell>forme vaporeuse</spell>
+          <spell ref="spell-forme-vaporeuse">forme vaporeuse</spell>
         </spells>
       </rank>
       <rank rank="3">
         <spells>
-          <spell spellSpecial="à volonté">lévitation</spell>
+          <spell spellSpecial="à volonté" ref="spell-levitation">lévitation</spell>
         </spells>
       </rank>
       <rank rank="2">
         <spells>
-          <spell spellSpecial="à volonté">brume</spell>
+          <spell spellSpecial="à volonté" ref="spell-brume">brume</spell>
         </spells>
       </rank>
     </spellList>
@@ -81,7 +81,7 @@
       <special type="activity" actions="2">
         <name>Frappe venteuse</name>
         <traits>
-          <trait>air</trait>
+          <trait ref="trait-air">air</trait>
           <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>� Le géant des nuages Frappe une créature avec sa corsèque, entouré d’un tourbillon d’air rugissant� En cas de réussite, la cible subit 4d8 dégâts contondants supplémentaires et reste sourde pendant 1 min� Que la Frappe soit réussie ou non, chaque créature dans une émanation de 6 m, y compris la cible de la Frappe mais pas les géants des nuages, est ballottée par les vents rugissants et doit faire un jet de Vigueur DD 30�</description>

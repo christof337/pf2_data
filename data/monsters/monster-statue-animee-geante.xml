@@ -42,7 +42,7 @@
         <name>poing en pierre</name>
         <bonus>+19</bonus>
         <traits>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -57,7 +57,7 @@
         <traits>
           <trait>facteur de portée 24 m</trait>
           <trait ref="trait-feu">feu</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>

@@ -54,15 +54,15 @@
       <special type="activity" actions="1">
         <name>Descendre sur un fil de toile</name>
         <traits>
-          <trait>déplacement</trait>
+          <trait ref="trait-deplacement">déplacement</trait>
         </traits>
         <description>� Comme l’araignée chasseuse, mais l’araignée goliath peut descendre d’une dis- tance maximale de 36 m et le fil de toile à une CA de 20, une Solidité de 5 et 20 PV�</description>
       </special>
       <special>
         <name>Venin d’araignée goliath</name>
         <traits>
-          <trait>mise hors de combat</trait>
-          <trait>poison</trait>
+          <trait ref="trait-mise-hors-de-combat">mise hors de combat</trait>
+          <trait ref="trait-poison">poison</trait>
         </traits>
         <description>; **Jet de sauve‑ garde** Vigueur DD 30 ; **Durée maximale** 6 rounds ; **Stade 1** 3d6 dégâts de poison et ralenti 1 (1 round) ; **Stade 2** 3d8 dégâts de poison et ralenti 2 (1 round) ; **Stade 3** 3d10 dégâts de poison et paralysé pendant 2d4 heures</description>
       </special>

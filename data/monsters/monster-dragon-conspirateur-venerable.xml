@@ -75,7 +75,7 @@
         <bonus>+32</bonus>
         <traits>
           <trait>allonge 4,5 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -90,7 +90,7 @@
         <traits>
           <trait>agile</trait>
           <trait>allonge 3 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -104,7 +104,7 @@
         <bonus>+30</bonus>
         <traits>
           <trait>allonge 6 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -117,7 +117,7 @@
         <name>attaque mentale</name>
         <bonus>+31</bonus>
         <traits>
-          <trait>mental</trait>
+          <trait ref="trait-mental">mental</trait>
           <trait>portée 30 m</trait>
         </traits>
         <damages>
@@ -165,7 +165,7 @@
         <name>Souffle de fumée</name>
         <traits>
           <trait ref="trait-occulte">occulte</trait>
-          <trait>poison</trait>
+          <trait ref="trait-poison">poison</trait>
         </traits>
         <description>Comme le jeune dragon conspirateur, mais dans un cône de 18 m, 16d6 dégâts de poison et DD 39�</description>
       </special>

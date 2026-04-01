@@ -8,7 +8,7 @@
     <creatureTraits>
       <trait type="size" ref="trait-tres-grande">TRÈS GRANDE</trait>
       <trait ref="trait-elementaire">ÉLÉMENTAIRE</trait>
-      <trait>TERRE</trait>
+      <trait ref="trait-terre">TERRE</trait>
     </creatureTraits>
     <perception>
       <bonus>+20</bonus>
@@ -61,9 +61,9 @@
       <special>
         <name>Pointes de pierre</name>
         <traits>
-          <trait>aura</trait>
+          <trait ref="trait-aura">aura</trait>
           <trait ref="trait-primordiale">primordiale</trait>
-          <trait>terre</trait>
+          <trait ref="trait-terre">terre</trait>
         </traits>
         <description>3 m� Comme le broyeur de pierre mais 2d8 dégâts perforants�</description>
       </special>

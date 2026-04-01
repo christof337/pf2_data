@@ -108,7 +108,7 @@
       <special type="activity" actions="2">
         <name>Assaut mental</name>
         <traits>
-          <trait>mental</trait>
+          <trait ref="trait-mental">mental</trait>
           <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>Le gosreg concentre son champ d’énergie mentale dis- cordante et le projette dans l’esprit d’une créature située à moins de 18 m� La cible subit 6d6 dégâts mentaux (jet de Volonté basique DD 30)� Sur un échec critique, la créature est également confuse pendant 1 min ou jusqu’à ce qu’elle subisse des dégâts�</description>
@@ -116,7 +116,7 @@
       <special type="activity" actions="1">
         <name>Changement de forme</name>
         <traits>
-          <trait>concentration</trait>
+          <trait ref="trait-concentration">concentration</trait>
           <trait>métamorphose</trait>
           <trait ref="trait-occulte">occulte</trait>
         </traits>
@@ -125,7 +125,7 @@
       <special type="activity" actions="1">
         <name>Posture d’émission</name>
         <traits>
-          <trait>mental</trait>
+          <trait ref="trait-mental">mental</trait>
           <trait ref="trait-occulte">occulte</trait>
           <trait>posture</trait>
         </traits>

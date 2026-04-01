@@ -7,10 +7,10 @@
     <level>3</level>
     <creatureTraits>
       <trait type="size" ref="trait-moyenne">MOYENNE</trait>
-      <trait>BOIS</trait>
+      <trait ref="trait-bois">BOIS</trait>
       <trait ref="trait-fee">FÉE</trait>
       <trait>NYMPHE</trait>
-      <trait>PLANTE</trait>
+      <trait ref="trait-plante">PLANTE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -70,7 +70,7 @@
         <bonus>+12</bonus>
         <traits>
           <trait ref="trait-finesse">finesse</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -117,11 +117,11 @@
       <special>
         <name>Beauté de la nymphe</name>
         <traits>
-          <trait>aura</trait>
-          <trait>émotion</trait>
-          <trait>mental</trait>
+          <trait ref="trait-aura">aura</trait>
+          <trait ref="trait-emotion">émotion</trait>
+          <trait ref="trait-mental">mental</trait>
           <trait ref="trait-primordiale">primordiale</trait>
-          <trait>visuel</trait>
+          <trait ref="trait-visuel">visuel</trait>
         </traits>
         <description>9 m� Les créatures qui com- mencent leur tour dans l’aura doivent réussir un jet de Volonté ou subir un effet décrit dans la section consacrée à la nymphe souveraine�</description>
       </special>

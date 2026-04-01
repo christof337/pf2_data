@@ -86,8 +86,8 @@
         <bonus>+33</bonus>
         <traits>
           <trait>allonge 6 m</trait>
-          <trait>magique</trait>
-          <trait>poison</trait>
+          <trait ref="trait-magique">magique</trait>
+          <trait ref="trait-poison">poison</trait>
         </traits>
         <damages>
           <damage>
@@ -106,7 +106,7 @@
         <traits>
           <trait>agile</trait>
           <trait>allonge 4,5 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -120,7 +120,7 @@
         <bonus>+31</bonus>
         <traits>
           <trait>allonge 7,5 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -134,7 +134,7 @@
         <bonus>+31</bonus>
         <traits>
           <trait>allonge 6 m</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -172,7 +172,7 @@
       <special type="activity" actions="2">
         <name>Souffle empoisonné</name>
         <traits>
-          <trait>poison</trait>
+          <trait ref="trait-poison">poison</trait>
           <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>Comme le jeune dragon cornu, mais cône de 18 m, 18d6 dégâts de poison et DD 37�</description>

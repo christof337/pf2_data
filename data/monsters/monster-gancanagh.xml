@@ -7,7 +7,7 @@
     <level>4</level>
     <creatureTraits>
       <trait type="size" ref="trait-moyenne">MOYENNE</trait>
-      <trait>AZATA</trait>
+      <trait ref="trait-azata">AZATA</trait>
       <trait ref="trait-celeste">CÉLESTE</trait>
       <trait ref="trait-saint">SAINT</trait>
     </creatureTraits>
@@ -73,7 +73,7 @@
           <trait>désarmer</trait>
           <trait ref="trait-finesse">finesse</trait>
           <trait ref="trait-saint">saint</trait>
-          <trait>magique</trait>
+          <trait ref="trait-magique">magique</trait>
         </traits>
         <damages>
           <damage>
@@ -86,12 +86,12 @@
     <spellList source="innate" tradition="divine" DD="23">
       <rank rank="4">
         <spells>
-          <spell>suggestion</spell>
+          <spell ref="spell-suggestion">suggestion</spell>
         </spells>
       </rank>
       <rank rank="3">
         <spells>
-          <spell>héroïsme</spell>
+          <spell ref="spell-heroisme">héroïsme</spell>
         </spells>
       </rank>
       <rank rank="2">
@@ -101,7 +101,7 @@
       </rank>
       <rank rank="5" constant="TRUE">
         <spells>
-          <spell>langage universel</spell>
+          <spell ref="spell-langage-universel">langage universel</spell>
         </spells>
       </rank>
     </spellList>
@@ -109,7 +109,7 @@
       <special type="activity" actions="1">
         <name>Changement de forme</name>
         <traits>
-          <trait>concentration</trait>
+          <trait ref="trait-concentration">concentration</trait>
           <trait ref="trait-divine">divine</trait>
           <trait>métamorphose</trait>
         </traits>
@@ -119,8 +119,8 @@
         <name>Passion stimulante</name>
         <traits>
           <trait ref="trait-divine">divine</trait>
-          <trait>émotion</trait>
-          <trait>mental</trait>
+          <trait ref="trait-emotion">émotion</trait>
+          <trait ref="trait-mental">mental</trait>
         </traits>
         <description>� Le gancanagh étreint ou embrasse une créature consentante qui se trouve dans un espace adjacent et lui insuffle un élan de passion revigorante� La créature bénéficie d’un bonus de statut de +1 à ses jets d’attaque et de 10 points de vie temporaires pendant 10 min� Une fois ce délai écoulé, la cible est fatiguée pendant 10 min, sauf si elle réussit un jet de Vigueur DD 21�</description>
       </special>

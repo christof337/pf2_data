@@ -7,8 +7,8 @@
     <level>4</level>
     <creatureTraits>
       <trait type="size" ref="trait-grande">GRANDE</trait>
-      <trait>BÊTE</trait>
-      <trait>HUMANOÏDE</trait>
+      <trait ref="trait-bete">BÊTE</trait>
+      <trait ref="trait-humanoide">HUMANOÏDE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
