@@ -34,39 +34,21 @@ SPELLS_XML    = "./data/spells/all_spells.xml"
 # INDEX LOADERS
 # ==========================================
 
-def load_trait_index(path):
-    """{ generate_slug('trait', name) → id } depuis traits.xml."""
+def load_xml_index(path, element_tag, prefix):
+    """
+    Construit un index { generate_slug(prefix, name) → id } depuis un fichier XML.
+
+    path        : chemin vers le fichier XML
+    element_tag : tag des éléments enfants directs (ex: "trait", "spell", "ability")
+    prefix      : préfixe de slug (ex: "trait", "spell", "ability")
+    """
     tree = etree.parse(path)
     index = {}
-    for trait in tree.getroot().findall("trait"):
-        name = trait.findtext("name", "").strip()
-        trait_id = trait.get("id")
-        if name and trait_id:
-            index[generate_slug("trait", name)] = trait_id
-    return index
-
-
-def load_spell_index(path):
-    """{ generate_slug('spell', name) → id } depuis all_spells.xml."""
-    tree = etree.parse(path)
-    index = {}
-    for spell in tree.getroot().findall("spell"):
-        name = spell.findtext("name", "").strip()
-        spell_id = spell.get("id")
-        if name and spell_id:
-            index[generate_slug("spell", name)] = spell_id
-    return index
-
-
-def load_ability_index(path):
-    """{ generate_slug('ability', name) → id } depuis abilities.xml (id en attribut)."""
-    tree = etree.parse(path)
-    index = {}
-    for ability in tree.getroot().findall("ability"):
-        name = ability.findtext("name", "").strip()
-        ability_id = ability.get("id")
-        if name and ability_id:
-            index[generate_slug("ability", name)] = ability_id
+    for elem in tree.getroot().findall(element_tag):
+        name = elem.findtext("name", "").strip()
+        elem_id = elem.get("id")
+        if name and elem_id:
+            index[generate_slug(prefix, name)] = elem_id
     return index
 
 
@@ -171,9 +153,9 @@ def main():
         print("[LINKER] Mode dry-run — aucune écriture sur le disque.")
 
     print(f"[LINKER] Chargement des index...")
-    trait_index   = load_trait_index(TRAITS_XML)
-    spell_index   = load_spell_index(SPELLS_XML)
-    ability_index = load_ability_index(ABILITIES_XML)
+    trait_index   = load_xml_index(TRAITS_XML,    "trait",   "trait")
+    spell_index   = load_xml_index(SPELLS_XML,    "spell",   "spell")
+    ability_index = load_xml_index(ABILITIES_XML, "ability", "ability")
     print(f"[LINKER]   {len(trait_index)} traits | {len(spell_index)} sorts | {len(ability_index)} capacités\n")
 
     totals = defaultdict(int)
