@@ -1,0 +1,22 @@
+
+  ```pf2e-stats
+#### [[fr]]
+# GÉANT DU GIVRE 
+## CRÉATURE 9
+----
+==GRANDE== ==FROID== ==GÉANT== ==HUMANOÏDE==
+**Perception** 
+**For** , **Dex** , **Con** , **Int** , **Sag** , **Cha** 
+----
+**CA** 29 ; **Réf** , **Vig** , **Vol** 
+**PV** 150 ; **Faiblesse** feu 10
+----
+**Vitesse** 0 m
+**Corps à corps** `[one-action]` *grande hache* +21 (allonge 3 m, balayage, magique), **Dégâts** 2d12+12 tranchants
+**Corps à corps** `[one-action]` poing +21 (agile, allonge 3 m), **Dégâts** 2d8+12 contondants
+**À distance** `[one-action]` stalactite +19 (froid, portée 36 m, primordiale), **Dégâts** 2d8 perforants plus 3d6 de froid
+**Coup élargi** `[one-action]` Le géant du givre effectue une unique Frappe de grande hache et compare le résultat de son jet d’attaque à la CA d’un maximum de deux adversaires à portée� Cette frappe compte comme deux attaques pour le malus d’attaques multiples du géant du givre�
+**Marche sur la glace.** Un géant du givre n’est pas ralenti par un terrain rendu difficile par la neige ou la glace� Il n’a pas non plus à faire de tests d’Acrobaties pour éviter de tomber en glissant sur du verglas�
+**Souffle glacial** `[one-action]` (froid, primordiale) � Le géant du givre souffle un cône de 4,5 m d’humidité extrêmement froide qui se transforme rapidement en glace et inflige 4d6 dégâts de froid� Chaque créature dans le cône doit faire un jet de Réflexes basique DD 28� Une créature qui rate son jet de sauvegarde est également immobilisée et subit 2d6 dégâts de froid à la fin de chacun de ses tours jusqu’à ce qu’elle se libère (S’échapper DD 28)� Le géant doit attendre 1d4 rounds avant de pouvoir réutiliser son Souffle glacial�
+**Géant du feu.** Les géants du feu, les plus militaristes de tous les géants, se concentrent de manière obses‑ sionnelle sur l’apprentissage de techniques de combat, sur la maîtrise de la forge d’armes et d’armures et sur la recherche de nouvelles techniques pour dominer leurs ennemis. La plupart de leurs communautés sont bâties autour de failles élémentaires, de sources d’eau chaude ou de caldeiras volcaniques. Il leur est donc difficile de changer de lieu de vie, ce qui les encourage à chercher des systèmes de défense infaillibles contre les intrus. C’est pourquoi leurs structures sociale et politique sont basées sur des hiérarchies martiales strictes, dont chaque membre sait qu’il se doit de suivre les ordres de son supérieur. Un géant du feu enfile sa première armure forgée dès ses premiers pas. Celle‑ci est ensuite constamment remodelée et modifiée à mesure qu’il grandit. En dehors de tous les armements qu’ils forgent dans leurs fourneaux volcaniques, les géants du feu aiment également utiliser sur les champs de bataille des dinosaures, des drakes et des molosses infernaux dressés. Les géants du feu sont généralement faciles à reconnaître grâce à leur stature imposante et à leurs cheveux orange vif qui brillent et vacillent comme des flammes. En moyenne, un géant du feu mesure plus de 4 m, pèse autour des 3 500 kg et vit environ 350 ans.
+
