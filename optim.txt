@@ -26,14 +26,12 @@ Pourquoi ça casse (risque) : les trois implémentations ont des comportements d
   Fusionner sans valider le comportement sur les fixtures de sorts et de capacités
   risquerait une régression. À revoir quand les tests couvriront ability_mapper.
 
-### 2. monster.xsd — richTextType n'autorise pas <spellRef>
+### 2. monster.xsd — richTextType n'autorise pas <spellRef>  ✅ RÉSOLU 2026-04-01
 
-Fichier : schema/monster.xsd
-Observation : richTextType dans monster.xsd autorise <table>, <list>, <spell>, <scseecBloc>
-mais PAS <spellRef>. Dans spell.xsd, richTextType n'autorise que <spellRef>.
-Le tag <spell> dans monster.xsd (pour langSpecial par exemple) et <spellRef> dans spell.xsd
-semblent remplir le même rôle sémantique avec des noms différents.
-À harmoniser lors d'une passe de consolidation XSD (Phase 3).
+Fichier : schema/monster.xsd, monster_mapper.py, tests/fixtures/test_dragon_ok.xml
+Résolution : richTextType dans monster.xsd utilise désormais <spellRef> (avec attribut ref
+optionnel) au lieu de <spell>, aligné sur spell.xsd. langSpecial dans monster_mapper.py
+génère maintenant <spellRef>. listType également mis à jour. Fixture du dragon mise à jour.
 
 ### 3. monster.xsd — simpleListType mélange trait/language/immunity
 

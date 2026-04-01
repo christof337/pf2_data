@@ -283,7 +283,16 @@
     <xs:choice minOccurs="0" maxOccurs="unbounded">
       <xs:element name="table" type="tableType"/>
       <xs:element name="list" type="listType"/>
-      <xs:element name="spell" type="xs:string"/>
+      <!-- Référence inline à un sort dans le texte (ex: langSpecial, descriptions de capacités) -->
+      <xs:element name="spellRef">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="xs:string">
+              <xs:attribute name="ref" type="xs:string"/>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
       <xs:element name="scseecBloc" type="scseecType"/>
     </xs:choice>
   </xs:complexType>
@@ -304,10 +313,18 @@
   <xs:complexType name="listType">
     <xs:sequence>
       <xs:element name="listItem" maxOccurs="unbounded">
-        <xs:complexType mixed="true"> 
+        <xs:complexType mixed="true">
           <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element name="special" type="specialAbilityType"/>
-            <xs:element name="spell" type="xs:string"/>
+            <xs:element name="spellRef">
+              <xs:complexType>
+                <xs:simpleContent>
+                  <xs:extension base="xs:string">
+                    <xs:attribute name="ref" type="xs:string"/>
+                  </xs:extension>
+                </xs:simpleContent>
+              </xs:complexType>
+            </xs:element>
           </xs:choice>
           <xs:anyAttribute processContents="skip"/>
         </xs:complexType>

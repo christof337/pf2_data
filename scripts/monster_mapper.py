@@ -356,7 +356,7 @@ def generate_monster_xml(data, output_path):
         spec_elem = etree.SubElement(langs_node, "langSpecial")
         spell_match = re.search(r'\*(.*?)\*', special_text)
         if spell_match:
-            spell_node = etree.SubElement(spec_elem, "spell")
+            spell_node = etree.SubElement(spec_elem, "spellRef")
             spell_node.text = spell_match.group(1).strip()
         else:
             spec_elem.text = special_text
