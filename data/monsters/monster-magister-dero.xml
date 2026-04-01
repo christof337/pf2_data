@@ -7,7 +7,7 @@
     <level>5</level>
     <creatureTraits>
       <trait type="size" ref="trait-petite">PETITE</trait>
-      <trait>DERO</trait>
+      <trait ref="trait-dero">DERO</trait>
       <trait ref="trait-humanoide">HUMANOÏDE</trait>
     </creatureTraits>
     <perception>

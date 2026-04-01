@@ -7,7 +7,7 @@
     <level>20</level>
     <creatureTraits>
       <trait type="size" ref="trait-grande">GRANDE</trait>
-      <trait>ÉON</trait>
+      <trait ref="trait-eon">ÉON</trait>
       <trait ref="trait-veilleur">VEILLEUR</trait>
     </creatureTraits>
     <perception>

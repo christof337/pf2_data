@@ -5,7 +5,7 @@
     <rank>1</rank>
     <actions>2</actions>
     <traits>
-      <trait>NON LÉTAL</trait>
+      <trait ref="trait-non-letal">NON LÉTAL</trait>
       <trait ref="trait-concentration">CONCENTRATION</trait>
       <trait ref="trait-manipulation">MANIPULATION</trait>
       <trait ref="trait-mental">MENTAL</trait>
@@ -2902,7 +2902,7 @@
     <rank>1</rank>
     <actions>2</actions>
     <traits>
-      <trait>NON LÉTAL</trait>
+      <trait ref="trait-non-letal">NON LÉTAL</trait>
       <trait ref="trait-concentration">CONCENTRATION</trait>
       <trait ref="trait-illusion">ILLUSION</trait>
       <trait ref="trait-manipulation">MANIPULATION</trait>
@@ -4012,7 +4012,7 @@
     <rank>1</rank>
     <actions>2</actions>
     <traits>
-      <trait>NON LÉTAL</trait>
+      <trait ref="trait-non-letal">NON LÉTAL</trait>
       <trait ref="trait-tour-de-magie">TOUR DE MAGIE</trait>
       <trait ref="trait-concentration">CONCENTRATION</trait>
       <trait ref="trait-manipulation">MANIPULATION</trait>

@@ -7,7 +7,7 @@
     <level>3</level>
     <creatureTraits>
       <trait type="size" ref="trait-petite">PETITE</trait>
-      <trait>DERO</trait>
+      <trait ref="trait-dero">DERO</trait>
       <trait ref="trait-humanoide">HUMANOÏDE</trait>
     </creatureTraits>
     <perception>
@@ -71,7 +71,7 @@
         <name>Étranglement</name>
         <traits>
           <trait ref="trait-attaque">attaque</trait>
-          <trait>non létal</trait>
+          <trait ref="trait-non-letal">non létal</trait>
         </traits>
         <description>; **Conditions.** Le dero doit avoir ses deux mains libres ou manier une chaîne cloutée ;</description>
       </special>

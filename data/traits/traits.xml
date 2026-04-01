@@ -2,359 +2,451 @@
 <traits xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/trait.xsd">
   <trait id="trait-commune">
     <name>Commune</name>
-    <description>Une créature qui possède cette rareté est courante et peut être convoquée à l’aide du sort de convocation approprié.</description>
+    <description>Une créature qui possède cette rareté est courante et peut être convoquée à l’aide du sort de convocation approprié�</description>
   </trait>
   <trait id="trait-peu-courante">
     <name>Peu courante</name>
-    <description>On en sait moins sur les créatures peu courantes que sur les créatures communes. Elles ne peuvent généralement pas être convoquées. Le DD des tests permettant de Se souvenir d’informations sur une telle créature est augmenté de 2.</description>
+    <description>On en sait moins sur les créatures peu courantes que sur les créatures communes� Elles ne peuvent généralement pas être convoquées� Le DD des tests permettant de Se souvenir d’informations sur une telle créature est augmenté de 2�</description>
   </trait>
   <trait id="trait-rare">
     <name>Rare</name>
-    <description>Comme le nom l’indique, ces créatures sont rares. Elles ne peuvent généralement pas être convoquées. Le DD des tests per- mettant de Se souvenir d’informations sur une telle créature est augmenté de 5.</description>
+    <description>Comme le nom l’indique, ces créatures sont rares� Elles ne peuvent généralement pas être convoquées� Le DD des tests per- mettant de Se souvenir d’informations sur une telle créature est augmenté de 5�</description>
   </trait>
   <trait id="trait-unique">
     <name>Unique</name>
-    <description>Une créature qui possède cette rareté est la seule de son espèce. Le DD des tests permettant de Se souvenir d’informations sur une telle créature est augmenté de 10.</description>
+    <description>Une créature qui possède cette rareté est la seule de son espèce� Le DD des tests permettant de Se souvenir d’informations sur une telle créature est augmenté de 10�</description>
   </trait>
   <trait id="trait-gigantesque">
     <name>Gigantesque</name>
-    <description>Une créature de taille Gigantesque occupe un espace d’au moins 6 m sur 6 m (soit 16 cases sur le quadrillage), mais certaines sont bien plus grandes. Les créatures Gigantesques ont généralement une allonge de 6 m si elles sont hautes ou de 4,5 m si elles sont longues, mais les plus grandes peuvent avoir une allonge bien supérieure.</description>
+    <description>Une créature de taille Gigantesque occupe un espace d’au moins 6 m sur 6 m (soit 16 cases sur le quadrillage), mais certaines sont bien plus grandes� Les créatures Gigantesques ont généralement une allonge de 6 m si elles sont hautes ou de 4,5 m si elles sont longues, mais les plus grandes peuvent avoir une allonge bien supérieure�</description>
   </trait>
   <trait id="trait-tres-grande">
     <name>Très Grande</name>
-    <description>Une créature de Très Grande taille occupe un espace de 4,5 m sur 4,5 m (9 cases sur le quadrillage). Elle a généra- lement une allonge de 4,5 m si elle est haute ou de 3 m si elle est longue.</description>
+    <description>Une créature de Très Grande taille occupe un espace de 4,5 m sur 4,5 m (9 cases sur le quadrillage)� Elle a généra- lement une allonge de 4,5 m si elle est haute ou de 3 m si elle est longue�</description>
   </trait>
   <trait id="trait-grande">
     <name>Grande</name>
-    <description>Une créature de Grande taille occupe un espace de 3 m sur 3 m (4 cases sur le quadrillage). Elle a généralement une allonge de 3 m si elle est haute ou de 1,5 m si elle est longue.</description>
+    <description>Une créature de Grande taille occupe un espace de 3 m sur 3 m (4 cases sur le quadrillage)� Elle a généralement une allonge de 3 m si elle est haute ou de 1,5 m si elle est longue�</description>
   </trait>
   <trait id="trait-moyenne">
     <name>Moyenne</name>
-    <description>Une créature de taille Moyenne occupe un espace de 1,5 m sur 1,5 m (1 case sur le quadrillage) et a généralement une allonge de 1,5 m.</description>
+    <description>Une créature de taille Moyenne occupe un espace de 1,5 m sur 1,5 m (1 case sur le quadrillage) et a généralement une allonge de 1,5 m�</description>
   </trait>
   <trait id="trait-petite">
     <name>Petite</name>
-    <description>Une créature de Petite taille occupe un espace de 1,5 m sur 1,5 m (1 case sur le quadrillage) et a généralement une allonge de 1,5 m.</description>
+    <description>Une créature de Petite taille occupe un espace de 1,5 m sur 1,5 m (1 case sur le quadrillage) et a généralement une allonge de 1,5 m�</description>
   </trait>
   <trait id="trait-tres-petite">
     <name>Très Petite</name>
-    <description>Une créature de Très Petite taille occupe un espace infé- rieur à 1,5 m sur 1,5 m (1 case sur le quadrillage), et plusieurs Très Petites créatures peuvent occuper la même case sur le quadrillage. Une même case peut être occupée par au moins quatre créatures de Très Petites taille, et même plus si le MJ le permet. Elles peuvent également occuper le même espace que des créatures de taille supérieure et, si leur allonge est de 0 m, elles y sont même forcées pour pouvoir attaquer.</description>
+    <description>Une créature de Très Petite taille occupe un espace infé- rieur à 1,5 m sur 1,5 m (1 case sur le quadrillage), et plusieurs Très Petites créatures peuvent occuper la même case sur le quadrillage� Une même case peut être occupée par au moins quatre créatures de Très Petites taille, et même plus si le MJ le permet� Elles peuvent également occuper le même espace que des créatures de taille supérieure et, si leur allonge est de 0 m, elles y sont même forcées pour pouvoir attaquer�</description>
   </trait>
   <trait id="trait-aberration">
     <name>aberration</name>
-    <description>Les aberrations sont des créatures venant d’au-delà des plans ou des créatures naturelles corrompues.</description>
+    <description>Les aberrations sont des créatures venant d’au-delà des plans ou des créatures naturelles corrompues�</description>
+  </trait>
+  <trait id="trait-air">
+    <name>air</name>
+    <description>Les effets dotés du trait air permettent de manipuler ou de créer de l’air� Ceux qui permettent de manipuler l’air n’ont aucun effet dans le vide ou une zone dépourvue d’air� Les créatures dotées de ce trait sont essentiellement constituées d’air ou ont une connexion magique avec cet élément�</description>
   </trait>
   <trait id="trait-aiuvarin">
     <name>aiuvarin</name>
-    <description>Les aiuvarins ont des origines mixtes et ont généralement un parent elfe et un aiuvarin ou humain.</description>
+    <description>Les aiuvarins ont des origines mixtes et ont généralement un parent elfe et un aiuvarin ou humain�</description>
   </trait>
   <trait id="trait-alchimique">
     <name>alchimique</name>
-    <description>Les objets alchimiques fonctionnent grâce à des réactifs alchimiques. Ils ne sont pas magiques et n’émettent pas d’aura magique. Les créatures alchimiques sont partiellement animées par des réactions alchimiques.</description>
+    <description>Les objets alchimiques fonctionnent grâce à des réactifs alchimiques� Ils ne sont pas magiques et n’émettent pas d’aura magique� Les créatures alchimiques sont partiellement animées par des réactions alchimiques�</description>
+  </trait>
+  <trait id="trait-ames">
+    <name>âmes</name>
+    <description>Ces créatures artificielles reçoivent une augmentation mentale sous la forme d’un fragment d’âme d’une créature qui a été vivante�</description>
   </trait>
   <trait id="trait-ame-en-peine">
     <name>âme-en-peine</name>
-    <description>Une âme-en-peine est une créature morte-vivante intangible imprégnée d’énergie du néant et animée d’une profonde haine pour la vie.</description>
+    <description>Une âme-en-peine est une créature morte-vivante intangible imprégnée d’énergie du néant et animée d’une profonde haine pour la vie�</description>
   </trait>
   <trait id="trait-amphibie">
     <name>amphibie</name>
-    <description>Une créature amphibie peut respirer dans l’eau et dans l’air, même si elle se trouve hors de son environnement de prédi- lection, généralement sans limites de temps ou au moins pendant plusieurs heures. Ces créatures disposent souvent d’une Vitesse de nage. Leurs Frappes contondantes et tranchantes à mains nues ne subissent pas le malus habituel de −2 lié à l’environne- ment aquatique.</description>
+    <description>Une créature amphibie peut respirer dans l’eau et dans l’air, même si elle se trouve hors de son environnement de prédi- lection, généralement sans limites de temps ou au moins pendant plusieurs heures� Ces créatures disposent souvent d’une Vitesse de nage� Leurs Frappes contondantes et tranchantes à mains nues ne subissent pas le malus habituel de −2 lié à l’environne- ment aquatique�</description>
   </trait>
   <trait id="trait-ange">
     <name>ange</name>
-    <description>Les membres de cette famille de célestes sont des messagers et des guerriers. La majorité des anges possèdent le trait saint, vision dans le noir et souffrent d’une faiblesse contre ce qui est impie.</description>
+    <description>Les membres de cette famille de célestes sont des messagers et des guerriers� La majorité des anges possèdent le trait saint, vision dans le noir et souffrent d’une faiblesse contre ce qui est impie�</description>
   </trait>
   <trait id="trait-animal">
     <name>animal</name>
-    <description>Un animal est une créature dont l’intelligence est relativement limitée. Son modificateur d’attribut d’Intelligence ne dépasse géné- ralement pas −4, il ne peut pas parler de langue ni développer de compétences basées sur l’Intelligence.</description>
+    <description>Un animal est une créature dont l’intelligence est relativement limitée� Son modificateur d’attribut d’Intelligence ne dépasse géné- ralement pas −4, il ne peut pas parler de langue ni développer de compétences basées sur l’Intelligence�</description>
   </trait>
   <trait id="trait-aquatique">
     <name>aquatique</name>
-    <description>Les créatures aquatiques vivent sous l’eau. Leurs Frappes contondantes et tranchantes à mains nues ne subissent pas le malus habituel de −2 lié à l’environnement aquatique. Les créatures aquatiques peuvent respirer dans l’eau, mais pas à l’air libre.</description>
+    <description>Les créatures aquatiques vivent sous l’eau� Leurs Frappes contondantes et tranchantes à mains nues ne subissent pas le malus habituel de −2 lié à l’environnement aquatique� Les créatures aquatiques peuvent respirer dans l’eau, mais pas à l’air libre�</description>
+  </trait>
+  <trait id="trait-arcane">
+    <name>arcane</name>
+    <description>Cette magie découle de la tradition arcanique, qui repose sur la logique et la rationalité� Tout ce qui est doté de ce trait est magique� Une créature pourvue de ce trait est essentiellement constituée de magie arcanique ou a une forte connexion avec elle�</description>
+  </trait>
+  <trait id="trait-archon">
+    <name>archon</name>
+    <description>Les membres de cette famille de célestes sont les protecteurs du Paradis et possèdent généralement le trait saint, vision dans le noir et souffrent d’une faiblesse contre ce qui est impie�</description>
   </trait>
   <trait id="trait-astral">
     <name>astral</name>
-    <description>Les créatures astrales sont originaires du plan astral, et peuvent survivre à ses effets environnementaux basiques.</description>
+    <description>Les créatures astrales sont originaires du plan astral, et peuvent survivre à ses effets environnementaux basiques�</description>
   </trait>
   <trait id="trait-athamaru">
     <name>athamaru</name>
-    <description>Les athamarus sont des humanoïdes aquatiques aux traits de poisson.</description>
+    <description>Les athamarus sont des humanoïdes aquatiques aux traits de poisson�</description>
   </trait>
   <trait id="trait-azarketi">
     <name>azarketi</name>
-    <description>Les azarketis descendent des humains et se sont adaptés à la vie dans des communautés aquatiques. Ils ont des ouïes, des mains palmées, des petites nageoires et peuvent survivre dans l’eau comme en dehors.</description>
+    <description>Les azarketis descendent des humains et se sont adaptés à la vie dans des communautés aquatiques� Ils ont des ouïes, des mains palmées, des petites nageoires et peuvent survivre dans l’eau comme en dehors�</description>
+  </trait>
+  <trait id="trait-azata">
+    <name>azata</name>
+    <description>Cette famille de célestes est originaire de l’Élysée� Ils possèdent généralement le trait saint, vision dans le noir, et souffrent d’une faiblesse au fer froid et à ce qui est impie� FRANCK PONT - lhanselo@hotmail.fr - 202602/3379711/4016001 [[PAGE 364]] # FLUX PRINCIPAL (STATS/BASE) Livre des Monstres</description>
   </trait>
   <trait id="trait-bourbierin">
     <name>bourbiérin</name>
-    <description>Les bourbiérins sont des humanoïdes à l’aspect de batra- ciens. Ils possèdent généralement le sens vision dans le noir.</description>
+    <description>Les bourbiérins sont des humanoïdes à l’aspect de batra- ciens� Ils possèdent généralement le sens vision dans le noir�</description>
   </trait>
   <trait id="trait-caligni">
     <name>caligni</name>
-    <description>Ce peuple souterrain possède vision dans le noir, et certains individus peuvent créer des ténèbres.</description>
+    <description>Ce peuple souterrain possède vision dans le noir, et certains individus peuvent créer des ténèbres�</description>
   </trait>
   <trait id="trait-celeste">
     <name>céleste</name>
-    <description>Les créatures qui sont originaires des plans saints ou qui bénéficient d’une connexion importante avec eux sont appelées des célestes. Les célestes peuvent survivre aux effets environne- mentaux de base des plans de la Sphère extérieure.</description>
+    <description>Les créatures qui sont originaires des plans saints ou qui bénéficient d’une connexion importante avec eux sont appelées des célestes� Les célestes peuvent survivre aux effets environne- mentaux de base des plans de la Sphère extérieure�</description>
   </trait>
   <trait id="trait-centaure">
     <name>centaure</name>
-    <description>Les centaures sont des créatures qui possèdent un corps de cheval et un buste humanoïde.</description>
+    <description>Les centaures sont des créatures qui possèdent un corps de cheval et un buste humanoïde�</description>
   </trait>
   <trait id="trait-champignon">
     <name>champignon</name>
-    <description>Les créatures fongiques sont dotées du trait champi- gnon. Elles sont à distinguer des champignons normaux.</description>
+    <description>Les créatures fongiques sont dotées du trait champi- gnon� Elles sont à distinguer des champignons normaux�</description>
   </trait>
   <trait id="trait-changelin">
     <name>changelin</name>
-    <description>Une créature dotée de ce trait possède l’héritage polyva- lent changelin. Les changelins sont les rejetons de guenaudes et de membres d’autres ascendances humanoïdes.</description>
+    <description>Une créature dotée de ce trait possède l’héritage polyva- lent changelin� Les changelins sont les rejetons de guenaudes et de membres d’autres ascendances humanoïdes�</description>
   </trait>
   <trait id="trait-coatl">
     <name>coatl</name>
-    <description>Un type de serpents à plumes surnaturels qui font office de gardiens ou de messagers pour des divinités saintes de l’Univers.</description>
+    <description>Un type de serpents à plumes surnaturels qui font office de gardiens ou de messagers pour des divinités saintes de l’Univers�</description>
   </trait>
   <trait id="trait-creature-artificielle">
     <name>créature artificielle</name>
-    <description>Une créature artificielle est une créature non naturelle animée par une force autre que la vitalité ou le néant. Les créatures artificielles sont souvent dénuées d’intelligence. Elles sont immunisées contre les attaques non létales, les dégâts d’esprit, les effets de mort, la guérison, les maladies, le néant, le poison, le saignement, la vitalité et les états condamné, drainé, fatigué, inconscient, malade et paralysé. Elles peuvent également avoir une Solidité qui dépend du type de matériaux constituant leur corps. Les créatures artificielles ne sont pas des créatures vivantes, mais elles ne sont pas non plus mortes-vivantes. Quand une créature artificielle est réduite à 0 point de vie, elle est détruite.</description>
+    <description>Une créature artificielle est une créature non naturelle animée par une force autre que la vitalité ou le néant� Les créatures artificielles sont souvent dénuées d’intelligence� Elles sont immunisées contre les attaques non létales, les dégâts d’esprit, les effets de mort, la guérison, les maladies, le néant, le poison, le saignement, la vitalité et les états condamné, drainé, fatigué, inconscient, malade et paralysé� Elles peuvent également avoir une Solidité qui dépend du type de matériaux constituant leur corps� Les créatures artificielles ne sont pas des créatures vivantes, mais elles ne sont pas non plus mortes-vivantes� Quand une créature artificielle est réduite à 0 point de vie, elle est détruite�</description>
   </trait>
   <trait id="trait-crepusculaire">
     <name>crépusculaire</name>
-    <description>Une créature avec ce trait possède l’héritage polyva- lent crépusculaire. Les crépusculaires sont des héritiers des plans imprégnés des mêmes énergies que les psychopompes.</description>
+    <description>Une créature avec ce trait possède l’héritage polyva- lent crépusculaire� Les crépusculaires sont des héritiers des plans imprégnés des mêmes énergies que les psychopompes�</description>
   </trait>
   <trait id="trait-daemon">
     <name>daémon</name>
-    <description>Les daémons sont des fiélons originaires du plan désolé de l’Abaddon. Ils sont pour la plupart irrémédiablement impies. Ils possèdent généralement vision dans le noir et souffrent d’une faiblesse contre ce qui est saint.</description>
+    <description>Les daémons sont des fiélons originaires du plan désolé de l’Abaddon� Ils sont pour la plupart irrémédiablement impies� Ils possèdent généralement vision dans le noir et souffrent d’une faiblesse contre ce qui est saint�</description>
   </trait>
   <trait id="trait-demon">
     <name>démon</name>
-    <description>Les démons sont une famille de fiélons originaires des Failles extérieures, ou qui descendent de démons qui le sont. La plupart de ces créatures, irrémédiablement impies, possèdent vision dans le noir et souffrent d’une faiblesse au fer froid et à ce qui est saint.</description>
+    <description>Les démons sont une famille de fiélons originaires des Failles extérieures, ou qui descendent de démons qui le sont� La plupart de ces créatures, irrémédiablement impies, possèdent vision dans le noir et souffrent d’une faiblesse au fer froid et à ce qui est saint�</description>
+  </trait>
+  <trait id="trait-dero">
+    <name>dero</name>
+    <description>Cette famille d’humanoïdes descend de créatures féeriques qui ont sombré dans les ténèbres et la confusion après avoir été abandonnées en Ombreterre� Les deros sont immunisés contre la confusion et vulnérables à la lumière du soleil�</description>
   </trait>
   <trait id="trait-dhampir">
     <name>dhampir</name>
-    <description>Une créature avec ce trait possède l’héritage polyvalent dhampir. Ces créatures humanoïdes sont les rejetons de vampires et de membres d’autres ascendances.</description>
+    <description>Une créature avec ce trait possède l’héritage polyvalent dhampir� Ces créatures humanoïdes sont les rejetons de vampires et de membres d’autres ascendances�</description>
   </trait>
   <trait id="trait-diable">
     <name>diable</name>
-    <description>Cette famille de fiélons issue des enfers se compose de membres dont la plupart sont irrémédiablement impies. Ils possèdent généralement vision dans le noir supérieure, une immunité contre le feu et souffre d’une faiblesse à tout ce qui est saint.</description>
+    <description>Cette famille de fiélons issue des enfers se compose de membres dont la plupart sont irrémédiablement impies� Ils possèdent généralement vision dans le noir supérieure, une immunité contre le feu et souffre d’une faiblesse à tout ce qui est saint�</description>
   </trait>
   <trait id="trait-dinosaure">
     <name>dinosaure</name>
-    <description>Ces reptiles préhistoriques ont survécu jusqu’à nos jours.</description>
+    <description>Ces reptiles préhistoriques ont survécu jusqu’à nos jours�</description>
   </trait>
   <trait id="trait-divine">
     <name>divine</name>
-    <description>Cette magie est issue de la tradition divine. Elle tire sa puis- sance de divinités ou de sources comparables. Tout ce qui est doté de ce trait est magique. Une créature possédant se trait est essen- tiellement constituée de magie divine ou a une forte connexion avec elle.</description>
+    <description>Cette magie est issue de la tradition divine� Elle tire sa puis- sance de divinités ou de sources comparables� Tout ce qui est doté de ce trait est magique� Une créature possédant se trait est essen- tiellement constituée de magie divine ou a une forte connexion avec elle�</description>
   </trait>
   <trait id="trait-dragon">
     <name>dragon</name>
-    <description>Les dragons sont des créatures reptiliennes généralement ailées ou douées du pouvoir de voler. La plupart peuvent souffler de l’éner- gie magique et sont immunisés contre le sommeil et la paralysie.</description>
+    <description>Les dragons sont des créatures reptiliennes généralement ailées ou douées du pouvoir de voler� La plupart peuvent souffler de l’éner- gie magique et sont immunisés contre le sommeil et la paralysie�</description>
+  </trait>
+  <trait id="trait-eau">
+    <name>eau</name>
+    <description>Les effets dotés du trait eau permettent de manipuler ou de créer de l’eau� Ceux qui permettent de manipuler de l’eau n’ont aucun effet dans une zone dépourvue d’eau� Les créatures dotées de ce trait sont essentiellement constituées d’eau ou ont une connexion magique avec cet élément�</description>
   </trait>
   <trait id="trait-elementaire">
     <name>élémentaire</name>
-    <description>Les élémentaires sont des créatures originaires des plans élémentaires et directement liées à un élément. Les élémentaires n’ont pas besoin de respirer.</description>
+    <description>Les élémentaires sont des créatures originaires des plans élémentaires et directement liées à un élément� Les élémentaires n’ont pas besoin de respirer�</description>
   </trait>
   <trait id="trait-elfe">
     <name>elfe</name>
-    <description>Les elfes forment un peuple mystérieux aux riches tra- ditions magiques et savantes. Ils possèdent généralement vision nocturne.</description>
+    <description>Les elfes forment un peuple mystérieux aux riches tra- ditions magiques et savantes� Ils possèdent généralement vision nocturne�</description>
+  </trait>
+  <trait id="trait-eon">
+    <name>éon</name>
+    <description>Ces veilleurs se considèrent comme les défenseurs de la réalité� Les éons traditionnels ont des natures, des formes et des passions duelles, et ils communiquent par le biais d’un mélange confus d’im- pressions télépathiques appelé conceptualisation� Même s’ils ne partagent pas toutes les caractéristiques des éons traditionnels, les axiomites et leurs créations appartiennent également à cette famille�</description>
   </trait>
   <trait id="trait-errant">
     <name>errant</name>
-    <description>Un errant est une âme qui s’est éloignée de la Rivière des âmes qui parcourt le plan éthéré avant d’avoir été jugée. Il conserve générale- ment des souvenirs de sa vie antérieure, mais n’est pas un mort-vivant.</description>
+    <description>Un errant est une âme qui s’est éloignée de la Rivière des âmes qui parcourt le plan éthéré avant d’avoir été jugée� Il conserve générale- ment des souvenirs de sa vie antérieure, mais n’est pas un mort-vivant�</description>
   </trait>
   <trait id="trait-esprit-follet">
     <name>esprit follet</name>
-    <description>Cette famille de minuscules fées ailées est étroitement liée à la magie primordiale.</description>
+    <description>Cette famille de minuscules fées ailées est étroitement liée à la magie primordiale�</description>
   </trait>
   <trait id="trait-esprit">
     <name>esprit</name>
-    <description>Les effets dotés de ce trait peuvent affecter des créatures ayant une essence spirituelle et peuvent infliger des dégâts d’esprit. Une créature avec ce trait est définie par son essence spirituelle et n’a généralement pas de forme matérielle.</description>
+    <description>Les effets dotés de ce trait peuvent affecter des créatures ayant une essence spirituelle et peuvent infliger des dégâts d’esprit� Une créature avec ce trait est définie par son essence spirituelle et n’a généralement pas de forme matérielle�</description>
   </trait>
   <trait id="trait-etheree">
     <name>éthérée</name>
-    <description>Les créatures éthérées sont originaires du plan éthéré, et peuvent survivre à ses effets environnementaux basiques.</description>
+    <description>Les créatures éthérées sont originaires du plan éthéré, et peuvent survivre à ses effets environnementaux basiques�</description>
   </trait>
   <trait id="trait-fantome">
     <name>fantôme</name>
-    <description>Les âmes perdues qui hantent le monde sous la forme de morts-vivants intangibles sont appelées des fantômes.</description>
+    <description>Les âmes perdues qui hantent le monde sous la forme de morts-vivants intangibles sont appelées des fantômes�</description>
   </trait>
   <trait id="trait-fee">
     <name>fée</name>
-    <description>Les créatures originaires du Premier Monde sont appe- lées des fées.</description>
+    <description>Les créatures originaires du Premier Monde sont appe- lées des fées�</description>
   </trait>
   <trait id="trait-felide">
     <name>félide</name>
-    <description>Les félides sont des humanoïdes aux traits félins.</description>
+    <description>Les félides sont des humanoïdes aux traits félins�</description>
   </trait>
   <trait id="trait-feu">
     <name>feu</name>
-    <description>Les effets dotés du trait feu infligent des dégâts de feu, ou per- mettent de créer ou manipuler du feu. Ceux qui permettent de manipuler du feu n’ont aucun effet dans une zone dépourvue de feu. Les créatures dotées de ce trait sont essentiellement consti- tuées de feu ou ont une connexion magique avec cet élément.</description>
+    <description>Les effets dotés du trait feu infligent des dégâts de feu, ou per- mettent de créer ou manipuler du feu� Ceux qui permettent de manipuler du feu n’ont aucun effet dans une zone dépourvue de feu� Les créatures dotées de ce trait sont essentiellement consti- tuées de feu ou ont une connexion magique avec cet élément�</description>
+  </trait>
+  <trait id="trait-fielon">
+    <name>fiélon</name>
+    <description>Les créatures originaires des plans impies ou qui possèdent une forte connexion à ceux-ci sont appelées des fiélons� Les fiélons peuvent survivre aux effets environnementaux de base des plans de la Sphère extérieure�</description>
+  </trait>
+  <trait id="trait-froid">
+    <name>froid</name>
+    <description>Les effets dotés de ce trait infligent des dégâts de froid� Les créa- tures qui possèdent ce trait ont une connexion magique au froid�</description>
   </trait>
   <trait id="trait-garou">
     <name>garou</name>
-    <description>Ces créatures métamorphes peuvent adopter au choix une forme animale, une forme humanoïde ou une forme hybride.</description>
+    <description>Ces créatures métamorphes peuvent adopter au choix une forme animale, une forme humanoïde ou une forme hybride�</description>
   </trait>
   <trait id="trait-geant">
     <name>géant</name>
-    <description>Les géants sont d’immenses créatures humanoïdes. [[PAGE 3]] # FLUX PRINCIPAL (STATS/BASE) Glossaire des pouvoirs et traits</description>
+    <description>Les géants sont d’immenses créatures humanoïdes� [[PAGE 365]] # FLUX PRINCIPAL (STATS/BASE) Glossaire des pouvoirs et traits</description>
   </trait>
   <trait id="trait-gnome">
     <name>gnome</name>
-    <description>Les gnomes sont de petits êtres qui ont un talent inné pour la magie, sont avides de nouvelles expériences et possèdent géné- ralement vision nocturne.</description>
+    <description>Les gnomes sont de petits êtres qui ont un talent inné pour la magie, sont avides de nouvelles expériences et possèdent géné- ralement vision nocturne�</description>
   </trait>
   <trait id="trait-gobelin">
     <name>gobelin</name>
-    <description>Les gobelins sont de petits gobelinoïdes surexcités, qui pos- sèdent généralement vision dans le noir.</description>
+    <description>Les gobelins sont de petits gobelinoïdes surexcités, qui pos- sèdent généralement vision dans le noir�</description>
   </trait>
   <trait id="trait-gobelours">
     <name>gobelours</name>
-    <description>Une créature possédant ce trait est un discret gobelinoïde couvert de fourrure, qui peut généralement voir dans le noir.</description>
+    <description>Une créature possédant ce trait est un discret gobelinoïde couvert de fourrure, qui peut généralement voir dans le noir�</description>
   </trait>
   <trait id="trait-goule">
     <name>goule</name>
-    <description>Les goules sont d’infâmes créatures mortes-vivantes qui raf- folent de chair.</description>
+    <description>Les goules sont d’infâmes créatures mortes-vivantes qui raf- folent de chair�</description>
   </trait>
   <trait id="trait-gremlin">
     <name>gremlin</name>
-    <description>Les gremlins sont des créatures féeriques cruelles et sour- noises qui se sont acclimatées à la vie dans l’Univers.</description>
+    <description>Les gremlins sont des créatures féeriques cruelles et sour- noises qui se sont acclimatées à la vie dans l’Univers�</description>
   </trait>
   <trait id="trait-guenaude">
     <name>guenaude</name>
-    <description>Ces incantatrices malveillantes forment des cercles.</description>
+    <description>Ces incantatrices malveillantes forment des cercles�</description>
+  </trait>
+  <trait id="trait-halfelin">
+    <name>halfelin</name>
+    <description>Une créature dotée de ce trait appartient à l’ascendance des halfelins� Ces petits êtres sont de sympathiques vagabonds qui ont la réputation d’être chanceux�</description>
   </trait>
   <trait id="trait-hobgobelin">
     <name>hobgobelin</name>
-    <description>Ces créatures sont de grands gobelinoïdes bellicistes qui possèdent généralement vision dans le noir.</description>
+    <description>Ces créatures sont de grands gobelinoïdes bellicistes qui possèdent généralement vision dans le noir�</description>
+  </trait>
+  <trait id="trait-homme-lezard">
+    <name>homme-lézard</name>
+    <description>Les hommes-lézards appartiennent à une famille d’hu- manoïdes reptiliens�</description>
+  </trait>
+  <trait id="trait-homme-poisson">
+    <name>homme-poisson</name>
+    <description>Ces humanoïdes aquatiques ont un torse humain et une queue de poisson�</description>
+  </trait>
+  <trait id="trait-homme-rat">
+    <name>homme-rat</name>
+    <description>Les hommes-rats sont des humanoïdes qui ressemblent à des rats�</description>
   </trait>
   <trait id="trait-homme-serpent">
     <name>homme-serpent</name>
-    <description>Les hommes-serpents forment une famille d’huma- noïdes ophidiens.</description>
+    <description>Les hommes-serpents forment une famille d’huma- noïdes ophidiens�</description>
   </trait>
   <trait id="trait-hrynegar">
     <name>hrynegar</name>
-    <description>Ethnie souterraine de nains, les hrynegars possèdent géné- ralement vision dans le noir, résistent au poison et craignent la lumière vive.</description>
+    <description>Ethnie souterraine de nains, les hrynegars possèdent géné- ralement vision dans le noir, résistent au poison et craignent la lumière vive�</description>
   </trait>
   <trait id="trait-humain">
     <name>humain</name>
-    <description>Une créature dotée de ce trait appartient à l’ascendance des humains. Les humains se présentent sous la forme d’une multitude de peuples et sont réputés pour leurs capacités d’adaptation.</description>
+    <description>Une créature dotée de ce trait appartient à l’ascendance des humains� Les humains se présentent sous la forme d’une multitude de peuples et sont réputés pour leurs capacités d’adaptation�</description>
+  </trait>
+  <trait id="trait-humanoide">
+    <name>humanoïde</name>
+    <description>Les créatures humanoïdes raisonnent et agissent de manière comparable aux humains� Elles possèdent généralement deux bras et deux jambes sur lesquelles elles se dressent�</description>
   </trait>
   <trait id="trait-impie">
     <name>impie</name>
-    <description>Les effets dotés du trait impie sont liés à de puissantes forces magiques cruelles et dépravées. Leurs effets sont généralement plus prononcés contre des créatures saintes. Les créatures pos- sédant ce trait sont fortement associées aux causes impies et souffrent souvent d’une faiblesse contre tout ce qui est saint. Si une créature avec une faiblesse contre ce qui est impie utilise un objet ou un effet impie, elle subit les dégâts liés à cette faiblesse.</description>
+    <description>Les effets dotés du trait impie sont liés à de puissantes forces magiques cruelles et dépravées� Leurs effets sont généralement plus prononcés contre des créatures saintes� Les créatures pos- sédant ce trait sont fortement associées aux causes impies et souffrent souvent d’une faiblesse contre tout ce qui est saint� Si une créature avec une faiblesse contre ce qui est impie utilise un objet ou un effet impie, elle subit les dégâts liés à cette faiblesse�</description>
+  </trait>
+  <trait id="trait-intangible">
+    <name>intangible</name>
+    <description>Une créature ou un objet intangible n’a pas de forme phy- sique� Il peut ainsi traverser les objets solides, y compris les murs� Quand une créature intangible se trouve dans un objet, elle ne peut pas percevoir, attaquer ni interagir avec quoi que ce soit qui se trouve hors de cet objet et, si elle commence son tour dans un objet, elle est ralentie 1 jusqu’à la fin de son tour� Une créature tangible et une créature intangible peuvent se traverser l’une l’autre, mais elles ne peuvent pas terminer leur mouvement dans l’espace de l’autre� Une créature intangible ne peut pas faire de test basé sur la Force contre une créature ou un objet physique (mais elle le peut contre des créatures ou objets intangibles), sauf si les objets concernés possèdent la rune de propriété *spectrale*� De la même manière, une créature tangible ne peut pas faire de test basé sur la Force contre une créature ou un objet intangible� Les créatures intangibles sont immunisées contre les effets ou états associés à un corps physique, comme les maladies, les poisons et les dégâts de précision� Elles ont généralement une résistance à tous les dégâts (sauf les dégâts de force, les dégâts d’esprit et les dégâts des Frappes portées avec la rune de propriété *spectrale*), et doublent leur résistance face aux dégâts non magiques�</description>
   </trait>
   <trait id="trait-kholo">
     <name>kholo</name>
-    <description>Les kholos sont des humanoïdes qui ressemblent à des hyènes.</description>
+    <description>Les kholos sont des humanoïdes qui ressemblent à des hyènes�</description>
   </trait>
   <trait id="trait-kobold">
     <name>kobold</name>
-    <description>Une créature dotée de ce trait appartient à l’ascendance des kobolds. Les kobolds sont des humanoïdes reptiliens dont la taille est généralement Petite et qui possèdent vision dans le noir.</description>
+    <description>Une créature dotée de ce trait appartient à l’ascendance des kobolds� Les kobolds sont des humanoïdes reptiliens dont la taille est généralement Petite et qui possèdent vision dans le noir�</description>
   </trait>
   <trait id="trait-lechi">
     <name>léchi</name>
-    <description>Une créature dotée de ce trait appartient à l’ascendance des léchis. Il s’agit de petites créatures végétales ou fongiques de forme humanoïde.</description>
+    <description>Une créature dotée de ce trait appartient à l’ascendance des léchis� Il s’agit de petites créatures végétales ou fongiques de forme humanoïde�</description>
   </trait>
   <trait id="trait-metal">
     <name>métal</name>
-    <description>Les effets avec ce trait invoquent ou manipulent du métal. Ceux qui permettent de manipuler le métal n’ont aucun effet dans une zone dépourvue de métal. Les créatures dotées de ce trait sont essentiellement constituées de métal ou ont une connexion avec le métal magique.</description>
+    <description>Les effets avec ce trait invoquent ou manipulent du métal� Ceux qui permettent de manipuler le métal n’ont aucun effet dans une zone dépourvue de métal� Les créatures dotées de ce trait sont essentiellement constituées de métal ou ont une connexion avec le métal magique�</description>
+  </trait>
+  <trait id="trait-momie">
+    <name>momie</name>
+    <description>Une momie est une créature morte-vivante créée à partir d’un cadavre préservé�</description>
   </trait>
   <trait id="trait-mort-vivant">
     <name>mort-vivant</name>
-    <description>Ces créatures étaient autrefois vivantes. Après leur mort, elles ont été imprégnées d’énergie du néant et de magie impie qui a corrompu leur âme. Quand une créature morte-vivante est réduite à 0 point de vie, elle est détruite. Les créatures mortes-vivantes sont blessées par l’énergie de vitalité, soignées par l’énergie du néant et ne peuvent pas bénéficier des effets de vitalité de guérison.</description>
+    <description>Ces créatures étaient autrefois vivantes� Après leur mort, elles ont été imprégnées d’énergie du néant et de magie impie qui a corrompu leur âme� Quand une créature morte-vivante est réduite à 0 point de vie, elle est détruite� Les créatures mortes-vivantes sont blessées par l’énergie de vitalité, soignées par l’énergie du néant et ne peuvent pas bénéficier des effets de vitalité de guérison�</description>
   </trait>
   <trait id="trait-mutant">
     <name>mutant</name>
-    <description>Le monstre a muté ou évolué et obtenu ainsi des avantages ou des handicaps étonnant, et parfois les deux.</description>
+    <description>Le monstre a muté ou évolué et obtenu ainsi des avantages ou des handicaps étonnant, et parfois les deux�</description>
   </trait>
   <trait id="trait-nain">
     <name>nain</name>
-    <description>Les nains sont de robustes humanoïdes qui vivent sous terre et possèdent généralement vision dans le noir.</description>
+    <description>Les nains sont de robustes humanoïdes qui vivent sous terre et possèdent généralement vision dans le noir�</description>
   </trait>
   <trait id="trait-necrophage">
     <name>nécrophage</name>
-    <description>Un nécrophage est une créature morte-vivante capable de drainer la vie qui garde une sépulture.</description>
+    <description>Un nécrophage est une créature morte-vivante capable de drainer la vie qui garde une sépulture�</description>
   </trait>
   <trait id="trait-nephilim">
     <name>néphilim</name>
-    <description>Une créature dotée de ce trait à l’héritage polyvalent nephi- lim. Les néphilims sont des héritiers des plans qui descendent d’être immortels originaires d’autres plans.</description>
+    <description>Une créature dotée de ce trait à l’héritage polyvalent nephi- lim� Les néphilims sont des héritiers des plans qui descendent d’être immortels originaires d’autres plans�</description>
   </trait>
   <trait id="trait-nuee">
     <name>nuée</name>
-    <description>Une nuée est une masse ou un nuage de créatures qui se com- porte comme un seul monstre. La taille indiquée dans son profil est celle de l’ensemble de la nuée, mais la majorité des nuées sont com- posées de créatures de Très Petite taille. Une nuée peut occuper le même espace que d’autres créatures et est même forcée de le faire pour leur infliger des dégâts. Une nuée souffre typiquement d’une faiblesse contre les effets qui infligent des dégâts sur une zone donnée (comme les sorts de zone ou les armes à éclaboussure). Les nuées sont immunisées contre les états saisi, à terre et entravé.</description>
+    <description>Une nuée est une masse ou un nuage de créatures qui se com- porte comme un seul monstre� La taille indiquée dans son profil est celle de l’ensemble de la nuée, mais la majorité des nuées sont com- posées de créatures de Très Petite taille� Une nuée peut occuper le même espace que d’autres créatures et est même forcée de le faire pour leur infliger des dégâts� Une nuée souffre typiquement d’une faiblesse contre les effets qui infligent des dégâts sur une zone donnée (comme les sorts de zone ou les armes à éclaboussure)� Les nuées sont immunisées contre les états saisi, à terre et entravé�</description>
+  </trait>
+  <trait id="trait-nymphe">
+    <name>nymphe</name>
+    <description>Ces belles créatures féeriques possèdent des liens étroits avec certains emplacements naturels�</description>
   </trait>
   <trait id="trait-occulte">
     <name>occulte</name>
-    <description>Cette magie est issue de la tradition magique occulte, qui fait appel à des mystères aussi bizarres qu’éphémères. Tout ce qui est doté de ce trait est magique. Une créature possédant ce trait est essentiellement constituée de magie occulte ou a une forte connexion avec elle.</description>
+    <description>Cette magie est issue de la tradition magique occulte, qui fait appel à des mystères aussi bizarres qu’éphémères� Tout ce qui est doté de ce trait est magique� Une créature possédant ce trait est essentiellement constituée de magie occulte ou a une forte connexion avec elle�</description>
   </trait>
   <trait id="trait-oni">
     <name>oni</name>
-    <description>Les onis sont de violents géants métamorphes qui étaient autre- fois des kamis.</description>
+    <description>Les onis sont de violents géants métamorphes qui étaient autre- fois des kamis�</description>
   </trait>
   <trait id="trait-orc">
     <name>orc</name>
-    <description>Ces humanoïdes à la peau verte possèdent généralement vision dans le noir.</description>
+    <description>Ces humanoïdes à la peau verte possèdent généralement vision dans le noir�</description>
+  </trait>
+  <trait id="trait-plante">
+    <name>plante</name>
+    <description>Les créatures végétales sont dotées du trait plante� Elles ne sont pas comme les plantes normales� Les effets magiques dotés de ce trait permettent de manipuler ou de créer des plantes� Les effets FRANCK PONT - lhanselo@hotmail.fr - 202602/3379711/4016001 [[PAGE 366]] # FLUX PRINCIPAL (STATS/BASE) Livre des Monstres</description>
   </trait>
   <trait id="trait-primordiale">
     <name>primordiale</name>
-    <description>La magie issue de la tradition primordiale est liée au monde naturel et à l’instinct. Tout ce qui est doté de ce trait est magique. Une créature possédant se trait est essentiellement constituée de magie primordiale ou a une forte connexion avec elle.</description>
+    <description>La magie issue de la tradition primordiale est liée au monde naturel et à l’instinct� Tout ce qui est doté de ce trait est magique� Une créature possédant se trait est essentiellement constituée de magie primordiale ou a une forte connexion avec elle�</description>
+  </trait>
+  <trait id="trait-proteen">
+    <name>protéen</name>
+    <description>Issues d’une famille de veilleurs qui a vu le jour dans le Maelström, ces créatures sont les gardiennes du désordre� Elles possèdent généralement vision dans le noir, ont une anatomie amorphe et leurs pouvoirs leur permettent de créer des vagues de distorsion magiques�</description>
   </trait>
   <trait id="trait-psychopompe">
     <name>Psychopompe</name>
-    <description>Les membres de cette famille de veilleurs qui a vu le jour dans le Cimetière guident les âmes jusqu’aux plans extérieurs. Ils possèdent généralement vision dans le noir, perception de la vie et toucher du berger et sont immunisés contre les effets de mort.</description>
+    <description>Les membres de cette famille de veilleurs qui a vu le jour dans le Cimetière guident les âmes jusqu’aux plans extérieurs� Ils possèdent généralement vision dans le noir, perception de la vie et toucher du berger et sont immunisés contre les effets de mort�</description>
   </trait>
   <trait id="trait-qlippoth">
     <name>qlippoth</name>
-    <description>Les qlippoths forment une famille de fiélons originaire des Failles extérieures dont la plupart sont impies. Leur apparence affecte l’esprit des non-qlippoths qui y sont confrontés.</description>
+    <description>Les qlippoths forment une famille de fiélons originaire des Failles extérieures dont la plupart sont impies� Leur apparence affecte l’esprit des non-qlippoths qui y sont confrontés�</description>
   </trait>
   <trait id="trait-rakshasa">
     <name>rakshasa</name>
-    <description>Les rakshasas sont des esprits divins qui incarnent le blas- phème. Ils peuvent généralement changer de forme et souffrent d’une faiblesse à tout ce qui est saint.</description>
+    <description>Les rakshasas sont des esprits divins qui incarnent le blas- phème� Ils peuvent généralement changer de forme et souffrent d’une faiblesse à tout ce qui est saint�</description>
   </trait>
   <trait id="trait-saint">
     <name>saint</name>
-    <description>Les effets avec le trait saint sont liés à de puissantes forces magiques bienveillantes et vertueuses. Leurs effets sont généra- lement plus prononcés contre des créatures impies. Les créatures dotées de ce trait sont fortement associées aux causes saintes et souffrent généralement d’une faiblesse contre tout ce qui est impie. Si une créature avec une faiblesse contre ce qui est saint utilise un objet ou un effet saint, elle subit les dégâts liés à cette faiblesse.</description>
+    <description>Les effets avec le trait saint sont liés à de puissantes forces magiques bienveillantes et vertueuses� Leurs effets sont généra- lement plus prononcés contre des créatures impies� Les créatures dotées de ce trait sont fortement associées aux causes saintes et souffrent généralement d’une faiblesse contre tout ce qui est impie� Si une créature avec une faiblesse contre ce qui est saint utilise un objet ou un effet saint, elle subit les dégâts liés à cette faiblesse�</description>
   </trait>
   <trait id="trait-sedacthi">
     <name>sédacthi</name>
-    <description>Ces humanoïdes qui vivent dans les océans sont capables de communiquer avec la faune marine, et possèdent vision dans le noir et perception des ondes.</description>
+    <description>Ces humanoïdes qui vivent dans les océans sont capables de communiquer avec la faune marine, et possèdent vision dans le noir et perception des ondes�</description>
+  </trait>
+  <trait id="trait-squelette">
+    <name>squelette</name>
+    <description>Ce mort-vivant est le squelette d’une créature morte qui a été animé par de l’énergie du néant�</description>
   </trait>
   <trait id="trait-tane">
     <name>Tane</name>
-    <description>Les Tanes sont de puissantes créatures créées il y a une éternité de cela par les Aînés du Premier Monde. Les Tanes considèrent le plan sur lequel ils se trouvent comme leur plan d’origine.</description>
+    <description>Les Tanes sont de puissantes créatures créées il y a une éternité de cela par les Aînés du Premier Monde� Les Tanes considèrent le plan sur lequel ils se trouvent comme leur plan d’origine�</description>
+  </trait>
+  <trait id="trait-tengu">
+    <name>tengu</name>
+    <description>Les tengus sont des humanoïdes qui ont des traits de corbeaux�</description>
+  </trait>
+  <trait id="trait-terre">
+    <name>terre</name>
+    <description>Les effets associés au trait terre permettent de manipuler ou de créer de la terre� Ceux qui permettent de manipuler la terre n’ont aucun effet dans une zone dépourvue de terre� Les créatures dotées de ce trait sont essentiellement constituées de terre ou ont une connexion magique avec cet élément�</description>
   </trait>
   <trait id="trait-troll">
     <name>troll</name>
-    <description>Les trolls sont des créatures gigantesques et brutales qui ont la réputation de pouvoir se régénérer.</description>
+    <description>Les trolls sont des créatures gigantesques et brutales qui ont la réputation de pouvoir se régénérer�</description>
   </trait>
   <trait id="trait-vampire">
     <name>vampire</name>
-    <description>Ces créatures mortes-vivantes assoiffées de sang sont notoi- rement adaptables et difficiles à détruire.</description>
+    <description>Ces créatures mortes-vivantes assoiffées de sang sont notoi- rement adaptables et difficiles à détruire�</description>
   </trait>
   <trait id="trait-vase">
     <name>vase</name>
-    <description>Les vases sont des créatures à l’anatomie simple. Elles présentent généralement des capacités mentales peu élevées et bénéficient d’une immunité contre les effets mentaux et les dégâts de précision.</description>
+    <description>Les vases sont des créatures à l’anatomie simple� Elles présentent généralement des capacités mentales peu élevées et bénéficient d’une immunité contre les effets mentaux et les dégâts de précision�</description>
   </trait>
   <trait id="trait-veilleur">
     <name>veilleur</name>
-    <description>Les créatures qui sont originaires des plans d’Axis, du Cimetière ou du Maelström ou qui bénéficient d’une connexion importante avec ces lieux sont appelées des veilleurs. Les veilleurs peuvent survivre aux effets environnementaux basiques des plans de la Sphère extérieure.</description>
+    <description>Les créatures qui sont originaires des plans d’Axis, du Cimetière ou du Maelström ou qui bénéficient d’une connexion importante avec ces lieux sont appelées des veilleurs� Les veilleurs peuvent survivre aux effets environnementaux basiques des plans de la Sphère extérieure�</description>
+  </trait>
+  <trait id="trait-xulgath">
+    <name>xulgath</name>
+    <description>Ces créatures reptiliennes souterraines possèdent générale- ment vision dans le noir et sentent terriblement mauvais�</description>
   </trait>
   <trait id="trait-zombie">
     <name>zombie</name>
-    <description>Ces morts-vivants sont des cadavres en putréfaction imbé- ciles et affamés de chair vivante.</description>
+    <description>Ces morts-vivants sont des cadavres en putréfaction imbé- ciles et affamés de chair vivante�</description>
   </trait>
   <trait id="trait-brutal">
     <name>Brutal</name>
-    <description>Une attaque à distance dotée de ce trait utilise le modificateur de Force pour le jet d’attaque au lieu du modificateur de Dextérité.</description>
+    <description>Une attaque à distance dotée de ce trait utilise le modificateur de Force pour le jet d’attaque au lieu du modificateur de Dextérité�</description>
   </trait>
   <trait id="trait-finesse">
     <name>Finesse</name>
-    <description>Cette attaque au corps à corps est basée sur la Dextérité. Même si une arme est normalement dotée du trait finesse, celui-ci n’est pas indiqué dans le descriptif d’une Frappe si le monstre utilise sa Force.</description>
+    <description>Cette attaque au corps à corps est basée sur la Dextérité� Même si une arme est normalement dotée du trait finesse, celui-ci n’est pas indiqué dans le descriptif d’une Frappe si le monstre utilise sa Force�</description>
   </trait>
   <trait id="trait-acide">
     <name>acide</name>
     <description>Les effets possédant ce trait infligent des dégâts d’acide. Les créatures qui possèdent ce trait ont un lien avec l’acide magique.</description>
-  </trait>
-  <trait id="trait-air">
-    <name>air</name>
-    <description>Les effets dotés du trait air permettent de manipuler ou de créer de l’air. Ceux qui permettent de manipuler l’air n’ont aucun effet dans le vide ou une zone dépourvue d’air. Les créatures dotées de ce trait sont essentiellement constituées d’air ou ont une connexion magique avec cet élément.</description>
   </trait>
   <trait id="trait-apogee">
     <name>apogée</name>
@@ -372,10 +464,6 @@
     <name>archétype</name>
     <description>Ce don est associé à un archétype.</description>
   </trait>
-  <trait id="trait-archon">
-    <name>archon</name>
-    <description>Cette famille de célestes protège le Paradis.</description>
-  </trait>
   <trait id="trait-attaque">
     <name>attaque</name>
     <description>Un pouvoir doté de ce trait implique une attaque. Pour chaque attaque que vous effectuez au-delà de la première lors de votre tour, vous subissez un malus d’attaques multiples.</description>
@@ -387,10 +475,6 @@
   <trait id="trait-aura">
     <name>aura</name>
     <description>Une aura est une émanation qui se dégage de vous en permanence et affecte les créatures qui se trouvent dans un certain rayon autour de vous. Une aura peut aussi faire référence à la signature magique d’un objet.</description>
-  </trait>
-  <trait id="trait-azata">
-    <name>azata</name>
-    <description>Cette famille de célestes est originaire de l’Élysée.</description>
   </trait>
   <trait id="trait-baguette">
     <name>baguette</name>
@@ -420,9 +504,17 @@
     <name>bombe</name>
     <description>Une bombe alchimique réunit des composants alchimiques volatils qui explosent quand la bombe percute une créature ou un objet. La plupart de ces bombes infligent des dégâts, mais quelques-unes produisent d’autres effets.</description>
   </trait>
+  <trait id="trait-commun">
+    <name>commun</name>
+    <description/>
+  </trait>
   <trait id="trait-competence">
     <name>compétence</name>
     <description>Un don général doté du trait compétence améliore vos compétences et leurs actions, ou vous confère de nouvelles actions liées à une compétence. Un don doté de ce trait peut être sélectionné quand votre classe vous confère un don de compétence ou un don général. Un don d’archétype doté du trait compétence peut être sélectionné à la place d’un don de compétence si vous possédez le don de dévouement de cet archétype.</description>
+  </trait>
+  <trait id="trait-composition">
+    <name>composition</name>
+    <description/>
   </trait>
   <trait id="trait-concentration">
     <name>concentration</name>
@@ -440,6 +532,18 @@
     <name>contact</name>
     <description>Ce poison est inoculé par contact avec la peau.</description>
   </trait>
+  <trait id="trait-convocation">
+    <name>convocation</name>
+    <description/>
+  </trait>
+  <trait id="trait-convoque">
+    <name>convoqué</name>
+    <description/>
+  </trait>
+  <trait id="trait-denue-dintelligence">
+    <name>dénué d’intelligence</name>
+    <description>Une créature dénuée d’intelligence n’a qu’une intelligence rudimentaire ou bien est programmée. La plupart, voire tous ses modificateurs d’attributs mentaux sont de −5. Une telle créature est immunisée contre tous les effets mentaux.</description>
+  </trait>
   <trait id="trait-deplacement">
     <name>déplacement</name>
     <description>Une action dotée de ce trait consiste en un déplacement d’un espace à un autre.</description>
@@ -447,6 +551,10 @@
   <trait id="trait-detection">
     <name>détection</name>
     <description>Les effets possédant ce trait tentent de déterminer la présence ou l’emplacement d’une personne, d’un objet ou d’une aura.</description>
+  </trait>
+  <trait id="trait-devouement">
+    <name>dévouement</name>
+    <description/>
   </trait>
   <trait id="trait-discret">
     <name>discret</name>
@@ -460,9 +568,9 @@
     <name>druide</name>
     <description>Ce trait caractérise les pouvoirs liés à la classe de druide.</description>
   </trait>
-  <trait id="trait-eau">
-    <name>eau</name>
-    <description>Les effets dotés du trait eau permettent de manipuler ou de créer de l’eau. Ceux qui permettent de manipuler de l’eau n’ont aucun effet dans une zone dépourvue d’eau. Les créatures dotées de ce trait sont essentiellement constituées d’air ou ont une connexion magique avec cet élément.</description>
+  <trait id="trait-eclaboussure">
+    <name>éclaboussure</name>
+    <description/>
   </trait>
   <trait id="trait-electricite">
     <name>électricité</name>
@@ -484,9 +592,9 @@
     <name>extradimensionnel</name>
     <description>Cet effet ou objet crée un espace extradimensionnel. Un effet extradimensionnel placé dans un autre espace extradimensionnel cesse de fonctionner jusqu’à ce qu’il en soit retiré.</description>
   </trait>
-  <trait id="trait-fielon">
-    <name>fiélon</name>
-    <description>Les créatures originaires des plans impies ou qui possèdent une forte connexion à ceux-ci sont appelées des fiélons. Les fiélons peuvent survivre aux effets environnementaux de base des plans de la Sphère extérieure.</description>
+  <trait id="trait-faconnage-de-sort">
+    <name>façonnage de sort</name>
+    <description/>
   </trait>
   <trait id="trait-focalise">
     <name>focalisé</name>
@@ -496,9 +604,9 @@
     <name>force</name>
     <description>Les effets qui possèdent ce trait infligent des dégâts de force ou créent des objets faits de force magique pure.</description>
   </trait>
-  <trait id="trait-froid">
-    <name>froid</name>
-    <description>Les effets possédant ce trait infligent des dégâts de froid. Les créatures qui possèdent ce trait ont une connexion magique au froid.</description>
+  <trait id="trait-fortune">
+    <name>fortune</name>
+    <description/>
   </trait>
   <trait id="trait-general">
     <name>général</name>
@@ -512,10 +620,6 @@
     <name>guerrier</name>
     <description>Ce trait caractérise les pouvoirs liés à la classe de guerrier.</description>
   </trait>
-  <trait id="trait-halfelin">
-    <name>halfelin</name>
-    <description>Une créature dotée de ce trait appartient à l’ascendance des halfelins. Ces petits êtres sont de sympathiques vagabonds qui ont la réputation d’être chanceux. Un pouvoir doté de ce trait peut seulement être choisi ou utilisé par des halfelins. Une arme dotée de ce trait a été créée et est utilisée par des halfelins.</description>
-  </trait>
   <trait id="trait-hostile">
     <name>hostile</name>
     <description>Un PNJ hostile est susceptible de vous attaquer.</description>
@@ -528,13 +632,13 @@
     <name>huile</name>
     <description>Les huiles regroupent des consommables magiques, tels que les gels, les pommades, les pâtes ou les onguents qui sont généralement appliqué sur un objet.</description>
   </trait>
-  <trait id="trait-humanoide">
-    <name>humanoïde</name>
-    <description>Les créatures humanoïdes raisonnent et agissent de manière comparable aux humains. Elles ont généralement deux bras et deux jambes sur lesquelles elles se dressent.</description>
-  </trait>
   <trait id="trait-illusion">
     <name>illusion</name>
     <description>Les effets et objets magiques dotés du trait illusion influent sur les stimuli sensoriels.</description>
+  </trait>
+  <trait id="trait-infortune">
+    <name>infortune</name>
+    <description/>
   </trait>
   <trait id="trait-inhale">
     <name>inhalé</name>
@@ -572,6 +676,14 @@
     <name>malédiction</name>
     <description>Une malédiction est un effet qui inflige une affliction de longue durée à une créature. Les malédictions sont toujours magiques. Elles sont généralement causées par un sort ou un piège. Les effets dotés de ce trait ne peuvent être annulés que par des effets qui ciblent spécifiquement les malédictions.</description>
   </trait>
+  <trait id="trait-malefice">
+    <name>maléfice</name>
+    <description/>
+  </trait>
+  <trait id="trait-manipulation">
+    <name>manipulation</name>
+    <description>Afin de pouvoir entreprendre une action dotée de ce trait, vous devez manipuler physiquement un objet ou faire certains gestes. Les créatures qui ne possèdent pas de membre adapté ne peuvent pas entreprendre les actions dotées de ce trait. Les actions de manipulation déclenchent souvent des réactions.</description>
+  </trait>
   <trait id="trait-mecanique">
     <name>mécanique</name>
     <description>Un danger doté de ce trait est un objet physique artificiel.</description>
@@ -579,6 +691,10 @@
   <trait id="trait-mental">
     <name>mental</name>
     <description>Un effet mental peut influencer l’esprit de sa cible. Il n’aura aucun effet sur un objet ou une créature dénuée d’intelligence.</description>
+  </trait>
+  <trait id="trait-metamorphose">
+    <name>métamorphose</name>
+    <description/>
   </trait>
   <trait id="trait-mise-hors-de-combat">
     <name>mise hors de combat</name>
@@ -588,9 +704,17 @@
     <name>mort</name>
     <description>Un effet doté du trait mort vous tue instantanément s’il vous réduit à 0 point de vie. Certains effets de mort peuvent vous rapprocher du seuil de la mort ou vous tuer sur-le-champ sans avoir besoin de vous réduire à 0 PV.</description>
   </trait>
+  <trait id="trait-multiclasse">
+    <name>multiclasse</name>
+    <description/>
+  </trait>
   <trait id="trait-neant">
     <name>néant</name>
     <description>Les effets dotés de ce trait soignent les créatures mortes-vivantes grâce à de l’énergie du néant, infligent des dégâts de néant aux créatures vivantes ou permettent de manipuler l’énergie du néant.</description>
+  </trait>
+  <trait id="trait-non-letal">
+    <name>non létal</name>
+    <description/>
   </trait>
   <trait id="trait-olfactif">
     <name>olfactif</name>
@@ -604,13 +728,17 @@
     <name>parchemin</name>
     <description>Un parchemin contient un unique sort que vous pouvez lancer sans utiliser d’emplacement de sort.</description>
   </trait>
+  <trait id="trait-perseverer">
+    <name>persévérer</name>
+    <description/>
+  </trait>
+  <trait id="trait-peu-courant">
+    <name>peu courant</name>
+    <description/>
+  </trait>
   <trait id="trait-piege">
     <name>piège</name>
     <description>Un danger conçu pour faire obstacle aux intrus.</description>
-  </trait>
-  <trait id="trait-plante">
-    <name>plante</name>
-    <description>Les créatures végétales sont dotées du trait plante. Elles sont différentes des plantes normales. Les effets magiques dotés de ce trait permettent de manipuler ou de créer des plantes. Les effets qui manipulent des plantes n’ont aucun effet dans une zone dépourvue de plantes.</description>
   </trait>
   <trait id="trait-poison">
     <name>poison</name>
@@ -618,7 +746,11 @@
   </trait>
   <trait id="trait-possession">
     <name>possession</name>
-    <description>Les effets dotés de ce trait permettent à une créature de projeter son intellect et son esprit dans une cible. Une créature immunisée contre les effets mentaux ne peut pas utiliser un effet de possession. Quand une créature possède une cible, le corps d’origine du possesseur est inconscient (et ne peut pas se réveiller normalement), sauf si l’effet de possession lui permet de pénétrer physiquement dans sa cible. Quand la cible subit des dégâts, le possesseur en subit la moitié sous la forme de dégâts mentaux. Le possesseur perd tous les avantages liés aux sorts ou pouvoirs actifs qui affectent son enveloppe physique, mais il bénéficie en contrepartie de tous les avantages liés aux sorts et pouvoirs qui affectent l’enveloppe physique de sa cible. Un possesseur peut utiliser tous les pouvoirs purement physiques de sa cible. Il ne peut par contre pas utiliser ses propres pouvoirs, à l’exception de ses sorts et de ses pouvoirs purement mentaux. Le MJ décide si un pouvoir est purement physique ou mental. Le possesseur utilise le modificateur d’attaque, la CA, le jet de Vigueur, le jet de Réflexes, la Perception et les compétences physiques de sa cible. Il conserve cependant son propre jet de Volonté, ses compétences mentales, ses jets d’attaques de sorts et son DD de sorts. Les avantages conférés par les objets investis s’appliquent en fonction de la situation : le possesseur bénéficie de ses propres objets investis quand il utilise ses statistiques et des objets investis de la créature possédée quand il utilise les statistiques de cette dernière. Le possesseur ne gagne aucun des avantages liés aux sorts qui affectent seulement l’incantateur, car il ne se trouve pas dans son propre corps. Le possesseur doit utiliser ses propres actions pour faire agir la créature possédée. Si le possesseur se trouve réduit à 0 point de vie par une combinaison de dégâts infligés à son enveloppe corporelle et de dégâts mentaux subis par l’intermédiaire de la possession, il se trouve alors assommé et la possession prend immédiatement fin. Si la cible se [[PAGE 463]] # FLUX PRINCIPAL (STATS/BASE) Glossaire et index **461 461 Introduction Ascendances &amp; Historiques Classes Compétences Dons Équipement Sorts Jouer une partie Annexe des États Feuille de personnage Glossaire et index** trouve réduite à 0 point de vie en premier, le possesseur a le choix entre perdre connaissance avec le corps et continuer de le posséder ou mettre fin à l’effet par une action gratuite et retourner dans son propre corps. Si la cible meurt, la possession prend immédiatement fin et le possesseur est étourdi pendant 1 min.</description>
+    <description>Les effets dotés de ce trait permettent à une créature de projeter son intellect et son esprit dans une cible. Une créature immunisée contre les effets mentaux ne peut pas utiliser un effet de possession. Quand une créature possède une cible, le corps d’origine du possesseur est inconscient (et ne peut pas se réveiller normalement), sauf si l’effet de possession lui permet de pénétrer physiquement dans sa cible. Quand la cible subit des dégâts, le possesseur en subit la moitié sous la forme de dégâts mentaux. Le possesseur perd tous les avantages liés aux sorts ou pouvoirs actifs qui affectent son enveloppe physique, mais il bénéficie en contrepartie de tous les avantages liés aux sorts et pouvoirs qui affectent l’enveloppe physique de sa cible. Un possesseur peut utiliser tous les pouvoirs purement physiques de sa cible. Il ne peut par contre pas utiliser ses propres pouvoirs, à l’exception de ses sorts et de ses pouvoirs purement mentaux. Le MJ décide si un pouvoir est purement physique ou mental. Le possesseur utilise le modificateur d’attaque, la CA, le jet de Vigueur, le jet de Réflexes, la Perception et les compétences physiques de sa cible. Il conserve cependant son propre jet de Volonté, ses compétences mentales, ses jets d’attaques de sorts et son DD de sorts. Les avantages conférés par les objets investis s’appliquent en fonction de la situation : le possesseur bénéficie de ses propres objets investis quand il utilise ses statistiques et des objets investis de la créature possédée quand il utilise les statistiques de cette dernière. Le possesseur ne gagne aucun des avantages liés aux sorts qui affectent seulement l’incantateur, car il ne se trouve pas dans son propre corps. Le possesseur doit utiliser ses propres actions pour faire agir la créature possédée. Si le possesseur se trouve réduit à 0 point de vie par une combinaison de dégâts infligés à son enveloppe corporelle et de dégâts mentaux subis par l’intermédiaire de la possession, il se trouve alors assommé et la possession prend immédiatement fin. Si la cible se [[PAGE 463]] # FLUX PRINCIPAL (STATS/BASE)</description>
+  </trait>
+  <trait id="trait-posture">
+    <name>posture</name>
+    <description/>
   </trait>
   <trait id="trait-potion">
     <name>potion</name>
@@ -636,6 +768,10 @@
     <name>rage</name>
     <description>Vous devez être enragé pour utiliser les pouvoirs qui possèdent le trait rage, et les effets de ceux-ci prennent automatiquement fin quand vous n’êtes plus enragé.</description>
   </trait>
+  <trait id="trait-revelation">
+    <name>révélation</name>
+    <description>Les effets dotés de ce trait permettent de voir les choses telles qu’elles sont réellement.</description>
+  </trait>
   <trait id="trait-rodeur">
     <name>rôdeur</name>
     <description>Ce trait caractérise les pouvoirs liés à la classe de rôdeur.</description>
@@ -643,6 +779,14 @@
   <trait id="trait-roublard">
     <name>roublard</name>
     <description>Ce trait caractérise les pouvoirs liés à la classe de roublard.</description>
+  </trait>
+  <trait id="trait-sanctifie">
+    <name>sanctifié</name>
+    <description/>
+  </trait>
+  <trait id="trait-sbire">
+    <name>sbire</name>
+    <description/>
   </trait>
   <trait id="trait-scrutation">
     <name>scrutation</name>
@@ -659,6 +803,10 @@
   <trait id="trait-son">
     <name>son</name>
     <description>Un effet doté du trait son fonctionne seulement s’il peut produire un son et il se trouve ainsi inopérant dans une zone de silence ou dans le vide. Il s’agit d’un fonctionnement différent de celui d’un sort audible, qui est seulement efficace contre une cible capable de l’entendre. Un effet de son peut infliger des dégâts de son.</description>
+  </trait>
+  <trait id="trait-sophistication">
+    <name>sophistication</name>
+    <description/>
   </trait>
   <trait id="trait-sorcier">
     <name>sorcier</name>
@@ -680,10 +828,6 @@
     <name>ténèbres</name>
     <description>Les effets de ténèbres éteignent les lumières non magiques d’une zone et peuvent contrer des effets de lumière magique moins puissants qu’eux. Vous devez généralement cibler une magie de lumière avec votre magie de ténèbres afin de la contrer, mais certains sorts de ténèbres tentent automatiquement de contrer la lumière.</description>
   </trait>
-  <trait id="trait-terre">
-    <name>terre</name>
-    <description>Les effets associés au trait terre permettent de manipuler ou de créer de la terre. Ceux qui permettent de manipuler la terre n’ont aucun effet dans une zone dépourvue de terre. Les créatures dotées de ce trait sont essentiellement constituées de terre ou ont une connexion magique avec cet élément.</description>
-  </trait>
   <trait id="trait-terreur">
     <name>terreur</name>
     <description>Les effets de terreur suscitent cette émotion. Les effets dotés ce trait possèdent toujours les traits mental et émotion.</description>
@@ -692,6 +836,10 @@
     <name>tour de magie</name>
     <description>Un sort que vous pouvez lancer à volonté et qui est automatiquement intensifié de la moitié de votre niveau arrondi à l’entier supérieur.</description>
   </trait>
+  <trait id="trait-transformation">
+    <name>transformation</name>
+    <description/>
+  </trait>
   <trait id="trait-visuel">
     <name>visuel</name>
     <description>Un effet visuel affecte seulement les créatures qui peuvent le voir. Il ne s’applique qu’aux éléments visibles de l’effet, qui sont déterminés par le MJ.</description>
@@ -699,97 +847,5 @@
   <trait id="trait-vitalite">
     <name>vitalité</name>
     <description>Les effets dotés du trait vitalité guérissent les créatures vivantes grâce à l’énergie issue de la forge de la Création, infligent des dégâts d’énergie de vitalité aux morts-vivants, ou manipulent l’énergie de vitalité.</description>
-  </trait>
-  <trait id="trait-commun">
-    <name>commun</name>
-    <description/>
-  </trait>
-  <trait id="trait-composition">
-    <name>composition</name>
-    <description/>
-  </trait>
-  <trait id="trait-convocation">
-    <name>convocation</name>
-    <description/>
-  </trait>
-  <trait id="trait-convoque">
-    <name>convoqué</name>
-    <description/>
-  </trait>
-  <trait id="trait-denue-dintelligence">
-    <name>dénué d’intelligence</name>
-    <description>Une créature dénuée d’intelligence n’a qu’une intelligence rudimentaire ou bien est programmée. La plupart, voire tous ses modificateurs d’attributs mentaux sont de −5. Une telle créature est immunisée contre tous les effets mentaux.</description>
-  </trait>
-  <trait id="trait-devouement">
-    <name>dévouement</name>
-    <description/>
-  </trait>
-  <trait id="trait-eclaboussure">
-    <name>éclaboussure</name>
-    <description/>
-  </trait>
-  <trait id="trait-faconnage-de-sort">
-    <name>façonnage de sort</name>
-    <description/>
-  </trait>
-  <trait id="trait-fortune">
-    <name>fortune</name>
-    <description/>
-  </trait>
-  <trait id="trait-infortune">
-    <name>infortune</name>
-    <description/>
-  </trait>
-  <trait id="trait-malefice">
-    <name>maléfice</name>
-    <description/>
-  </trait>
-  <trait id="trait-manipulation">
-    <name>manipulation</name>
-    <description>Afin de pouvoir entreprendre une action dotée de ce trait, vous devez manipuler physiquement un objet ou faire certains gestes. Les créatures qui ne possèdent pas de membre adapté ne peuvent pas entreprendre les actions dotées de ce trait. Les actions de manipulation déclenchent souvent des réactions.</description>
-  </trait>
-  <trait id="trait-metamorphose">
-    <name>métamorphose</name>
-    <description/>
-  </trait>
-  <trait id="trait-multiclasse">
-    <name>multiclasse</name>
-    <description/>
-  </trait>
-  <trait id="trait-non-lethal">
-    <name>non léthal</name>
-    <description/>
-  </trait>
-  <trait id="trait-perseverer">
-    <name>persévérer</name>
-    <description/>
-  </trait>
-  <trait id="trait-peu-courant">
-    <name>peu courant</name>
-    <description/>
-  </trait>
-  <trait id="trait-posture">
-    <name>posture</name>
-    <description/>
-  </trait>
-  <trait id="trait-revelation">
-    <name>révélation</name>
-    <description>Les effets dotés de ce trait permettent de voir les choses telles qu’elles sont réellement.</description>
-  </trait>
-  <trait id="trait-sanctifie">
-    <name>sanctifié</name>
-    <description/>
-  </trait>
-  <trait id="trait-sbire">
-    <name>sbire</name>
-    <description/>
-  </trait>
-  <trait id="trait-sophistication">
-    <name>sophistication</name>
-    <description/>
-  </trait>
-  <trait id="trait-transformation">
-    <name>transformation</name>
-    <description/>
   </trait>
 </traits>

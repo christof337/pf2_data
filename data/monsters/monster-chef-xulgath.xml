@@ -8,7 +8,7 @@
     <creatureTraits>
       <trait type="size" ref="trait-moyenne">MOYENNE</trait>
       <trait ref="trait-humanoide">HUMANOÏDE</trait>
-      <trait>XULGATH</trait>
+      <trait ref="trait-xulgath">XULGATH</trait>
     </creatureTraits>
     <perception>
       <bonus/>

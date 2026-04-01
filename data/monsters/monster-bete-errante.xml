@@ -10,7 +10,7 @@
       <trait ref="trait-errant">ERRANT</trait>
       <trait ref="trait-esprit">ESPRIT</trait>
       <trait>ÉTHÉRÉ</trait>
-      <trait>INTANGIBLE</trait>
+      <trait ref="trait-intangible">INTANGIBLE</trait>
     </creatureTraits>
     <perception>
       <bonus/>

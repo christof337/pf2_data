@@ -70,7 +70,7 @@
         <bonus>+10</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>non létal</trait>
+          <trait ref="trait-non-letal">non létal</trait>
         </traits>
         <damages>
           <damage>

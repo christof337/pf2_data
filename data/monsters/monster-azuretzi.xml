@@ -7,7 +7,7 @@
     <level>5</level>
     <creatureTraits>
       <trait type="size" ref="trait-petite">PETITE</trait>
-      <trait>PROTÉEN</trait>
+      <trait ref="trait-proteen">PROTÉEN</trait>
       <trait ref="trait-veilleur">VEILLEUR</trait>
     </creatureTraits>
     <perception>

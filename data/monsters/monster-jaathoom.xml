@@ -91,7 +91,7 @@
           <trait>allonge 3 m</trait>
           <trait ref="trait-finesse">finesse</trait>
           <trait ref="trait-magique">magique</trait>
-          <trait>non
+          <trait ref="trait-non-letal">non
  létal</trait>
         </traits>
         <damages>

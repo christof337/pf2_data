@@ -60,7 +60,7 @@
         <traits>
           <trait>croc-en-jambe à distance</trait>
           <trait>jet 6 m</trait>
-          <trait>non létal</trait>
+          <trait ref="trait-non-letal">non létal</trait>
         </traits>
         <damages>
           <damage>

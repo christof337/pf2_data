@@ -9,7 +9,7 @@
       <trait type="size" ref="trait-moyenne">MOYENNE</trait>
       <trait ref="trait-bois">BOIS</trait>
       <trait ref="trait-fee">FÉE</trait>
-      <trait>NYMPHE</trait>
+      <trait ref="trait-nymphe">NYMPHE</trait>
       <trait ref="trait-plante">PLANTE</trait>
     </creatureTraits>
     <perception>

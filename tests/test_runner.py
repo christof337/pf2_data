@@ -68,17 +68,24 @@ if __name__ == "__main__":
             "generate": generate_monster_xml,
         },
         {
-            "name": "Sorts (all_spells.xml complet)",
+            "name": "Sorts LdJ (334 sorts)",
             "md": "./tests/fixtures/test_sorts.md",
             "xml": "./tests/fixtures/test_sorts_ok.xml",
             "parse": parse_spells_md,
             "generate": generate_spells_xml,
         },
         {
-            "name": "Traits (traits.xml — LdM subset)",
+            "name": "Traits LdM (format §**Nom.** description)",
             "md": "./tests/fixtures/test_traits.md",
             "xml": "./tests/fixtures/test_traits_ok.xml",
             "parse": parse_traits_md,
+            "generate": generate_trait_xml,
+        },
+        {
+            "name": "Traits LdJ (format **Nom** (trait). — 9 cas edge)",
+            "md": "./tests/fixtures/test_traits_ldj.md",
+            "xml": "./tests/fixtures/test_traits_ldj_ok.xml",
+            "parse": lambda content: parse_traits_md(content, format="ldj"),
             "generate": generate_trait_xml,
         },
     ]

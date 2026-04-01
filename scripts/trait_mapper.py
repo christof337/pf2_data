@@ -112,9 +112,15 @@ def _parse_traits_ldj(content, traits_data):
     # Tri par position pour préserver l'ordre du glossaire
     raw_matches.sort(key=lambda x: x[0])
 
+    # Corrections orthographiques connues du LdJ (fautes dans le PDF source)
+    NAME_CORRECTIONS = {
+        "non léthal": "non létal",  # faute LdJ — orthographe canonique = non létal (sans h)
+    }
+
     count = 0
     for _, raw_name, raw_desc in raw_matches:
         name = clean_text(raw_name)
+        name = NAME_CORRECTIONS.get(name, name)
 
         if len(name) > 40:
             continue

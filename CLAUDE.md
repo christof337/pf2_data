@@ -146,6 +146,11 @@ Ces problèmes sont **identifiés et documentés**, mais délibérément différ
 3. **⚠️ Bug parsing — texte post-bloc SCSEEC perdu** (`spells_mapper.py`) — *plus grave*
    Si une description contient du texte **après** le bloc Succès critique / Succès / Échec / Échec critique, ce texte n'est pas capturé dans un champ dédié : il se retrouve accolé à la dernière entrée du bloc (typiquement `<criticalFailure>`). Correction à apporter dans la logique de délimitation de `parse_spell_block()`, probablement en ajoutant un champ `descriptionPost` ou en revoyant les bornes des regex de sauvegardes.
 
+### Architecture données — Questions ouvertes
+
+4. **Pourquoi les monstres sont-ils en fichiers individuels alors que les sorts sont dans un seul fichier ?**
+   Les sorts sont dans `data/spells/all_spells.xml` (fichier agrégé). Les monstres sont dans `data/monsters/*.xml` (un fichier par monstre). Cette asymétrie mérite d'être questionnée : un `all_monsters.xml` faciliterait les requêtes cross-bestiaire et serait cohérent avec l'approche sorts/traits. Le `batch_monster_mapper.py` devrait probablement générer un seul XML agrégé. À décider avant d'ajouter d'autres sources de monstres.
+
 ---
 
 ## Objectif site web (horizon Phase 3+)

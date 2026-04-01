@@ -97,7 +97,7 @@
         <traits>
           <trait>agile</trait>
           <trait ref="trait-finesse">finesse</trait>
-          <trait>non létal</trait>
+          <trait ref="trait-non-letal">non létal</trait>
         </traits>
         <damages>
           <damage>

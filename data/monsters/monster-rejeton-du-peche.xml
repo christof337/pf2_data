@@ -82,7 +82,7 @@
       <special>
         <name>Morsure du péché</name>
         <traits>
-          <trait>arcane</trait>
+          <trait ref="trait-arcane">arcane</trait>
           <trait ref="trait-emotion">émotion</trait>
           <trait ref="trait-mental">mental</trait>
         </traits>
