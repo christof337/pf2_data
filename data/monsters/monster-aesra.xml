@@ -135,7 +135,7 @@
           <trait ref="trait-divine">divine</trait>
           <trait ref="trait-feu">feu</trait>
           <trait ref="trait-saint">saint</trait>
-          <trait>manipulation</trait>
+          <trait ref="trait-manipulation">manipulation</trait>
         </traits>
         <description>� L’aesra balaie l’air de son épée, créant un cône de flammes sacrées de 4,5 m qui inflige 5d6 dégâts de feu (jet de Réflexes basique DD 23)�</description>
       </special>

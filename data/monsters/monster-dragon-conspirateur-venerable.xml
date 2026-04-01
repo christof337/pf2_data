@@ -155,8 +155,8 @@
       <special>
         <name>Invocation de déguisement</name>
         <traits>
-          <trait>manipulation</trait>
-          <trait>métamorphose</trait>
+          <trait ref="trait-manipulation">manipulation</trait>
+          <trait ref="trait-metamorphose">métamorphose</trait>
           <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>Comme le jeune dra- gon conspirateur�</description>

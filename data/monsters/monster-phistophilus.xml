@@ -124,7 +124,7 @@
         <name>Rédaction de contrats</name>
         <traits>
           <trait ref="trait-divine">divine</trait>
-          <trait>manipulation</trait>
+          <trait ref="trait-manipulation">manipulation</trait>
         </traits>
         <description>� Le diable des contrats crée un contrat infernal pour un unique mortel vivant� Ce contrat peut octroyer une grande variété de capacités et d’effets de manière similaire au rituel *souhait* mais qui sont accomplis à la lettre par le diable� Pour bénéficier de ces avantages, le mortel doit volontairement signer le contrat avec son véritable nom� À partir de ce moment, l’âme du mortel est liée au diable des contrats et aux Enfers� Tant que le contrat est effectif, la victime ne peut être ramenée à la vie que par un *souhait* ou une magie similaire� Si un mortel est ramené à la vie de cette manière, le diable des contrats sait quel mortel est de nouveau vivant et il peut localiser la ou les créatures qui lui ont rendu la vie pendant 1 an ; il gagne les effets du sort *localisation* sans limites de portée� Il est difficile et bien souvent risqué de ne pas respecter les termes d’un contrat infernal�</description>
       </special>

@@ -216,7 +216,7 @@
         <traits>
           <trait ref="trait-concentration">concentration</trait>
           <trait ref="trait-divine">divine</trait>
-          <trait>manipulation</trait>
+          <trait ref="trait-manipulation">manipulation</trait>
         </traits>
         <description>Le dragon envoie son halo sur une case à moins de 27 m� Tant que le halo est ainsi déployé, le dragon perd son aura de présence inspirante qui à la place émane du halo sur une même distance� Le dragon peut Maintenir l’effet pour rappeler le halo à lui, peu importe la distance qui les sépare� Le halo est constitué de lumière pure, n’occupe aucun espace et ne peut être ni ciblé ni détruit�</description>
       </special>

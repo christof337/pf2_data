@@ -61,7 +61,7 @@
         <traits>
           <trait ref="trait-aura">aura</trait>
           <trait ref="trait-divine">divine</trait>
-          <trait>infortune</trait>
+          <trait ref="trait-infortune">infortune</trait>
         </traits>
         <description>6 m� Les créatures vivantes dans l’aura doivent lancer deux fois tous leurs d20 et utiliser le moins bon résultat�</description>
       </special>

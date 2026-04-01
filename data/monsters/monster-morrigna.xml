@@ -146,14 +146,14 @@
         <traits>
           <trait ref="trait-concentration">concentration</trait>
           <trait ref="trait-divine">divine</trait>
-          <trait>métamorphose</trait>
+          <trait ref="trait-metamorphose">métamorphose</trait>
         </traits>
         <description>� Une morrigna peut prendre l’apparence de n’importe quel animal ou humanoïde de Petite ou Moyenne taille (p� 358)� Cela ne modifie pas sa Vitesse ni le bonus à l’attaque et aux dégâts de ses Frappes, mais peut modifier le type de dégâts infligés avec ses Frappes� À moins de choisir de conserver ses bandelettes de toile avec sa nouvelle forme, elle ne peut pas utiliser de Frappes de bandelettes�</description>
       </special>
       <special type="activity" actions="3">
         <name>Serviteurs arachnides</name>
         <traits>
-          <trait>convocation</trait>
+          <trait ref="trait-convocation">convocation</trait>
           <trait ref="trait-divine">divine</trait>
         </traits>
         <description>� La morrigna convoque une tarentule géante (p� 22) ou une nuée d’araignées (p� 21)� Ces araignées ont le trait convoqué et restent 10 min ou jusqu’à ce qu’elles tombent à 0 PV� La morrigna n’a pas besoin de Maintenir le sort pour commander ces créatures convoquées, et elle peut avoir n’importe quel nombre d’araignées convoquées en même temps� À n’importe quel moment, elle peut voir à travers les yeux de n’importe laquelle des araignées convoquées�</description>

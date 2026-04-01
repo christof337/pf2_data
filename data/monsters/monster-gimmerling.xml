@@ -86,7 +86,7 @@
         <name>Changement de forme</name>
         <traits>
           <trait ref="trait-concentration">concentration</trait>
-          <trait>métamorphose</trait>
+          <trait ref="trait-metamorphose">métamorphose</trait>
           <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>� Le gimmerling peut prendre l’apparence de n’importe quel humanoïde (p� 358)� Sous forme humanoïde, il perd son aura semée d’embûches et son équipement prend l’aspect de babioles et de jouets� Si la forme choisie n’a ni griffe ni crocs, il perd la Frappe correspondante� S’il perd sa Frappe de griffes, il gagne une Frappe de poing qui est identique si ce n’est qu’elle inflige des dégâts contondants�</description>

@@ -62,7 +62,7 @@
       <special>
         <name>Tire‑dent</name>
         <traits>
-          <trait>manipulation</trait>
+          <trait ref="trait-manipulation">manipulation</trait>
         </traits>
         <description/>
       </special>

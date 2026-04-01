@@ -73,7 +73,7 @@
         <traits>
           <trait ref="trait-concentration">concentration</trait>
           <trait ref="trait-divine">divine</trait>
-          <trait>métamorphose</trait>
+          <trait ref="trait-metamorphose">métamorphose</trait>
         </traits>
         <description>� Un cassisien peut prendre l’apparence d’une colombe, d’un humanoïde ailé, d’un chien ou d’un poisson (p� 358)� Normalement, cela ne modifie pas sa Vitesse ou ses bonus à l’attaque et aux dégâts de ses Frappes, mais cela peut modifier le type de dégâts qu’il inflige avec ses Frappes (générale- ment contondants)� Toute autre modification en fonction de sa forme est indiquée ci-après�<list><listItem>**Chien** Petite taille ; odorat (imprécis) 9 m, Vitesse 12 m ; **Compétence** Athlétisme +6 ;</listItem></list></description>
       </special>

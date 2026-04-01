@@ -77,7 +77,7 @@
         <name>Changement de forme</name>
         <traits>
           <trait ref="trait-concentration">concentration</trait>
-          <trait>métamorphose</trait>
+          <trait ref="trait-metamorphose">métamorphose</trait>
           <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>� Le barghest prend la forme d’un humanoïde, d’un chien ou sa véritable forme (p� 358)� Sa taille s’adapte à sa nouvelle forme� Quand le barghest est sous forme humanoïde, sa Frappe de griffes inflige des dégâts contondants et il perd sa Frappe de mâchoires� Quand il est sous forme de chien, sa Vitesse augmente à 10,5 m� Chaque barghest a une seule forme d’humanoïde et de chien�</description>

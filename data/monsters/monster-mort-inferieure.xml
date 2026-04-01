@@ -67,7 +67,7 @@
         <traits>
           <trait ref="trait-aura">aura</trait>
           <trait ref="trait-divine">divine</trait>
-          <trait>infortune</trait>
+          <trait ref="trait-infortune">infortune</trait>
         </traits>
         <description>6 m� Comme la Faucheuse�</description>
       </special>

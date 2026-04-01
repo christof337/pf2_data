@@ -700,4 +700,96 @@
     <name>vitalité</name>
     <description>Les effets dotés du trait vitalité guérissent les créatures vivantes grâce à l’énergie issue de la forge de la Création, infligent des dégâts d’énergie de vitalité aux morts-vivants, ou manipulent l’énergie de vitalité.</description>
   </trait>
+  <trait id="trait-commun">
+    <name>commun</name>
+    <description/>
+  </trait>
+  <trait id="trait-composition">
+    <name>composition</name>
+    <description/>
+  </trait>
+  <trait id="trait-convocation">
+    <name>convocation</name>
+    <description/>
+  </trait>
+  <trait id="trait-convoque">
+    <name>convoqué</name>
+    <description/>
+  </trait>
+  <trait id="trait-denue-dintelligence">
+    <name>dénué d’intelligence</name>
+    <description>Une créature dénuée d’intelligence n’a qu’une intelligence rudimentaire ou bien est programmée. La plupart, voire tous ses modificateurs d’attributs mentaux sont de −5. Une telle créature est immunisée contre tous les effets mentaux.</description>
+  </trait>
+  <trait id="trait-devouement">
+    <name>dévouement</name>
+    <description/>
+  </trait>
+  <trait id="trait-eclaboussure">
+    <name>éclaboussure</name>
+    <description/>
+  </trait>
+  <trait id="trait-faconnage-de-sort">
+    <name>façonnage de sort</name>
+    <description/>
+  </trait>
+  <trait id="trait-fortune">
+    <name>fortune</name>
+    <description/>
+  </trait>
+  <trait id="trait-infortune">
+    <name>infortune</name>
+    <description/>
+  </trait>
+  <trait id="trait-malefice">
+    <name>maléfice</name>
+    <description/>
+  </trait>
+  <trait id="trait-manipulation">
+    <name>manipulation</name>
+    <description>Afin de pouvoir entreprendre une action dotée de ce trait, vous devez manipuler physiquement un objet ou faire certains gestes. Les créatures qui ne possèdent pas de membre adapté ne peuvent pas entreprendre les actions dotées de ce trait. Les actions de manipulation déclenchent souvent des réactions.</description>
+  </trait>
+  <trait id="trait-metamorphose">
+    <name>métamorphose</name>
+    <description/>
+  </trait>
+  <trait id="trait-multiclasse">
+    <name>multiclasse</name>
+    <description/>
+  </trait>
+  <trait id="trait-non-lethal">
+    <name>non léthal</name>
+    <description/>
+  </trait>
+  <trait id="trait-perseverer">
+    <name>persévérer</name>
+    <description/>
+  </trait>
+  <trait id="trait-peu-courant">
+    <name>peu courant</name>
+    <description/>
+  </trait>
+  <trait id="trait-posture">
+    <name>posture</name>
+    <description/>
+  </trait>
+  <trait id="trait-revelation">
+    <name>révélation</name>
+    <description>Les effets dotés de ce trait permettent de voir les choses telles qu’elles sont réellement.</description>
+  </trait>
+  <trait id="trait-sanctifie">
+    <name>sanctifié</name>
+    <description/>
+  </trait>
+  <trait id="trait-sbire">
+    <name>sbire</name>
+    <description/>
+  </trait>
+  <trait id="trait-sophistication">
+    <name>sophistication</name>
+    <description/>
+  </trait>
+  <trait id="trait-transformation">
+    <name>transformation</name>
+    <description/>
+  </trait>
 </traits>

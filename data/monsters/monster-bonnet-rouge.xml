@@ -127,7 +127,7 @@
       <special type="activity" actions="1">
         <name>Imbibition de sang</name>
         <traits>
-          <trait>manipulation</trait>
+          <trait ref="trait-manipulation">manipulation</trait>
         </traits>
         <description>� Le bonnet rouge trempe son bonnet dans le sang d’un ennemi qu’il a tué� Cet ennemi doit être mort au cours de la dernière minute écoulée et le bonnet rouge doit avoir participé à sa mise à mort� Le bonnet rouge gagne un bonus de statut de +4 à ses jets de dégâts pendant 1 min�</description>
       </special>

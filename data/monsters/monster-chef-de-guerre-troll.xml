@@ -85,7 +85,7 @@
       <special type="activity" actions="1">
         <name>Retrait de l’armure</name>
         <traits>
-          <trait>manipulation</trait>
+          <trait ref="trait-manipulation">manipulation</trait>
         </traits>
         <description>� Le chef de guerre arrache son armure de sa chair� Il récupère immédiatement de 60 points de vie en raison d’une poussée régénératrice qui fait pousser des membres et des visages difformes� Sans son armure, sa CA tombe à 26 mais il gagne vision à 360° (p� 360) grâce à ses nouveaux visages� Remettre son armure lui demande 10 min, et ce pouvoir ne peut plus être utilisé avant 1 h�</description>
       </special>

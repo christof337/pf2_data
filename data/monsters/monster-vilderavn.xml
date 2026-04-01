@@ -144,7 +144,7 @@
         <name>Changement de forme</name>
         <traits>
           <trait ref="trait-concentration">concentration</trait>
-          <trait>métamorphose</trait>
+          <trait ref="trait-metamorphose">métamorphose</trait>
           <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>� Le vilderavn prend l’apparence d’un humanoïde, d’un loup, d’un loup sanguinaire ou d’un hybride avec des traits de corbeau et de loup de taille Petite ou Moyenne (p� 358)� Le vilderavn ne peut utiliser son attaque de mâchoires que lors- qu’il a une tête de loup et son attaque de serres que lorsqu’il a des traits de corbeau� Il peut prendre sa forme de chevalier corbeau : un humanoïde de taille Moyenne avec un harnois noir et une épée à deux mains� Il peut utiliser ses Frappes de mâchoires ou de serres uniquement sous une forme présentant ces traits et son épée à deux mains uniquement sous la forme de chevalier�</description>

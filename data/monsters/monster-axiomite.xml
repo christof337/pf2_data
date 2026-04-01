@@ -103,7 +103,7 @@
       <special type="activity" actions="1">
         <name>Forme de poussière cristalline</name>
         <traits>
-          <trait>métamorphose</trait>
+          <trait ref="trait-metamorphose">métamorphose</trait>
         </traits>
         <description>� L’axiomite adopte la forme d’une nuée de poussière cristalline au sein de laquelle on peut apercevoir par moment d’étranges symboles et équations� Il gagne une Vitesse de vol de 12 m et peut se faufiler à travers de minuscules fissures, comme s’il se trouvait sous *forme gazeuse*� Sous cette forme, l’axiomite peut lancer des sorts mais ne peut pas faire d’attaque au corps à corps ou à distance� Il peut Révoquer cette forme pour retrouver une forme humanoïde�</description>
       </special>

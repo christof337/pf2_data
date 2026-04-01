@@ -96,7 +96,7 @@
         <name>Médecine dero</name>
         <traits>
           <trait ref="trait-guerison">guérison</trait>
-          <trait>manipulation</trait>
+          <trait ref="trait-manipulation">manipulation</trait>
         </traits>
         <description>; **Conditions.** Le dero porte sur lui du matériel en cytillesh et a une main libre ;</description>
       </special>

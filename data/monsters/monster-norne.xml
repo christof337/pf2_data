@@ -64,7 +64,7 @@
       <special>
         <name>Percevoir le destin</name>
         <traits>
-          <trait>fortune</trait>
+          <trait ref="trait-fortune">fortune</trait>
         </traits>
         <description>� Une norne obtient automatiquement un 20 lorsqu’elle fait un jet d’initiative�</description>
       </special>
@@ -159,7 +159,7 @@
       <special type="activity" actions="2">
         <name>Inciser un fil du destin</name>
         <traits>
-          <trait>manipulation</trait>
+          <trait ref="trait-manipulation">manipulation</trait>
           <trait ref="trait-mort">mort</trait>
           <trait ref="trait-occulte">occulte</trait>
         </traits>

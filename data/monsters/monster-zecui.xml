@@ -40,7 +40,7 @@
         <name>Préservation de proie</name>
         <traits>
           <trait ref="trait-guerison">guérison</trait>
-          <trait>manipulation</trait>
+          <trait ref="trait-manipulation">manipulation</trait>
           <trait ref="trait-occulte">occulte</trait>
           <trait ref="trait-vitalite">vitalité</trait>
         </traits>

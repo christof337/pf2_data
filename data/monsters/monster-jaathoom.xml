@@ -127,7 +127,7 @@
         <traits>
           <trait ref="trait-arcanique">arcanique</trait>
           <trait ref="trait-concentration">concentration</trait>
-          <trait>métamorphose</trait>
+          <trait ref="trait-metamorphose">métamorphose</trait>
         </traits>
         <description>� Le jaathoom se transforme en un élémentaire d’air ou un animal aérien de taille Petite ou Moyenne, comme une chouette (p� 358)� Cela n’affecte pas ses statistiques, mais peut changer le type de dégâts de ses Frappes�</description>
       </special>

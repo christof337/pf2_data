@@ -163,7 +163,7 @@
       <special>
         <name>Venin de gongorinan</name>
         <traits>
-          <trait>métamorphose</trait>
+          <trait ref="trait-metamorphose">métamorphose</trait>
           <trait ref="trait-poison">poison</trait>
         </traits>
         <description>; **Jet de sauvegarde** Vigueur DD 30 ; **Stade 1 ** stupéfié 1 et apparition de certains signes indiquant une transformation en animal, champignon ou plante (1 round) ; **Stade 2** stupéfié 2 et mala- droit 2 (1 round) ; **Stade 3** stupéfié 4 et maladroit 4 (1 round) ; **Stade 4** paralysé par les transforma- tions qui affectent tout le corps (1 round) ; **Stade 5** la victime est transformée physiquement et mentalement de manière permanente en un animal, un cham- pignon ou une plante et l’affliction cesse� C’est une malédiction permanente�</description>

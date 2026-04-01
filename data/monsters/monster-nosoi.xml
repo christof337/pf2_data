@@ -96,7 +96,7 @@
         <traits>
           <trait ref="trait-concentration">concentration</trait>
           <trait ref="trait-divine">divine</trait>
-          <trait>métamorphose</trait>
+          <trait ref="trait-metamorphose">métamorphose</trait>
         </traits>
         <description>� Le nosoi prend l’apparence d’un corbeau ou d’un oiseau chanteur (p� 358)� Cela ne change pas sa Vitesse ni les bonus d’attaque et de dégâts de ses Frappes�</description>
       </special>

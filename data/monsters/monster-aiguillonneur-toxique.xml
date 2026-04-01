@@ -76,7 +76,7 @@
       <special type="activity" actions="1">
         <name>Création de bombe</name>
         <traits>
-          <trait>manipulation</trait>
+          <trait ref="trait-manipulation">manipulation</trait>
         </traits>
         <description>� L’aiguillonneur remplit une fiole vide d’un de ses compartiments alchimiques pour créer une bombe puis effectue une Frappe de bombe� Lancez 1d6 sur la liste des compartiments alchimiques ci-dessus� Sur un résultat de 1–5, la bombe inflige 3d10 dégâts et 3 dégâts d’éclabous- sure, du type correspondant à celui du compartiment ; à la place, sur un résultat de 1, vous pouvez choisir de créer une bombe alchimique de niveau 11 ou inférieur qui inflige le même type de dégâts, comme une fiole d’acide� Sur un résultat de 6, il génère une bombe de maladie qui expose la cible et toutes les créatures dans le rayon d’éclaboussure à l’effet de maladie ; les créatures qui ne sont touchées que par les éclabous- sures bénéficient d’un bonus de circonstances de +2 à leur jet de Vigueur�</description>
       </special>

@@ -108,7 +108,7 @@
       <special type="activity" actions="1">
         <name>Drainer l’eau</name>
         <traits>
-          <trait>manipulation</trait>
+          <trait ref="trait-manipulation">manipulation</trait>
         </traits>
         <description>; **Conditions.** Le quai dau to se trouve à moins de 3 m d’une étendue d’eau d’au moins 3 m de profondeur et son sac d’eau est vide ;</description>
       </special>

@@ -111,7 +111,7 @@
         <traits>
           <trait ref="trait-malediction">malédiction</trait>
           <trait ref="trait-divine">divine</trait>
-          <trait>infortune</trait>
+          <trait ref="trait-infortune">infortune</trait>
         </traits>
         <description>; **Fréquence** 3 fois/jour ;</description>
       </special>

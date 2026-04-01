@@ -100,7 +100,7 @@
       <special type="activity" actions="1">
         <name>Saupoudrer de la poussière de pixie</name>
         <traits>
-          <trait>manipulation</trait>
+          <trait ref="trait-manipulation">manipulation</trait>
           <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>� Le pixie saupoudre de la poussière de pixie sur l’une de ses flèches� Si le pixie touche une créature avec cette flèche avant son prochain tour, la flèche inflige l’un des effets spéciaux suivants au lieu d’infliger des dégâts� Chaque effet dépend du jet de Volonté DD 21 de la cible� Sur un coup critique, la cible obtient un résultat un degré inférieur à celui obtenu�<list><listItem>**Charme **(émotion, mental, mise hors de combat)� La cible subit les effets d’un *charme*, sauf qu’elle ne bénéficie d’aucun bonus à son jet de sauvegarde si la seule action hostile à son encontre était le tir à l’arc du pixie� De plus, le pixie peut choisir de déplacer l’adoration de la cible sur une créature différente de lui�</listItem><listItem>**Perte de mémoire** (mental)� En cas d’échec au jet de Volonté, la cible ne se souvient plus des cinq dernières minutes écoulées�</listItem><listItem>**Sommeil **(mental, mise hors de combat, sommeil)� La cible subit les effets d’un *sommeil * de rang 3�</listItem><listItem>**Soumission **(mental, non létal)� La cible subit 4d6 dégâts mentaux en fonction de son jet de Volonté basique�</listItem></list></description>

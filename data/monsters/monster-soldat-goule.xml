@@ -84,7 +84,7 @@
       <special type="activity" actions="1">
         <name>Dévorer la chair</name>
         <traits>
-          <trait>manipulation</trait>
+          <trait ref="trait-manipulation">manipulation</trait>
         </traits>
         <description>2d6 PV</description>
       </special>

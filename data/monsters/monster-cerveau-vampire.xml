@@ -105,7 +105,7 @@
         <traits>
           <trait ref="trait-concentration">concentration</trait>
           <trait>divin</trait>
-          <trait>métamorphose</trait>
+          <trait ref="trait-metamorphose">métamorphose</trait>
         </traits>
         <description>� Chauve-souris géante avec crocs +19 pour 2d8+9 perforants (p� 358)�</description>
       </special>

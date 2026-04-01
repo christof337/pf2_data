@@ -78,29 +78,48 @@ def _parse_traits_ldj(content, traits_data):
     """
     Parser format LdJ : glossaire mixte, seules les entrées suffixées (trait) sont retenues.
 
-    Format réel dans le MD :
-      **Nom **(trait). Description... numéros de page
-      **Nom** (trait). Description... numéros de page
-
-    Le `(trait)` apparaît APRÈS le `**` fermant, pas à l'intérieur.
-    La regex ci-dessous encode ce format directement : le filtre est structurel,
-    pas textuel — pas besoin de vérifier '(trait)' dans le nom capturé.
+    Formats gérés :
+      **Nom **(trait). Description...     — standard avec description
+      **Nom **(trait) 42                  — page-ref seulement, pas de point (Cat 1)
+      Nom** (trait). Description...       — ** ouvrant absent (Cat 2 — artefact PDF)
+      **Nom d'chose **(trait).            — apostrophe dans le nom (Cat 3)
     """
-    # Regex adaptée au format LdJ : **Nom **(trait). ou **Nom** (trait).
-    pattern = (
-        r'[ \t]*\*\*([A-ZÀ-Ÿa-zà-ÿ\s\-]+?)\s*\*\*\s*\(trait\)\.\s*'
-        r'(.*?)(?=(?:[ \t]*\*\*[A-ZÀ-Ÿa-zà-ÿ]|\Z))'
+    # Lookahead de fin commun : prochain début d'entrée bold ou fin de fichier
+    _end = r'(?=(?:[ \t]*\*\*[A-ZÀ-Ÿa-zà-ÿ]|[ \t]*[A-ZÀ-Ÿa-zà-ÿ][A-ZÀ-Ÿa-zà-ÿ\s\-\']+\*\*|\Z))'
+
+    # Classe de caractères communes pour les noms de traits
+    # Inclut apostrophes droite (U+0027) et courbe (U+2019)
+    _NAME_STD  = r"[A-ZÀ-Ÿa-zà-ÿ\s\-'\u2019]"   # peut contenir des espaces (multi-mots)
+    _NAME_LINE = r"[A-ZÀ-Ÿa-zà-ÿ \t\-'\u2019]"   # pas de saut de ligne (Cat 2)
+
+    # Cat 1+3 : **Nom** (trait) avec dot optionnel + apostrophe dans la classe
+    pattern_std = (
+        rf'[ \t]*\*\*({_NAME_STD}+?)\s*\*\*\s*\(trait\)\.?\s*'
+        r'(.*?)' + _end
     )
-    matches = re.finditer(pattern, content, flags=re.MULTILINE | re.DOTALL)
+    # Cat 2 : Nom** (trait). — ** ouvrant absent, nom sur une seule ligne
+    pattern_noopen = (
+        rf'^[ \t]*({_NAME_LINE}+?)\*\*\s*\(trait\)\.?\s*'
+        r'(.*?)' + _end
+    )
+
+    seen_ids: set = set()
+    raw_matches = []
+    for pat in (pattern_std, pattern_noopen):
+        for m in re.finditer(pat, content, flags=re.MULTILINE | re.DOTALL):
+            raw_matches.append((m.start(), m.group(1), m.group(2)))
+
+    # Tri par position pour préserver l'ordre du glossaire
+    raw_matches.sort(key=lambda x: x[0])
 
     count = 0
-    for m in matches:
-        name = clean_text(m.group(1))
+    for _, raw_name, raw_desc in raw_matches:
+        name = clean_text(raw_name)
 
         if len(name) > 40:
             continue
 
-        desc_raw = clean_text(m.group(2))
+        desc_raw = clean_text(raw_desc)
 
         # 1. Normaliser les marqueurs gras dans les plages de pages (**‑**, **,**)
         desc_raw = re.sub(r'\*\*[\-–,]\*\*', '-', desc_raw)
@@ -122,8 +141,14 @@ def _parse_traits_ldj(content, traits_data):
             '',
             desc
         ).strip()
+        #    Passe 3 : description commençant par des chiffres = bruit d'index (Cat 1, sans point)
+        if re.match(r'^[\d]', desc):
+            desc = ''
 
         trait_id = generate_slug("trait", name)
+        if trait_id in seen_ids:
+            continue  # doublon (même entrée capturée par les deux patterns)
+        seen_ids.add(trait_id)
         traits_data.append({'id': trait_id, 'name': name, 'description': desc})
         count += 1
 

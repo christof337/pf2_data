@@ -120,7 +120,7 @@
         <traits>
           <trait ref="trait-divine">divine</trait>
           <trait ref="trait-guerison">guérison</trait>
-          <trait>manipulation</trait>
+          <trait ref="trait-manipulation">manipulation</trait>
           <trait ref="trait-vitalite">vitalité</trait>
         </traits>
         <description>� Le qarna touche une créature vivante et consentante afin d’endosser ses souffrances� Il transfert alors jusqu’à 30 de ses PV à la créature qu’il touche (le qarna ne peut pas transférer plus de PV qu’il n’en possède)�</description>

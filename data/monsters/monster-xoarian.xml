@@ -110,7 +110,7 @@
       <special type="activity" actions="3">
         <name>Voleur de corps</name>
         <traits>
-          <trait>manipulation</trait>
+          <trait ref="trait-manipulation">manipulation</trait>
           <trait ref="trait-occulte">occulte</trait>
           <trait ref="trait-possession">possession</trait>
         </traits>

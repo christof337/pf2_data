@@ -75,7 +75,7 @@
       <special type="activity" actions="2">
         <name>Se gratter</name>
         <traits>
-          <trait>manipulation</trait>
+          <trait ref="trait-manipulation">manipulation</trait>
         </traits>
         <description>� Le chien gobelin se gratte vigoureusement exposant toutes les créatures adjacentes à la variole gobeline�</description>
       </special>

@@ -194,7 +194,7 @@
         <name>Modeler la chair</name>
         <traits>
           <trait ref="trait-malediction">malédiction</trait>
-          <trait>manipulation</trait>
+          <trait ref="trait-manipulation">manipulation</trait>
           <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>�</description>

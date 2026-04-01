@@ -89,7 +89,7 @@
       <special type="activity" actions="3">
         <name>Fabriquer un piège</name>
         <traits>
-          <trait>manipulation</trait>
+          <trait ref="trait-manipulation">manipulation</trait>
         </traits>
         <description>� L’éclaireur kobold fabrique un piège rudimentaire sur une case adjacente� Il doit être posé sur une surface telle que le sol, un mur ou le pla- fond� Le piège se déclenche dès qu’une créature entre dans une case qui lui est adjacente� La créature subit 1d6 dégâts perforants et 1 dégât de saignement persistant (jet de Réflexes basique DD 16)� Le piège est détruit une fois déclenché ou au bout de 1 h, selon ce qui se produit en premier� L’éclaireur porte généralement sur lui suffisamment de matériaux bruts pour fabriquer un piège�</description>
       </special>

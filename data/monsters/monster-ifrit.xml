@@ -126,7 +126,7 @@
         <traits>
           <trait ref="trait-arcanique">arcanique</trait>
           <trait ref="trait-concentration">concentration</trait>
-          <trait>métamorphose</trait>
+          <trait ref="trait-metamorphose">métamorphose</trait>
         </traits>
         <description>� L’ifrit se transforme en un élémentaire de feu ou un reptile de taille Petite ou Moyenne, comme un serpent (p� 358)� Cela n’affecte pas ses statis- tiques, mais peut changer le type de dégâts de ses Frappes�</description>
       </special>

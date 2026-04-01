@@ -70,7 +70,7 @@
         <name>grenade alchimique</name>
         <bonus>+8</bonus>
         <traits>
-          <trait>éclaboussure</trait>
+          <trait ref="trait-eclaboussure">éclaboussure</trait>
           <trait>facteur de portée 6 m</trait>
         </traits>
         <damages>
