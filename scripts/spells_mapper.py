@@ -25,10 +25,6 @@ UPPER = r'A-ZÀÂÄÆÇÉÈÊËÎÏÔÖŒÙÛÜŸ'
 # PRÉ-NETTOYAGE DU PDF
 # ==========================================
 
-# ==========================================
-# PRÉ-NETTOYAGE DU PDF
-# ==========================================
-
 def clean_pdf_artifacts(content):
     """Purge les filigranes, numéros de page et sommaires avant traitement."""
     # 1. Gestion des retours à la ligne litéraux
@@ -93,11 +89,9 @@ def clean_pdf_artifacts(content):
 # ==========================================
 
 def clean_text(text):
+    """Nettoie le texte PDF : retire les coupures de mots (tiret + espace) et normalise les espaces."""
     if not text: return ""
-    #text = text.replace("-\n", "").replace("- ", "")
-    text = re.sub(r'-\n?\s+', '', text)  # Nettoie les résidus de mots coupés
-    # text = re.sub(r'-\s+', '', text)  # Nettoie les résidus de mots coupés
-
+    text = re.sub(r'-\n?\s+', '', text)
     return re.sub(r'\s+', ' ', text).strip()
 
 def clean_value(val):
