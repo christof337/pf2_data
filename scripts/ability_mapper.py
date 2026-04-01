@@ -271,7 +271,6 @@ if __name__ == "__main__":
         # Validation XSD
         xsd_file = "schema/ability.xsd"
         if os.path.exists(xsd_file):
-            sys.path.insert(0, os.path.dirname(__file__))
             from xml_validator import validate_xml
             validate_xml(output_file, xsd_file)
     else:
