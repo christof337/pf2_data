@@ -5,14 +5,7 @@ import time
 from lxml import etree
 from xml_validator import validate_xml
 from slug_generator import generate_slug
-
-# ==========================================
-# UTILITAIRES
-# ==========================================
-
-def clean_text(text):
-    """Nettoie les sauts de ligne et espaces superflus de pdfplumber."""
-    return re.sub(r'\s+', ' ', text).strip()
+from utils import clean_text
 
 
 

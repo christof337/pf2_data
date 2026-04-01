@@ -4,14 +4,7 @@ import sys
 import time
 from lxml import etree
 from xml_validator import validate_xml
-
-# ==========================================
-# UTILITAIRES DE TEXTE
-# ==========================================
-
-def clean_text(text):
-    """Nettoie les sauts de ligne et espaces superflus."""
-    return re.sub(r'\s+', ' ', text).strip()
+from utils import clean_text
 
 # ==========================================
 # PARSING SPÉCIFIQUE MONSTRES
