@@ -6,8 +6,8 @@
     <type>CRÉATURE</type>
     <level>0</level>
     <creatureTraits>
-      <trait type="size">PETITE</trait>
-      <trait>LÉCHI</trait>
+      <trait type="size" ref="trait-petite">PETITE</trait>
+      <trait ref="trait-lechi">LÉCHI</trait>
       <trait>PLANTE</trait>
     </creatureTraits>
     <perception>

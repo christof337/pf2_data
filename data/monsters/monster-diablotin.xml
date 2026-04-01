@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>1</level>
     <creatureTraits>
-      <trait type="size">TRÈS PETITE</trait>
+      <trait type="size" ref="trait-tres-petite">TRÈS PETITE</trait>
       <trait>FIÉLON</trait>
-      <trait>IMPIE</trait>
+      <trait ref="trait-impie">IMPIE</trait>
     </creatureTraits>
     <perception>
       <bonus>+7</bonus>
@@ -56,8 +56,8 @@
         <traits>
           <trait>agile</trait>
           <trait>allonge 0 m</trait>
-          <trait>finesse</trait>
-          <trait>impie</trait>
+          <trait ref="trait-finesse">finesse</trait>
+          <trait ref="trait-impie">impie</trait>
           <trait>magique</trait>
         </traits>
         <damages/>
@@ -80,7 +80,7 @@
         <name>Changement de forme</name>
         <traits>
           <trait>concentration</trait>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
           <trait>métamorphose</trait>
         </traits>
         <description>� Le diablotin peut prendre l’apparence de n’importe quel animal de taille Moyenne ou plus petit (p� 358)� Quand il est métamorphosé, le diablotin perd ses sens normaux, ses sorts innés et ses actions spéciales, mais ses statistiques restent inchangées et il peut toujours parler et utiliser la télépathie� Le diablotin gagne également tous les sens spéciaux et toutes les Vitesses de l’animal� Cela ne change pas les modificateurs à l’attaque et aux dégâts de ses Frappes mais peut changer le type de dégâts que ses Frappes infligent (en fonction des types d’attaque de l’animal) et l’empêche d’exposer des créatures au venin de diablotin�</description>

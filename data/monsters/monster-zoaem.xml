@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>1</level>
     <creatureTraits>
-      <trait type="size">PETITE</trait>
+      <trait type="size" ref="trait-petite">PETITE</trait>
       <trait>ARCHON</trait>
-      <trait>CÉLESTE</trait>
-      <trait>SAINT</trait>
+      <trait ref="trait-celeste">CÉLESTE</trait>
+      <trait ref="trait-saint">SAINT</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -57,10 +57,10 @@
         <bonus>+8</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>feu</trait>
+          <trait ref="trait-feu">feu</trait>
           <trait>magique</trait>
           <trait>portée 9 m</trait>
-          <trait>saint</trait>
+          <trait ref="trait-saint">saint</trait>
         </traits>
         <damages>
           <damage>
@@ -82,7 +82,7 @@
         <name>Lumière de la vérité</name>
         <traits>
           <trait>concentration</trait>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
           <trait>lumière</trait>
         </traits>
         <description>� Le zoaem émet une intense lumière qui fonctionne comme *lumière révélatrice*, mais sur une ligne de 18 m� Le zoaem et ses alliés gagnent un bonus de statut de +1 à leurs jets de dégâts et à leurs tests pour Se souvenir face aux créatures affectées par cette lumière� Le zoaem doit alors attendre 1d4 rounds pour réutiliser Lumière de la vérité�</description>

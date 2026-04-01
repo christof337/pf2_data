@@ -6,12 +6,12 @@
     <type>CRÉATURE</type>
     <level>-1</level>
     <creatureTraits>
-      <trait type="size">TRÈS PETITE</trait>
-      <trait>ESPRIT</trait>
+      <trait type="size" ref="trait-tres-petite">TRÈS PETITE</trait>
+      <trait ref="trait-esprit">ESPRIT</trait>
       <trait>FOLLET</trait>
-      <trait>ESPRIT</trait>
+      <trait ref="trait-esprit">ESPRIT</trait>
       <trait>FOLLET</trait>
-      <trait>FÉE</trait>
+      <trait ref="trait-fee">FÉE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -37,8 +37,8 @@
         <traits>
           <trait>allonge 0 m</trait>
           <trait>désarmer</trait>
-          <trait>feu</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-feu">feu</trait>
+          <trait ref="trait-finesse">finesse</trait>
           <trait>magique</trait>
           <trait>mortel 1d8</trait>
         </traits>
@@ -48,7 +48,7 @@
         <name>étincelle lumineuse</name>
         <bonus>+8</bonus>
         <traits>
-          <trait>feu</trait>
+          <trait ref="trait-feu">feu</trait>
           <trait>lumière</trait>
           <trait>portée 6 m</trait>
         </traits>

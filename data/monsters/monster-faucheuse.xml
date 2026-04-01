@@ -60,7 +60,7 @@
         <name>Aura d’infortune</name>
         <traits>
           <trait>aura</trait>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
           <trait>infortune</trait>
         </traits>
         <description>6 m� Les créatures vivantes dans l’aura doivent lancer deux fois tous leurs d20 et utiliser le moins bon résultat�</description>
@@ -72,7 +72,7 @@
       <special type="reaction">
         <name>Mort qui rôde</name>
         <traits>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
           <trait>téléportation</trait>
         </traits>
         <trigger>Une créature dans un rayon de 30 m effectue une attaque à distance ou utilise une action dotée du trait concentration, mani- pulation ou déplacement ;</trigger>

@@ -6,8 +6,8 @@
     <type>CRÉATURE</type>
     <level>18</level>
     <creatureTraits>
-      <trait type="size">GIGANTESQUE</trait>
-      <trait>AQUATIQUE</trait>
+      <trait type="size" ref="trait-gigantesque">GIGANTESQUE</trait>
+      <trait ref="trait-aquatique">AQUATIQUE</trait>
       <trait>BÊTE</trait>
     </creatureTraits>
     <perception>

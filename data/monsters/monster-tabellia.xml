@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>14</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
-      <trait>ANGE</trait>
-      <trait>CÉLESTE</trait>
-      <trait>SAINT</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
+      <trait ref="trait-ange">ANGE</trait>
+      <trait ref="trait-celeste">CÉLESTE</trait>
+      <trait ref="trait-saint">SAINT</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -57,7 +57,7 @@
       <special>
         <name>Amnistie du messager</name>
         <traits>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
         </traits>
         <description>� Un tabellia qui transporte un message est conti- nuellement protégé par l’effet de *sanctuaire *(DD 32)� Si l’ange met fin à cet effet en utilisant une action hostile, le *sanctuaire* se reforme 10 min après que l’ange a cessé les hostilités�</description>
       </special>
@@ -65,7 +65,7 @@
         <name>Aura du voyageur</name>
         <traits>
           <trait>aura</trait>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
         </traits>
         <description>6 m� Les créatures qui se trouvent dans l’aura d’un tabellia sont protégées contre les dégâts environnementaux des plans, dont la cha- leur ou le froid importants ou extrêmes ainsi que des dangers plus exotiques� Un tabellia ne peut pas être pris par surprise par les créatures qui se trouvent dans son aura�</description>
       </special>
@@ -82,7 +82,7 @@
         <traits>
           <trait>magique</trait>
           <trait>pousser</trait>
-          <trait>saint</trait>
+          <trait ref="trait-saint">saint</trait>
         </traits>
         <damages>
           <damage>

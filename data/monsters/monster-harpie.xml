@@ -6,7 +6,7 @@
     <type>CRÉATURE</type>
     <level>5</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
       <trait>AIR</trait>
       <trait>BÊTE</trait>
       <trait>HUMANOÏDE</trait>
@@ -37,7 +37,7 @@
         <name>Murmures du vent</name>
         <traits>
           <trait>air</trait>
-          <trait>primordiale</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>� Quand une harpie parle, elle peut désigner une créature dans un rayon de 27 m� Cette créature peut entendre les paroles de la harpie par-dessus n’importe quel autre son, mais aucune autre créature ne les entend�</description>
       </special>
@@ -46,7 +46,7 @@
     <saves REF="+15" FOR="+9" WIL="+12"/>
     <health>75</health>
     <reactiveAbilities>
-      <special>
+      <special ref="ability-puanteur">
         <name>Puanteur</name>
         <traits>
           <trait>aura</trait>
@@ -64,7 +64,7 @@
         <name>mâchoires</name>
         <bonus>+15</bonus>
         <traits>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
         </traits>
         <damages>
           <damage>
@@ -78,7 +78,7 @@
         <bonus>+15</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
         </traits>
         <damages>
           <damage>
@@ -105,7 +105,7 @@
         <traits>
           <trait>air</trait>
           <trait>concentration</trait>
-          <trait>primordiale</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>� La har- pie utilise le vent pour rapprocher sa proie� Une cible dans un rayon de 6 m doit réussir un jet de Vigueur DD 21 ou être attirée vers une case adjacente à la harpie qui effectue une Frappe de mâchoires contre elle� Si la cible est soulevée du sol et ne peut pas voler, elle tombe ensuite normalement�</description>
       </special>

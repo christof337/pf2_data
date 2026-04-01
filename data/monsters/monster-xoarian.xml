@@ -6,8 +6,8 @@
     <type>CRÉATURE</type>
     <level>8</level>
     <creatureTraits>
-      <trait type="size">PETITE</trait>
-      <trait>ABERRATION</trait>
+      <trait type="size" ref="trait-petite">PETITE</trait>
+      <trait ref="trait-aberration">ABERRATION</trait>
     </creatureTraits>
     <perception>
       <bonus>+16</bonus>
@@ -68,7 +68,7 @@
         <bonus>+18</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
         </traits>
         <damages>
           <damage>
@@ -111,7 +111,7 @@
         <name>Voleur de corps</name>
         <traits>
           <trait>manipulation</trait>
-          <trait>occulte</trait>
+          <trait ref="trait-occulte">occulte</trait>
           <trait>possession</trait>
         </traits>
         <description>Le xoarian com- presse son corps pour entrer dans la tête d’une créature morte depuis moins d’un jour, consomme le cerveau encore présent et prend sa place� Au début du prochain tour du xoarian, le corps est réanimé avec son maximum de points de vie et il est contrôlé par le voleur de chair� Ce dernier est conscient et peut ressentir tout ce que ressentirait son hôte� Tout effet mettant fin à cette possession tue l’hôte avec les mêmes effets qu’Extraction du corps� Le xoarian ne peut pas utiliser les sorts de la créature hôte avec Voleur de corps, mais il peut utiliser ses propres sorts innés�</description>

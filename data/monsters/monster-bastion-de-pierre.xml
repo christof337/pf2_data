@@ -56,7 +56,7 @@
         <name>rocher</name>
         <bonus>+22</bonus>
         <traits>
-          <trait>brutal</trait>
+          <trait ref="trait-brutal">brutal</trait>
           <trait>facteur de portée 36 m</trait>
           <trait>magique</trait>
         </traits>
@@ -81,7 +81,7 @@
         <name>Marche inexorable</name>
         <description>Le bastion de pierre Marche rapidement jusqu’à sa Vitesse maximale en repoussant toute créature dans l’espace de laquelle il pénètre et en leur infligeant des dégâts si elles tentent de l’arrêter� Une créature peut tenter de lui bloquer le chemin en réussissant un jet de Vigueur DD 34� Sur un succès critique, la créature qui résiste ne subit aucun dégât ; sinon, elle subit des dégâts comme si elle avait été frappée par le poing du bastion�</description>
       </special>
-      <special type="activity" actions="1">
+      <special type="activity" actions="1" ref="ability-projection-de-rochers">
         <name>Projection de rochers</name>
         <traits>
           <trait>p� 360</trait>
@@ -96,7 +96,7 @@
         <name>Souffle du serpent‑de‑pierre</name>
         <traits>
           <trait>mise hors de combat</trait>
-          <trait>primordiale</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
           <trait>terre</trait>
         </traits>
         <description>� Le bastion souffle un gaz vert dans un cône de 18 m� Chaque créature dans la zone d’effet doit faire un jet de Vigueur DD 34� Le bastion ne peut plus utiliser Souffle du serpent-de-pierre pendant 1d4 rounds�</description>

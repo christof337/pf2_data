@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>15</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
       <trait>DÉMONS</trait>
       <trait>FIÉLON</trait>
-      <trait>IMPIE</trait>
+      <trait ref="trait-impie">IMPIE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -54,7 +54,7 @@
           <trait>percutant</trait>
           <trait>magique</trait>
           <trait>balayage</trait>
-          <trait>impie</trait>
+          <trait ref="trait-impie">impie</trait>
         </traits>
         <damages>
           <damage>

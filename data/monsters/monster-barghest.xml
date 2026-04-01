@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>4</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
       <trait>BÊTE</trait>
-      <trait>IMPIE</trait>
+      <trait ref="trait-impie">IMPIE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -33,7 +33,7 @@
         <name>mâchoires</name>
         <bonus>+13</bonus>
         <traits>
-          <trait>impie</trait>
+          <trait ref="trait-impie">impie</trait>
         </traits>
         <damages>
           <damage>
@@ -47,7 +47,7 @@
         <bonus>+13</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>impie</trait>
+          <trait ref="trait-impie">impie</trait>
         </traits>
         <damages>
           <damage>
@@ -69,7 +69,7 @@
         <name>Blessure inguérissable</name>
         <traits>
           <trait>malédiction</trait>
-          <trait>primordiale</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>� Une créature blessée par les griffes d’un barghest doit réussir un jet de Vigueur DD 21 ou être maudite� La créature maudite ne peut pas regagner de points de vie, sauf par magie, jusqu’à ce qu’elle retrouve son maximum de points de vie� La créature peut tenter un nouveau jet de sauvegarde contre la malédiction toutes les 24 h�</description>
       </special>
@@ -78,7 +78,7 @@
         <traits>
           <trait>concentration</trait>
           <trait>métamorphose</trait>
-          <trait>primordiale</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>� Le barghest prend la forme d’un humanoïde, d’un chien ou sa véritable forme (p� 358)� Sa taille s’adapte à sa nouvelle forme� Quand le barghest est sous forme humanoïde, sa Frappe de griffes inflige des dégâts contondants et il perd sa Frappe de mâchoires� Quand il est sous forme de chien, sa Vitesse augmente à 10,5 m� Chaque barghest a une seule forme d’humanoïde et de chien�</description>
       </special>

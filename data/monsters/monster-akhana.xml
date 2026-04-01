@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>12</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
       <trait>ÉON</trait>
-      <trait>VEILLEUR</trait>
+      <trait ref="trait-veilleur">VEILLEUR</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -32,7 +32,7 @@
         <name>Conceptualisation</name>
         <traits>
           <trait>aura</trait>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
           <trait>mental</trait>
         </traits>
         <description>30 m� Un akhana peut communiquer mentalement avec toutes les créatures qui se trouvent dans son aura en utilisant des projections psy- chiques dénuées de paroles� S’il n’a pas besoin de partager une langue avec ses interlocu- teurs, le sens de ce qu’il communique est souvent mystérieux pour ces derniers� Un éon peut utiliser ce pouvoir pour établir une communication parfaite avec un autre éon situé sur le même plan�</description>
@@ -108,7 +108,7 @@
       <special type="activity" actions="1">
         <name>Reprendre la vie</name>
         <traits>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
           <trait>néant</trait>
         </traits>
         <description>; **Conditions.** L’akhana a saisi ou entravé une créature avec sa queue ;</description>
@@ -117,7 +117,7 @@
         <name>Explosion de vie</name>
         <traits>
           <trait>concentration</trait>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
           <trait>plante</trait>
           <trait>vitalité</trait>
         </traits>

@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>5</level>
     <creatureTraits>
-      <trait type="size">GRANDE</trait>
+      <trait type="size" ref="trait-grande">GRANDE</trait>
       <trait>AIR</trait>
-      <trait>ÉLÉMENTAIRE</trait>
+      <trait ref="trait-elementaire">ÉLÉMENTAIRE</trait>
       <trait>GÉNIE</trait>
     </creatureTraits>
     <perception>
@@ -89,7 +89,7 @@
         <traits>
           <trait>agile</trait>
           <trait>allonge 3 m</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
           <trait>magique</trait>
           <trait>non
  létal</trait>

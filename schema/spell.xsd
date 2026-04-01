@@ -30,7 +30,15 @@
       <xs:element name="traits" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="trait" type="xs:string" maxOccurs="unbounded"/>
+            <xs:element name="trait" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:simpleContent>
+                  <xs:extension base="xs:string">
+                    <xs:attribute name="ref" type="xs:string"/>
+                  </xs:extension>
+                </xs:simpleContent>
+              </xs:complexType>
+            </xs:element>
           </xs:sequence>
         </xs:complexType>
       </xs:element>
@@ -85,7 +93,15 @@
   
   <xs:complexType name="richTextType" mixed="true">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
-      <xs:element name="spellRef" type="xs:string"/>
+      <xs:element name="spellRef">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="xs:string">
+              <xs:attribute name="ref" type="xs:string"/>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
     </xs:choice>
   </xs:complexType>
   

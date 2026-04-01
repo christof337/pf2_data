@@ -6,8 +6,8 @@
     <type>CRÉATURE</type>
     <level>2</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
-      <trait>ANIMAL</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
+      <trait ref="trait-animal">ANIMAL</trait>
     </creatureTraits>
     <perception>
       <bonus>+7</bonus>

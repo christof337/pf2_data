@@ -13,8 +13,6 @@
 
   <xs:complexType name="abilityType">
     <xs:sequence>
-      <!-- Identifiant unique : ability-{slug} -->
-      <xs:element name="id" type="xs:string"/>
       <!-- Nom de la capacité en français -->
       <xs:element name="name" type="xs:string"/>
       <!-- Nombre d'actions (0=action libre, 1,2,3=actions, 9=réaction) -->
@@ -30,6 +28,8 @@
       <!-- Description complète -->
       <xs:element name="description" type="xs:string" minOccurs="0"/>
     </xs:sequence>
+    <!-- Identifiant unique : ability-{slug} -->
+    <xs:attribute name="id" type="xs:ID"/>
   </xs:complexType>
 
   <xs:complexType name="traitsListType">

@@ -6,7 +6,7 @@
     <type>CRÉATURE</type>
     <level>10</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
       <trait>PLANTE</trait>
     </creatureTraits>
     <perception>

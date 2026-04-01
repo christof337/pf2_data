@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>7</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
-      <trait>DÉMON</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
+      <trait ref="trait-demon">DÉMON</trait>
       <trait>FIÉLON</trait>
-      <trait>IMPIE</trait>
+      <trait ref="trait-impie">IMPIE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -65,8 +65,8 @@
         <bonus>+16</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>finesse</trait>
-          <trait>impie</trait>
+          <trait ref="trait-finesse">finesse</trait>
+          <trait ref="trait-impie">impie</trait>
           <trait>magique</trait>
         </traits>
         <damages>
@@ -89,9 +89,9 @@
       <special type="activity" actions="1">
         <name>Baiser passionné</name>
         <traits>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
           <trait>émotion</trait>
-          <trait>impie</trait>
+          <trait ref="trait-impie">impie</trait>
           <trait>mental</trait>
           <trait>néant</trait>
         </traits>

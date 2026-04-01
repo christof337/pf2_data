@@ -137,14 +137,14 @@
       <special>
         <name>Drain de vitalité</name>
         <traits>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
         </traits>
         <description>� Quand un volecrâne porte une Frappe au corps à corps, sa cible doit réussir un jet de Vigueur DD 40 ou se trouver dans l’état drainé 2 et condamné 1�</description>
       </special>
       <special>
         <name>Voleur d’os</name>
         <traits>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
         </traits>
         <description>� Chaque fois qu’une créature meurt dans un rayon de 18 m autour d’un volecrâne, celui-ci récupère une partie de ses os qu’il intègre à sa tempête d’esquilles� La créature doit alors réussir un jet de Volonté DD 40 ou être réanimée sous la forme d’un champion squelettique (p� 330) 1d4 rounds plus tard� Ces champions squelettiques se trouvent sous le contrôle du volecrâne�</description>
       </special>

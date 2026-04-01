@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>16</level>
     <creatureTraits>
-      <trait type="size">TRÈS GRANDE</trait>
-      <trait>DRAGON</trait>
-      <trait>OCCULTE</trait>
+      <trait type="size" ref="trait-tres-grande">TRÈS GRANDE</trait>
+      <trait ref="trait-dragon">DRAGON</trait>
+      <trait ref="trait-occulte">OCCULTE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -150,14 +150,14 @@
         <name>Souffle du destin</name>
         <traits>
           <trait>mental</trait>
-          <trait>occulte</trait>
+          <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>Comme le jeune dra- gon des prédictions, mais 15d6 dégâts mentaux, cône de 12 m et DD 39�</description>
       </special>
       <special type="activity" actions="2">
         <name>Voyageur des lignes temporelles</name>
         <traits>
-          <trait>occulte</trait>
+          <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>Comme le dragon des prédictions adulte�</description>
       </special>

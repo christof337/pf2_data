@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>1</level>
     <creatureTraits>
-      <trait type="size">PETITE</trait>
-      <trait>ANIMAL</trait>
-      <trait>AQUATIQUE</trait>
+      <trait type="size" ref="trait-petite">PETITE</trait>
+      <trait ref="trait-animal">ANIMAL</trait>
+      <trait ref="trait-aquatique">AQUATIQUE</trait>
     </creatureTraits>
     <perception>
       <bonus>+4</bonus>

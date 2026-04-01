@@ -6,8 +6,8 @@
     <type>CRÉATURE</type>
     <level>9</level>
     <creatureTraits>
-      <trait type="size">TRÈS GRANDE</trait>
-      <trait>ANIMAL</trait>
+      <trait type="size" ref="trait-tres-grande">TRÈS GRANDE</trait>
+      <trait ref="trait-animal">ANIMAL</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -72,11 +72,11 @@
       </strike>
     </strikes>
     <offensiveAbilities>
-      <special type="activity" actions="1">
+      <special type="activity" actions="1" ref="ability-embuscade-aquatique">
         <name>Embuscade aquatique</name>
         <description>15 m (p� 359)</description>
       </special>
-      <special type="activity" actions="1">
+      <special type="activity" actions="1" ref="ability-gober">
         <name>Gober</name>
         <traits>
           <trait>attaque</trait>

@@ -6,8 +6,8 @@
     <type>CRÉATURE</type>
     <level>6</level>
     <creatureTraits>
-      <trait type="size">PETITE</trait>
-      <trait>ABERRATION</trait>
+      <trait type="size" ref="trait-petite">PETITE</trait>
+      <trait ref="trait-aberration">ABERRATION</trait>
       <trait>AIR</trait>
     </creatureTraits>
     <perception>

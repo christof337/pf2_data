@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>5</level>
     <creatureTraits>
-      <trait type="size">PETITE</trait>
+      <trait type="size" ref="trait-petite">PETITE</trait>
       <trait>PROTÉEN</trait>
-      <trait>VEILLEUR</trait>
+      <trait ref="trait-veilleur">VEILLEUR</trait>
     </creatureTraits>
     <perception>
       <bonus>+11</bonus>
@@ -71,7 +71,7 @@
       <special>
         <name>Perception de l’entropie</name>
         <traits>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
           <trait>prédiction</trait>
         </traits>
         <description>� Comme le ver du néant�</description>

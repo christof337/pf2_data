@@ -6,8 +6,8 @@
     <type>CRÉATURE</type>
     <level>8</level>
     <creatureTraits>
-      <trait type="size">GRANDE</trait>
-      <trait>DRAGON</trait>
+      <trait type="size" ref="trait-grande">GRANDE</trait>
+      <trait ref="trait-dragon">DRAGON</trait>
       <trait>TERRE</trait>
     </creatureTraits>
     <perception>
@@ -87,7 +87,7 @@
       <special type="activity" actions="2">
         <name>Souffle des sables</name>
         <traits>
-          <trait>primordiale</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
           <trait>terre</trait>
         </traits>
         <description>Le drake du désert projette une boule de sable abrasif qui traverse une distance de 18 m avant de former un nuage en une explosion de 4,5 m de rayon� Les créatures dans la zone d’effet subissent 9d6 dégâts tranchants (jet de Réflexes basique DD 27)� Le drake du désert ne peut plus utiliser Souffle des sables pendant 1d6 rounds� Durant ce laps de temps, la tempête de sable reste dans la zone� Ceci confère l’état masqué à tout ce qui se trouve à l’intérieur de la zone, mais ce qui se trouve à l’extérieur de la tempête bénéficie de l’état masqué pour les créatures situées à l’intérieur�</description>

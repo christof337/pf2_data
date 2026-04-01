@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>8</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
-      <trait>ERRANT</trait>
-      <trait>ESPRIT</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
+      <trait ref="trait-errant">ERRANT</trait>
+      <trait ref="trait-esprit">ESPRIT</trait>
       <trait>ÉTHÉRÉ</trait>
       <trait>INTANGIBLE</trait>
     </creatureTraits>
@@ -64,7 +64,7 @@
         <bonus>+18</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
           <trait>magique</trait>
         </traits>
         <damages>

@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>5</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
-      <trait>ÉLÉMENTAIRE</trait>
-      <trait>FEU</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
+      <trait ref="trait-elementaire">ÉLÉMENTAIRE</trait>
+      <trait ref="trait-feu">FEU</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -41,7 +41,7 @@
         <traits>
           <trait>agile</trait>
           <trait>allonge 3 m</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
         </traits>
         <damages>
           <damage>
@@ -63,8 +63,8 @@
       <special type="activity" actions="1">
         <name>Propagation de flammes</name>
         <traits>
-          <trait>feu</trait>
-          <trait>primordiale</trait>
+          <trait ref="trait-feu">feu</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>; **Conditions.** La dernière action de l’in- cendie vivant était une Frappe infligeant des dégâts de feu ;</description>
       </special>

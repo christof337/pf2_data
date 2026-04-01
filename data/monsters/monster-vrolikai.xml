@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>20</level>
     <creatureTraits>
-      <trait type="size">GRANDE</trait>
+      <trait type="size" ref="trait-grande">GRANDE</trait>
       <trait>DÉMONS</trait>
       <trait>FIÉLON</trait>
-      <trait>IMPIE</trait>
+      <trait ref="trait-impie">IMPIE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -38,7 +38,7 @@
         <name>Regard voleur de mort</name>
         <traits>
           <trait>aura</trait>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
           <trait>visuel</trait>
         </traits>
         <description>9 m� Toute créature autre qu’un démon qui termine son tour dans l’aura doit effectuer un jet de Vigueur DD 38� Elle est drainée 1 si elle échoue�</description>

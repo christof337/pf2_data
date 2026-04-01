@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>9</level>
     <creatureTraits>
-      <trait type="size">GRANDE</trait>
+      <trait type="size" ref="trait-grande">GRANDE</trait>
       <trait>DAÉMONS</trait>
       <trait>FIÉLON</trait>
-      <trait>IMPIE</trait>
+      <trait ref="trait-impie">IMPIE</trait>
     </creatureTraits>
     <perception>
       <bonus>+20</bonus>
@@ -73,7 +73,7 @@
         <bonus>+21</bonus>
         <traits>
           <trait>allonge 3 m</trait>
-          <trait>impie</trait>
+          <trait ref="trait-impie">impie</trait>
           <trait>magique</trait>
           <trait>maladie</trait>
         </traits>
@@ -90,7 +90,7 @@
         <traits>
           <trait>agile</trait>
           <trait>allonge 3 m</trait>
-          <trait>impie</trait>
+          <trait ref="trait-impie">impie</trait>
           <trait>magique</trait>
           <trait>maladie</trait>
         </traits>
@@ -106,7 +106,7 @@
         <bonus>+21</bonus>
         <traits>
           <trait>facteur de portée 30 m</trait>
-          <trait>impie</trait>
+          <trait ref="trait-impie">impie</trait>
           <trait>magique</trait>
           <trait>maladie</trait>
           <trait>mortel d10</trait>
@@ -138,7 +138,7 @@
       <special type="activity" actions="1">
         <name>Pestilence accélérée</name>
         <traits>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
           <trait>manipulation</trait>
         </traits>
         <description>� Le leu- kodaémon favorise le développement des maladies jusqu’à des stades plus graves� Il choisit une cible située dans son aura de pestilence et affectée par une maladie� Cette créature doit tenter un jet de Vigueur contre la maladie comme si l’intervalle du stade actuel de cette maladie était passé�</description>
@@ -153,8 +153,8 @@
       <special type="activity" actions="2">
         <name>Souffle pestilentiel</name>
         <traits>
-          <trait>divine</trait>
-          <trait>impie</trait>
+          <trait ref="trait-divine">divine</trait>
+          <trait ref="trait-impie">impie</trait>
         </traits>
         <description>� Le leukodaémon exhale une nuée de mouches noires agressives et bouffies dans un cône de 6 m� Les créatures dans le cône subissent 4d8 dégâts perforants (jet de Réflexes basique DD 28)� Une créature qui rate son jet de sauvegarde tombe malade 1 (ou malade 2 en cas d’échec critique)�</description>
       </special>

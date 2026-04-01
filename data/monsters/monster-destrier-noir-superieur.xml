@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>11</level>
     <creatureTraits>
-      <trait type="size">TRÈS GRANDE</trait>
+      <trait type="size" ref="trait-tres-grande">TRÈS GRANDE</trait>
       <trait>BÊTE</trait>
       <trait>FIÉLON</trait>
-      <trait>IMPIE</trait>
+      <trait ref="trait-impie">IMPIE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -59,7 +59,7 @@
         <name>mâchoires</name>
         <bonus>+24</bonus>
         <traits>
-          <trait>impie</trait>
+          <trait ref="trait-impie">impie</trait>
           <trait>magique</trait>
         </traits>
         <damages>
@@ -74,8 +74,8 @@
         <bonus>+24</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>feu</trait>
-          <trait>impie</trait>
+          <trait ref="trait-feu">feu</trait>
+          <trait ref="trait-impie">impie</trait>
           <trait>magique</trait>
         </traits>
         <damages>
@@ -102,12 +102,12 @@
         <name>Galop enflammé</name>
         <traits>
           <trait>divin</trait>
-          <trait>feu</trait>
-          <trait>impie</trait>
+          <trait ref="trait-feu">feu</trait>
+          <trait ref="trait-impie">impie</trait>
         </traits>
         <description>Comme le destrier noir, mais 6d6 dégâts de feu et DD 30�</description>
       </special>
-      <special type="activity" actions="3">
+      <special type="activity" actions="3" ref="ability-pietinement">
         <name>Piétinement</name>
         <description>Grande ou plus petite, sabot, DD 30 (p� 360)</description>
       </special>

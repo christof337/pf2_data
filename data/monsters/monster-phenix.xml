@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>15</level>
     <creatureTraits>
-      <trait type="size">GIGANTESQUE</trait>
+      <trait type="size" ref="trait-gigantesque">GIGANTESQUE</trait>
       <trait>BÊTE</trait>
-      <trait>FEU</trait>
+      <trait ref="trait-feu">FEU</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -56,8 +56,8 @@
         <bonus>+30</bonus>
         <traits>
           <trait>allonge 6 m</trait>
-          <trait>feu</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-feu">feu</trait>
+          <trait ref="trait-finesse">finesse</trait>
           <trait>magique</trait>
         </traits>
         <damages>
@@ -77,8 +77,8 @@
         <traits>
           <trait>agile</trait>
           <trait>allonge 6 m</trait>
-          <trait>feu</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-feu">feu</trait>
+          <trait ref="trait-finesse">finesse</trait>
           <trait>magique</trait>
         </traits>
         <damages>
@@ -97,7 +97,7 @@
         <bonus>+30</bonus>
         <traits>
           <trait>facteur de portée 12 m</trait>
-          <trait>feu</trait>
+          <trait ref="trait-feu">feu</trait>
         </traits>
         <damages>
           <damage>
@@ -137,8 +137,8 @@
       <special type="activity" actions="1">
         <name>Vol enflammé</name>
         <traits>
-          <trait>feu</trait>
-          <trait>primordiale</trait>
+          <trait ref="trait-feu">feu</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>� Le phénix s’embrase de flammes surchauffées et Vole jusqu’à sa Vitesse maximale� Il inflige 6d6 dégâts de feu à toutes les créatures situées dans un rayon de 6 m autour de toute case dans laquelle il se déplace (jet de Réflexes basique DD 37)�</description>
       </special>

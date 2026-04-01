@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>1</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
-      <trait>HRYNEGAR</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
+      <trait ref="trait-hrynegar">HRYNEGAR</trait>
       <trait>HUMANOÏDE</trait>
-      <trait>NAIN</trait>
+      <trait ref="trait-nain">NAIN</trait>
     </creatureTraits>
     <perception>
       <bonus>+4</bonus>

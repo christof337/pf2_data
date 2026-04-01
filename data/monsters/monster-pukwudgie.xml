@@ -6,8 +6,8 @@
     <type>CRÉATURE</type>
     <level>7</level>
     <creatureTraits>
-      <trait type="size">PETITE</trait>
-      <trait>FÉE</trait>
+      <trait type="size" ref="trait-petite">PETITE</trait>
+      <trait ref="trait-fee">FÉE</trait>
     </creatureTraits>
     <perception>
       <bonus/>

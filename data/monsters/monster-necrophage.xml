@@ -90,7 +90,7 @@
       <special>
         <name>Malveillance corruptrice</name>
         <traits>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
           <trait>malédiction</trait>
           <trait>néant</trait>
         </traits>

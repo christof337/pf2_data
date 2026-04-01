@@ -6,7 +6,7 @@
     <type>CRÉATURE</type>
     <level>7</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
       <trait>HUMANOÏDE</trait>
     </creatureTraits>
     <perception>
@@ -40,7 +40,7 @@
         <bonus>+18</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
           <trait>polyvalent T</trait>
         </traits>
         <damages>
@@ -55,7 +55,7 @@
         <bonus>+16</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
         </traits>
         <damages>
           <damage>

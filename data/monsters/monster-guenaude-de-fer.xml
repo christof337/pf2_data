@@ -6,8 +6,8 @@
     <type>CRÉATURE</type>
     <level>6</level>
     <creatureTraits>
-      <trait type="size">GRANDE</trait>
-      <trait>GUENAUDE</trait>
+      <trait type="size" ref="trait-grande">GRANDE</trait>
+      <trait ref="trait-guenaude">GUENAUDE</trait>
       <trait>HUMANOÏDE</trait>
     </creatureTraits>
     <perception>
@@ -66,7 +66,7 @@
         <traits>
           <trait>concentration</trait>
           <trait>métamorphose</trait>
-          <trait>occulte</trait>
+          <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>� La guenaude de fer peut prendre l’apparence de n’importe quelle femme humanoïde de taille Moyenne (p� 358)� Cela ne modifie pas sa Vitesse ni ses bonus à l’attaque et aux dégâts de ses Frappes, mais cela peut modifier le type de dégâts qu’elles infligent (généralement en dégâts contondants)�</description>
       </special>
@@ -82,7 +82,7 @@
         <name>Liens de fer</name>
         <traits>
           <trait>attaque</trait>
-          <trait>occulte</trait>
+          <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>; **Fréquence **1 fois/jour ;</description>
       </special>

@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>3</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
       <trait>BOIS</trait>
-      <trait>FÉE</trait>
+      <trait ref="trait-fee">FÉE</trait>
       <trait>NYMPHE</trait>
       <trait>PLANTE</trait>
     </creatureTraits>
@@ -69,7 +69,7 @@
         <name>branche</name>
         <bonus>+12</bonus>
         <traits>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
           <trait>magique</trait>
         </traits>
         <damages>
@@ -120,7 +120,7 @@
           <trait>aura</trait>
           <trait>émotion</trait>
           <trait>mental</trait>
-          <trait>primordiale</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
           <trait>visuel</trait>
         </traits>
         <description>9 m� Les créatures qui com- mencent leur tour dans l’aura doivent réussir un jet de Volonté ou subir un effet décrit dans la section consacrée à la nymphe souveraine�</description>
@@ -129,7 +129,7 @@
         <name>Changement de forme</name>
         <traits>
           <trait>métamorphose</trait>
-          <trait>primordiale</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>� Les nymphes souveraines peuvent alterner entre leur forme d’origine, qui ressemble beaucoup à celle d’une</description>
       </special>

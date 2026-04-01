@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>8</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
       <trait>ÉON</trait>
-      <trait>VEILLEUR</trait>
+      <trait ref="trait-veilleur">VEILLEUR</trait>
     </creatureTraits>
     <perception>
       <bonus/>

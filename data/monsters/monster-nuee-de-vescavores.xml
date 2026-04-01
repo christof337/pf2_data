@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>5</level>
     <creatureTraits>
-      <trait type="size">GRANDE</trait>
+      <trait type="size" ref="trait-grande">GRANDE</trait>
       <trait>FIÉLON</trait>
-      <trait>IMPIE</trait>
-      <trait>NUÉE</trait>
+      <trait ref="trait-impie">IMPIE</trait>
+      <trait ref="trait-nuee">NUÉE</trait>
     </creatureTraits>
     <perception>
       <bonus/>

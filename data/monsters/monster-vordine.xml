@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>5</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
-      <trait>DIABLE</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
+      <trait ref="trait-diable">DIABLE</trait>
       <trait>FIÉLON</trait>
-      <trait>IMPIE</trait>
+      <trait ref="trait-impie">IMPIE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -51,7 +51,7 @@
         <name>trident</name>
         <bonus>+15</bonus>
         <traits>
-          <trait>impie</trait>
+          <trait ref="trait-impie">impie</trait>
           <trait>magique</trait>
         </traits>
         <damages>
@@ -66,7 +66,7 @@
         <bonus>+15</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>impie</trait>
+          <trait ref="trait-impie">impie</trait>
           <trait>magique</trait>
         </traits>
         <damages>
@@ -87,8 +87,8 @@
           <trait>allonge 3 m</trait>
           <trait>croc-en-jambe</trait>
           <trait>désarmer</trait>
-          <trait>finesse</trait>
-          <trait>impie</trait>
+          <trait ref="trait-finesse">finesse</trait>
+          <trait ref="trait-impie">impie</trait>
           <trait>magique</trait>
           <trait>non létal) ; **Dégâts** 1d4+10 tranchants
 **À distance**
@@ -117,9 +117,9 @@
       <special type="activity" actions="2">
         <name>Empreintes de sabots brûlants</name>
         <traits>
-          <trait>divine</trait>
-          <trait>feu</trait>
-          <trait>impie</trait>
+          <trait ref="trait-divine">divine</trait>
+          <trait ref="trait-feu">feu</trait>
+          <trait ref="trait-impie">impie</trait>
         </traits>
         <description>� Le vordine Marche rapidement en laissant des empreintes de sabots dans chaque case qu’il quitte� Les empreintes de sabots brûlent pendant 1 min� Une créature sur le sol qui entre dans une case où se trouvent des empreintes de sabots brûlants ou qui commence son tour dans une telle case subit 1d4 dégâts de feu�</description>
       </special>

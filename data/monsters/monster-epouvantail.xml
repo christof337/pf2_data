@@ -6,7 +6,7 @@
     <type>CRÉATURE</type>
     <level>4</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
       <trait>CRÉATURE</trait>
       <trait>ARTIFICIELLE</trait>
     </creatureTraits>
@@ -78,7 +78,7 @@
           <trait>concentration</trait>
           <trait>lumière</trait>
           <trait>mental</trait>
-          <trait>occulte</trait>
+          <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>� La tête de l’épouvantail est engloutie par des flammes fantomatiques dont il ne se dégage aucune chaleur et qui répandent une lumière vive dans une émanation de 6 m (et une lumière faible dans les 6 m qui suivent)� Si l’épouvantail utilise ce pouvoir pendant le premier round de combat, toute créature qui n’a pas encore agi est ébranlée et prise par surprise face à l’épouvantail pendant 1 round� L’épouvantail peut inhiber cette lumière en utilisant à nouveau cette action�</description>
       </special>

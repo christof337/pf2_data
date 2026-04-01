@@ -6,8 +6,8 @@
     <type>CRÉATURE</type>
     <level>4</level>
     <creatureTraits>
-      <trait type="size">GRANDE</trait>
-      <trait>ANIMAL</trait>
+      <trait type="size" ref="trait-grande">GRANDE</trait>
+      <trait ref="trait-animal">ANIMAL</trait>
     </creatureTraits>
     <perception>
       <bonus>+9</bonus>
@@ -60,7 +60,7 @@
         <name>Charge du rhinocéros</name>
         <description>Le rhinocéros Marche rapidement deux fois puis effectue une Frappe de corne� Dès lors que le rhinocéros s’est déplacé d’au moins 6 m, les dégâts de la Frappe augmentent à 3d8+6� Une créature de taille Moyenne ou plus petite touchée par cette attaque doit réussir un jet de Réflexes DD 21 ou être automatiquement Poussée en arrière sur 1,5 m et se retrouver à terre sous la force du coup�</description>
       </special>
-      <special type="activity" actions="2">
+      <special type="activity" actions="2" ref="ability-pietinement">
         <name>Piétinement</name>
         <description>Moyenne ou plus petite, patte, DD 18 (p� 360)</description>
       </special>

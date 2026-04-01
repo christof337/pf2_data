@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>2</level>
     <creatureTraits>
-      <trait type="size">PETITE</trait>
-      <trait>DÉMON</trait>
+      <trait type="size" ref="trait-petite">PETITE</trait>
+      <trait ref="trait-demon">DÉMON</trait>
       <trait>FIÉLON</trait>
-      <trait>IMPIE</trait>
+      <trait ref="trait-impie">IMPIE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -61,7 +61,7 @@
         <name>mâchoires</name>
         <bonus>+10</bonus>
         <traits>
-          <trait>impie</trait>
+          <trait ref="trait-impie">impie</trait>
           <trait>magique</trait>
         </traits>
         <damages>
@@ -76,7 +76,7 @@
         <bonus>+10</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>impie</trait>
+          <trait ref="trait-impie">impie</trait>
           <trait>magique</trait>
         </traits>
         <damages>

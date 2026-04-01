@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>7</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
-      <trait>AMPHIBIE</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
+      <trait ref="trait-amphibie">AMPHIBIE</trait>
       <trait>EAU</trait>
-      <trait>FÉE</trait>
+      <trait ref="trait-fee">FÉE</trait>
       <trait>NYMPHE</trait>
     </creatureTraits>
     <perception>
@@ -89,7 +89,7 @@
         <traits>
           <trait>agile</trait>
           <trait>eau</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
           <trait>magique</trait>
         </traits>
         <damages>

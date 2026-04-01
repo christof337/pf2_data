@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>19</level>
     <creatureTraits>
-      <trait type="size">GIGANTESQUE</trait>
-      <trait>CHAMPIGNON</trait>
-      <trait>IMPIE</trait>
-      <trait>IMPIE</trait>
+      <trait type="size" ref="trait-gigantesque">GIGANTESQUE</trait>
+      <trait ref="trait-champignon">CHAMPIGNON</trait>
+      <trait ref="trait-impie">IMPIE</trait>
+      <trait ref="trait-impie">IMPIE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -54,7 +54,7 @@
         <bonus>+37</bonus>
         <traits>
           <trait>allonge 6 m</trait>
-          <trait>impie</trait>
+          <trait ref="trait-impie">impie</trait>
           <trait>magique</trait>
         </traits>
         <damages>
@@ -72,9 +72,9 @@
         <name>spores</name>
         <bonus>+37</bonus>
         <traits>
-          <trait>brutal</trait>
+          <trait ref="trait-brutal">brutal</trait>
           <trait>facteur de portée 24 m</trait>
-          <trait>impie</trait>
+          <trait ref="trait-impie">impie</trait>
           <trait>magique</trait>
         </traits>
         <damages>
@@ -104,7 +104,7 @@
       <special type="activity" actions="2">
         <name>Infester les environs</name>
         <traits>
-          <trait>primordiale</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>; **Fréquence** 1 fois/jour ;</description>
       </special>

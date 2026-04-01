@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>20</level>
     <creatureTraits>
-      <trait type="size">GRANDE</trait>
+      <trait type="size" ref="trait-grande">GRANDE</trait>
       <trait>ÉON</trait>
-      <trait>VEILLEUR</trait>
+      <trait ref="trait-veilleur">VEILLEUR</trait>
     </creatureTraits>
     <perception>
       <bonus>+37</bonus>
@@ -113,7 +113,7 @@
         <name>Génération de sphère</name>
         <traits>
           <trait>concentration</trait>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
         </traits>
         <description>� Le pléroma crée une sphère d’énergie de 60 cm de diamètre� Il s’agit soit d’une sphère blanche de création flottant au-dessus de sa main gauche, soit d’une sphère noire d’oubli flottant au-dessus de sa main droite� Cette action possède le trait vitalité pour la sphère de création ou le trait néant pour la sphère de néant� La sphère disparaît au bout de 1 min, si elle se trouve à plus de 90 m du pléroma ou si ce dernier crée une nouvelle sphère du même type� Quand elle disparaît, une sphère d’oubli s’efface sans laisser de trace, mais une sphère de création explose en générant une lumière aveuglante : chaque créature qui se trouve dans une émanation de 9 m doit alors réussir un jet de Vigueur DD 43 ou être définitivement aveugle� Il s’agit d’un effet de lumière�</description>
       </special>
@@ -121,7 +121,7 @@
         <name>Déplacement de sphère</name>
         <traits>
           <trait>concentration</trait>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
         </traits>
         <description>; **Conditions.** Le pléroma a créé une sphère de création ou d’oubli et celle-ci est encore active ; **</description>
       </special>

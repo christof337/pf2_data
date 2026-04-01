@@ -50,7 +50,7 @@
         <name>mâchoires</name>
         <bonus>+9</bonus>
         <traits>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
         </traits>
         <damages>
           <damage>
@@ -64,7 +64,7 @@
         <bonus>+9</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
         </traits>
         <damages>
           <damage>
@@ -94,14 +94,14 @@
         <traits>
           <trait>audible</trait>
           <trait>linguistique</trait>
-          <trait>occulte</trait>
+          <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>DD 17</description>
       </special>
       <special>
         <name>Savoir d’outre‑tombe</name>
         <traits>
-          <trait>occulte</trait>
+          <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>modificateur de compétence +7</description>
       </special>

@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>20</level>
     <creatureTraits>
-      <trait type="size">GIGANTESQUE</trait>
+      <trait type="size" ref="trait-gigantesque">GIGANTESQUE</trait>
       <trait>DIVIN</trait>
-      <trait>DRAGON</trait>
-      <trait>IMPIE</trait>
+      <trait ref="trait-dragon">DRAGON</trait>
+      <trait ref="trait-impie">IMPIE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -90,8 +90,8 @@
         <bonus>+38</bonus>
         <traits>
           <trait>allonge 3 m</trait>
-          <trait>feu</trait>
-          <trait>impie</trait>
+          <trait ref="trait-feu">feu</trait>
+          <trait ref="trait-impie">impie</trait>
           <trait>magique</trait>
         </traits>
         <damages>
@@ -110,8 +110,8 @@
         <bonus>+38</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>feu</trait>
-          <trait>impie</trait>
+          <trait ref="trait-feu">feu</trait>
+          <trait ref="trait-impie">impie</trait>
           <trait>magique</trait>
         </traits>
         <damages>
@@ -130,8 +130,8 @@
         <bonus>+36</bonus>
         <traits>
           <trait>allonge 4,5 m</trait>
-          <trait>feu</trait>
-          <trait>impie</trait>
+          <trait ref="trait-feu">feu</trait>
+          <trait ref="trait-impie">impie</trait>
           <trait>magique</trait>
         </traits>
         <damages>
@@ -179,9 +179,9 @@
       <special type="activity" actions="2">
         <name>Souffle de feu infernal</name>
         <traits>
-          <trait>divine</trait>
-          <trait>feu</trait>
-          <trait>impie</trait>
+          <trait ref="trait-divine">divine</trait>
+          <trait ref="trait-feu">feu</trait>
+          <trait ref="trait-impie">impie</trait>
         </traits>
         <description>Comme le jeune dragon diabolique, mais dans un cône de 18 m, 21d6 dégâts de feu et DD 42�</description>
       </special>

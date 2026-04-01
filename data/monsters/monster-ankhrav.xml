@@ -6,8 +6,8 @@
     <type>CRÉATURE</type>
     <level>3</level>
     <creatureTraits>
-      <trait type="size">GRANDE</trait>
-      <trait>ANIMAL</trait>
+      <trait type="size" ref="trait-grande">GRANDE</trait>
+      <trait ref="trait-animal">ANIMAL</trait>
     </creatureTraits>
     <perception>
       <bonus>+7</bonus>

@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>11</level>
     <creatureTraits>
-      <trait type="size">TRÈS GRANDE</trait>
-      <trait>ÉLÉMENTAIRE</trait>
-      <trait>FEU</trait>
+      <trait type="size" ref="trait-tres-grande">TRÈS GRANDE</trait>
+      <trait ref="trait-elementaire">ÉLÉMENTAIRE</trait>
+      <trait ref="trait-feu">FEU</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -92,7 +92,7 @@
       <special type="activity" actions="2">
         <name>Saut du brasier</name>
         <traits>
-          <trait>feu</trait>
+          <trait ref="trait-feu">feu</trait>
         </traits>
         <description>� Le brasier élémentaire saute sur une distance verticale et une distance horizontale maximales égales à sa Vitesse� Sa chaleur intense est supprimée jusqu’à la fin de son saut� À la place, à un moment du saut, des flammes jaillissent de l’élémentaire dans une émanation de 9 m infli- geant 12d6 dégâts de feu à chaque créature prise dans la zone d’effet (jet de Réflexes basique DD 30)� Le brasier élémentaire ne peut plus utiliser saut du brasier pendant 1d4 rounds�</description>
       </special>

@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>1</level>
     <creatureTraits>
-      <trait type="size">PETITE</trait>
+      <trait type="size" ref="trait-petite">PETITE</trait>
       <trait>HUMANOÏDE</trait>
-      <trait>KOBOLD</trait>
+      <trait ref="trait-kobold">KOBOLD</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -52,7 +52,7 @@
         <bonus>+9</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
           <trait>polyvalent T</trait>
         </traits>
         <damages>

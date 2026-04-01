@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>5</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
       <trait>DÉMONS</trait>
       <trait>FIÉLON</trait>
-      <trait>IMPIE</trait>
+      <trait ref="trait-impie">IMPIE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -51,7 +51,7 @@
         <name>épée enflammée</name>
         <bonus>+15</bonus>
         <traits>
-          <trait>impie</trait>
+          <trait ref="trait-impie">impie</trait>
           <trait>magique</trait>
         </traits>
         <damages>
@@ -70,7 +70,7 @@
         <bonus>+15</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>impie</trait>
+          <trait ref="trait-impie">impie</trait>
         </traits>
         <damages>
           <damage>
@@ -104,25 +104,25 @@
       <special>
         <name>Arme enflammée</name>
         <traits>
-          <trait>divine</trait>
-          <trait>feu</trait>
+          <trait ref="trait-divine">divine</trait>
+          <trait ref="trait-feu">feu</trait>
         </traits>
         <description>� Les sabots d’un brimorak et les armes qu’il manie sont en feu� Il peut également Interagir pour créer une épée de feu et d’acier qui se dissout s’il la lâche�</description>
       </special>
       <special type="activity" actions="2">
         <name>Fumée</name>
         <traits>
-          <trait>divine</trait>
-          <trait>feu</trait>
+          <trait ref="trait-divine">divine</trait>
+          <trait ref="trait-feu">feu</trait>
         </traits>
         <description>; **Fréquence** 1 fois/min ;</description>
       </special>
       <special type="activity" actions="2">
         <name>Vomissure écumante</name>
         <traits>
-          <trait>divine</trait>
-          <trait>feu</trait>
-          <trait>impie</trait>
+          <trait ref="trait-divine">divine</trait>
+          <trait ref="trait-feu">feu</trait>
+          <trait ref="trait-impie">impie</trait>
         </traits>
         <description>� Le brimorak crache sur une ligne de 6 m son sang bouillant qui inflige 6d6 dégâts de feu (jet de Réflexes basique DD 21)� Les créatures qui ratent le jet de sauve- garde tombent également à terre en glissant sur le sang grais- seux� Le brimorak ne peut réutiliser Vomissure écumante avant 1d4 rounds�</description>
       </special>

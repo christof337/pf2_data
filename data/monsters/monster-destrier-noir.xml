@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>6</level>
     <creatureTraits>
-      <trait type="size">GRANDE</trait>
+      <trait type="size" ref="trait-grande">GRANDE</trait>
       <trait>BÊTE</trait>
       <trait>FIÉLON</trait>
-      <trait>IMPIE</trait>
+      <trait ref="trait-impie">IMPIE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -59,7 +59,7 @@
         <name>mâchoires</name>
         <bonus>+16</bonus>
         <traits>
-          <trait>impie</trait>
+          <trait ref="trait-impie">impie</trait>
           <trait>magique</trait>
         </traits>
         <damages>
@@ -74,8 +74,8 @@
         <bonus>+16</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>feu</trait>
-          <trait>impie</trait>
+          <trait ref="trait-feu">feu</trait>
+          <trait ref="trait-impie">impie</trait>
           <trait>magique</trait>
         </traits>
         <damages>
@@ -102,8 +102,8 @@
         <name>Galop enflammé</name>
         <traits>
           <trait>divin</trait>
-          <trait>feu</trait>
-          <trait>impie</trait>
+          <trait ref="trait-feu">feu</trait>
+          <trait ref="trait-impie">impie</trait>
         </traits>
         <description>Le destrier noir Marche rapidement ou Vole jusqu’au triple de sa Vitesse� Ses sabots s’embrasent de flammes intenses, infligeant une seule fois 3d6 dégâts de feu avec un jet de Réflexes basique DD 24 à toutes les créatures (sauf son cavalier) auxquelles le destrier se retrouve adjacent au cours de son galop� Chaque créature ne peut être affectée qu’une seule fois par la même utilisation de Galop enflammé�</description>
       </special>

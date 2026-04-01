@@ -128,7 +128,7 @@
       <special type="activity" actions="2">
         <name>Invocation du destrier</name>
         <traits>
-          <trait>occulte</trait>
+          <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>Le dullahan invoque un cheval de bataille (p� 175) avec des ajustements d’élite (p� 10) et les traits fiélon et impie� Ce destrier reste jusqu’à ce qu’il soit tué, que le dullahan le Révoque ou qu’il invoque un autre destrier�</description>
       </special>

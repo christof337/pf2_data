@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>5</level>
     <creatureTraits>
-      <trait type="size">GRANDE</trait>
+      <trait type="size" ref="trait-grande">GRANDE</trait>
       <trait>BOIS</trait>
-      <trait>GÉANT</trait>
+      <trait ref="trait-geant">GÉANT</trait>
       <trait>HUMANOÏDE</trait>
       <trait>TROLLS</trait>
     </creatureTraits>
@@ -81,7 +81,7 @@
         <name>Chasser une proie</name>
         <description>Le troll des forêts se précipite à quatre pattes, il Marche rapide- ment puis effectue deux Frappes de griffes�</description>
       </special>
-      <special type="activity" actions="1">
+      <special type="activity" actions="1" ref="ability-eventration">
         <name>Éventration</name>
         <description>griffes (p� 359)</description>
       </special>

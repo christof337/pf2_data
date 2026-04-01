@@ -6,7 +6,7 @@
     <type>CRÉATURE</type>
     <level>2</level>
     <creatureTraits>
-      <trait type="size">PETITE</trait>
+      <trait type="size" ref="trait-petite">PETITE</trait>
       <trait>DERO</trait>
       <trait>HUMANOÏDE</trait>
     </creatureTraits>

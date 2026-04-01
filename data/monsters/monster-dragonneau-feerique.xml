@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>2</level>
     <creatureTraits>
-      <trait type="size">TRÈS PETITE</trait>
-      <trait>DRAGON</trait>
-      <trait>FÉE</trait>
+      <trait type="size" ref="trait-tres-petite">TRÈS PETITE</trait>
+      <trait ref="trait-dragon">DRAGON</trait>
+      <trait ref="trait-fee">FÉE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -58,7 +58,7 @@
         <bonus>+8</bonus>
         <traits>
           <trait>allonge 0 m</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
           <trait>magique</trait>
         </traits>
         <damages>

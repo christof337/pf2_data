@@ -6,7 +6,7 @@
     <type>CRÉATURE</type>
     <level>5</level>
     <creatureTraits>
-      <trait type="size">GRANDE</trait>
+      <trait type="size" ref="trait-grande">GRANDE</trait>
       <trait>BÊTE</trait>
       <trait>FROID</trait>
     </creatureTraits>
@@ -65,7 +65,7 @@
     </speeds>
     <strikes/>
     <offensiveAbilities>
-      <special type="reaction">
+      <special type="reaction" ref="ability-desarconner">
         <name>Désarçonner</name>
         <description>DD 21 (p� 359)</description>
       </special>
@@ -89,7 +89,7 @@
         <name>Souffle de l’hiver</name>
         <traits>
           <trait>froid</trait>
-          <trait>primordiale</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>� Le warg des sorcières souffle un nuage glacé dans un cône de 4,5 m qui inflige 5d8 dégâts de froid (jet de Réflexes basique DD 23)� Le warg des sorcières ne peut plus utiliser Souffle glacial pendant 1d4 rounds�</description>
       </special>

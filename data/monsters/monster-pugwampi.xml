@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>0</level>
     <creatureTraits>
-      <trait type="size">TRÈS PETITE</trait>
-      <trait>FÉE</trait>
-      <trait>GREMLIN</trait>
-      <trait>GREMLIN</trait>
+      <trait type="size" ref="trait-tres-petite">TRÈS PETITE</trait>
+      <trait ref="trait-fee">FÉE</trait>
+      <trait ref="trait-gremlin">GREMLIN</trait>
+      <trait ref="trait-gremlin">GREMLIN</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -67,7 +67,7 @@
         <traits>
           <trait>agile</trait>
           <trait>allonge 0 m</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
           <trait>polyvalent T</trait>
         </traits>
         <damages/>

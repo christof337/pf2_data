@@ -6,14 +6,14 @@
     <type>CRÉATURE</type>
     <level>4</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
       <trait>AIR</trait>
       <trait>BOIS</trait>
       <trait>EAU</trait>
-      <trait>ÉLÉMENTAIRE</trait>
-      <trait>FEU</trait>
+      <trait ref="trait-elementaire">ÉLÉMENTAIRE</trait>
+      <trait ref="trait-feu">FEU</trait>
       <trait>GÉNIE</trait>
-      <trait>MÉTAL</trait>
+      <trait ref="trait-metal">MÉTAL</trait>
       <trait>TERRE</trait>
     </creatureTraits>
     <perception>

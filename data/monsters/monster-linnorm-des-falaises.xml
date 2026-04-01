@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>14</level>
     <creatureTraits>
-      <trait type="size">GIGANTESQUE</trait>
-      <trait>DRAGON</trait>
-      <trait>FEU</trait>
+      <trait type="size" ref="trait-gigantesque">GIGANTESQUE</trait>
+      <trait ref="trait-dragon">DRAGON</trait>
+      <trait ref="trait-feu">FEU</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -99,15 +99,15 @@
       <special type="activity" actions="2">
         <name>Souffle magmatique</name>
         <traits>
-          <trait>feu</trait>
-          <trait>primordiale</trait>
+          <trait ref="trait-feu">feu</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>� Le linnorm des falaises souffle un jet de magma sur une ligne de 36 m qui inflige 12d6 dégâts de feu aux créatures dans la zone (jet de Réflexes basique DD 34)� Chaque créature qui rate son jet de sauvegarde subit 4d6 dégâts de feu persistants� Le linnorm ne peut plus utiliser Souffle mag- matique pendant 1d4 rounds� Le magma persiste jusqu’au début du prochain tour du linnorm� Si le linnorm était au sol, le magma persiste sous forme de ligne brûlante sur le sol directement sous la trajectoire du Souffle magmatique, si le linnorm était dans les airs, le magma tombe comme un rideau de pluie de 18 m de haut� Toute créature qui traverse le magma subit 6d6 dégâts de feu (jet de Réflexes basique DD 34)� Au début du prochain tour du linnorm, le magma refroidit et forme une mince couche de roche friable au sol ou le rideau de pluie magmatique arrête de tomber et se change en graviers inoffensifs� Le magma refroidi se désa- grège en sable et en poudre en quelques heures�</description>
       </special>
       <special>
         <name>Venin de linnorm des falaises</name>
         <traits>
-          <trait>feu</trait>
+          <trait ref="trait-feu">feu</trait>
           <trait>poison</trait>
         </traits>
         <description>; **Jet de sauve‑ garde** Vigueur DD 34 ; **Durée maximale** 10 rounds ; **Stade 1** 4d6 dégâts de feu et drainé 1 (1 round) ; **Stade 2** 6d6 dégâts de feu et drainé 2 (1 round)</description>

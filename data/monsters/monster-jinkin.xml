@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>1</level>
     <creatureTraits>
-      <trait type="size">TRÈS PETITE</trait>
-      <trait>FÉE</trait>
-      <trait>GREMLIN</trait>
-      <trait>GREMLIN</trait>
+      <trait type="size" ref="trait-tres-petite">TRÈS PETITE</trait>
+      <trait ref="trait-fee">FÉE</trait>
+      <trait ref="trait-gremlin">GREMLIN</trait>
+      <trait ref="trait-gremlin">GREMLIN</trait>
     </creatureTraits>
     <perception>
       <bonus>+7</bonus>
@@ -75,7 +75,7 @@
         <traits>
           <trait>agile</trait>
           <trait>allonge 0 m</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
           <trait>polyvalent T</trait>
         </traits>
         <damages/>
@@ -91,7 +91,7 @@
         <name>Bricoler</name>
         <traits>
           <trait>malédiction</trait>
-          <trait>primordiale</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>� Six jinkins peuvent travailler ensemble pendant une heure pour insuffler à un objet une malédiction à une portée de 18 m� Bien que ce processus soit long, il est également discret et peut être accompli alors qu’ils Se cachent� Les jinkins préfèrent utiliser ce pouvoir sur les objets magiques� La malédiction rend l’objet peu fiable (test nu DD 5 ou toute action pour Interagir avec l’objet ou l’Activer est perdue), ajoute une condition bizarre pour l’utiliser ou octroie une autre malédiction du même genre� **« TRÉSORS » DE GREMLINS** Tous les gremlins accumulent des trésors, et leur nid est rempli d’objets aussi bien précieux que sans valeur� Fouiller un nid de gremlin peut permettre de découvrir des trésors inattendus comme des joyaux ou des objets magiques mineurs� Cependant, il faut se montrer prudent pour éviter de se couper sur des éclats de métaux rouillés, de prendre un objet maudit ou de troubler un nid caché de vermine venimeuse�</description>
       </special>

@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>7</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
-      <trait>PSYCHOPOMPE</trait>
-      <trait>VEILLEUR</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
+      <trait ref="trait-psychopompe">PSYCHOPOMPE</trait>
+      <trait ref="trait-veilleur">VEILLEUR</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -102,7 +102,7 @@
       <special>
         <name>Imprégnation d’arme</name>
         <traits>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
         </traits>
         <description>� La faux d’un vanth est le sym- bole de sa fonction et gagne un peu de sa puissance person- nelle� Cette faux devient une *faux +1* et est traitée comme si elle était en adamantium tant que le vanth la brandit� Un vanth dont la faux est volée ou détruite peut en imprégner une nouvelle après 1 h de travail�</description>
       </special>
@@ -110,7 +110,7 @@
         <name>Malédiction du vanth</name>
         <traits>
           <trait>malédiction</trait>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
           <trait>infortune</trait>
         </traits>
         <description>; **Fréquence** 3 fois/jour ;</description>

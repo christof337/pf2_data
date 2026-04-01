@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>2</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
-      <trait>DHAMPIR</trait>
-      <trait>HUMAIN</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
+      <trait ref="trait-dhampir">DHAMPIR</trait>
+      <trait ref="trait-humain">HUMAIN</trait>
       <trait>HUMANOÏDE</trait>
     </creatureTraits>
     <perception>
@@ -68,7 +68,7 @@
         <bonus>+7</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
           <trait>polyvalent T</trait>
         </traits>
         <damages>
@@ -96,7 +96,7 @@
         <bonus>+7</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
           <trait>non létal</trait>
         </traits>
         <damages>

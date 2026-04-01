@@ -6,11 +6,11 @@
     <type>CRÉATURE</type>
     <level>17</level>
     <creatureTraits>
-      <trait type="size">TRÈS GRANDE</trait>
+      <trait type="size" ref="trait-tres-grande">TRÈS GRANDE</trait>
       <trait>EAU</trait>
-      <trait>GÉANT</trait>
+      <trait ref="trait-geant">GÉANT</trait>
       <trait>HUMANOÏDE</trait>
-      <trait>ONI</trait>
+      <trait ref="trait-oni">ONI</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -124,7 +124,7 @@
         <traits>
           <trait>concentration</trait>
           <trait>métamorphose</trait>
-          <trait>primordiale</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>� Comme un oni des montagnes�</description>
       </special>
@@ -133,11 +133,11 @@
         <traits>
           <trait>eau</trait>
           <trait>électricité</trait>
-          <trait>primordiale</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>� L’oni des îles libère un éclair qui génère immédiatement des nuages sombres� Il pleut pendant 1 min dans une émanation de 18 m de rayon centrée sur l’oni, saturant d’eau l’air et le sol� Les créatures situées dans l’aura subissent une faiblesse 10 à l’élec- tricité et toute la zone devient un terrain très difficile pour les créatures qui Volent, et un terrain difficile pour les créatures au sol ou qui Escaladent, à moins qu’elles n’aient également une Vitesse de nage�</description>
       </special>
-      <special type="activity" actions="1">
+      <special type="activity" actions="1" ref="ability-gober">
         <name>Gober</name>
         <description>Moyenne, 3d8+10 contondants, Rupture 30 (p� 359)</description>
       </special>
@@ -145,7 +145,7 @@
         <name>Perforation électrique</name>
         <traits>
           <trait>électricité</trait>
-          <trait>primordiale</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>**Conditions.** La dernière action de l’oni des îles était une Frappe à la pique qui a réussi contre une cible de taille Moyenne ou inférieure�</description>
       </special>

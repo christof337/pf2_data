@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>17</level>
     <creatureTraits>
-      <trait type="size">GIGANTESQUE</trait>
+      <trait type="size" ref="trait-gigantesque">GIGANTESQUE</trait>
       <trait>BÊTE</trait>
-      <trait>TANE</trait>
+      <trait ref="trait-tane">TANE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -81,7 +81,7 @@
         <traits>
           <trait>émotion</trait>
           <trait>mental</trait>
-          <trait>primordiale</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
           <trait>visuel</trait>
         </traits>
         <description>� Le bandersnatch fixe du regard une créature qu’il peut voir dans un rayon de 9 m� La cible effectue immé- diatement un jet de Volonté contre le regard déconcertant du bandersnatch� Après avoir fait ce jet, elle est immunisée contre le regard déconcertant de ce bandersnatch jusqu’au début du prochain tour de la créature�</description>

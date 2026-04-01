@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>1</level>
     <creatureTraits>
-      <trait type="size">GRANDE</trait>
-      <trait>ANIMAL</trait>
-      <trait>NUÉE</trait>
+      <trait type="size" ref="trait-grande">GRANDE</trait>
+      <trait ref="trait-animal">ANIMAL</trait>
+      <trait ref="trait-nuee">NUÉE</trait>
     </creatureTraits>
     <perception>
       <bonus>+5</bonus>

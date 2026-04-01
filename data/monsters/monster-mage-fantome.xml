@@ -37,7 +37,7 @@
         <bonus>+21</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
           <trait>magique</trait>
         </traits>
         <damages>
@@ -56,7 +56,7 @@
       <special type="activity" actions="2">
         <name>Assaut télékinésique</name>
         <traits>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
         </traits>
         <description>6d6 contondants, DD 29</description>
       </special>
@@ -64,7 +64,7 @@
         <name>Lamentation d’épouvante</name>
         <traits>
           <trait>audible</trait>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
           <trait>émotion</trait>
           <trait>mental</trait>
           <trait>terreur</trait>

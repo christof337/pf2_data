@@ -106,7 +106,7 @@
     </traditions>
     <area>émanation de 4,5 m</area>
     <duration>1 min</duration>
-    <description>La protection divine permet de protéger vos compagnons. Vos alliés et vous-même gagnez un bonus de statut de +1 à la CA tant que vous êtes dans l’émanation. Une fois par round lors des tours suivants, vous pouvez Maintenir le sort pour augmenter le rayon de l’émanation de 3 m. <spellRef>Sacrement</spellRef> peut contrer <spellRef>malédiction.</spellRef></description>
+    <description>La protection divine permet de protéger vos compagnons. Vos alliés et vous-même gagnez un bonus de statut de +1 à la CA tant que vous êtes dans l’émanation. Une fois par round lors des tours suivants, vous pouvez Maintenir le sort pour augmenter le rayon de l’émanation de 3 m. <spellRef>Sacrement</spellRef> peut contrer <spellRef ref="spell-malediction">malédiction.</spellRef></description>
   </spell>
   <spell id="spell-champ-radiant" type="spell">
     <name>CHAMP RADIANT</name>
@@ -376,7 +376,7 @@
     <rank>2</rank>
     <actions>2</actions>
     <traits>
-      <trait>CHAMPIGNON</trait>
+      <trait ref="trait-champignon">CHAMPIGNON</trait>
       <trait>CONCENTRATION</trait>
       <trait>MANIPULATION</trait>
     </traits>
@@ -422,7 +422,7 @@
     <area>émanation de 3 m</area>
     <defense>Volonté</defense>
     <duration>1 min</duration>
-    <description>Vous suscitez le désarroi dans l’esprit de vos ennemis qui ont plus de mal à se défendre. Les ennemis dans la zone d’effet doivent réussir un jet de Volonté ou subir un malus de statut de −1 à la CA tant qu’ils sont dans la zone. Une fois par round lors des tours suivants, vous pouvez Maintenir le sort pour augmenter le rayon de l’émanation de 3 m et forcer les ennemis de la zone qui n’étaient pas encore affectés à tenter un jet de sauvegarde. <spellRef>Malédiction</spellRef> peut contrer <spellRef>sacrement</spellRef>.</description>
+    <description>Vous suscitez le désarroi dans l’esprit de vos ennemis qui ont plus de mal à se défendre. Les ennemis dans la zone d’effet doivent réussir un jet de Volonté ou subir un malus de statut de −1 à la CA tant qu’ils sont dans la zone. Une fois par round lors des tours suivants, vous pouvez Maintenir le sort pour augmenter le rayon de l’émanation de 3 m et forcer les ennemis de la zone qui n’étaient pas encore affectés à tenter un jet de sauvegarde. <spellRef>Malédiction</spellRef> peut contrer <spellRef ref="spell-sacrement">sacrement</spellRef>.</description>
   </spell>
   <spell id="spell-manteau-de-lumiere" type="spell">
     <name>MANTEAU DE LUMIÈRE</name>
@@ -511,7 +511,7 @@
     <actions>3</actions>
     <traits>
       <trait>CONCENTRATION</trait>
-      <trait>FEU</trait>
+      <trait ref="trait-feu">FEU</trait>
       <trait>LUMIÈRE</trait>
       <trait>MANIPULATION</trait>
     </traits>
@@ -620,7 +620,7 @@
       <trait>FROID</trait>
       <trait>LUMIÈRE</trait>
       <trait>MANIPULATION</trait>
-      <trait>SAINT</trait>
+      <trait ref="trait-saint">SAINT</trait>
     </traits>
     <traditions>
       <tradition>divine</tradition>

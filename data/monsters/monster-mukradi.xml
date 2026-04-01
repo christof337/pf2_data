@@ -6,7 +6,7 @@
     <type>CRÉATURE</type>
     <level>15</level>
     <creatureTraits>
-      <trait type="size">GIGANTESQUE</trait>
+      <trait type="size" ref="trait-gigantesque">GIGANTESQUE</trait>
       <trait>BÊTE</trait>
     </creatureTraits>
     <perception>
@@ -115,14 +115,14 @@
         <name>Rosser</name>
         <description>Le mukradi effectue une Frappe contre chaque créature à portée� Il peut effectuer une de ces Frappes avec chacune de ses gueules, une avec son coup de queue et le reste avec ses pattes� Chaque attaque s’accompagne d’un malus de circonstances de −2 et augmente son malus d’attaques multiples, mais ce dernier augmente seulement une fois toutes les attaques effectuées�</description>
       </special>
-      <special type="activity" actions="3">
+      <special type="activity" actions="3" ref="ability-pietinement">
         <name>Piétinement</name>
         <description>Très Grande ou plus petite, patte, DD 36 (p� 360)</description>
       </special>
       <special type="activity" actions="2">
         <name>Souffle d’énergie</name>
         <traits>
-          <trait>primordiale</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>Le mukradi libère un souffle d’énergie par l’une de ses trois gueules� Chaque créa- ture dans la zone doit faire un jet de Réflexes basique DD 36� Il ne peut plus utiliser Souffle d’énergie pendant 1d4 rounds�<list><listItem>**Gueule acide** (acide) ligne d’acide de 3 m de large pour 18 m de long, infligeant 16d6 dégâts d’acide�</listItem><listItem>**Gueule électrique** (électricité) ligne d’électricité de 36 m infligeant 16d6 dégâts d’électricité�</listItem><listItem>**Gueule enflammée** (feu) cône de feu de 18 m infligeant 16d6 dégâts de feu�</listItem></list></description>
       </special>

@@ -6,8 +6,8 @@
     <type>CRÉATURE</type>
     <level>0</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
-      <trait>ANIMAL</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
+      <trait ref="trait-animal">ANIMAL</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -33,7 +33,7 @@
     </speeds>
     <strikes/>
     <offensiveAbilities>
-      <special type="reaction">
+      <special type="reaction" ref="ability-desarconner">
         <name>Désarçonner</name>
         <description>DD 15 (p� 359)</description>
       </special>

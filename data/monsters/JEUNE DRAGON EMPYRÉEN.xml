@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>10</level>
     <creatureTraits>
-      <trait type="size">GRANDE</trait>
+      <trait type="size" ref="trait-grande">GRANDE</trait>
       <trait>DIVIN</trait>
-      <trait>DRAGON</trait>
-      <trait>SAINT</trait>
+      <trait ref="trait-dragon">DRAGON</trait>
+      <trait ref="trait-saint">SAINT</trait>
     </creatureTraits>
     <perception>
       <bonus>+21</bonus>
@@ -114,7 +114,7 @@
         <traits>
           <trait>allonge 3 m</trait>
           <trait>magique</trait>
-          <trait>saint</trait>
+          <trait ref="trait-saint">saint</trait>
         </traits>
         <damages>
           <damage>
@@ -133,7 +133,7 @@
         <traits>
           <trait>agile</trait>
           <trait>magique</trait>
-          <trait>saint</trait>
+          <trait ref="trait-saint">saint</trait>
         </traits>
         <damages>
           <damage>
@@ -152,7 +152,7 @@
         <traits>
           <trait>allonge 4,5 m</trait>
           <trait>magique</trait>
-          <trait>saint</trait>
+          <trait ref="trait-saint">saint</trait>
         </traits>
         <damages>
           <damage>
@@ -215,7 +215,7 @@
         <name>Manipulation de halo</name>
         <traits>
           <trait>concentration</trait>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
           <trait>manipulation</trait>
         </traits>
         <description>Le dragon envoie son halo sur une case à moins de 27 m. Tant que le halo est ainsi déployé, le dragon perd son aura de présence inspirante qui à la place émane du halo sur une même distance. Le dragon peut Maintenir l’effet pour rappeler le halo à lui, peu importe la distance qui les sépare. Le halo est constitué de lumière pure, n’occupe aucun espace et ne peut être ni ciblé ni détruit.</description>
@@ -224,16 +224,16 @@
         <name>Pulsation du halo</name>
         <traits>
           <trait>concentration</trait>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
         </traits>
         <description>Le dragon choisit un effet à imposer aux créa- tures dans son aura de Présence inspirante. Le dragon ne peut utiliser Pulsation du halo pendant 1d4 rounds.<list><listItem>**Répulsion.** Chaque créature doit réussir un jet de Vigueur DD 29 ou être repoussée jusqu’à ce qu’elle ait quitté l’aura.</listItem><listItem>**Restauration** (guérison, vitalité) Chaque créature récupère 5d8 PV.</listItem></list></description>
       </special>
       <special type="activity" actions="2">
         <name>Souffle spirituel</name>
         <traits>
-          <trait>divine</trait>
-          <trait>esprit</trait>
-          <trait>saint</trait>
+          <trait ref="trait-divine">divine</trait>
+          <trait ref="trait-esprit">esprit</trait>
+          <trait ref="trait-saint">saint</trait>
         </traits>
         <description>Le dragon crache un feu saint qui inflige 9d8 dégâts d’esprit dans un cône de 12 m (jet de Réflexes basique DD 29). Le dragon ne peut plus utiliser Souffle spirituel pendant 1d4 rounds.</description>
       </special>

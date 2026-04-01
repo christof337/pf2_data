@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>7</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
-      <trait>DIABLE</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
+      <trait ref="trait-diable">DIABLE</trait>
       <trait>FIÉLON</trait>
-      <trait>IMPIE</trait>
+      <trait ref="trait-impie">IMPIE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -35,7 +35,7 @@
         <name>morgenstern</name>
         <bonus>+18</bonus>
         <traits>
-          <trait>impie</trait>
+          <trait ref="trait-impie">impie</trait>
           <trait>magique</trait>
           <trait>polyvalent P</trait>
         </traits>
@@ -55,7 +55,7 @@
         <bonus>+17</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>impie</trait>
+          <trait ref="trait-impie">impie</trait>
           <trait>polyvalent P</trait>
         </traits>
         <damages>
@@ -97,8 +97,8 @@
       <special type="activity" actions="2">
         <name>Cri de désespoir</name>
         <traits>
-          <trait>divine</trait>
-          <trait>impie</trait>
+          <trait ref="trait-divine">divine</trait>
+          <trait ref="trait-impie">impie</trait>
           <trait>son</trait>
         </traits>
         <description>� Le coarti pousse un horrible cri qui inflige 4d6 dégâts de son à toutes les créatures dans une émanation de 9 m (jet de Volonté basique DD 25)� Les créatures saintes qui ratent ce jeu de sauvegarde sont également effrayées 2 ; cet effet supplémentaire a les traits émotion, terreur et mental� Le coarti ne peut plus utiliser Cri de désespoir pendant 1d4 rounds�</description>

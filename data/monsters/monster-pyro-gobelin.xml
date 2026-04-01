@@ -6,8 +6,8 @@
     <type>CRÉATURE</type>
     <level>1</level>
     <creatureTraits>
-      <trait type="size">PETITE</trait>
-      <trait>GOBELIN</trait>
+      <trait type="size" ref="trait-petite">PETITE</trait>
+      <trait ref="trait-gobelin">GOBELIN</trait>
       <trait>HUMANOÏDE</trait>
     </creatureTraits>
     <perception>
@@ -53,7 +53,7 @@
         <name>torche</name>
         <bonus>+7</bonus>
         <traits>
-          <trait>feu</trait>
+          <trait ref="trait-feu">feu</trait>
         </traits>
         <damages>
           <damage>

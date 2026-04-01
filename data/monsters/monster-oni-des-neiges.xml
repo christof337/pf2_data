@@ -6,12 +6,12 @@
     <type>CRÉATURE</type>
     <level>13</level>
     <creatureTraits>
-      <trait type="size">GRANDE</trait>
+      <trait type="size" ref="trait-grande">GRANDE</trait>
       <trait>FROID</trait>
-      <trait>GÉANT</trait>
+      <trait ref="trait-geant">GÉANT</trait>
       <trait>HUMANOÏDE</trait>
-      <trait>IMPIE</trait>
-      <trait>ONI</trait>
+      <trait ref="trait-impie">IMPIE</trait>
+      <trait ref="trait-oni">ONI</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -107,7 +107,7 @@
         <traits>
           <trait>concentration</trait>
           <trait>métamorphose</trait>
-          <trait>primordiale</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>� Comme un oni des montagnes�</description>
       </special>
@@ -115,7 +115,7 @@
         <name>Chute d’éclair givrant</name>
         <traits>
           <trait>froid</trait>
-          <trait>primordiale</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>� L’oni des neiges convoque un éclair glacé aussi blanc que de la neige� L’éclair frappe un emplacement situé dans un rayon de 18 m, transformant l’air en un nuage de neige dans une explosion de 6 m pendant 1 min� Toutes les créatures dans la neige deviennent masquées, et toutes celles à l’extérieur deviennent masquées vis-à-vis des créatures à l’intérieur� Une créature qui entre dans le nuage de neige ou qui y commence son tour subit 15 dégâts de froid avec un jet de Vigueur basique DD 33�</description>
       </special>

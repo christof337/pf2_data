@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>16</level>
     <creatureTraits>
-      <trait type="size">GRANDE</trait>
+      <trait type="size" ref="trait-grande">GRANDE</trait>
       <trait>DAÉMONS</trait>
       <trait>FIÉLON</trait>
-      <trait>IMPIE</trait>
+      <trait ref="trait-impie">IMPIE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -60,7 +60,7 @@
       <special>
         <name>Lumière déformée</name>
         <traits>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
           <trait>illusion</trait>
           <trait>visuel</trait>
         </traits>
@@ -70,7 +70,7 @@
         <name>Siphon d’âme</name>
         <traits>
           <trait>aura</trait>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
           <trait>force</trait>
         </traits>
         <description>9 m� Un astradaémon tire de la puissance des âmes de ceux qui ont été récemment tués� Si une créature vivante de Petite taille ou inférieure meurt dans son aura, l’astradaémon gagne 5 points de vie temporaires et un bonus de statut de +1 aux jets d’attaque et de dégâts pendant 1 round, à moins que la créature n’ait été tuée par son pouvoir Engloutissement d’âme� Tant qu’ils se tiennent dans l’aura du daémon, les morts-vivants intangibles et les esprits vivants se déplaçant hors de leur corps subissent 1d8 dégâts spirituels par round à cause de la pression spirituelle qu’ils subissent tandis que l’astradaémon absorbe des fragments de leur âme�</description>
@@ -86,7 +86,7 @@
         <bonus>+32</bonus>
         <traits>
           <trait>allonge 3 m</trait>
-          <trait>impie</trait>
+          <trait ref="trait-impie">impie</trait>
           <trait>magique</trait>
         </traits>
         <damages>
@@ -102,13 +102,13 @@
         <traits>
           <trait>agile</trait>
           <trait>allonge 3 m</trait>
-          <trait>impie</trait>
+          <trait ref="trait-impie">impie</trait>
           <trait>magique) ; **Dégâts **
  2d6+8 tranchants plus drain d’essence
 **Corps à corps**
        1
          queue +32 (allonge 4,5 m</trait>
-          <trait>impie</trait>
+          <trait ref="trait-impie">impie</trait>
           <trait>magique</trait>
         </traits>
         <damages>
@@ -149,7 +149,7 @@
       <special>
         <name>Drain d’essence</name>
         <traits>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
           <trait>néant</trait>
         </traits>
         <description>� Quand un astradaémon touche avec ses griffes, ses mâchoires ou sa queue, il absorbe l’essence spirituelle et vitale de la cible� La cible subit 2d10 dégâts de néant et l’astradaémon récupère un nombre égal de points de vie� La cible doit réussir un jet de Vigueur DD 37 ou subir les états condamné 1 et drainé 1� Si la cible était déjà drainée ou condam- née, elle augmente de 1 l’intensité de ces deux états jusqu’à un maximum de 4�</description>

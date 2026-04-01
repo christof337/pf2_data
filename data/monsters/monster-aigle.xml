@@ -6,8 +6,8 @@
     <type>CRÉATURE</type>
     <level>-1</level>
     <creatureTraits>
-      <trait type="size">PETITE</trait>
-      <trait>ANIMAL</trait>
+      <trait type="size" ref="trait-petite">PETITE</trait>
+      <trait ref="trait-animal">ANIMAL</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -26,7 +26,7 @@
         <name>bec</name>
         <bonus>+6</bonus>
         <traits>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
         </traits>
         <damages>
           <damage>
@@ -40,7 +40,7 @@
         <bonus>+6</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
         </traits>
         <damages>
           <damage>

@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>19</level>
     <creatureTraits>
-      <trait type="size">GIGANTESQUE</trait>
+      <trait type="size" ref="trait-gigantesque">GIGANTESQUE</trait>
       <trait>DIVIN</trait>
-      <trait>DRAGON</trait>
-      <trait>SAINT</trait>
+      <trait ref="trait-dragon">DRAGON</trait>
+      <trait ref="trait-saint">SAINT</trait>
     </creatureTraits>
     <perception>
       <bonus>+35</bonus>
@@ -100,7 +100,7 @@
         <traits>
           <trait>allonge 6 m</trait>
           <trait>magique</trait>
-          <trait>saint</trait>
+          <trait ref="trait-saint">saint</trait>
         </traits>
         <damages>
           <damage>
@@ -120,7 +120,7 @@
           <trait>agile</trait>
           <trait>allonge 4,5 m</trait>
           <trait>magique</trait>
-          <trait>saint</trait>
+          <trait ref="trait-saint">saint</trait>
         </traits>
         <damages>
           <damage>
@@ -139,7 +139,7 @@
         <traits>
           <trait>allonge 7,5 m</trait>
           <trait>magique</trait>
-          <trait>saint</trait>
+          <trait ref="trait-saint">saint</trait>
         </traits>
         <damages>
           <damage>

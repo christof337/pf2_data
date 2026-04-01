@@ -6,11 +6,11 @@
     <type>CRÉATURE</type>
     <level>12</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
       <trait>DÉMONS</trait>
       <trait>FIÉLON</trait>
-      <trait>IMPIE</trait>
-      <trait>VASE</trait>
+      <trait ref="trait-impie">IMPIE</trait>
+      <trait ref="trait-vase">VASE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -54,7 +54,7 @@
         <bonus>+25</bonus>
         <traits>
           <trait>acide</trait>
-          <trait>impie</trait>
+          <trait ref="trait-impie">impie</trait>
         </traits>
         <damages>
           <damage>

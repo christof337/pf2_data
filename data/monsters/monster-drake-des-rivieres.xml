@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>3</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
-      <trait>AMPHIBIE</trait>
-      <trait>DRAGON</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
+      <trait ref="trait-amphibie">AMPHIBIE</trait>
+      <trait ref="trait-dragon">DRAGON</trait>
       <trait>EAU</trait>
     </creatureTraits>
     <perception>
@@ -81,7 +81,7 @@
         <name>Mucus corrosif</name>
         <traits>
           <trait>acide</trait>
-          <trait>primordiale</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>Le drake des rivières crache une boule de mucus corrosif qui traverse une distance maximale de 15 m avant de former une explosion de 3 m à l’impact� Les créatures dans la zone d’explosion subissent 4d6 dégâts d’acide (jet de Réflexes basique DD 19)� Celles qui échouent subissent également 1d6 dégâts d’acide persistants et un malus de statut de −1,5 m à leur Vitesse� Cette réduction de la Vitesse se termine avec la fin des dégâts d’acide persistants� Le drake des rivières ne peut utiliser de nouveau ce pouvoir avant 1d6 rounds�</description>
       </special>

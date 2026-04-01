@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <abilities xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/ability.xsd">
-  <ability>
-    <id>ability-constriction-superieure</id>
+  <ability id="ability-constriction-superieure">
     <name>Constriction supérieure</name>
     <actions>1</actions>
     <description>Le monstre inflige la quantité de dégâts
@@ -11,8 +10,7 @@
  perd connaissance. Si elle réussit, elle est immunisée contre l’état
  inconscient causé par la Constriction supérieure pendant 1 min.</description>
   </ability>
-  <ability>
-    <id>ability-desarconner</id>
+  <ability id="ability-desarconner">
     <name>Désarçonner</name>
     <actions>9</actions>
     <trigger>Une créature Se met en selle ou utilise l’action
@@ -27,8 +25,7 @@
  une créature de confiance, sauf s’ils sont effrayés ou maltrai-
  tés</description>
   </ability>
-  <ability>
-    <id>ability-embuscade-aquatique</id>
+  <ability id="ability-embuscade-aquatique">
     <name>Embuscade aquatique</name>
     <actions>1</actions>
     <conditions>Le monstre est caché dans l’eau
@@ -39,8 +36,7 @@
  cet effet. Le monstre Frappe la créature une fois qu’elle se trouve à
  portée. La créature est prise par surprise pour cette Frappe.</effect>
   </ability>
-  <ability>
-    <id>ability-empoignade</id>
+  <ability id="ability-empoignade">
     <name>Empoignade</name>
     <actions>1</actions>
     <conditions>La dernière action du monstre est une
@@ -56,8 +52,7 @@
  dice capable d’Empoigner et lui conférer automatiquement cet état
  jusqu’à ce qu’il finisse son prochain tour.</effect>
   </ability>
-  <ability>
-    <id>ability-empoignade-amelioree</id>
+  <ability id="ability-empoignade-amelioree">
     <name>Empoignade améliorée</name>
     <actions>0</actions>
     <description>Le monstre peut utiliser Empoignade,
@@ -67,8 +62,7 @@
  une action pour prolonger la durée de la saisie des créatures qu’il
  a déjà empoignées.</description>
   </ability>
-  <ability>
-    <id>ability-engloutir</id>
+  <ability id="ability-engloutir">
     <name>Engloutir</name>
     <actions>2</actions>
     <description>Le monstre Marche rapidement sur une distance maxi-
@@ -109,8 +103,7 @@
  par les effets mentaux qui prennent pour cible toutes les créatures
  qui se trouvent dans une zone.</description>
   </ability>
-  <ability>
-    <id>ability-eventration</id>
+  <ability id="ability-eventration">
     <name>Éventration</name>
     <actions>1</actions>
     <conditions>Au cours d’un même round, le
@@ -121,8 +114,7 @@
     <description>Une entrée Éventration indique une Frappe que
  possède le monstre ;</description>
   </ability>
-  <ability>
-    <id>ability-ferocite</id>
+  <ability id="ability-ferocite">
     <name>Férocité</name>
     <actions>9</actions>
     <trigger>Le monstre est réduit à 0 PV ;</trigger>
@@ -130,8 +122,7 @@
  de son état blessé augmente de 1. Il ne peut plus faire appel à ce
  pouvoir si l’intensité de cet état atteint 3.</effect>
   </ability>
-  <ability>
-    <id>ability-frappe-reflexe</id>
+  <ability id="ability-frappe-reflexe">
     <name>Frappe réflexe</name>
     <actions>9</actions>
     <trigger>Une créature qui se trouve à portée
@@ -145,8 +136,7 @@
  Frappe n’est pas comptabilisée dans le malus d’attaques multiples
  du monstre et ce dernier ne s’applique pas à cette Frappe.</effect>
   </ability>
-  <ability>
-    <id>ability-gober</id>
+  <ability id="ability-gober">
     <name>Gober</name>
     <actions>1</actions>
     <traits>
@@ -225,8 +215,7 @@
  même surface que le sujet à l’origine des vibrations, et seulement
  si celui-ci se déplace sur (ou creuse à travers) cette surface.</description>
   </ability>
-  <ability>
-    <id>ability-pietinement</id>
+  <ability id="ability-pietinement">
     <name>Piétinement</name>
     <actions>3</actions>
     <description>Le monstre Marche rapidement sur une distance
@@ -243,8 +232,7 @@
  sonnée. Le niveau du poison est le même que celui du monstre qui
  l’inocule. Le poison est soumis aux règles des afflictions.</description>
   </ability>
-  <ability>
-    <id>ability-presence-terrifiante</id>
+  <ability id="ability-presence-terrifiante">
     <name>Présence terrifiante</name>
     <traits>
       <trait>aura</trait>
@@ -261,16 +249,14 @@
  **Échec.** La créature est effrayée 2.
  **Échec critique.** La créature est effrayée 4.</description>
   </ability>
-  <ability>
-    <id>ability-projection-de-rochers</id>
+  <ability id="ability-projection-de-rochers">
     <name>Projection de rochers</name>
     <actions>1</actions>
     <description>Le monstre Interagit pour ramasser un
  rocher qui se trouve à portée ou qu’il avait mis de côté et le lance
  en faisant une Frappe à distance.</description>
   </ability>
-  <ability>
-    <id>ability-puanteur</id>
+  <ability id="ability-puanteur">
     <name>Puanteur</name>
     <traits>
       <trait>aura</trait>
@@ -291,8 +277,7 @@
  ver ce pouvoir avant d’appliquer ces dégâts, car ils sont susceptibles
  de tuer le monstre en lui faisant atteindre l’état mourant 4.</description>
   </ability>
-  <ability>
-    <id>ability-renversement</id>
+  <ability id="ability-renversement">
     <name>Renversement</name>
     <actions>1</actions>
     <conditions>La dernière action du monstre était
@@ -302,8 +287,7 @@
  ture. Cette tentative n’est pas soumise au malus d’attaques multi-
  ples du monstre et n’est pas non plus comptabilisée dans celui-ci.</effect>
   </ability>
-  <ability>
-    <id>ability-renversement-amelioree</id>
+  <ability id="ability-renversement-amelioree">
     <name>Renversement améliorée</name>
     <description>Voir Empoignade améliorée.
  **Soins du néant.** Une créature possédant ce pouvoir tire sa santé de
@@ -318,8 +302,7 @@
  sort constant est contré, le monstre peut le réactiver en utilisant
  les actions d’incantation normalement requises pour lancer le sort.</description>
   </ability>
-  <ability>
-    <id>ability-telepathie</id>
+  <ability id="ability-telepathie">
     <name>Télépathie</name>
     <traits>
       <trait>aura</trait>
@@ -357,8 +340,7 @@ Certains de ces traits sont déjà présentés dans le *Livre des
 joueurs* ou *le Livre du MJ* de Pathfinder. D’autres sont présentés
 pour la première fois dans cet ouvrage.</description>
   </ability>
-  <ability>
-    <id>ability-traits-de-rarete</id>
+  <ability id="ability-traits-de-rarete">
     <name>Traits de rareté</name>
     <description>La liste de traits d’une créature commence par sa rareté, sauf
 si elle est commune.
@@ -376,8 +358,7 @@ si elle est commune.
  espèce. Le DD des tests permettant de Se souvenir d’informations
  sur une telle créature est augmenté de 10.</description>
   </ability>
-  <ability>
-    <id>ability-taille</id>
+  <ability id="ability-taille">
     <name>Taille</name>
     <description>La taille d’une créature est indiquée après son trait de rareté.
 **Gigantesque.** Une créature de taille Gigantesque occupe un espace
@@ -408,8 +389,7 @@ si elle est commune.
  supérieure et, si leur allonge est de 0 m, elles y sont même forcées
  pour pouvoir attaquer.</description>
   </ability>
-  <ability>
-    <id>ability-autres-traits</id>
+  <ability id="ability-autres-traits">
     <name>Autres traits</name>
     <description>Après la rareté et la taille d’une créature, ses autres traits sont
  présentés par ordre alphabétique. Vous trouverez ici la liste

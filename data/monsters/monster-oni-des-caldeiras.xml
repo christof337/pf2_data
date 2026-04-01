@@ -6,11 +6,11 @@
     <type>CRÉATURE</type>
     <level>14</level>
     <creatureTraits>
-      <trait type="size">GRANDE</trait>
-      <trait>FEU</trait>
-      <trait>GÉANT</trait>
+      <trait type="size" ref="trait-grande">GRANDE</trait>
+      <trait ref="trait-feu">FEU</trait>
+      <trait ref="trait-geant">GÉANT</trait>
       <trait>HUMANOÏDE</trait>
-      <trait>ONI</trait>
+      <trait ref="trait-oni">ONI</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -107,7 +107,7 @@
         <traits>
           <trait>concentration</trait>
           <trait>métamorphose</trait>
-          <trait>primordiale</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>� Comme un oni des montagnes�</description>
       </special>
@@ -123,7 +123,7 @@
         <name>Forme de cendres</name>
         <traits>
           <trait>métamorphose</trait>
-          <trait>primordiale</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>**Fréquence** une fois par minute�</description>
       </special>

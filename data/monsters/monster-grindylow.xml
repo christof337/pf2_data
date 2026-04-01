@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>0</level>
     <creatureTraits>
-      <trait type="size">PETITE</trait>
-      <trait>ABERRATION</trait>
-      <trait>AMPHIBIE</trait>
+      <trait type="size" ref="trait-petite">PETITE</trait>
+      <trait ref="trait-aberration">ABERRATION</trait>
+      <trait ref="trait-amphibie">AMPHIBIE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -41,7 +41,7 @@
         <name>morsure</name>
         <bonus>+7</bonus>
         <traits>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
         </traits>
         <damages>
           <damage>
@@ -56,7 +56,7 @@
         <traits>
           <trait>agile</trait>
           <trait>croc-en-jambe</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
         </traits>
         <damages>
           <damage>

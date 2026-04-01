@@ -6,7 +6,7 @@
     <type>CRÉATURE</type>
     <level>18</level>
     <creatureTraits>
-      <trait type="size">GIGANTESQUE</trait>
+      <trait type="size" ref="trait-gigantesque">GIGANTESQUE</trait>
       <trait>CRÉATURE</trait>
       <trait>ARTIFICIELLE</trait>
     </creatureTraits>
@@ -86,7 +86,7 @@
       </rank>
     </spellList>
     <offensiveAbilities>
-      <special type="activity" actions="3">
+      <special type="activity" actions="3" ref="ability-pietinement">
         <name>Piétinement</name>
         <description>Très Grande ou plus petite, patte, DD 40 (p� 360)</description>
       </special>

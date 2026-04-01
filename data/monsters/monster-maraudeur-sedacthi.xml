@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>4</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
-      <trait>AMPHIBIE</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
+      <trait ref="trait-amphibie">AMPHIBIE</trait>
       <trait>HUMANOÏDE</trait>
-      <trait>SÉDACTHI</trait>
+      <trait ref="trait-sedacthi">SÉDACTHI</trait>
     </creatureTraits>
     <perception>
       <bonus>+9</bonus>

@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>1</level>
     <creatureTraits>
-      <trait type="size">PETITE</trait>
-      <trait>ÉLÉMENTAIRE</trait>
-      <trait>FEU</trait>
+      <trait type="size" ref="trait-petite">PETITE</trait>
+      <trait ref="trait-elementaire">ÉLÉMENTAIRE</trait>
+      <trait ref="trait-feu">FEU</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -61,7 +61,7 @@
         <name>mâchoires</name>
         <bonus>+9</bonus>
         <traits>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
         </traits>
         <damages>
           <damage>
@@ -77,7 +77,7 @@
         <name>Souffle de flammes</name>
         <traits>
           <trait>arcanique</trait>
-          <trait>feu</trait>
+          <trait ref="trait-feu">feu</trait>
         </traits>
         <description>� Le galapiat de feu crache des flammes dans un cône de 4,5 m qui inflige 2d4 dégâts de feu à chaque créature dans la zone (jet de Réflexes basique DD 17)� Les créatures qui ratent leur jet de sauvegarde subissent également 1d4 dégâts de feu persistants� Le galapiat de feu ne peut plus utiliser souffle de flammes pendant 1d4 rounds�</description>
       </special>

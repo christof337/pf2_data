@@ -6,7 +6,7 @@
     <type>CRÉATURE</type>
     <level>1</level>
     <creatureTraits>
-      <trait type="size">PETITE</trait>
+      <trait type="size" ref="trait-petite">PETITE</trait>
       <trait>LÉCHÉE</trait>
       <trait>PLANTE</trait>
     </creatureTraits>
@@ -43,7 +43,7 @@
         <bonus>+7</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
         </traits>
         <damages>
           <damage>
@@ -76,7 +76,7 @@
         <traits>
           <trait>concentration</trait>
           <trait>métamorphose</trait>
-          <trait>primordiale</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>� Comme le léchi de feuilles mais le léchi calebasse se transforme en calebassier (p� 358)�</description>
       </special>

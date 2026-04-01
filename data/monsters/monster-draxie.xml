@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>3</level>
     <creatureTraits>
-      <trait type="size">TRÈS PETITE</trait>
-      <trait>ESPRIT</trait>
+      <trait type="size" ref="trait-tres-petite">TRÈS PETITE</trait>
+      <trait ref="trait-esprit">ESPRIT</trait>
       <trait>FOLLET</trait>
-      <trait>FÉE</trait>
+      <trait ref="trait-fee">FÉE</trait>
     </creatureTraits>
     <perception>
       <bonus/>

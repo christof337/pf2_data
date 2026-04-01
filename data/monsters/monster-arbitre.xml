@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>1</level>
     <creatureTraits>
-      <trait type="size">TRÈS PETITE</trait>
+      <trait type="size" ref="trait-tres-petite">TRÈS PETITE</trait>
       <trait>ÉON</trait>
-      <trait>VEILLEUR</trait>
+      <trait ref="trait-veilleur">VEILLEUR</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -67,7 +67,7 @@
         <traits>
           <trait>agile</trait>
           <trait>allonge 0 m</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
           <trait>magique</trait>
           <trait>polyvalent T</trait>
         </traits>
@@ -90,7 +90,7 @@
       <special type="activity" actions="2">
         <name>Projection électrique</name>
         <traits>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
           <trait>électricité</trait>
         </traits>
         <description>� L’arbitre projette un arc électrique qui inflige 3d6 dégâts d’électricité à toutes les créatures dans une émanation de 3 m (jet de Réflexes basique DD 17)� L’arbitre se trouve ensuite dans l’état étourdi pendant 24 h�</description>

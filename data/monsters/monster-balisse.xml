@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>8</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
-      <trait>ANGE</trait>
-      <trait>CÉLESTE</trait>
-      <trait>SAINT</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
+      <trait ref="trait-ange">ANGE</trait>
+      <trait ref="trait-celeste">CÉLESTE</trait>
+      <trait ref="trait-saint">SAINT</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -48,11 +48,11 @@
         <bonus>+20</bonus>
         <traits>
           <trait>balayage</trait>
-          <trait>feu</trait>
+          <trait ref="trait-feu">feu</trait>
           <trait>magique</trait>
           <trait>per-
                                              cutant</trait>
-          <trait>saint</trait>
+          <trait ref="trait-saint">saint</trait>
         </traits>
         <damages>
           <damage>
@@ -95,7 +95,7 @@
       <special type="activity" actions="1">
         <name>Guide angélique</name>
         <traits>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
           <trait>transmutation</trait>
         </traits>
         <description>; **Conditions.** Le balisse est invisible ;</description>
@@ -103,7 +103,7 @@
       <special type="activity" actions="2">
         <name>Marque de l’impénitent</name>
         <traits>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
           <trait>malédiction</trait>
         </traits>
         <description>; **Fréquence** 1 fois/jour ;</description>

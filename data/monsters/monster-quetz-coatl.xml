@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>10</level>
     <creatureTraits>
-      <trait type="size">GRANDE</trait>
+      <trait type="size" ref="trait-grande">GRANDE</trait>
       <trait>BÊTE</trait>
-      <trait>COATL</trait>
-      <trait>SAINT</trait>
+      <trait ref="trait-coatl">COATL</trait>
+      <trait ref="trait-saint">SAINT</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -70,7 +70,7 @@
         <bonus>+23</bonus>
         <traits>
           <trait>magique</trait>
-          <trait>saint</trait>
+          <trait ref="trait-saint">saint</trait>
         </traits>
         <damages>
           <damage>
@@ -127,7 +127,7 @@
         <name>Échec critique</name>
         <description>Comme un échec, mais si la créature est impie, elle est éga- lement étourdie 3�</description>
       </special>
-      <special type="activity" actions="1">
+      <special type="activity" actions="1" ref="ability-constriction-superieure">
         <name>Constriction supérieure</name>
         <description>2d10+7 contondants, DD 29 (p� 359)</description>
       </special>
@@ -143,7 +143,7 @@
         <name>Venin de quetz coatl</name>
         <traits>
           <trait>poison</trait>
-          <trait>saint</trait>
+          <trait ref="trait-saint">saint</trait>
         </traits>
         <description>� Pour les créatures impies, ce venin prend la forme d’une malédiction qui inflige des dégâts d’esprit au lieu de celle d’un poison qui inflige des dégâts de poison ; **Jet de sauvegarde** Vigueur DD 29 ; **Durée maximale** 6 rounds ; **Stade 1** 2d6 dégâts de poison et affaibli 1 (1 round) ; **Stade 2** 2d8 dégâts de poison, affaibli 1 et pris par surprise (1 round) ; **Stade 3** 2d10 dégâts de poison, affaibli 2 et pris par surprise (1 round)</description>
       </special>

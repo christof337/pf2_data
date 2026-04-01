@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>14</level>
     <creatureTraits>
-      <trait type="size">TRÈS GRANDE</trait>
+      <trait type="size" ref="trait-tres-grande">TRÈS GRANDE</trait>
       <trait>DIVIN</trait>
-      <trait>DRAGON</trait>
-      <trait>SAINT</trait>
+      <trait ref="trait-dragon">DRAGON</trait>
+      <trait ref="trait-saint">SAINT</trait>
     </creatureTraits>
     <perception>
       <bonus>+27</bonus>
@@ -98,7 +98,7 @@
         <bonus>+28</bonus>
         <traits>
           <trait>allonge 4,5 m</trait>
-          <trait>saint</trait>
+          <trait ref="trait-saint">saint</trait>
         </traits>
         <damages>
           <damage>
@@ -117,7 +117,7 @@
         <traits>
           <trait>agile</trait>
           <trait>allonge 3 m</trait>
-          <trait>saint</trait>
+          <trait ref="trait-saint">saint</trait>
         </traits>
         <damages>
           <damage>
@@ -135,7 +135,7 @@
         <bonus>+26</bonus>
         <traits>
           <trait>allonge 6 m</trait>
-          <trait>saint</trait>
+          <trait ref="trait-saint">saint</trait>
         </traits>
         <damages>
           <damage>
@@ -154,7 +154,7 @@
         <traits>
           <trait>agile</trait>
           <trait>allonge 4,5 m</trait>
-          <trait>saint</trait>
+          <trait ref="trait-saint">saint</trait>
         </traits>
         <damages>
           <damage>
@@ -202,16 +202,16 @@
         <name>Pulsation du halo</name>
         <traits>
           <trait>concentration</trait>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
         </traits>
         <description>Comme le jeune dragon empyréen, mais répul- sion DD 34 et restauration soigne 7d8 PV�</description>
       </special>
       <special type="activity" actions="2">
         <name>Souffle spirituel</name>
         <traits>
-          <trait>divine</trait>
-          <trait>esprit</trait>
-          <trait>saint</trait>
+          <trait ref="trait-divine">divine</trait>
+          <trait ref="trait-esprit">esprit</trait>
+          <trait ref="trait-saint">saint</trait>
         </traits>
         <description>Comme le jeune dragon empyréen, mais cône de 15 m, 12d8 dégâts d’esprit et DD 34�</description>
       </special>

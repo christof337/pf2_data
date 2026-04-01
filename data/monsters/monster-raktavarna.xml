@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>1</level>
     <creatureTraits>
-      <trait type="size">TRÈS PETITE</trait>
-      <trait>ESPRIT</trait>
-      <trait>IMPIE</trait>
-      <trait>RAKSHASA</trait>
+      <trait type="size" ref="trait-tres-petite">TRÈS PETITE</trait>
+      <trait ref="trait-esprit">ESPRIT</trait>
+      <trait ref="trait-impie">IMPIE</trait>
+      <trait ref="trait-rakshasa">RAKSHASA</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -59,7 +59,7 @@
         <traits>
           <trait>agile</trait>
           <trait>allonge 0 m</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
         </traits>
         <damages>
           <damage>
@@ -82,14 +82,14 @@
         <traits>
           <trait>concentration</trait>
           <trait>métamorphose</trait>
-          <trait>occulte</trait>
+          <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>� Le raktavarna prend l’apparence d’un objet inanimé de Très Petite taille (p� 358)� Si, pendant qu’il est transformé, le raktavarna utilise une action qui n’est pas purement men- tale (comme Se souvenir), il reprend immédiatement sa forme originelle� Jusqu’à ce moment-là, il peut utiliser Duperie pour Se déguiser en l’objet souhaité�</description>
       </special>
       <special>
         <name>Désignation d’un maître</name>
         <traits>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
           <trait>exploration</trait>
         </traits>
         <description>� Le raktavarna passe 10 min à psalmodier des invocations en compagnie d’une autre créature� Cette créature devient le maître du raktavarna jusqu’à ce que ce dernier meure ou Révoque cet effet� Le maître gagne l’activité Yeux du maître tant que ce lien perdure�</description>
@@ -113,7 +113,7 @@
         <name>Yeux du maître</name>
         <traits>
           <trait>concentration</trait>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
           <trait>scrutation</trait>
         </traits>
         <description>� Le maître observe le monde à travers les yeux du raktavarna au lieu des siens ; il utilise la Perception et la vision dans le noir du raktavarna� Cet effet dure jusqu’à la fin du prochain tour du maître, mais ce dernier peut Maintenir l’activation� Ce pouvoir fonctionne à n’importe quelle distance et</description>

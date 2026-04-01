@@ -6,11 +6,11 @@
     <type>CRÉATURE</type>
     <level>3</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
       <trait>BÊTE</trait>
-      <trait>FEU</trait>
+      <trait ref="trait-feu">FEU</trait>
       <trait>FIÉLON</trait>
-      <trait>IMPIE</trait>
+      <trait ref="trait-impie">IMPIE</trait>
     </creatureTraits>
     <perception>
       <bonus>+9</bonus>
@@ -67,7 +67,7 @@
         <name>mâchoires</name>
         <bonus>+13</bonus>
         <traits>
-          <trait>impie</trait>
+          <trait ref="trait-impie">impie</trait>
           <trait>magique</trait>
         </traits>
         <damages>
@@ -90,9 +90,9 @@
       <special type="activity" actions="1">
         <name>Souffle de feu infernal</name>
         <traits>
-          <trait>divine</trait>
-          <trait>feu</trait>
-          <trait>impie</trait>
+          <trait ref="trait-divine">divine</trait>
+          <trait ref="trait-feu">feu</trait>
+          <trait ref="trait-impie">impie</trait>
         </traits>
         <description>� Le molosse infernal souffle des flammes qui infligent 4d6 dégâts de feu à toutes les créatures dans un cône de 4,5 m (jet de Réflexes basique DD 19)� Le molosse infernal ne peut utiliser une nouvelle fois son Souffle avant 1d4 rounds� Si le molosse devait subir des dégâts de feu ou être ciblé par un effet de feu, cela recharge son Souffle de feu infernal�</description>
       </special>

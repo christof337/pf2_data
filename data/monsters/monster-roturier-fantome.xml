@@ -34,7 +34,7 @@
         <bonus>+13</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
           <trait>magique</trait>
         </traits>
         <damages>
@@ -50,7 +50,7 @@
         <name>Lamentation d’épouvante</name>
         <traits>
           <trait>audible</trait>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
           <trait>émotion</trait>
           <trait>mental</trait>
           <trait>terreur</trait>

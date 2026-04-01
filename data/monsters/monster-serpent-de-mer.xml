@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>12</level>
     <creatureTraits>
-      <trait type="size">GIGANTESQUE</trait>
-      <trait>ANIMAL</trait>
-      <trait>AQUATIQUE</trait>
+      <trait type="size" ref="trait-gigantesque">GIGANTESQUE</trait>
+      <trait ref="trait-animal">ANIMAL</trait>
+      <trait ref="trait-aquatique">AQUATIQUE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -69,7 +69,7 @@
         <name>geyser d’eau</name>
         <bonus>+25</bonus>
         <traits>
-          <trait>brutal</trait>
+          <trait ref="trait-brutal">brutal</trait>
           <trait>eau</trait>
           <trait>facteur de portée 30 m</trait>
         </traits>
@@ -112,7 +112,7 @@
         </traits>
         <description>� Le serpent de mer déploie les épines qui lui couvrent le dos et Nage ou Marche rapidement� Toutes les créatures qui se trouvent dans un espace adjacent au serpent à n’importe quel moment de son déplacement subissent 4d6+8 dégâts tranchants (jet de Réflexes basique DD 32)�</description>
       </special>
-      <special type="activity" actions="1">
+      <special type="activity" actions="1" ref="ability-gober">
         <name>Gober</name>
         <traits>
           <trait>attaque</trait>

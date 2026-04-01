@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>4</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
       <trait>ARCHON</trait>
-      <trait>CÉLESTE</trait>
-      <trait>SAINT</trait>
+      <trait ref="trait-celeste">CÉLESTE</trait>
+      <trait ref="trait-saint">SAINT</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -59,7 +59,7 @@
         <name>corne</name>
         <bonus>+13</bonus>
         <traits>
-          <trait>saint</trait>
+          <trait ref="trait-saint">saint</trait>
           <trait>magique</trait>
         </traits>
         <damages>
@@ -73,7 +73,7 @@
         <name>arc long composite</name>
         <bonus>+14</bonus>
         <traits>
-          <trait>saint</trait>
+          <trait ref="trait-saint">saint</trait>
           <trait>mortel d10</trait>
           <trait>magique</trait>
           <trait>propulsif</trait>
@@ -110,7 +110,7 @@
       <special type="activity" actions="2">
         <name>Flèche de distraction</name>
         <traits>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
           <trait>mental</trait>
         </traits>
         <description>� Le qarna fait une Frappe d’arc composite� Si la Frappe touche, la flèche se plante dans la cible, qui tourne tous ses sens vers l’archon, le reste devenant flou� Cette créature subit un malus de statut de –2 à ses jets d’attaque et de Perception contre les créatures qui ne sont pas le qarna� Elle peut Interagir pour retirer la flèche, ce qui met un terme à l’effet�</description>
@@ -118,7 +118,7 @@
       <special type="activity" actions="1">
         <name>Toucher de charité</name>
         <traits>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
           <trait>guérison</trait>
           <trait>manipulation</trait>
           <trait>vitalité</trait>

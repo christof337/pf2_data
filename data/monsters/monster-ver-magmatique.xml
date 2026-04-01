@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>18</level>
     <creatureTraits>
-      <trait type="size">GIGANTESQUE</trait>
+      <trait type="size" ref="trait-gigantesque">GIGANTESQUE</trait>
       <trait>BÊTE</trait>
-      <trait>FEU</trait>
+      <trait ref="trait-feu">FEU</trait>
     </creatureTraits>
     <perception>
       <bonus>+25</bonus>
@@ -63,7 +63,7 @@
         <traits>
           <trait>agile</trait>
           <trait>allonge 6 m</trait>
-          <trait>feu</trait>
+          <trait ref="trait-feu">feu</trait>
           <trait>poison</trait>
         </traits>
         <damages>
@@ -82,7 +82,7 @@
         <bonus>+34</bonus>
         <traits>
           <trait>allonge 4,5 m</trait>
-          <trait>feu</trait>
+          <trait ref="trait-feu">feu</trait>
         </traits>
         <damages>
           <damage>
@@ -101,7 +101,7 @@
         <name>Foreur de roche</name>
         <description>Comme le ver des cavernes�</description>
       </special>
-      <special type="activity" actions="1">
+      <special type="activity" actions="1" ref="ability-gober">
         <name>Gober</name>
         <description>Très Grande, 3d10+10 contondants plus 2d6 de feu, Rupture 36 (p� 359)</description>
       </special>
@@ -117,8 +117,8 @@
       <special type="activity" actions="2">
         <name>Souffle ardent</name>
         <traits>
-          <trait>feu</trait>
-          <trait>primordiale</trait>
+          <trait ref="trait-feu">feu</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>� Le ver magmatique crache un jet de flammes dans un cône de 18 m, qui inflige 18d6 dégâts de feu à toutes les créatures dans la zone (jet de Réflexes basique DD 41)� Il ne peut plus utiliser ce pouvoir pendant 1d4 rounds�</description>
       </special>

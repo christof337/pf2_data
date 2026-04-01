@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>20</level>
     <creatureTraits>
-      <trait type="size">TRÈS GRANDE</trait>
-      <trait>PSYCHOPOMPE</trait>
-      <trait>VEILLEUR</trait>
+      <trait type="size" ref="trait-tres-grande">TRÈS GRANDE</trait>
+      <trait ref="trait-psychopompe">PSYCHOPOMPE</trait>
+      <trait ref="trait-veilleur">VEILLEUR</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -161,7 +161,7 @@
       <special type="activity" actions="2">
         <name>Souffle de coléoptères</name>
         <traits>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
         </traits>
         <description>� Le yamaraje pro- jette un souffle de coléoptères dans un cône de 15 m qui inflige 14d8 dégâts tranchants et 4d8 dégâts tranchants persistants à toutes les créatures dans la zone (jet de Réflexes DD 42)� Il ne peut plus utiliser ce pouvoir pendant 1d4 rounds�</description>
       </special>

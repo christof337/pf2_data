@@ -37,6 +37,15 @@
     </xs:sequence>
   </xs:complexType>
 
+  <!-- Type partagé pour un <trait> simple avec lien optionnel -->
+  <xs:complexType name="traitRefType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="ref" type="xs:string"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
   <xs:complexType name="creatureTraitsType">
     <xs:sequence>
       <xs:element name="trait" maxOccurs="unbounded">
@@ -44,6 +53,7 @@
           <xs:simpleContent>
             <xs:extension base="xs:string">
               <xs:attribute name="type" type="xs:string"/>
+              <xs:attribute name="ref" type="xs:string"/>
             </xs:extension>
           </xs:simpleContent>
         </xs:complexType>
@@ -147,6 +157,7 @@
     </xs:sequence>
     <xs:attribute name="type" type="xs:string"/>
     <xs:attribute name="actions" type="xs:string"/>
+    <xs:attribute name="ref" type="xs:string"/>
     <!-- <xs:assert test="if (@type = 'activity') then exists(@actions) else empty(@actions)"/> -->
   </xs:complexType>
 
@@ -164,6 +175,7 @@
                         <xs:extension base="xs:string">
                           <xs:attribute name="source" type="xs:string"/>
                           <xs:attribute name="spellSpecial" type="xs:string"/>
+                          <xs:attribute name="ref" type="xs:string"/>
                         </xs:extension>
                       </xs:simpleContent>
                     </xs:complexType>
@@ -219,7 +231,7 @@
 
   <xs:complexType name="simpleListType">
     <xs:sequence>
-      <xs:element name="trait" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="trait" type="traitRefType" minOccurs="0" maxOccurs="unbounded"/>
       <xs:element name="language" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
       <xs:element name="immunity" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>

@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>17</level>
     <creatureTraits>
-      <trait type="size">TRÈS GRANDE</trait>
-      <trait>DRAGON</trait>
-      <trait>OCCULTE</trait>
+      <trait type="size" ref="trait-tres-grande">TRÈS GRANDE</trait>
+      <trait ref="trait-dragon">DRAGON</trait>
+      <trait ref="trait-occulte">OCCULTE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -140,7 +140,7 @@
       <special type="activity" actions="2">
         <name>Explosion de déguisement</name>
         <traits>
-          <trait>occulte</trait>
+          <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>Comme le jeune dragon conspirateur, mais 18d6 dégâts contondants et DD 39�</description>
       </special>
@@ -157,14 +157,14 @@
         <traits>
           <trait>manipulation</trait>
           <trait>métamorphose</trait>
-          <trait>occulte</trait>
+          <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>Comme le jeune dra- gon conspirateur�</description>
       </special>
       <special type="activity" actions="2">
         <name>Souffle de fumée</name>
         <traits>
-          <trait>occulte</trait>
+          <trait ref="trait-occulte">occulte</trait>
           <trait>poison</trait>
         </traits>
         <description>Comme le jeune dragon conspirateur, mais dans un cône de 18 m, 16d6 dégâts de poison et DD 39�</description>

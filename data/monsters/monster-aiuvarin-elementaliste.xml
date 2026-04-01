@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>2</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
-      <trait>AIUVARIN</trait>
-      <trait>ELFE</trait>
-      <trait>HUMAIN</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
+      <trait ref="trait-aiuvarin">AIUVARIN</trait>
+      <trait ref="trait-elfe">ELFE</trait>
+      <trait ref="trait-humain">HUMAIN</trait>
       <trait>HUMANOÏDE</trait>
     </creatureTraits>
     <perception>
@@ -69,7 +69,7 @@
         <bonus>+9</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
           <trait>polyvalent T</trait>
         </traits>
         <damages>

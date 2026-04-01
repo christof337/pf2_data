@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>11</level>
     <creatureTraits>
-      <trait type="size">TRÈS GRANDE</trait>
-      <trait>AQUATIQUE</trait>
+      <trait type="size" ref="trait-tres-grande">TRÈS GRANDE</trait>
+      <trait ref="trait-aquatique">AQUATIQUE</trait>
       <trait>EAU</trait>
-      <trait>ÉLÉMENTAIRE</trait>
+      <trait ref="trait-elementaire">ÉLÉMENTAIRE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -66,7 +66,7 @@
         <bonus>+24</bonus>
         <traits>
           <trait>allonge 6 m</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
         </traits>
         <damages>
           <damage>
@@ -85,7 +85,7 @@
         <name>Tremper</name>
         <traits>
           <trait>eau</trait>
-          <trait>primordiale</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>� Comme la cascade vivante mais avec une émanation de 6 m et un modificateur de contre de +20�</description>
       </special>

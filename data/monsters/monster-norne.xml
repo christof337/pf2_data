@@ -6,8 +6,8 @@
     <type>CRÉATURE</type>
     <level>20</level>
     <creatureTraits>
-      <trait type="size">GRANDE</trait>
-      <trait>FÉE</trait>
+      <trait type="size" ref="trait-grande">GRANDE</trait>
+      <trait ref="trait-fee">FÉE</trait>
     </creatureTraits>
     <perception>
       <bonus>+41</bonus>
@@ -151,7 +151,7 @@
       <special type="reaction">
         <name>Changer le destin</name>
         <traits>
-          <trait>occulte</trait>
+          <trait ref="trait-occulte">occulte</trait>
         </traits>
         <trigger>Une créature à moins de 36 m fait un jet de sauvegarde�</trigger>
         <effect>La créature fait deux fois son jet de sauvegarde et la norne décide du résultat qui s’applique� Si elle choisit le moins bon, c’est un effet d’infortune ; si elle choisit le meilleur, c’est un effet de fortune ; s’ils sont égaux, elle décide quel trait s’applique�</effect>
@@ -161,14 +161,14 @@
         <traits>
           <trait>manipulation</trait>
           <trait>mort</trait>
-          <trait>occulte</trait>
+          <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>**Fréquence** trois fois par jour�</description>
       </special>
       <special>
         <name>Punition d’infortune</name>
         <traits>
-          <trait>occulte</trait>
+          <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>� Lorsqu’une norne inflige des dégâts de néant avec une Frappe, elle regagne 10 PV� La cible doit réussir un jet de Vigueur DD 39 ou être drainée 1 (drainée 2 sur un échec critique)� D’autres dégâts du néant infligés par la norne augmentent l’intensité de l’état drainé de 1 sur un jet de sauvegarde raté (ou de 2 sur un échec critique) jusqu’à atteindre au maximum drainé 4�</description>
       </special>

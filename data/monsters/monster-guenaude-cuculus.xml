@@ -6,8 +6,8 @@
     <type>CRÉATURE</type>
     <level>9</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
-      <trait>GUENAUDE</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
+      <trait ref="trait-guenaude">GUENAUDE</trait>
       <trait>HUMANOÏDE</trait>
     </creatureTraits>
     <perception>
@@ -88,7 +88,7 @@
         <traits>
           <trait>concentration</trait>
           <trait>métamorphose</trait>
-          <trait>occulte</trait>
+          <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>� La guenaude cuculus peut prendre l’apparence de n’importe quelle femme humanoïde de taille Moyenne (p� 358)� Cela ne modifie pas sa Vitesse ni ses bonus à l’attaque et aux dégâts de ses Frappes, mais cela peut modifier le type de dégâts qu’elles infligent (généralement en dégâts contondants)�</description>
       </special>
@@ -99,7 +99,7 @@
       <special>
         <name>Engagement de l’âme</name>
         <traits>
-          <trait>occulte</trait>
+          <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>; **Conditions.** La guenaude cuculus peut lancer *enfermer l’âme* à volonté, mais uniquement pour cibler une créature qui a accepté de rester pour toujours à ses côtés� Elle le fait généralement dès que l’accord est conclu mais elle peut attendre pour avoir plus de poids dans une situation donnée� Elle place le plus souvent l’âme dans une créature artificielle, généralement une poupée des âmes (p� 273) si elle souhaite un compagnon, ou une créature artificielle plus puissante si elle souhaite un gardien�</description>
       </special>

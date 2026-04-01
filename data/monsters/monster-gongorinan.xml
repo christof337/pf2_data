@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>11</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
       <trait>FIÉLON</trait>
-      <trait>IMPIE</trait>
-      <trait>QLIPPOTH</trait>
+      <trait ref="trait-impie">IMPIE</trait>
+      <trait ref="trait-qlippoth">QLIPPOTH</trait>
     </creatureTraits>
     <perception>
       <bonus>+20</bonus>
@@ -55,7 +55,7 @@
         <name>*gourdin* +24, **Dégâts** 2d6+9 contondants plus rejet des outils **Corps à corps** 1 pinces</name>
         <bonus>+23</bonus>
         <traits>
-          <trait>impie</trait>
+          <trait ref="trait-impie">impie</trait>
           <trait>magique</trait>
         </traits>
         <damages>
@@ -75,7 +75,7 @@
         <traits>
           <trait>agile</trait>
           <trait>allonge 3 m</trait>
-          <trait>impie</trait>
+          <trait ref="trait-impie">impie</trait>
           <trait>magique</trait>
         </traits>
         <damages>
@@ -93,7 +93,7 @@
         <name>dard</name>
         <bonus>+23</bonus>
         <traits>
-          <trait>impie</trait>
+          <trait ref="trait-impie">impie</trait>
           <trait>magique</trait>
         </traits>
         <damages>
@@ -127,7 +127,7 @@
         <traits>
           <trait>concentration</trait>
           <trait>mental</trait>
-          <trait>occulte</trait>
+          <trait ref="trait-occulte">occulte</trait>
           <trait>visuel</trait>
         </traits>
         <description>� Le gongorinan ouvre sa gueule pour y révéler les formes qui s’y cachent poussant les observateurs à s’interroger sur leur propre corps� Toute créature dans une émanation de 9 m doit faire un jet de Volonté DD 30� Ensuite, elle est immunisée contre la Démonstration inquiétante pendant 1 min�</description>
@@ -156,7 +156,7 @@
         <name>Rejet des outils</name>
         <traits>
           <trait>mental</trait>
-          <trait>occulte</trait>
+          <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>� Une créature touchée par le gourdin du gongorinan doit réussir un jet de Volonté DD 30 ou Relâcher tous les objets fabriqués qu’il tient�</description>
       </special>

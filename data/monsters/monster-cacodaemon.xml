@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>1</level>
     <creatureTraits>
-      <trait type="size">TRÈS PETITE</trait>
-      <trait>DAÉMON</trait>
+      <trait type="size" ref="trait-tres-petite">TRÈS PETITE</trait>
+      <trait ref="trait-daemon">DAÉMON</trait>
       <trait>FIÉLON</trait>
-      <trait>IMPIE</trait>
+      <trait ref="trait-impie">IMPIE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -59,8 +59,8 @@
         <traits>
           <trait>agile</trait>
           <trait>allonge 0 m</trait>
-          <trait>finesse</trait>
-          <trait>impie</trait>
+          <trait ref="trait-finesse">finesse</trait>
+          <trait ref="trait-impie">impie</trait>
           <trait>magique</trait>
           <trait>maladie</trait>
         </traits>
@@ -76,7 +76,7 @@
         <bonus>+8</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
         </traits>
         <damages>
           <damage>
@@ -90,7 +90,7 @@
         <bonus>+8</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
         </traits>
         <damages>
           <damage>

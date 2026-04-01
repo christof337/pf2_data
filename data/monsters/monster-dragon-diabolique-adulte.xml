@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>15</level>
     <creatureTraits>
-      <trait type="size">TRÈS GRANDE</trait>
+      <trait type="size" ref="trait-tres-grande">TRÈS GRANDE</trait>
       <trait>DIVIN</trait>
-      <trait>DRAGON</trait>
-      <trait>IMPIE</trait>
+      <trait ref="trait-dragon">DRAGON</trait>
+      <trait ref="trait-impie">IMPIE</trait>
     </creatureTraits>
     <perception>
       <bonus/>

@@ -6,8 +6,8 @@
     <type>CRÉATURE</type>
     <level>12</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
-      <trait>ASTRAL</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
+      <trait ref="trait-astral">ASTRAL</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -54,7 +54,7 @@
         <bonus>+25</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
           <trait>magique</trait>
         </traits>
         <damages>

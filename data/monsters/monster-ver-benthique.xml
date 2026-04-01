@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>15</level>
     <creatureTraits>
-      <trait type="size">GIGANTESQUE</trait>
-      <trait>AMPHIBIE</trait>
-      <trait>ANIMAL</trait>
+      <trait type="size" ref="trait-gigantesque">GIGANTESQUE</trait>
+      <trait ref="trait-amphibie">AMPHIBIE</trait>
+      <trait ref="trait-animal">ANIMAL</trait>
     </creatureTraits>
     <perception>
       <bonus>+22</bonus>

@@ -6,8 +6,8 @@
     <type>CRÉATURE</type>
     <level>11</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
-      <trait>ABERRATION</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
+      <trait ref="trait-aberration">ABERRATION</trait>
     </creatureTraits>
     <perception>
       <bonus>+21</bonus>
@@ -59,7 +59,7 @@
         <name>mâchoires</name>
         <bonus>+21</bonus>
         <traits>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
         </traits>
         <damages>
           <damage>
@@ -77,7 +77,7 @@
         <bonus>+21</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
         </traits>
         <damages>
           <damage>
@@ -109,7 +109,7 @@
         <name>Assaut mental</name>
         <traits>
           <trait>mental</trait>
-          <trait>occulte</trait>
+          <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>Le gosreg concentre son champ d’énergie mentale dis- cordante et le projette dans l’esprit d’une créature située à moins de 18 m� La cible subit 6d6 dégâts mentaux (jet de Volonté basique DD 30)� Sur un échec critique, la créature est également confuse pendant 1 min ou jusqu’à ce qu’elle subisse des dégâts�</description>
       </special>
@@ -118,7 +118,7 @@
         <traits>
           <trait>concentration</trait>
           <trait>métamorphose</trait>
-          <trait>occulte</trait>
+          <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>Le gosreg peut prendre l’apparence de n’importe quel humanoïde de taille Petite ou Moyenne (p� 358)� Cela ne modifie ni sa Vitesse ni le bonus à l’attaque et aux dégâts de ses griffes, mais cela peut modifier le type de dégâts infligés (généralement conton- dants)� Il ne peut pas utiliser sa Frappe de mâchoires sous sa forme humanoïde�</description>
       </special>
@@ -126,7 +126,7 @@
         <name>Posture d’émission</name>
         <traits>
           <trait>mental</trait>
-          <trait>occulte</trait>
+          <trait ref="trait-occulte">occulte</trait>
           <trait>posture</trait>
         </traits>
         <description>**Condition.** Le gosreg est sous sa forme naturelle�</description>

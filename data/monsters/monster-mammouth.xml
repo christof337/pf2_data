@@ -6,8 +6,8 @@
     <type>CRÉATURE</type>
     <level>10</level>
     <creatureTraits>
-      <trait type="size">TRÈS GRANDE</trait>
-      <trait>ANIMAL</trait>
+      <trait type="size" ref="trait-tres-grande">TRÈS GRANDE</trait>
+      <trait ref="trait-animal">ANIMAL</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -68,7 +68,7 @@
         <name>Double défenses</name>
         <description>Le mammouth effectue deux Frappes de défense, chaque attaque étant dirigée contre une créature différente� Ces Frappes comptent comme une seule attaque pour le malus d’at- taques multiples du mammouth et le malus n’augmente pas avant que les deux attaques n’aient été effectuées�</description>
       </special>
-      <special type="activity" actions="3">
+      <special type="activity" actions="3" ref="ability-pietinement">
         <name>Piétinement</name>
         <description>Grande ou plus petite, patte, DD 28 (p� 360)</description>
       </special>

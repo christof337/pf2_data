@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>2</level>
     <creatureTraits>
-      <trait type="size">PETITE</trait>
-      <trait>CHAMPIGNON</trait>
-      <trait>LÉCHI</trait>
+      <trait type="size" ref="trait-petite">PETITE</trait>
+      <trait ref="trait-champignon">CHAMPIGNON</trait>
+      <trait ref="trait-lechi">LÉCHI</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -48,7 +48,7 @@
         <bonus>+10</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
         </traits>
         <damages>
           <damage>
@@ -81,7 +81,7 @@
         <traits>
           <trait>concentration</trait>
           <trait>métamorphose</trait>
-          <trait>primordiale</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>� Comme le léchi de feuilles, mais la créature se transforme en champignon géant ou en une parcelle de champignons (p� 358)�</description>
       </special>

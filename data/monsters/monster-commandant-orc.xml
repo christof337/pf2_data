@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>2</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
       <trait>HUMANOÏDE</trait>
-      <trait>ORC</trait>
+      <trait ref="trait-orc">ORC</trait>
     </creatureTraits>
     <perception>
       <bonus/>

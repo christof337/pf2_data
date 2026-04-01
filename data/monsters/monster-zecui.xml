@@ -6,8 +6,8 @@
     <type>CRÉATURE</type>
     <level>6</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
-      <trait>ABERRATION</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
+      <trait ref="trait-aberration">ABERRATION</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -41,7 +41,7 @@
         <traits>
           <trait>guérison</trait>
           <trait>manipulation</trait>
-          <trait>occulte</trait>
+          <trait ref="trait-occulte">occulte</trait>
           <trait>vitalité</trait>
         </traits>
         <trigger>Une créa- ture vivante dans un rayon de 9 m est réduite à 0 point de vie ; **</trigger>
@@ -59,7 +59,7 @@
         <bonus>+17</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
           <trait>polyvalent T</trait>
         </traits>
         <damages>
@@ -74,7 +74,7 @@
         <bonus>+17</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
         </traits>
         <damages>
           <damage>

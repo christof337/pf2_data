@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>9</level>
     <creatureTraits>
-      <trait type="size">TRÈS GRANDE</trait>
-      <trait>AMPHIBIE</trait>
-      <trait>DRAGON</trait>
+      <trait type="size" ref="trait-tres-grande">TRÈS GRANDE</trait>
+      <trait ref="trait-amphibie">AMPHIBIE</trait>
+      <trait ref="trait-dragon">DRAGON</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -98,7 +98,7 @@
           <trait>air</trait>
           <trait>aura</trait>
           <trait>eau</trait>
-          <trait>primordiale</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>La tortue dra- gon invoque une puissante tempête qui s’abat tout autour d’elle� La zone dans une émanation de 9 m autour de la tortue devient un terrain difficile pour toutes les autres créatures en train de voler ou de nager� La tortue dragon peut mettre fin à la tempête en utilisant à nouveau cette action�</description>
       </special>
@@ -106,7 +106,7 @@
         <name>Tsunami</name>
         <traits>
           <trait>eau</trait>
-          <trait>primordiale</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>La tortue dragon déchaîne toute sa puissance de destruction pour créer une immense vague qui inflige 7d6 dégâts conton- dants dans un cône de 18 m (jet de Réflexes basique DD 27)� La vague grossit en progressant et ses dégâts augmentent de 10 pour les créatures qui se trouvent à plus de 9 m de distance� Toute créature échouant son jet de sauvegarde subit l’état à terre� Le tortue dragon ne peut plus utiliser tsunami pendant 1d4 rounds�</description>
       </special>

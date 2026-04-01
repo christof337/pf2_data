@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>-1</level>
     <creatureTraits>
-      <trait type="size">TRÈS PETITE</trait>
-      <trait>ANIMAL</trait>
-      <trait>DINOSAURE</trait>
+      <trait type="size" ref="trait-tres-petite">TRÈS PETITE</trait>
+      <trait ref="trait-animal">ANIMAL</trait>
+      <trait ref="trait-dinosaure">DINOSAURE</trait>
     </creatureTraits>
     <perception>
       <bonus>+5</bonus>
@@ -47,7 +47,7 @@
         <traits>
           <trait>agile</trait>
           <trait>allonge 0 m</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
         </traits>
         <damages>
           <damage>

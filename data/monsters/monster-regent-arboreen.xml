@@ -6,7 +6,7 @@
     <type>CRÉATURE</type>
     <level>8</level>
     <creatureTraits>
-      <trait type="size">TRÈS GRANDE</trait>
+      <trait type="size" ref="trait-tres-grande">TRÈS GRANDE</trait>
       <trait>BOIS</trait>
       <trait>PLANTE</trait>
     </creatureTraits>
@@ -80,7 +80,7 @@
         <name>rocher</name>
         <bonus>+19</bonus>
         <traits>
-          <trait>brutal</trait>
+          <trait ref="trait-brutal">brutal</trait>
           <trait>facteur de portée 36 m</trait>
         </traits>
         <damages>
@@ -104,11 +104,11 @@
         <name>Éveil d’un arbre</name>
         <traits>
           <trait>concentration</trait>
-          <trait>primordiale</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>� Le régent arboréen anime un arbre dans un rayon de 54 m� Cet arbre se déracine et combat comme s’il était un sbire et utilise les caractéristiques d’un arbre éveillé� Le régent arboréen peut contrôler jusqu’à deux arbres éveillés en même temps, et il peut donner des ordres aux deux à la fois par une action unique dotée des traits concentration et audible�</description>
       </special>
-      <special type="activity" actions="1">
+      <special type="activity" actions="1" ref="ability-projection-de-rochers">
         <name>Projection de rochers</name>
         <traits>
           <trait>p� 360</trait>

@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>6</level>
     <creatureTraits>
-      <trait type="size">TRÈS GRANDE</trait>
-      <trait>ANIMAL</trait>
-      <trait>DINOSAURE</trait>
+      <trait type="size" ref="trait-tres-grande">TRÈS GRANDE</trait>
+      <trait ref="trait-animal">ANIMAL</trait>
+      <trait ref="trait-dinosaure">DINOSAURE</trait>
     </creatureTraits>
     <perception>
       <bonus>+12</bonus>
@@ -70,7 +70,7 @@
       </strike>
     </strikes>
     <offensiveAbilities>
-      <special type="activity" actions="3">
+      <special type="activity" actions="3" ref="ability-pietinement">
         <name>Piétinement</name>
         <description>Moyenne ou plus petite, patte, DD 24 (p� 360)</description>
       </special>

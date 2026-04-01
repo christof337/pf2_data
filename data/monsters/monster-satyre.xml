@@ -6,8 +6,8 @@
     <type>CRÉATURE</type>
     <level>4</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
-      <trait>FÉE</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
+      <trait ref="trait-fee">FÉE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -66,7 +66,7 @@
         <bonus>+14</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
           <trait>polyvalent T</trait>
         </traits>
         <damages>
@@ -123,7 +123,7 @@
         <name>Jouer de la flûte</name>
         <traits>
           <trait>audible</trait>
-          <trait>primordiale</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>; **Conditions.** Le satyre tient un instrument de musique ;</description>
       </special>

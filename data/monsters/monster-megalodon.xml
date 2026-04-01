@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>9</level>
     <creatureTraits>
-      <trait type="size">GIGANTESQUE</trait>
-      <trait>ANIMAL</trait>
-      <trait>AQUATIQUE</trait>
+      <trait type="size" ref="trait-gigantesque">GIGANTESQUE</trait>
+      <trait ref="trait-animal">ANIMAL</trait>
+      <trait ref="trait-aquatique">AQUATIQUE</trait>
     </creatureTraits>
     <perception>
       <bonus>+20</bonus>
@@ -96,7 +96,7 @@
         </traits>
         <description>� Comme le grand requin blanc, mais l’allonge du mégalodon lui permet d’attaquer une créature qui se trouve jusqu’à 10,5 m au-dessus de l’eau (ou à 12 m s’il utilise sa queue)�</description>
       </special>
-      <special type="activity" actions="1">
+      <special type="activity" actions="1" ref="ability-gober">
         <name>Gober</name>
         <traits>
           <trait>attaque</trait>

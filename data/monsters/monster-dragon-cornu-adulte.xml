@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>12</level>
     <creatureTraits>
-      <trait type="size">TRÈS GRANDE</trait>
-      <trait>AMPHIBIE</trait>
-      <trait>DRAGON</trait>
-      <trait>PRIMORDIALE</trait>
+      <trait type="size" ref="trait-tres-grande">TRÈS GRANDE</trait>
+      <trait ref="trait-amphibie">AMPHIBIE</trait>
+      <trait ref="trait-dragon">DRAGON</trait>
+      <trait ref="trait-primordiale">PRIMORDIALE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -68,7 +68,7 @@
       <immunity>sommeil</immunity>
     </immunities>
     <reactiveAbilities>
-      <special>
+      <special ref="ability-presence-terrifiante">
         <name>Présence terrifiante</name>
         <traits>
           <trait>aura</trait>

@@ -6,8 +6,8 @@
     <type>CRÉATURE</type>
     <level>8</level>
     <creatureTraits>
-      <trait type="size">GRANDE</trait>
-      <trait>GÉANT</trait>
+      <trait type="size" ref="trait-grande">GRANDE</trait>
+      <trait ref="trait-geant">GÉANT</trait>
       <trait>HUMANOÏDE</trait>
       <trait>TERRE</trait>
     </creatureTraits>
@@ -63,7 +63,7 @@
         <name>rocher</name>
         <bonus>+18</bonus>
         <traits>
-          <trait>brutal</trait>
+          <trait ref="trait-brutal">brutal</trait>
           <trait>facteur de portée 36 m</trait>
         </traits>
         <damages>
@@ -82,7 +82,7 @@
       <special type="activity" actions="1">
         <name>Création de rocher</name>
         <traits>
-          <trait>primordiale</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
           <trait>terre</trait>
         </traits>
         <description>� Le géant des pierres crée un rocher à partir d’une terre primordiale et le lance comme une Frappe de rocher� Une créature touchée par la Frappe doit réussir un jet de Réflexes DD 26 ou être projetée à terre�</description>

@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>11</level>
     <creatureTraits>
-      <trait type="size">GRANDE</trait>
-      <trait>DRAGON</trait>
-      <trait>OCCULTE</trait>
+      <trait type="size" ref="trait-grande">GRANDE</trait>
+      <trait ref="trait-dragon">DRAGON</trait>
+      <trait ref="trait-occulte">OCCULTE</trait>
     </creatureTraits>
     <perception>
       <bonus>+21</bonus>

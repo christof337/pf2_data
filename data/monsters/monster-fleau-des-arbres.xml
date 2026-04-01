@@ -6,11 +6,11 @@
     <type>CRÉATURE</type>
     <level>25</level>
     <creatureTraits>
-      <trait type="size">TRÈS GRANDE</trait>
-      <trait>AMPHIBIE</trait>
-      <trait>DÉMON</trait>
+      <trait type="size" ref="trait-tres-grande">TRÈS GRANDE</trait>
+      <trait ref="trait-amphibie">AMPHIBIE</trait>
+      <trait ref="trait-demon">DÉMON</trait>
       <trait>FIÉLON</trait>
-      <trait>IMPIE</trait>
+      <trait ref="trait-impie">IMPIE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -60,7 +60,7 @@
         <traits>
           <trait>agile</trait>
           <trait>allonge 4,5 m</trait>
-          <trait>impie</trait>
+          <trait ref="trait-impie">impie</trait>
           <trait>magique</trait>
         </traits>
         <damages>
@@ -106,8 +106,8 @@
         <name>Défoliation</name>
         <traits>
           <trait>plante</trait>
-          <trait>primordiale</trait>
-          <trait>impie</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
+          <trait ref="trait-impie">impie</trait>
         </traits>
         <description>� Fléau des Arbres libère une vague de lumière d’un vert maladif dans une émanation de 9 m de rayon� Toutes les plantes dans la zone (y compris les créatures sous l’effet de son aura de corruption) noircissent et se flétrissent� Les plantes autres que des créatures végétales se flétrissent et meurent� Les plantes et les champignons subissent 20d8 dégâts de néant (jet de Vigueur basique DD 49)� Une créature est également condamnée 1 pendant 1 min et malade 3 si elle rate son jet de sauvegarde� Fléau des Arbres peut choisir d’exclure n’importe quel nombre de plantes et de champignons de la zone pour qu’elles ne subissent pas cet effet� Il le fait généralement pour préserver les champignons et les végétaux corrompus et difformes, ou les créatures végétales qui le soutiennent� Fléau des Arbres doit attendre 1d4 rounds avant de pouvoir réutiliser ce pouvoir�</description>
       </special>

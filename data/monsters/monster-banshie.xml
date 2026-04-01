@@ -65,7 +65,7 @@
         <name>main</name>
         <bonus>+32</bonus>
         <traits>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
           <trait>magique</trait>
         </traits>
         <damages>
@@ -81,7 +81,7 @@
         <name>Contact terrifiant</name>
         <traits>
           <trait>émotion</trait>
-          <trait>occulte</trait>
+          <trait ref="trait-occulte">occulte</trait>
           <trait>terreur</trait>
         </traits>
         <description>� Une créature blessée par le contact de la banshie et qui n’est pas encore effrayée doit effectuer un jet de Volonté DD 38 (DD 43 si l’attaque était un coup critique)� Si la créature rate son jet de sauvegarde, elle est effrayée 2 ; en cas d’échec critique, la créature tremble également de terreur et elle est étourdie 4� Si la créature est protégée de la terreur par un sort ou un objet magique, le contact de la banshie tente d’abord de contrer l’effet de protection avec l’effet d’un sort *dissipation de la magie* de rang 9�</description>
@@ -96,7 +96,7 @@
           <trait>audible</trait>
           <trait>concentration</trait>
           <trait>mort</trait>
-          <trait>occulte</trait>
+          <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>� La banshie émet une* plainte des damnés* (DD 38) qui glace le sang de ceux qui l’entendent� Cette Plainte prend le pas sur le *silence* ou les effets similaires de rang 5 ou inférieurs� La banshie peut aussi utiliser Plainte comme une activité à trois-actions pour ignorer de tels effets de rang 8 ou inférieurs� La Plainte de la banshie résonne pendant 1 round et toute créature qui pénètre dans la zone d’effet pendant ce temps doit effectuer un jet de sauvegarde� Une créature ne peut être affectée qu’une seule fois par la même Plainte� La banshie ne peut utiliser sa Plainte avant 1d4 rounds�</description>
       </special>

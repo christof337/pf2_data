@@ -6,7 +6,7 @@
     <type>CRÉATURE</type>
     <level>8</level>
     <creatureTraits>
-      <trait type="size">GRANDE</trait>
+      <trait type="size" ref="trait-grande">GRANDE</trait>
       <trait>BÊTE</trait>
       <trait>HUMANOÏDE</trait>
     </creatureTraits>
@@ -106,7 +106,7 @@
         <traits>
           <trait>malédiction</trait>
           <trait>mental</trait>
-          <trait>occulte</trait>
+          <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>� Comme la Caresse de la lamie mais DD 28 et la créature est stupéfiée 2 (ou l’intensité de son état stupéfié augmente de 2) si elle obtient un échec critique à son jet de sauvegarde�</description>
       </special>
@@ -115,7 +115,7 @@
         <traits>
           <trait>concentration</trait>
           <trait>métamorphose</trait>
-          <trait>occulte</trait>
+          <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>� La matriarche lamie peut prendre l’apparence de n’importe quel huma- noïde de taille Moyenne (p� 358)� Cela ne modifie pas sa Vitesse ou le modi- ficateur à l’attaque et aux dégâts de ses Frappes mais cela l’empêche d’utiliser son contact maudit� Chaque lamie matriarche a une forme humanoïde définie qui ressemble à celle qu’elles ont à partir de la taille quand elles sont sous leur véritable forme� C’est la seule forme humanoïde qu’elles peuvent adopter avec ce pouvoir�</description>
       </special>

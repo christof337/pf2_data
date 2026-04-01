@@ -6,8 +6,8 @@
     <type>CRÉATURE</type>
     <level>5</level>
     <creatureTraits>
-      <trait type="size">PETITE</trait>
-      <trait>FÉE</trait>
+      <trait type="size" ref="trait-petite">PETITE</trait>
+      <trait ref="trait-fee">FÉE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -52,7 +52,7 @@
       <special>
         <name>Bonnet rouge</name>
         <traits>
-          <trait>primordiale</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>� Le bonnet de laine d’un bonnet rouge est imprégné du sang de ses victimes� Si le bonnet rouge perd son bonnet, il ne bénéficie plus des effets de sa guérison accélérée et subit un malus de −4 à ses jets de dégâts� Il peut créer un nouveau bonnet en 10 min mais ce bonnet ne lui confère aucun pouvoir tant qu’il l’a pas coloré de rouge avec une Imbibition de sang� Un bonnet ne confère ses pouvoirs à aucune autre créature que le bonnet rouge qui l’a créé�</description>
       </special>
@@ -90,7 +90,7 @@
         <traits>
           <trait>agile</trait>
           <trait>croc-en-jambe</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
         </traits>
         <damages>
           <damage>

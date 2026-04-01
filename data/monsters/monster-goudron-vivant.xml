@@ -62,7 +62,7 @@
         <name>Constriction</name>
         <description>1d8+7 contondants plus 1d6 acide, DD 26 (p� 359)</description>
       </special>
-      <special type="activity" actions="3">
+      <special type="activity" actions="3" ref="ability-engloutir">
         <name>Engloutir</name>
         <description>DD 22, 4d6 acide, S’échapper DD 22, Rupture 15 (p� 359)</description>
       </special>

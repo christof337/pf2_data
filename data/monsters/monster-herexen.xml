@@ -52,8 +52,8 @@
       <special>
         <name>Châtiment hérétique</name>
         <traits>
-          <trait>divine</trait>
-          <trait>impie</trait>
+          <trait ref="trait-divine">divine</trait>
+          <trait ref="trait-impie">impie</trait>
         </traits>
         <description>� Tant qu’il manie l’arme de prédilection de son ancienne divinité (comme une dague pour les anciens adeptes de Pharasma), les Frappes de l’hérexen infligent 1d6 dégâts spirituels supplémentaires contre les créatures ayant le trait saint�</description>
       </special>

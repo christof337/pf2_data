@@ -6,8 +6,8 @@
     <type>CRÉATURE</type>
     <level>1</level>
     <creatureTraits>
-      <trait type="size">PETITE</trait>
-      <trait>GNOME</trait>
+      <trait type="size" ref="trait-petite">PETITE</trait>
+      <trait ref="trait-gnome">GNOME</trait>
       <trait>HUMANOÏDE</trait>
     </creatureTraits>
     <perception>
@@ -57,7 +57,7 @@
         <bonus>+8</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
           <trait>jet 3 m</trait>
           <trait>polyvalent T</trait>
         </traits>
@@ -99,7 +99,7 @@
           <trait>audible</trait>
           <trait>mental</trait>
           <trait>mise hors de combat</trait>
-          <trait>occulte</trait>
+          <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>� Le gnome barde joue une mélodie qui incite les autres à danser� Une créature à moins de 9 m doit effectuer un jet de Volonté DD 19�</description>
       </special>

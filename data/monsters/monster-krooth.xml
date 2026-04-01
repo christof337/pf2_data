@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>8</level>
     <creatureTraits>
-      <trait type="size">GRANDE</trait>
-      <trait>AMPHIBIE</trait>
-      <trait>ANIMAL</trait>
+      <trait type="size" ref="trait-grande">GRANDE</trait>
+      <trait ref="trait-amphibie">AMPHIBIE</trait>
+      <trait ref="trait-animal">ANIMAL</trait>
     </creatureTraits>
     <perception>
       <bonus>+16</bonus>
@@ -83,7 +83,7 @@
         </traits>
         <description>; **Conditions.** Le krooth a blessé une créature avec ses mâchoires au cours de sa plus récente action de ce tour ;</description>
       </special>
-      <special type="activity" actions="1">
+      <special type="activity" actions="1" ref="ability-embuscade-aquatique">
         <name>Embuscade aquatique</name>
         <traits>
           <trait>p� 359</trait>

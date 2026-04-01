@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>5</level>
     <creatureTraits>
-      <trait type="size">GRANDE</trait>
-      <trait>AQUATIQUE</trait>
-      <trait>VASE</trait>
+      <trait type="size" ref="trait-grande">GRANDE</trait>
+      <trait ref="trait-aquatique">AQUATIQUE</trait>
+      <trait ref="trait-vase">VASE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -44,7 +44,7 @@
     </speeds>
     <strikes/>
     <offensiveAbilities>
-      <special>
+      <special ref="ability-puanteur">
         <name>Puanteur</name>
         <traits>
           <trait>aura</trait>

@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>9</level>
     <creatureTraits>
-      <trait type="size">GRANDE</trait>
-      <trait>ÉLÉMENTAIRE</trait>
-      <trait>FEU</trait>
+      <trait type="size" ref="trait-grande">GRANDE</trait>
+      <trait ref="trait-elementaire">ÉLÉMENTAIRE</trait>
+      <trait ref="trait-feu">FEU</trait>
       <trait>GÉNIE</trait>
     </creatureTraits>
     <perception>
@@ -117,7 +117,7 @@
         <name>Ailes de flammes</name>
         <traits>
           <trait>arcanique</trait>
-          <trait>feu</trait>
+          <trait ref="trait-feu">feu</trait>
         </traits>
         <description>� L’ifrit fait pousser des ailes de flammes dans son dos� Il gagne une Vitesse de vol de 10,5 m pen- dant 1 min� Les flammes créent également une aura dans une éma- nation de 1,5 m autour de l’ifrit� Toute créature qui termine son tour dans l’aura subit 2d6 dégâts de feu (jet de Réflexes basique DD 25)�</description>
       </special>
@@ -141,7 +141,7 @@
       <special>
         <name>Poigne brûlante</name>
         <traits>
-          <trait>feu</trait>
+          <trait ref="trait-feu">feu</trait>
         </traits>
         <description>� Quand l’ifrit empoigne ou entrave une créature, celle-ci subit 2d6 dégâts de feu, puis 2d6 dégâts de feu à la fin de chacun de ses tours jusqu’à ce qu’elle soit libérée�</description>
       </special>

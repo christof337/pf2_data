@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>1</level>
     <creatureTraits>
-      <trait type="size">TRÈS PETITE</trait>
+      <trait type="size" ref="trait-tres-petite">TRÈS PETITE</trait>
       <trait>AZATA</trait>
-      <trait>CÉLESTE</trait>
-      <trait>SAINT</trait>
+      <trait ref="trait-celeste">CÉLESTE</trait>
+      <trait ref="trait-saint">SAINT</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -58,8 +58,8 @@
         <bonus>+7</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>finesse</trait>
-          <trait>saint</trait>
+          <trait ref="trait-finesse">finesse</trait>
+          <trait ref="trait-saint">saint</trait>
           <trait>magique</trait>
           <trait>allonge 0 m</trait>
         </traits>
@@ -69,7 +69,7 @@
         <name>rayon de lumière stellaire</name>
         <bonus>+7</bonus>
         <traits>
-          <trait>saint</trait>
+          <trait ref="trait-saint">saint</trait>
           <trait>lumière</trait>
           <trait>portée 9 m</trait>
         </traits>
@@ -97,7 +97,7 @@
       <special type="activity" actions="2">
         <name>Déflagration de lumière stellaire</name>
         <traits>
-          <trait>saint</trait>
+          <trait ref="trait-saint">saint</trait>
           <trait>lumière</trait>
         </traits>
         <description>� Le lyrakien libère une déflagration de lumière stellaire sainte dans une émanation de 1,5 m� Les ennemis dans la zone d’effet subissent 2d6 dégâts d’esprit (jet de Réflexes basique DD 17)� Le lyrakien doit ensuite attendre 1d4 rounds pour pouvoir utiliser de nouveau Déflagration de lumière stellaire ou son attaque à distance rayon de lumière stellaire�</description>

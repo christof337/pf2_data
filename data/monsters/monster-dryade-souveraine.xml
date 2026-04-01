@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>13</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
       <trait>BOIS</trait>
-      <trait>FÉE</trait>
+      <trait ref="trait-fee">FÉE</trait>
       <trait>NYMPHE</trait>
       <trait>PLANTE</trait>
     </creatureTraits>
@@ -81,7 +81,7 @@
         <name>branche</name>
         <bonus>+27</bonus>
         <traits>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
           <trait>magique</trait>
         </traits>
         <damages>
@@ -97,7 +97,7 @@
         <traits>
           <trait>facteur de portée 18 m</trait>
           <trait>plante</trait>
-          <trait>primordiale</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <damages>
           <damage>
@@ -142,7 +142,7 @@
       <special type="activity" actions="1">
         <name>Changement de forme</name>
         <traits>
-          <trait>primordiale</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>(p� 358)</description>
       </special>
@@ -152,7 +152,7 @@
           <trait>émotion</trait>
           <trait>mental</trait>
           <trait>mise hors de combat</trait>
-          <trait>primordiale</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
           <trait>visuel</trait>
         </traits>
         <description>� En cas d’échec au jet de sauvegarde, si la cible était déjà affectée par la beauté de la dryade souveraine, elle ne peut utiliser d’action hostile contre elle pendant 1 h�</description>
@@ -160,7 +160,7 @@
       <special type="activity" actions="2">
         <name>Fusion avec les arbres</name>
         <traits>
-          <trait>primordiale</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>� Comme la dryade, mais la dryade souveraine peut entrer dans son domaine extradimensionnel, et le quit- ter, à partir de n’importe quel arbre de son domaine et, quand elle le fait, elle peut amener avec elle jusqu’à huit autres créatures�</description>
       </special>
@@ -169,7 +169,7 @@
         <traits>
           <trait>émotion</trait>
           <trait>mental</trait>
-          <trait>primordiale</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description/>
       </special>

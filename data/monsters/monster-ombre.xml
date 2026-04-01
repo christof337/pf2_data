@@ -47,7 +47,7 @@
         <name>main d’ombre</name>
         <bonus>+15</bonus>
         <traits>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
           <trait>magique</trait>
         </traits>
         <damages>
@@ -70,7 +70,7 @@
       <special type="activity" actions="1">
         <name>Vol d’ombre</name>
         <traits>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
         </traits>
         <description>; **Conditions. **Au cours de son action précédente, l’ombre a touché une créature vivante avec une Frappe de main d’ombre ;</description>
       </special>

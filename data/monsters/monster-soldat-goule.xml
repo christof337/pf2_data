@@ -93,14 +93,14 @@
         <traits>
           <trait>audible</trait>
           <trait>linguistique</trait>
-          <trait>occulte</trait>
+          <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>DD 18</description>
       </special>
       <special>
         <name>Savoir d’outre‑tombe</name>
         <traits>
-          <trait>occulte</trait>
+          <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>modificateur de compétence +8</description>
       </special>

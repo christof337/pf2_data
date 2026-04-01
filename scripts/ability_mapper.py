@@ -215,9 +215,8 @@ def generate_abilities_xml(abilities, output_path):
     root.set(f"{{{XSI_NS}}}noNamespaceSchemaLocation", "../../schema/ability.xsd")
 
     for ab in abilities:
-        ab_node = etree.SubElement(root, "ability")
+        ab_node = etree.SubElement(root, "ability", id=ab['id'])
 
-        etree.SubElement(ab_node, "id").text = ab['id']
         etree.SubElement(ab_node, "name").text = ab['name']
 
         if ab['actions'] is not None:

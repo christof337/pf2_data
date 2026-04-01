@@ -62,8 +62,8 @@
         <bonus>+28</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>finesse</trait>
-          <trait>impie</trait>
+          <trait ref="trait-finesse">finesse</trait>
+          <trait ref="trait-impie">impie</trait>
           <trait>magique</trait>
         </traits>
         <damages>

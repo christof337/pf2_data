@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>12</level>
     <creatureTraits>
-      <trait type="size">GRANDE</trait>
+      <trait type="size" ref="trait-grande">GRANDE</trait>
       <trait>AZATA</trait>
-      <trait>CÉLESTE</trait>
-      <trait>SAINT</trait>
+      <trait ref="trait-celeste">CÉLESTE</trait>
+      <trait ref="trait-saint">SAINT</trait>
       <trait>TERRE</trait>
     </creatureTraits>
     <perception>
@@ -82,7 +82,7 @@
         <name>Libérer la terre</name>
         <traits>
           <trait>concentration</trait>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
           <trait>terre</trait>
         </traits>
         <description>� L’aeolaeka invoque un tourbillon de pierres et crée une avalanche de pierres sur une ligne de 18 m� Les créatures qui se trouvent sur la ligne d’effet subissent 10d6 dégâts contondants (jet de Réflexes DD 35)� La zone affectée devient un terrain difficile pendant 24 h au terme desquelles les pierres se désagrègent� L’aeolaeka ne peut plus Libérer la terre pen- dant 1d4 rounds�</description>

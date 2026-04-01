@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>1</level>
     <creatureTraits>
-      <trait type="size">TRÈS PETITE</trait>
-      <trait>PSYCHOPOMPE</trait>
-      <trait>VEILLEUR</trait>
+      <trait type="size" ref="trait-tres-petite">TRÈS PETITE</trait>
+      <trait ref="trait-psychopompe">PSYCHOPOMPE</trait>
+      <trait ref="trait-veilleur">VEILLEUR</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -67,7 +67,7 @@
         <bonus>+6</bonus>
         <traits>
           <trait>allonge 0 m</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
           <trait>magique</trait>
         </traits>
         <damages>
@@ -95,7 +95,7 @@
         <name>Changement de forme</name>
         <traits>
           <trait>concentration</trait>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
           <trait>métamorphose</trait>
         </traits>
         <description>� Le nosoi prend l’apparence d’un corbeau ou d’un oiseau chanteur (p� 358)� Cela ne change pas sa Vitesse ni les bonus d’attaque et de dégâts de ses Frappes�</description>
@@ -105,7 +105,7 @@
         <traits>
           <trait>audible</trait>
           <trait>concentration</trait>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
           <trait>mental</trait>
           <trait>mise hors de combat</trait>
         </traits>

@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>12</level>
     <creatureTraits>
-      <trait type="size">TRÈS GRANDE</trait>
+      <trait type="size" ref="trait-tres-grande">TRÈS GRANDE</trait>
       <trait>GÉANTE</trait>
       <trait>HUMANOÏDE</trait>
-      <trait>MUTANT</trait>
+      <trait ref="trait-mutant">MUTANT</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -97,7 +97,7 @@
         <name>rocher</name>
         <bonus>+23</bonus>
         <traits>
-          <trait>brutal</trait>
+          <trait ref="trait-brutal">brutal</trait>
           <trait>facteur de portée 36 m</trait>
         </traits>
         <damages>
@@ -113,7 +113,7 @@
         <name>Charge puissante</name>
         <description>Le grand cyclope Marche rapi- dement deux fois puis effectue une Frappe de corne� S’il s’est déplacé d’au moins 6 m à partir de sa position de départ, les dégâts de la Frappe sont augmentés à 3d10+20�</description>
       </special>
-      <special type="activity" actions="1">
+      <special type="activity" actions="1" ref="ability-projection-de-rochers">
         <name>Projection de rochers</name>
         <traits>
           <trait>p� 360</trait>

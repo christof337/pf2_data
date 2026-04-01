@@ -6,8 +6,8 @@
     <type>CRÉATURE</type>
     <level>8</level>
     <creatureTraits>
-      <trait type="size">TRÈS GRANDE</trait>
-      <trait>ANIMAL</trait>
+      <trait type="size" ref="trait-tres-grande">TRÈS GRANDE</trait>
+      <trait ref="trait-animal">ANIMAL</trait>
     </creatureTraits>
     <perception>
       <bonus>+17</bonus>
@@ -83,7 +83,7 @@
       </strike>
     </strikes>
     <offensiveAbilities>
-      <special type="activity" actions="1">
+      <special type="activity" actions="1" ref="ability-constriction-superieure">
         <name>Constriction supérieure</name>
         <description>1d10+7 contondants, DD 26 (p� 359)</description>
       </special>
@@ -95,7 +95,7 @@
         <name>Conditions</name>
         <description>L’anaconda géant a empoigné ou entravé dans ses mâchoires une créature de taille Grande ou inférieure ;</description>
       </special>
-      <special type="activity" actions="1">
+      <special type="activity" actions="1" ref="ability-gober">
         <name>Gober</name>
         <traits>
           <trait>attaque</trait>

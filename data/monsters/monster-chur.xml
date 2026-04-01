@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>6</level>
     <creatureTraits>
-      <trait type="size">PETITE</trait>
-      <trait>ANGE</trait>
-      <trait>CÉLESTE</trait>
-      <trait>SAINT</trait>
+      <trait type="size" ref="trait-petite">PETITE</trait>
+      <trait ref="trait-ange">ANGE</trait>
+      <trait ref="trait-celeste">CÉLESTE</trait>
+      <trait ref="trait-saint">SAINT</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -53,9 +53,9 @@
         <bonus>+14</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
           <trait>magique</trait>
-          <trait>saint</trait>
+          <trait ref="trait-saint">saint</trait>
         </traits>
         <damages>
           <damage>
@@ -70,7 +70,7 @@
         <traits>
           <trait>magique</trait>
           <trait>portée 27 m</trait>
-          <trait>saint</trait>
+          <trait ref="trait-saint">saint</trait>
           <trait>son</trait>
         </traits>
         <damages>
@@ -111,7 +111,7 @@
         <name>Harmoniser</name>
         <traits>
           <trait>concentration</trait>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
           <trait>son</trait>
         </traits>
         <description>� L’ange du Chœur fait bénéficier de son harmonie à un autre ange du Chœur allié qui se trouve dans son aura d’harmonisation� Lors de son pro- chain tour, cet allié peut dépenser son sort de rang 3 *explo‑ sion bruyante* pour lancer à la place *tranquiliser*, *heroïsme*, ou *explosion bruyante* au rang 4� Si cet allié cumule les effets de l’action Harmoniser d’au moins cinq autres anges du Chœur, il peut choisir de lancer à la place *décret divin*�</description>

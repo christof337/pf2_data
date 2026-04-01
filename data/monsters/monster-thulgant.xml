@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>18</level>
     <creatureTraits>
-      <trait type="size">GRANDE</trait>
+      <trait type="size" ref="trait-grande">GRANDE</trait>
       <trait>FIÉLON</trait>
-      <trait>IMPIE</trait>
-      <trait>QLIPPOTH</trait>
+      <trait ref="trait-impie">IMPIE</trait>
+      <trait ref="trait-qlippoth">QLIPPOTH</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -33,7 +33,7 @@
         <bonus>+35</bonus>
         <traits>
           <trait>allonge 3 m</trait>
-          <trait>impie</trait>
+          <trait ref="trait-impie">impie</trait>
           <trait>magique</trait>
         </traits>
         <damages>
@@ -53,7 +53,7 @@
         <traits>
           <trait>agile</trait>
           <trait>allonge 3 m</trait>
-          <trait>impie</trait>
+          <trait ref="trait-impie">impie</trait>
           <trait>magique</trait>
         </traits>
         <damages>
@@ -98,11 +98,11 @@
       <special type="activity" actions="1">
         <name>Chasseur de démon</name>
         <traits>
-          <trait>occulte</trait>
+          <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>� Le thulgant fait souffrir un démon situé dans les 9 m des effets de sa vulnérabilité au péché�</description>
       </special>
-      <special type="activity" actions="1">
+      <special type="activity" actions="1" ref="ability-constriction-superieure">
         <name>Constriction supérieure</name>
         <description>2d6+17 contondants plus 1d6 d’acide, DD 40 (p� 359)</description>
       </special>

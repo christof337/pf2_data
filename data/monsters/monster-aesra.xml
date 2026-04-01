@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>7</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
       <trait>ARCHON</trait>
-      <trait>CÉLESTE</trait>
-      <trait>SAINT</trait>
+      <trait ref="trait-celeste">CÉLESTE</trait>
+      <trait ref="trait-saint">SAINT</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -76,7 +76,7 @@
         <name>flamme de justice</name>
         <bonus>+18</bonus>
         <traits>
-          <trait>saint</trait>
+          <trait ref="trait-saint">saint</trait>
           <trait>magique</trait>
           <trait>polyvalent P</trait>
         </traits>
@@ -95,7 +95,7 @@
         <name>flamme de justice</name>
         <bonus>+15</bonus>
         <traits>
-          <trait>saint</trait>
+          <trait ref="trait-saint">saint</trait>
           <trait>magique</trait>
           <trait>facteur de portée 9 m</trait>
           <trait>polyvalent P</trait>
@@ -132,9 +132,9 @@
       <special type="activity" actions="2">
         <name>Coup de taille enflammé</name>
         <traits>
-          <trait>divine</trait>
-          <trait>feu</trait>
-          <trait>saint</trait>
+          <trait ref="trait-divine">divine</trait>
+          <trait ref="trait-feu">feu</trait>
+          <trait ref="trait-saint">saint</trait>
           <trait>manipulation</trait>
         </traits>
         <description>� L’aesra balaie l’air de son épée, créant un cône de flammes sacrées de 4,5 m qui inflige 5d6 dégâts de feu (jet de Réflexes basique DD 23)�</description>
@@ -142,8 +142,8 @@
       <special>
         <name>Flamme de justice</name>
         <traits>
-          <trait>divine</trait>
-          <trait>saint</trait>
+          <trait ref="trait-divine">divine</trait>
+          <trait ref="trait-saint">saint</trait>
         </traits>
         <description>� La vertu d’un aesra se manifeste sous la forme d’une épée de feu à deux mains� S’il est désarmé ou s’il la lance comme une arme à distance, la flamme de justice disparaît après être tombée par terre ou avoir infligé des dégâts, et elle réapparaît instantanément dans les mains de l’aesra� Sur un succès critique, la cible subit également 2d6 dégâts de feu persistants�</description>
       </special>

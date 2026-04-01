@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>7</level>
     <creatureTraits>
-      <trait type="size">GRANDE</trait>
+      <trait type="size" ref="trait-grande">GRANDE</trait>
       <trait>AZATA</trait>
-      <trait>CÉLESTE</trait>
-      <trait>SAINT</trait>
+      <trait ref="trait-celeste">CÉLESTE</trait>
+      <trait ref="trait-saint">SAINT</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -70,7 +70,7 @@
         <name>*épée longue*</name>
         <bonus>+18</bonus>
         <traits>
-          <trait>saint</trait>
+          <trait ref="trait-saint">saint</trait>
           <trait>magique</trait>
           <trait>polyvalent P</trait>
         </traits>
@@ -90,7 +90,7 @@
         <bonus>+17</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>saint</trait>
+          <trait ref="trait-saint">saint</trait>
           <trait>magique</trait>
           <trait>allonge 3 m</trait>
         </traits>

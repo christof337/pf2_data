@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>4</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
-      <trait>ERRANT</trait>
-      <trait>ESPRIT</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
+      <trait ref="trait-errant">ERRANT</trait>
+      <trait ref="trait-esprit">ESPRIT</trait>
       <trait>ÉTHÉRÉ</trait>
       <trait>INTANGIBLE</trait>
     </creatureTraits>

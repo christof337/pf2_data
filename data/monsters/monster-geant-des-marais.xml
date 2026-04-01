@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>8</level>
     <creatureTraits>
-      <trait type="size">GRANDE</trait>
-      <trait>AMPHIBIE</trait>
+      <trait type="size" ref="trait-grande">GRANDE</trait>
+      <trait ref="trait-amphibie">AMPHIBIE</trait>
       <trait>EAU</trait>
-      <trait>GÉANT</trait>
+      <trait ref="trait-geant">GÉANT</trait>
       <trait>HUMANOÏDE</trait>
     </creatureTraits>
     <perception>
@@ -83,7 +83,7 @@
         <traits>
           <trait>eau</trait>
           <trait>portée 18 m</trait>
-          <trait>primordiale</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <damages>
           <damage>
@@ -110,7 +110,7 @@
         <name>Noyer la proie</name>
         <traits>
           <trait>eau</trait>
-          <trait>primordiale</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>; **Conditions.** Une créature est à terre et à portée d’allonge du géant des marais ;</description>
       </special>

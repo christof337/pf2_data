@@ -66,7 +66,7 @@
         <name>Aura d’infortune</name>
         <traits>
           <trait>aura</trait>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
           <trait>infortune</trait>
         </traits>
         <description>6 m� Comme la Faucheuse�</description>
@@ -78,7 +78,7 @@
       <special type="reaction">
         <name>Mort qui rôde</name>
         <traits>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
           <trait>téléportation</trait>
         </traits>
         <description>� Comme la Faucheuse mais la créature qui déclenche cet effet doit se trouver dans un rayon de 18 m�</description>
@@ -126,7 +126,7 @@
       <special>
         <name>Imprégnation d’armes</name>
         <traits>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
         </traits>
         <description>� Entre les mains d’une mort inférieure, n’importe quelle faux gagne le trait agile, ne peut être désarmée et devient une* faux acérée de frappe supérieure +2*�</description>
       </special>

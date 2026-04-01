@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>9</level>
     <creatureTraits>
-      <trait type="size">TRÈS GRANDE</trait>
-      <trait>ÉLÉMENTAIRE</trait>
-      <trait>FEU</trait>
+      <trait type="size" ref="trait-tres-grande">TRÈS GRANDE</trait>
+      <trait ref="trait-elementaire">ÉLÉMENTAIRE</trait>
+      <trait ref="trait-feu">FEU</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -88,8 +88,8 @@
       <special type="activity" actions="2">
         <name>Souffler du feu</name>
         <traits>
-          <trait>feu</trait>
-          <trait>primordiale</trait>
+          <trait ref="trait-feu">feu</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>� Le wyrm de feu souffle un cône de feu de 9 m qui inflige 7d6 dégâts de feu et 2d8 dégâts de feu persistants à toutes les créatures qui se trouvent dans la zone d’effet (jet de Réflexes basique DD 28)� Le wyrm de feu ne peut plus utiliser souffler du feu pendant 1d4 rounds�</description>
       </special>

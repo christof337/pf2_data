@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>9</level>
     <creatureTraits>
-      <trait type="size">GRANDE</trait>
-      <trait>AMPHIBIE</trait>
-      <trait>FÉE</trait>
+      <trait type="size" ref="trait-grande">GRANDE</trait>
+      <trait ref="trait-amphibie">AMPHIBIE</trait>
+      <trait ref="trait-fee">FÉE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -115,7 +115,7 @@
         </traits>
         <description>� La cible ne peut pas se remettre de l’état fatigué causé par mortéclat tant que la maladie n’est pas soignée� Mortéclat prend le trait virulent contre les animaux et les plantes ; **Jet de sauvegarde** Vigueur DD 28 ; **Stade 1** Porteur sans effet négatif (1 jour) ; **Stade 2** drainé 1 et fatigué (1 jour) ; **Stade 3** drainé 2 et fatigué (1 jour) ; **Stade 4** mort</description>
       </special>
-      <special type="activity" actions="3">
+      <special type="activity" actions="3" ref="ability-pietinement">
         <name>Piétinement</name>
         <description>Moyenne ou plus petite, sabot, DD 28 (p� 360)</description>
       </special>

@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>11</level>
     <creatureTraits>
-      <trait type="size">GRANDE</trait>
+      <trait type="size" ref="trait-grande">GRANDE</trait>
       <trait>DIVIN</trait>
-      <trait>DRAGON</trait>
-      <trait>IMPIE</trait>
+      <trait ref="trait-dragon">DRAGON</trait>
+      <trait ref="trait-impie">IMPIE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -91,8 +91,8 @@
         <bonus>+24</bonus>
         <traits>
           <trait>allonge 3 m</trait>
-          <trait>feu</trait>
-          <trait>impie</trait>
+          <trait ref="trait-feu">feu</trait>
+          <trait ref="trait-impie">impie</trait>
           <trait>magique</trait>
         </traits>
         <damages>
@@ -111,8 +111,8 @@
         <bonus>+24</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>feu</trait>
-          <trait>impie</trait>
+          <trait ref="trait-feu">feu</trait>
+          <trait ref="trait-impie">impie</trait>
           <trait>magique</trait>
         </traits>
         <damages>
@@ -131,8 +131,8 @@
         <bonus>+22</bonus>
         <traits>
           <trait>allonge 4,5 m</trait>
-          <trait>feu</trait>
-          <trait>impie</trait>
+          <trait ref="trait-feu">feu</trait>
+          <trait ref="trait-impie">impie</trait>
           <trait>magique</trait>
         </traits>
         <damages>
@@ -174,9 +174,9 @@
       <special type="activity" actions="2">
         <name>Souffle de feu infernal</name>
         <traits>
-          <trait>divine</trait>
-          <trait>feu</trait>
-          <trait>impie</trait>
+          <trait ref="trait-divine">divine</trait>
+          <trait ref="trait-feu">feu</trait>
+          <trait ref="trait-impie">impie</trait>
         </traits>
         <description>Le dragon crache un feu infernal qui inflige 12d6 dégâts de feu dans un cône de 12 m (jet de Réflexes basique DD 30)� Le dragon ne peut plus utiliser Souffle de feu infernal pendant 1d4 rounds�</description>
       </special>

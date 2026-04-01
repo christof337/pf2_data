@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>3</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
-      <trait>CHANGELIN</trait>
-      <trait>HUMAIN</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
+      <trait ref="trait-changelin">CHANGELIN</trait>
+      <trait ref="trait-humain">HUMAIN</trait>
       <trait>HUMANOÏDE</trait>
     </creatureTraits>
     <perception>

@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>0</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
-      <trait>AMPHIBIE</trait>
-      <trait>AZARKETI</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
+      <trait ref="trait-amphibie">AMPHIBIE</trait>
+      <trait ref="trait-azarketi">AZARKETI</trait>
       <trait>HUMANOÏDE</trait>
     </creatureTraits>
     <perception>
@@ -76,7 +76,7 @@
         <bonus>+7</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
           <trait>jet 3 m</trait>
           <trait>polyvalent T</trait>
         </traits>
@@ -92,7 +92,7 @@
         <bonus>+7</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
           <trait>jet 3 m</trait>
           <trait>polyvalent T</trait>
         </traits>

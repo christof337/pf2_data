@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>3</level>
     <creatureTraits>
-      <trait type="size">GRANDE</trait>
+      <trait type="size" ref="trait-grande">GRANDE</trait>
       <trait>BÊTE</trait>
-      <trait>CENTAURE</trait>
+      <trait ref="trait-centaure">CENTAURE</trait>
       <trait>HUMANOÏDE</trait>
     </creatureTraits>
     <perception>
@@ -91,7 +91,7 @@
         <name>Conditions</name>
         <description>L’herboriste centaure possède au moins un sachet d’herbes ;</description>
       </special>
-      <special type="activity" actions="3">
+      <special type="activity" actions="3" ref="ability-pietinement">
         <name>Piétinement</name>
         <description>Moyenne ou plus petite, sabot, DD 18 (p� 360)</description>
       </special>

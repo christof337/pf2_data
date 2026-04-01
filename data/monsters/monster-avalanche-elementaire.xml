@@ -6,8 +6,8 @@
     <type>CRÉATURE</type>
     <level>11</level>
     <creatureTraits>
-      <trait type="size">TRÈS GRANDE</trait>
-      <trait>ÉLÉMENTAIRE</trait>
+      <trait type="size" ref="trait-tres-grande">TRÈS GRANDE</trait>
+      <trait ref="trait-elementaire">ÉLÉMENTAIRE</trait>
       <trait>TERRE</trait>
     </creatureTraits>
     <perception>
@@ -62,7 +62,7 @@
         <name>Pointes de pierre</name>
         <traits>
           <trait>aura</trait>
-          <trait>primordiale</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
           <trait>terre</trait>
         </traits>
         <description>3 m� Comme le broyeur de pierre mais 2d8 dégâts perforants�</description>
@@ -92,7 +92,7 @@
         <name>rocher</name>
         <bonus>+24</bonus>
         <traits>
-          <trait>brutal</trait>
+          <trait ref="trait-brutal">brutal</trait>
           <trait>facteur de portée 24 m</trait>
         </traits>
         <damages>
@@ -108,7 +108,7 @@
         <name>Glisse à travers la terre</name>
         <description>Comme le molosse de tourbe�</description>
       </special>
-      <special type="activity" actions="3">
+      <special type="activity" actions="3" ref="ability-pietinement">
         <name>Piétinement</name>
         <description>Grande ou plus petite, poing, DD 30 (p� 360)</description>
       </special>

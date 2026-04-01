@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>17</level>
     <creatureTraits>
-      <trait type="size">GIGANTESQUE</trait>
-      <trait>AMPHIBIE</trait>
-      <trait>DRAGON</trait>
-      <trait>PRIMORDIALE</trait>
+      <trait type="size" ref="trait-gigantesque">GIGANTESQUE</trait>
+      <trait ref="trait-amphibie">AMPHIBIE</trait>
+      <trait ref="trait-dragon">DRAGON</trait>
+      <trait ref="trait-primordiale">PRIMORDIALE</trait>
     </creatureTraits>
     <perception>
       <bonus>+30</bonus>
@@ -173,7 +173,7 @@
         <name>Souffle empoisonné</name>
         <traits>
           <trait>poison</trait>
-          <trait>primordiale</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>Comme le jeune dragon cornu, mais cône de 18 m, 18d6 dégâts de poison et DD 37�</description>
       </special>

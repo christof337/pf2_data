@@ -56,7 +56,7 @@
         <bonus>+12</bonus>
         <traits>
           <trait>facteur de portée 24 m</trait>
-          <trait>feu</trait>
+          <trait ref="trait-feu">feu</trait>
           <trait>magique</trait>
         </traits>
         <damages>
@@ -75,7 +75,7 @@
       <special type="activity" actions="1">
         <name>Brûler vif</name>
         <traits>
-          <trait>feu</trait>
+          <trait ref="trait-feu">feu</trait>
         </traits>
         <description>� La statue plonge une créature qu’elle a empoignée ou entravée dans les char- bons incandescents de son brasero� La cible subit 3d8 dégâts de feu et 1d8 dégâts de feu persistants�</description>
       </special>

@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>3</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
-      <trait>AMPHIBIE</trait>
-      <trait>BOURBIÉRIN</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
+      <trait ref="trait-amphibie">AMPHIBIE</trait>
+      <trait ref="trait-bourbierin">BOURBIÉRIN</trait>
       <trait>HUMANOÏDE</trait>
     </creatureTraits>
     <perception>

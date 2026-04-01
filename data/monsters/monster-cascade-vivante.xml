@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>5</level>
     <creatureTraits>
-      <trait type="size">GRANDE</trait>
-      <trait>AQUATIQUE</trait>
+      <trait type="size" ref="trait-grande">GRANDE</trait>
+      <trait ref="trait-aquatique">AQUATIQUE</trait>
       <trait>EAU</trait>
-      <trait>ÉLÉMENTAIRE</trait>
+      <trait ref="trait-elementaire">ÉLÉMENTAIRE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -59,7 +59,7 @@
         <name>Tremper</name>
         <traits>
           <trait>eau</trait>
-          <trait>primordiale</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>� L’élémentaire éteint tous les feux dans une émanation de 1,5 m� Elle éteint automatiquement tous les feux non magiques et tente de contrer les feux magiques (modificateur de contre +14)�</description>
       </special>

@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>16</level>
     <creatureTraits>
-      <trait type="size">TRÈS GRANDE</trait>
+      <trait type="size" ref="trait-tres-grande">TRÈS GRANDE</trait>
       <trait>ARCHON</trait>
-      <trait>CÉLESTE</trait>
-      <trait>SAINT</trait>
+      <trait ref="trait-celeste">CÉLESTE</trait>
+      <trait ref="trait-saint">SAINT</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -33,7 +33,7 @@
         <name>coup</name>
         <bonus>+30</bonus>
         <traits>
-          <trait>saint</trait>
+          <trait ref="trait-saint">saint</trait>
           <trait>magique) **Dégâts **3d12+14 contondants
                                         plus 1d6 de feu
                                       **À distance**
@@ -78,7 +78,7 @@
         <name>Focaliser le regard</name>
         <traits>
           <trait>concentration</trait>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
           <trait>mise hors de combat</trait>
           <trait>visuel</trait>
         </traits>
@@ -87,10 +87,10 @@
       <special type="activity" actions="2">
         <name>Rayons enflammés</name>
         <traits>
-          <trait>divine</trait>
-          <trait>feu</trait>
-          <trait>saint</trait>
-          <trait>esprit</trait>
+          <trait ref="trait-divine">divine</trait>
+          <trait ref="trait-feu">feu</trait>
+          <trait ref="trait-saint">saint</trait>
+          <trait ref="trait-esprit">esprit</trait>
         </traits>
         <description>� Le giylea se met à tourner furieusement sur lui-même, projetant une pluie de feu divin� Toutes les créatures dans une émanation de 18 m subissent 12d6 dégâts de feu et 5d6 dégâts d’esprit (jet de Réflexes basique DD 37)� Le doit alors attendre 1d4 rounds avant de pouvoir réutiliser ses Rayons enflammés�</description>
       </special>

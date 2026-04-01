@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>1</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
       <trait>HUMANOÏDE</trait>
-      <trait>ORC</trait>
+      <trait ref="trait-orc">ORC</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -50,7 +50,7 @@
     </speeds>
     <strikes/>
     <offensiveAbilities>
-      <special type="reaction">
+      <special type="reaction" ref="ability-ferocite">
         <name>Férocité</name>
         <traits>
           <trait>p� 359</trait>

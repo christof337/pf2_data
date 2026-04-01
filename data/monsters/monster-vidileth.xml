@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>14</level>
     <creatureTraits>
-      <trait type="size">GRANDE</trait>
-      <trait>ABERRATION</trait>
-      <trait>AQUATIQUE</trait>
+      <trait type="size" ref="trait-grande">GRANDE</trait>
+      <trait ref="trait-aberration">ABERRATION</trait>
+      <trait ref="trait-aquatique">AQUATIQUE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -170,7 +170,7 @@
         <name>Absorption de la mémoire</name>
         <traits>
           <trait>mental</trait>
-          <trait>occulte</trait>
+          <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>� Quand un vidileth porte une Frappe de crocs, sa cible doit réussir un jet de Volonté DD 34 ou subir 3d6 dégâts mentaux� Le vidileth gagne une quantité de points de vie temporaires égale aux dégâts infligés, et il découvre certains souvenirs de la créature (au choix du MJ)�</description>
       </special>
@@ -186,7 +186,7 @@
         <name>Lance mentale</name>
         <traits>
           <trait>malédiction</trait>
-          <trait>occulte</trait>
+          <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>� Une créature touchée par les tentacules du vidileth doit réussir un jet de Volonté DD 34, ou être ralentie 1 en cas d’échec, ou ralentie 2 en cas d’échec critique� À la fin de chacun de ses tours, la victime réduit de 1 l’intensité de cet état�</description>
       </special>
@@ -195,7 +195,7 @@
         <traits>
           <trait>malédiction</trait>
           <trait>manipulation</trait>
-          <trait>occulte</trait>
+          <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>�</description>
       </special>
@@ -206,7 +206,7 @@
       <special>
         <name>Suggestion retardée</name>
         <traits>
-          <trait>occulte</trait>
+          <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>� Quand un vidileth réussit à lancer le sort *domination* sur une créa- ture, le sort *suggestion* se déclenche à la fin de la durée du sort *domination*� Généralement, cette *suggestion* permet au vidileth de faire revenir sa cible à lui afin qu’il puisse à nouveau la soumettre à *domination*, mais il peut également lui donner d’autres ordres�</description>
       </special>

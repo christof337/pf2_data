@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>19</level>
     <creatureTraits>
-      <trait type="size">GIGANTESQUE</trait>
+      <trait type="size" ref="trait-gigantesque">GIGANTESQUE</trait>
       <trait>ARCANIQUE</trait>
-      <trait>DRAGON</trait>
+      <trait ref="trait-dragon">DRAGON</trait>
     </creatureTraits>
     <perception>
       <bonus>+30</bonus>

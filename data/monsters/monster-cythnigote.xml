@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>1</level>
     <creatureTraits>
-      <trait type="size">TRÈS PETITE</trait>
+      <trait type="size" ref="trait-tres-petite">TRÈS PETITE</trait>
       <trait>FIÉLON</trait>
-      <trait>IMPIE</trait>
-      <trait>QLIPPOTH</trait>
+      <trait ref="trait-impie">IMPIE</trait>
+      <trait ref="trait-qlippoth">QLIPPOTH</trait>
     </creatureTraits>
     <perception>
       <bonus>+5</bonus>
@@ -42,8 +42,8 @@
         <traits>
           <trait>agile</trait>
           <trait>allonge 0 m</trait>
-          <trait>finesse</trait>
-          <trait>impie</trait>
+          <trait ref="trait-finesse">finesse</trait>
+          <trait ref="trait-impie">impie</trait>
           <trait>magique</trait>
         </traits>
         <damages>
@@ -65,7 +65,7 @@
           <trait>concentration</trait>
           <trait>émotion</trait>
           <trait>mental</trait>
-          <trait>occulte</trait>
+          <trait ref="trait-occulte">occulte</trait>
           <trait>terreur</trait>
           <trait>visuel</trait>
         </traits>

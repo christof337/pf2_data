@@ -6,8 +6,8 @@
     <type>CRÉATURE</type>
     <level>9</level>
     <creatureTraits>
-      <trait type="size">GRANDE</trait>
-      <trait>ABERRATION</trait>
+      <trait type="size" ref="trait-grande">GRANDE</trait>
+      <trait ref="trait-aberration">ABERRATION</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -79,7 +79,7 @@
         <traits>
           <trait>émotion</trait>
           <trait>mental</trait>
-          <trait>occulte</trait>
+          <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>� Une créature touchée par le tentacule d’un irnakurse est submergée d’images ignobles d’une existence anéantie et doit réussir un jet de Volonté DD 28 ou être étourdie 2 (ou étourdie 4 en cas d’échec critique)� Après avoir effectué ce jet de sauvegarde, la créature est immunisée contre fouet mental pendant 24 h�</description>
       </special>

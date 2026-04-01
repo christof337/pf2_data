@@ -66,7 +66,7 @@
         <name>cadavre</name>
         <bonus>+17</bonus>
         <traits>
-          <trait>brutal</trait>
+          <trait ref="trait-brutal">brutal</trait>
           <trait>facteur de portée 9 m</trait>
         </traits>
         <damages>

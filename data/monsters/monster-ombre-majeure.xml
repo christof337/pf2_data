@@ -47,7 +47,7 @@
         <name>main d’ombre</name>
         <bonus>+18</bonus>
         <traits>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
           <trait>magique</trait>
         </traits>
         <damages>
@@ -77,7 +77,7 @@
       <special type="activity" actions="1">
         <name>Vol d’ombre</name>
         <traits>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
         </traits>
         <description>� Comme l’ombre, mais la cible devient affaiblie 2 (ou affaiblie 3 sur un coup critique)�</description>
       </special>

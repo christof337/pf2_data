@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>5</level>
     <creatureTraits>
-      <trait type="size">GRANDE</trait>
-      <trait>ANIMAL</trait>
-      <trait>AQUATIQUE</trait>
+      <trait type="size" ref="trait-grande">GRANDE</trait>
+      <trait ref="trait-animal">ANIMAL</trait>
+      <trait ref="trait-aquatique">AQUATIQUE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -51,7 +51,7 @@
       </strike>
     </strikes>
     <offensiveAbilities>
-      <special type="activity" actions="1">
+      <special type="activity" actions="1" ref="ability-gober">
         <name>Gober</name>
         <traits>
           <trait>attaque</trait>

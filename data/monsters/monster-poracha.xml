@@ -6,7 +6,7 @@
     <type>CRÉATURE</type>
     <level>4</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
       <trait>BÊTE</trait>
     </creatureTraits>
     <perception>
@@ -67,7 +67,7 @@
         <name>mâchoires</name>
         <bonus>+13</bonus>
         <traits>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
           <trait>magique</trait>
         </traits>
         <damages>
@@ -82,7 +82,7 @@
         <bonus>+13</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
           <trait>magique</trait>
         </traits>
         <damages>
@@ -101,7 +101,7 @@
       <special type="activity" actions="2">
         <name>Fusion avec les objets</name>
         <traits>
-          <trait>primordiale</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>Le poracha touche un objet adjacent qui a un volume suffisant pour le contenir� Il fusionne avec cet objet indéfiniment et tant qu’il est à l’intérieur, le temps passe pour lui exceptionnellement lentement et il n’a qu’une perception limitée du monde extérieur� Le poracha peut uniquement utiliser percep- tion des vibrations pour savoir ce qui se passe à l’extérieur de l’objet� Il ne peut utiliser que des actions mentales ou Escapade ; s’il utilise Escapade, il quitte l’objet et réapparaît où il veut� Si une créature effectue une Frappe contre l’objet, le poracha en est expulsé indemne�</description>
       </special>

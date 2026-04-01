@@ -72,7 +72,7 @@
         <name>Absorption</name>
         <traits>
           <trait>mort</trait>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
           <trait>néant</trait>
         </traits>
         <trigger>Le guerrlier se déplace dans l’espace d’une créature mourante ;</trigger>
@@ -90,7 +90,7 @@
         <name>Chute</name>
         <description>Une créature touchée par la Frappe de boule de ferraille du guerrlier doit faire un jet de Réflexes DD 37� Sur un échec, elle tombe à terre� Si elle volait, elle tombe de 36 m� Elle subit des dégâts de chute et se retrouve à terre si cela lui fait atteindre le sol� Sur un échec critique, la cible est coincée sous un monticule de débris (DD 37 pour S’échapper)�</description>
       </special>
-      <special type="activity" actions="3">
+      <special type="activity" actions="3" ref="ability-pietinement">
         <name>Piétinement</name>
         <description>Très Grande ou plus petite, vague de cadavres, DD 37 (p� 360)</description>
       </special>

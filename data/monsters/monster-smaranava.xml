@@ -6,7 +6,7 @@
     <type>CRÉATURE</type>
     <level>7</level>
     <creatureTraits>
-      <trait type="size">GRANDE</trait>
+      <trait type="size" ref="trait-grande">GRANDE</trait>
       <trait>BÊTE</trait>
     </creatureTraits>
     <perception>
@@ -52,7 +52,7 @@
         <name>crochets</name>
         <bonus>+20</bonus>
         <traits>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
           <trait>magique</trait>
         </traits>
         <damages>
@@ -68,7 +68,7 @@
         <traits>
           <trait>agile</trait>
           <trait>allonge 4,5 m</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
           <trait>magique</trait>
         </traits>
         <damages>

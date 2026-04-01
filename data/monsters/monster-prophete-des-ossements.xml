@@ -87,7 +87,7 @@
         <name>crochets</name>
         <bonus>+17</bonus>
         <traits>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
         </traits>
         <damages>
           <damage>
@@ -126,7 +126,7 @@
       <special type="activity" actions="3">
         <name>Résurrection de serpent</name>
         <traits>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
         </traits>
         <description>; **Fréquence** 1 fois/jour ;</description>
       </special>

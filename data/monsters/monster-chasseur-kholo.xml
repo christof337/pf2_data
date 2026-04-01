@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>2</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
       <trait>HUMANOÏDE</trait>
-      <trait>KHOLO</trait>
+      <trait ref="trait-kholo">KHOLO</trait>
     </creatureTraits>
     <perception>
       <bonus>+7</bonus>

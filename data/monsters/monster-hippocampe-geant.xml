@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>8</level>
     <creatureTraits>
-      <trait type="size">TRÈS GRANDE</trait>
-      <trait>ANIMAL</trait>
-      <trait>AQUATIQUE</trait>
+      <trait type="size" ref="trait-tres-grande">TRÈS GRANDE</trait>
+      <trait ref="trait-animal">ANIMAL</trait>
+      <trait ref="trait-aquatique">AQUATIQUE</trait>
     </creatureTraits>
     <perception>
       <bonus>+16</bonus>
@@ -39,7 +39,7 @@
     <saves REF="+16" FOR="+18" WIL="+14"/>
     <health>170</health>
     <reactiveAbilities>
-      <special type="reaction">
+      <special type="reaction" ref="ability-desarconner">
         <name>Désarçonner</name>
         <description>DD 28 (p� 359)</description>
       </special>

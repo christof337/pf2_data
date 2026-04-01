@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>14</level>
     <creatureTraits>
-      <trait type="size">TRÈS GRANDE</trait>
+      <trait type="size" ref="trait-tres-grande">TRÈS GRANDE</trait>
       <trait>FIÉLON</trait>
-      <trait>IMPIE</trait>
-      <trait>QLIPPOTH</trait>
+      <trait ref="trait-impie">IMPIE</trait>
+      <trait ref="trait-qlippoth">QLIPPOTH</trait>
     </creatureTraits>
     <perception>
       <bonus>+27</bonus>
@@ -37,7 +37,7 @@
         <bonus>+28</bonus>
         <traits>
           <trait>allonge 3 m</trait>
-          <trait>impie</trait>
+          <trait ref="trait-impie">impie</trait>
           <trait>magique</trait>
         </traits>
         <damages>
@@ -57,8 +57,8 @@
         <traits>
           <trait>agile</trait>
           <trait>allonge 4,5 m</trait>
-          <trait>finesse</trait>
-          <trait>impie</trait>
+          <trait ref="trait-finesse">finesse</trait>
+          <trait ref="trait-impie">impie</trait>
           <trait>magique</trait>
         </traits>
         <damages>
@@ -110,7 +110,7 @@
         <name>Inhaler la vitalité</name>
         <traits>
           <trait>néant</trait>
-          <trait>occulte</trait>
+          <trait ref="trait-occulte">occulte</trait>
         </traits>
         <description>; **Fréquence** 1 fois/jour ;</description>
       </special>

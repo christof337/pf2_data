@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>10</level>
     <creatureTraits>
-      <trait type="size">GRANDE</trait>
+      <trait type="size" ref="trait-grande">GRANDE</trait>
       <trait>BÊTE</trait>
-      <trait>SAINT</trait>
+      <trait ref="trait-saint">SAINT</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -50,8 +50,8 @@
         <bonus>+22</bonus>
         <traits>
           <trait>allonge 3 m</trait>
-          <trait>finesse</trait>
-          <trait>saint</trait>
+          <trait ref="trait-finesse">finesse</trait>
+          <trait ref="trait-saint">saint</trait>
         </traits>
         <damages>
           <damage>
@@ -66,8 +66,8 @@
         <traits>
           <trait>agile</trait>
           <trait>allonge 6 m</trait>
-          <trait>finesse</trait>
-          <trait>saint</trait>
+          <trait ref="trait-finesse">finesse</trait>
+          <trait ref="trait-saint">saint</trait>
         </traits>
         <damages>
           <damage>
@@ -104,7 +104,7 @@
         <name>Anneaux de connaissance</name>
         <description>Comme un smaranava, mais DD 29�</description>
       </special>
-      <special type="activity" actions="1">
+      <special type="activity" actions="1" ref="ability-constriction-superieure">
         <name>Constriction supérieure</name>
         <description>3d8+5 contondants, DD 29 (p� 359)</description>
       </special>
@@ -115,11 +115,11 @@
       <special>
         <name>Venin de Vicharamuni</name>
         <traits>
-          <trait>divine</trait>
-          <trait>esprit</trait>
+          <trait ref="trait-divine">divine</trait>
+          <trait ref="trait-esprit">esprit</trait>
           <trait>mental</trait>
           <trait>poison</trait>
-          <trait>saint</trait>
+          <trait ref="trait-saint">saint</trait>
         </traits>
         <description>**Jet de sauvegarde** Volonté DD 29 ; **Durée maximale** 6 rounds ; **Stade 1 **3d6 d’esprit (1 round) ; **Stade 2 **3d6 d’esprit et drainé 1 (1 round)</description>
       </special>

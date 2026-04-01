@@ -6,8 +6,8 @@
     <type>CRÉATURE</type>
     <level>12</level>
     <creatureTraits>
-      <trait type="size">PETITE</trait>
-      <trait>FÉE</trait>
+      <trait type="size" ref="trait-petite">PETITE</trait>
+      <trait ref="trait-fee">FÉE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -32,7 +32,7 @@
         <bonus>+26</bonus>
         <traits>
           <trait>agile</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
         </traits>
         <damages>
           <damage>
@@ -45,7 +45,7 @@
         <name>mâchoires</name>
         <bonus>+26</bonus>
         <traits>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
         </traits>
         <damages>
           <damage>
@@ -87,7 +87,7 @@
         <traits>
           <trait>concentration</trait>
           <trait>métamorphose</trait>
-          <trait>primordiale</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>� Le gimmerling peut prendre l’apparence de n’importe quel humanoïde (p� 358)� Sous forme humanoïde, il perd son aura semée d’embûches et son équipement prend l’aspect de babioles et de jouets� Si la forme choisie n’a ni griffe ni crocs, il perd la Frappe correspondante� S’il perd sa Frappe de griffes, il gagne une Frappe de poing qui est identique si ce n’est qu’elle inflige des dégâts contondants�</description>
       </special>

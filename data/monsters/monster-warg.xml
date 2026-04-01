@@ -6,7 +6,7 @@
     <type>CRÉATURE</type>
     <level>2</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
       <trait>BÊTE</trait>
     </creatureTraits>
     <perception>
@@ -40,7 +40,7 @@
         <name>Attaque en meute</name>
         <description>Les Frappes du warg infligent 1d4 dégâts supplémentaires aux créatures à portée d’au moins deux de ses alliés�</description>
       </special>
-      <special type="activity" actions="1">
+      <special type="activity" actions="1" ref="ability-gober">
         <name>Gober</name>
         <traits>
           <trait>attaque</trait>

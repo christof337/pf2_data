@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>2</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
-      <trait>ANIMAL</trait>
-      <trait>DINOSAURE</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
+      <trait ref="trait-animal">ANIMAL</trait>
+      <trait ref="trait-dinosaure">DINOSAURE</trait>
     </creatureTraits>
     <perception>
       <bonus/>

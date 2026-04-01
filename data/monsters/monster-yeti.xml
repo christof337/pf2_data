@@ -6,7 +6,7 @@
     <type>CRÉATURE</type>
     <level>5</level>
     <creatureTraits>
-      <trait type="size">GRANDE</trait>
+      <trait type="size" ref="trait-grande">GRANDE</trait>
       <trait>HUMANOÏDE</trait>
     </creatureTraits>
     <perception>
@@ -62,7 +62,7 @@
         <trigger>Lors du premier round de com- bat, le yéti réussit à frapper une créature alors qu’il était caché de cette dernière au début du combat ;</trigger>
         <effect>Chaque ennemi qui assiste à cette attaque dans un rayon de 9 m (y compris la cible de l’attaque) doit faire un jet de Volonté DD 23� Sur un échec, la créature est effrayée 2 ; sur un échec critique, elle est effrayée 4�</effect>
       </special>
-      <special type="activity" actions="1">
+      <special type="activity" actions="1" ref="ability-eventration">
         <name>Éventration</name>
         <description>griffes (p� 359)</description>
       </special>

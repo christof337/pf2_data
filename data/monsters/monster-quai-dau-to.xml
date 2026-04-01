@@ -6,7 +6,7 @@
     <type>CRÉATURE</type>
     <level>13</level>
     <creatureTraits>
-      <trait type="size">TRÈS GRANDE</trait>
+      <trait type="size" ref="trait-tres-grande">TRÈS GRANDE</trait>
       <trait>BÊTE</trait>
     </creatureTraits>
     <perception>
@@ -116,7 +116,7 @@
         <name>Expulsion d’eau</name>
         <traits>
           <trait>eau</trait>
-          <trait>primordiale</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>; **Conditions.** Le sac d’eau du quai dau to est plein ;</description>
       </special>
@@ -128,7 +128,7 @@
         <name>Souffle de brume</name>
         <traits>
           <trait>eau</trait>
-          <trait>primordiale</trait>
+          <trait ref="trait-primordiale">primordiale</trait>
         </traits>
         <description>; **Conditions.** Le sac d’eau du quai dau to est plein ;</description>
       </special>

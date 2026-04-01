@@ -6,7 +6,7 @@
     <type>CRÉATURE</type>
     <level>0</level>
     <creatureTraits>
-      <trait type="size">TRÈS PETITE</trait>
+      <trait type="size" ref="trait-tres-petite">TRÈS PETITE</trait>
       <trait>CRÉATURE</trait>
       <trait>ARTIFICIELLE</trait>
     </creatureTraits>
@@ -57,7 +57,7 @@
         <bonus>+7</bonus>
         <traits>
           <trait>allonge 0 m</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
           <trait>magique</trait>
         </traits>
         <damages>

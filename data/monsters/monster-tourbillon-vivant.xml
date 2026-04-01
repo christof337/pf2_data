@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>5</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
       <trait>AIR</trait>
-      <trait>ÉLÉMENTAIRE</trait>
+      <trait ref="trait-elementaire">ÉLÉMENTAIRE</trait>
     </creatureTraits>
     <perception>
       <bonus/>
@@ -44,7 +44,7 @@
         <bonus>+14</bonus>
         <traits>
           <trait>allonge 3 m</trait>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
         </traits>
         <damages>
           <damage>

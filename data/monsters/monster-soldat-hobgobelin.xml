@@ -6,8 +6,8 @@
     <type>CRÉATURE</type>
     <level>1</level>
     <creatureTraits>
-      <trait type="size">MOYENNE</trait>
-      <trait>HOBGOBELIN</trait>
+      <trait type="size" ref="trait-moyenne">MOYENNE</trait>
+      <trait ref="trait-hobgobelin">HOBGOBELIN</trait>
       <trait>HUMANOÏDE</trait>
     </creatureTraits>
     <perception>

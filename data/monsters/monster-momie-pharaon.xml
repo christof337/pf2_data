@@ -47,7 +47,7 @@
       <special>
         <name>Reconstruction</name>
         <traits>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
         </traits>
         <description>Quand une momie pharaon est détruite, des énergies nécromantiques reconstruisent son corps dans sa tombe en 1d10 jours� Si le corps est de nouveau détruit alors qu’il est en train de se reconstituer, le processus recommence depuis le début� Une momie pharaon en train de se reconstituer est détruite définitivement si son tombeau est consacré (*Livre des joueurs* p� 391)�</description>
       </special>
@@ -114,8 +114,8 @@
         <name>Fureur du sable</name>
         <traits>
           <trait>concentration</trait>
-          <trait>divine</trait>
-          <trait>feu</trait>
+          <trait ref="trait-divine">divine</trait>
+          <trait ref="trait-feu">feu</trait>
           <trait>terre</trait>
         </traits>
         <description>La momie pharaon exhale un cône de 18 m de sable surchauffé qui inflige 5d6 dégâts de feu et 5d6 dégâts tranchants (jet de Réflexes basique DD 28)� La momie pharaon ne peut pas réutiliser Fureur du sable pendant 1d4 rounds�</description>
@@ -124,7 +124,7 @@
         <name>Voile de sable</name>
         <traits>
           <trait>aura</trait>
-          <trait>divine</trait>
+          <trait ref="trait-divine">divine</trait>
           <trait>terre</trait>
         </traits>
         <description>Du sable tourbillonne autour de la momie pharaon dans une émanation de 1,5 m jusqu’au début de son prochain tour� Les créatures dans le sable sont masquées par rapport à celles qui se trouvent à l’extérieur, et toute créature qui termine son tour dans le tourbillon subit 4d6 dégâts tranchants avec un jet de Vigueur basique DD 28� Le voile de sable se termine si la momie subit des dégâts à cause de sa faiblesse à l’eau�</description>

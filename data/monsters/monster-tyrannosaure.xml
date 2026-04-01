@@ -6,9 +6,9 @@
     <type>CRÉATURE</type>
     <level>10</level>
     <creatureTraits>
-      <trait type="size">GIGANTESQUE</trait>
-      <trait>ANIMAL</trait>
-      <trait>DINOSAURE</trait>
+      <trait type="size" ref="trait-gigantesque">GIGANTESQUE</trait>
+      <trait ref="trait-animal">ANIMAL</trait>
+      <trait ref="trait-dinosaure">DINOSAURE</trait>
     </creatureTraits>
     <perception>
       <bonus>+19</bonus>
@@ -71,7 +71,7 @@
       </strike>
     </strikes>
     <offensiveAbilities>
-      <special type="activity" actions="1">
+      <special type="activity" actions="1" ref="ability-gober">
         <name>Gober</name>
         <traits>
           <trait>attaque</trait>
@@ -83,7 +83,7 @@
         <trigger>Le tyrannosaure a réussi une attaque cri- tique sur une cible de Grande taille ou plus petite avec sa patte ;</trigger>
         <effect>La créature touchée est mise à terre et le tyrannosaure utilise sa patte pour l’immobiliser� Tant que le dinosaure ne bouge pas de la position qu’il occupe, la créature immobilisée est empoignée� Le tyran- nosaure gagne un bonus de circons- tances de +2 pour attaquer la créature immobilisée mais il ne peut utiliser Gober sur sa cible que s’il l’a préalablement empoignée dans ses mâchoires�</effect>
       </special>
-      <special type="activity" actions="3">
+      <special type="activity" actions="3" ref="ability-pietinement">
         <name>Piétinement</name>
         <description>Très Grande ou plus petite, patte, DD 29 (p� 360)</description>
       </special>

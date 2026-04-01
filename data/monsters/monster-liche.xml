@@ -54,7 +54,7 @@
         <name>main</name>
         <bonus>+24</bonus>
         <traits>
-          <trait>finesse</trait>
+          <trait ref="trait-finesse">finesse</trait>
           <trait>magique</trait>
         </traits>
         <damages>
