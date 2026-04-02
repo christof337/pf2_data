@@ -76,7 +76,7 @@ if __name__ == "__main__":
             "generate": generate_monster_xml,
         },
         {
-            "name": "Sorts LdJ (334 sorts)",
+            "name": "Sorts LdJ (468 sorts)",
             "md":  "./tests/fixtures/test_sorts.md",
             "xml": "./tests/fixtures/test_sorts_ok.xml",
             "xsd": "./schema/spell.xsd",

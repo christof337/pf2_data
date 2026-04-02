@@ -100,7 +100,7 @@
           <trait>émotion</trait>
           <trait>mental</trait>
         </traits>
-        <description>6 m. Le simple fait de voir un dragon empyréen est motivant. Les créatures dans l’aura gagnent un bonus de statut de +1 aux jets de sauve- garde et tests de compétences. Le dragon empyréen ne peut bénéficier de sa propre aura ou d’autres actions utilisant l’aura. Il peut choisir de priver les créatures de son choix des avantages accordés par son aura ou des actions qui utilisent l’aura.</description>
+        <description>6 m. Le simple fait de voir un dragon empyréen est motivant. Les créatures dans l’aura gagnent un bonus de statut de +1 aux jets de sauvegarde et tests de compétences. Le dragon empyréen ne peut bénéficier de sa propre aura ou d’autres actions utilisant l’aura. Il peut choisir de priver les créatures de son choix des avantages accordés par son aura ou des actions qui utilisent l’aura.</description>
       </special>
     </reactiveAbilities>
     <speeds>
@@ -226,7 +226,7 @@
           <trait>concentration</trait>
           <trait>divine</trait>
         </traits>
-        <description>Le dragon choisit un effet à imposer aux créa- tures dans son aura de Présence inspirante. Le dragon ne peut utiliser Pulsation du halo pendant 1d4 rounds.<list><listItem>**Répulsion.** Chaque créature doit réussir un jet de Vigueur DD 29 ou être repoussée jusqu’à ce qu’elle ait quitté l’aura.</listItem><listItem>**Restauration** (guérison, vitalité) Chaque créature récupère 5d8 PV.</listItem></list></description>
+        <description>Le dragon choisit un effet à imposer aux créatures dans son aura de Présence inspirante. Le dragon ne peut utiliser Pulsation du halo pendant 1d4 rounds.<list><listItem>**Répulsion.** Chaque créature doit réussir un jet de Vigueur DD 29 ou être repoussée jusqu’à ce qu’elle ait quitté l’aura.</listItem><listItem>**Restauration** (guérison, vitalité) Chaque créature récupère 5d8 PV.</listItem></list></description>
       </special>
       <special type="activity" actions="2">
         <name>Souffle spirituel</name>
