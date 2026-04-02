@@ -132,8 +132,8 @@ La comparaison est intentionnellement stricte : tout écart, même cosmétique, 
 ### Périmètre actuel des tests
 
 - Monstres : `test_dragon.md` / `test_dragon_ok.xml` (Jeune Dragon Empyréen)
-- Sorts : `test_sorts_ldj.md` / `test_sorts_ldj_ok.xml` (334 sorts LdJ)
-- Traits LdM : `test_traits_ldm.md` / `test_traits_ldm_ok.xml` (11 traits format LdM)
+- Sorts : `test_sorts.md` / `test_sorts_ok.xml` (468 sorts LdJ — sorts, cantrips, focalisés)
+- Traits LdM : `test_traits.md` / `test_traits_ok.xml` (~400 traits format LdM)
 - Traits LdJ : `test_traits_ldj.md` / `test_traits_ldj_ok.xml` (153 traits format LdJ)
 
 ---
@@ -164,9 +164,10 @@ j'aimerais voir apparaître "esprit" dans le damage type (plutôt que "d'esprit"
 Certains sorts (guérison typiquement ou guérison de compagnon) donnent une "fourchette" d'actions à dépenser, entre 1 et 3, ou entre 2 et 3, parfois 2 ou plus. Il faudrait pouvoir gérer ça proprement en xml, pour permettre un maximum de combinaisons
 
 ### Caractères étranges slugifiés
-le slug de mauvais œil c'est "sort-mauvais-il". je doute que "mauvais il" sorte un jour mais il faudrait mettre "sort-mauvais-oeil" (en systématique) je pense
+~~le slug de mauvais œil c'est "sort-mauvais-il"~~ — **corrigé** : `slug_generator.py` remplace désormais `œ→oe`, `Œ→OE`, `æ→ae`, `Æ→AE` avant la normalisation NFKD.
 
-### 
+### battleFormType (Avatar et formes de bataille)
+Le sort _Avatar_ (et futurs sorts de forme) contient des blocs de stats de forme de combat qui ne rentrent pas dans la structure `<spell>` standard. Pour l'instant les `*` résiduels de ces blocs sont tolérés dans le golden. À terme : modéliser un `battleFormType` en XSD pour structurer proprement ces blocs.
 
 ### Sorts — Pipeline XML → Obsidian
 
