@@ -42,7 +42,11 @@ def clean_pdf_artifacts(content):
         '', content
     )
     content = re.sub(r'(?m)^.*[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}.*$\n?', '', content)
-    
+    # Cat A : Running heads — **NOM NOM** seul sur une ligne (nom répété deux fois = filigrane PDF)
+    content = re.sub(r'(?m)^\s*\*\*([A-ZÀÂÄÆÇÉÈÊËÎÏÔÖŒÙÛÜŸ][A-ZÀÂÄÆÇÉÈÊËÎÏÔÖŒÙÛÜŸ\s]+?) \1\*\*\s*$', '', content)
+    # Cat E : Callout box _** (intro de chapitre, italic+bold non fermé)
+    content = re.sub(r'\n\s*_\*\*[^\n]+(?:\n(?!\s*\[\[)[^\n]*)*', '', content)
+
     # 3. Suppression intelligente des sommaires (barres latérales)
     lines = content.split('\n')
     cleaned_lines = []
@@ -94,6 +98,7 @@ def clean_text(text):
     """Nettoie le texte PDF : retire les coupures de mots (tiret + espace) et normalise les espaces."""
     if not text: return ""
     text = re.sub(r'-\n?\s+', '', text)
+    text = re.sub(r'\*+', '', text)  # strip marqueurs markdown gras/italique résiduels
     return re.sub(r'\s+', ' ', text).strip()
 
 def clean_value(val):
@@ -144,15 +149,19 @@ def parse_spell_block(content):
     # Les chapitres commencent par des titres en majuscules seuls sur une ligne
     # ou par "[[PAGE X]]" suivi d'un titre de chapitre
     chapter_markers = [
-        #rf'(?m)^[{UPPER}][\s{UPPER}]{2,}(?!(?:.*(?:SORT|TOUR DE MAGIE)\s+\d{1,2}))|(?:.*(?:MANIPULATION|CONCENTRATION).*)$'
-        rf'(?m)^[{UPPER}][\s{UPPER}]{{2,}}$(?![\s\S]*?(?:MANIPULATION|CONCENTRATION))(?![\s\S]{{0,200}}?(?:SORT|TOUR DE MAGIE|FOCALISÉ)\s+\d{{1,2}})'
-        #rf'(?m)^[A-ZÀÂÄÆÇÉÈÊËÎÏÔÖŒÙÛÜŸ][\sA-ZÀÂÄÆÇÉÈÊËÎÏÔÖŒÙÛÜŸ]{2,}$(?![\s\S]*?(?:MANIPULATION|CONCENTRATION))(?![\s\S]{0,200}?(?:SORT|TOUR DE MAGIE)\s+\d)'
-    
+        rf'(?m)^[{UPPER}][\s{UPPER}]{{2,}}$(?![\s\S]*?(?:MANIPULATION|CONCENTRATION))(?![\s\S]{{0,200}}?(?:SORT|TOUR DE MAGIE|FOCALISÉ)\s+\d{{1,2}})',
+        rf'(?m)^\s{{0,30}}\*\*[{UPPER}][{UPPER}\s]{{4,}}',  # Cat C : **SIDEBAR TITRE** à faible indent
     ]
-    
+
+    # Trouver la fin de l'en-tête du sort (rang) pour ne pas couper avant
+    rank_end = 0
+    rank_hdr = re.search(r'\b(?:SORT|TOUR DE MAGIE|FOCALISÉ)\s+\d+', content)
+    if rank_hdr:
+        rank_end = rank_hdr.end()
+
     for marker in chapter_markers:
         m = re.search(marker, content)
-        if m:
+        if m and m.start() > rank_end:
             content = content[:m.start()]
             break
 
@@ -161,7 +170,7 @@ def parse_spell_block(content):
     content = '\n' + clean_pdf_artifacts(content).strip()
 
 # 1. En-tête (Nom) - Utilise la nouvelle constante UPPER
-    name_regex = rf'^\s*\**([{UPPER}][{UPPER}\s\-\'’]+)(?:(?:\*{{2}}(?:\s|$))|(?:SORT|TOUR DE MAGIE|FOCALISÉ))'
+    name_regex = rf'^\s*\**([{UPPER}][{UPPER}\s\-‑\'’]+)(?:(?:\*{{2}}(?:\s|$))|(?:SORT|TOUR DE MAGIE|FOCALISÉ))'
     name_match = re.search(name_regex, content, re.MULTILINE)
     spell_data['name'] = clean_text(name_match.group(1)) if name_match else "INCONNU"
 
@@ -258,12 +267,20 @@ def parse_spells_md(content):
     print("[PARSING] Début de l'analyse des sorts...")
 
 
+    # Cat B : Normaliser les headers multi-lignes "1 ** À** 3 **" en une seule ligne
+    # pour que split_regex puisse les détecter dans la fenêtre de 150 chars
+    content = re.sub(
+        r'(\*\*\s*\n\s*)([123])\s*\n\s*\**\s*(À)\**\s*\n\s*([123])\s*\n\s*(\**)',
+        r'\1\2 \3 \4 \5',
+        content
+    )
+
     # Découpage robuste avec la constante UPPER pour éviter de couper sur un "é"
-    split_regex = rf'\n(?=\s*\**[{UPPER}][{UPPER}\s\-\'’]+\s?\**\s*(?:.{{0,150}}?)\b(?:SORT|TOUR DE MAGIE|FOCALISÉ)\s+\d+)'
+    split_regex = rf'\n(?=\s*\**[{UPPER}][{UPPER}\s\-‑\'’]+\s?\**\s*(?:.{{0,150}}?)\b(?:SORT|TOUR DE MAGIE|FOCALISÉ)\s+\d+)'
     split_pattern = re.compile(split_regex, re.DOTALL)
     spell_blocks = split_pattern.split(content)
     
-    spell_blocks = [b for b in spell_blocks if "SORT" in b or "TOUR DE MAGIE" in b or "FOCALISÉ" in b]
+    spell_blocks = [b for b in spell_blocks if re.search(r'\b(?:SORT|TOUR DE MAGIE|FOCALISÉ)\s+\d+', b)]
 
     print(f"[PARSING] {len(spell_blocks)} sorts isolés.")
 
