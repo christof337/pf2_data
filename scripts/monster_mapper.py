@@ -4,7 +4,7 @@ import sys
 import time
 from lxml import etree
 from xml_validator import validate_xml
-from utils import clean_text
+from utils import clean_text, strip_metadata
 
 # ==========================================
 # PARSING SPÉCIFIQUE MONSTRES
@@ -83,6 +83,7 @@ def parse_ability_block(text):
 
 def parse_monster_md(content):
     """Analyse le Markdown brut (issu de pdfplumber) pour extraire les données du monstre."""
+    content = strip_metadata(content)
     monster_data = {}
     print("[PARSING] Début de l'analyse du Markdown...")
     
@@ -215,6 +216,7 @@ def parse_monster_md(content):
         strike_type = "melee" if m.group(1).strip().lower() == "corps à corps" else "ranged"
         raw_name = clean_text(m.group(2))
         clean_name = re.sub(r'^\d+\s+', '', raw_name).strip()
+        clean_name = re.sub(r'^_|_$', '', clean_name)
 
         # Protection des virgules décimales dans les traits (ex: 4,5 m)
         raw_traits = re.sub(r'(\d),(\d)', r'\1__DECIMAL__\2', m.group(4))
@@ -244,7 +246,7 @@ def parse_monster_md(content):
         next_sec = re.search(r'\n\s*(?:\d+\s*\n)?\s*\*\*[A-ZÀ-Ÿ]', main_section[spell_h.end():])
         end_pos = spell_h.end() + next_sec.start() if next_sec else len(main_section)
         
-        spells_text = re.sub(r'\*+', '', main_section[spell_h.start():end_pos])
+        spells_text = re.sub(r'[\*_]+', '', main_section[spell_h.start():end_pos])
         main_section = main_section[end_pos:]
         
         s_data = {
@@ -356,7 +358,7 @@ def generate_monster_xml(data, output_path):
         if data.get('lang_special'):
             special_text = data['lang_special']
             spec_elem = etree.SubElement(langs_node, "langSpecial")
-            spell_match = re.search(r'\*(.*?)\*', special_text)
+            spell_match = re.search(r'_(.*?)_', special_text)
             if spell_match:
                 spell_node = etree.SubElement(spec_elem, "spellRef")
                 spell_node.text = spell_match.group(1).strip()
@@ -493,7 +495,7 @@ if __name__ == "__main__":
         monster_data = parse_monster_md(md_content)
 
         output_dir = "./data/monsters"
-        output_file = os.path.join(output_dir, monster_data['name']+".xml") if monster_data['name'] else output_file
+        output_file = sys.argv[2] if len(sys.argv) > 2 else os.path.join(output_dir, monster_data['name']+".xml") if monster_data['name'] else output_file
         
         generate_monster_xml(monster_data, output_file)
         print(f"[MAIN] ✓ Succès ! Le fichier {output_file} a été généré.")

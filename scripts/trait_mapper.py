@@ -5,7 +5,7 @@ import time
 from lxml import etree
 from xml_validator import validate_xml
 from slug_generator import generate_slug
-from utils import clean_text
+from utils import clean_text, strip_metadata
 
 
 
@@ -24,6 +24,7 @@ def parse_traits_md(content, format="ldm"):
         Le suffixe " (trait)" est supprimé du nom ; les numéros de page en fin de
         description sont tronqués.
     """
+    content = strip_metadata(content)
     traits_data = []
     print(f"[PARSING] Début de l'analyse des traits (format={format})...")
 

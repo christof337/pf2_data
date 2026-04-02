@@ -6,6 +6,7 @@ from lxml import etree
 
 from xml_validator import validate_xml
 from slug_generator import generate_slug
+from utils import strip_metadata
 
 # ==========================================
 # CONFIGURATION & CONSTANTES
@@ -27,13 +28,14 @@ UPPER = r'A-ZÀÂÄÆÇÉÈÊËÎÏÔÖŒÙÛÜŸ'
 
 def clean_pdf_artifacts(content):
     """Purge les filigranes, numéros de page et sommaires avant traitement."""
+    content = strip_metadata(content)
     # 1. Gestion des retours à la ligne litéraux
     content = content.replace('\\n', '\n')
     
     # 2. Purge des en-têtes/pieds de page et filigranes
     content = re.sub(r'\[\[PAGE \d+\]\]', '', content)
     content = re.sub(r'(?m)^\s*Sorts\s*$', '', content, flags=re.IGNORECASE)
-    content = re.sub(r'(?m)^\s*# FLUX PRINCIPAL \(STATS/BASE\)\s*$\n*\s*\d{1,3}', '', content)
+    content = re.sub(r'(?m)^\s*# FLUX PRINCIPAL \(STATS\/BASE\)\s*$(?:\n\s*Livre des Joueurs)?\n*\*{0,2}\s*\d{1,3}\s?\d{0,3}', '', content)
     # Suppression des légendes d'illustration + crédit artiste (légende indentée suivie d'une ligne email)
     content = re.sub(
         r'(?m)^[ \t]{3,}[A-ZÀÂÄÆÇÉÈÊËÎÏÔÖŒÙÛÜŸ][a-zà-ÿ][^\n]{0,45}\n[ \t]*[^\n]*[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}[^\n]*$\n?',
@@ -63,7 +65,7 @@ def clean_pdf_artifacts(content):
         else:
             empty_count = 0
             is_short = len(stripped) < 30
-            is_title = re.search(r'\b(?:SORT|TOUR DE MAGIE)\s+\d+', stripped)
+            is_title = re.search(r'\b(?:SORT|TOUR DE MAGIE|FOCALISÉ)\s+\d+', stripped)
             # Sécurité 2 : Un point final signifie que c'est une vraie phrase
             ends_with_dot = stripped.endswith('.')
             
@@ -122,7 +124,7 @@ def add_rich_text(parent, text_content, tag_name=None):
         el = etree.SubElement(parent, tag_name)
 
     # Accepte n'importe quel caractère (y compris la ponctuation) sauf un astérisque
-    parts = re.split(r'(?<!\*)\*([^\*]+?)\*(?!\*)', text_content)
+    parts = re.split(r'_([^_]+?)_', text_content)
     
     el.text = parts[0]
     for i in range(1, len(parts), 2):
@@ -138,22 +140,42 @@ def add_rich_text(parent, text_content, tag_name=None):
 def parse_spell_block(content):
     spell_data = {'savingThrows': {}, 'heightened': []}
     
+    # **NOUVEAU** : Détecter et couper au chapitre suivant
+    # Les chapitres commencent par des titres en majuscules seuls sur une ligne
+    # ou par "[[PAGE X]]" suivi d'un titre de chapitre
+    chapter_markers = [
+        #rf'(?m)^[{UPPER}][\s{UPPER}]{2,}(?!(?:.*(?:SORT|TOUR DE MAGIE)\s+\d{1,2}))|(?:.*(?:MANIPULATION|CONCENTRATION).*)$'
+        rf'(?m)^[{UPPER}][\s{UPPER}]{{2,}}$(?![\s\S]*?(?:MANIPULATION|CONCENTRATION))(?![\s\S]{{0,200}}?(?:SORT|TOUR DE MAGIE|FOCALISÉ)\s+\d{{1,2}})'
+        #rf'(?m)^[A-ZÀÂÄÆÇÉÈÊËÎÏÔÖŒÙÛÜŸ][\sA-ZÀÂÄÆÇÉÈÊËÎÏÔÖŒÙÛÜŸ]{2,}$(?![\s\S]*?(?:MANIPULATION|CONCENTRATION))(?![\s\S]{0,200}?(?:SORT|TOUR DE MAGIE)\s+\d)'
+    
+    ]
+    
+    for marker in chapter_markers:
+        m = re.search(marker, content)
+        if m:
+            content = content[:m.start()]
+            break
+
+    
+    # Nettoyage
+    content = '\n' + clean_pdf_artifacts(content).strip()
+
 # 1. En-tête (Nom) - Utilise la nouvelle constante UPPER
-    name_regex = rf'^\s*\**([{UPPER}][{UPPER}\s\-\'’]+)(?:(?:\*{{2}}(?:\s|$))|(?:SORT|TOUR DE MAGIE))'
+    name_regex = rf'^\s*\**([{UPPER}][{UPPER}\s\-\'’]+)(?:(?:\*{{2}}(?:\s|$))|(?:SORT|TOUR DE MAGIE|FOCALISÉ))'
     name_match = re.search(name_regex, content, re.MULTILINE)
     spell_data['name'] = clean_text(name_match.group(1)) if name_match else "INCONNU"
 
     # 2. Rang (Gère Sort et Tour de Magie)
-    rank_match = re.search(r'\b(SORT|TOUR DE MAGIE)\s+(\d+)', content)
+    rank_match = re.search(r'\b(SORT|TOUR DE MAGIE|FOCALISÉ)\s+(\d+)', content)
     spell_data['type'] = rank_match.group(1) if rank_match else "SORT"
     spell_data['rank'] = rank_match.group(2) if rank_match else "1"
 
     # 3. Actions (Isolé entre le Nom et le Rang)
     header_end = rank_match.start() if rank_match else 200
     header_area = content[:header_end]
-    action_match = re.search(r'(?m)^\s*\**\s*([123R])\s*\**\s*$', header_area)
+    action_match = re.search(r'(?m)^\s*\**\s*([0123R])\s*\**\s*$', header_area)
     if not action_match:
-        action_match = re.search(r'\b(1|2|3|R)\b', header_area[name_match.end() if name_match else 0:])
+        action_match = re.search(r'\b(0|1|2|3|R)\b', header_area[name_match.end() if name_match else 0:])
     spell_data['actions'] = action_match.group(1) if action_match else None
 
     # 4. Mécaniques stricto sensu (Bloque au premier saut de ligne ou point-virgule)
@@ -161,7 +183,7 @@ def parse_spell_block(content):
     mechanics = {
         'range': mech_prefix + r'Portée\**[\s:]*(.*?)(?=\s*(?:;|\n|$))',
         'targets': mech_prefix + r'[Cc]ibles?\**[\s:]*(.*?)(?=\s*(?:;|\n\s*\*\*|\n\s*[A-ZÀÂÄÆÇÉÈÊËÎÏÔÖŒÙÛÜŸ]|$))',
-        'defense': mech_prefix + r'Défense\**[\s:]*(.*?)(?=\s*(?:;|\n|$))',
+        'defense': mech_prefix + r'Défense\**[\s:]*(.*?)(?=\*{0,2}\s*(?:;|\n|$))',
         'duration': mech_prefix + r'Durée\**[\s:]*(.*?)(?=\s*(?:;|\n|$))',
         'area': mech_prefix + r'Zone[\s:]*\**[\s:]*(.*?)(?=\s*(?:;|\n\s*[A-ZÀÂÄÆÇÉÈÊËÎÏÔÖŒÙÛÜŸ]|$|\*\*))',
         'cast': mech_prefix + r'Incantation\**[\s:]*(.*?)(?=\s*(?:;|\n|$))'
@@ -187,7 +209,7 @@ def parse_spell_block(content):
         spell_data['traditions'] = []
 
     # 6. Traits (Entre le Rang et la première mécanique)
-    first_mech_start = min([m.start() for m in re.finditer(r'(?:(?<=\n)|(?<=;)|(?<=^))\s*\**(?:Portée|Cibles?|Défense|Durée|Zone|Incantation|Traditions?)', content, re.IGNORECASE)] or [len(content)])
+    first_mech_start = min([m.start() for m in re.finditer(r'(?:(?<=\n)|(?<=;)|(?<=^))\s*\**(?:Portée|Cibles?|Défense|Durée|Zone|Incantation|Traditions?|Protecteur|Muse|Déclencheur|Conditions?|Leçon|[{UPPER}][a-zà-ÿ]|)', content, re.IGNORECASE)] or [len(content)])
     traits_area = content[rank_match.end() if rank_match else 200:first_mech_start]
     spell_data['traits'] = parse_traits(traits_area)
 
@@ -235,20 +257,18 @@ def parse_spells_md(content):
     spells_data = []
     print("[PARSING] Début de l'analyse des sorts...")
 
-    # Nettoyage
-    content = '\n' + clean_pdf_artifacts(content).strip()
 
     # Découpage robuste avec la constante UPPER pour éviter de couper sur un "é"
-    split_regex = rf'\n(?=\s*\**[{UPPER}][{UPPER}\s\-\'’]+\s?\**\s*(?:.{{0,150}}?)\b(?:SORT|TOUR DE MAGIE)\s+\d+)'
+    split_regex = rf'\n(?=\s*\**[{UPPER}][{UPPER}\s\-\'’]+\s?\**\s*(?:.{{0,150}}?)\b(?:SORT|TOUR DE MAGIE|FOCALISÉ)\s+\d+)'
     split_pattern = re.compile(split_regex, re.DOTALL)
     spell_blocks = split_pattern.split(content)
     
-    spell_blocks = [b for b in spell_blocks if "SORT" in b or "TOUR DE MAGIE" in b]
+    spell_blocks = [b for b in spell_blocks if "SORT" in b or "TOUR DE MAGIE" in b or "FOCALISÉ" in b]
 
     print(f"[PARSING] {len(spell_blocks)} sorts isolés.")
 
     for block in spell_blocks:
-        if not re.search(r'\b(?:SORT|TOUR DE MAGIE)\s+\d+', block):
+        if not re.search(r'\b(?:SORT|TOUR DE MAGIE|FOCALISÉ)\s+\d+', block):
             print(f"[PARSING]   ⚠ bloc sans rang ignoré: {block[:80].strip()!r}")
             continue
         data = parse_spell_block(block)
@@ -286,7 +306,7 @@ def generate_spells_xml(spells_data, output_path):
         etree.SubElement(s_el, "name").text = data['name']
 
         if data['type']: 
-            s_el.set('type',"spell" if data['type']=="SORT" else "cantrip" if data['type']=="TOUR DE MAGIE" else "unknown")
+            s_el.set('type',"spell" if data['type']=="SORT" else "cantrip" if data['type']=="TOUR DE MAGIE" else "focus" if data['type']=="FOCALISÉ" else "unknown")
         etree.SubElement(s_el, "rank").text = data['rank']
         if data['actions']: etree.SubElement(s_el, "actions").text = data['actions']
         
@@ -333,8 +353,10 @@ def generate_spells_xml(spells_data, output_path):
 # ==========================================
 
 if __name__ == "__main__":
-    input_file = sys.argv[1] if len(sys.argv) > 1 else "./output/subset_1/sorts_MD.md"
-    output_file = sys.argv[2] if len(sys.argv) > 2 else "./data/spells/all_spells.xml"
+    #input_file = sys.argv[1] if len(sys.argv) > 1 else "./output/subset_1/sorts_MD.md"
+    #output_file = sys.argv[2] if len(sys.argv) > 2 else "./data/spells/all_spells.xml"
+    input_file = sys.argv[1] if len(sys.argv) > 1 else "./output/regen_sorts/test_sorts.md"
+    output_file = sys.argv[2] if len(sys.argv) > 2 else "./output/regen_sorts/sorts_ldj2.xml"
 
     print("="*60)
     print("DÉBUT DU TRAITEMENT (SPELLS MAPPER)")

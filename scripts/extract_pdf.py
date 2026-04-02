@@ -1,6 +1,8 @@
 import sys
 import pdfplumber
 import os
+import re
+from datetime import datetime
 from pdfplumber.utils import extract_text
 
 def extract_styled_layout(page_or_crop, useTextFlow=False):
@@ -36,15 +38,17 @@ def extract_styled_layout(page_or_crop, useTextFlow=False):
         if curr_bd and not prev_bd:
             curr['text'] = "**" + curr['text']
         if not curr_bd and prev_bd:
-            # On ferme le gras sur le caractère PRÉCÉDENT
-            modified_chars[i-1]['text'] = modified_chars[i-1]['text'] + "**"
+            # On ferme le gras sur le caractère PRÉCÉDENT, avant l'espace trailing
+            t = modified_chars[i-1]['text']
+            modified_chars[i-1]['text'] = t.rstrip(' ') + "**" + (" " if t.endswith(' ') else "")
 
-        # --- Gestion de l'ITALIQUE (Simple étoile) ---
+        # --- Gestion de l'ITALIQUE (Underscore) ---
         if curr_it and not prev_it:
-            curr['text'] = "*" + curr['text']
+            curr['text'] = "_" + curr['text']
         if not curr_it and prev_it:
-            # On ferme l'italique sur le caractère PRÉCÉDENT
-            modified_chars[i-1]['text'] = modified_chars[i-1]['text'] + "*"
+            # On ferme l'italique sur le caractère PRÉCÉDENT, avant l'espace trailing
+            t = modified_chars[i-1]['text']
+            modified_chars[i-1]['text'] = t.rstrip(' ') + "_" + (" " if t.endswith(' ') else "")
 
     # 3. Extraction avec le moteur de pdfplumber
     text = extract_text(       
@@ -55,7 +59,8 @@ def extract_styled_layout(page_or_crop, useTextFlow=False):
         y_tolerance=3)
     
     # Nettoyage des marqueurs vides type **** ou ** **
-    text = text.replace("** **", " ").replace("**\n**", "\n")
+    text = text.replace("****", "").replace("** **", " ").replace("**\n**", "\n")
+    text = text.replace("_ _", " ").replace("_\n_", "\n")
     return text
 
 def extract_text_with_italics(page_area, useTextFlow=False):
@@ -150,7 +155,11 @@ def extract_with_sidebar_detection(pdf_path, output_dir):
             # 4. Extraction finale du flux principal
             main_text = extract_styled_layout(main_page_filtered, useTextFlow=True)
 
-            # 5. Construction du bloc de la page
+            # 5. Fusion des coupures de mots hyphenées (avant tout traitement)
+            # Remplace "mot-\n  " par "mot" SEULEMENT si suivi d'une minuscule (accentuée ou non)
+            main_text = re.sub(r'-\n\s+([a-zàâäæçéèêëîïôöœùûüÿ])', r'\1', main_text)
+
+            # 6. Construction du bloc de la page
             page_content.append("# FLUX PRINCIPAL (STATS/BASE)\n")
             page_content.append(f"{main_text}\n" if main_text else "\n")
             
@@ -168,8 +177,14 @@ def extract_with_sidebar_detection(pdf_path, output_dir):
             page.flush_cache()
 
     # Écriture de l'intégralité du document consolidé
+    metadata = (
+        f"[[METADATA]]\n"
+        f"source: {os.path.abspath(pdf_path)}\n"
+        f"generated: {datetime.now().isoformat(timespec='seconds')}\n"
+        f"[[/METADATA]]\n"
+    )
     with open(output_file, "w", encoding="utf-8") as f:
-        f.write("".join(full_text))
+        f.write(metadata + "".join(full_text))
 
     print(f"Extraction terminée. Fichier consolidé disponible ici : {output_file}")
 

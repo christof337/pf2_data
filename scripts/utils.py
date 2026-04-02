@@ -11,6 +11,11 @@ restent locales car elles ont un comportement différent :
 import re
 
 
+def strip_metadata(content):
+    """Supprime le bloc [[METADATA]]...[[/METADATA]] en tête des MD extraits."""
+    return re.sub(r'^\[\[METADATA\]\].*?\[\[/METADATA\]\]\n?', '', content, flags=re.DOTALL)
+
+
 def clean_text(text):
     """Normalise les espaces et sauts de ligne : collapse tout whitespace en un espace."""
     return re.sub(r'\s+', ' ', text).strip()
