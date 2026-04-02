@@ -1,3 +1,7 @@
+[[METADATA]]
+source: /Users/slither/Documents/dev/repositories/pf2_data_Claude/pdf_sources/monstre_unique.pdf
+generated: 2026-04-02T10:48:02
+[[/METADATA]]
 [[PAGE 1]]
 
 # FLUX PRINCIPAL (STATS/BASE)
@@ -115,21 +119,20 @@ parlent à d’autres créatures, ils se montrent patients et compréhensifs.
 GRANDE DIVIN DRAGON SAINT
 Perception** +21 ; odorat (imprécis) 18 m, perception de la vie (imprécis) 9 m (p. 360), vision
  dans le noir
-**Langues** commun, draconique, empyréen ; *langage universel*
+**Langues** commun, draconique, empyréen ; _langage universel_
 **Compétences** Acrobaties +19, Athlétisme +22, Connaissances sur le Paradis +21,
  Diplomatie +20, Intimidation +20, Médecine +21, Religion +21, Société +19
 **For** +6, **Dex** +3, **Con** +4, **Int** +3, **Sag** +5, **Cha** + 4
-**CA **30 ; **Réf **+19, **Vig **+18, **Vol **+21 ; bonus de statut de +2 à tous les jets de sauvegarde contre
+**CA** 30 ; **Réf** +19, **Vig** +18, **Vol** +21 ; bonus de statut de +2 à tous les jets de sauvegarde contre
  la magie divine
-**PV **170 ; **Immunités **terreur, paralysé, sommeil ; **Faiblesse **impie 10
+**PV** 170 ; **Immunités** terreur, paralysé, sommeil ; **Faiblesse** impie 10
 **Déflexion divine**
        9
          **Déclencheur.** Le dragon subit un coup critique infligé par une attaque.
  **Effet.** Une puissance divine intervient et le protège d’une partie des dégâts. Le dragon gagne
  résistance 10 contre tous les dégâts de l’attaque ayant déclenché le pouvoir.
 **Présence inspirante** (aura, émotion, mental) 6 m. Le simple fait de voir un dragon empyréen
- est motivant. Les créatures dans l’aura gagnent un bonus de statut de +1 aux jets de sauve-
- garde et tests de compétences. Le dragon empyréen ne peut bénéficier de sa propre aura
+ est motivant. Les créatures dans l’aura gagnent un bonus de statut de +1 aux jets de sauvegarde et tests de compétences. Le dragon empyréen ne peut bénéficier de sa propre aura
  ou d’autres actions utilisant l’aura. Il peut choisir de priver les créatures de son
  choix des avantages accordés par son aura ou des actions qui utilisent l’aura.
 **Vitesses** 18 m, vol 45 m
@@ -139,7 +142,7 @@ Perception** +21 ; odorat (imprécis) 18 m, perception de la vie (imprécis) 9 m
  perforants plus 1d8 d’esprit
 **Corps à corps**
       1
-        griffes +22 (agile, magique, saint), **Dégâts **
+        griffes +22 (agile, magique, saint), **Dégâts** 
  2d8+9 tranchants plus 1d8 d’esprit
 **Corps à corps**
       1
@@ -147,10 +150,10 @@ Perception** +21 ; odorat (imprécis) 18 m, perception de la vie (imprécis) 9 m
  **Dégâts** 2d10+9 contondants plus 1d8 d’esprit
 **Corps à corps**
       1
-       aile +20 (agile, allonge 3 m, magique), **Dégâts **1d10+9
+       aile +20 (agile, allonge 3 m, magique), **Dégâts** 1d10+9
  tranchants plus 1d8 d’esprit
-**Sorts innés divins **DD 29, attaque +21 ; **5**e *guérison* ; **3**e *lumière sainte* (à
- volonté) ; **Constant (5**e**) ***langage universel*
+**Sorts innés divins** DD 29, attaque +21 ; **5**e _guérison_ ; **3**e _lumière sainte_ (à
+ volonté) ; **Constant (5**e**)** _langage universel_
 **Frénésie draconique**
          2
            Le dragon effectue deux Frappes de griffes et une
@@ -169,8 +172,7 @@ Perception** +21 ; odorat (imprécis) 18 m, perception de la vie (imprécis) 9 m
 **Pulsation du halo**
         2
            (concentration, divine)
- Le dragon choisit un effet à imposer aux créa-
- tures dans son aura de Présence inspirante.
+ Le dragon choisit un effet à imposer aux créatures dans son aura de Présence inspirante.
  Le dragon ne peut utiliser Pulsation du halo
  pendant 1d4 rounds.
  • **Répulsion.** Chaque créature doit réussir un
