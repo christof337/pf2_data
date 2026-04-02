@@ -14,9 +14,7 @@
     </creatureTraits>
     <perception>
       <bonus/>
-      <senses/>
     </perception>
-    <languages/>
     <skills>
       <skill>
         <name>Acrobaties</name>
@@ -35,6 +33,7 @@
         <bonus>+20</bonus>
       </skill>
     </skills>
+    <attributes STR="+0" DEX="+0" CON="+0" INT="+0" WIS="+0" CHA="+0"/>
     <armorClass>25</armorClass>
     <saves REF="+21" FOR="+23" WIL="+20" saveSpecial="bonus de statut de +1 aux jets de sau- vegarde contre la magie"/>
     <health>395</health>

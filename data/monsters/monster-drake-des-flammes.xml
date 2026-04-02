@@ -26,7 +26,6 @@
         </sens>
       </senses>
     </perception>
-    <languages/>
     <skills>
       <skill>
         <name>Acrobaties</name>
@@ -45,6 +44,7 @@
         <bonus>+10</bonus>
       </skill>
     </skills>
+    <attributes STR="+0" DEX="+0" CON="+0" INT="+0" WIS="+0" CHA="+0"/>
     <armorClass>22</armorClass>
     <saves REF="+10" FOR="+12" WIL="+10"/>
     <health>75</health>
@@ -62,7 +62,6 @@
     <speeds>
       <speed>0 m</speed>
     </speeds>
-    <strikes/>
     <offensiveAbilities>
       <special type="reaction" ref="ability-frappe-reflexe">
         <name>Frappe réflexe</name>

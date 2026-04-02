@@ -57,6 +57,7 @@
         <bonus>+13</bonus>
       </skill>
     </skills>
+    <attributes STR="+0" DEX="+0" CON="+0" INT="+0" WIS="+0" CHA="+0"/>
     <armorClass>27</armorClass>
     <saves REF="+18" FOR="+13" WIL="+17" saveSpecial="bonus de statut de +1 aux jets de sauvegarde contre la magie"/>
     <health>135</health>

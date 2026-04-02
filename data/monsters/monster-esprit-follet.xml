@@ -15,9 +15,8 @@
     </creatureTraits>
     <perception>
       <bonus/>
-      <senses/>
     </perception>
-    <languages/>
+    <attributes STR="+0" DEX="+0" CON="+0" INT="+0" WIS="+0" CHA="+0"/>
     <armorClass>15</armorClass>
     <saves REF="+8" FOR="+2" WIL="+4"/>
     <health>7</health>
@@ -42,7 +41,6 @@
           <trait ref="trait-magique">magique</trait>
           <trait>mortel 1d8</trait>
         </traits>
-        <damages/>
       </strike>
       <strike type="ranged">
         <name>étincelle lumineuse</name>
@@ -60,7 +58,6 @@
         </damages>
       </strike>
     </strikes>
-    <spellList source="innate" tradition="primal" DD="16"/>
     <offensiveAbilities>
       <special>
         <name>Draxie</name>

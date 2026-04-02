@@ -13,9 +13,8 @@
     </creatureTraits>
     <perception>
       <bonus/>
-      <senses/>
     </perception>
-    <languages/>
+    <attributes STR="+0" DEX="+0" CON="+0" INT="+0" WIS="+0" CHA="+0"/>
     <armorClass>41</armorClass>
     <saves REF="+31" FOR="+26" WIL="+28" saveSpecial="bonus de statut +1 à tous les jets de sauvegarde contre la magie"/>
     <health>230</health>

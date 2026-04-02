@@ -23,7 +23,6 @@
         </sens>
       </senses>
     </perception>
-    <languages/>
     <skills>
       <skill>
         <name>Athlétisme</name>
@@ -34,6 +33,7 @@
         <bonus>+9</bonus>
       </skill>
     </skills>
+    <attributes STR="+0" DEX="+0" CON="+0" INT="+0" WIS="+0" CHA="+0"/>
     <armorClass>19</armorClass>
     <saves REF="+6" FOR="+12" WIL="+7"/>
     <health>44</health>
@@ -47,7 +47,6 @@
       <speed>9 m</speed>
       <speed type="burrow">6 m</speed>
     </speeds>
-    <strikes/>
     <offensiveAbilities>
       <special type="activity" actions="1">
         <name>Corps à corps</name>

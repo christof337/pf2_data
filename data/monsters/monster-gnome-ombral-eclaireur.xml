@@ -18,14 +18,13 @@
         </sens>
       </senses>
     </perception>
-    <languages/>
-    <armorClass/>
-    <saves/>
-    <health/>
+    <attributes STR="+0" DEX="+0" CON="+0" INT="+0" WIS="+0" CHA="+0"/>
+    <armorClass>0</armorClass>
+    <saves REF="+0" FOR="+0" WIL="+0"/>
+    <health>0</health>
     <speeds>
       <speed>0 m</speed>
     </speeds>
-    <strikes/>
     <offensiveAbilities>
       <special>
         <name>ON PARIE ?</name>

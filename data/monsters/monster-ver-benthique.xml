@@ -23,7 +23,6 @@
         </sens>
       </senses>
     </perception>
-    <languages/>
     <skills>
       <skill>
         <name>Athlétisme</name>
@@ -34,13 +33,13 @@
         <bonus>+20</bonus>
       </skill>
     </skills>
+    <attributes STR="+0" DEX="+0" CON="+0" INT="+0" WIS="+0" CHA="+0"/>
     <armorClass>35</armorClass>
     <saves REF="+20" FOR="+32" WIL="+23"/>
     <health>320</health>
     <speeds>
       <speed>0 m</speed>
     </speeds>
-    <strikes/>
     <offensiveAbilities>
       <special>
         <name>Inexorable</name>

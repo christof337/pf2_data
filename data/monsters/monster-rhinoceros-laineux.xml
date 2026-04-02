@@ -11,9 +11,7 @@
     </creatureTraits>
     <perception>
       <bonus/>
-      <senses/>
     </perception>
-    <languages/>
     <skills>
       <skill>
         <name>Athlétisme</name>
@@ -24,6 +22,7 @@
         <bonus>+13</bonus>
       </skill>
     </skills>
+    <attributes STR="+0" DEX="+0" CON="+0" INT="+0" WIS="+0" CHA="+0"/>
     <interactionAbilities>
       <special>
         <name>For</name>
@@ -35,7 +34,7 @@
       </special>
     </interactionAbilities>
     <armorClass>25</armorClass>
-    <saves saveSpecial="bonus de statut de +2 à tous les jets de sauve- garde contre le froid"/>
+    <saves REF="+0" FOR="+0" WIL="+0" saveSpecial="bonus de statut de +2 à tous les jets de sauve- garde contre le froid"/>
     <health>100</health>
     <speeds>
       <speed>0 m</speed>

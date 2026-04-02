@@ -22,7 +22,6 @@
         </sens>
       </senses>
     </perception>
-    <languages/>
     <skills>
       <skill>
         <name>Acrobaties</name>
@@ -39,7 +38,7 @@
     </skills>
     <attributes STR="+6" DEX="+2" CON="+3" INT="+0" WIS="+2" CHA="+0"/>
     <armorClass>23</armorClass>
-    <saves/>
+    <saves REF="+0" FOR="+0" WIL="+0"/>
     <health>110</health>
     <speeds>
       <speed>0 m</speed>

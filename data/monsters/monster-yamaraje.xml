@@ -12,9 +12,7 @@
     </creatureTraits>
     <perception>
       <bonus/>
-      <senses/>
     </perception>
-    <languages/>
     <skills>
       <skill>
         <name>Acrobaties</name>
@@ -57,6 +55,7 @@
         <bonus>+38</bonus>
       </skill>
     </skills>
+    <attributes STR="+0" DEX="+0" CON="+0" INT="+0" WIS="+0" CHA="+0"/>
     <armorClass>45</armorClass>
     <saves REF="+31" FOR="+33" WIL="+35" saveSpecial="bonus de statut de +1 à tous les jets de sauvegarde contre la magie"/>
     <health>375</health>

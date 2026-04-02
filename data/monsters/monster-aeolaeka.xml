@@ -14,9 +14,8 @@
     </creatureTraits>
     <perception>
       <bonus/>
-      <senses/>
     </perception>
-    <languages/>
+    <attributes STR="+0" DEX="+0" CON="+0" INT="+0" WIS="+0" CHA="+0"/>
     <interactionAbilities>
       <special>
         <name>Langues</name>
@@ -36,7 +35,7 @@
       </special>
     </interactionAbilities>
     <armorClass>33</armorClass>
-    <saves/>
+    <saves REF="+0" FOR="+0" WIL="+0"/>
     <health>250</health>
     <weaknesses>
       <weakness>
@@ -50,7 +49,6 @@
       <speed type="burrow">7</speed>
       <speed>5 m</speed>
     </speeds>
-    <strikes/>
     <spellList source="innate" tradition="divine" DD="32" attack="+24">
       <rank rank="6">
         <spells>

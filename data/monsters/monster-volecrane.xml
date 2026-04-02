@@ -10,7 +10,6 @@
     </creatureTraits>
     <perception>
       <bonus/>
-      <senses/>
     </perception>
     <languages>
       <language>nécril</language>
@@ -38,6 +37,7 @@
         <bonus>+30</bonus>
       </skill>
     </skills>
+    <attributes STR="+0" DEX="+0" CON="+0" INT="+0" WIS="+0" CHA="+0"/>
     <armorClass>42</armorClass>
     <saves REF="+33" FOR="+31" WIL="+35" saveSpecial="bonus de statut de +1 à tous les jets de sauvegarde contre la vitalité�"/>
     <health>300</health>

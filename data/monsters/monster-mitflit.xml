@@ -24,7 +24,6 @@
         </sens>
       </senses>
     </perception>
-    <languages/>
     <skills>
       <skill>
         <name>Acrobaties</name>
@@ -47,6 +46,7 @@
         <bonus>+3</bonus>
       </skill>
     </skills>
+    <attributes STR="+0" DEX="+0" CON="+0" INT="+0" WIS="+0" CHA="+0"/>
     <armorClass>14</armorClass>
     <saves REF="+7" FOR="+2" WIL="+4"/>
     <health>10</health>
@@ -68,7 +68,6 @@
           <trait ref="trait-finesse">finesse</trait>
           <trait>polyvalent T</trait>
         </traits>
-        <damages/>
       </strike>
       <strike type="ranged">
         <name>fléchette</name>
@@ -78,7 +77,6 @@
           <trait>jet 6 m</trait>
           <trait>facteur de portée 6 m</trait>
         </traits>
-        <damages/>
       </strike>
     </strikes>
     <spellList source="innate" tradition="primal" DD="16">

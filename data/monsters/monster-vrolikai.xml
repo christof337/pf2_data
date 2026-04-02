@@ -13,9 +13,7 @@
     </creatureTraits>
     <perception>
       <bonus/>
-      <senses/>
     </perception>
-    <languages/>
     <attributes STR="+10" DEX="+7" CON="+9" INT="+6" WIS="+6" CHA="+8"/>
     <armorClass>45</armorClass>
     <saves REF="+33" FOR="+35" WIL="+34" saveSpecial="bonus de statut de +1 à tous les jets de sauvegarde contre la magie"/>
@@ -32,7 +30,6 @@
     <speeds>
       <speed>0 m</speed>
     </speeds>
-    <strikes/>
     <offensiveAbilities>
       <special>
         <name>Regard voleur de mort</name>

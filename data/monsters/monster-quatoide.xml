@@ -13,7 +13,6 @@
     </creatureTraits>
     <perception>
       <bonus/>
-      <senses/>
     </perception>
     <languages>
       <language>commun</language>
@@ -47,7 +46,7 @@
     </skills>
     <attributes STR="+4" DEX="+2" CON="+0" INT="+4" WIS="+3" CHA="+1"/>
     <armorClass>25</armorClass>
-    <saves/>
+    <saves REF="+0" FOR="+0" WIL="+0"/>
     <health>120</health>
     <immunities>
       <immunity>paralysé</immunity>

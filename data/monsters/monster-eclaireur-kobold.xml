@@ -12,7 +12,6 @@
     </creatureTraits>
     <perception>
       <bonus/>
-      <senses/>
     </perception>
     <languages>
       <language>commun</language>
@@ -40,6 +39,7 @@
         <bonus>+6</bonus>
       </skill>
     </skills>
+    <attributes STR="+0" DEX="+0" CON="+0" INT="+0" WIS="+0" CHA="+0"/>
     <armorClass>16</armorClass>
     <saves REF="+9" FOR="+5" WIL="+6" saveSpecial="bonus de circonstances de +1 à ses défenses contre les pièges"/>
     <health>16</health>

@@ -12,7 +12,6 @@
     </creatureTraits>
     <perception>
       <bonus/>
-      <senses/>
     </perception>
     <languages>
       <language>commun</language>
@@ -20,6 +19,7 @@
       <language>pétran</language>
       <language>sakvroth</language>
     </languages>
+    <attributes STR="+0" DEX="+0" CON="+0" INT="+0" WIS="+0" CHA="+0"/>
     <armorClass>16</armorClass>
     <saves REF="+6" FOR="+5" WIL="+7"/>
     <health>20</health>
@@ -69,7 +69,6 @@
         </damages>
       </strike>
     </strikes>
-    <spellList source="spontaneous" tradition="primal" DD="18"/>
     <offensiveAbilities>
       <special type="activity" actions="1">
         <name>Démonstration inspirante</name>

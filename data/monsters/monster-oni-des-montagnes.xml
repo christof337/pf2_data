@@ -81,7 +81,6 @@
         </damages>
       </strike>
     </strikes>
-    <spellList source="innate" tradition="primal" DD="25"/>
     <offensiveAbilities>
       <special type="activity" actions="1">
         <name>Changement de forme</name>

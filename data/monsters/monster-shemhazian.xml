@@ -13,9 +13,7 @@
     </creatureTraits>
     <perception>
       <bonus/>
-      <senses/>
     </perception>
-    <languages/>
     <skills>
       <skill>
         <name>Athlétisme</name>
@@ -51,7 +49,6 @@
     <speeds>
       <speed>0 m</speed>
     </speeds>
-    <strikes/>
     <offensiveAbilities>
       <special type="reaction">
         <name>Fouet caudal</name>

@@ -11,9 +11,8 @@
     </creatureTraits>
     <perception>
       <bonus/>
-      <senses/>
     </perception>
-    <languages/>
+    <attributes STR="+0" DEX="+0" CON="+0" INT="+0" WIS="+0" CHA="+0"/>
     <interactionAbilities>
       <special>
         <name>Compétence</name>
@@ -24,9 +23,9 @@
         <description>+7,** Dex** +4,** Con** +5, **Int** –3,** Sag** +2, **Cha** –1</description>
       </special>
     </interactionAbilities>
-    <armorClass/>
-    <saves/>
-    <health/>
+    <armorClass>0</armorClass>
+    <saves REF="+0" FOR="+0" WIL="+0"/>
+    <health>0</health>
     <speeds>
       <speed>0 m</speed>
     </speeds>

@@ -20,7 +20,6 @@
         </sens>
       </senses>
     </perception>
-    <languages/>
     <skills>
       <skill>
         <name>Acrobaties</name>
@@ -44,13 +43,12 @@
       </skill>
     </skills>
     <attributes STR="+4" DEX="+3" CON="+4" INT="+1" WIS="+3" CHA="+3"/>
-    <armorClass/>
-    <saves/>
-    <health/>
+    <armorClass>0</armorClass>
+    <saves REF="+0" FOR="+0" WIL="+0"/>
+    <health>0</health>
     <speeds>
       <speed>0 m</speed>
     </speeds>
-    <strikes/>
     <offensiveAbilities>
       <special>
         <name>Cercle</name>

@@ -23,10 +23,9 @@
         </sens>
       </senses>
     </perception>
-    <languages/>
     <attributes STR="+9" DEX="+0" CON="+5" INT="+0" WIS="+2" CHA="+1"/>
     <armorClass>28</armorClass>
-    <saves/>
+    <saves REF="+0" FOR="+0" WIL="+0"/>
     <health>220</health>
     <speeds>
       <speed>0 m</speed>

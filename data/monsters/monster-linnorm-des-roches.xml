@@ -12,20 +12,19 @@
     </creatureTraits>
     <perception>
       <bonus/>
-      <senses/>
     </perception>
     <languages>
       <language>aklo</language>
       <language>draconique</language>
       <language>féerique</language>
     </languages>
+    <attributes STR="+0" DEX="+0" CON="+0" INT="+0" WIS="+0" CHA="+0"/>
     <armorClass>47</armorClass>
     <saves REF="+35" FOR="+38" WIL="+33" saveSpecial="bonus de statut +1 aux jets de sauvegarde contre la magie"/>
     <health>440</health>
     <speeds>
       <speed>0 m</speed>
     </speeds>
-    <strikes/>
     <offensiveAbilities>
       <special>
         <name>Immunités</name>

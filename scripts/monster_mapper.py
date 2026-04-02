@@ -338,29 +338,31 @@ def generate_monster_xml(data, output_path):
     # Perception
     percep = etree.SubElement(monster, "perception")
     etree.SubElement(percep, "bonus").text = data.get('perception_bonus')
-    senses = etree.SubElement(percep, "senses")
-    for s in data.get('senses', []):
-        sens = etree.SubElement(senses, "sens")
-        etree.SubElement(sens, "name").text = s['name']
-        if s['precision']: etree.SubElement(sens, "precision").text = s['precision']
-        if s['range']: etree.SubElement(sens, "range").text = s['range']
-        if s['source']: etree.SubElement(sens, "source").text = s['source']
+    # <senses> n'est émis que s'il y a au moins un sens (XSD : minOccurs=1 sur <sens>)
+    if data.get('senses'):
+        senses = etree.SubElement(percep, "senses")
+        for s in data['senses']:
+            sens = etree.SubElement(senses, "sens")
+            etree.SubElement(sens, "name").text = s['name']
+            if s['precision']: etree.SubElement(sens, "precision").text = s['precision']
+            if s['range']: etree.SubElement(sens, "range").text = s['range']
+            if s['source']: etree.SubElement(sens, "source").text = s['source']
 
-    # Langues
-    langs_node = etree.SubElement(monster, "languages")
-    for l in data.get('languages', []):
-        etree.SubElement(langs_node, "language").text = l
-    
-    if data.get('lang_special'):
-        special_text = data['lang_special']
-        spec_elem = etree.SubElement(langs_node, "langSpecial")
-        spell_match = re.search(r'\*(.*?)\*', special_text)
-        if spell_match:
-            spell_node = etree.SubElement(spec_elem, "spellRef")
-            spell_node.text = spell_match.group(1).strip()
-        else:
-            spec_elem.text = special_text
-            
+    # Langues — n'émis que si au moins une langue ou une note spéciale existe
+    if data.get('languages') or data.get('lang_special'):
+        langs_node = etree.SubElement(monster, "languages")
+        for l in data.get('languages', []):
+            etree.SubElement(langs_node, "language").text = l
+        if data.get('lang_special'):
+            special_text = data['lang_special']
+            spec_elem = etree.SubElement(langs_node, "langSpecial")
+            spell_match = re.search(r'\*(.*?)\*', special_text)
+            if spell_match:
+                spell_node = etree.SubElement(spec_elem, "spellRef")
+                spell_node.text = spell_match.group(1).strip()
+            else:
+                spec_elem.text = special_text
+
     # Compétences
     if data.get('skills'):
         skills_node = etree.SubElement(monster, "skills")
@@ -369,21 +371,25 @@ def generate_monster_xml(data, output_path):
             etree.SubElement(skill_item, "name").text = s['name']
             etree.SubElement(skill_item, "bonus").text = str(s['bonus'])
 
-    # Attributs
-    if data.get('attributes'):
-        attr_node = etree.SubElement(monster, "attributes")
-        for attr_key in ['STR', 'DEX', 'CON', 'INT', 'WIS', 'CHA']:
-            val = data['attributes'].get(attr_key, "+0")
-            attr_node.set(attr_key, val)
+    # Attributs — toujours émis (requis par le XSD) ; +0 si le parsing a échoué
+    attr_node = etree.SubElement(monster, "attributes")
+    for attr_key in ['STR', 'DEX', 'CON', 'INT', 'WIS', 'CHA']:
+        val = data.get('attributes', {}).get(attr_key, "+0")
+        attr_node.set(attr_key, val)
 
     add_abilities_to_xml(monster, data['interaction_abilities'], "interactionAbilities")
 
-    # Défenses
-    etree.SubElement(monster, "armorClass").text = data.get('ac')
-    save_node = etree.SubElement(monster, "saves", **data.get('saves', {}))
-    if 'save_special' in data: 
+    # Défenses — valeurs par défaut si le parsing a échoué
+    etree.SubElement(monster, "armorClass").text = data.get('ac', '0')
+    saves = data.get('saves', {})
+    save_node = etree.SubElement(monster, "saves",
+        REF=saves.get('REF', '+0'),
+        FOR=saves.get('FOR', '+0'),
+        WIL=saves.get('WIL', '+0'),
+    )
+    if 'save_special' in data:
         save_node.set("saveSpecial", data['save_special'])
-    etree.SubElement(monster, "health").text = data.get('hp')
+    etree.SubElement(monster, "health").text = data.get('hp', '0')
 
     if data.get('immunities'):
         imm_node = etree.SubElement(monster, "immunities")
@@ -414,28 +420,30 @@ def generate_monster_xml(data, output_path):
         speeds_node = etree.SubElement(monster, "speeds")
         etree.SubElement(speeds_node, "speed").text = "0 m"
 
-    # Frappes
-    strikes_node = etree.SubElement(monster, "strikes")
-    for strike in data.get('strikes', []):
-        strike_elem = etree.SubElement(strikes_node, "strike")
-        if strike.get('type'):
-            strike_elem.set("type", strike['type'])
+    # Frappes — n'émis que si au moins une frappe est parsée
+    if data.get('strikes'):
+        strikes_node = etree.SubElement(monster, "strikes")
+        for strike in data['strikes']:
+            strike_elem = etree.SubElement(strikes_node, "strike")
+            if strike.get('type'):
+                strike_elem.set("type", strike['type'])
+
+            etree.SubElement(strike_elem, "name").text = strike['name']
+            etree.SubElement(strike_elem, "bonus").text = strike['bonus']
+
+            traits_elem = etree.SubElement(strike_elem, "traits")
+            for trait in strike['traits']:
+                etree.SubElement(traits_elem, "trait").text = trait
+
+            if strike.get('damages'):
+                damages_elem = etree.SubElement(strike_elem, "damages")
+                for dmg in strike['damages']:
+                    dmg_elem = etree.SubElement(damages_elem, "damage")
+                    etree.SubElement(dmg_elem, "amount").text = dmg['amount']
+                    etree.SubElement(dmg_elem, "damageType").text = dmg['type']
             
-        etree.SubElement(strike_elem, "name").text = strike['name']
-        etree.SubElement(strike_elem, "bonus").text = strike['bonus']
-        
-        traits_elem = etree.SubElement(strike_elem, "traits")
-        for trait in strike['traits']:
-            etree.SubElement(traits_elem, "trait").text = trait
-            
-        damages_elem = etree.SubElement(strike_elem, "damages")
-        for dmg in strike['damages']:
-            dmg_elem = etree.SubElement(damages_elem, "damage")
-            etree.SubElement(dmg_elem, "amount").text = dmg['amount']
-            etree.SubElement(dmg_elem, "damageType").text = dmg['type']
-            
-    # Sorts
-    if data.get('spells'):
+    # Sorts — n'émis que si au moins un rang est parsé
+    if data.get('spells') and data['spells'].get('ranks'):
         s = data['spells']
         s_list = etree.SubElement(monster, "spellList", source=s['source'], tradition=s['tradition'], DD=s['DD'])
         if s['attack']: 

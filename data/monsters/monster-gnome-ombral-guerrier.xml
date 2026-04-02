@@ -36,6 +36,7 @@
         <bonus>+5</bonus>
       </skill>
     </skills>
+    <attributes STR="+0" DEX="+0" CON="+0" INT="+0" WIS="+0" CHA="+0"/>
     <interactionAbilities>
       <special>
         <name>For</name>
@@ -68,7 +69,6 @@
         </damages>
       </strike>
     </strikes>
-    <spellList source="innate" tradition="primal" DD="15"/>
     <offensiveAbilities>
       <special>
         <name>Gnome ombral gardien des roches</name>

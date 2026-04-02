@@ -18,7 +18,7 @@
         </sens>
       </senses>
     </perception>
-    <languages/>
+    <attributes STR="+0" DEX="+0" CON="+0" INT="+0" WIS="+0" CHA="+0"/>
     <armorClass>28</armorClass>
     <saves REF="+19" FOR="+16" WIL="+18" saveSpecial="bonus de statut +1 aux jets de sauvegarde contre la magie"/>
     <health>170</health>

@@ -21,7 +21,7 @@
         </sens>
       </senses>
     </perception>
-    <languages/>
+    <attributes STR="+0" DEX="+0" CON="+0" INT="+0" WIS="+0" CHA="+0"/>
     <armorClass>12</armorClass>
     <saves REF="+4" FOR="+15" WIL="+7"/>
     <health>150</health>
@@ -41,7 +41,6 @@
       <speed>5 m</speed>
       <speed type="climb">3 m</speed>
     </speeds>
-    <strikes/>
     <offensiveAbilities>
       <special type="activity" actions="1">
         <name>Corps à corps</name>

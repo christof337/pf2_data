@@ -22,6 +22,9 @@ from lxml import etree
 sys.path.insert(0, os.path.dirname(__file__))
 from monster_mapper import parse_monster_md, generate_monster_xml
 from slug_generator import generate_slug
+from xml_validator import validate_xml
+
+XSD_PATH = os.path.join(os.path.dirname(__file__), "..", "schema", "monster.xsd")
 
 # ==========================================
 # DÉCOUPAGE EN BLOCS DE MONSTRES
@@ -111,6 +114,7 @@ def process_monsters_batch(md_content, output_dir, log_path):
 
     nb_success = 0
     nb_errors = 0
+    nb_xsd_errors = 0
     errors = []
 
     log_lines = [
@@ -151,9 +155,16 @@ def process_monsters_batch(md_content, output_dir, log_path):
             finally:
                 sys.stdout = old_stdout
 
-            nb_success += 1
-            print(f"OK -> {slug}.xml")
-            log_lines.append(f"[OK]    {idx:>4}. {name} -> {slug}.xml\n")
+            # Validation XSD (silencieux pour ne pas noyer les logs batch)
+            xsd_ok = validate_xml(output_file, XSD_PATH, silent=True)
+            if not xsd_ok:
+                nb_xsd_errors += 1
+                print(f"XSD KO -> {slug}.xml")
+                log_lines.append(f"[XSD]   {idx:>4}. {name} -> {slug}.xml\n")
+            else:
+                nb_success += 1
+                print(f"OK -> {slug}.xml")
+                log_lines.append(f"[OK]    {idx:>4}. {name} -> {slug}.xml\n")
 
         except Exception as e:
             nb_errors += 1
@@ -165,7 +176,7 @@ def process_monsters_batch(md_content, output_dir, log_path):
 
     # Écriture du log
     log_lines.append("\n" + "=" * 60 + "\n")
-    log_lines.append(f"RÉSUMÉ : {nb_success} succès, {nb_errors} erreurs\n")
+    log_lines.append(f"RÉSUMÉ : {nb_success} succès, {nb_xsd_errors} invalides XSD, {nb_errors} erreurs\n")
 
     if errors:
         log_lines.append("\nDÉTAIL DES ERREURS :\n")
@@ -180,11 +191,12 @@ def process_monsters_batch(md_content, output_dir, log_path):
         f.writelines(log_lines)
 
     print(f"\n[BATCH] === RÉSUMÉ ===")
-    print(f"[BATCH] Succès : {nb_success}")
-    print(f"[BATCH] Erreurs: {nb_errors}")
-    print(f"[BATCH] Log    : {log_path}")
+    print(f"[BATCH] Succès       : {nb_success}")
+    print(f"[BATCH] Invalides XSD: {nb_xsd_errors}")
+    print(f"[BATCH] Erreurs      : {nb_errors}")
+    print(f"[BATCH] Log          : {log_path}")
 
-    return nb_success, nb_errors
+    return nb_success, nb_xsd_errors, nb_errors
 
 
 # ==========================================
@@ -208,7 +220,7 @@ if __name__ == "__main__":
 
     print(f"[BATCH] Fichier chargé ({len(md_content)} caractères)\n")
 
-    nb_ok, nb_err = process_monsters_batch(md_content, output_dir, log_file)
+    nb_ok, nb_xsd, nb_err = process_monsters_batch(md_content, output_dir, log_file)
 
     elapsed = time.time() - start_total
     print(f"\n[BATCH] Temps total : {elapsed:.1f}s")

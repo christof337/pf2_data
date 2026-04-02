@@ -12,9 +12,7 @@
     </creatureTraits>
     <perception>
       <bonus/>
-      <senses/>
     </perception>
-    <languages/>
     <skills>
       <skill>
         <name>Acrobaties</name>
@@ -31,7 +29,7 @@
     </skills>
     <attributes STR="+3" DEX="+3" CON="+4" INT="+0" WIS="+1" CHA="+2"/>
     <armorClass>17</armorClass>
-    <saves/>
+    <saves REF="+0" FOR="+0" WIL="+0"/>
     <health>30</health>
     <speeds>
       <speed>0 m</speed>

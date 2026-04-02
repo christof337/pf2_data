@@ -37,7 +37,7 @@
       <language>draconique</language>
       <language>empyréen</language>
       <langSpecial>
-        <spell ref="spell-langage-universel">langage universel</spell>
+        <spellRef ref="spell-langage-universel">langage universel</spellRef>
       </langSpecial>
     </languages>
     <skills>

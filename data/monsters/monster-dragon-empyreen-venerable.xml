@@ -39,7 +39,7 @@
       <language>féerique</language>
       <language>nécril</language>
       <langSpecial>
-        <spell>lan‑ gage universel</spell>
+        <spellRef>lan‑ gage universel</spellRef>
       </langSpecial>
     </languages>
     <skills>
@@ -76,6 +76,7 @@
         <bonus>+30</bonus>
       </skill>
     </skills>
+    <attributes STR="+0" DEX="+0" CON="+0" INT="+0" WIS="+0" CHA="+0"/>
     <armorClass>43</armorClass>
     <saves REF="+31" FOR="+31" WIL="+35" saveSpecial="bonus de statut de +2 à tous les jets de sauvegarde contre la magie divine"/>
     <health>350</health>

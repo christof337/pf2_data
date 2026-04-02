@@ -11,17 +11,14 @@
     </creatureTraits>
     <perception>
       <bonus/>
-      <senses/>
     </perception>
-    <languages/>
     <attributes STR="+4" DEX="+3" CON="+3" INT="+0" WIS="+2" CHA="+2"/>
     <armorClass>17</armorClass>
-    <saves/>
+    <saves REF="+0" FOR="+0" WIL="+0"/>
     <health>36</health>
     <speeds>
       <speed>0 m</speed>
     </speeds>
-    <strikes/>
     <offensiveAbilities>
       <special type="reaction">
         <name>Morsure vengeresse</name>

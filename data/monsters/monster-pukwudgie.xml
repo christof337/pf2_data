@@ -11,7 +11,6 @@
     </creatureTraits>
     <perception>
       <bonus/>
-      <senses/>
     </perception>
     <languages>
       <language>commun</language>
@@ -45,6 +44,7 @@
         <bonus>+17</bonus>
       </skill>
     </skills>
+    <attributes STR="+0" DEX="+0" CON="+0" INT="+0" WIS="+0" CHA="+0"/>
     <armorClass>25</armorClass>
     <saves REF="+15" FOR="+12" WIL="+17"/>
     <health>100</health>

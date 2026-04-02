@@ -10,9 +10,7 @@
     </creatureTraits>
     <perception>
       <bonus/>
-      <senses/>
     </perception>
-    <languages/>
     <attributes STR="+5" DEX="+3" CON="+2" INT="+0" WIS="+2" CHA="+0"/>
     <armorClass>16</armorClass>
     <saves REF="+9" FOR="+6" WIL="+8"/>
@@ -29,7 +27,6 @@
     <speeds>
       <speed>0 m</speed>
     </speeds>
-    <strikes/>
     <offensiveAbilities>
       <special type="activity" actions="1">
         <name>Vitesse</name>

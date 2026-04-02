@@ -13,9 +13,7 @@
     </creatureTraits>
     <perception>
       <bonus/>
-      <senses/>
     </perception>
-    <languages/>
     <skills>
       <skill>
         <name>Athlétisme</name>
@@ -45,7 +43,6 @@
       <speed>5 m</speed>
       <speed type="swim">15 m</speed>
     </speeds>
-    <strikes/>
     <offensiveAbilities>
       <special type="activity" actions="1">
         <name>Corps à corps</name>

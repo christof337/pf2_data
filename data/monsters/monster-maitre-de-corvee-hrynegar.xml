@@ -72,7 +72,6 @@
         </damages>
       </strike>
     </strikes>
-    <spellList source="prepared" tradition="divine" DD="18"/>
     <offensiveAbilities>
       <special>
         <name>Sorts innés occultes</name>

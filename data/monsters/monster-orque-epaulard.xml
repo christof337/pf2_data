@@ -11,9 +11,7 @@
     </creatureTraits>
     <perception>
       <bonus/>
-      <senses/>
     </perception>
-    <languages/>
     <attributes STR="+7" DEX="+2" CON="+5" INT="+0" WIS="+3" CHA="+0"/>
     <armorClass>21</armorClass>
     <saves REF="+11" FOR="+14" WIL="+12"/>
@@ -21,7 +19,6 @@
     <speeds>
       <speed>0 m</speed>
     </speeds>
-    <strikes/>
     <offensiveAbilities>
       <special>
         <name>Vitesse</name>

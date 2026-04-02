@@ -10,9 +10,8 @@
     </creatureTraits>
     <perception>
       <bonus/>
-      <senses/>
     </perception>
-    <languages/>
+    <attributes STR="+0" DEX="+0" CON="+0" INT="+0" WIS="+0" CHA="+0"/>
     <armorClass>17</armorClass>
     <saves REF="+8" FOR="+5" WIL="+10"/>
     <health>30</health>
@@ -43,7 +42,6 @@
         </damages>
       </strike>
     </strikes>
-    <spellList source="prepared" tradition="divine" DD="18"/>
     <offensiveAbilities>
       <special type="activity" actions="1">
         <name>Sort de domaine de prêtre</name>

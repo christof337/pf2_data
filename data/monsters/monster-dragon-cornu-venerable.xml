@@ -24,7 +24,6 @@
         </sens>
       </senses>
     </perception>
-    <languages/>
     <skills>
       <skill>
         <name>Acrobaties</name>
@@ -67,6 +66,7 @@
         <bonus>+34</bonus>
       </skill>
     </skills>
+    <attributes STR="+0" DEX="+0" CON="+0" INT="+0" WIS="+0" CHA="+0"/>
     <armorClass>41</armorClass>
     <saves REF="+29" FOR="+30" WIL="+32" saveSpecial="bonus de statut de +1 à tous les jets de sauvegarde contre la magie"/>
     <health>315</health>

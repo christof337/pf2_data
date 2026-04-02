@@ -13,7 +13,6 @@
     </creatureTraits>
     <perception>
       <bonus/>
-      <senses/>
     </perception>
     <languages>
       <language>aklo</language>
@@ -21,13 +20,12 @@
       <language>féerique</language>
     </languages>
     <attributes STR="+10" DEX="+6" CON="+8" INT="+0" WIS="+7" CHA="+8"/>
-    <armorClass/>
-    <saves/>
-    <health/>
+    <armorClass>0</armorClass>
+    <saves REF="+0" FOR="+0" WIL="+0"/>
+    <health>0</health>
     <speeds>
       <speed>0 m</speed>
     </speeds>
-    <strikes/>
     <offensiveAbilities>
       <special>
         <name>CA</name>

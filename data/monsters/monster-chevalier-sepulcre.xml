@@ -10,9 +10,7 @@
     </creatureTraits>
     <perception>
       <bonus/>
-      <senses/>
     </perception>
-    <languages/>
     <skills>
       <skill>
         <name>Athlétisme</name>
@@ -39,7 +37,7 @@
       </special>
     </interactionAbilities>
     <armorClass>31</armorClass>
-    <saves/>
+    <saves REF="+0" FOR="+0" WIL="+0"/>
     <health>175</health>
     <immunities>
       <immunity>effets de mort</immunity>

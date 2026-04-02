@@ -23,7 +23,6 @@
         </sens>
       </senses>
     </perception>
-    <languages/>
     <attributes STR="+6" DEX="+2" CON="+3" INT="+0" WIS="+1" CHA="+0"/>
     <armorClass>21</armorClass>
     <saves REF="+10" FOR="+12" WIL="+11"/>

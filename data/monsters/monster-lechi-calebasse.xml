@@ -12,13 +12,12 @@
     </creatureTraits>
     <perception>
       <bonus/>
-      <senses/>
     </perception>
     <languages>
       <language>commun</language>
       <language>féerique</language>
       <langSpecial>
-        <spell ref="spell-communication-avec-les-plantes">communication avec les plantes</spell>
+        <spellRef ref="spell-communication-avec-les-plantes">communication avec les plantes</spellRef>
       </langSpecial>
     </languages>
     <skills>
@@ -31,6 +30,7 @@
         <bonus>+5</bonus>
       </skill>
     </skills>
+    <attributes STR="+0" DEX="+0" CON="+0" INT="+0" WIS="+0" CHA="+0"/>
     <armorClass>17</armorClass>
     <saves REF="+9" FOR="+5" WIL="+7"/>
     <health>20</health>

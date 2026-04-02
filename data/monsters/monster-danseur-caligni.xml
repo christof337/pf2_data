@@ -21,7 +21,6 @@
         </sens>
       </senses>
     </perception>
-    <languages/>
     <skills>
       <skill>
         <name>Acrobaties</name>
@@ -44,6 +43,7 @@
         <bonus>+6</bonus>
       </skill>
     </skills>
+    <attributes STR="+0" DEX="+0" CON="+0" INT="+0" WIS="+0" CHA="+0"/>
     <interactionAbilities>
       <special>
         <name>For</name>
@@ -107,7 +107,6 @@
         </damages>
       </strike>
     </strikes>
-    <spellList source="innate" tradition="occult" DD="16"/>
     <offensiveAbilities>
       <special>
         <name>Attaque sournoise</name>

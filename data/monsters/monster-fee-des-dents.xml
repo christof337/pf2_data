@@ -11,9 +11,7 @@
     </creatureTraits>
     <perception>
       <bonus/>
-      <senses/>
     </perception>
-    <languages/>
     <skills>
       <skill>
         <name>Acrobaties</name>
@@ -28,6 +26,7 @@
         <bonus>+6</bonus>
       </skill>
     </skills>
+    <attributes STR="+0" DEX="+0" CON="+0" INT="+0" WIS="+0" CHA="+0"/>
     <armorClass>15</armorClass>
     <saves REF="+7" FOR="+2" WIL="+4"/>
     <health>8</health>
@@ -57,7 +56,6 @@
         </damages>
       </strike>
     </strikes>
-    <spellList source="innate" tradition="primal" DD="13"/>
     <offensiveAbilities>
       <special>
         <name>Tire‑dent</name>

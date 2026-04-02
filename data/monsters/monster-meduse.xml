@@ -11,9 +11,7 @@
     </creatureTraits>
     <perception>
       <bonus/>
-      <senses/>
     </perception>
-    <languages/>
     <skills>
       <skill>
         <name>Diplomatie</name>
@@ -28,6 +26,7 @@
         <bonus>+16</bonus>
       </skill>
     </skills>
+    <attributes STR="+0" DEX="+0" CON="+0" INT="+0" WIS="+0" CHA="+0"/>
     <armorClass>25</armorClass>
     <saves REF="+16" FOR="+15" WIL="+14"/>
     <health>105</health>

@@ -19,7 +19,6 @@
         </sens>
       </senses>
     </perception>
-    <languages/>
     <attributes STR="+8" DEX="+5" CON="+8" INT="+0" WIS="+5" CHA="+4"/>
     <armorClass>36</armorClass>
     <saves REF="+23" FOR="+28" WIL="+25"/>

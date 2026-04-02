@@ -82,7 +82,6 @@
         </damages>
       </strike>
     </strikes>
-    <spellList source="innate" tradition="occult" DD="17"/>
     <offensiveAbilities>
       <special>
         <name>Attaque sournoise</name>

@@ -13,9 +13,7 @@
     </creatureTraits>
     <perception>
       <bonus/>
-      <senses/>
     </perception>
-    <languages/>
     <skills>
       <skill>
         <name>Acrobaties</name>
@@ -55,13 +53,12 @@
       </skill>
     </skills>
     <attributes STR="+9" DEX="+8" CON="+9" INT="+8" WIS="+9" CHA="+8"/>
-    <armorClass/>
-    <saves/>
-    <health/>
+    <armorClass>0</armorClass>
+    <saves REF="+0" FOR="+0" WIL="+0"/>
+    <health>0</health>
     <speeds>
       <speed>0 m</speed>
     </speeds>
-    <strikes/>
     <offensiveAbilities>
       <special>
         <name>FAÇONNAGE DE DIABLES</name>

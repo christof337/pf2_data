@@ -12,13 +12,12 @@
     </creatureTraits>
     <perception>
       <bonus/>
-      <senses/>
     </perception>
     <languages>
       <language>commun</language>
       <language>féerique</language>
       <langSpecial>
-        <spell ref="spell-communication-avec-les-plantes">communication avec les plantes</spell>
+        <spellRef ref="spell-communication-avec-les-plantes">communication avec les plantes</spellRef>
       </langSpecial>
     </languages>
     <skills>

@@ -10,9 +10,8 @@
     </creatureTraits>
     <perception>
       <bonus/>
-      <senses/>
     </perception>
-    <languages/>
+    <attributes STR="+0" DEX="+0" CON="+0" INT="+0" WIS="+0" CHA="+0"/>
     <interactionAbilities>
       <special>
         <name>Compétence</name>
@@ -28,7 +27,7 @@
       </special>
     </interactionAbilities>
     <armorClass>21</armorClass>
-    <saves/>
+    <saves REF="+0" FOR="+0" WIL="+0"/>
     <health>160</health>
     <immunities>
       <immunity>effets de mort</immunity>

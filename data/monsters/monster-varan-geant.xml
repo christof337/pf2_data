@@ -11,16 +11,14 @@
     </creatureTraits>
     <perception>
       <bonus/>
-      <senses/>
     </perception>
-    <languages/>
+    <attributes STR="+0" DEX="+0" CON="+0" INT="+0" WIS="+0" CHA="+0"/>
     <armorClass>16</armorClass>
     <saves REF="+8" FOR="+9" WIL="+5"/>
     <health>36</health>
     <speeds>
       <speed>0 m</speed>
     </speeds>
-    <strikes/>
     <offensiveAbilities>
       <special type="reaction">
         <name>Serre entre les dents</name>

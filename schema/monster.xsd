@@ -31,7 +31,7 @@
       <xs:element name="resistances" type="resistanceListType" minOccurs="0"/>
       <xs:element name="reactiveAbilities" type="abilityContainerType" minOccurs="0"/>
       <xs:element name="speeds" type="speedsType"/>
-      <xs:element name="strikes" type="strikesType"/>
+      <xs:element name="strikes" type="strikesType" minOccurs="0"/>
       <xs:element name="spellList" type="spellListType" minOccurs="0"/>
       <xs:element name="offensiveAbilities" type="abilityContainerType" minOccurs="0"/>
     </xs:sequence>
@@ -243,7 +243,7 @@
   
   <xs:complexType name="languagesType">
     <xs:sequence>
-      <xs:element name="language" type="xs:string" maxOccurs="unbounded"/>
+      <xs:element name="language" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
       <xs:element name="langSpecial" type="richTextType" minOccurs="0"/>
     </xs:sequence>
     <xs:attribute name="cannotTalk" type="xs:string"/>
@@ -257,7 +257,7 @@
             <xs:element name="name" type="xs:string"/>
             <xs:element name="bonus" type="xs:string"/>
             <xs:element name="traits" type="traitListType" minOccurs="0"/>
-            <xs:element name="damages">
+            <xs:element name="damages" minOccurs="0">
               <xs:complexType>
                 <xs:sequence>
                   <xs:element name="damage" maxOccurs="unbounded">

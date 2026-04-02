@@ -23,7 +23,6 @@
         </sens>
       </senses>
     </perception>
-    <languages/>
     <attributes STR="+6" DEX="+3" CON="+6" INT="+0" WIS="+2" CHA="+0"/>
     <armorClass>26</armorClass>
     <saves REF="+17" FOR="+20" WIL="+14" saveSpecial="bonus de statut de +4 aux jets de sauvegarde contre la terreur"/>

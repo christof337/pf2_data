@@ -12,9 +12,8 @@
     </creatureTraits>
     <perception>
       <bonus/>
-      <senses/>
     </perception>
-    <languages/>
+    <attributes STR="+0" DEX="+0" CON="+0" INT="+0" WIS="+0" CHA="+0"/>
     <armorClass>19</armorClass>
     <saves REF="+10" FOR="+7" WIL="+4"/>
     <health>27</health>

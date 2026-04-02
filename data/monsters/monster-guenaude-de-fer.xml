@@ -12,9 +12,7 @@
     </creatureTraits>
     <perception>
       <bonus/>
-      <senses/>
     </perception>
-    <languages/>
     <attributes STR="+6" DEX="+4" CON="+4" INT="+1" WIS="+4" CHA="+3"/>
     <interactionAbilities>
       <special>

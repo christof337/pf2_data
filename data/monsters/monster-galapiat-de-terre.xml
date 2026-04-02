@@ -23,7 +23,6 @@
         </sens>
       </senses>
     </perception>
-    <languages/>
     <skills>
       <skill>
         <name>Athlétisme</name>
@@ -34,6 +33,7 @@
         <bonus>+2</bonus>
       </skill>
     </skills>
+    <attributes STR="+0" DEX="+0" CON="+0" INT="+0" WIS="+0" CHA="+0"/>
     <interactionAbilities>
       <special>
         <name>For</name>
@@ -55,7 +55,6 @@
       <speed type="fly">4</speed>
       <speed>5 m</speed>
     </speeds>
-    <strikes/>
     <spellList source="innate" tradition="arcane" DD="17">
       <rank rank="3">
         <spells>

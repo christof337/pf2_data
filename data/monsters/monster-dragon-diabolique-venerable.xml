@@ -13,7 +13,6 @@
     </creatureTraits>
     <perception>
       <bonus/>
-      <senses/>
     </perception>
     <languages>
       <language>aklo</language>
@@ -67,6 +66,7 @@
         <bonus>+33</bonus>
       </skill>
     </skills>
+    <attributes STR="+0" DEX="+0" CON="+0" INT="+0" WIS="+0" CHA="+0"/>
     <armorClass>44</armorClass>
     <saves REF="+32" FOR="+36" WIL="+32" saveSpecial="bonus de statut de +2 à tous les jets de sauvegarde contre la magie divine"/>
     <health>390</health>
