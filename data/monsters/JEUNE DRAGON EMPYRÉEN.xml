@@ -6,10 +6,10 @@
     <type>CRÉATURE</type>
     <level>10</level>
     <creatureTraits>
-      <trait type="size" ref="trait-grande">GRANDE</trait>
+      <trait type="size">GRANDE</trait>
       <trait>DIVIN</trait>
-      <trait ref="trait-dragon">DRAGON</trait>
-      <trait ref="trait-saint">SAINT</trait>
+      <trait>DRAGON</trait>
+      <trait>SAINT</trait>
     </creatureTraits>
     <perception>
       <bonus>+21</bonus>
@@ -35,7 +35,7 @@
       <language>draconique</language>
       <language>empyréen</language>
       <langSpecial>
-        <spellRef ref="spell-langage-universel">langage universel</spellRef>
+        <spellRef>langage universel</spellRef>
       </langSpecial>
     </languages>
     <skills>
@@ -96,11 +96,11 @@
       <special>
         <name>Présence inspirante</name>
         <traits>
-          <trait ref="trait-aura">aura</trait>
-          <trait ref="trait-emotion">émotion</trait>
-          <trait ref="trait-mental">mental</trait>
+          <trait>aura</trait>
+          <trait>émotion</trait>
+          <trait>mental</trait>
         </traits>
-        <description>6 m. Le simple fait de voir un dragon empyréen est motivant. Les créatures dans l’aura gagnent un bonus de statut de +1 aux jets de sauve- garde et tests de compétences. Le dragon empyréen ne peut bénéficier de sa propre aura ou d’autres actions utilisant l’aura. Il peut choisir de priver les créatures de son choix des avantages accordés par son aura ou des actions qui utilisent l’aura.</description>
+        <description>6 m. Le simple fait de voir un dragon empyréen est motivant. Les créatures dans l’aura gagnent un bonus de statut de +1 aux jets de sauvegarde et tests de compétences. Le dragon empyréen ne peut bénéficier de sa propre aura ou d’autres actions utilisant l’aura. Il peut choisir de priver les créatures de son choix des avantages accordés par son aura ou des actions qui utilisent l’aura.</description>
       </special>
     </reactiveAbilities>
     <speeds>
@@ -113,8 +113,8 @@
         <bonus>+22</bonus>
         <traits>
           <trait>allonge 3 m</trait>
-          <trait ref="trait-magique">magique</trait>
-          <trait ref="trait-saint">saint</trait>
+          <trait>magique</trait>
+          <trait>saint</trait>
         </traits>
         <damages>
           <damage>
@@ -132,8 +132,8 @@
         <bonus>+22</bonus>
         <traits>
           <trait>agile</trait>
-          <trait ref="trait-magique">magique</trait>
-          <trait ref="trait-saint">saint</trait>
+          <trait>magique</trait>
+          <trait>saint</trait>
         </traits>
         <damages>
           <damage>
@@ -151,8 +151,8 @@
         <bonus>+20</bonus>
         <traits>
           <trait>allonge 4,5 m</trait>
-          <trait ref="trait-magique">magique</trait>
-          <trait ref="trait-saint">saint</trait>
+          <trait>magique</trait>
+          <trait>saint</trait>
         </traits>
         <damages>
           <damage>
@@ -171,7 +171,7 @@
         <traits>
           <trait>agile</trait>
           <trait>allonge 3 m</trait>
-          <trait ref="trait-magique">magique</trait>
+          <trait>magique</trait>
         </traits>
         <damages>
           <damage>
@@ -188,17 +188,17 @@
     <spellList source="innate" tradition="divine" DD="29" attack="+21">
       <rank rank="5">
         <spells>
-          <spell ref="spell-guerison">guérison</spell>
+          <spell>guérison</spell>
         </spells>
       </rank>
       <rank rank="3">
         <spells>
-          <spell spellSpecial="à volonté" ref="spell-lumiere-sainte">lumière sainte</spell>
+          <spell spellSpecial="à volonté">lumière sainte</spell>
         </spells>
       </rank>
       <rank rank="5" constant="TRUE">
         <spells>
-          <spell ref="spell-langage-universel">langage universel</spell>
+          <spell>langage universel</spell>
         </spells>
       </rank>
     </spellList>
@@ -214,26 +214,26 @@
       <special type="activity" actions="1">
         <name>Manipulation de halo</name>
         <traits>
-          <trait ref="trait-concentration">concentration</trait>
-          <trait ref="trait-divine">divine</trait>
-          <trait ref="trait-manipulation">manipulation</trait>
+          <trait>concentration</trait>
+          <trait>divine</trait>
+          <trait>manipulation</trait>
         </traits>
         <description>Le dragon envoie son halo sur une case à moins de 27 m. Tant que le halo est ainsi déployé, le dragon perd son aura de présence inspirante qui à la place émane du halo sur une même distance. Le dragon peut Maintenir l’effet pour rappeler le halo à lui, peu importe la distance qui les sépare. Le halo est constitué de lumière pure, n’occupe aucun espace et ne peut être ni ciblé ni détruit.</description>
       </special>
       <special type="activity" actions="2">
         <name>Pulsation du halo</name>
         <traits>
-          <trait ref="trait-concentration">concentration</trait>
-          <trait ref="trait-divine">divine</trait>
+          <trait>concentration</trait>
+          <trait>divine</trait>
         </traits>
-        <description>Le dragon choisit un effet à imposer aux créa- tures dans son aura de Présence inspirante. Le dragon ne peut utiliser Pulsation du halo pendant 1d4 rounds.<list><listItem>**Répulsion.** Chaque créature doit réussir un jet de Vigueur DD 29 ou être repoussée jusqu’à ce qu’elle ait quitté l’aura.</listItem><listItem>**Restauration** (guérison, vitalité) Chaque créature récupère 5d8 PV.</listItem></list></description>
+        <description>Le dragon choisit un effet à imposer aux créatures dans son aura de Présence inspirante. Le dragon ne peut utiliser Pulsation du halo pendant 1d4 rounds.<list><listItem>**Répulsion.** Chaque créature doit réussir un jet de Vigueur DD 29 ou être repoussée jusqu’à ce qu’elle ait quitté l’aura.</listItem><listItem>**Restauration** (guérison, vitalité) Chaque créature récupère 5d8 PV.</listItem></list></description>
       </special>
       <special type="activity" actions="2">
         <name>Souffle spirituel</name>
         <traits>
-          <trait ref="trait-divine">divine</trait>
-          <trait ref="trait-esprit">esprit</trait>
-          <trait ref="trait-saint">saint</trait>
+          <trait>divine</trait>
+          <trait>esprit</trait>
+          <trait>saint</trait>
         </traits>
         <description>Le dragon crache un feu saint qui inflige 9d8 dégâts d’esprit dans un cône de 12 m (jet de Réflexes basique DD 29). Le dragon ne peut plus utiliser Souffle spirituel pendant 1d4 rounds.</description>
       </special>

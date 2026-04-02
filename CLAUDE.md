@@ -150,6 +150,24 @@ La comparaison est intentionnellement stricte : tout écart, même cosmétique, 
 
 Ces problèmes sont **identifiés et documentés**, mais délibérément différés. Ne pas les corriger de manière proactive.
 
+### "d'" dans les types de dégâts
+Dans les frappes des monstres, on voit 
+```
+<damage>
+            <amount>1d8</amount>
+            <damageType>d’esprit</damageType>
+          </damage>
+```
+j'aimerais voir apparaître "esprit" dans le damage type (plutôt que "d'esprit"), mais j'ai besoin que le xsl obsidian soit malin et ajoute tout seul "de" ou "d'" lorsque nécessaire.
+
+### Sorts à actions variables
+Certains sorts (guérison typiquement ou guérison de compagnon) donnent une "fourchette" d'actions à dépenser, entre 1 et 3, ou entre 2 et 3, parfois 2 ou plus. Il faudrait pouvoir gérer ça proprement en xml, pour permettre un maximum de combinaisons
+
+### Caractères étranges slugifiés
+le slug de mauvais œil c'est "sort-mauvais-il". je doute que "mauvais il" sorte un jour mais il faudrait mettre "sort-mauvais-oeil" (en systématique) je pense
+
+### 
+
 ### Sorts — Pipeline XML → Obsidian
 
 1. **Superscript "e" dans les entrées intensifiées** (`spell_to_obsidian.xsl`)
