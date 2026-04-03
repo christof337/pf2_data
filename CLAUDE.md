@@ -193,6 +193,10 @@ Le sort _Avatar_ (et futurs sorts de forme) contient des blocs de stats de forme
 3. **⚠️ Bug parsing — texte post-bloc SCSEEC perdu** (`spells_mapper.py`) — *plus grave*
    Si une description contient du texte **après** le bloc Succès critique / Succès / Échec / Échec critique, ce texte n'est pas capturé dans un champ dédié : il se retrouve accolé à la dernière entrée du bloc (typiquement `<criticalFailure>`). Correction à apporter dans la logique de délimitation de `parse_spell_block()`, probablement en ajoutant un champ `descriptionPost` ou en revoyant les bornes des regex de sauvegardes.
 
+4. dans mysteres divins, on a eu un paquet de nouveaux statblocks pour le sort avatar. il faudrait en faire un xml à part enrichi de différentes sources (je pense)
+
+5. les traits de rareté doivent apparaître en premier (puis par ordre alphabétique)
+
 ### Prochain type de données à intégrer
 
 5. **Actions nommées** (Se cacher, Saisir, Se mettre à l'abri, Faire un pas, Aider, Chercher, Intimider, etc.)
@@ -213,3 +217,12 @@ Le site cible est fonctionnellement équivalent à [Archives of Nethys](https://
 - Recherche full-text sur les descriptions
 - Le XML structuré est conçu dès maintenant pour supporter ces liens (IDs stables, `<spellRef>`, `<source_id>` à venir)
 - Technologie frontend à choisir au moment de la Phase 3 (le XML pivot permettra de générer JSON/HTML/autre sans retoucher les données)
+
+## erreurs à corriger asap
+
+### golden sorts - batch 1
+
+- Alarme est traité comme une réaction --> devrait ne pas avoir de symbole d'action
+- barrage de force a une entrée intensifiée **erronée dans le pdf**. je veux que le XML ne présente pas cette erreur. il faudrait donc faire un cas très particulier dans le mapper pour mettre intensifié +2 au lieu de intensifié 2e, uniquement pour ce sort. ceci s'intégre dans une réflexion plus globale que nous devons avoir sur comment traiter les erreurs des pdf.
+- bulle d'air n'a pas de déclencheur. je pense que déclencheur n'est pas catché par le mapper
+- chemin sûr a un problème d'italique
