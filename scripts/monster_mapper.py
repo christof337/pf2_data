@@ -4,7 +4,7 @@ import sys
 import time
 from lxml import etree
 from xml_validator import validate_xml
-from utils import clean_text, strip_metadata
+from utils import clean_text, strip_metadata, split_bullet_list
 
 # ==========================================
 # PARSING SPÉCIFIQUE MONSTRES
@@ -69,13 +69,9 @@ def parse_ability_block(text):
         desc_raw = desc_parts[0].strip()
         
         # E. Extraction des listes à puces
-        if '•' in desc_raw:
-            parts = re.split(r'\s*•\s*', desc_raw)
-            intro = parts[0].strip()
-            ability['list_items'] = [clean_text(p) for p in parts[1:] if p.strip()]
-            ability['desc'] = clean_text(intro) if intro else None
-        else:
-            ability['desc'] = clean_text(desc_raw) if desc_raw else None
+        intro_raw, items_raw = split_bullet_list(desc_raw)
+        ability['list_items'] = [clean_text(p) for p in items_raw]
+        ability['desc'] = clean_text(intro_raw) if intro_raw.strip() else None
             
         abilities.append(ability)
         

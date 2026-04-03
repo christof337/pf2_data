@@ -19,3 +19,15 @@ def strip_metadata(content):
 def clean_text(text):
     """Normalise les espaces et sauts de ligne : collapse tout whitespace en un espace."""
     return re.sub(r'\s+', ' ', text).strip()
+
+
+def split_bullet_list(text):
+    """Sépare un texte contenant des bullets (•) en (intro_brut, [items_bruts]).
+    Ne nettoie pas le texte — le caller applique sa propre fonction de nettoyage.
+    Retourne (text, []) si aucun • n'est trouvé."""
+    if '•' not in text:
+        return text, []
+    parts = re.split(r'\s*•\s*', text)
+    intro = parts[0]
+    items = [p for p in parts[1:] if p.strip()]
+    return intro, items

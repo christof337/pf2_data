@@ -133,4 +133,11 @@
   <xsl:template match="spellRef">
     <xsl:text>*</xsl:text><xsl:value-of select="."/><xsl:text>*</xsl:text>
   </xsl:template>
+
+  <xsl:template match="list">
+    <xsl:text>&#10;</xsl:text>
+    <xsl:for-each select="listItem">
+      <xsl:text>- </xsl:text><xsl:value-of select="."/><xsl:text>&#10;</xsl:text>
+    </xsl:for-each>
+  </xsl:template>
 </xsl:stylesheet>

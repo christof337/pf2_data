@@ -109,6 +109,7 @@
   
   <xs:complexType name="richTextType" mixed="true">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="list" type="listType"/>
       <xs:element name="spellRef">
         <xs:complexType>
           <xs:simpleContent>
@@ -119,6 +120,12 @@
         </xs:complexType>
       </xs:element>
     </xs:choice>
+  </xs:complexType>
+
+  <xs:complexType name="listType">
+    <xs:sequence>
+      <xs:element name="listItem" type="xs:string" maxOccurs="unbounded"/>
+    </xs:sequence>
   </xs:complexType>
   
   <xs:simpleType name="traditionType">

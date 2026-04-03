@@ -6,7 +6,7 @@ from lxml import etree
 
 from xml_validator import validate_xml
 from slug_generator import generate_slug
-from utils import strip_metadata
+from utils import strip_metadata, split_bullet_list
 
 # ==========================================
 # CONFIGURATION & CONSTANTES
@@ -102,12 +102,10 @@ def clean_text(text):
     return re.sub(r'\s+', ' ', text).strip()
 
 def clean_desc(text):
-    """Nettoie une description : corrige les coupures de mots, préserve le gras et les sauts de ligne avant bullets."""
+    """Nettoie une description : corrige les coupures de mots, préserve le gras (**), normalise les espaces."""
     if not text: return ""
-    text = re.sub(r'[\u002D\u2011]\n?\s+', '', text)  # coupures de mots (tiret normal + insécable)
-    # Préserver les sauts de ligne avant les bullets pour maintenir la structure de liste
-    text = re.sub(r'\s*\n\s*(?=•)', '\n', text)
-    return re.sub(r'[ \t]+', ' ', text).strip()
+    text = re.sub(r'[\u002D\u2011]\n?\s+', '', text)  # coupures de mots (tiret normal + insécable U+2011)
+    return re.sub(r'\s+', ' ', text).strip()
 
 def clean_value(val):
     if not val: return None
@@ -128,23 +126,23 @@ def parse_traits(traits_raw):
     return final_traits
 
 def add_rich_text(parent, text_content, tag_name=None):
-    """Génère un nœud XML en convertissant les *mot* en balises <spell>mot</spell>"""
-    if not text_content: return
-    
+    """Génère un nœud XML en convertissant les _mot_ en balises <spellRef>. Retourne le nœud créé."""
     if tag_name is None:
         el = parent
     else:
         el = etree.SubElement(parent, tag_name)
 
-    # Accepte n'importe quel caractère (y compris la ponctuation) sauf un astérisque
+    if not text_content:
+        return el
+
     parts = re.split(r'_([^_]+?)_', text_content)
-    
     el.text = parts[0]
     for i in range(1, len(parts), 2):
         spell_el = etree.SubElement(el, "spellRef")
         spell_el.text = parts[i]
         if i + 1 < len(parts):
             spell_el.tail = parts[i+1]
+    return el
 
 # ==========================================
 # PARSING D'UN BLOC DE SORT
@@ -274,7 +272,9 @@ def parse_spell_block(content):
         save_starts.append(m.start())
         
     desc_end = min(save_starts) if save_starts else len(content)
-    spell_data['description'] = clean_desc(content[desc_start:desc_end])
+    intro_raw, items_raw = split_bullet_list(content[desc_start:desc_end])
+    spell_data['description'] = clean_desc(intro_raw)
+    spell_data['list_items'] = [clean_desc(item) for item in items_raw]
 
     return spell_data
 
@@ -362,10 +362,11 @@ def generate_spells_xml(spells_data, output_path):
             if data.get(field): etree.SubElement(s_el, field).text = data[field]
         
         # description est requise par le XSD — on la crée même si vide
-        if data.get('description'):
-            add_rich_text(s_el, data['description'], "description")
-        else:
-            etree.SubElement(s_el, "description")
+        desc_node = add_rich_text(s_el, data.get('description'), "description")
+        if data.get('list_items'):
+            list_node = etree.SubElement(desc_node, "list")
+            for item in data['list_items']:
+                etree.SubElement(list_node, "listItem").text = item
 
         if data['savingThrows']:
             st_el = etree.SubElement(s_el, "savingThrow")
