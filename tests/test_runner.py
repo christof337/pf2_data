@@ -61,11 +61,31 @@ def run_snapshot_test(name, md_path, expected_xml_path, parse_fn, generate_fn, x
     print(f"  ✅ SUCCÈS : Le XML généré est identique au Snapshot.\n")
     return True
 
+def discover_sort_batch_tests():
+    """Auto-découvre les batches de sorts validés (test_sorts_NN_ok.xml)."""
+    fixture_dir = "./tests/fixtures"
+    batch_tests = []
+    for i in range(1, 11):
+        xml_path = os.path.join(fixture_dir, f"test_sorts_{i:02d}_ok.xml")
+        md_path  = os.path.join(fixture_dir, f"test_sorts_{i:02d}.md")
+        if os.path.exists(xml_path) and os.path.exists(md_path):
+            batch_tests.append({
+                "name": f"Sorts LdJ — batch {i:02d}",
+                "md":   md_path,
+                "xml":  xml_path,
+                "xsd":  "./schema/spell.xsd",
+                "parse":    parse_spells_md,
+                "generate": generate_spells_xml,
+            })
+    return batch_tests
+
+
 if __name__ == "__main__":
     print("="*50)
     print("LANCEMENT DES TESTS DE NON-RÉGRESSION")
     print("="*50)
 
+    # Tests fixes (monstre, traits)
     tests = [
         {
             "name": "Jeune Dragon Empyréen (Monstre Standard)",
@@ -74,14 +94,6 @@ if __name__ == "__main__":
             "xsd": "./schema/monster.xsd",
             "parse":    parse_monster_md,
             "generate": generate_monster_xml,
-        },
-        {
-            "name": "Sorts LdJ (468 sorts)",
-            "md":  "./tests/fixtures/test_sorts.md",
-            "xml": "./tests/fixtures/test_sorts_ok.xml",
-            "xsd": "./schema/spell.xsd",
-            "parse":    parse_spells_md,
-            "generate": generate_spells_xml,
         },
         {
             "name": "Traits LdM (format §**Nom.** description)",
@@ -100,6 +112,14 @@ if __name__ == "__main__":
             "generate": generate_trait_xml,
         },
     ]
+
+    # Batches sorts : auto-découverte des goldens validés
+    sort_batches = discover_sort_batch_tests()
+    if sort_batches:
+        print(f"  → {len(sort_batches)} batch(es) de sorts trouvé(s) et inclus dans la suite.\n")
+    else:
+        print("  → Aucun golden de sorts validé trouvé (test_sorts_NN_ok.xml).\n")
+    tests.extend(sort_batches)
 
     all_passed = True
     for t in tests:

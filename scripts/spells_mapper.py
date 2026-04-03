@@ -149,7 +149,9 @@ def parse_spell_block(content):
     # Les chapitres commencent par des titres en majuscules seuls sur une ligne
     # ou par "[[PAGE X]]" suivi d'un titre de chapitre
     chapter_markers = [
-        rf'(?m)^[{UPPER}][\s{UPPER}]{{2,}}$(?![\s\S]*?(?:MANIPULATION|CONCENTRATION))(?![\s\S]{{0,200}}?(?:SORT|TOUR DE MAGIE|FOCALISÉ)\s+\d{{1,2}})',
+        # Coupe uniquement sur une ligne all-caps qui n'est PAS suivie de mécaniques
+        # (Tradition, **Portée, **Cible…) : les lignes de traits sont toujours suivies de mécaniques
+        rf'(?m)^[{UPPER}][\s{UPPER}]{{2,}}$(?![\s\S]{{0,200}}?(?:SORT|TOUR DE MAGIE|FOCALISÉ)\s+\d{{1,2}})(?![\s\S]{{0,250}}?\n\s*(?:[A-ZÀÂÄÆÇÉÈÊËÎÏÔÖŒÙÛÜŸ][a-zà-ÿ]|\*\*(?:Portée|Cibles?|Défense|Durée|Zone|Incantation|Déclencheur)))',
         rf'(?m)^\s{{0,30}}\*\*[{UPPER}][{UPPER}\s]{{4,}}',  # Cat C : **SIDEBAR TITRE** à faible indent
     ]
 
@@ -188,12 +190,12 @@ def parse_spell_block(content):
     spell_data['actions'] = action_match.group(1) if action_match else None
 
     # 4. Mécaniques stricto sensu (Bloque au premier saut de ligne ou point-virgule)
-    mech_prefix = r'(?:(?<=\n)|(?<=;)|(?<=^))\s*\**'
+    mech_prefix = r'(?:(?<=\n)|(?<=;)|(?<=^))\s*\**\s*'  # \s* final tolère un espace entre ** et le nom du champ
     mechanics = {
         'range': mech_prefix + r'Portée\**[\s:]*(.*?)(?=\s*(?:;|\n|$))',
         'targets': mech_prefix + r'[Cc]ibles?\**[\s:]*(.*?)(?=\s*(?:;|\n\s*\*\*|\n\s*[A-ZÀÂÄÆÇÉÈÊËÎÏÔÖŒÙÛÜŸ]|$))',
         'defense': mech_prefix + r'Défense\**[\s:]*(.*?)(?=\*{0,2}\s*(?:;|\n|$))',
-        'duration': mech_prefix + r'Durée\**[\s:]*(.*?)(?=\s*(?:;|\n|$))',
+        'duration': mech_prefix + r'Durée\*+[\s:]*(.*?)(?=\s*(?:;|\n|$))',  # \*+ évite de matcher "Durée maximale" dans les textes de sauvegarde
         'area': mech_prefix + r'Zone[\s:]*\**[\s:]*(.*?)(?=\s*(?:;|\n\s*[A-ZÀÂÄÆÇÉÈÊËÎÏÔÖŒÙÛÜŸ]|$|\*\*))',
         'cast': mech_prefix + r'Incantation\**[\s:]*(.*?)(?=\s*(?:;|\n|$))'
     }

@@ -132,9 +132,22 @@ La comparaison est intentionnellement stricte : tout écart, même cosmétique, 
 ### Périmètre actuel des tests
 
 - Monstres : `test_dragon.md` / `test_dragon_ok.xml` (Jeune Dragon Empyréen)
-- Sorts : `test_sorts.md` / `test_sorts_ok.xml` (468 sorts LdJ — sorts, cantrips, focalisés)
+- Sorts : 10 batches progressifs (voir ci-dessous)
 - Traits LdM : `test_traits.md` / `test_traits_ok.xml` (~400 traits format LdM)
 - Traits LdJ : `test_traits_ldj.md` / `test_traits_ldj_ok.xml` (153 traits format LdJ)
+
+### Batches progressifs — sorts LdJ
+
+Les 471 sorts sont découpés en 10 batches (`test_sorts_01.md` … `test_sorts_10.md`, ~46 sorts chacun).
+Le runner auto-découvre les goldens validés (`test_sorts_NN_ok.xml`) : un fichier absent = batch pas encore béni = pas testé.
+
+**Workflow pour valider un nouveau batch :**
+1. Générer : `uv run scripts/spells_mapper.py tests/fixtures/test_sorts_NN.md output/golden_work/spells_ldj_batch_NN.xml`
+2. Inspecter le XML (0 INCONNU, 0 `*` résiduels, traditions correctes)
+3. Si OK, bénir : `cp output/golden_work/spells_ldj_batch_NN.xml tests/fixtures/test_sorts_NN_ok.xml`
+4. Lancer les tests : `uv run tests/test_runner.py` — tous les batches déjà bénis doivent passer
+
+**Règle absolue :** seul l'utilisateur bénit un golden. Claude ne copie jamais vers `tests/fixtures/` sans validation explicite.
 
 ---
 

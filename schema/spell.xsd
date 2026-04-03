@@ -13,6 +13,14 @@
   </xs:element>
   
   <xs:complexType name="spellType">
+    <xs:annotation>
+      <xs:documentation>
+        Contraintes de gestion (appliquées par xml_validator.py, équivalent xs:assert XSD 1.1) :
+          assert 1 — type="spell"   → count(traditions/tradition) >= 1  (tradition obligatoire)
+          assert 2 — type="focus"   → not(traditions/tradition)          (aucune tradition)
+          assert 3 — type="cantrip" → pas de contrainte sur les traditions
+      </xs:documentation>
+    </xs:annotation>
     <xs:sequence>
       <xs:element name="name" type="xs:string"/>
       
@@ -87,7 +95,15 @@
       </xs:element>
       
     </xs:sequence>
-    <xs:attribute name="type" type="xs:string" use="required"/>
+    <xs:attribute name="type" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="spell"/>
+          <xs:enumeration value="cantrip"/>
+          <xs:enumeration value="focus"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
     <xs:attribute name="id" type="xs:ID"/>
   </xs:complexType>
   
