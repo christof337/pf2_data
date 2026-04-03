@@ -1,24 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:output method="text" encoding="UTF-8"/>
-  
+
+  <!-- Template réutilisable : convertit un chiffre d'action en libellé pf2e-stats -->
+  <xsl:template name="action-label">
+    <xsl:param name="n"/>
+    <xsl:choose>
+      <xsl:when test="$n='1'">one-action</xsl:when>
+      <xsl:when test="$n='2'">two-actions</xsl:when>
+      <xsl:when test="$n='3'">three-actions</xsl:when>
+      <xsl:when test="$n='R' or $n='reaction'">reaction</xsl:when>
+      <xsl:when test="$n='free'">free-action</xsl:when>
+    </xsl:choose>
+  </xsl:template>
+
   <xsl:template match="/spells/spell">
     <xsl:text>&#10;&#10;</xsl:text>
-    
+
     <xsl:text>&#96;&#96;&#96;pf2e-stats&#10;</xsl:text>
     <xsl:text>#### [[fr]]&#10;</xsl:text>
-    
+
     <xsl:text># </xsl:text><xsl:value-of select="name"/>
     <xsl:if test="actions">
-      <xsl:text> &#96;[</xsl:text>
       <xsl:choose>
-        <xsl:when test="actions='1'">one-action</xsl:when>
-        <xsl:when test="actions='2'">two-actions</xsl:when>
-        <xsl:when test="actions='3'">three-actions</xsl:when>
-        <xsl:when test="actions='R' or actions='reaction'">reaction</xsl:when>
-        <xsl:when test="actions='free'">free-action</xsl:when>
+        <!-- Actions variables : "1-3" → `[one-action]` à `[three-actions]` -->
+        <xsl:when test="contains(actions, '-')">
+          <xsl:text> &#96;[</xsl:text>
+          <xsl:call-template name="action-label">
+            <xsl:with-param name="n" select="substring-before(actions, '-')"/>
+          </xsl:call-template>
+          <xsl:text>]&#96; à &#96;[</xsl:text>
+          <xsl:call-template name="action-label">
+            <xsl:with-param name="n" select="substring-after(actions, '-')"/>
+          </xsl:call-template>
+          <xsl:text>]&#96;</xsl:text>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:text> &#96;[</xsl:text>
+          <xsl:call-template name="action-label">
+            <xsl:with-param name="n" select="actions"/>
+          </xsl:call-template>
+          <xsl:text>]&#96;</xsl:text>
+        </xsl:otherwise>
       </xsl:choose>
-      <xsl:text>]&#96;</xsl:text>
     </xsl:if>
     <xsl:text>&#10;</xsl:text>
     

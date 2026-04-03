@@ -97,9 +97,17 @@ def clean_pdf_artifacts(content):
 def clean_text(text):
     """Nettoie le texte PDF : retire les coupures de mots (tiret + espace) et normalise les espaces."""
     if not text: return ""
-    text = re.sub(r'-\n?\s+', '', text)
+    text = re.sub(r'[\u002D\u2011]\n?\s+', '', text)  # tiret normal et tiret insécable (U+2011)
     text = re.sub(r'\*+', '', text)  # strip marqueurs markdown gras/italique résiduels
     return re.sub(r'\s+', ' ', text).strip()
+
+def clean_desc(text):
+    """Nettoie une description : corrige les coupures de mots, préserve le gras et les sauts de ligne avant bullets."""
+    if not text: return ""
+    text = re.sub(r'[\u002D\u2011]\n?\s+', '', text)  # coupures de mots (tiret normal + insécable)
+    # Préserver les sauts de ligne avant les bullets pour maintenir la structure de liste
+    text = re.sub(r'\s*\n\s*(?=•)', '\n', text)
+    return re.sub(r'[ \t]+', ' ', text).strip()
 
 def clean_value(val):
     if not val: return None
@@ -184,10 +192,18 @@ def parse_spell_block(content):
     # 3. Actions (Isolé entre le Nom et le Rang)
     header_end = rank_match.start() if rank_match else 200
     header_area = content[:header_end]
-    action_match = re.search(r'(?m)^\s*\**\s*([0123R])\s*\**\s*$', header_area)
-    if not action_match:
-        action_match = re.search(r'\b(0|1|2|3|R)\b', header_area[name_match.end() if name_match else 0:])
-    spell_data['actions'] = action_match.group(1) if action_match else None
+    # Détection des actions variables "N À M" (ex: 1 À 3, 2 À 3) — Cat B les a normalisées en une ligne
+    range_match = re.search(r'\b([123])\s+[Àà]\s+([123])\b', header_area)
+    if range_match:
+        spell_data['actions'] = f"{range_match.group(1)}-{range_match.group(2)}"
+    else:
+        action_match = re.search(r'(?m)^\s*\**\s*([0123R])\s*\**\s*$', header_area)
+        if not action_match:
+            action_match = re.search(r'\b(0|1|2|3|R)\b', header_area[name_match.end() if name_match else 0:])
+        spell_data['actions'] = action_match.group(1) if action_match else None
+    # Réactions sans chiffre d'action : détecter via Déclencheur
+    if not spell_data['actions'] and re.search(r'Déclencheur', content, re.IGNORECASE):
+        spell_data['actions'] = 'R'
 
     # 4. Mécaniques stricto sensu (Bloque au premier saut de ligne ou point-virgule)
     mech_prefix = r'(?:(?<=\n)|(?<=;)|(?<=^))\s*\**\s*'  # \s* final tolère un espace entre ** et le nom du champ
@@ -220,7 +236,10 @@ def parse_spell_block(content):
         spell_data['traditions'] = []
 
     # 6. Traits (Entre le Rang et la première mécanique)
-    first_mech_start = min([m.start() for m in re.finditer(r'(?:(?<=\n)|(?<=;)|(?<=^))\s*\**(?:Portée|Cibles?|Défense|Durée|Zone|Incantation|Traditions?|Protecteur|Muse|Déclencheur|Conditions?|Leçon|[{UPPER}][a-zà-ÿ]|)', content, re.IGNORECASE)] or [len(content)])
+    # Détection de la première mécanique ou du début de description (Capital+minuscule)
+    first_mech_start = min([m.start() for m in re.finditer(
+        rf'(?:(?<=\n)|(?<=;))\s*\**(?:Portée|Cibles?|Défense|Durée|Zone|Incantation|Traditions?|Protecteur|Muse|Déclencheur|Conditions?|Leçon|[{UPPER}][a-zà-ÿ])',
+        content)] or [len(content)])
     traits_area = content[rank_match.end() if rank_match else 200:first_mech_start]
     spell_data['traits'] = parse_traits(traits_area)
 
@@ -255,7 +274,7 @@ def parse_spell_block(content):
         save_starts.append(m.start())
         
     desc_end = min(save_starts) if save_starts else len(content)
-    spell_data['description'] = clean_text(content[desc_start:desc_end])
+    spell_data['description'] = clean_desc(content[desc_start:desc_end])
 
     return spell_data
 
