@@ -72,6 +72,10 @@
       <xsl:text>**Incantation** </xsl:text><xsl:value-of select="cast"/>
       <xsl:text>&#10;</xsl:text>
     </xsl:if>
+    <xsl:if test="trigger">
+      <xsl:text>**Déclencheur** </xsl:text><xsl:value-of select="trigger"/>
+      <xsl:text>&#10;</xsl:text>
+    </xsl:if>
     
     <xsl:if test="range">
       <xsl:text>**Portée** </xsl:text>

@@ -75,7 +75,7 @@ Renforcée par une puissance magique, la cible devient de Grande taille. Son éq
 
 ```pf2e-stats
 #### [[fr]]
-# ALARME `[reaction]`
+# ALARME
 ## SORT 1
 ----
 ==CONCENTRATION== ==MANIPULATION==
@@ -120,6 +120,9 @@ Vous embellissez l’esprit de la cible, renforçant ses défenses mentales et s
 ---- 
 Vous apaisez de force les créatures de la zone, les ramenant dans un état de non-violence. Chaque créature doit faire un jet de Volonté. 
 **Succès critique.** La créature n’est pas affectée.  
+**Succès.** Une envie de calme impose un malus de statut de −1 aux jets d’attaques de la créature.  
+**Échec.** Tout effet d’émotion qui devrait affecter la créature est supprimé et elle ne peut pas accomplir d’action hostile. Si la cible est victime de l’hostilité d’une autre créature, elle n’est plus soumise à *tranquiliser*.
+**Échec critique.** Comme en cas d’échec, mais l’hostilité ne met pas un terme à l’effet.
 
   
 
@@ -269,6 +272,7 @@ Vous attachez la cible au plan dans lequel elle se trouve actuellement. Tant que
 ----
 ==AIR== ==CONCENTRATION==
 **Traditions** arcanique, primordiale
+**Déclencheur** Une créature à portée est en train de chuter.
 **Portée** 18 m ; **Cible** 1 créature qui chute
 **Durée** 1 min
 ---- 
@@ -382,7 +386,7 @@ Vous transformez tous les aliments et toutes les boissons de la zone pour faire 
 Vous lancez un éclat de magie solidifiée vers une créature que vous pouvez voir. Elle atteint automatiquement sa cible en lui infligeant 1d4+1 dégâts de force. Pour chaque action supplémentaire que vous effectuez en Lançant le sort, augmentez de 1 le nombre d’éclats que vous projetez, jusqu’à un maximum de 3 éclats pour 3 actions. Vous désignez la cible pour chaque éclat. Si vous projetez plus d’un éclat sur une même cible, additionnez les dégâts avant d’appliquer les bonus ou malus aux dégâts, les résistances, les faiblesses, etc. 
 
 ----
-**Intensifié (2e).** Vous projetez un éclat supplémentaire pour chaque action que vous effectuez.
+**Intensifié (+2).** Vous projetez un éclat supplémentaire pour chaque action que vous effectuez.
 
   
 
@@ -521,6 +525,7 @@ Vous faites apparaître un nuage brumeux. Toutes les créatures dans la brume de
 ----
 ==AIR== ==CONCENTRATION==
 **Traditions** arcanique, divine, primordiale
+**Déclencheur** Une créature à portée entre dans un environnement où elle ne peut pas respirer.
 **Portée** 18 m ; **Cible** la créature ayant déclenché l’effet
 **Durée** 1 min
 ---- 
@@ -762,7 +767,7 @@ Vos paroles sont du miel aux oreilles de votre cible, et votre visage lui semble
 **Portée** contact ; **Zone** terrain de 3 m de large, 3 m de haut et 18 m de long
 **Durée** maintenu jusqu’à 1 min
 ---- 
-Vous rendez sûr le passage à travers la zone pendant un court moment. Toute personne passant dans la zone gagne les avantages suivants contre les effets blessants du terrain et de l’environnement, y compris les dégâts environnementaux, les terrains dangereux et les dangers dans la zone. ** Le sort confère un bonus de statut de +2 à la CA et aux jets de sauvegarde contre de tels effets, et une résistance 5 contre tous leurs dégâts. De plus, le sort empêche toute chose dans la zone de s’écrouler, comme un pont branlant ou un plafond instable, sauf sous une pression extrême qui ferait s’écrouler une structure normale de ce type. *Chemin sûr* protège uniquement des blessures et non des désagréments. Il ne réduit pas un terrain difficile, n’ôte pas l’état masqué causé par les précipitations ou autre et ne protège pas non plus des créatures au sein de la zone du sort. 
+Vous rendez sûr le passage à travers la zone pendant un court moment. Toute personne passant dans la zone gagne les avantages suivants contre les effets blessants du terrain et de l’environnement, y compris les dégâts environnementaux, les terrains dangereux et les dangers dans la zone. Le sort confère un bonus de statut de +2 à la CA et aux jets de sauvegarde contre de tels effets, et une résistance 5 contre tous leurs dégâts. De plus, le sort empêche toute chose dans la zone de s’écrouler, comme un pont branlant ou un plafond instable, sauf sous une pression extrême qui ferait s’écrouler une structure normale de ce type. *Chemin sûr* protège uniquement des blessures et non des désagréments. Il ne réduit pas un terrain difficile, n’ôte pas l’état masqué causé par les précipitations ou autre et ne protège pas non plus des créatures au sein de la zone du sort. 
 
 ----
 **Intensifié (5e).** La résistance conférée passe à 10 et la zone peut mesurer 36 m de long.

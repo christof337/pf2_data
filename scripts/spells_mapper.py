@@ -32,10 +32,14 @@ def clean_pdf_artifacts(content):
     # 1. Gestion des retours à la ligne litéraux
     content = content.replace('\\n', '\n')
     
+    # Cat E : Callout box _** (intro de chapitre, italic+bold non fermé)
+    # Doit tourner AVANT la suppression des [[PAGE N]] car [[PAGE N]] sert de borne d'arrêt
+    content = re.sub(r'\n\s*_\*\*[^\n]+(?:\n(?!\s*\[\[)[^\n]*)*', '', content)
+
     # 2. Purge des en-têtes/pieds de page et filigranes
     content = re.sub(r'\[\[PAGE \d+\]\]', '', content)
     content = re.sub(r'(?m)^\s*Sorts\s*$', '', content, flags=re.IGNORECASE)
-    content = re.sub(r'(?m)^\s*# FLUX PRINCIPAL \(STATS\/BASE\)\s*$(?:\n\s*Livre des Joueurs)?\n*\*{0,2}\s*\d{1,3}\s?\d{0,3}', '', content)
+    content = re.sub(r'(?m)^\s*# FLUX PRINCIPAL \(STATS\/BASE\)\s*$(?:\n\s*Livre des Joueurs)?\n*\*{0,2}\s*\d{1,3}\s?\d{0,3}\*{0,2}', '', content)
     # Suppression des légendes d'illustration + crédit artiste (légende indentée suivie d'une ligne email)
     content = re.sub(
         r'(?m)^[ \t]{3,}[A-ZÀÂÄÆÇÉÈÊËÎÏÔÖŒÙÛÜŸ][a-zà-ÿ][^\n]{0,45}\n[ \t]*[^\n]*[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}[^\n]*$\n?',
@@ -44,8 +48,6 @@ def clean_pdf_artifacts(content):
     content = re.sub(r'(?m)^.*[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}.*$\n?', '', content)
     # Cat A : Running heads — **NOM NOM** seul sur une ligne (nom répété deux fois = filigrane PDF)
     content = re.sub(r'(?m)^\s*\*\*([A-ZÀÂÄÆÇÉÈÊËÎÏÔÖŒÙÛÜŸ][A-ZÀÂÄÆÇÉÈÊËÎÏÔÖŒÙÛÜŸ\s]+?) \1\*\*\s*$', '', content)
-    # Cat E : Callout box _** (intro de chapitre, italic+bold non fermé)
-    content = re.sub(r'\n\s*_\*\*[^\n]+(?:\n(?!\s*\[\[)[^\n]*)*', '', content)
 
     # 3. Suppression intelligente des sommaires (barres latérales)
     lines = content.split('\n')
@@ -202,8 +204,9 @@ def parse_spell_block(content):
         if not action_match:
             action_match = re.search(r'\b(0|1|2|3|R)\b', header_area[name_match.end() if name_match else 0:])
         spell_data['actions'] = action_match.group(1) if action_match else None
-    # Réactions sans chiffre d'action : détecter via Déclencheur
-    if not spell_data['actions'] and re.search(r'Déclencheur', content, re.IGNORECASE):
+    # Réactions sans chiffre d'action : détecter via **Déclencheur** comme label de mécanique
+    # (pas case-insensitive pour éviter "un déclencheur spécifique" dans les descriptions)
+    if not spell_data['actions'] and re.search(r'(?:^|\n)\s*\*{1,2}Déclencheur[.*]?\*{0,2}\s', content):
         spell_data['actions'] = 'R'
 
     # 4. Mécaniques stricto sensu (Bloque au premier saut de ligne ou point-virgule)
@@ -214,7 +217,8 @@ def parse_spell_block(content):
         'defense': mech_prefix + r'Défense\**[\s:]*(.*?)(?=\*{0,2}\s*(?:;|\n|$))',
         'duration': mech_prefix + r'Durée\*+[\s:]*(.*?)(?=\s*(?:;|\n|$))',  # \*+ évite de matcher "Durée maximale" dans les textes de sauvegarde
         'area': mech_prefix + r'Zone[\s:]*\**[\s:]*(.*?)(?=\s*(?:;|\n\s*[A-ZÀÂÄÆÇÉÈÊËÎÏÔÖŒÙÛÜŸ]|$|\*\*))',
-        'cast': mech_prefix + r'Incantation\**[\s:]*(.*?)(?=\s*(?:;|\n|$))'
+        'cast': mech_prefix + r'Incantation\**[\s:]*(.*?)(?=\s*(?:;|\n|$))',
+        'trigger': mech_prefix + r'Déclencheur[.*]?\**[\s:]*(.*?)(?=\s*(?:;|\n\s*\*\*|\n\s*[A-ZÀÂÄÆÇÉÈÊËÎÏÔÖŒÙÛÜŸ]|$))',
     }
     
     mech_ends = []
@@ -263,6 +267,11 @@ def parse_spell_block(content):
             "type": type_val,
             "text": clean_text(m.group(2))
         })
+    # Correction d'erreur PDF connue : BARRAGE DE FORCE a "Intensifié (2e)" au lieu de "(+2)"
+    if spell_data.get('name') == 'BARRAGE DE FORCE':
+        for h in spell_data['heightened']:
+            if h['type'] == '2e':
+                h['type'] = '+2'
 
     # 9. Description (Démarre après la dernière mécanique, s'arrête avant la première sauvegarde)
     desc_start = max(mech_ends) if mech_ends else header_end
@@ -361,7 +370,7 @@ def generate_spells_xml(spells_data, output_path):
             for tr in data['traditions']:
                 etree.SubElement(tr_el, "tradition").text = tr
 
-        for field in ['cast', 'range', 'area', 'targets', 'defense', 'duration']:
+        for field in ['cast', 'trigger', 'range', 'area', 'targets', 'defense', 'duration']:
             if data.get(field): etree.SubElement(s_el, field).text = data[field]
         
         # description est requise par le XSD — on la crée même si vide
