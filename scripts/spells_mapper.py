@@ -6,7 +6,7 @@ from lxml import etree
 
 from xml_validator import validate_xml
 from slug_generator import generate_slug
-from utils import strip_metadata, split_bullet_list
+from utils import strip_metadata, split_bullet_list, parse_table_markers
 
 # ==========================================
 # CONFIGURATION & CONSTANTES
@@ -149,7 +149,7 @@ def add_rich_text(parent, text_content, tag_name=None):
 # ==========================================
 
 def parse_spell_block(content):
-    spell_data = {'savingThrows': {}, 'heightened': []}
+    spell_data = {'savingThrows': {}, 'heightened': [], 'tables': []}
     
     # **NOUVEAU** : Détecter et couper au chapitre suivant
     # Les chapitres commencent par des titres en majuscules seuls sur une ligne
@@ -176,6 +176,9 @@ def parse_spell_block(content):
     
     # Nettoyage
     content = '\n' + clean_pdf_artifacts(content).strip()
+
+    # 0. Extraction anticipée des markers de tableaux (avant tout parsing regex)
+    content, spell_data['tables'] = parse_table_markers(content)
 
 # 1. En-tête (Nom) - Utilise la nouvelle constante UPPER
     name_regex = rf'^\s*\**([{UPPER}][{UPPER}\s\-‑\'’]+)(?:(?:\*{{2}}(?:\s|$))|(?:SORT|TOUR DE MAGIE|FOCALISÉ))'
@@ -379,6 +382,17 @@ def generate_spells_xml(spells_data, output_path):
             for h in data['heightened']:
                 el = etree.SubElement(hl_el, "heighten", type=h['type'])
                 add_rich_text(el, h['text'])
+
+        for tbl in data.get('tables', []):
+            tbl_el = etree.SubElement(s_el, "table")
+            if tbl.get('header'):
+                hdr_el = etree.SubElement(tbl_el, "headerLine")
+                for c in tbl['header']:
+                    etree.SubElement(hdr_el, "cell").text = c
+            for row in tbl.get('rows', []):
+                row_el = etree.SubElement(tbl_el, "line")
+                for c in row:
+                    etree.SubElement(row_el, "cell").text = c
 
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     tree = etree.ElementTree(root)

@@ -21,6 +21,26 @@ def clean_text(text):
     return re.sub(r'\s+', ' ', text).strip()
 
 
+def parse_table_markers(content):
+    """Extrait les blocs [[TABLE_START]]...[[TABLE_END]] du contenu MD.
+    Retourne (content_sans_tables, tables) où tables est une liste de dicts
+    {'header': [...], 'rows': [[...], ...]}."""
+    tables = []
+
+    def _extract_table(m):
+        table = {'header': [], 'rows': []}
+        for line in m.group(0).splitlines():
+            if line.startswith('[[TABLE_HEADER]]'):
+                table['header'] = [c.replace('\\|', '|') for c in line[len('[[TABLE_HEADER]]'):].split('|')]
+            elif line.startswith('[[TABLE_ROW]]'):
+                table['rows'].append([c.replace('\\|', '|') for c in line[len('[[TABLE_ROW]]'):].split('|')])
+        tables.append(table)
+        return ''
+
+    content = re.sub(r'\[\[TABLE_START\]\].*?\[\[TABLE_END\]\]', _extract_table, content, flags=re.DOTALL)
+    return content, tables
+
+
 def split_bullet_list(text):
     """Sépare un texte contenant des bullets (•) en (intro_brut, [items_bruts]).
     Ne nettoie pas le texte — le caller applique sa propre fonction de nettoyage.

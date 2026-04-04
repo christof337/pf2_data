@@ -128,6 +128,28 @@
         <xsl:text>&#10;**Intensifié (</xsl:text><xsl:value-of select="@type"/><xsl:text>).** </xsl:text><xsl:value-of select="."/><xsl:text>&#10;</xsl:text>
       </xsl:for-each>
     </xsl:if>
+
+    <xsl:apply-templates select="table"/>
+  </xsl:template>
+
+  <xsl:template match="table">
+    <xsl:text>&#10;</xsl:text>
+    <xsl:if test="headerLine">
+      <xsl:text>| </xsl:text>
+      <xsl:for-each select="headerLine/cell">
+        <xsl:value-of select="."/><xsl:text> | </xsl:text>
+      </xsl:for-each>
+      <xsl:text>&#10;|</xsl:text>
+      <xsl:for-each select="headerLine/cell"><xsl:text>---|</xsl:text></xsl:for-each>
+      <xsl:text>&#10;</xsl:text>
+    </xsl:if>
+    <xsl:for-each select="line">
+      <xsl:text>| </xsl:text>
+      <xsl:for-each select="cell">
+        <xsl:value-of select="."/><xsl:text> | </xsl:text>
+      </xsl:for-each>
+      <xsl:text>&#10;</xsl:text>
+    </xsl:for-each>
   </xsl:template>
   
   <xsl:template match="spellRef">

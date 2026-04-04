@@ -92,7 +92,78 @@ def extract_text_with_italics(page_area, useTextFlow=False):
         
     return styled_text
 
-def extract_with_sidebar_detection(pdf_path, output_dir):
+def is_real_data_table(rows):
+    """Distingue un vrai tableau de données des lignes de traits ou de navigation."""
+    if not rows or len(rows) < 2:
+        return False
+    first_row_cells = [c for c in rows[0] if c and c.strip()]
+    # Au moins 2 colonnes dans le header pour exclure les encadrés de navigation (ex: "Sorts / A-C")
+    if len(first_row_cells) < 2:
+        return False
+    # Traits lines : toutes les cellules non-vides sont en majuscules
+    if all(c.strip() == c.strip().upper() for c in first_row_cells):
+        return False
+    return True
+
+def table_to_markers(rows):
+    """Convertit les lignes d'un tableau pdfplumber en block de markers [[TABLE_*]]."""
+    lines = ['[[TABLE_START]]']
+    if rows:
+        header_cells = [str(c or '').replace('\n', ' ').replace('|', '\\|').strip() for c in rows[0]]
+        lines.append('[[TABLE_HEADER]]' + '|'.join(header_cells))
+        for row in rows[1:]:
+            cells = [str(c or '').replace('\n', ' ').replace('|', '\\|').strip() for c in row]
+            lines.append('[[TABLE_ROW]]' + '|'.join(cells))
+    lines.append('[[TABLE_END]]')
+    return '\n'.join(lines)
+
+def inject_table_markers(text, table_rows):
+    """Localise le bloc textuel du tableau dans `text` et le remplace par des markers."""
+    if not table_rows:
+        return text
+    header_cells = [c for c in table_rows[0] if c and c.strip()]
+    if not header_cells:
+        return text
+
+    # Chercher la ligne contenant la première cellule du header (peut être entourée de **)
+    first_header = re.escape(header_cells[0].split('\n')[0].strip())
+    header_match = re.search(rf'\n[^\n]*{first_header}[^\n]*\n', text)
+    if not header_match:
+        return text  # pas trouvé, on laisse tel quel
+
+    start = header_match.start()
+
+    # Trouver la fin : ancre sur les premiers mots de la dernière cellule non-vide
+    last_row = table_rows[-1]
+    last_cell = next((c.split('\n')[0][:30].strip() for c in reversed(last_row) if c and c.strip()), '')
+    if last_cell:
+        end_match = re.search(re.escape(last_cell), text[start:])
+        end_pos = start + (end_match.end() if end_match else len(text) - start)
+    else:
+        end_pos = header_match.end()
+
+    newline_pos = text.find('\n', end_pos)
+    end = newline_pos + 1 if newline_pos != -1 else len(text)
+
+    # Consommer les lignes de continuation de la dernière cellule
+    # (lignes très indentées qui ne démarrent pas un nouveau bloc **/[[)
+    while end < len(text):
+        line_end = text.find('\n', end)
+        if line_end == -1:
+            line_end = len(text)
+        line = text[end:line_end]
+        if re.match(r'^ {10,}[^*\[\n\s]', line):
+            end = line_end + 1
+        else:
+            break
+
+    return text[:start] + '\n' + table_to_markers(table_rows) + '\n' + text[end:]
+
+def extract_with_sidebar_detection(pdf_path, output_dir, pages=None):
+    """Extrait le PDF vers un fichier Markdown structuré.
+
+    pages : tuple (start, end) de numéros de pages 1-indexés inclus, ou None pour tout extraire.
+    """
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
@@ -100,14 +171,21 @@ def extract_with_sidebar_detection(pdf_path, output_dir):
     base_name = os.path.basename(pdf_path).replace('.pdf', '.md')
     output_file = os.path.join(output_dir, base_name)
 
-    print(f"Analyse géométrique et extraction de : {os.path.basename(pdf_path)}...")
-    
+    pages_label = f" (pages {pages[0]}-{pages[1]})" if pages else ""
+    print(f"Analyse géométrique et extraction de : {os.path.basename(pdf_path)}{pages_label}...")
+
     # Accumulateur global sous forme de liste (plus optimisé que la concaténation de strings)
     full_text = []
-    
+
     with pdfplumber.open(pdf_path) as pdf:
         total_pages = len(pdf.pages)
-        for i, page in enumerate(pdf.pages):
+        page_indices = range(len(pdf.pages))
+        if pages:
+            start_idx = max(0, pages[0] - 1)
+            end_idx = min(len(pdf.pages), pages[1])
+            page_indices = range(start_idx, end_idx)
+        for i in page_indices:
+            page = pdf.pages[i]
             page_num = i + 1
             print(f"  -> Traitement de la page {page_num}/{total_pages}")
             
@@ -155,6 +233,12 @@ def extract_with_sidebar_detection(pdf_path, output_dir):
             # 4. Extraction finale du flux principal
             main_text = extract_styled_layout(main_page_filtered, useTextFlow=True)
 
+            # 4.5. Injection des markers de tableaux (avant la fusion des tirets)
+            for tbl in page.find_tables():
+                rows = tbl.extract()
+                if is_real_data_table(rows):
+                    main_text = inject_table_markers(main_text, rows)
+
             # 5. Fusion des coupures de mots hyphenées (avant tout traitement)
             # Remplace "mot-\n  " par "mot" SEULEMENT si suivi d'une minuscule (accentuée ou non)
             main_text = re.sub(r'-\n\s+([a-zàâäæçéèêëîïôöœùûüÿ])', r'\1', main_text)
@@ -192,4 +276,12 @@ if __name__ == "__main__":
     input_pdf = sys.argv[1] if len(sys.argv) > 1 else "./pdf_sources/monstre_unique.pdf"
     output_directory = sys.argv[2] if len(sys.argv) > 2 else "./output/subset_1"
 
-    extract_with_sidebar_detection(input_pdf, output_directory)
+    # Option --pages START-END (ex: --pages 322-325)
+    page_range = None
+    for arg in sys.argv[3:]:
+        m = re.match(r'--pages\s*(\d+)-(\d+)', arg)
+        if m:
+            page_range = (int(m.group(1)), int(m.group(2)))
+            break
+
+    extract_with_sidebar_detection(input_pdf, output_directory, pages=page_range)

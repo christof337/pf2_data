@@ -93,7 +93,9 @@
           </xs:sequence>
         </xs:complexType>
       </xs:element>
-      
+
+      <xs:element name="table" type="tableType" minOccurs="0" maxOccurs="unbounded"/>
+
     </xs:sequence>
     <xs:attribute name="type" use="required">
       <xs:simpleType>
@@ -110,6 +112,7 @@
   <xs:complexType name="richTextType" mixed="true">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
       <xs:element name="list" type="listType"/>
+      <xs:element name="table" type="tableType"/>
       <xs:element name="spellRef">
         <xs:complexType>
           <xs:simpleContent>
@@ -125,6 +128,19 @@
   <xs:complexType name="listType">
     <xs:sequence>
       <xs:element name="listItem" type="xs:string" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tableType">
+    <xs:sequence>
+      <xs:element name="headerLine" type="rowType" minOccurs="0"/>
+      <xs:element name="line" type="rowType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="rowType">
+    <xs:sequence>
+      <xs:element name="cell" type="xs:string" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
   

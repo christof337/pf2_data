@@ -703,7 +703,15 @@ Des notes éphémères d’une chanson étrange et surnaturelle emplissent l’a
 **Succès critique.** La cible n’est pas affectée, ne peut pas être affectée lors des tours suivants, et est temporairement immunisée pendant 1 min.  
 **Succès.** La cible n’est pas affectée à ce round, mais peut être affectée lors des tours suivants.  
 **Échec.** Lancez 1d4 sur le tableau suivant.
-**Échec critique.** Lancez 1d4+1 sur le tableau suivant. Résultat Effet 1 La cible est effrayée 2. 2 La cible est confuse pendant 1 round. 3 La cible est stupéfiée 4 pendant 1 round. 4 La cible est aveugle pendant 1 round. 5 La cible est étourdie pendant 1 round et stupéfiée 1 pour une durée illimitée.
+**Échec critique.** Lancez 1d4+1 sur le tableau suivant.
+
+| Résultat | Effet | 
+|---|---|
+| 1 | La cible est effrayée 2. | 
+| 2 | La cible est confuse pendant 1 round. | 
+| 3 | La cible est stupéfiée 4 pendant 1 round. | 
+| 4 | La cible est aveugle pendant 1 round. | 
+| 5 | La cible est étourdie pendant 1 round et stupéfiée 1 pour une durée illimitée. | 
 
   
 
@@ -803,4 +811,93 @@ Vous explorez les futurs possibles des prochaines secondes pour comprendre toute
 **Durée** 10 min
 ---- 
 Vous créez une oreille flottante invisible dans un endroit à portée (même hors de ligne de mire ou d’effet). Elle ne peut pas bouger, mais vous entendez à travers elle comme si vous utilisiez vos sens auditifs normaux. 
+
+  
+
+```pf2e-stats
+#### [[fr]]
+# CLAIRVOYANCE
+## SORT 4
+----
+==CONCENTRATION== ==MANIPULATION== ==SCRUTATION==
+**Traditions** arcanique, occulte
+**Incantation** 1 min
+**Portée** 150 m
+**Durée** 10 min
+---- 
+Vous créez un œil flottant invisible dans un endroit à portée (même hors de ligne de mire ou d’effet). Il ne peut pas bouger, mais vous voyez à travers lui comme si vous utilisiez vos sens visuels normaux. 
+
+  
+
+```pf2e-stats
+#### [[fr]]
+# CLARTÉ SPIRITUELLE `[two-actions]`
+## SORT 2
+----
+==CONCENTRATION== ==GUÉRISON== ==MANIPULATION== ==MENTAL==
+**Traditions** divine, occulte, primordiale
+**Portée** contact ; **Cible** 1 créature consentante
+
+---- 
+Vous chassez une affliction dont souffre l’esprit de la cible. Tentez de contrer (p. 431) un effet de votre choix imposant l’un de ces états à la cible : en fuite, effrayé ou stupéfié. Si vous n’avez pas réussi à contrer l’effet mais que vous auriez pu le faire si son rang de contre avait été inférieur de 2 rangs, supprimez l’effet jusqu’au début de votre prochain tour. Le décompte de la durée de l’effet est mis en pause tant qu’il est ainsi supprimé. Ce sort ne peut ni contrer ni supprimer des états infligés par des malédictions, des maladies ou un état naturel de la cible. 
+
+----
+**Intensifié (4e).** Ajoute confus, contrôlé et ralenti à la liste des états.
+
+**Intensifié (6e).** Ajoute condamné à la liste des états.
+
+**Intensifié (8e).** Ajoute étourdi à la liste des états.
+
+  
+
+```pf2e-stats
+#### [[fr]]
+# CLOUÉ À TERRE `[two-actions]`
+## SORT 3
+----
+==CONCENTRATION== ==MANIPULATION== ==TERRE==
+**Traditions** arcanique, primordiale
+**Portée** 36 m ; **Cible** 1 créature volante
+**Défense** Vigueur ; **Durée** variable
+---- 
+Vous utilisez l’attraction terrestre pour perturber les capacités de vol de la cible en fonction de son jet de Vigueur. Si elle atteint le sol en toute sécurité, elle ne subit pas de dégâts de chute. 
+**Succès critique.** La cible n’est pas affectée.  
+**Succès.** La cible tombe en toute sécurité sur 36 m au maximum.  
+**Échec.** La cible tombe en toute sécurité sur 36 m au maximum. Si elle touche le sol, elle ne peut plus Voler, *léviter* ni quitter la terre ferme pendant 1 round.
+**Échec critique.** La cible tombe en toute sécurité sur 36 m au maximum. Si elle touche le sol, elle ne peut plus Voler, *léviter* ni quitter la terre ferme pendant 1 min.
+
+  
+
+```pf2e-stats
+#### [[fr]]
+# COLÈRE DIVINE `[two-actions]`
+## SORT 4
+----
+==CONCENTRATION== ==ESPRIT== ==MANIPULATION== ==SANCTIFIÉ==
+**Traditions** divine
+**Portée** 36 m ; **Zone** explosion 6 m
+**Défense** Vigueur
+---- 
+Vous canalisez une furie divine à l’encontre de vos ennemis. Vous infligez 4d10 dégâts d’esprit à tous les ennemis dans la zone, selon le résultat de leur jet de Vigueur. 
+**Succès critique.** La créature n’est pas affectée.  
+**Succès.** La créature reçoit la moitié des dégâts.  
+**Échec.** La créature reçoit la totalité des dégâts et se retrouve malade 1.
+**Échec critique.** La créature subit la totalité des dégâts et se retrouve malade 2. Elle est ralentie 1 tant qu’elle est malade.
+
+----
+**Intensifié (+1).** Les dégâts augmentent de 1d10.
+
+  
+
+```pf2e-stats
+#### [[fr]]
+# COMMUNICATION À DISTANCE `[three-actions]`
+## SORT 5
+----
+==CONCENTRATION== ==MANIPULATION== ==MENTAL==
+**Traditions** arcanique, divine, occulte
+**Portée** planétaire ; **Cible** 1 créature que vous connaissez bien
+
+---- 
+ 
 
