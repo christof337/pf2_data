@@ -22,10 +22,11 @@
 - Preview batch 01 : `obsidian_vault/preview/sorts_batch_01.md` contient 51 sorts (46 du batch + 5 débordant sur la page 324)
 
 ## Priorité haute
-- [ ] valider le batch sorts 01
-- [ ] bénir officiellement `tests/fixtures/test_sorts_01_ok.xml` si la sortie est validée
+- [x] valider le batch sorts 01 — golden béni (`tests/fixtures/test_sorts_01_ok.xml`)
 - [ ] finaliser l’ajout de `<cost>` au schéma, au mapper et au XSL
 - [ ] finaliser l’ajout de `<requirements>` au schéma, au mapper et au XSL
+- [ ] bug : `Intensifié.` sans parenthèses (ex. CONVOCATION DE PLANTE) non parsé en `<heighten>` — atterrit dans la description
+- [ ] bug : nom de sort sur deux lignes (`**NOM\nSUITE**`) parsé comme deux sorts séparés — ex. CONVOCATION DE PLANTE OU DE CHAMPIGNON
 
 ## Priorité moyenne
 - [ ] valider et bénir progressivement les batches sorts 02–10

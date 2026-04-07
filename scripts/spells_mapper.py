@@ -259,10 +259,11 @@ def parse_spell_block(content):
         m = re.search(pattern, content, re.DOTALL | re.IGNORECASE)
         if m: spell_data['savingThrows'][key] = clean_text(m.group(1))
 
-    # 8. Intensification - Ajout d'un \s* pour tolérer l'espace avant les **
-    h_pattern = r'(?:^|\n)\s*\**Intensifiés?\s*\((.*?)\)\.?\s*\**\s*(.*?)(?=(?:\n\s*\**Intensifié)|$)'
+    # 8. Intensification
+    # Deux formes : "Intensifié (Xe)." et "Intensifié." (sans parenthèses = sans type explicite → type "auto")
+    h_pattern = r'(?:^|\n)\s*\**Intensifiés?\s*(?:\((.*?)\))?\.?\s*\**\s*(.*?)(?=(?:\n\s*\**Intensifié)|$)'
     for m in re.finditer(h_pattern, content, re.DOTALL | re.IGNORECASE):
-        type_val = re.sub(r'[\*]', '', m.group(1)).strip()
+        type_val = re.sub(r'[\*]', '', m.group(1)).strip() if m.group(1) else "auto"
         spell_data['heightened'].append({
             "type": type_val,
             "text": clean_text(m.group(2))
@@ -305,6 +306,14 @@ def parse_spells_md(content):
     content = re.sub(
         r'(\*\*\s*\n\s*)([123])\s*\n\s*\**\s*(À)\**\s*\n\s*([123])\s*\n\s*(\**)',
         r'\1\2 \3 \4 \5',
+        content
+    )
+
+    # Cat F : Nom de sort sur deux lignes — "**NOM\nSUITE**" → "**NOM SUITE**"
+    # Ex: "**CONVOCATION DE PLANTE\nOU DE CHAMPIGNON**"
+    content = re.sub(
+        rf'\*\*([{UPPER}][{UPPER}\s\-‑\']+)\n([{UPPER}][{UPPER}\s\-‑\']*)\*\*',
+        r'**\1 \2**',
         content
     )
 
