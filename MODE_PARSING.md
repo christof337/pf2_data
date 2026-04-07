@@ -14,6 +14,7 @@ Extraire proprement les tableaux et les blocs structurés depuis les PDFs Pathfi
 - le mapper transforme ensuite les tables en XML
 
 ## Règles de traitement
+- n'extraire que les pages nécessaires via extract_pdf.py, pour limiter au maximum la taille des .md générés (prendre une page avant une page après)
 - exclure les tableaux décoratifs
 - exclure les tableaux de traits
 - exclure les tableaux trop courts

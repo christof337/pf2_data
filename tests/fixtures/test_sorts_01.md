@@ -1,9 +1,68 @@
 [[METADATA]]
-source: pdf_sources/PF2R_01_Livre_des_Joueurs_web_v1.pdf
-pages: 316-391 (section sorts, à partir de ABRUTISSEMENT)
-cmd: uv run scripts/extract_pdf.py pdf_sources/PF2R_01_Livre_des_Joueurs_web_v1.pdf output/ldj_full puis extraire depuis ABRUTISSEMENT jusqu'à [[PAGE 392]]
+source: /Users/slither/Documents/dev/repositories/pf2_data_Claude/pdf_sources/PF2R_01_Livre_des_Joueurs_web_v1.pdf
+generated: 2026-04-04T10:14:41
 [[/METADATA]]
-  ABRUTISSEMENT** 
+[[PAGE 316]]
+
+# FLUX PRINCIPAL (STATS/BASE)
+                    Livre des Joueurs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**314 314
+         ABRUTISSEMENT** 
                   2
                     **              SORT 6
          CONCENTRATION MALÉDICTION MANIPULATION MENTAL MISE HORS DE COMBAT
@@ -1376,13 +1435,14 @@ Maintenez le sort.
  lors des tours suivants.
 **Échec.** Lancez 1d4 sur le tableau suivant.
 **Échec critique.** Lancez 1d4+1 sur le tableau suivant.
-                                  **Résultat Effet**
-                                   1   La cible est effrayée 2.
-                                   2   La cible est confuse pendant 1 round.
-                                   3   La cible est stupéfiée 4 pendant 1 round.
-                                   4   La cible est aveugle pendant 1 round.
-                                   5   La cible est étourdie pendant 1 round et stupéfiée 1
-                                       pour une durée illimitée.
+[[TABLE_START]]
+[[TABLE_HEADER]]Résultat|Effet
+[[TABLE_ROW]]1|La cible est effrayée 2.
+[[TABLE_ROW]]2|La cible est confuse pendant 1 round.
+[[TABLE_ROW]]3|La cible est stupéfiée 4 pendant 1 round.
+[[TABLE_ROW]]4|La cible est aveugle pendant 1 round.
+[[TABLE_ROW]]5|La cible est étourdie pendant 1 round et stupéfiée 1 pour une durée illimitée.
+[[TABLE_END]]
                                  **CHARGE DE FOURMI** 
                                            2
                                               **            SORT 1
@@ -1546,3 +1606,70 @@ Maintenez le sort.
          Vous créez une oreille flottante invisible dans un endroit à portée (même
          hors de ligne de mire ou d’effet). Elle ne peut pas bouger, mais vous
          entendez à travers elle comme si vous utilisiez vos sens auditifs normaux.
+         **CLAIRVOYANCE             SORT 4
+         CONCENTRATION MANIPULATION SCRUTATION
+         Traditions** arcanique, occulte
+         **Incantation** 1 min
+         **Portée** 150 m
+                                         **Durée** 10 min
+                                         Vous créez un œil flottant invisible dans un endroit à portée (même
+                                         hors de ligne de mire ou d’effet). Il ne peut pas bouger, mais vous
+                                         voyez à travers lui comme si vous utilisiez vos sens visuels normaux.
+                                         **CLARTÉ SPIRITUELLE** 
+                                                     2
+                                                       **           SORT 2
+                                          CONCENTRATION GUÉRISON MANIPULATION MENTAL
+                                         Traditions** divine, occulte, primordiale
+                                         **Portée** contact ; **Cible** 1 créature consentante
+                                         Vous chassez une affliction dont souffre l’esprit de la cible. Tentez de
+                                         contrer (p. 431) un effet de votre choix imposant l’un de ces états
+                                         à la cible : en fuite, effrayé ou stupéfié. Si vous n’avez pas réussi à
+                                         contrer l’effet mais que vous auriez pu le faire si son rang de contre
+                                         avait été inférieur de 2 rangs, supprimez l’effet jusqu’au début de
+                                         votre prochain tour. Le décompte de la durée de l’effet est mis en
+                                         pause tant qu’il est ainsi supprimé. Ce sort ne peut ni contrer ni
+                                         supprimer des états infligés par des malédictions, des maladies ou
+                                         un état naturel de la cible.
+                                         **Intensifié (4**e**).** Ajoute confus, contrôlé et ralenti à la liste des états.
+                                         **Intensifié (6**e**).** Ajoute condamné à la liste des états.
+                                         **Intensifié (8**e**).** Ajoute étourdi à la liste des états.
+                                         **CLOUÉ À TERRE** 
+                                                  2
+                                                    **              SORT 3
+                                          CONCENTRATION MANIPULATION TERRE
+                                         Traditions** arcanique, primordiale
+                                         **Portée** 36 m ; **Cible** 1 créature volante
+                                         **Défense** Vigueur ; **Durée** variable
+                                         Vous utilisez l’attraction terrestre pour perturber les capacités de vol
+                                         de la cible en fonction de son jet de Vigueur. Si elle atteint le sol en
+                                         toute sécurité, elle ne subit pas de dégâts de chute.
+                                         **Succès critique.** La cible n’est pas affectée.
+                                         **Succès.** La cible tombe en toute sécurité sur 36 m au maximum.
+                                         **Échec.** La cible tombe en toute sécurité sur 36 m au maximum. Si elle
+                                          touche le sol, elle ne peut plus Voler, _léviter_ ni quitter la terre ferme
+                                          pendant 1 round.
+                                         **Échec critique.** La cible tombe en toute sécurité sur 36 m au maximum. Si elle touche le sol, elle ne peut plus Voler, _léviter_ ni quitter
+                                          la terre ferme pendant 1 min.
+                                         **COLÈRE DIVINE** 
+                                                  2
+                                                    **              SORT 4
+                                          CONCENTRATION ESPRIT MANIPULATION SANCTIFIÉ
+                                         Tradition** divine
+                                         **Portée** 36 m ; **Zone** explosion 6 m
+                                         **Défense** Vigueur
+                                         Vous canalisez une furie divine à l’encontre de vos ennemis. Vous
+                                         infligez 4d10 dégâts d’esprit à tous les ennemis dans la zone, selon
+                                         le résultat de leur jet de Vigueur.
+                                         **Succès critique.** La créature n’est pas affectée.
+                                         **Succès.** La créature reçoit la moitié des dégâts.
+                                         **Échec.** La créature reçoit la totalité des dégâts et se retrouve malade 1.
+                                         **Échec critique.** La créature subit la totalité des dégâts et se retrouve
+                                          malade 2. Elle est ralentie 1 tant qu’elle est malade.
+                                         **Intensifié (+1).** Les dégâts augmentent de 1d10.
+                                         **COMMUNICATION À DISTANCE** 
+                                                         3
+                                                            **      SORT 5
+                                          CONCENTRATION MANIPULATION MENTAL
+                                         Traditions** arcanique, divine, occulte
+                                         **Portée** planétaire ; **Cible** 1 créature que vous connaissez bien
+
