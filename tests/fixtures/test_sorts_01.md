@@ -1,7 +1,3 @@
-[[METADATA]]
-source: /Users/slither/Documents/dev/repositories/pf2_data_Claude/pdf_sources/PF2R_01_Livre_des_Joueurs_web_v1.pdf
-generated: 2026-04-04T10:14:41
-[[/METADATA]]
 [[PAGE 316]]
 
 # FLUX PRINCIPAL (STATS/BASE)

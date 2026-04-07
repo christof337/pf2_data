@@ -1,9 +1,165 @@
-[[METADATA]]
-source: pdf_sources/PF2R_01_Livre_des_Joueurs_web_v1.pdf
-pages: 316-391 (section sorts, à partir de ABRUTISSEMENT)
-cmd: uv run scripts/extract_pdf.py pdf_sources/PF2R_01_Livre_des_Joueurs_web_v1.pdf output/ldj_full puis extraire depuis ABRUTISSEMENT jusqu'à [[PAGE 392]]
-[[/METADATA]]
- **FORME ÉLÉMENTAIRE** 
+[[PAGE 339]]
+
+# FLUX PRINCIPAL (STATS/BASE)
+
+                                                          Sorts
+                                                                    77
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                     **337 337
+                                                                 Introduction
+                                                                 Ascendances
+                                                                  & Historiques
+                                                                 Classes
+                                                                 Compétences
+                                                                 Dons
+                                                                 Équipement
+                                                                 Sorts
+                                                                  Règles
+                                                                  Listes de sorts
+                                                                   Arcanique
+                                                                   Divine
+                                                                   Occulte
+                                                                   Primordiale
+                                                                  Sorts
+                                                                   A–C
+                                                                   D–F
+                                                                   G–M
+                                                                   N–R
+                                                                   S
+                                                                   T–Z
+                                                                  Sorts focalisés
+                                                                   Barde
+                                                                   Druide
+                                                                   Magicien
+                                                                   Prêtre
+                                                                   Rôdeur
+                                                                   Sorcier
+                                                                  Rituels
+                                                                 Jouer une partie
+                                                                 Annexe des États
+                                                                 Feuille de personnage
+                                                                 Glossaire et index
+FORME D’INSECTE** 
+          2
+            **             SORT 3
+CONCENTRATION MANIPULATION MÉTAMORPHOSE
+Traditions** arcanique, primordiale
+**Durée** 1 min
+Vous visualisez un simple insecte et prenez la forme de combat d’un
+animal de taille Moyenne. Lorsque vous Lancez ce sort, choisissez
+l’une des formes de combat listées. Vous pouvez opter pour un type
+d’animal spécifique (comme une coccinelle ou un scarabée pour la
+forme de coléoptère), mais cela n’affecte ni la taille ni les statistiques
+de la forme. Sous cette forme, vous gagnez le trait animal. Vous pou-
+vez Révoquer ce sort.
+ Vous gagnez les statistiques et pouvoirs suivants, quelle que soit
+la forme de combat choisie :
+ • CA = 18 + votre niveau. Ignorez le malus aux tests lié à votre
+  armure et la réduction de Vitesse qu’elle vous impose.
+ • 10 points de vie temporaires.
+ • Vision nocturne.
+ • Une ou plusieurs attaques spécifiques à la forme de combat
+  choisie, qui deviennent vos seules attaques utilisables. Vous
+  êtes qualifié pour vous en servir. Votre modificateur d’attaque
+  est de +13 et votre bonus aux dégâts de +2. Ces attaques sont
+  basées sur la Force (vis-à-vis de l’état affaibli, par exemple).
+  Si votre modificateur d’attaque à mains nues est plus élevé,
+  utilisez-le à la place.
+ • Modificateur d’Athlétisme de +13, sauf si le vôtre est supérieur.
+Vous gagnez des pouvoirs spécifiques selon la forme choisie :
+ • **Araignée** Vitesse 7,5 m, escalade 7,5 m ; vision dans le noir ;
+  **Corps à corps**
+          1
+            crocs, **Dégâts** 1d6 dégâts perforants
+  plus 1d4 dégâts de poison persistants ; **À distance**
+                            1
+  toile (facteur de portée 6 m), **Dégâts** enchevêtre la cible
+  pendant 1 round.
+ • **Coléoptère** Vitesse 7,5 m ; **Corps à corps**
+                      1
+                        mandibules,
+  **Dégâts** 2d10 contondants.
+ • **Fourmi** Vitesse 9 m, escalade 9 m ; **Corps à corps**
+                         1
+                          mandibules, **Dégâts** 2d6 contondants.
+ • **Mante** Vitesse 12 m ; odorat imprécis 9 m ; **Corps à corps**
+                            1
+  pattes ravisseuses, **Dégâts** 2d8 perforants.
+ • **Mille‑pattes** Vitesse 7,5 m, escalade 7,5 m ; vision dans le
+  noir ; **Corps à corps**
+            1
+              mandibules, **Dégâts** 1d8 perforants
+  plus 1d4 de poison persistants.
+ • **Scorpion** Vitesse 12 m ; vision dans le noir, perception
+  des vibrations imprécise 18 m ; **Corps à corps**
+                         1
+                           dard,
+  **Dégâts** 1d8 perforants plus 1d4 de poison persistants ; **Corps
+  à corps**
+      1
+        pince (agile), **Dégâts** 1d6 contondants.
+**Intensifié (4e).** Votre forme de combat est de Grande taille et vos
+ attaques ont une allonge de 3 m. Vous gagnez à la place 15 PV temporaires, un modificateur d’attaque de +16, un bonus aux dégâts
+ de +6 et Athlétisme +16.
+**Intensifié (5**e**).** Votre forme de combat est de Très Grande taille et vos
+ attaques ont une allonge de 4,5 m. Vous gagnez à la place 20 PV
+ temporaires, un modificateur d’attaque de +18, un bonus aux
+ dégâts de +2 et vous doublez les dés de dégâts (y compris les
+ dégâts persistants), et Athlétisme +20.
+**FORME ÉLÉMENTAIRE** 
             2
               **           SORT 5
 CONCENTRATION MANIPULATION MÉTAMORPHOSE
@@ -1558,3 +1714,54 @@ d’esprit supplémentaires.
                                  ténèbres, tracez une ligne entre la cible du sort et vous.
                                  **Intensifié (+1).** Les dégâts de feu augmentent de 2d6 et les dégâts
                                   d’esprit contre les créatures impies de 2d6.
+                                 **MAGIE CAMOUFLÉE          SORT 1
+                                 CONCENTRATION ILLUSION MANIPULATION
+                                 Traditions** arcanique, occulte
+                                 **Incantation** 1 min
+                                 **Portée** 9 m ; **Cible** 1 objet ou effet de sort
+                                 **Durée** jusqu’à vos prochains préparatifs quotidiens
+                                 Vous altérez l’apparence qu’adopte l’aura magique d’un objet ou d’un
+                                 sort pour des effets tels que _détection de la magie_. Vous pouvez cacher
+                                 complètement les auras, faire passer un objet pour un objet commun
+                                 ou d’un niveau inférieur ou bien faire passer un sort pour un sort
+                                 commun d’un rang égal ou inférieur. Vous pouvez Révoquer le sort.
+                                  Un incantateur qui utilise une _détection de la magie_ ou une _lecture
+                                 de l’aura_ d’un rang supérieur à _magie camouflée_ peut essayer de discerner l’illusion en utilisant la compétence correspondant à la tradition
+                                 du sort (Arcanes pour arcanique, Religion pour divine Occultisme pour
+                                 occulte ou Nature pour primordiale). D’autres tentatives par le même
+                                 incantateur donnent le même résultat que le test initial pour discerner.
+                                 **Intensifié (2**e**).** Vous pouvez Lancer ce sort sur une créature afin de
+                                  camoufler tous les objets et effets de sort sur elle.
+                                 **MAIN TÉLÉKINÉSIQUE** 
+                                            2
+                                               **      TOUR DE MAGIE 1
+                                 CONCENTRATION MANIPULATION TOUR DE MAGIE
+                                 Traditions** arcanique, occulte
+                                 **Portée** 9 m ; **Cible** 1 objet non porté d’Encombrement léger ou inférieur
+                                 **Durée** maintenu
+                                 Vous faites apparaître une main magique, invisible ou fantomatique,
+                                 qui flotte dans les airs et saisit l’objet ciblé puis le déplace lentement
+                                 sur 6 m au maximum dans n’importe quelle direction. Vous pouvez
+                                 déplacer l’objet de 6 m chaque fois que vous Maintenez le sort. L’objet
+                                 chute s’il est en lévitation lorsque le sort se termine.
+                                 **Intensifié (3**e**).** Vous pouvez cibler un objet non porté d’Encombrement 1 ou moins.
+                                 **Intensifié (5**e**).** La portée passe à 18 m et vous pouvez cibler un objet
+                                  non porté d’Encombrement 1 ou moins.
+                                 **Intensifié (7**e**).** La portée passe à 18 m et vous pouvez cibler un objet
+                                  non porté d’Encombrement 2 ou moins.
+                                 **MALÉDICTION DU MARIN** 
+                                              2
+                                                **          SORT 5
+                                 CONCENTRATION MALÉDICTION MANIPULATION
+                                 Traditions** arcanique, occulte, primordiale
+                                 **Portée** contact ; **Cible** 1 créature
+                                 **Défense** Volonté
+                                 Vous infligez à la cible un mal de mer violent et durable sous forme
+                                 de malédiction. La cible doit effectuer un jet de Volonté.
+                                 **Succès critique.** La cible n’est pas affectée.
+                                 **Succès.** La cible est malade 1. Réduire à 0 son état malade met fin à
+                                  la malédiction.
+                                 **Échec.** La cible est malade 1 et ne peut pas amener en dessous de 1
+                                  son état malade tant que sévit la malédiction. La malédiction peut
+                                                 Christophe Cavalier Pont - pont.christophe.pc@gmail.com - 202602/2468111/3429431
+

@@ -1,9 +1,81 @@
-[[METADATA]]
-source: pdf_sources/PF2R_01_Livre_des_Joueurs_web_v1.pdf
-pages: 316-391 (section sorts, à partir de ABRUTISSEMENT)
-cmd: uv run scripts/extract_pdf.py pdf_sources/PF2R_01_Livre_des_Joueurs_web_v1.pdf output/ldj_full puis extraire depuis ABRUTISSEMENT jusqu'à [[PAGE 392]]
-[[/METADATA]]
-          **PIED SÛR** 
+[[PAGE 356]]
+
+# FLUX PRINCIPAL (STATS/BASE)
+                    Livre des Joueurs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**354 354**
+          de 1. Lorsqu’une créature devient totalement incapable d’agir à
+          cause de l’état ralenti causé par _pétrification_, le sort prend fin dans
+          un flash de lumière grise et la cible, définitivement pétrifiée, n’est
+          plus qu’une statue. Le sort prend également fin si l’état ralenti est
+          supprimé. La roche se brise alors, libérant la cible sans la blesser.
+         **Échec critique.** Comme l’échec, mais la cible est initialement ralentie 2.
+         **PIEDS EN NAGEOIRES** 
+                    2
+                      **            SORT 3
+         CONCENTRATION MANIPULATION TRANSFORMATION
+         Traditions** arcanique, primordiale
+         **Portée** contact ; **Cible** 1 créature consentante
+         **Durée** 10 min
+         Les pieds de la cible se changent en nageoire, ce qui améliore sa mobilité dans l’eau, mais la réduit sur terre. La cible gagne une Vitesse de
+         nage égale à sa Vitesse sur terre normale, mais sa Vitesse sur terre
+         passe à 1,5 m.
+         **Intensifié (6**e**).** Le sort dure jusqu’à vos prochains préparatifs quotidiens.
+         **PIED SÛR** 
               2
                 **                  SORT 2
          CONCENTRATION GUÉRISON MANIPULATION
@@ -1477,3 +1549,70 @@ en cas de réussite critique.
           aux même effets que la cible. En fonction de la position de l’effet,
           une créature peut remarquer que les sons ne lui parviennent plus
           (s’il bloque le bruit émanant d’une fête, par exemple).
+         **SINGES FOUS** 
+                2
+                  **                SORT 3
+         CONCENTRATION MANIPULATION
+         Tradition** primordiale
+         **Portée** 9 m ; **Zone** explosion 1,5 m
+         **Durée** maintenu jusqu’à 1 min
+         Des esprits magiques de singes emplissent la zone, s’empilant et se
+         grimpant les uns sur les autres. Les singes étant des esprits magiques,
+         ils ne peuvent être ni attaqués ni blessés. Lancer _tranquiliser_ ou un
+                                         effet similaire sur les singes les rend dociles, ce qui les pousse à
+                                         arrêter de semer le chaos pendant la durée de _singes fous_.
+                                          Choisissez ce que font vos singes lorsque vous Lancez le sort.
+                                         Ils produisent les effets décrits pour cette action lorsque vous Lancez
+                                         le sort et la première fois que vous Maintenez le sort à chaque round.
+                                         La première fois que vous Maintenez le sort à chaque round, vous
+                                         pouvez déplacer la zone des singes de 1,5 m.
+                                          • **Acrobaties tumultueuses.** Les singes sautent et grimpent
+                                            sur les créatures dans la zone du sort, interférant avec les
+                                            déplacements complexes. Chaque créature dans la zone du
+                                            sort doit effectuer un jet de Réflexes.
+                                             **Succès critique.** La créature n’est pas affectée et est temporairement immunisée pendant 10 min.
+                                             **Succès.** La créature n’est pas affectée.
+                                             **Échec.** Pendant 1 round, la créature doit réussir un test nu
+                                            DD 5 chaque fois qu’elle tente une action de manipulation. Si elle
+                                            échoue à ce test, l’action est interrompue.
+                                             **Échec critique.** Comme un échec, mais les singes s’accrochent
+                                            à la créature avec ténacité et l’effet dure jusqu’à la fin du sort,
+                                            même si la créature quitte la zone du sort.
+                                          • **Vacarme insupportable.** Les singes crient très fort, assourdissant potentiellement les créatures dans la zone du
+                                            sort. Chaque créature dans la zone doit effectuer un jet
+                                            de Vigueur.
+                                             **Succès critique.** La créature n’est pas affectée et est temporairement immunisée pendant 10 min.
+                                             **Succès.** La créature n’est pas affectée.
+                                             **Échec.** La créature est sourde pendant 1 round.
+                                             **Échec critique.** La créature est sourde pendant 1 min.
+                                          • **Vol flagrant.** Les singes essaient de Dérober n’importe quel
+                                            objet à une créature dans la zone. Utilisez votre DD des
+                                            sorts − 10 comme modificateur de Larcin des singes. Leur
+                                            approche repose plus sur la distraction que la discrétion et
+                                            la victime sait donc quel objet les singes ont essayé de voler
+                                            et s’ils ont réussi. Récupérez un objet dérobé par les singes
+                                            requiert (même pour l’incantateur) de le leur Dérober ou de
+                                            les Désarmer en utilisant votre DD des sorts. Lorsque le sort
+                                            prend fin, tout objet dérobé tombe au sol dans une case de
+                                            votre choix au sein de la zone du sort.
+                                         **SINISTRES VOLUTES** 
+                                                    2
+                                                      **             SORT 1
+                                          CONCENTRATION MANIPULATION NÉANT
+                                         Traditions** arcanique, occulte
+                                         **Zone** ligne 9 m
+                                         **Défense** Vigueur
+                                         Des filaments de ténèbres sortent du bout de vos doigts et traversent
+                                         l’air à toute vitesse en vrillant. Vous infligez 2d4 dégâts de néant
+                                         et 1 dégât de saignement persistant aux créatures vivantes dans
+                                         la ligne. Chaque créature vivante dans la ligne doit tenter un jet
+                                         de Vigueur.
+                                         **Succès critique.** La créature n’est pas affectée.
+                                         **Succès.** La créature subit la moitié des dégâts de néant et aucun dégât
+                                          de saignement persistant.
+                                         **Échec.** La créature subit la totalité des dégâts.
+                                         **Échec critique.** La créature subit le double des dégâts de néant et des
+                                          dégâts de saignement persistants.
+                                         **Intensifié (+1).** Les dégâts de néant augmentent de 2d4 et les dégâts
+                                          de saignement persistants de 1.
+

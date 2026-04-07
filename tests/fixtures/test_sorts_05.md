@@ -1,9 +1,167 @@
-[[METADATA]]
-source: pdf_sources/PF2R_01_Livre_des_Joueurs_web_v1.pdf
-pages: 316-391 (section sorts, à partir de ABRUTISSEMENT)
-cmd: uv run scripts/extract_pdf.py pdf_sources/PF2R_01_Livre_des_Joueurs_web_v1.pdf output/ldj_full puis extraire depuis ABRUTISSEMENT jusqu'à [[PAGE 392]]
-[[/METADATA]]
-                                  **MAGIE CAMOUFLÉE          SORT 1
+[[PAGE 347]]
+
+# FLUX PRINCIPAL (STATS/BASE)
+
+                                                          Sorts
+                                                                    77
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                     **345 345
+                                                                 Introduction
+                                                                 Ascendances
+                                                                  & Historiques
+                                                                 Classes
+                                                                 Compétences
+                                                                 Dons
+                                                                 Équipement
+                                                                 Sorts
+                                                                  Règles
+                                                                  Listes de sorts
+                                                                   Arcanique
+                                                                   Divine
+                                                                   Occulte
+                                                                   Primordiale
+                                                                  Sorts
+                                                                   A–C
+                                                                   D–F
+                                                                   G–M
+                                                                   N–R
+                                                                   S
+                                                                   T–Z
+                                                                  Sorts focalisés
+                                                                   Barde
+                                                                   Druide
+                                                                   Magicien
+                                                                   Prêtre
+                                                                   Rôdeur
+                                                                   Sorcier
+                                                                  Rituels
+                                                                 Jouer une partie
+                                                                 Annexe des États
+                                                                 Feuille de personnage
+                                                                 Glossaire et index
+Intensifié (5**e**).** Vous pouvez cibler une créature précise ou une ascendance au lieu d’un objet, mais vous devez avoir rencontré ou vu de
+ près la créature ou l’ascendance ciblée.
+**LUMIÈRE** 
+     2
+       **             TOUR DE MAGIE 1
+CONCENTRATION LUMIÈRE MANIPULATION TOUR DE MAGIE
+Traditions** arcanique, divine, occulte, primordiale
+**Portée** 36 m
+**Durée** jusqu’à vos prochains préparatifs quotidiens
+Vous créez un orbe lumineux qui émet une lumière vive de la couleur
+de votre choix dans un rayon de 6 m (et une lumière faible sur 6 m
+supplémentaires). Si vous créez cette lumière dans le même espace
+qu’une créature consentante, vous pouvez la lier à elle. Elle flottera
+alors près de cette créature et suivra ses mouvements. Vous pouvez
+Maintenir le sort pour déplacer la lumière sur une distance maximale
+de 18 m. Pendant ce déplacement, vous pouvez la lier à ou la délier
+d’une créature.
+ Vous pouvez Révoquer le sort. Si vous Lancez le sort alors que
+vous avez déjà quatre sorts _lumière_ actifs, vous devez mettre fin à
+l’un d’entre eux.
+**Intensifié (4**e**).** L’objet émet une lumière vive dans un rayon de 18 m
+ (et une lumière faible 18 m supplémentaires).
+**LUMIÈRE ÉTERNELLE** 
+           3
+              **           SORT 2
+CONCENTRATION LUMIÈRE MANIPULATION
+Traditions** arcanique, divine, occulte, primordiale
+**Portée** contact ; **cible** une pierre précieuse d’une valeur de 6 po ou plus
+**Durée** illimitée
+La pierre précieuse que vous touchez se met à briller et répand une
+lumière vive de la couleur de votre choix dans un rayon de 6 m (ainsi
+qu’une lumière faible sur les 6 m suivants). Le sort prend immédiate-
+ment fin si la pierre précieuse est brisée.
+**LUMIÈRE RÉVÉLATRICE** 
+            2
+               **          SORT 2
+CONCENTRATION LUMIÈRE MANIPULATION
+Traditions** arcanique, divine, occulte, primordiale
+**Portée** 36 m ; **Zone** explosion 3 m
+**Défense** Réflexes ; **Durée** variable
+Une vague de lumière magique balaye la zone. Vous choisissez l’ap-
+parence de cette lumière, qui peut devenir colorée, ressembler à des
+flammes dépourvues de chaleur ou bien à des particules étincelantes.
+Une créature affectée par _lumière révélatrice_ est éblouie. Si elle était
+invisible, elle devient masquée à la place. Si elle était déjà masquée
+pour une quelconque raison, elle ne l’est plus à présent.
+**Succès critique.** La cible n’est pas affectée.
+**Succès.** La lumière affecte la créature pendant 2 rounds.
+**Échec.** La lumière affecte la créature pendant 1 min.
+**Échec critique.** La lumière affecte la créature pendant 10 min.
+**LUMIÈRE SAINTE** 
+         2
+           **              SORT 3
+ATTAQUE CONCENTRATION FEU LUMIÈRE MANIPULATION SAINTE
+Traditions** divine, primordiale
+**Portée** 36 m ; **Cible** 1 créature
+**Défense** CA
+Vous créez un rayon de lumière flamboyant imprégné d’énergie sainte.
+Effectuez un jet d’attaque de sort à distance. Le rayon inflige 5d6
+dégâts de feu. Si la cible a le trait impie, vous lui infligez 5d6 dégâts
+d’esprit supplémentaires.
+                                 **Succès critique.** La cible subit le double des dégâts.
+                                 **Succès.** La cible subit la totalité des dégâts.
+                                  Si le rayon traverse une zone de ténèbres magiques ou cible une
+                                 créature affectée par des ténèbres magiques, _lumière sainte_ tente
+                                 de contrer les ténèbres. Pour savoir si le rayon traverse une zone de
+                                 ténèbres, tracez une ligne entre la cible du sort et vous.
+                                 **Intensifié (+1).** Les dégâts de feu augmentent de 2d6 et les dégâts
+                                  d’esprit contre les créatures impies de 2d6.
+                                 **MAGIE CAMOUFLÉE          SORT 1
                                  CONCENTRATION ILLUSION MANIPULATION
                                  Traditions** arcanique, occulte
                                  **Incantation** 1 min
@@ -1574,3 +1732,108 @@ sortie la plus proche.
          nage égale à sa Vitesse sur terre normale, mais sa Vitesse sur terre
          passe à 1,5 m.
          **Intensifié (6**e**).** Le sort dure jusqu’à vos prochains préparatifs quotidiens.
+         **PIED SÛR** 
+              2
+                **                  SORT 2
+         CONCENTRATION GUÉRISON MANIPULATION
+         Traditions** divine, occulte, primordiale
+         **Portée** contact ; **Cible** 1 créature consentante
+         Vous libérez les membres de la cible de tout ce qui pourrait restreindre
+         leur mobilité. Tentez de contrer (p. 431) un effet de votre choix qui
+         impose l’un des états suivants à la cible : maladroit, empoigné ou
+         paralysé. Si vous n’avez pas réussi à contrer l’effet mais que vous
+         auriez pu le faire si son rang de contre avait été inférieur de 2 rangs,
+         supprimez l’effet jusqu’au début de votre prochain tour. Le décompte
+         de la durée de l’effet est mis en pause tant qu’il est ainsi supprimé.
+          Ce sort ne peut ni contrer ni supprimer les malédictions, les maladies ou les états qui font partie des conditions de vie habituelles
+         de la cible.
+         **Intensifié (4**e**).** Ajoute immobilisé, ralenti et entravé à la liste des états.
+         **Intensifié (6**e**).** Ajoute pétrifié à la liste des états.
+         **Intensifié (8**e**).** Ajoute étourdi à la liste des états.
+         **PIÈGE DE LIANE** 
+                 2
+                   **          TOUR DE MAGIE 1
+         ATTAQUE BOIS CONCENTRATION MANIPULATION PLANTE TOUR DE MAGIE
+         Traditions** arcanique, primordiale
+         **Portée** 9 m ; **Cible** 1 créature
+         **Défense** CA
+         Une liane apparaît comme par magie dans votre main et s’enroule
+         autour de la cible. Effectuez un jet d’attaque de sort contre la cible.
+         **Succès critique.** La cible gagne l’état immobilisé et subit un malus de
+          circonstances de −3 m à ses Vitesses pendant 1 round. Elle peut
+          tenter de S’échapper contre votre DD de sorts pour retirer le malus
+          et l’état immobilisé.
+         **Succès.** La cible subit un malus de circonstances de −3 m à ses
+          Vitesses pendant 1 round. Elle peut tenter de S’échapper contre
+          votre DD de sorts pour retirer le malus.
+         **Échec.** La cible n’est pas affectée.
+         **Intensifié (2**e**).** Les effets durent 2 rounds.
+         **Intensifié (4**e**).** Les effets durent 1 min.
+         **PLAINTE DES DAMNÉS** 
+                     2
+                       **           SORT 9
+         AUDIBLE CONCENTRATION MANIPULATION MORT NÉANT
+         Traditions** divine, occulte
+         **Zone** émanation de 12 m
+         **Défense** Vigueur
+                                         Vous poussez des cris dignes des lamentations des âmes damnées.
+                                         Chaque ennemi vivant dans la zone subit 8d10 dégâts de néant (selon
+                                         le résultat de son jet de Vigueur).
+                                         **Succès critique.** La créature n’est pas affectée.
+                                         **Succès.** La créature subit la totalité des dégâts.
+                                         **Échec.** La créature reçoit la totalité des dégâts et est drainée 1d4.
+                                         **Échec critique.** La créature subit le double de dégâts et est drainée 4.
+                                         **PLUIE D’ÉTOILES** 
+                                                  2
+                                                     **             SORT 9
+                                          CONCENTRATION MANIPULATION
+                                         Traditions** arcanique, primordiale
+                                         **Portée** 150 m ; **Zone** 4 explosions de 12 m
+                                         **Défense** Réflexes basique
+                                         Vous tendez les bras vers les cieux et invoquez une pluie d’étoiles
+                                         qui s’écrasent au sol en créant des explosions. Choisissez de quels
+                                         météores il s’agit entre des météorites (soniques), des astéroïdes
+                                         (feu), des comètes (froid) ou des boules de plasma (électricité). Le sort
+                                         adopte le trait du type de corps choisi. Les explosions centrales de 3 m
+                                         des quatre corps ne peuvent pas se chevaucher. Chacun inflige 6d10
+                                         dégâts contondants aux créatures dans l’explosion de 3 m au centre
+                                         de sa zone d’effet avant qu’il n’explose en infligeant 14d6 dégâts
+                                         d’énergie du type choisi aux créatures dans l’explosion de 12 m. Toute
+                                         créature dans l’une de ces zones effectue un jet de Réflexes basique
+                                         contre le sort, qu’importe le nombre d’explosions dans lesquelles elle
+                                         est prise, et ne peut subir qu’une fois chaque type de dégâts.
+                                         **Intensifié (+1).** Les dégâts contondants augmentent de 1d10 et les
+                                          dégâts d’énergie de 2d6.
+                                         **POIGNE ACIDE** 
+                                                 2
+                                                     **        SORT 2
+                                          ACIDE CONCENTRATION MANIPULATION
+                                         Traditions** arcanique, primordiale
+                                         **Portée** 36 m ; **Cible** 1 créature
+                                         **Défense** Réflexes
+                                         Une main griffue et éphémère empoigne la cible et la brûle grâce à
+                                         un acide magique. La cible subit 2d8 dégâts d’acide plus 1d6 dégâts
+                                         d’acide persistants, selon le résultat de son jet de Réflexes. Une créature ayant reçu des dégâts persistants à cause de ce sort subit également un malus de statut de −3 m à ses Vitesses.
+                                         **Succès critique.** La créature n’est pas affectée.
+                                         **Succès.** La créature subit la moitié des dégâts et aucun dégât persistant. De plus, la main griffue la déplace de 1,5 m au maximum dans
+                                          la direction de votre choix.
+                                         **Échec.** La créature subit la totalité des dégâts ainsi que des dégâts
+                                          persistants, et la main la déplace de 3 m au maximum dans la
+                                          direction de votre choix.
+                                         **Échec critique.** La créature subit le double des dégâts ainsi que la
+                                          totalité des dégâts persistants, et la main la déplace de 6 m au
+                                          maximum dans la direction de votre choix.
+                                         **Intensifié (+2).** Les dégâts initiaux augmentent de 2d8 et les dégâts
+                                          d’acide persistants de 1d6.
+                                         **PORTAIL** 
+                                              2
+                                                **                  SORT 10
+                                          PEU COURANT CONCENTRATION MANIPULATION TÉLÉPORTATION
+                                         Traditions** arcanique, divine, occulte
+                                         **Portée** 36 m
+                                         **Durée** maintenu jusqu’à 1 min
+                                         Vous ouvrez une faille vers un autre plan, créant un portail que les
+                                         créatures peuvent emprunter dans les deux sens. Il est vertical et
+                                         circulaire, d’un rayon de 12 m. Il apparaît en un lieu de votre choix
+                                         sur le plan de destination, tant que vous avez une idée précise de
+

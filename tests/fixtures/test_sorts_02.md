@@ -1,9 +1,114 @@
-[[METADATA]]
-source: pdf_sources/PF2R_01_Livre_des_Joueurs_web_v1.pdf
-pages: 316-391 (section sorts, à partir de ABRUTISSEMENT)
-cmd: uv run scripts/extract_pdf.py pdf_sources/PF2R_01_Livre_des_Joueurs_web_v1.pdf output/ldj_full puis extraire depuis ABRUTISSEMENT jusqu'à [[PAGE 392]]
-[[/METADATA]]
-          **CLAIRVOYANCE             SORT 4
+[[PAGE 324]]
+
+# FLUX PRINCIPAL (STATS/BASE)
+                    Livre des Joueurs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**322 322**
+         Le sort confère un bonus de statut de +2 à la CA et aux jets de sauvegarde
+         contre de tels effets, et une résistance 5 contre tous leurs dégâts. De plus,
+         le sort empêche toute chose dans la zone de s’écrouler, comme un pont
+         branlant ou un plafond instable, sauf sous une pression extrême qui ferait
+         s’écrouler une structure normale de ce type.
+          _Chemin sûr_ protège uniquement des blessures et non des désagréments. Il ne réduit pas un terrain difficile, n’ôte pas l’état masqué
+         causé par les précipitations ou autre et ne protège pas non plus des
+         créatures au sein de la zone du sort.
+         **Intensifié (5**e**).** La résistance conférée passe à 10 et la zone peut mesurer 36 m de long.
+         **Intensifié (8**e**).** La résistance conférée augmente à 15 et la zone peut
+          mesurer 150 m de long.
+         **CHIMÈRE** 
+              2
+                **             TOUR DE MAGIE 1
+         CONCENTRATION DISCRET ILLUSION MANIPULATION TOUR DE MAGIE
+         Traditions** arcanique, occulte
+         **Portée** 9 m
+         **Durée** maintenu
+         Vous créez un son ou une vision illusoire simple. Un son ajoute le
+         trait audible au sort, mais il ne peut pas inclure de mots intelligibles
+         ni de musique élaborée. Une vision ajoute le trait visuel, ne peut pas
+         prendre plus d’un cube de 1,5 m de côté. De plus, elle se révèle grossière et imprécise si l’on se trouve à moins de 4,5 m d’elle. Lorsque
+         vous Lancez ou Maintenez le sort, vous pouvez essayer de Faire
+         diversion avec l’illusion, et gagnez ainsi un bonus de circonstances
+         de +2 à votre test de Duperie. Si la tentative est un échec contre une
+         créature spécifique, celle-ci discerne la _chimère_.
+         **CIBLE VERROUILLÉE** 
+                   1
+                     **             SORT 7
+         CONCENTRATION FORTUNE PRÉDICTION
+         Traditions** arcanique, occulte
+         **Portée** 18 m ; **Cibles** 4 créatures
+         **Durée** jusqu’au début de votre prochain tour
+         Vous explorez les futurs possibles des prochaines secondes pour
+         comprendre toutes les façons dont votre ennemi pourrait éviter les
+         dommages, puis transmettez cette vision à ceux qui vous entourent.
+         Désignez une créature. La première fois que chaque cible effectue un
+         jet d’attaque contre cette créature pendant la durée de _cible verrouil‑
+         lée_, elle effectue deux jets et ne garde que le meilleur. L’assaillant
+         ignore également les malus de circonstances au jet d’attaque et tout
+         test nu requis par le fait que la cible soit masquée ou cachée.
+         **CLAIRAUDIENCE            SORT 3
+         CONCENTRATION MANIPULATION SCRUTATION
+         Traditions** arcanique, occulte
+         **Incantation** 1 min
+         **Portée** 150 m
+         **Durée** 10 min
+         Vous créez une oreille flottante invisible dans un endroit à portée (même
+         hors de ligne de mire ou d’effet). Elle ne peut pas bouger, mais vous
+         entendez à travers elle comme si vous utilisiez vos sens auditifs normaux.
+         **CLAIRVOYANCE             SORT 4
          CONCENTRATION MANIPULATION SCRUTATION
          Traditions** arcanique, occulte
          **Incantation** 1 min
@@ -450,17 +555,20 @@ de la cible. Vous pouvez Révoquer le sort.
           sorts permettant de faire apparaître des objets ou des êtres
           vivants mais dépourvus de ce trait, comme _convocation d’ins‑
           trument_, est présenté dans leur description.
-             **Rang du sort Niveau maximal de la créature**
-               1er           −1
-               2e             1
-               3e             2
-               4e             3
-               5e             5
-               6e             7
-               7e             9
-               8e            11
-               9e            13
-               10e           15
+[[TABLE_START]]
+[[TABLE_HEADER]]Rang du sort|Niveau maximal de la créature
+[[TABLE_ROW]]1er|−1
+[[TABLE_ROW]]2e|1
+[[TABLE_ROW]]3e|2
+[[TABLE_ROW]]4e|3
+[[TABLE_ROW]]5e|5
+[[TABLE_ROW]]6e|7
+[[TABLE_ROW]]7e|9
+[[TABLE_ROW]]8e|11
+[[TABLE_ROW]]9e|13
+[[TABLE_ROW]]10e|15
+[[TABLE_END]]
+
 
 [[PAGE 327]]
 
@@ -586,6 +694,7 @@ Tradition** occulte
 Vous convoquez une créature dotée du trait aberration et dont le
 niveau est de 5 ou moins afin qu’elle se batte pour vous.
 **Intensifié.** Comme indiqué sous le trait convocation (p. 324)
+**CONVOCATION DE PLANTE
 OU DE CHAMPIGNON** 
            3
               **           SORT 1
@@ -1194,3 +1303,51 @@ mer les effets non magiques le peuvent.
                                          type de poison. Certaines substances, comme le plomb ou l’alcool,
                                          sont un poison et masquent les autres toxines.
                                          **Intensifié (2**e**).** Vous apprenez le nombre et le type de poisons.
+                                         **DÉTERMINER LA POSITION   SORT 8
+                                          PEU COURANT CONCENTRATION DÉTECTION MANIPULATION
+                                         Traditions** arcanique, divine, occulte
+                                         **Incantation** 10 min
+                                         **Portée** illimitée ; **Cible** 1 créature ou objet
+                                         Vous apprenez le nom de l’emplacement précis de la cible (y compris
+                                         celui d’un bâtiment, d’une ville et d’un pays) et son plan d’existence.
+                                         Pour cibler une créature, vous devez l’avoir déjà vue en personne,
+                                         disposer d’un bien ayant de l’importance pour elle ou avoir un échantillon de son corps (comme une mèche de cheveux). Pour viser un
+                                         objet, vous devez l’avoir touché ou disposer de l’un de ses fragments.
+                                         _Déterminer la position_ surmonte automatiquement les protections
+                                         contre les effets de détection d’un niveau inférieur au sien, même si
+                                         elles devraient normalement avoir une chance de la bloquer.
+                                         **DÉTONATION DE LA MAGIE** 
+                                                       2
+                                                          **        SORT 9
+                                          PEU COURANT CONCENTRATION MANIPULATION
+                                         Traditions** arcanique, primordiale
+                                         **Portée** 36 m ; **Cible** 1 objet magique ou effet de sort
+                                         **Défense** Réflexes basique (cf. texte)
+                                         Vous faites se dissiper la magie dans le corps de la cible, ce qui provoque
+                                         une explosion destructrice. Vous tentez de contrer la cible (p. 431).
+                                         Si vous réussissez, une explosion de force magique lui inflige 8d6
+                                         dégâts de force (jet de Réflexes basique). Si vous réussissez à contrer
+                                         la magie d’un objet, il est désactivé pendant 1 semaine (ou détruit sur un
+                                         succès critique), et l’explosion devient une émanation de 1,5 m à partir
+                                         de l’objet. Si vous parvenez à contrer un sort, l’effet prend fin et l’explosion affecte soit toutes les créatures dans la zone du sort soit la cible du
+                                         sort et toutes les créatures dans une émanation de 1,5 m autour d’elle.
+                                         **DILEMME** 
+                                               2
+                                                 **                 SORT 8
+                                          CONCENTRATION EXTRADIMENSIONNEL MANIPULATION TÉLÉPORTATION
+                                         Traditions** arcanique, occulte
+                                         **Portée** 9 m ; **Cible** 1 créature
+                                         **Durée** maintenu
+                                         Vous transportez la cible dans une mystérieuse salle extraplanaire
+                                         où elle restera enfermée tant qu’elle n’aura pas résolu l’énigme qui
+                                         s’y trouve. À chacun de ses tours, la cible utilise une action unique
+                                         pour effectuer un test d’Occultisme, de Perception ou de Larcin contre
+                                         votre DD des sorts pour résoudre l’énigme. Les effets de téléportation
+                                         ne peuvent pas la faire sortir de la salle, à moins qu’ils ne permettent
+                                         de changer de plan, comme _téléportation interplanaire_. Quand le sort
+                                         prend fin, la cible revient dans l’espace qu’elle occupait au moment de
+                                         son bannissement ou dans l’espace le plus proche si celui-ci est occupé.
+                                         **Succès critique.** La cible résout l’énigme et s’échappe.
+                                         **Succès.** La cible est proche de trouver la solution. Si c’était déjà le
+                                          cas précédemment, elle résout l’énigme et parvient à s’échapper.
+

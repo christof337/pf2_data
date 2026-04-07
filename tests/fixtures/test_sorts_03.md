@@ -1,9 +1,131 @@
-[[METADATA]]
-source: pdf_sources/PF2R_01_Livre_des_Joueurs_web_v1.pdf
-pages: 316-391 (section sorts, à partir de ABRUTISSEMENT)
-cmd: uv run scripts/extract_pdf.py pdf_sources/PF2R_01_Livre_des_Joueurs_web_v1.pdf output/ldj_full puis extraire depuis ABRUTISSEMENT jusqu'à [[PAGE 392]]
-[[/METADATA]]
-                                          **DÉTERMINER LA POSITION   SORT 8
+[[PAGE 330]]
+
+# FLUX PRINCIPAL (STATS/BASE)
+                    Livre des Joueurs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**328 328**
+         quantité insignifiante d’humidité (comme les élémentaires de terre)
+         sont immunisées contre _déshydratation_.
+         **Intensifié (+1).** Les dégâts augmentent de 1d10.
+         **DÉSINTÉGRATION** 
+                  2
+                    **              SORT 6
+         ATTAQUE CONCENTRATION MANIPULATION
+         Tradition** arcanique
+         **Portée** 36 m ; **Cible** 1 créature, objet non porté ou un élément constitué de force
+         **Défense** CA et Vigueur basique
+         Vous lancez un projectile traceur noir vers la cible qui libère lors du
+         contact un puissant rayon destructeur. Effectuez une attaque de sort
+         contre la cible. Si vous touchez un objet ou une cible constituée de
+         force (comme un _mur de force_), il est détruit sans avoir droit à un jet
+         de sauvegarde (sauf s’il s’agit d’un artefact ou d’un autre élément tout
+         aussi puissant). Une incantation ne peut pas détruire plus de matière
+         que n’en contient un cube de 3 m d’arête.
+          Si vous touchez une créature, elle subit 12d10 dégâts (sans type)
+         (jet de Vigueur basique). Si vous obtenez un coup critique, la cible
+         applique les effets d’un degré de succès de moins que celui obtenu
+         grâce à son jet de Vigueur. Une créature qui tombe à 0 PV est réduite
+         en fine poudre, mais son équipement demeure.
+         **Intensifié (+1).** Les dégâts augmentent de 2d10.
+         **DÉTECTION DE LA MAGIE** 
+                      2
+                        **     TOUR DE MAGIE 1
+         CONCENTRATION DÉTECTION MANIPULATION TOUR DE MAGIE
+         Traditions** arcanique, divine, occulte, primordiale
+         **Zone** émanation de 9 m
+         Vous envoyez une pulsation qui détecte la présence de magie. Vous
+         ne recevez aucune information autre que l’absence ou la présence de
+         magie. Vous pouvez ignorer la magie dont vous avez déjà connaissance, comme celle issue d’objets magiques et de sorts actifs appartenant à vos alliés et vous.
+          Vous détectez la magie d’illusion uniquement si son rang est inférieur à celui de votre _détection de la magie_. Cependant, un objet qui
+         possède une aura d’illusion, mais n’a pas une apparence trompeuse
+         (comme une _potion d’invisibilité_) se détecte normalement.
+         **Intensifié (3**e**).** Vous apprenez quel est le rang ou niveau de l’effet magique le plus puissant détecté par votre sort (déterminé
+          par le MJ).
+         **Intensifié (4**e**).** Comme pour le rang 3, mais vous identifiez également
+          la source de la magie du plus haut rang. Comme avec un sens
+          imprécis, vous ne découvrez pas l’emplacement exact de la magie,
+          mais vous réduisez son emplacement possible à un cube de 1,5 m
+          de côté (ou le plus proche possible si elle tient plus de place).
+         **DÉTECTION DE LA SCRUTATION** 
+                         2
+                           **       SORT 4
+         PEU COURANT CONCENTRATION DÉTECTION MANIPULATION
+         Traditions** arcanique, occulte
+         **Zone** émanation de 9 m
+         **Durée** 1 h
+         En étudiant les auras, vous détectez la présence d’effets de scrutation
+         dans la zone. Si _détection de la scrutation_ est de plus haut rang qu’un
+         effet de scrutation, vous avez un bref aperçu de la créature à l’origine
+         de la scrutation et apprenez la distance approximative qui vous en
+         sépare ainsi que la direction dans laquelle elle se trouve.
+         **Intensifié (6**e**).** Le sort dure jusqu’à vos prochains préparatifs quotidiens.
+                                         **DÉTECTION DU POISON** 
+                                                     2
+                                                        **           SORT 1
+                                          PEU COURANT CONCENTRATION DÉTECTION MANIPULATION
+                                         Traditions** divine, primordiale
+                                         **Portée** 9 m ; **Cible** 1 créature ou objet
+                                         Vous détectez si une créature est venimeuse ou empoisonnée ou si
+                                         un objet est toxique ou a été empoisonné. Vous ignorez si la cible est
+                                         empoisonnée de plusieurs manières et vous ne savez pas avec quel
+                                         type de poison. Certaines substances, comme le plomb ou l’alcool,
+                                         sont un poison et masquent les autres toxines.
+                                         **Intensifié (2**e**).** Vous apprenez le nombre et le type de poisons.
+                                         **DÉTERMINER LA POSITION   SORT 8
                                           PEU COURANT CONCENTRATION DÉTECTION MANIPULATION
                                          Traditions** arcanique, divine, occulte
                                          **Incantation** 10 min
@@ -1669,15 +1791,18 @@ la forme de combat choisie :
              **LES DRAGONS DU LIVRE DES MONSTRES**
           Les dragons du _Livre des monstres_ utilisent les spécificités
           suivantes pour _forme de dragon_.
-          **Dragon Tradition Vitesses Souffle de dragon**
-          Adamantium Primordial Creusement Cône contondant
-          Conspirateur Occulte Escalader Cône de poison
-          Diabolique Divin — Cône de feu
-          Empyréen Divin  —  Cône spirituel
-          Fortune Arcanique — Cône de force
-          Cornu  Primordial Nage Cône de poison
-          Mirage Arcanique Escalader Cône mental
-          Prédictions Occulte — Cône mental
+[[TABLE_START]]
+[[TABLE_HEADER]]Dragon|Tradition|Vitesses|Souffle de dragon
+[[TABLE_ROW]]Adamantium|Primordial|Creusement|Cône contondant
+[[TABLE_ROW]]Conspirateur|Occulte|Escalader|Cône de poison
+[[TABLE_ROW]]Diabolique|Divin|—|Cône de feu
+[[TABLE_ROW]]Empyréen|Divin|—|Cône spirituel
+[[TABLE_ROW]]Fortune|Arcanique|—|Cône de force
+[[TABLE_ROW]]Cornu|Primordial|Nage|Cône de poison
+[[TABLE_ROW]]Mirage|Arcanique|Escalader|Cône mental
+[[TABLE_ROW]]Prédictions|Occulte|—|Cône mental
+[[TABLE_END]]
+
 
 [[PAGE 339]]
 
@@ -1840,3 +1965,78 @@ Vous gagnez des pouvoirs spécifiques selon la forme choisie :
  temporaires, un modificateur d’attaque de +18, un bonus aux
  dégâts de +2 et vous doublez les dés de dégâts (y compris les
  dégâts persistants), et Athlétisme +20.
+**FORME ÉLÉMENTAIRE** 
+            2
+              **           SORT 5
+CONCENTRATION MANIPULATION MÉTAMORPHOSE
+Traditions** arcanique, primordiale
+**Durée** 1 min
+                                 Vous faites appel à la puissance des plans pour prendre la forme de
+                                 combat d’un élémentaire Moyen. Lorsque vous Lancez ce sort, choisissez l’un des éléments listés. Sous cette forme, vous gagnez le trait
+                                 correspondant et le trait élémentaire. La forme de combat possède
+                                 des mains et vous autorise des actions de manipulation. Vous pouvez
+                                 Révoquer le sort.
+                                  Vous gagnez les statistiques et pouvoirs suivants, quelle que soit
+                                 la forme de combat choisie :
+                                  • CA = 19 + votre niveau. Ignorez le malus aux tests lié à votre
+                                   armure et la réduction de Vitesse qu’elle vous impose.
+                                  • 10 points de vie temporaires.
+                                  • Vision dans le noir.
+                                  • Une ou plusieurs attaques au corps à corps à mains nues
+                                   spécifiques à la forme de combat choisie, qui deviennent vos
+                                   seules attaques utilisables. Vous êtes qualifié pour vous en
+                                   servir. Votre modificateur d’attaque est de +18 et votre bonus
+                                   aux dégâts de +9. Ces attaques sont basées sur la Dextérité
+                                   (air, feu ou métal) ou Force (terre, eau ou bois). Si votre modificateur d’attaque à mains nues correspondant est plus élevé,
+                                   utilisez-le à la place.
+                                  • Modificateur d’Acrobaties (air, feu ou métal) ou d’Athlétisme
+                                   (terre, eau ou bois) de +20 ; ignorez ce changement si votre
+                                   propre modificateur est supérieur.
+                                  Vous gagnez des pouvoirs spécifiques selon l’élément choisi :
+                                  • **Air** vol 24 m, le déplacement ne déclenche pas de réactions ;
+                                   **Corps à corps**
+                                          1
+                                           bourrasque, **Dégâts** 1d4 contondants.
+                                  • **Bois** Vitesse 6 m, escalade 9 m, **Corps à corps**
+                                                        1
+                                                          branche,
+                                   **Dégâts** 2d10 contondants.
+                                  • **Eau** Vitesse 6 m, nage 18 m ; résistance 5 au feu ; **Corps à
+                                   corps**
+                                      1
+                                        vague, **Dégâts** 1d12 contondants, et vous pouvez
+                                   dépenser une action immédiatement après avoir touché pour
+                                   repousser la cible de 1,5 m comme avec un succès sur l’action Pousser.
+                                  • **Feu** Vitesse 15 m ; résistance 10 au feu, faiblesse 5 au froid
+                                   et 5 à l’eau ; **Corps à corps**
+                                                1
+                                                  flammèche, **Dégâts** 1d8 feu
+                                   plus 1d4 feu persistants.
+                                  • **Métal** Vitesse 12 m, vol 6 m ; **Corps à corps**
+                                                       1
+                                                         lame (polyvalent perforant), **Dégâts** 1d8 tranchants plus 1d4 électricité.
+                                  • **Terre** Vitesse 6 m, creusement 6 m ; **Corps à corps**
+                                                         1
+                                                           rocher,
+                                   **Dégâts** 2d10 contondants.
+                                 **Intensifié (6**e**).** Votre forme de combat est de Grande taille et vos
+                                  attaques ont une allonge de 3 m. Vous gagnez à la place CA = 22 +
+                                  votre niveau, 15 PV temporaires, un modificateur d’attaque de +23,
+                                  un bonus aux dégâts de +13, et Acrobaties ou Athlétisme +23.
+                                 **Intensifié (7**e**).** Votre forme de combat est de Très Grande taille et vos
+                                  attaques ont une allonge de 4,5 m. Vous gagnez à la place CA = 22
+                                  + votre niveau, 20 PV temporaires, un modificateur d’attaque
+                                  de +25, un bonus aux dégâts de +11, vous doublez le nombre de
+                                  dés de dégâts (y compris les dégâts persistants) et avez Acrobaties
+                                  ou Athlétisme +25.
+                                 **FORME HUMANOÏDE** 
+                                            2
+                                              **            SORT 2
+                                 CONCENTRATION MANIPULATION MÉTAMORPHOSE
+                                 Traditions** arcanique, occulte, primordiale
+                                 **Durée** 10 min
+                                 Vous vous transformez en un humanoïde de taille Moyenne ou
+                                 Petite, comme un nain, un elfe, un gobelin, un halfelin, un humain
+                                 ou un orc. Vous obtenez les traits humanoïde et tous ceux associés
+                                                 Christophe Cavalier Pont - pont.christophe.pc@gmail.com - 202602/2468111/3429431
+

@@ -1,9 +1,112 @@
-[[METADATA]]
-source: pdf_sources/PF2R_01_Livre_des_Joueurs_web_v1.pdf
-pages: 316-391 (section sorts, à partir de ABRUTISSEMENT)
-cmd: uv run scripts/extract_pdf.py pdf_sources/PF2R_01_Livre_des_Joueurs_web_v1.pdf output/ldj_full puis extraire depuis ABRUTISSEMENT jusqu'à [[PAGE 392]]
-[[/METADATA]]
-          **SINGES FOUS** 
+[[PAGE 364]]
+
+# FLUX PRINCIPAL (STATS/BASE)
+                    Livre des Joueurs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**362 362
+         Succès.** Le sort échoue et la cible est temporairement immunisée
+          pendant 1 journée.
+         **Échec.** Le sort réussit.
+         **Échec critique.** Le sort réussit, et l’œil suit la cible si elle se déplace,
+          voyageant jusqu’à 18 m par round.
+         **SERPENTS D’OMBRE** 
+                   3
+                      **            SORT 5
+         CONCENTRATION MANIPULATION OMBRE
+         Traditions** arcanique, occulte
+         **Portée** 36 m ; **Zone** explosion 6 m
+         **Défense** Réflexes
+         Une masse de serpents constitués d’ombre s’élève du sol pour capturer les créatures dans la zone. Toutes les créatures présentes dans
+         la zone lorsque vous Lancez le sort subissent 3d6 dégâts perforants
+         et 1d6 dégâts de poison persistants à cause des morsures de serpent.
+         De plus, elles sont empoignées ou entravées selon le résultat de leur
+         jet de Réflexes. Une créature qui achève son tour dans la zone doit
+         également effectuer ce jet de sauvegarde, même si elle est déjà empoignée ou entravée par les serpents. Vous pouvez Révoquer le sort.
+         **Succès.** La créature n’est pas affectée.
+         **Échec.** La créature subit la totalité des dégâts et est empoignée par un
+          serpent. Le DD pour Échapper au serpent est égal au DD de votre
+          sort. Une créature peut attaquer un serpent pour libérer la cible.
+          La CA d’un serpent est égale au DD de votre sort. Il est détruit s’il
+          subit 12 dégâts ou plus en un seul coup. De nouveaux serpents
+          apparaissent constamment tant que le sort est actif, ce qui fait
+          qu’en détruire certains ne suffit pas à empêcher le sort _serpents
+          d’ombre_ de capturer d’autres créatures.
+         **Échec critique.** Comme un échec mais la créature subit le double des
+          dégâts et est entravée par un serpent.
+         **Intensifié (+2).** Les dégâts de poison persistants augmentent de 1d6
+          et les PV de chaque serpent augmentent de 6.
+         **SILENCE** 
+             2
+                **                  SORT 2
+         DISCRET ILLUSION MANIPULATION
+         Traditions** divine, occulte
+         **Portée** contact ; **Cible** 1 créature consentante
+         **Durée** 1 min
+         La cible n’émet aucun son, empêchant les créatures de la remarquer
+         en utilisant uniquement l’ouïe. La cible ne peut pas utiliser d’attaques
+         de son ni d’actions audibles. Cela l’empêche également de lancer des
+         sorts (à l’exception des sorts discrets) car elle ne peut pas prononcer
+         les formules d’incantation.
+         **Intensifié (4**e**).** Le sort crée une aura dans une émanation de 3 m
+          autour de la cible, empêchant le moindre sort d’entrer ou de sortir de la zone. Les créatures présentes dans l’aura sont sujettes
+          aux même effets que la cible. En fonction de la position de l’effet,
+          une créature peut remarquer que les sons ne lui parviennent plus
+          (s’il bloque le bruit émanant d’une fête, par exemple).
+         **SINGES FOUS** 
                 2
                   **                SORT 3
          CONCENTRATION MANIPULATION
@@ -1447,3 +1550,17 @@ aux Frappes qu’il affecte.
                                  La cible peut s’élever dans les airs. Elle gagne une Vitesse de vol égale
                                  à sa Vitesse ou à 6 m (prendre la plus grande).
                                  **Intensifié (7**e**).** La durée passe à 1 h.
+                                 **VOYAGE TÉNÉBREUX         SORT 5
+                                 PEU COURANT CONCENTRATION MANIPULATION OMBRE TÉLÉPORTATION
+                                 Traditions** arcanique, occulte
+                                 **Incantation** 1 min
+                                 **Portée** contact ;** Cibles** vous et jusqu’à 10 créatures consentantes que
+                                  vous touchez
+                                 **Durée** 8 h
+                                 Vous tirez profit de l’effet de distorsion du monde des ténèbres pour
+                                 voyager plus vite. Chaque heure, vous couvrez approximativement
+                                 autant de distance qu’en trois jours de voyage ordinaire (p. 438).
+                                 Les points de repère deviennent flous et plus symboliques que
+                                 concrets, ce qui fait que vous arrivez à environ 1,5 km de la destination visée à la fin du sort ou si vous le Révoquez.
+                                                 Christophe Cavalier Pont - pont.christophe.pc@gmail.com - 202602/2468111/3429431
+

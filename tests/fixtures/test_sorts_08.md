@@ -1,9 +1,201 @@
-[[METADATA]]
-source: pdf_sources/PF2R_01_Livre_des_Joueurs_web_v1.pdf
-pages: 316-391 (section sorts, à partir de ABRUTISSEMENT)
-cmd: uv run scripts/extract_pdf.py pdf_sources/PF2R_01_Livre_des_Joueurs_web_v1.pdf output/ldj_full puis extraire depuis ABRUTISSEMENT jusqu'à [[PAGE 392]]
-[[/METADATA]]
-                                  **VOYAGE TÉNÉBREUX         SORT 5
+[[PAGE 371]]
+
+# FLUX PRINCIPAL (STATS/BASE)
+
+                                                          Sorts
+                                                                    77
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                     **369 369
+                                                                 Introduction
+                                                                 Ascendances
+                                                                  & Historiques
+                                                                 Classes
+                                                                 Compétences
+                                                                 Dons
+                                                                 Équipement
+                                                                 Sorts
+                                                                  Règles
+                                                                  Listes de sorts
+                                                                   Arcanique
+                                                                   Divine
+                                                                   Occulte
+                                                                   Primordiale
+                                                                  Sorts
+                                                                   A–C
+                                                                   D–F
+                                                                   G–M
+                                                                   N–R
+                                                                   S
+                                                                   T–Z
+                                                                  Sorts focalisés
+                                                                   Barde
+                                                                   Druide
+                                                                   Magicien
+                                                                   Prêtre
+                                                                   Rôdeur
+                                                                   Sorcier
+                                                                  Rituels
+                                                                 Jouer une partie
+                                                                 Annexe des États
+                                                                 Feuille de personnage
+                                                                 Glossaire et index**
+une cible, vous déterminez le DD d’Athlétisme ou de Vol pour l’ouvrir
+qui est égal à votre DD des sorts ou au DD de base du verrou (le
+plus élevé des deux), avec un bonus de statut de +4. L’éventuelle
+clef ou combinaison qui permet d’ouvrir un verrou affecté par
+ce sort ne fonctionne plus pendant toute la durée du sort, mais
+confère un bonus de circonstances de +4 aux tests effectués pour
+ouvrir la cible.
+ Le sort se termine si la cible est ouverte. En supposant que
+la cible n’est pas barrée ou verrouillée par un dispositif supplé-
+mentaire, vous pouvez la déverrouiller et l’ouvrir avec une action
+Interagir pendant laquelle vous touchez la cible. Cela ne met pas fin
+au sort. Vous pouvez Révoquer ce sort quand vous le souhaitez à
+n’importe quelle distance.
+**Intensifié (2**e**).** La durée passe à illimitée, mais vous devez dépenser
+ une valeur totale supplémentaire de métaux précieux égale à 6 po.
+**VISION DANS LE NOIR** 
+           2
+              **           SORT 2
+CONCENTRATION MANIPULATION
+Traditions** arcanique, divine, occulte, primordiale
+**Durée** 1 h
+Vous vous dotez d’une vision surnaturelle dans les zones de ténèbres.
+Vous gagnez vision dans le noir.
+**Intensifié (3**e**).** La portée du sort devient contact et la cible une créature consentante.
+**Intensifié (5**e**).** La portée du sort devient contact et les cibles une
+ créature consentante. Le sort dure jusqu’à vos prochains préparatifs quotidiens.
+**VISION FAUSSÉE           SORT 5
+PEU COURANT CONCENTRATION ILLUSION MANIPULATION
+Traditions** arcanique, occulte
+**Incantation** 10 min
+**Portée** contact ; **Zone** explosion 30 m
+**Durée** jusqu’à vos prochains préparatifs quotidiens
+Vous créez une image factice qui trompe toute tentative pour scru-
+ter la zone. Les sorts de scrutation voient, entendent, sentent et
+perçoivent ce que vous désirez au sein de la zone et non ce qui s’y
+trouve réellement. Vous pouvez Maintenir le sort à chaque round pour
+modifier l’illusion selon vos désirs, y compris en présentant une scène
+complexe. Si le sort de scrutation est d’un niveau supérieur à _vision
+faussée_, le scrutateur a droit à un test de Perception pour discerner
+l’illusion. Toutefois, même s’il rencontre un succès, il ignore ce qu’il
+se passe réellement dans la zone.
+**VITALITÉ INSUFFLÉE** 
+           1
+             ** À** 
+              3
+                 **        SORT 1
+CONCENTRATION MANIPULATION VITALITÉ
+Tradition** divine
+**Portée** 9 m ; **Cibles** 1 à 3 créatures consentantes
+**Durée** 1 min
+Vous imprégnez vos attaques d’énergie vitale. Le nombre de cibles
+est égal au nombre d’actions que vous avez dépensées en lançant ce
+sort. Les Frappes à mains nues et d’arme effectuées par chaque cible
+infligent 1d4 dégâts de vitalité supplémentaires. Ces dégâts affectent
+généralement les morts-vivants uniquement, comme expliqué à la
+p. 409. Si vous avez le trait saint, vous pouvez l’ajouter à ce sort et
+aux Frappes qu’il affecte.
+**Intensifié (3**e**).** Les dégâts passent à 2d4.
+**Intensifié (5**e**).** Les dégâts passent à 3d4.
+                                 **VIVIFIER** 
+                                      2
+                                        **                 SORT 10
+                                 CONCENTRATION GUÉRISON MANIPULATION VITALITÉ
+                                 Traditions** divine, primordiale
+                                 **Portée** 9 m ;** Cibles** les créatures mortes et vivantes de votre
+                                  choix à portée
+                                 **Durée** maintenu jusqu’à 1 min
+                                 Une explosion d’énergie de guérison apaise les créatures
+                                 vivantes et éveille temporairement celles récemment tuées.
+                                 Toutes les cibles vivantes regagnent 10d8+40 points de vie.
+                                 Vous ramenez temporairement à la vie n’importe quel nombre de
+                                 cibles mortes, avec les mêmes effets et restrictions que _rappel
+                                 à la vie_ (p. 357). Les créatures ressuscitées ont un nombre de
+                                 points de vie temporaires égal aux points de vie que vous avez
+                                 accordés aux créatures vivantes, mais n’ont pas de points de vie
+                                 normaux. Les créatures ressuscitées ne peuvent pas regagner de
+                                 points de vie ni gagner de points de vie temporaires par d’autres
+                                 moyens, et une fois la durée de _vivifier_ terminée, elles perdent
+                                 tous les points de vie temporaires et meurent. _Vivifier_ ne peut
+                                 pas ressusciter de créatures tuées par _désintégration_ ou un effet
+                                 de mort. Il n’a aucun effet sur les morts-vivants.
+                                 **VOILE OCCULTANT          SORT 3
+                                 PEU COURANT CONCENTRATION MANIPULATION
+                                 Traditions** arcanique, occulte, primordiale
+                                 **Incantation** 10 min
+                                 **Portée** contact ; **Cible** 1 créature ou objet
+                                 **Durée** 8 h
+                                 Vous dressez des barrières qui compliquent l’utilisation de moyens
+                                 magiques pour détecter la cible. _Voile occultant_ tente de contrer
+                                 tout effet de détection, révélation et scrutation utilisé contre la
+                                 cible ou l’équipement de la cible pendant la durée du sort. Les tours
+                                 de magie sont comptés comme des sorts de rang 1 pour cet effet.
+                                 Seuls les effets sur la cible de _voile occultant_ sont annulés lorsqu’un
+                                 sort qui prend pour cible une zone ou plusieurs cibles est contré
+                                 avec succès.
+                                 **VOL**  2 **              SORT 4
+                                 CONCENTRATION MANIPULATION
+                                 Traditions** arcanique, divine, occulte, primordiale
+                                 **Portée** contact ; **Cible** 1 créature
+                                 **Durée** 5 min
+                                 La cible peut s’élever dans les airs. Elle gagne une Vitesse de vol égale
+                                 à sa Vitesse ou à 6 m (prendre la plus grande).
+                                 **Intensifié (7**e**).** La durée passe à 1 h.
+                                 **VOYAGE TÉNÉBREUX         SORT 5
                                  PEU COURANT CONCENTRATION MANIPULATION OMBRE TÉLÉPORTATION
                                  Traditions** arcanique, occulte
                                  **Incantation** 1 min
@@ -77,6 +269,8 @@ cmd: uv run scripts/extract_pdf.py pdf_sources/PF2R_01_Livre_des_Joueurs_web_v1.
 
 
 **370 370**
+         BARDE   :
+         SORTS   DE COMPOSITION
          **ALLÉGRO** 
               1
                **             TOUR DE MAGIE 7
@@ -498,6 +692,8 @@ aux jets d’attaque, de dégâts et de sauvegarde contre les effets de terreur.
          déterminer le DD de contre (par exemple, le DD de l’action S’échapper
          pour l’état empoigné).
          **Intensifié (9**e**).** Vous pouvez cibler jusqu’à 4 créatures.
+         DRUIDE   :
+         SORTS   D’ORDRES
          **CONVOCATIONS PRIMORDIALES** 
                          0
                            **    FOCALISÉ 6
@@ -1113,6 +1309,9 @@ vous ajoutez aux dégâts votre modificateur d’attribut d’incantation au lie
 de votre modificateur de Force. En cas de succès critique, vous infligez le
 double des dégâts et ajoutez l’effet critique spécialisé de l’arme. Que la
 frappe soit réussie ou non, l’arme revient dans votre main en volant.
+PRÊTRE    :
+SORTS   DE  DOMAINE
+**Air
 BOURRASQUE AGRESSIVE** 
               2
                 **       FOCALISÉ 1
@@ -1170,3 +1369,14 @@ qui frappe la cible, qui doit alors effectuer un jet de Vigueur.
                                  **Intensifié (7**e**).** Le bonus de base passe à +2 et le bonus après le succès
                                   critique d’un ennemi à +4.
                                  **Cauchemar
+                                 CAUCHEMAR ÉVEILLÉ** 
+                                            2
+                                              **          FOCALISÉ 1
+                                 PEU COURANT CONCENTRATION ÉMOTION FOCALISÉ MANIPULATION MENTAL
+                                  PRÊTRE TERREUR
+                                 Portée** 9 m ; **Cible** 1 créature
+                                 **Jet de sauvegarde** Volonté ; **Durée** variable
+                                 Vous implantez dans l’esprit de la créature des images terrifiantes.
+                                 La cible doit effectuer un jet de Volonté. Si elle est effrayée par ce sort,
+                                                 Christophe Cavalier Pont - pont.christophe.pc@gmail.com - 202602/2468111/3429431
+

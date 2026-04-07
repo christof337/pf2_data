@@ -1,9 +1,203 @@
-[[METADATA]]
-source: pdf_sources/PF2R_01_Livre_des_Joueurs_web_v1.pdf
-pages: 316-391 (section sorts, à partir de ABRUTISSEMENT)
-cmd: uv run scripts/extract_pdf.py pdf_sources/PF2R_01_Livre_des_Joueurs_web_v1.pdf output/ldj_full puis extraire depuis ABRUTISSEMENT jusqu'à [[PAGE 392]]
-[[/METADATA]]
-                                  CAUCHEMAR ÉVEILLÉ** 
+[[PAGE 377]]
+
+# FLUX PRINCIPAL (STATS/BASE)
+
+                                                          Sorts
+                                                                    77
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                     **375 375
+                                                                 Introduction
+                                                                 Ascendances
+                                                                  & Historiques
+                                                                 Classes
+                                                                 Compétences
+                                                                 Dons
+                                                                 Équipement
+                                                                 Sorts
+                                                                  Règles
+                                                                  Listes de sorts
+                                                                   Arcanique
+                                                                   Divine
+                                                                   Occulte
+                                                                   Primordiale
+                                                                  Sorts
+                                                                   A–C
+                                                                   D–F
+                                                                   G–M
+                                                                   N–R
+                                                                   S
+                                                                   T–Z
+                                                                  Sorts focalisés
+                                                                   Barde
+                                                                   Druide
+                                                                   Magicien
+                                                                   Prêtre
+                                                                   Rôdeur
+                                                                   Sorcier
+                                                                  Rituels
+                                                                 Jouer une partie
+                                                                 Annexe des États
+                                                                 Feuille de personnage
+                                                                 Glossaire et index
+Intensifié (6**e**).** La durée passe à 10 min.
+**Intensifié (8**e**).** La durée passe à 1 h.
+**INCITATION CHARMEUSE** 
+             1
+               **        FOCALISÉ 1
+  PEU COURANT CONCENTRATION FOCALISÉ MAGICIEN MENTAL
+MISE HORS DE COMBAT
+Portée** 9 m ; **Cible** 1 créature
+**Défense** Volonté ; **Durée** jusqu’au début de votre prochain tour
+Vous faites pression sur l’esprit de la cible pour éloigner sa colère.
+La cible doit effectuer un jet de Volonté.
+**Succès critique.** La cible n’est pas affectée.
+**Succès.** La cible subit un malus de circonstances de −1 aux jets d’attaque et de dégâts contre vous.
+**Échec.** La cible ne peut pas utiliser d’actions hostiles contre vous.
+**Échec critique.** La cible est étourdie 1 et ne peut pas utiliser d’actions
+ hostiles contre vous.
+**Théorie de la magie unifiée
+INCANTATION INTERDISCIPLINAIRE** 
+                   9
+                    **   FOCALISÉ 4
+PEU COURANT CONCENTRATION FOCALISÉ MAGICIEN
+Déclencheur.** Une créature qui se trouve dans un rayon de 9 m lance
+ un sort arcanique.
+Vous captez les résidus du sort d’un autre incantateur et profitez de votre
+compréhension de la magie unifiée pour identifier ses formules et ses
+incantations avec assez de précision pour imiter le sort, même si ce n’est
+que pour quelques instants. Jusqu’à la fin de votre prochain tour, vous
+pouvez Lancer le sort déclencheur en dépensant un emplacement de sort
+de magicien du même rang. Ce sort ne peut plus servir de déclencheur à
+votre _incantation interdisciplinaire_ pour les prochaines 24 h.
+**MAIN DE L’APPRENTI** 
+           1
+             **          FOCALISÉ 1
+PEU COURANT ATTAQUE FOCALISÉ MAGICIEN MANIPULATION
+Portée** 150 m ;** Cible** 1 créature
+**Défense** CA
+Vous tirez parti d’une leçon fondamentale de magie pour faire léviter et
+propulser votre arme. Vous lancez en direction de la cible une arme de
+corps à corps tenue avec laquelle vous êtes qualifié, et effectuez un jet
+d’attaque de sort. En cas de succès, vous lui infligez les dégâts de l’arme
+comme si vous l’aviez touchée avec une Frappe au corps à corps, mais
+vous ajoutez aux dégâts votre modificateur d’attribut d’incantation au lieu
+de votre modificateur de Force. En cas de succès critique, vous infligez le
+double des dégâts et ajoutez l’effet critique spécialisé de l’arme. Que la
+frappe soit réussie ou non, l’arme revient dans votre main en volant.
+PRÊTRE    :
+SORTS   DE  DOMAINE
+**Air
+BOURRASQUE AGRESSIVE** 
+              2
+                **       FOCALISÉ 1
+PEU COURANT AIR CONCENTRATION FOCALISÉ MANIPULATION PRÊTRE
+Portée** 150 m ; **Cible** 1 créature
+**Défense** Vigueur
+Vous repoussez l’air pour former une puissante bourrasque de vent
+qui frappe la cible, qui doit alors effectuer un jet de Vigueur.
+**Succès critique.** La cible n’est pas affectée.
+**Succès.** La cible est repoussée à 1,5 m de vous.
+**Échec.** La cible est repoussée à 3 m de vous.
+**Échec critique.** La cible est repoussée à 3 m de vous et tombe à terre.
+                                 **DISPERSION DANS LES AIRS** 
+                                               9
+                                                 **      FOCALISÉ 4
+                                 PEU COURANT AIR FOCALISÉ MANIPULATION MÉTAMORPHOSE PRÊTRE
+                                 Déclencheur.** Vous subissez des dégâts d’un ennemi ou d’un danger.
+                                 Après avoir subi les dégâts déclencheurs, vous vous transformez
+                                 en air. Jusqu’à la fin du tour actuel, vous ne pouvez pas être attaqué ni ciblé, vous n’occupez pas d’espace, vous ne pouvez pas
+                                 agir, et toutes les auras ou émanations que vous dégagez sont
+                                 réprimées. À la fin du tour, vous vous reformez dans n’importe
+                                 quelle case que vous pouvez occuper dans un rayon de 4,5 m
+                                 autour de l’endroit où vous vous trouviez quand vous vous êtes
+                                 dispersé. Toutes les auras et émanations que vous aviez sont restaurées tant que leur durée ne s’est pas écoulée pendant que vous
+                                 étiez dispersé.
+                                 **Ambition
+                                 ATTISER L’AMBITION**  9 **  FOCALISÉ 1
+                                 PEU COURANT DISCRET CONCENTRATION ÉMOTION FOCALISÉ MENTAL PRÊTRE
+                                 Déclencheur.** Vous, ou un allié à portée, tentez d’utiliser un effet mental pour convaincre une créature de faire quelque chose (comme les
+                                  actions Contraindre, Solliciter, ou le sort _suggestion_).
+                                 **Portée** 18 m ;** Cible** une créature ciblée par une tentative d’influence
+                                 **Défense** Volonté
+                                 Vous attisez l’ambition de votre cible, accentuez sa rancœur envers
+                                 ses alliés et rendez son allégeance plus susceptible de changer. Elle
+                                 doit effectuer un jet de Volonté.
+                                 **Succès critique.** La cible n’est pas affectée et se rend compte que vous
+                                  avez tenté d’influencer ses réactions par magie.
+                                 **Succès.** La cible subit un malus de statut de −1 à ses défenses contre
+                                  l’effet déclencheur. Ce malus passe à −2 si la cible est encouragée à
+                                  suivre ses propres ambitions. La cible n’a pas conscience que vous
+                                  lui avez Lancé un sort.
+                                 **Échec.** Comme un succès, mais le malus de statut de la cible passe à
+                                  −4 si elle est encouragée à suivre ses propres ambitions.
+                                 **Échec critique.** Comme un succès, mais la créature suit automatiquement n’importe quelle suggestion qui va dans le sens de ses
+                                  propres ambitions.
+                                 **AVANTAGE DU COMPÉTITEUR** 
+                                                1
+                                                  **     FOCALISÉ 4
+                                 PEU COURANT CONCENTRATION ÉMOTION FOCALISÉ MENTAL PRÊTRE
+                                 Durée** maintenu jusqu’à 1 min
+                                 Votre compétitivité vous pousse à faire vos preuves face à l’opposition. Vous gagnez un bonus de statut de +1 aux jets d’attaque et
+                                 aux tests de compétences. Si un ennemi situé dans un rayon de 6 m
+                                 obtient un succès critique à un jet d’attaque ou à un test de compétence, votre bonus de statut augmente à +3 pour vos jets d’attaques
+                                 ou pour le même test de compétence (en fonction du jet auquel l’ennemi a obtenu un succès critique) pendant 1 round.
+                                 **Intensifié (7**e**).** Le bonus de base passe à +2 et le bonus après le succès
+                                  critique d’un ennemi à +4.
+                                 **Cauchemar
+                                 CAUCHEMAR ÉVEILLÉ** 
                                             2
                                               **          FOCALISÉ 1
                                  PEU COURANT CONCENTRATION ÉMOTION FOCALISÉ MANIPULATION MENTAL
@@ -156,15 +350,14 @@ cmd: uv run scripts/extract_pdf.py pdf_sources/PF2R_01_Livre_des_Joueurs_web_v1.
                                            VISUEL
                                          Portée** 9 m ; **Zone** explosion 1,5 m
                                          **Défense** Volonté **; Durée** variable
-                                         Un déluge de peinture ou d’illusions colorées, reflet de votre créativité, s’abat sur la zone. Lancez 1d4 pour déterminer la couleur de
-                                         l’illusion. Chaque créature qui se trouve dans la zone doit réussir un
-                                         jet de Volonté ou subir l’effet correspondant à la couleur de l’illusion
-                                         (présenté dans le tableau ci-après).
-                                          **1d4 Couleur Échec Échec critique**
-                                           1 Blanc Ébloui, 1 round Ébloui, 1 min
-                                          2  Rouge Affaibli 1, 1 round Affaibli 2, 1 round
-                                          3  Jaune Effrayé 1 Effrayé 2
-                                          4   Bleu Maladroit 1, 1 round Maladroit 2, 1 round
+                                         Un déluge de peinture ou d’illusions colorées, reflet de votre créa-
+[[TABLE_START]]
+[[TABLE_HEADER]]1d4|Couleur|Échec|Échec critique
+[[TABLE_ROW]]1|Blanc|Ébloui, 1 round|Ébloui, 1 min
+[[TABLE_ROW]]2|Rouge|Affaibli 1, 1 round|Affaibli 2, 1 round
+[[TABLE_ROW]]3|Jaune|Effrayé 1|Effrayé 2
+[[TABLE_ROW]]4|Bleu|Maladroit 1, 1 round|Maladroit 2, 1 round
+[[TABLE_END]]
                                          **FIORITURES ARTISTIQUES** 
                                                        2
                                                          **       FOCALISÉ 4
@@ -1136,3 +1329,62 @@ incantations encore actives de ce sort prennent fin.
 **Intensifié (7**e**).** Le bonus conféré par un rêve de perspicacité ou de
  charme est de +3.
                                  **Richesse
+                                 MÉTAUX PRÉCIEUX** 
+                                           1
+                                            **           FOCALISÉ 4
+                                 PEU COURANT FOCALISÉ MANIPULATION MÉTAL PRÊTRE
+                                 Portée** contact ;** Cibles** 1 bouclier ou une arme en métal, 1 armure
+                                  complète en métal, ou un volume d’objets métalliques représentant un Encombrement maximum de 1 (comme des pièces ou des
+                                  munitions à pointes de métal)
+                                 **Durée** 1 min
+                                 Votre divinité bénit des métaux ordinaires pour les transformer en
+                                 matériaux précieux. Le métal de la cible se transforme ainsi en fer
+                                 froid, en cuivre, en or, en fer, en argent ou en acier. Si le rang du sort est
+                                 supérieur ou égal à 8, vous pouvez ajouter l’adamantium et l’aubargent
+                                 à cette liste. Si vous transformez un objet en cuivre, en or ou en argent,
+                                 sa Solidité est réduite à 1. Sinon sa Solidité est augmentée à 10 si elle
+                                 était inférieure. Un objet transmuté de cette façon inflige des dégâts
+                                 correspondant à son nouveau matériau. Par exemple, une épée en acier
+                                 transmutée en fer froid infligera des dégâts supplémentaires à une créature ayant une faiblesse au fer froid. L’objet peut également posséder
+                                 d’autres caractéristiques de son nouveau matériau si le MJ le décrète.
+                                  Cette transformation étant manifestement magique et temporaire,
+                                 la valeur monétaire de l’objet ne change donc pas. Ainsi, vous ne pouvez pas transformer des pièces de cuivre en pièce d’or pour acheter
+                                 quelque chose.
+                                 **Intensifié (+1).** Si vous augmentez la Solidité de l’objet, il gagne
+                                  2 points de Solidité.
+                                 **RICHESSE APPARENTE** 
+                                             2
+                                               **         FOCALISÉ 1
+                                 PEU COURANT CONCENTRATION FOCALISÉ ILLUSION MANIPULATION PRÊTRE
+                                 Portée** 9 m ; **Zone** explosion de 1,5 m
+                                 **Défense** Volonté ; **Durée** maintenu jusqu’à 1 min
+                                 Vous créez la brève vision d’une immense richesse emplissant la zone du
+                                 sort. Chaque créature située dans un rayon de 6 m autour de la zone et
+                                 susceptible d’être attirée par la richesse matérielle doit effectuer un jet
+                                 de sauvegarde de Volonté. Une créature qui entre dans la zone discerne
+                                 automatiquement l’illusion, ce qui revient à mettre fin à l’état fasciné
+                                 imposé par le sort. Tant que vous Maintenez le sort, les autres créatures
+                                 réagissent face au trésor comme elles le feraient face à n’importe quelle
+                                 illusion, mais elles ne courent pas le risque de devenir fascinées.
+                                 **Succès critique.** La créature discerne l’illusion et n’est pas affectée par elle.
+                                 **Succès.** La créature est fascinée par la richesse jusqu’à ce qu’elle ait
+                                  achevé sa première action lors de son prochain tour.
+                                 **Échec.** La créature est fascinée par l’illusion.
+                                 **Secret
+                                 COMME UN MURMURE** 
+                                             2
+                                               **         FOCALISÉ 1
+                                 PEU COURANT FOCALISÉ MANIPULATION PRÊTRE SON
+                                 Portée** 18 m ;** Zone** explosion de 4,5 m
+                                 **Durée** 1 min
+                                 Vous étouffez les sons dans une zone, empêchant ainsi quiconque de
+                                 révéler des secrets importants. Cela n’empêche pas les créatures qui
+                                 se trouvent dans la zone de parler ou de Lancer un sort, mais aucune
+                                 créature qui se trouve à plus de 1,5 m de distance ne peut entendre
+                                 leur voix, sauf si cette créature réussit un test de Perception contre
+                                 votre DD des sorts. Cet effet peut interférer avec les effets audibles et
+                                 linguistiques, ainsi qu’avec la communication. Les autres sons générés
+                                 dans la zone sont également étouffés, sauf si l’effet à leur origine ne
+                                 possède pas le trait son.
+                                                 Christophe Cavalier Pont - pont.christophe.pc@gmail.com - 202602/2468111/3429431
+

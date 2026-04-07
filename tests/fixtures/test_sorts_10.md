@@ -1,9 +1,159 @@
-[[METADATA]]
-source: pdf_sources/PF2R_01_Livre_des_Joueurs_web_v1.pdf
-pages: 316-391 (section sorts, à partir de ABRUTISSEMENT)
-cmd: uv run scripts/extract_pdf.py pdf_sources/PF2R_01_Livre_des_Joueurs_web_v1.pdf output/ldj_full puis extraire depuis ABRUTISSEMENT jusqu'à [[PAGE 392]]
-[[/METADATA]]
-                                  MÉTAUX PRÉCIEUX** 
+[[PAGE 383]]
+
+# FLUX PRINCIPAL (STATS/BASE)
+
+                                                          Sorts
+                                                                    77
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                     **381 381
+                                                                 Introduction
+                                                                 Ascendances
+                                                                  & Historiques
+                                                                 Classes
+                                                                 Compétences
+                                                                 Dons
+                                                                 Équipement
+                                                                 Sorts
+                                                                  Règles
+                                                                  Listes de sorts
+                                                                   Arcanique
+                                                                   Divine
+                                                                   Occulte
+                                                                   Primordiale
+                                                                  Sorts
+                                                                   A–C
+                                                                   D–F
+                                                                   G–M
+                                                                   N–R
+                                                                   S
+                                                                   T–Z
+                                                                  Sorts focalisés
+                                                                   Barde
+                                                                   Druide
+                                                                   Magicien
+                                                                   Prêtre
+                                                                   Rôdeur
+                                                                   Sorcier
+                                                                  Rituels
+                                                                 Jouer une partie
+                                                                 Annexe des États
+                                                                 Feuille de personnage
+                                                                 Glossaire et index**
+Vous vous sentez soudain plus fort et habile. Vous gagnez un bonus
+de statut de +3 m à votre Vitesse et un bonus de statut de +2 aux
+tests d’Athlétisme. Pendant que vous Lancez ce sort, vous pouvez
+utiliser l’action Marcher rapidement, Bondir, Escalader ou Nager.
+Les bonus du sort s’appliquent pendant cette action.
+**PUISSANCE PROTECTRICE** 
+              9
+               **        FOCALISÉ 4
+PEU COURANT FOCALISÉ MANIPULATION PRÊTRE
+Déclencheur.** Une attaque ou un effet qui devrait vous infliger
+ des dégâts.
+Votre force se combine à la puissance divine afin de vous préser-
+ver d’un danger. Vous gagnez une résistance égale à 8 plus votre
+modificateur de Force contre tous les dégâts issus de l’attaque ou
+effet déclencheur.
+**Intensifié (+1).** La résistance augmente de 2.
+**Rêves
+APPEL DU RÊVEUR** 
+          2
+            **           FOCALISÉ 4
+PEU COURANT CONCENTRATION FOCALISÉ ILLUSION MANIPULATION
+ MENTAL MISE HORS DE COMBAT PRÊTRE
+Portée** 9 m ; **Cible** 1 créature
+**Défense** Volonté ; **Durée** jusqu’à la fin du prochain tour de la cible
+Vous générez un rêve éveillé illusoire et criant de vérité à partir des rêves
+de votre cible. Ce rêve éveillé apparaît dans un espace inoccupé dans la
+zone de portée du sort, et vous tentez de pousser la cible vers lui.
+**Succès critique.** La cible n’est pas affectée.
+**Succès.** L’attention de la cible vacille. Elle devient fascinée par le
+ rêve éveillé.
+**Échec.** La cible est fascinée par le rêve éveillé. Elle accomplit une
+ action que vous avez édictée comme sa première action après que
+ vous avez Lancé le sort : approcher du rêve éveillé, le fuir (comme
+ l’état en fuite), Relâcher ce qu’elle tient afin de lui faire une offrande
+ ou Se jeter à terre en signe d’obéissance.
+**Échec critique.** Comme l’échec, mais la cible accomplit l’action que
+ vous avez édictée autant de fois que possible pendant toute la
+ durée du sort et ne fait rien d’autre.
+**DOUX RÊVE** 
+      2
+         **              FOCALISÉ 1
+PEU COURANT AUDIBLE CONCENTRATION FOCALISÉ LINGUISTIQUE MANIPULATION
+ MENTAL PRÊTRE SOMMEIL
+Portée** 9 m ; **Cible** 1 créature consentante
+**Durée** 1 h
+Grâce à des paroles apaisantes, vous provoquez chez votre cible
+un rêve enchanteur. Quand vous Lancez le sort, la cible devient
+inconsciente si elle ne l’était pas déjà. Tant qu’elle reste inconsciente,
+elle fait un rêve de votre choix, mais reste assez lucide pour se réveil-
+ler quand elle le souhaite. Le sort prend fin si la cible se réveille avant
+d’avoir dormi 1 min.
+ • **Rêve de perspicacité** bonus de statut de +1 aux tests de compétences basés sur l’Intelligence.
+ • **Rêve de charme** bonus de statut de +1 aux tests de compétences basés sur le Charisme.
+ • **Rêve de voyage** bonus de statut de +1,5 m à la Vitesse.
+Si vous Lancez _doux rêve_ une nouvelle fois, toutes les précédentes
+incantations encore actives de ce sort prennent fin.
+**Intensifié (4**e**).** Le bonus conféré par un rêve de perspicacité ou de
+ charme est de +2.
+**Intensifié (7**e**).** Le bonus conféré par un rêve de perspicacité ou de
+ charme est de +3.
+                                 **Richesse
+                                 MÉTAUX PRÉCIEUX** 
                                            1
                                             **           FOCALISÉ 4
                                  PEU COURANT FOCALISÉ MANIPULATION MÉTAL PRÊTRE
@@ -907,6 +1057,7 @@ le meilleur résultat.
 
 
 **386 386**
+         SORCIER   : MALÉFICES
          **AIGUILLE DE LA VENGEANCE** 
                         1
                          **       FOCALISÉ 1
@@ -1479,26 +1630,28 @@ les autres participants se reposent. Tous les rituels nécessitent
 de répéter des mots et des gestes incantatoires pendant toute la
 durée de l’incantation.
 **RITUELS PAR RANG
-    Rang           Rituel**
-    2           _Animation d’objet_
-    2            _Consécration_
-    2          _Création de mort‑vivant_
-    3            _Rune piégée_
-    3            _Serment rituel_
-    4           _Croissance végétale_
-    4          _Flétrissement végétal_
-    4             _Pénitence_
-    5           _Appel d’un esprit_
-    5            _Résurrection_
-    5           _Serviteur planaire_
-    6           _Appel primordial_
-    6          _Cercle de négociations_
-    6            _Communion_
-    6            _Éveil d’animal_
-    7           _Mémoire collective_
-    7           _Transfert planaire_
-    8           _Contrôle du climat_
-    10            _Souhait_
+[[TABLE_START]]
+[[TABLE_HEADER]]Rang|Rituel
+[[TABLE_ROW]]2|Animation d’objet
+[[TABLE_ROW]]2|Consécration
+[[TABLE_ROW]]2|Création de mort‑vivant
+[[TABLE_ROW]]3|Rune piégée
+[[TABLE_ROW]]3|Serment rituel
+[[TABLE_ROW]]4|Croissance végétale
+[[TABLE_ROW]]4|Flétrissement végétal
+[[TABLE_ROW]]4|Pénitence
+[[TABLE_ROW]]5|Appel d’un esprit
+[[TABLE_ROW]]5|Résurrection
+[[TABLE_ROW]]5|Serviteur planaire
+[[TABLE_ROW]]6|Appel primordial
+[[TABLE_ROW]]6|Cercle de négociations
+[[TABLE_ROW]]6|Communion
+[[TABLE_ROW]]6|Éveil d’animal
+[[TABLE_ROW]]7|Mémoire collective
+[[TABLE_ROW]]7|Transfert planaire
+[[TABLE_ROW]]8|Contrôle du climat
+[[TABLE_ROW]]10|Souhait
+[[TABLE_END]]
                                  **Apprentissage des rituels**
                                  L’apprentissage d’un rituel n’est pas comptabilisé dans la limite des
                                  sorts de votre répertoire ou de toute autre capacité d’incantation
