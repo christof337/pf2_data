@@ -40,7 +40,7 @@ scripts/              → Pipeline Python (extraction, mapping, validation)
   batch_monster_mapper.py → Traitement en lot du Bestiaire complet
   linker.py           → Post-processing : ajout des ref= croisés (traits/sorts/capacités)
   merge_xml.py        → Fusion de fichiers XML par attribut id
-  utils.py            → Utilitaires partagés (clean_text basique)
+  utils.py            → Utilitaires partagés (clean_text, parse_table_markers, split_bullet_list)
   xml_validator.py    → Validation XSD
   slug_generator.py   → Génération d'IDs normalisés
   old/                → Anciens scripts (archivés, ne pas modifier)
@@ -85,12 +85,19 @@ tests/
 - Post-processing cross-liens : `linker.py` (traits, sorts, capacités, spellRefs).
 - Fusion XML : `merge_xml.py` (arbitrage par description, rapport de conflits).
 - **Refactoring Phase 2** (2026-04-01) : extraction de `utils.py`, nettoyage code mort, correction bug double-write batch, consolidation index loaders linker.
+- **Support tableaux PDF → XML → Obsidian** (2026-04-07) : `extract_pdf.py` injecte des marqueurs `[[TABLE_*]]`, `parse_table_markers()` dans `utils.py` les consomme, `spells_mapper.py` génère `<table>/<headerLine>/<line>/<cell>`, `spell_to_obsidian.xsl` les rend en tables Markdown. XSD `spell.xsd` mis à jour avec `tableType` et `rowType`.
+- **Option `--pages X-Y`** ajoutée à `extract_pdf.py` : permet d'extraire seulement un sous-ensemble de pages (évite les ~5 min de traitement du PDF entier). Les pages sont 1-indexées dans l'argument, 0-indexées en interne.
+- **Champ `<trigger>`** ajouté au XSD `spell.xsd` et au mapper (détection case-sensitive de `**Déclencheur` en début de ligne mécanique, distincte du mot "déclencheur" dans le texte narratif).
+- **Corrections batch 01** (2026-04-07) : ALARME (fausse réaction), BARRAGE DE FORCE (intensifié type `2e`→`+2`, override hardcodé dans le mapper), BULLE D'AIR (déclencheur non capturé), CHEMIN SÛR (artefact `**` en fin de description), TRANQUILISER (sauvegardes perdues car Cat-E callout coupé par `[[PAGE N]]`).
+- **Preview batch 01** : `obsidian_vault/preview/sorts_batch_01.md` contient 51 sorts (46 du batch + 5 débordant sur la page 324). CHANT ÉNIGMATIQUE affiche son tableau Markdown correctement.
 
 ### En cours
-- Génération des notes Obsidian pour les sorts (`obsidian_vault/Sorts/`).
+- Validation du preview batch 01 par l'utilisateur → bénédiction du golden `tests/fixtures/test_sorts_01_ok.xml`.
+- Champs manquants à ajouter au mapper/XSD : `<cost>` (Coût) et `<requirements>` (Conditions) — présents dans le LdJ (ex. RAPPEL À LA VIE pour Coût, ENFERMER L'ÂME pour Conditions). `Locus` absent du LdJ, à surveiller dans les autres livres.
 
 ### À faire
 - `spell_to_obsidian.xsl` : vérifier compatibilité XSLT 1.0 vs Saxon 3.0.
+- Valider et bénir les batches 02–10 progressivement.
 - Traitement par lot (Bestiaire complet, puis autres livres).
 - Ajout de `<source_id>` (livre + page) dans chaque entité XML.
 - Subset Équipement (XSD Item, parsing tableaux bulk/prix).
@@ -156,12 +163,24 @@ Le runner auto-découvre les goldens validés (`test_sorts_NN_ok.xml`) : un fich
 - **`spell_to_obsidian.xsl` est en XSLT 1.0** alors que le README annonce Saxon (XSLT 3.0). Fonctionne en dégradé, mais ne profite pas des fonctionnalités 3.0.
 - **`scripts/old/`** : à archiver ou supprimer quand les mappers courants sont stabilisés.
 - Les **IDs XML sont des `xs:ID`** : unicité garantie par le XSD, mais le slug doit être stable entre les runs (actuellement basé sur le nom, pas sur un identifiant canonique PF2e).
+- **Corrections d'erreurs PDF hardcodées dans le mapper** : BARRAGE DE FORCE a une entrée intensifiée erronée dans le PDF (`Intensifié 2e` au lieu de `Intensifié +2`). Le mapper corrige ça via un override post-parsing ciblant le nom du sort. C'est une stratégie à formaliser : les corrections PDF doivent être explicitement documentées dans le code (commentaire + nom du sort) plutôt que noyées dans la logique générale.
+- **Sorts en fin de page** : les sorts dont le statblock est coupé par un saut de page sont les plus sujets aux problèmes de parsing (sauvegardes tronquées, description incomplète). Pour le batch 01, les sorts à risque identifiés étaient : TRANQUILISER, ATTACHE PLANAIRE, AVATAR, BOURRASQUE, CATACLYSME, CHEMIN SÛR.
 
 ---
 
 ## Backlog — Known issues (à traiter plus tard, ne pas toucher sans instruction explicite)
 
 Ces problèmes sont **identifiés et documentés**, mais délibérément différés. Ne pas les corriger de manière proactive.
+
+### ⚠️ Purger les PDFs sources de l'historique git — PRIORITÉ SÉCURITÉ
+
+Le dépôt est **public**. Des PDFs sources (livres de règles sous licence) ont été commités par le passé et sont toujours accessibles dans l'historique git même s'ils sont gitignorés aujourd'hui. Il faut les supprimer de l'intégralité de l'historique via `git filter-repo` (ou BFG Repo Cleaner), puis force-pusher. Opération destructive et irréversible — à planifier soigneusement, avec un backup local beforehand, et en coordination avec tous les contributeurs éventuels.
+
+Commande de référence (à adapter) :
+```bash
+git filter-repo --path pdf_sources/ --invert-paths
+# puis : git push --force --all
+```
 
 ### "d'" dans les types de dégâts
 Dans les frappes des monstres, on voit 
@@ -220,9 +239,10 @@ Le site cible est fonctionnellement équivalent à [Archives of Nethys](https://
 
 ## erreurs à corriger asap
 
-### golden sorts - batch 1
+*Aucune correction urgente en attente au 2026-04-07 — les 5 bugs du batch 01 ont été résolus.*
 
-- Alarme est traité comme une réaction --> devrait ne pas avoir de symbole d'action
-- barrage de force a une entrée intensifiée **erronée dans le pdf**. je veux que le XML ne présente pas cette erreur. il faudrait donc faire un cas très particulier dans le mapper pour mettre intensifié +2 au lieu de intensifié 2e, uniquement pour ce sort. ceci s'intégre dans une réflexion plus globale que nous devons avoir sur comment traiter les erreurs des pdf.
-- bulle d'air n'a pas de déclencheur. je pense que déclencheur n'est pas catché par le mapper
-- chemin sûr a un problème d'italique
+### Champs mécaniques manquants (à implémenter prochainement)
+
+- **`<cost>` (Coût)** : certains sorts ont une entrée `**Coût**` distincte (ex. RAPPEL À LA VIE, rituels). Actuellement absorbé dans `<cast>` s'il est inline, silencieusement perdu s'il est sur une ligne séparée. Ajouter au XSD, mapper et XSL.
+- **`<requirements>` (Conditions)** : certains sorts ont une entrée `**Conditions**` distincte (ex. ENFERMER L'ÂME). Non capturé actuellement. Ajouter au XSD, mapper et XSL.
+- **`Locus`** : absent du LdJ. À surveiller dans les autres livres (sorts de focus des mystères, etc.).
