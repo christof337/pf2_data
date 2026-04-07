@@ -259,15 +259,23 @@ def parse_spell_block(content):
         m = re.search(pattern, content, re.DOTALL | re.IGNORECASE)
         if m: spell_data['savingThrows'][key] = clean_text(m.group(1))
 
-    # 8. Intensification
-    # Deux formes : "Intensifié (Xe)." et "Intensifié." (sans parenthèses = sans type explicite → type "auto")
-    h_pattern = r'(?:^|\n)\s*\**Intensifiés?\s*(?:\((.*?)\))?\.?\s*\**\s*(.*?)(?=(?:\n\s*\**Intensifié)|$)'
+    # 8. Intensification — formes avec type explicite : "(Xe)" ou "(+M)"
+    h_pattern = r'(?:^|\n)\s*\**Intensifiés?\s*\((.*?)\)\.?\s*\**\s*(.*?)(?=(?:\n\s*\**Intensifié)|$)'
     for m in re.finditer(h_pattern, content, re.DOTALL | re.IGNORECASE):
-        type_val = re.sub(r'[\*]', '', m.group(1)).strip() if m.group(1) else "auto"
+        type_val = re.sub(r'[\*]', '', m.group(1)).strip()
         spell_data['heightened'].append({
             "type": type_val,
             "text": clean_text(m.group(2))
         })
+    # Cas particulier : "Intensifié. Comme indiqué sous le trait convocation"
+    # → expansion en table fixe rang/niveau (règle du trait convocation, identique pour tous les sorts de convocation)
+    CONVOCATION_HEIGHTEN = [
+        ("2e", "Niveau 1."), ("3e", "Niveau 2."), ("4e", "Niveau 3."),
+        ("5e", "Niveau 5."), ("6e", "Niveau 7."), ("7e", "Niveau 9."),
+        ("8e", "Niveau 11."), ("9e", "Niveau 13."), ("10e", "Niveau 15."),
+    ]
+    if re.search(r'(?:^|\n)\s*\**Intensifiés?\.\s*\**\s*Comme indiqué sous le trait convocation', content, re.IGNORECASE):
+        spell_data['heightened'].extend({"type": t, "text": v} for t, v in CONVOCATION_HEIGHTEN)
     # Correction d'erreur PDF connue : BARRAGE DE FORCE a "Intensifié (2e)" au lieu de "(+2)"
     if spell_data.get('name') == 'BARRAGE DE FORCE':
         for h in spell_data['heightened']:
