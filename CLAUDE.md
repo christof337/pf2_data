@@ -61,84 +61,72 @@ Ne jamais modifier sans validation explicite :
 Lancer :
 ```bash
 uv run tests/test_runner.py
-````
+```
 
 Si un test échoue :
-
-* s’arrêter
-* signaler la régression
-* ne pas régénérer un golden master sans validation explicite de l’utilisateur
+- s’arrêter
+- signaler la régression
+- ne pas régénérer un golden master sans validation explicite de l’utilisateur
 
 ---
 
 ## Fichiers de pilotage à consulter selon le besoin
 
 ### `TODO.md`
-
 À consulter pour les tâches en cours et la priorité immédiate.
 Utilisation pertinente quand la demande concerne :
-
-* ce qu’on fait maintenant
-* le prochain ticket à traiter
-* l’ordre de traitement à court terme
+- ce qu’on fait maintenant
+- le prochain ticket à traiter
+- l’ordre de traitement à court terme
 
 ### `BACKLOG.md`
-
 À consulter pour la dette technique, les bugs connus, les idées différées et les questions ouvertes.
 Utilisation pertinente quand la demande concerne :
-
-* un problème déjà identifié mais non urgent
-* une discussion d’architecture
-* une décision à arbitrer plus tard
+- un problème déjà identifié mais non urgent
+- une discussion d’architecture
+- une décision à arbitrer plus tard
 
 ### `MODE_PARSING.md`
-
 À consulter pour tout ce qui touche à l’extraction PDF, aux tableaux, aux heuristiques de parsing, et aux cas limites de lecture.
 Utilisation pertinente quand la demande concerne :
-
-* tableaux PDF
-* découpe de pages
-* marqueurs d’extraction
-* faux positifs / faux négatifs de parsing
+- tableaux PDF
+- découpe de pages
+- marqueurs d’extraction
+- faux positifs / faux négatifs de parsing
 
 ### `MODE_MAPPING.md`
-
 À consulter si présent, pour les règles de transformation Markdown → XML et les conventions de mappers.
 Utilisation pertinente quand la demande concerne :
-
-* structure XML
-* mappers
-* règles de conversion
-* normalisation des entités
+- structure XML
+- mappers
+- règles de conversion
+- normalisation des entités
 
 ### `MODE_DEBUG.md`
-
 À consulter si présent, pour investiguer un échec de test, un écart de golden, ou une régression difficile.
 Utilisation pertinente quand la demande concerne :
-
-* diagnostic de bug
-* comparaison de sorties
-* stratégie de reproduction
+- diagnostic de bug
+- comparaison de sorties
+- stratégie de reproduction
 
 ---
 
 ## Règles de réponse attendues
 
-* Répondre de façon ciblée.
-* Proposer le minimum utile.
-* Ne pas reformuler tout le projet si la demande porte sur un point local.
-* Si une correction touche une zone sensible, le dire explicitement.
-* Si plusieurs approches existent, privilégier la plus simple compatible avec les contraintes du projet.
+- Répondre de façon ciblée.
+- Proposer le minimum utile.
+- Ne pas reformuler tout le projet si la demande porte sur un point local.
+- Si une correction touche une zone sensible, le dire explicitement.
+- Si plusieurs approches existent, privilégier la plus simple compatible avec les contraintes du projet.
 
 ---
 
 ## Raccourci mental
 
 Quand la demande arrive :
-
-* règle stable → `CLAUDE.md`
-* tâche en cours → `TODO.md`
-* dette / point ouvert → `BACKLOG.md`
-* parsing PDF / tableaux → `MODE_PARSING.md`
-* mapping XML → `MODE_MAPPING.md`
-* debug / régression → `MODE_DEBUG.md`
+- règle stable → `CLAUDE.md`
+- tâche en cours → `TODO.md`
+- dette / point ouvert → `BACKLOG.md`
+- parsing PDF / tableaux → `MODE_PARSING.md`
+- mapping XML → `MODE_MAPPING.md`
+- debug / régression → `MODE_DEBUG.md`

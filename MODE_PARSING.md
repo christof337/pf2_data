@@ -1,16 +1,17 @@
-# MODE_PARSING — PDF, tableaux, et extraction
+# MODE_PARSING — extraction PDF, tableaux et heuristiques
 
 ## Objectif
-Extraire proprement les tableaux et les blocs structurés depuis les PDFs.
+Extraire proprement les tableaux et les blocs structurés depuis les PDFs Pathfinder 2e VF.
 
 ## Entrée
 - PDF source
 - éventuellement une plage de pages avec `--pages X-Y`
 
-## Heuristiques actuelles
-- pdfplumber pour la détection géométrique
-- marqueurs `[[TABLE_*]]` injectés par l’extracteur
-- `parse_table_markers()` consomme ces marqueurs
+## Chaîne actuelle
+- `pdfplumber` pour la détection géométrique
+- `extract_pdf.py` injecte des marqueurs `[[TABLE_*]]`
+- `parse_table_markers()` dans `utils.py` consomme ces marqueurs
+- le mapper transforme ensuite les tables en XML
 
 ## Règles de traitement
 - exclure les tableaux décoratifs
@@ -18,11 +19,20 @@ Extraire proprement les tableaux et les blocs structurés depuis les PDFs.
 - exclure les tableaux trop courts
 - exclure les blocs en all caps s’ils ne sont pas de vrais tableaux
 - garder les tableaux utiles au traitement XML
+- préserver les informations mécaniques, pas la seule apparence visuelle
+
+## Cas sensibles
+- tableaux coupés par changement de page
+- faux positifs sur encadrés
+- confusion entre contenu narratif et tableau
+- lignes mécaniques comme `Déclencheur`, `Conditions`, `Coût`, `Conditions`
+- entrées intensifiées ou blocs SCSEEC qui ne doivent pas être absorbés à tort
 
 ## Sortie attendue
 - structure exploitable par le mapper
 - aucune perte des tableaux utiles
 - pas de pollution du texte narratif
+- marqueurs bien résolus avant le mapping XML
 
 ## Commandes utiles
 - extraction ciblée :
@@ -30,11 +40,7 @@ Extraire proprement les tableaux et les blocs structurés depuis les PDFs.
 - validation :
   `uv run tests/test_runner.py`
 
-## Pièges connus
-- tableaux coupés par changement de page
-- faux positifs sur encadrés
-- confusion entre contenu narratif et tableau
-
 ## Règle de travail
 - ne travailler que sur le sous-ensemble nécessaire
 - éviter toute exploration hors du domaine tables/parsing
+- si un tableau est douteux, le traiter explicitement plutôt que le laisser passer par accident
