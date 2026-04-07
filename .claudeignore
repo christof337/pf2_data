@@ -1,0 +1,54 @@
+# =========================
+# 🔴 GROS VOLUMES INUTILES
+# =========================
+
+output/
+pdf_sources/
+
+# Obsidian preview = pur artefact
+obsidian_vault/preview/
+
+# =========================
+# 🟠 DONNÉES MASSIVES (CIBLÉES)
+# =========================
+
+# On ignore tout par défaut…
+data/**
+
+# …mais on garde les agrégats utiles
+!data/spells/all_spells.xml
+!data/traits/traits.xml
+!data/abilities/abilities.xml
+
+# Tu pourras ouvrir un monstre précis à la main si besoin
+
+# =========================
+# 🟠 OBSIDIAN (PARTIEL)
+# =========================
+
+# Old = bruit
+obsidian_vault/**/old/
+
+# fichiers système / temporaires
+obsidian_vault/*.base
+
+# =========================
+# 🟡 SCRIPTS / HISTORIQUE
+# =========================
+
+scripts/__pycache__/
+*.pyc
+
+# vieux scripts
+scripts/old/
+
+# =========================
+# 🟡 LOGS / DEBUG
+# =========================
+
+*.log
+*.tmp
+
+# =========================
+# 🟢 GARDE TOUT LE RESTE
+# =========================
