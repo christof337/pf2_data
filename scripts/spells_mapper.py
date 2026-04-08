@@ -214,7 +214,7 @@ def parse_spell_block(content):
     mechanics = {
         'range': mech_prefix + r'Portée\**[\s:]*(.*?)(?=\s*(?:;|\n|$))',
         'targets': mech_prefix + r'[Cc]ibles?\**[\s:]*(.*?)(?=\s*(?:;|\n\s*\*\*|\n\s*[A-ZÀÂÄÆÇÉÈÊËÎÏÔÖŒÙÛÜŸ]|$))',
-        'defense': mech_prefix + r'Défense\**[\s:]*(.*?)(?=\*{0,2}\s*(?:;|\n|$))',
+        'defense': mech_prefix + r'Défense\**[\s:]*(.*?)(?=\s*(?:;|\n\s*\*\*|\n\s*[A-ZÀÂÄÆÇÉÈÊËÎÏÔÖŒÙÛÜŸ]|$))',
         'duration': mech_prefix + r'Durée\*+[\s:]*(.*?)(?=\s*(?:;|\n|$))',  # \*+ évite de matcher "Durée maximale" dans les textes de sauvegarde
         'area': mech_prefix + r'Zone[\s:]*\**[\s:]*(.*?)(?=\s*(?:;|\n\s*[A-ZÀÂÄÆÇÉÈÊËÎÏÔÖŒÙÛÜŸ]|$|\*\*))',
         'cast': mech_prefix + r'Incantation\**[\s:]*(.*?)(?=\s*(?:;|\n|$))',
@@ -377,6 +377,7 @@ def generate_spells_xml(spells_data, output_path):
         if data['type']: 
             s_el.set('type',"spell" if data['type']=="SORT" else "cantrip" if data['type']=="TOUR DE MAGIE" else "focus" if data['type']=="FOCALISÉ" else "unknown")
         etree.SubElement(s_el, "rank").text = data['rank']
+        # Un sort avec <cast> (Incantation : durée) n'a pas de symbole d'action (mutuellement exclusifs)
         if data['actions']: etree.SubElement(s_el, "actions").text = data['actions']
         
         if data.get('traits'):

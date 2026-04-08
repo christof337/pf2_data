@@ -18,6 +18,9 @@
 - trait de rareté à faire apparaître avant le reste, puis ordre alphabétique
 - stratégie propre pour représenter certaines erreurs PDF sans casser la logique générale
 
+### Sorts spécifiques (batch 03)
+- **FORME DE DRAGON** : table "LES DRAGONS DU LIVRE DES MONSTRES" absente du XML — tableau complexe multi-colonnes du PDF non extrait par le pipeline actuel ; nécessite investigation de `extract_pdf.py` + vérification des marqueurs `[[TABLE_*]]` sur les pages concernées
+
 ### Obsidian / XSLT
 - amélioration de la mise en forme des descriptions
 - compatibilité XSLT 1.0 vs Saxon à vérifier plus tard

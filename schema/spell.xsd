@@ -19,6 +19,9 @@
           assert 1 — type="spell"   → count(traditions/tradition) >= 1  (tradition obligatoire)
           assert 2 — type="focus"   → not(traditions/tradition)          (aucune tradition)
           assert 3 — type="cantrip" → pas de contrainte sur les traditions
+          assert 4 — cast présent   → not(actions)
+                     Un sort avec une durée d'incantation (Incantation : 1 min, 10 min…)
+                     n'a pas de symbole d'action ; les deux champs sont mutuellement exclusifs.
       </xs:documentation>
     </xs:annotation>
     <xs:sequence>
@@ -108,6 +111,15 @@
       </xs:simpleType>
     </xs:attribute>
     <xs:attribute name="id" type="xs:ID"/>
+    <!-- assert 1 : type=spell → au moins une tradition -->
+    <xs:assert test="not(@type = 'spell') or count(traditions/tradition) >= 1"
+               xpathDefaultNamespace="##targetNamespace"/>
+    <!-- assert 2 : type=focus → aucune tradition -->
+    <xs:assert test="not(@type = 'focus') or not(traditions/tradition)"
+               xpathDefaultNamespace="##targetNamespace"/>
+    <!-- assert 4 : cast présent → pas d'actions (Incantation avec durée = pas de symbole d'action) -->
+    <xs:assert test="not(cast) or not(actions)"
+               xpathDefaultNamespace="##targetNamespace"/>
   </xs:complexType>
   
   <xs:complexType name="richTextType" mixed="true">

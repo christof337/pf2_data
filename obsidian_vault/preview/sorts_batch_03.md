@@ -552,9 +552,9 @@ Un puissant globe de lumière brûlante explose dans la zone, infligeant 8d10 d�
 ==CONCENTRATION== ==MANIPULATION== ==OMBRE==
 **Traditions** divine, occulte
 **Portée** variable ; **Zone** variable
-**Défense** jet de Réflexes basique ou de Volonté basique (au choix
+**Défense** jet de Réflexes basique ou de Volonté basique (au choix de la cible)
 ---- 
-de la cible) Vous façonnez la substance du monde des ténèbres pour former une explosion. Choisissez le type de dégâts entre acide, contondant, froid, électricité, feu, force, perforant, tranchant, son ou d’esprit, et choisissez entre un cône de 9 m, une explosion de 4,5 m dans un rayon de 36 m ou une ligne de 15 m. L’explosion inflige 6d8 dégâts du type que vous avez choisi à chaque créature dans la zone. 
+Vous façonnez la substance du monde des ténèbres pour former une explosion. Choisissez le type de dégâts entre acide, contondant, froid, électricité, feu, force, perforant, tranchant, son ou d’esprit, et choisissez entre un cône de 9 m, une explosion de 4,5 m dans un rayon de 36 m ou une ligne de 15 m. L’explosion inflige 6d8 dégâts du type que vous avez choisi à chaque créature dans la zone. 
 
 ----
 **Intensifié (+1).** Les dégâts augmentent de 1d8.
