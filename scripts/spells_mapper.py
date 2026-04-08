@@ -538,6 +538,7 @@ def parse_spell_block(content):
         'duration': mech_prefix + r'Durée\*+[\s:]*(.*?)(?=\s*(?:;|\n|$))',  # \*+ évite de matcher "Durée maximale" dans les textes de sauvegarde
         'area': mech_prefix + r'Zone[\s:]*\**[\s:]*(.*?)(?=\s*(?:;|\n\s*[A-ZÀÂÄÆÇÉÈÊËÎÏÔÖŒÙÛÜŸ]|$|\*\*))',
         'cast': mech_prefix + r'Incantation\**[\s:]*(.*?)(?=\s*(?:;|\n|$))',
+        'cost': mech_prefix + r'Coût\**[\s:]*(.*?)(?=\s*(?:;|\n\s*\*\*|\n\s*[A-ZÀÂÄÆÇÉÈÊËÎÏÔÖŒÙÛÜŸ]|$))',
         'trigger': mech_prefix + r'Déclencheur[.*]?\**[\s:]*(.*?)(?=\s*(?:;|\n\s*\*\*|\n\s*[A-ZÀÂÄÆÇÉÈÊËÎÏÔÖŒÙÛÜŸ]|$))',
     }
     
@@ -721,7 +722,7 @@ def generate_spells_xml(spells_data, output_path):
             for tr in data['traditions']:
                 etree.SubElement(tr_el, "tradition").text = tr
 
-        for field in ['cast', 'trigger', 'range', 'area', 'targets', 'defense', 'duration']:
+        for field in ['cast', 'cost', 'trigger', 'range', 'area', 'targets', 'defense', 'duration']:
             if data.get(field): etree.SubElement(s_el, field).text = data[field]
         
         # description est requise par le XSD — on la crée même si vide
