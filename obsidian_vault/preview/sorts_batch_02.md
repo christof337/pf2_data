@@ -282,7 +282,7 @@ Vous contournez l’esprit rationnel de vos cibles, leur instillant une convicti
 **Portée** 9 m
 **Durée** maintenu jusqu’à 1 min
 ---- 
-Vous convoquez une créature qui a le trait animal et dont le niveau est de −1 afin qu’elle se batte pour vous. **Intensifié.** Comme indiqué sous le trait convocation (p. 324) 
+Vous convoquez une créature qui a le trait animal et dont le niveau est de −1 afin qu’elle se batte pour vous. 
 
 ----
 **Intensifié (2e).** Niveau 1.
@@ -315,7 +315,7 @@ Vous convoquez une créature qui a le trait animal et dont le niveau est de −1
 **Portée** 9 m
 **Durée** maintenu jusqu’à 1 min
 ---- 
-Vous convoquez une créature qui a le trait céleste et dont le niveau est de 5 ou moins afin qu’elle se batte pour vous. Dans certains cas, le MJ peut décider que votre déité restreint les types de célestes que vous pouvez convoquer. Par exemple, Calistria ne permet généralement pas à ses fidèles de convoquer des éons. **Intensifié.** Comme indiqué sous le trait convocation (p. 324) 
+Vous convoquez une créature qui a le trait céleste et dont le niveau est de 5 ou moins afin qu’elle se batte pour vous. Dans certains cas, le MJ peut décider que votre déité restreint les types de célestes que vous pouvez convoquer. Par exemple, Calistria ne permet généralement pas à ses fidèles de convoquer des éons. 
 
 ----
 **Intensifié (2e).** Niveau 1.
@@ -348,7 +348,7 @@ Vous convoquez une créature qui a le trait céleste et dont le niveau est de 5 
 **Portée** 9 m
 **Durée** maintenu jusqu’à 1 min
 ---- 
-Vous convoquez une créature dotée du trait créature artificielle et dont le niveau est de −1 afin qu’elle se batte pour vous. **Intensifié.** Comme indiqué sous le trait convocation (p. 324) 
+Vous convoquez une créature dotée du trait créature artificielle et dont le niveau est de −1 afin qu’elle se batte pour vous. 
 
 ----
 **Intensifié (2e).** Niveau 1.
@@ -381,7 +381,7 @@ Vous convoquez une créature dotée du trait créature artificielle et dont le n
 **Portée** 9 m
 **Durée** maintenu jusqu’à 1 min
 ---- 
-Vous convoquez une créature dotée du trait dragon et dont le niveau est de 5 ou moins afin qu’elle se batte pour vous. Si le dragon a un trait de tradition magique (arcanique, divine, occulte ou primordiale), vous pouvez le convoquer uniquement si vous utilisez cette tradition pour lancer *convocation de dragon*. **Intensifié.** Comme indiqué sous le trait convocation (p. 324) 
+Vous convoquez une créature dotée du trait dragon et dont le niveau est de 5 ou moins afin qu’elle se batte pour vous. Si le dragon a un trait de tradition magique (arcanique, divine, occulte ou primordiale), vous pouvez le convoquer uniquement si vous utilisez cette tradition pour lancer *convocation de dragon*. 
 
 ----
 **Intensifié (2e).** Niveau 1.
@@ -414,7 +414,7 @@ Vous convoquez une créature dotée du trait dragon et dont le niveau est de 5 o
 **Portée** 9 m
 **Durée** maintenu jusqu’à 1 min
 ---- 
-Vous convoquez une créature qui a le trait fée et dont le niveau est de −1 afin qu’elle se batte pour vous. **Intensifié.** Comme indiqué sous le trait convocation (p. 324) 
+Vous convoquez une créature qui a le trait fée et dont le niveau est de −1 afin qu’elle se batte pour vous. 
 
 ----
 **Intensifié (2e).** Niveau 1.
@@ -447,7 +447,7 @@ Vous convoquez une créature qui a le trait fée et dont le niveau est de −1 a
 **Portée** 9 m
 **Durée** maintenu jusqu’à 1 min
 ---- 
-Vous convoquez une créature qui a le trait fiélon et dont le niveau est de 5 ou moins afin qu’elle se batte pour vous. Dans certains cas, le MJ peut décider que votre déité restreint les types de fiélons que vous pouvez convoquer. Par exemple, les archidiables permettent généralement à leurs fidèles de convoquer des diables mais pas d’autres fiélons. **Intensifié.** Comme indiqué sous le trait convocation (p. 324) 
+Vous convoquez une créature qui a le trait fiélon et dont le niveau est de 5 ou moins afin qu’elle se batte pour vous. Dans certains cas, le MJ peut décider que votre déité restreint les types de fiélons que vous pouvez convoquer. Par exemple, les archidiables permettent généralement à leurs fidèles de convoquer des diables mais pas d’autres fiélons. 
 
 ----
 **Intensifié (2e).** Niveau 1.
@@ -480,7 +480,7 @@ Vous convoquez une créature qui a le trait fiélon et dont le niveau est de 5 o
 **Portée** 9 m
 **Durée** maintenu jusqu’à 1 min
 ---- 
-Vous convoquez une créature qui a le trait géant et dont le niveau est de 5 ou moins afin qu’elle se batte pour vous. **Intensifié.** Comme indiqué sous le trait convocation (p. 324) 
+Vous convoquez une créature qui a le trait géant et dont le niveau est de 5 ou moins afin qu’elle se batte pour vous. 
 
 ----
 **Intensifié (2e).** Niveau 1.
@@ -513,7 +513,7 @@ Vous convoquez une créature qui a le trait géant et dont le niveau est de 5 ou
 **Portée** 9 m
 **Durée** maintenu jusqu’à 1 min
 ---- 
-Vous convoquez une créature qui a le trait élémentaire et dont le niveau est de 1 ou moins afin qu’elle se batte pour vous. **Intensifié.** Comme indiqué sous le trait convocation (p. 324) 
+Vous convoquez une créature qui a le trait élémentaire et dont le niveau est de 1 ou moins afin qu’elle se batte pour vous. 
 
 ----
 **Intensifié (2e).** Niveau 1.
@@ -546,7 +546,7 @@ Vous convoquez une créature qui a le trait élémentaire et dont le niveau est 
 **Portée** 9 m
 **Durée** maintenu jusqu’à 1 min
 ---- 
-Vous convoquez une créature qui a le trait mort-vivant et dont le niveau est de −1 afin qu’elle se batte pour vous. **Intensifié.** Comme indiqué sous le trait convocation (p. 324) 
+Vous convoquez une créature qui a le trait mort-vivant et dont le niveau est de −1 afin qu’elle se batte pour vous. 
 
 ----
 **Intensifié (2e).** Niveau 1.
@@ -579,7 +579,7 @@ Vous convoquez une créature qui a le trait mort-vivant et dont le niveau est de
 **Portée** 9 m
 **Durée** maintenu jusqu’à 1 min
 ---- 
-Vous convoquez une créature dotée du trait aberration et dont le niveau est de 5 ou moins afin qu’elle se batte pour vous. **Intensifié.** Comme indiqué sous le trait convocation (p. 324) 
+Vous convoquez une créature dotée du trait aberration et dont le niveau est de 5 ou moins afin qu’elle se batte pour vous. 
 
 ----
 **Intensifié (2e).** Niveau 1.
@@ -612,7 +612,7 @@ Vous convoquez une créature dotée du trait aberration et dont le niveau est de
 **Portée** 9 m
 **Durée** maintenu jusqu’à 1 min
 ---- 
-Vous convoquez une créature dotée du trait plante ou champignon et dont le niveau est de −1 afin qu’elle se batte pour vous. **Intensifié.** Comme indiqué sous le trait convocation (p. 324) 
+Vous convoquez une créature dotée du trait plante ou champignon et dont le niveau est de −1 afin qu’elle se batte pour vous. 
 
 ----
 **Intensifié (2e).** Niveau 1.
@@ -645,7 +645,7 @@ Vous convoquez une créature dotée du trait plante ou champignon et dont le niv
 **Portée** 9 m
 **Durée** maintenu jusqu’à 1 min
 ---- 
-Vous convoquez une créature dotée du trait veilleur et dont le niveau est de 5 ou moins afin qu’elle se batte pour vous. Dans certains cas, le MJ peut décider que votre déité restreint les types de veilleurs que vous pouvez convoquer. Par exemple, Urgathoa ne permet généralement pas à ses fidèles de convoquer des psychopompes. **Intensifié.** Comme indiqué sous le trait convocation (p. 324) 
+Vous convoquez une créature dotée du trait veilleur et dont le niveau est de 5 ou moins afin qu’elle se batte pour vous. Dans certains cas, le MJ peut décider que votre déité restreint les types de veilleurs que vous pouvez convoquer. Par exemple, Urgathoa ne permet généralement pas à ses fidèles de convoquer des psychopompes. 
 
 ----
 **Intensifié (2e).** Niveau 1.
