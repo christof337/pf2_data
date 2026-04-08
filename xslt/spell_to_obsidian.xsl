@@ -72,6 +72,14 @@
       <xsl:text>**Incantation** </xsl:text><xsl:value-of select="cast"/>
       <xsl:text>&#10;</xsl:text>
     </xsl:if>
+    <xsl:if test="cost">
+      <xsl:text>**Coût** </xsl:text><xsl:value-of select="cost"/>
+      <xsl:text>&#10;</xsl:text>
+    </xsl:if>
+    <xsl:if test="condition">
+      <xsl:text>**Conditions** </xsl:text><xsl:value-of select="condition"/>
+      <xsl:text>&#10;</xsl:text>
+    </xsl:if>
     <xsl:if test="trigger">
       <xsl:text>**Déclencheur** </xsl:text><xsl:value-of select="trigger"/>
       <xsl:text>&#10;</xsl:text>
