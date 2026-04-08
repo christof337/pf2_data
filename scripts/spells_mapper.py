@@ -276,6 +276,8 @@ def parse_spell_block(content):
     ]
     if re.search(r'(?:^|\n)\s*\**Intensifiés?\.\s*\**\s*Comme indiqué sous le trait convocation', content, re.IGNORECASE):
         spell_data['heightened'].extend({"type": t, "text": v} for t, v in CONVOCATION_HEIGHTEN)
+        # Supprimer la ligne de la description (elle est remplacée par l'expansion ci-dessus)
+        content = re.sub(r'\n\s*\**Intensifiés?\.\s*\**\s*Comme indiqué sous le trait convocation[^\n]*', '', content, flags=re.IGNORECASE)
     # Correction d'erreur PDF connue : BARRAGE DE FORCE a "Intensifié (2e)" au lieu de "(+2)"
     if spell_data.get('name') == 'BARRAGE DE FORCE':
         for h in spell_data['heightened']:
