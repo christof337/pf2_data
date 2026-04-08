@@ -137,6 +137,31 @@ def is_battle_form(traits, raw_description):
     keyword_count = sum(1 for k in keywords if k in raw_description)
     return keyword_count >= 2
 
+def _split_semicolons_outside_parens(text):
+    """Découpe text sur les ';' situés EN DEHORS de parenthèses.
+
+    Permet de gérer "(portée 36 m ; polyvalent X)" sans couper la frappe
+    tout en séparant correctement les segments de type frappe / note.
+    """
+    segments = []
+    depth = 0
+    current = []
+    for ch in text:
+        if ch == '(':
+            depth += 1
+            current.append(ch)
+        elif ch == ')':
+            depth -= 1
+            current.append(ch)
+        elif ch == ';' and depth == 0:
+            segments.append(''.join(current))
+            current = []
+        else:
+            current.append(ch)
+    if current:
+        segments.append(''.join(current))
+    return segments
+
 def _normalize_bullet(text):
     """Normalise un bullet PDF : supprime les ** markdown, écrase espaces/newlines internes."""
     text = re.sub(r'\*\*', '', text)          # retirer le gras markdown
@@ -185,31 +210,60 @@ def parse_battle_form(raw_text):
         if not b or re.match(r'\*\*\S', raw_bullet.strip()):
             continue  # bullet de forme, pas de stats
         gs = data['global_stats']
+        recognized = False
 
         ca_m = re.search(r'CA\s*=\s*(\d+\s*\+\s*votre niveau)', b, re.IGNORECASE)
         if ca_m:
             gs['ac'] = ca_m.group(1).strip()
+            recognized = True
 
         pv_m = re.search(r'(\d+)\s*(?:PV|points? de vie) temporaires', b, re.IGNORECASE)
         if pv_m:
             gs['tempHp'] = pv_m.group(1)
+            recognized = True
 
         atk_m = re.search(r'modificateur d.attaque (?:est de |de |est )?([+\-]\d+)', b, re.IGNORECASE)
         if atk_m:
             gs['attackBonus'] = atk_m.group(1)
+            recognized = True
 
         dmg_m = re.search(r'bonus aux dégâts de ([+\-]\d+)', b, re.IGNORECASE)
         if dmg_m:
             gs['damageBonus'] = dmg_m.group(1)
+            recognized = True
 
         # Athlétisme ou autre compétence (Acrobaties, etc.)
         skill_m = re.search(r'Modificateur d.([A-Za-zà-ÿ]+) de ([+\-]\d+)', b, re.IGNORECASE)
         if skill_m:
             gs['athletics'] = skill_m.group(2)   # on stocke le bonus numérique
+            recognized = True
 
         # Sens (Vision nocturne, odorat, etc.) — bullet commençant par Vision/odorat
         if re.match(r'Vision|odorat|perception|sens', b, re.IGNORECASE):
             gs['senses'] = re.sub(r'\.$', '', b).strip()
+            recognized = True
+
+        # Vitesse globale (ex: FORME DE DRAGON "Vitesse 12 m, vol 30 m…")
+        if re.match(r'Vitesse\b', b, re.IGNORECASE):
+            gs['speed'] = re.sub(r'\.$', '', b).strip()
+            recognized = True
+
+        # Frappes globales — cas particulier FORME DE DRAGON :
+        # bullet "Les attaques au corps à corps à mains nues suivantes qui sont les seules…"
+        if re.match(r'Les\s+attaques\s+au\s+corps\s+à\s+corps\s+à\s+mains\s+nues\s+suivantes', b, re.IGNORECASE):
+            recognized = True
+            first_m = re.search(r'Corps à corps|À distance|Distance\b', b, re.IGNORECASE)
+            if first_m:
+                for seg in _split_semicolons_outside_parens(b[first_m.start():]):
+                    s = seg.strip()
+                    if re.match(r'Corps à corps|À distance|Distance\b', s, re.IGNORECASE):
+                        strike = _parse_strike_normalized(s)
+                        if strike:
+                            gs.setdefault('strikes', []).append(strike)
+
+        # Bullets non reconnus → note (Faiblesse, Résistance, Souffle, etc.)
+        if not recognized:
+            gs.setdefault('notes', []).append(re.sub(r'\.$', '', b).strip())
 
     # ── Parser les bullets de formes ─────────────────────────────────────────
     # Un bullet de forme commence par un nom propre suivi de "Vitesse X m"
@@ -235,7 +289,7 @@ def parse_battle_form(raw_text):
         if not name_speed_m:
             continue
 
-        form_entry = {'name': '', 'speed': '', 'strikes': []}
+        form_entry = {'name': '', 'speed': '', 'strikes': [], 'notes': []}
 
         # Nom : tout avant le premier marqueur de vitesse
         form_entry['name'] = clean_text(name_speed_m.group(1))
@@ -248,13 +302,21 @@ def parse_battle_form(raw_text):
         if speed_m:
             form_entry['speed'] = clean_text(speed_m.group(0))
 
-        # Frappes : découpe sur "; Corps à corps", "; À distance" ou "; Distance"
+        # Segments : découpe sur les ";" hors parenthèses — frappes vs notes
         after_speed = b[speed_m.end() if speed_m else name_speed_m.end():]
-        segments = re.split(r';\s*(?=Corps à corps|À distance|Distance\b)', after_speed, flags=re.IGNORECASE)
-        for seg in segments:
-            strike = _parse_strike_normalized(seg.strip())
-            if strike:
-                form_entry['strikes'].append(strike)
+        for seg in _split_semicolons_outside_parens(after_speed):
+            s = seg.strip()
+            if not s:
+                continue
+            if re.match(r'Corps à corps|À distance|Distance\b', s, re.IGNORECASE):
+                strike = _parse_strike_normalized(s)
+                if strike:
+                    form_entry['strikes'].append(strike)
+            else:
+                # Segment non-frappe : commentaire/capacité de la forme
+                note = clean_text(s)
+                if note:
+                    form_entry['notes'].append(note)
 
         if form_entry['name']:
             data['forms'].append(form_entry)
@@ -316,63 +378,74 @@ def _parse_strike_normalized(segment):
 
     return {'type': strike_type, 'name': name, 'traits': traits, 'damages': damages} if name else None
 
+def _emit_strike(parent_node, strike):
+    """Émet un nœud <strike> (baseStrikeType) dans parent_node."""
+    if not strike.get('name'):
+        return
+    strike_node = etree.SubElement(parent_node, "strike")
+    if strike.get('type'):
+        strike_node.set('type', strike['type'])
+    etree.SubElement(strike_node, "name").text = strike['name']
+    if strike.get('traits'):
+        traits_node = etree.SubElement(strike_node, "traits")
+        for trait in strike['traits']:
+            etree.SubElement(traits_node, "trait").text = trait
+    if strike.get('damages'):
+        dmg_node = etree.SubElement(strike_node, "damages")
+        for dmg in strike['damages']:
+            d_elem = etree.SubElement(dmg_node, "damage")
+            etree.SubElement(d_elem, "amount").text = dmg['amount']
+            etree.SubElement(d_elem, "damageType").text = dmg['type']
+
 def emit_battle_form(desc_node, bf_data):
     """Émet un nœud <battleForm> dans la description.
 
     Ajoute le battleForm comme enfant du nœud description (mixed content).
     Les données sont dans bf_data dictionnaire avec 'global_stats' et 'forms'.
+    Émet le battleForm même si forms est vide (ex: FORME DE NUISIBLE).
     """
-    if not bf_data.get('forms'):
+    gs = bf_data.get('global_stats', {})
+    forms = bf_data.get('forms', [])
+
+    # N'émettre que si on a au moins quelque chose à dire
+    if not gs and not forms:
         return
 
     bf_node = etree.SubElement(desc_node, "battleForm")
 
     # Nœud globalStats
-    if bf_data.get('global_stats'):
+    if gs:
         gs_node = etree.SubElement(bf_node, "globalStats")
-        stats = bf_data['global_stats']
-        if stats.get('ac'):
-            etree.SubElement(gs_node, "ac").text = stats['ac']
-        if stats.get('tempHp'):
-            etree.SubElement(gs_node, "tempHp").text = stats['tempHp']
-        if stats.get('attackBonus'):
-            etree.SubElement(gs_node, "attackBonus").text = stats['attackBonus']
-        if stats.get('damageBonus'):
-            etree.SubElement(gs_node, "damageBonus").text = stats['damageBonus']
-        if stats.get('athletics'):
-            etree.SubElement(gs_node, "athletics").text = stats['athletics']
-        if stats.get('senses'):
-            etree.SubElement(gs_node, "senses").text = stats['senses']
+        if gs.get('ac'):
+            etree.SubElement(gs_node, "ac").text = gs['ac']
+        if gs.get('tempHp'):
+            etree.SubElement(gs_node, "tempHp").text = gs['tempHp']
+        if gs.get('attackBonus'):
+            etree.SubElement(gs_node, "attackBonus").text = gs['attackBonus']
+        if gs.get('damageBonus'):
+            etree.SubElement(gs_node, "damageBonus").text = gs['damageBonus']
+        if gs.get('athletics'):
+            etree.SubElement(gs_node, "athletics").text = gs['athletics']
+        if gs.get('senses'):
+            etree.SubElement(gs_node, "senses").text = gs['senses']
+        if gs.get('speed'):
+            etree.SubElement(gs_node, "speed").text = gs['speed']
+        for strike in gs.get('strikes', []):
+            _emit_strike(gs_node, strike)
+        for note_text in gs.get('notes', []):
+            etree.SubElement(gs_node, "note").text = note_text
 
     # Nœuds formEntry
-    for form in bf_data.get('forms', []):
+    for form in forms:
         fe_node = etree.SubElement(bf_node, "formEntry")
         if form.get('name'):
             etree.SubElement(fe_node, "name").text = form['name']
         if form.get('speed'):
             etree.SubElement(fe_node, "speed").text = form['speed']
-
-        # Frappes : utiliser baseStrikeType
         for strike in form.get('strikes', []):
-            if not strike.get('name'):
-                continue
-            strike_node = etree.SubElement(fe_node, "strike")
-            if strike.get('type'):
-                strike_node.set('type', strike['type'])
-
-            etree.SubElement(strike_node, "name").text = strike['name']
-
-            if strike.get('traits'):
-                traits_node = etree.SubElement(strike_node, "traits")
-                for trait in strike['traits']:
-                    etree.SubElement(traits_node, "trait").text = trait
-
-            if strike.get('damages'):
-                dmg_node = etree.SubElement(strike_node, "damages")
-                for dmg in strike['damages']:
-                    d_elem = etree.SubElement(dmg_node, "damage")
-                    etree.SubElement(d_elem, "amount").text = dmg['amount']
-                    etree.SubElement(d_elem, "damageType").text = dmg['type']
+            _emit_strike(fe_node, strike)
+        for note_text in form.get('notes', []):
+            etree.SubElement(fe_node, "note").text = note_text
 
 def add_rich_text(parent, text_content, tag_name=None):
     """Génère un nœud XML en convertissant les _mot_ en balises <spellRef>. Retourne le nœud créé."""

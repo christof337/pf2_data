@@ -203,38 +203,104 @@
         <xsl:when test="globalStats/senses"><xsl:value-of select="globalStats/senses"/></xsl:when>
         <xsl:otherwise>—</xsl:otherwise>
       </xsl:choose>
-      <xsl:text> |&#10;&#10;</xsl:text>
-    </xsl:if>
-    <!-- Tableau des formes -->
-    <xsl:text>| Forme | Vitesse | Frappe | Traits | Dégâts |&#10;</xsl:text>
-    <xsl:text>|---|---|---|---|---|&#10;</xsl:text>
-    <xsl:for-each select="formEntry">
-      <xsl:for-each select="strike">
-        <xsl:text>| </xsl:text>
-        <xsl:if test="position() = 1"><xsl:value-of select="../name"/></xsl:if>
-        <xsl:text> | </xsl:text>
-        <xsl:if test="position() = 1"><xsl:value-of select="../speed"/></xsl:if>
-        <xsl:text> | </xsl:text>
-        <xsl:choose>
-          <xsl:when test="@type='melee'">**Corps à corps** </xsl:when>
-          <xsl:when test="@type='ranged'">**À distance** </xsl:when>
-        </xsl:choose>
-        <xsl:value-of select="name"/>
-        <xsl:text> | </xsl:text>
-        <xsl:for-each select="traits/trait">
-          <xsl:value-of select="."/>
-          <xsl:if test="position() != last()">, </xsl:if>
-        </xsl:for-each>
-        <xsl:text> | </xsl:text>
-        <xsl:for-each select="damages/damage">
-          <xsl:value-of select="amount"/>
-          <xsl:text> </xsl:text>
-          <xsl:value-of select="damageType"/>
-          <xsl:if test="position() != last()"> plus </xsl:if>
-        </xsl:for-each>
-        <xsl:text> |&#10;</xsl:text>
+      <xsl:text> |&#10;</xsl:text>
+      <!-- Vitesse globale (ex: FORME DE DRAGON) -->
+      <xsl:if test="globalStats/speed">
+        <xsl:text>**Vitesse** </xsl:text><xsl:value-of select="globalStats/speed"/><xsl:text>&#10;</xsl:text>
+      </xsl:if>
+      <!-- Notes globales (Faiblesse, Résistance, Souffle, etc.) -->
+      <xsl:for-each select="globalStats/note">
+        <xsl:text>- </xsl:text><xsl:value-of select="."/><xsl:text>&#10;</xsl:text>
       </xsl:for-each>
-    </xsl:for-each>
+      <!-- Frappes globales (ex: FORME DE DRAGON) -->
+      <xsl:if test="globalStats/strike">
+        <xsl:text>&#10;| Frappe | Traits | Dégâts |&#10;</xsl:text>
+        <xsl:text>|---|---|---|&#10;</xsl:text>
+        <xsl:for-each select="globalStats/strike">
+          <xsl:text>| </xsl:text>
+          <xsl:choose>
+            <xsl:when test="@type='melee'">**Corps à corps** </xsl:when>
+            <xsl:when test="@type='ranged'">**À distance** </xsl:when>
+          </xsl:choose>
+          <xsl:value-of select="name"/>
+          <xsl:text> | </xsl:text>
+          <xsl:for-each select="traits/trait">
+            <xsl:value-of select="."/>
+            <xsl:if test="position() != last()">, </xsl:if>
+          </xsl:for-each>
+          <xsl:text> | </xsl:text>
+          <xsl:for-each select="damages/damage">
+            <xsl:value-of select="amount"/><xsl:text> </xsl:text>
+            <xsl:value-of select="damageType"/>
+            <xsl:if test="position() != last()"> plus </xsl:if>
+          </xsl:for-each>
+          <xsl:text> |&#10;</xsl:text>
+        </xsl:for-each>
+      </xsl:if>
+      <xsl:text>&#10;</xsl:text>
+    </xsl:if>
+    <!-- Tableau des formes (conditionnel) -->
+    <xsl:if test="formEntry">
+      <xsl:text>| Forme | Vitesse | Frappe | Traits | Dégâts |</xsl:text>
+      <xsl:if test="formEntry/note"><xsl:text> Note |</xsl:text></xsl:if>
+      <xsl:text>&#10;|---|---|---|---|---|</xsl:text>
+      <xsl:if test="formEntry/note"><xsl:text>---|</xsl:text></xsl:if>
+      <xsl:text>&#10;</xsl:text>
+      <xsl:for-each select="formEntry">
+        <!-- Forme sans frappe : une ligne avec — dans les colonnes de frappe -->
+        <xsl:if test="not(strike)">
+          <xsl:text>| **</xsl:text><xsl:value-of select="name"/><xsl:text>** | </xsl:text>
+          <xsl:value-of select="speed"/>
+          <xsl:text> | — | — | — |</xsl:text>
+          <xsl:if test="../formEntry/note">
+            <xsl:text> </xsl:text>
+            <xsl:for-each select="note">
+              <xsl:value-of select="."/>
+              <xsl:if test="position() != last()">; </xsl:if>
+            </xsl:for-each>
+            <xsl:text> |</xsl:text>
+          </xsl:if>
+          <xsl:text>&#10;</xsl:text>
+        </xsl:if>
+        <xsl:for-each select="strike">
+          <xsl:text>| </xsl:text>
+          <xsl:if test="position() = 1">**<xsl:value-of select="../name"/>**</xsl:if>
+          <xsl:text> | </xsl:text>
+          <xsl:if test="position() = 1"><xsl:value-of select="../speed"/></xsl:if>
+          <xsl:text> | </xsl:text>
+          <xsl:choose>
+            <xsl:when test="@type='melee'">**Corps à corps** </xsl:when>
+            <xsl:when test="@type='ranged'">**À distance** </xsl:when>
+          </xsl:choose>
+          <xsl:value-of select="name"/>
+          <xsl:text> | </xsl:text>
+          <xsl:for-each select="traits/trait">
+            <xsl:value-of select="."/>
+            <xsl:if test="position() != last()">, </xsl:if>
+          </xsl:for-each>
+          <xsl:text> | </xsl:text>
+          <xsl:for-each select="damages/damage">
+            <xsl:value-of select="amount"/>
+            <xsl:text> </xsl:text>
+            <xsl:value-of select="damageType"/>
+            <xsl:if test="position() != last()"> plus </xsl:if>
+          </xsl:for-each>
+          <xsl:text> |</xsl:text>
+          <!-- Colonne Note : toujours présente si le tableau a une colonne Note -->
+          <xsl:if test="ancestor::battleForm/formEntry/note">
+            <xsl:text> </xsl:text>
+            <xsl:if test="position() = 1">
+              <xsl:for-each select="../note">
+                <xsl:value-of select="."/>
+                <xsl:if test="position() != last()">; </xsl:if>
+              </xsl:for-each>
+            </xsl:if>
+            <xsl:text> |</xsl:text>
+          </xsl:if>
+          <xsl:text>&#10;</xsl:text>
+        </xsl:for-each>
+      </xsl:for-each>
+    </xsl:if>
   </xsl:template>
 
 </xsl:stylesheet>
