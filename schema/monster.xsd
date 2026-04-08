@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
            xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
            vc:minVersion="1.1"
            elementFormDefault="qualified">
+
+  <xs:include schemaLocation="common.xsd"/>
 
   <xs:element name="monsters">
     <xs:complexType>
@@ -35,15 +37,6 @@
       <xs:element name="spellList" type="spellListType" minOccurs="0"/>
       <xs:element name="offensiveAbilities" type="abilityContainerType" minOccurs="0"/>
     </xs:sequence>
-  </xs:complexType>
-
-  <!-- Type partagé pour un <trait> simple avec lien optionnel -->
-  <xs:complexType name="traitRefType">
-    <xs:simpleContent>
-      <xs:extension base="xs:string">
-        <xs:attribute name="ref" type="xs:string"/>
-      </xs:extension>
-    </xs:simpleContent>
   </xs:complexType>
 
   <xs:complexType name="creatureTraitsType">
@@ -227,13 +220,6 @@
     </xs:sequence>
   </xs:complexType>
 
-  <!-- Liste de traits avec référence optionnelle (utilisée dans les frappes et capacités) -->
-  <xs:complexType name="traitListType">
-    <xs:sequence>
-      <xs:element name="trait" type="traitRefType" minOccurs="0" maxOccurs="unbounded"/>
-    </xs:sequence>
-  </xs:complexType>
-
   <!-- Liste d'immunités (insensibilité à un type de dégât ou condition) -->
   <xs:complexType name="immunityListType">
     <xs:sequence>
@@ -249,39 +235,20 @@
     <xs:attribute name="cannotTalk" type="xs:string"/>
   </xs:complexType>
 
+  <!-- Type pour une frappe de monstre (extension de baseStrikeType avec bonus requis) -->
+  <xs:complexType name="monsterStrikeType">
+    <xs:complexContent>
+      <xs:extension base="baseStrikeType">
+        <xs:sequence>
+          <xs:element name="bonus" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
   <xs:complexType name="strikesType">
     <xs:sequence>
-      <xs:element name="strike" maxOccurs="unbounded">
-        <xs:complexType>
-          <xs:sequence>
-            <xs:element name="name" type="xs:string"/>
-            <xs:element name="bonus" type="xs:string"/>
-            <xs:element name="traits" type="traitListType" minOccurs="0"/>
-            <xs:element name="damages" minOccurs="0">
-              <xs:complexType>
-                <xs:sequence>
-                  <xs:element name="damage" maxOccurs="unbounded">
-                    <xs:complexType>
-                      <xs:sequence>
-                        <xs:element name="amount" type="xs:string"/>
-                        <xs:element name="damageType" type="xs:string"/>
-                      </xs:sequence>
-                    </xs:complexType>
-                  </xs:element>
-                </xs:sequence>
-              </xs:complexType>
-            </xs:element>
-            <xs:element name="extras" minOccurs="0">
-              <xs:complexType>
-                <xs:sequence>
-                  <xs:element name="extra" type="xs:string" maxOccurs="unbounded"/>
-                </xs:sequence>
-              </xs:complexType>
-            </xs:element>
-          </xs:sequence>
-          <xs:attribute name="type" type="xs:string"/>
-        </xs:complexType>
-      </xs:element>
+      <xs:element name="strike" type="monsterStrikeType" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
 

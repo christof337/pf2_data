@@ -166,4 +166,75 @@
       <xsl:text>- </xsl:text><xsl:value-of select="."/><xsl:text>&#10;</xsl:text>
     </xsl:for-each>
   </xsl:template>
+
+  <xsl:template match="battleForm">
+    <xsl:text>&#10;</xsl:text>
+    <!-- Statistiques globales -->
+    <xsl:if test="globalStats">
+      <xsl:text>&#10;| CA | PV temp. | Mod. attaque | Mod. dégâts | Athlétisme | Sens |&#10;</xsl:text>
+      <xsl:text>|---|---|---|---|---|---|&#10;</xsl:text>
+      <xsl:text>| </xsl:text>
+      <xsl:choose>
+        <xsl:when test="globalStats/ac"><xsl:value-of select="globalStats/ac"/></xsl:when>
+        <xsl:otherwise>—</xsl:otherwise>
+      </xsl:choose>
+      <xsl:text> | </xsl:text>
+      <xsl:choose>
+        <xsl:when test="globalStats/tempHp"><xsl:value-of select="globalStats/tempHp"/></xsl:when>
+        <xsl:otherwise>—</xsl:otherwise>
+      </xsl:choose>
+      <xsl:text> | </xsl:text>
+      <xsl:choose>
+        <xsl:when test="globalStats/attackBonus"><xsl:value-of select="globalStats/attackBonus"/></xsl:when>
+        <xsl:otherwise>—</xsl:otherwise>
+      </xsl:choose>
+      <xsl:text> | </xsl:text>
+      <xsl:choose>
+        <xsl:when test="globalStats/damageBonus"><xsl:value-of select="globalStats/damageBonus"/></xsl:when>
+        <xsl:otherwise>—</xsl:otherwise>
+      </xsl:choose>
+      <xsl:text> | </xsl:text>
+      <xsl:choose>
+        <xsl:when test="globalStats/athletics"><xsl:value-of select="globalStats/athletics"/></xsl:when>
+        <xsl:otherwise>—</xsl:otherwise>
+      </xsl:choose>
+      <xsl:text> | </xsl:text>
+      <xsl:choose>
+        <xsl:when test="globalStats/senses"><xsl:value-of select="globalStats/senses"/></xsl:when>
+        <xsl:otherwise>—</xsl:otherwise>
+      </xsl:choose>
+      <xsl:text> |&#10;&#10;</xsl:text>
+    </xsl:if>
+    <!-- Tableau des formes -->
+    <xsl:text>| Forme | Vitesse | Frappe | Traits | Dégâts |&#10;</xsl:text>
+    <xsl:text>|---|---|---|---|---|&#10;</xsl:text>
+    <xsl:for-each select="formEntry">
+      <xsl:for-each select="strike">
+        <xsl:text>| </xsl:text>
+        <xsl:if test="position() = 1"><xsl:value-of select="../name"/></xsl:if>
+        <xsl:text> | </xsl:text>
+        <xsl:if test="position() = 1"><xsl:value-of select="../speed"/></xsl:if>
+        <xsl:text> | </xsl:text>
+        <xsl:choose>
+          <xsl:when test="@type='melee'">**Corps à corps** </xsl:when>
+          <xsl:when test="@type='ranged'">**À distance** </xsl:when>
+        </xsl:choose>
+        <xsl:value-of select="name"/>
+        <xsl:text> | </xsl:text>
+        <xsl:for-each select="traits/trait">
+          <xsl:value-of select="."/>
+          <xsl:if test="position() != last()">, </xsl:if>
+        </xsl:for-each>
+        <xsl:text> | </xsl:text>
+        <xsl:for-each select="damages/damage">
+          <xsl:value-of select="amount"/>
+          <xsl:text> </xsl:text>
+          <xsl:value-of select="damageType"/>
+          <xsl:if test="position() != last()"> plus </xsl:if>
+        </xsl:for-each>
+        <xsl:text> |&#10;</xsl:text>
+      </xsl:for-each>
+    </xsl:for-each>
+  </xsl:template>
+
 </xsl:stylesheet>

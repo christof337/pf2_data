@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
            xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
            vc:minVersion="1.1"
            elementFormDefault="qualified">
+
+  <xs:include schemaLocation="common.xsd"/>
   
   <xs:element name="spells">
     <xs:complexType>
@@ -121,7 +123,35 @@
     <xs:assert test="not(cast) or not(actions)"
                xpathDefaultNamespace="##targetNamespace"/>
   </xs:complexType>
-  
+
+  <!-- Type pour les formes de combat (sorts de type Métamorphose avec tableau de formes) -->
+  <xs:complexType name="battleFormType">
+    <xs:sequence>
+      <xs:element name="globalStats" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ac" type="xs:string" minOccurs="0"/>
+            <xs:element name="tempHp" type="xs:string" minOccurs="0"/>
+            <xs:element name="attackBonus" type="xs:string" minOccurs="0"/>
+            <xs:element name="damageBonus" type="xs:string" minOccurs="0"/>
+            <xs:element name="athletics" type="xs:string" minOccurs="0"/>
+            <xs:element name="senses" type="xs:string" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="formEntry" type="battleFormEntryType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Type pour une entrée de forme (nom, vitesse, et frappes) -->
+  <xs:complexType name="battleFormEntryType">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="speed" type="xs:string"/>
+      <xs:element name="strike" type="baseStrikeType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
   <xs:complexType name="richTextType" mixed="true">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
       <xs:element name="list" type="listType"/>
@@ -135,6 +165,7 @@
           </xs:simpleContent>
         </xs:complexType>
       </xs:element>
+      <xs:element name="battleForm" type="battleFormType"/>
     </xs:choice>
   </xs:complexType>
 

@@ -110,7 +110,6 @@
     <strikes>
       <strike type="melee">
         <name>mâchoires</name>
-        <bonus>+22</bonus>
         <traits>
           <trait>allonge 3 m</trait>
           <trait>magique</trait>
@@ -126,10 +125,10 @@
             <damageType>d’esprit</damageType>
           </damage>
         </damages>
+        <bonus>+22</bonus>
       </strike>
       <strike type="melee">
         <name>griffes</name>
-        <bonus>+22</bonus>
         <traits>
           <trait>agile</trait>
           <trait>magique</trait>
@@ -145,10 +144,10 @@
             <damageType>d’esprit</damageType>
           </damage>
         </damages>
+        <bonus>+22</bonus>
       </strike>
       <strike type="melee">
         <name>queue</name>
-        <bonus>+20</bonus>
         <traits>
           <trait>allonge 4,5 m</trait>
           <trait>magique</trait>
@@ -164,10 +163,10 @@
             <damageType>d’esprit</damageType>
           </damage>
         </damages>
+        <bonus>+20</bonus>
       </strike>
       <strike type="melee">
         <name>aile</name>
-        <bonus>+20</bonus>
         <traits>
           <trait>agile</trait>
           <trait>allonge 3 m</trait>
@@ -183,6 +182,7 @@
             <damageType>d’esprit</damageType>
           </damage>
         </damages>
+        <bonus>+20</bonus>
       </strike>
     </strikes>
     <spellList source="innate" tradition="divine" DD="29" attack="+21">

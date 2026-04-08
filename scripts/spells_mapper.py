@@ -127,6 +127,253 @@ def parse_traits(traits_raw):
             final_traits.append(t_clean)
     return final_traits
 
+def is_battle_form(traits, raw_description):
+    """Détecte si un sort est une forme de combat.
+    Double condition : MÉTAMORPHOSE + au moins 2 marqueurs de stats de combat.
+    """
+    if 'MÉTAMORPHOSE' not in traits:
+        return False
+    keywords = ['points de vie temporaires', 'CA =', "modificateur d'Athlétisme", 'forme de combat']
+    keyword_count = sum(1 for k in keywords if k in raw_description)
+    return keyword_count >= 2
+
+def _normalize_bullet(text):
+    """Normalise un bullet PDF : supprime les ** markdown, écrase espaces/newlines internes."""
+    text = re.sub(r'\*\*', '', text)          # retirer le gras markdown
+    text = re.sub(r'[\n\r]+\s*', ' ', text)   # newlines → espace
+    return re.sub(r'\s{2,}', ' ', text).strip()
+
+def parse_battle_form(raw_text):
+    """Parse un bloc de forme de combat et retourne un dictionnaire.
+
+    Le texte brut (après nettoyage PDF) contient deux zones délimitées par des marqueurs :
+    - Zone stats  : bullets (•) décrivant CA, PV, attaque, dégâts, compétence, sens
+    - Zone formes : bullets (•) décrivant chaque forme : **Nom** Vitesse X ; strikes
+
+    Les deux zones peuvent être séparées par "Vous gagnez également" (sorts à deux zones
+    explicites) ou mélangées (sorts à zone unique — discriminées par la présence de "Vitesse"
+    en tête de bullet).
+    """
+    data = {'intro': '', 'global_stats': {}, 'forms': []}
+
+    # ── Trouver le début de la section stats/formes ─────────────────────────
+    section_start_m = re.search(
+        r'Vous gagnez (?:les statistiques et pouvoirs suivants|des pouvoirs spécifiques)',
+        raw_text
+    )
+    section_start = section_start_m.start() if section_start_m else len(raw_text)
+
+    # Intro : texte avant la section stats/formes
+    data['intro'] = clean_desc(raw_text[:section_start])
+
+    section_text = raw_text[section_start:]
+
+    # ── Trouver le séparateur stats / formes ─────────────────────────────────
+    sep_m = re.search(r'Vous gagnez également', section_text)
+    if sep_m:
+        stats_text  = section_text[:sep_m.start()]
+        forms_text  = section_text[sep_m.end():]
+    else:
+        # Zone unique : on discriminera stats vs formes bullet par bullet
+        stats_text  = section_text
+        forms_text  = section_text
+
+    # ── Parser les bullets de stats ──────────────────────────────────────────
+    # On cherche des • qui NE commencent PAS par un nom gras (= pas une forme)
+    for raw_bullet in re.findall(r'•\s*(.+?)(?=\s*•|\Z)', stats_text, re.DOTALL):
+        b = _normalize_bullet(raw_bullet)
+        if not b or re.match(r'\*\*\S', raw_bullet.strip()):
+            continue  # bullet de forme, pas de stats
+        gs = data['global_stats']
+
+        ca_m = re.search(r'CA\s*=\s*(\d+\s*\+\s*votre niveau)', b, re.IGNORECASE)
+        if ca_m:
+            gs['ac'] = ca_m.group(1).strip()
+
+        pv_m = re.search(r'(\d+)\s*(?:PV|points? de vie) temporaires', b, re.IGNORECASE)
+        if pv_m:
+            gs['tempHp'] = pv_m.group(1)
+
+        atk_m = re.search(r'modificateur d.attaque (?:est de |de |est )?([+\-]\d+)', b, re.IGNORECASE)
+        if atk_m:
+            gs['attackBonus'] = atk_m.group(1)
+
+        dmg_m = re.search(r'bonus aux dégâts de ([+\-]\d+)', b, re.IGNORECASE)
+        if dmg_m:
+            gs['damageBonus'] = dmg_m.group(1)
+
+        # Athlétisme ou autre compétence (Acrobaties, etc.)
+        skill_m = re.search(r'Modificateur d.([A-Za-zà-ÿ]+) de ([+\-]\d+)', b, re.IGNORECASE)
+        if skill_m:
+            gs['athletics'] = skill_m.group(2)   # on stocke le bonus numérique
+
+        # Sens (Vision nocturne, odorat, etc.) — bullet commençant par Vision/odorat
+        if re.match(r'Vision|odorat|perception|sens', b, re.IGNORECASE):
+            gs['senses'] = re.sub(r'\.$', '', b).strip()
+
+    # ── Parser les bullets de formes ─────────────────────────────────────────
+    # Un bullet de forme commence par un nom propre suivi de "Vitesse X m"
+    # Les bullets de stats sont exclus explicitement.
+    STATS_PREFIXES = re.compile(
+        r'^(?:CA\s*=|[0-9]+\s+(?:PV|points)|Vision|odorat|Une ou plusieurs|Modificateur|Vitesse\b|Résistance\b|Faiblesse\b|Les\s+attaques\b|Souffle\b)',
+        re.IGNORECASE
+    )
+    for raw_bullet in re.findall(r'•\s*(.+?)(?=\s*•|\Z)', forms_text, re.DOTALL):
+        b = _normalize_bullet(raw_bullet)
+        if not b:
+            continue
+
+        # Exclure les bullets de statistiques globales
+        if STATS_PREFIXES.match(b):
+            continue
+
+        # Discriminateur : nom court suivi d'un marqueur de vitesse
+        # Supporte "Vitesse X", "vol X", "nage X", "creusement X", "escalade X"
+        # et le cas particulier "pas de Vitesse au sol" (ex: Gozreh dans AVATAR)
+        SPEED_MARKER = r'(?:(?:pas\s+de\s+)?Vitesse\b|vol\s+\d|nage\s+\d|escalade\s+\d|creusement\s+\d)'
+        name_speed_m = re.match(r'^(.+?)\s+' + SPEED_MARKER, b, re.IGNORECASE)
+        if not name_speed_m:
+            continue
+
+        form_entry = {'name': '', 'speed': '', 'strikes': []}
+
+        # Nom : tout avant le premier marqueur de vitesse
+        form_entry['name'] = clean_text(name_speed_m.group(1))
+
+        # Vitesse : du premier marqueur jusqu'au premier ";" ou frappe
+        speed_m = re.search(
+            SPEED_MARKER + r'.*?(?=\s*;|\s*(?:Corps à corps|À distance|Distance)\b|$)',
+            b, re.IGNORECASE
+        )
+        if speed_m:
+            form_entry['speed'] = clean_text(speed_m.group(0))
+
+        # Frappes : découpe sur "; Corps à corps", "; À distance" ou "; Distance"
+        after_speed = b[speed_m.end() if speed_m else name_speed_m.end():]
+        segments = re.split(r';\s*(?=Corps à corps|À distance|Distance\b)', after_speed, flags=re.IGNORECASE)
+        for seg in segments:
+            strike = _parse_strike_normalized(seg.strip())
+            if strike:
+                form_entry['strikes'].append(strike)
+
+        if form_entry['name']:
+            data['forms'].append(form_entry)
+
+    return data
+
+def _parse_strike_normalized(segment):
+    """Parse une frappe déjà normalisée (pas de **, newlines écrasés, sans bonus).
+
+    Structure attendue (battle form, pas de bonus) :
+      (Corps à corps|À distance|Distance) N nom [(traits)], Dégâts amount type [plus ...]
+    Inspiré de monster_mapper.py (même logique, sans le groupe bonus).
+
+    Note : AVATAR utilise "Distance" seul (sans "À") — les deux formes sont reconnues.
+    """
+    # Protection des décimales dans les mesures (ex: 4,5 m → 4__D__5 m)
+    segment = re.sub(r'(\d),(\d)', r'\1__D__\2', segment)
+
+    # Pattern unique : type action nom [(traits)], Dégâts damages
+    # Le nom s'arrête soit sur ( soit sur , suivi de Dégâts
+    STRIKE_TYPE = r'(Corps à corps|À distance|Distance)'
+    m = re.search(
+        STRIKE_TYPE + r'\s+\d+\s+([^(,]+?)(?:\s*\(([^)]+)\))?,\s*(?:\*\*)?Dégâts(?:\*\*)?\s+(.*)',
+        segment, re.IGNORECASE | re.DOTALL
+    )
+    if not m:
+        return None
+
+    raw_type = m.group(1).lower()
+    strike_type = 'melee' if 'corps' in raw_type else 'ranged'
+    name = clean_text(m.group(2)).replace('__D__', ',').strip()
+
+    traits = []
+    if m.group(3):
+        # Split sur "," puis sur ";" pour gérer les deux séparateurs
+        raw = []
+        for part in m.group(3).split(','):
+            for sub in part.split(';'):
+                t = sub.strip().replace('__D__', ',')
+                if t:
+                    raw.append(t)
+        # Cas particulier : "polyvalent X" suivi de "Y ou Z" → fusionner (multi-types)
+        for t in raw:
+            if traits and re.match(r'polyvalent\b', traits[-1], re.IGNORECASE) and ' ou ' in t:
+                traits[-1] = traits[-1] + ', ' + t
+            else:
+                traits.append(t)
+
+    damages = []
+    dmg_raw = m.group(4).replace('__D__', ',')
+    for part in re.split(r'\s+plus\s+', clean_text(dmg_raw), flags=re.IGNORECASE):
+        part = part.strip().rstrip('.')
+        d = re.search(r'(\d+d\d+[\+\-]?\d*)\s+(.*)', part)
+        if d:
+            damages.append({
+                'amount': d.group(1),
+                'type': re.sub(r"^d'", '', d.group(2).strip())
+            })
+
+    return {'type': strike_type, 'name': name, 'traits': traits, 'damages': damages} if name else None
+
+def emit_battle_form(desc_node, bf_data):
+    """Émet un nœud <battleForm> dans la description.
+
+    Ajoute le battleForm comme enfant du nœud description (mixed content).
+    Les données sont dans bf_data dictionnaire avec 'global_stats' et 'forms'.
+    """
+    if not bf_data.get('forms'):
+        return
+
+    bf_node = etree.SubElement(desc_node, "battleForm")
+
+    # Nœud globalStats
+    if bf_data.get('global_stats'):
+        gs_node = etree.SubElement(bf_node, "globalStats")
+        stats = bf_data['global_stats']
+        if stats.get('ac'):
+            etree.SubElement(gs_node, "ac").text = stats['ac']
+        if stats.get('tempHp'):
+            etree.SubElement(gs_node, "tempHp").text = stats['tempHp']
+        if stats.get('attackBonus'):
+            etree.SubElement(gs_node, "attackBonus").text = stats['attackBonus']
+        if stats.get('damageBonus'):
+            etree.SubElement(gs_node, "damageBonus").text = stats['damageBonus']
+        if stats.get('athletics'):
+            etree.SubElement(gs_node, "athletics").text = stats['athletics']
+        if stats.get('senses'):
+            etree.SubElement(gs_node, "senses").text = stats['senses']
+
+    # Nœuds formEntry
+    for form in bf_data.get('forms', []):
+        fe_node = etree.SubElement(bf_node, "formEntry")
+        if form.get('name'):
+            etree.SubElement(fe_node, "name").text = form['name']
+        if form.get('speed'):
+            etree.SubElement(fe_node, "speed").text = form['speed']
+
+        # Frappes : utiliser baseStrikeType
+        for strike in form.get('strikes', []):
+            if not strike.get('name'):
+                continue
+            strike_node = etree.SubElement(fe_node, "strike")
+            if strike.get('type'):
+                strike_node.set('type', strike['type'])
+
+            etree.SubElement(strike_node, "name").text = strike['name']
+
+            if strike.get('traits'):
+                traits_node = etree.SubElement(strike_node, "traits")
+                for trait in strike['traits']:
+                    etree.SubElement(traits_node, "trait").text = trait
+
+            if strike.get('damages'):
+                dmg_node = etree.SubElement(strike_node, "damages")
+                for dmg in strike['damages']:
+                    d_elem = etree.SubElement(dmg_node, "damage")
+                    etree.SubElement(d_elem, "amount").text = dmg['amount']
+                    etree.SubElement(d_elem, "damageType").text = dmg['type']
+
 def add_rich_text(parent, text_content, tag_name=None):
     """Génère un nœud XML en convertissant les _mot_ en balises <spellRef>. Retourne le nœud créé."""
     if tag_name is None:
@@ -286,18 +533,29 @@ def parse_spell_block(content):
 
     # 9. Description (Démarre après la dernière mécanique, s'arrête avant la première sauvegarde)
     desc_start = max(mech_ends) if mech_ends else header_end
-    
+
     save_starts = []
     for p in save_patterns.values():
         m = re.search(p, content, re.DOTALL | re.IGNORECASE)
         if m: save_starts.append(m.start())
     for m in re.finditer(h_pattern, content, re.DOTALL | re.IGNORECASE):
         save_starts.append(m.start())
-        
+
     desc_end = min(save_starts) if save_starts else len(content)
-    intro_raw, items_raw = split_bullet_list(content[desc_start:desc_end])
-    spell_data['description'] = clean_desc(intro_raw)
-    spell_data['list_items'] = [clean_desc(item) for item in items_raw]
+    raw_description = content[desc_start:desc_end]
+
+    # NOUVEAU : Détection de forme de combat
+    if is_battle_form(spell_data['traits'], raw_description):
+        spell_data['battle_form'] = parse_battle_form(raw_description)
+        # Extraire l'intro avant le battleForm
+        intro_raw = spell_data['battle_form'].get('intro', '')
+        spell_data['description'] = intro_raw if intro_raw else ""
+        spell_data['list_items'] = []
+    else:
+        intro_raw, items_raw = split_bullet_list(raw_description)
+        spell_data['description'] = clean_desc(intro_raw)
+        spell_data['list_items'] = [clean_desc(item) for item in items_raw]
+        spell_data['battle_form'] = None
 
     return spell_data
 
@@ -395,7 +653,12 @@ def generate_spells_xml(spells_data, output_path):
         
         # description est requise par le XSD — on la crée même si vide
         desc_node = add_rich_text(s_el, data.get('description'), "description")
-        if data.get('list_items'):
+
+        # Si c'est une forme de combat, ajouter le battleForm
+        if data.get('battle_form'):
+            emit_battle_form(desc_node, data['battle_form'])
+        # Sinon, ajouter les items de liste si présents
+        elif data.get('list_items'):
             list_node = etree.SubElement(desc_node, "list")
             for item in data['list_items']:
                 etree.SubElement(list_node, "listItem").text = item

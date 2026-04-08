@@ -305,35 +305,50 @@ Vous apercevez une brève vision du futur. Lors de l’incantation de ce sort, v
 
 **Durée** 1 min
 ---- 
-Vous vous changez en avatar de votre divinité et prenez une forme de combat de Très Grande taille. La forme de combat possède des mains et vous autorise des actions de manipulation. Vous pouvez Révoquer ce sort. Vous gagnez les statistiques et pouvoirs suivants, quelle que soit la forme de combat adoptée.
-- CA = 25 + votre niveau. Ignorez le malus aux tests lié à votre armure et la réduction de Vitesse qu’elle vous impose.
-- 30 points de vie temporaires.
-- Vision dans le noir.
-- Une ou plusieurs attaques spécifiques à la forme de combat de votre divinité, qui sont les seules avec lesquelles vous pouvez Frapper. Vous êtes qualifié pour vous en servir. Votre modificateur d’attaque est +33 et vous utilisez les dégâts indiqués. Les attaques au corps à corps sont basées sur la Force (vis-à-vis de l’état affaibli, par exemple) à moins de disposer du trait finesse, et toutes les attaques à distance sont basées sur la Dextérité.
-- Modificateur d’Athlétisme de +35, sauf si le vôtre est supérieur. Vous gagnez également les pouvoirs spécifiques liés à votre divinité que voici :
-- **Abadar** Vitesse 15 m, creusement 9 m, immunisé contre immobilisé ; **Distance** 1 arbalète (facteur de portée 36 m, rechargement 1), **Dégâts** 6d10+3 perforants.
-- **Asmodeus** Vitesse 21 m, vol 21 m ; **Corps à corps** 1 masse d’armes (allonge 4,5 m), **Dégâts** 6d10+6 contondants ; **Distance** 1 feu infernal (portée 36 m), **Dégâts** 6d6+3 feu.
-- **Calistria** Vitesse 9 m, vol 21 m ; **Corps à corps** 1 fouet (désarmement, finesse, non létal, allonge 6 m), **Dégâts** 6d4+6 tranchants ; **Distance** 1 douce piqûre (portée 18 m), **Dégâts** 6d6+3 poison.
-- **Cayden Cailéan** Vitesse 21 m, vol 21 m, ignore les terrains difficiles et très difficiles ; **Corps à corps** 1 rapière (mortel 3d8, allonge 4,5 m), **Dégâts** 6d6+6 perforants ; **Distance** 1 jet de bière (portée 36 m),** Dégâts** 6d6+3 poison.
-- **Desna** Vitesse 9 m, vol 21 m ; **Corps à corps** 1 lamétoile (agile, mortel 3d4, finesse, allonge 4,5 m, argent, jet 18 m), **Dégâts** 6d4+6 perforants ; **Distance** 1 rayon de lune (portée 36 m, argent), **Dégâts** 6d6+3 feu.
-- **Érastil** Vitesse 21 m, vol 21 m, ignore les terrains difficiles et très difficiles ; **Distance** 1 arc long (mortel 3d8, facteur de portée 45 m), **Dégâts** 6d8+3 perforants.
-- **Gorum** Vitesse 21 m, immunisé contre immobilisé ; **Corps à corps** 1 épée à deux mains (polyvalent P, allonge 4,5 m), **Dégâts** 6d12+6 tranchants.
-- **Gozreh** pas de Vitesse au sol, vol 21 m, nage 21 m ; ignore les terrains difficiles et très difficiles ; **Corps à corps** 1 vagues (allonge 4,5 m, pousser, jet 6 m),** Dégâts** 6d8+6 contondants ; **Distance** 1 vent (polyvalent électricité, portée 36 m), **Dégâts** 6d6+3 contondants.
-- **Iomédae** Vitesse 21 m, vol 21 m ; bouclier (Solidité 15, ne peut pas être endommagé) ; **Corps à corps** 1 épée longue (polyvalente P, allonge 4,5 m), **Dégâts** 6d8+6 tranchants.
-- **Irori** Vitesse 24 m, vol 24 m ; **Corps à corps** 1 frappe sans entrave (agile, polyvalent P ou T, finesse, allonge 4,5 m), **Dégâts** 6d8+6 contondants ; **Distance** 1 frappe du vent (portée 18 m), **Dégâts** 6d4+6 contondants.
-- **Lamashtu** Vitesse 9 m, vol 21 m ; **Corps à corps** 1 cimeterre à deux mains (percutant, allonge 4,5 m), **Dégâts** 6d10+6 tranchants ; **Distance** 1 eaux de Lamashtu (portée 36 m), **Dégâts** 6d6+3 poison.
-- **Néthys** Vitesse 21 m, _vol_ ; **Distance** 1 magie pure (portée 36 m ; polyvalent froid, électricité ou feu), **Dégâts** 6d6 force.
-- **Norgorber** Vitesse 21 m, vol 21 m, ignore les terrains difficiles et très difficiles ; **Corps à corps** 1 épée courte (agile, finesse, polyvalente T, allonge 4,5 m), **Dégâts** 6d6+6 perforants ; **Distance** 1 doigt noir (portée 36 m), **Dégâts** 6d6+3 poison.
-- **Pharasma** Vitesse 21 m, vol 21 m ; **Corps à corps** 1 dague (agile, finesse, allonge 4,5 m, jet 12 m), **Dégâts** 6d6+6 tranchants ; **Distance** 1 spirale (portée 36 m, blesse seulement les morts-vivants), **Dégâts** 6d8+3 vitalité.
-- **Rovagug** Vitesse 15 m, creusement 9 m, immunisé contre immobilisé ; **Corps à corps** 1 mâchoires (allonge 4,5 m), **Dégâts** 6d12+6 perforants ; **Corps à corps** 1 membre (agile, polyvalent P, allonge 4,5 m), **Dégâts** 6d8+6 contondants.
-- **Sarenrae** Vitesse 9 m, vol 21 m ; **Corps à corps** 1 cimeterre (percutant, non létal, allonge 4,5 m), **Dégâts** 6d6+6 tranchants ; **Distance** 1 flamme éternelle (non létal, portée 36 m), **Dégâts** 6d6+3 feu.
-- **Shélyn** Vitesse 21 m, vol 21 m, ignore les terrains difficiles et très difficiles ; **Corps à corps** 1 coutille (mortel 3d8, non létal, allonge 6 m), **Dégâts** 6d8+6 tranchants ; **Distance** 1 mélodie de la beauté intérieure (non létal, portée 36 m), **Dégâts** 6d6+3 son.
-- **Torag** Vitesse 15 m, creusement 9 m, immunisé contre immobilisé ; bouclier (Solidité 15, ne peut pas être endommagé) ; **Corps à corps** 1 marteau de guerre (allonge 4,5 m, pousser), **Dégâts** 6d8+6 contondants.
-- **Urgathoa** Vitesse 21 m, vol 21 m ; **Corps à corps** 1 faux (mortel 3d10, croc-en-jambe, allonge 4,5 m), **Dégâts** 6d10+6 tranchants ; **Distance** 1 peste blafarde (portée 36 m), **Dégâts** 6d6+3 néant.
-- **Zon‑Kuthon** Vitesse 21 m, vol 21 m, ignore les terrains difficiles et très difficiles ; **Corps à corps** 1 chaîne cloutée (désarmement, croc-en-jambe, allonge 4,5 m), **Dégâts** 6d8+6 tranchants ; **Distance** 1 souffrance de minuit (mental, non létal, portée 36 m), **Dégâts** 6d6+3 mentaux.
+Vous vous changez en avatar de votre divinité et prenez une forme de combat de Très Grande taille. La forme de combat possède des mains et vous autorise des actions de manipulation. Vous pouvez Révoquer ce sort.
+
+| CA | PV temp. | Mod. attaque | Mod. dégâts | Athlétisme | Sens |
+|---|---|---|---|---|---|
+| 25 + votre niveau | 30 | +33 | - | +35 | Vision dans le noir |
+
+| Forme | Vitesse | Frappe | Traits | Dégâts |
+|---|---|---|---|---|
+| Abadar | Vitesse 15 m, creusement 9 m, immunisé contre immobilisé | À distance arbalète | facteur de portée 36 m, rechargement 1 | 6d10+3 perforants |
+| Asmodeus | Vitesse 21 m, vol 21 m | Corps à corps masse d’armes | allonge 4,5 m | 6d10+6 contondants |
+|  |  | À distance feu infernal | portée 36 m | 6d6+3 feu |
+| Calistria | Vitesse 9 m, vol 21 m | Corps à corps fouet | désarmement, finesse, non létal, allonge 6 m | 6d4+6 tranchants |
+|  |  | À distance douce piqûre | portée 18 m | 6d6+3 poison |
+| Cayden Cailéan | Vitesse 21 m, vol 21 m, ignore les terrains difficiles et très difficiles | Corps à corps rapière | mortel 3d8, allonge 4,5 m | 6d6+6 perforants |
+|  |  | À distance jet de bière | portée 36 m | 6d6+3 poison |
+| Desna | Vitesse 9 m, vol 21 m | Corps à corps lamétoile | agile, mortel 3d4, finesse, allonge 4,5 m, argent, jet 18 m | 6d4+6 perforants |
+|  |  | À distance rayon de lune | portée 36 m, argent | 6d6+3 feu |
+| Érastil | Vitesse 21 m, vol 21 m, ignore les terrains difficiles et très difficiles | À distance arc long | mortel 3d8, facteur de portée 45 m | 6d8+3 perforants |
+| Gorum | Vitesse 21 m, immunisé contre immobilisé | Corps à corps épée à deux mains | polyvalent P, allonge 4,5 m | 6d12+6 tranchants |
+| Gozreh | pas de Vitesse au sol, vol 21 m, nage 21 m | Corps à corps vagues | allonge 4,5 m, pousser, jet 6 m | 6d8+6 contondants |
+|  |  | À distance vent | polyvalent électricité, portée 36 m | 6d6+3 contondants |
+| Iomédae | Vitesse 21 m, vol 21 m | Corps à corps épée longue | polyvalente P, allonge 4,5 m | 6d8+6 tranchants |
+| Irori | Vitesse 24 m, vol 24 m | Corps à corps frappe sans entrave | agile, polyvalent P ou T, finesse, allonge 4,5 m | 6d8+6 contondants |
+|  |  | À distance frappe du vent | portée 18 m | 6d4+6 contondants |
+| Lamashtu | Vitesse 9 m, vol 21 m | Corps à corps cimeterre à deux mains | percutant, allonge 4,5 m | 6d10+6 tranchants |
+|  |  | À distance eaux de Lamashtu | portée 36 m | 6d6+3 poison |
+| Néthys | Vitesse 21 m, _vol_ | À distance magie pure | portée 36 m, polyvalent froid, électricité ou feu | 6d6 force |
+| Norgorber | Vitesse 21 m, vol 21 m, ignore les terrains difficiles et très difficiles | Corps à corps épée courte | agile, finesse, polyvalente T, allonge 4,5 m | 6d6+6 perforants |
+|  |  | À distance doigt noir | portée 36 m | 6d6+3 poison |
+| Pharasma | Vitesse 21 m, vol 21 m | Corps à corps dague | agile, finesse, allonge 4,5 m, jet 12 m | 6d6+6 tranchants |
+|  |  | À distance spirale | portée 36 m, blesse seulement les morts-vivants | 6d8+3 vitalité |
+| Rovagug | Vitesse 15 m, creusement 9 m, immunisé contre immobilisé | Corps à corps mâchoires | allonge 4,5 m | 6d12+6 perforants |
+|  |  | Corps à corps membre | agile, polyvalent P, allonge 4,5 m | 6d8+6 contondants |
+| Sarenrae | Vitesse 9 m, vol 21 m | Corps à corps cimeterre | percutant, non létal, allonge 4,5 m | 6d6+6 tranchants |
+|  |  | À distance flamme éternelle | non létal, portée 36 m | 6d6+3 feu |
+| Shélyn | Vitesse 21 m, vol 21 m, ignore les terrains difficiles et très difficiles | Corps à corps coutille | mortel 3d8, non létal, allonge 6 m | 6d8+6 tranchants |
+|  |  | À distance mélodie de la beauté intérieure | non létal, portée 36 m | 6d6+3 son |
+| Torag | Vitesse 15 m, creusement 9 m, immunisé contre immobilisé | Corps à corps marteau de guerre | allonge 4,5 m, pousser | 6d8+6 contondants |
+| Urgathoa | Vitesse 21 m, vol 21 m | Corps à corps faux | mortel 3d10, croc-en-jambe, allonge 4,5 m | 6d10+6 tranchants |
+|  |  | À distance peste blafarde | portée 36 m | 6d6+3 néant |
+| Zon‑Kuthon | Vitesse 21 m, vol 21 m, ignore les terrains difficiles et très difficiles | Corps à corps chaîne cloutée | désarmement, croc-en-jambe, allonge 4,5 m | 6d8+6 tranchants |
+|  |  | À distance souffrance de minuit | mental, non létal, portée 36 m | 6d6+3 mentaux |
  
 
-  
 
 ```pf2e-stats
 #### [[fr]]

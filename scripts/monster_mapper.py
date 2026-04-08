@@ -427,7 +427,6 @@ def generate_monster_xml(data, output_path):
                 strike_elem.set("type", strike['type'])
 
             etree.SubElement(strike_elem, "name").text = strike['name']
-            etree.SubElement(strike_elem, "bonus").text = strike['bonus']
 
             traits_elem = etree.SubElement(strike_elem, "traits")
             for trait in strike['traits']:
@@ -439,6 +438,10 @@ def generate_monster_xml(data, output_path):
                     dmg_elem = etree.SubElement(damages_elem, "damage")
                     etree.SubElement(dmg_elem, "amount").text = dmg['amount']
                     etree.SubElement(dmg_elem, "damageType").text = dmg['type']
+
+            # bonus en dernier (après les éléments hérités de baseStrikeType) pour
+            # respecter l'ordre de monsterStrikeType (extension xs:complexContent)
+            etree.SubElement(strike_elem, "bonus").text = strike['bonus']
             
     # Sorts — n'émis que si au moins un rang est parsé
     if data.get('spells') and data['spells'].get('ranks'):
