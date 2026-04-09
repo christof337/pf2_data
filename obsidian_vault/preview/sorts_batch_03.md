@@ -775,7 +775,7 @@ Vous alternez extrêmement rapidement entre le plan où vous vous trouviez initi
 
 **Durée** 1 min
 ---- 
-Vous puisez dans votre maîtrise des cieux pour remodeler votre corps en une forme de combat : celle d’un animal volant de taille Moyenne. Lorsque vous Lancez ce sort, choisissez l’une des formes de combat listées. Vous pouvez opter pour un type d’animal spécifique (comme un hibou ou un aigle pour la forme d’oiseau), mais cela n’affecte ni la taille ni les statistiques de la forme de combat. Sous cette forme, vous gagnez le trait animal. Vous pouvez Révoquer le sort.
+Vous puisez dans votre maîtrise des cieux pour remodeler votre corps en une forme de combat : celle d’un animal volant de taille Moyenne. Lorsque vous Lancez ce sort, choisissez l’une des formes de combat listées. Vous pouvez opter pour un type d’animal spécifique (comme un hibou ou un aigle pour la forme d’oiseau), mais cela n’affecte ni la taille ni les statistiques de la forme de combat. Sous cette forme, vous gagnez le trait animal. Vous pouvez Révoquer le sort. Vous gagnez des pouvoirs spécifiques selon l’animal choisi :
 
 | CA | PV temp. | Mod. attaque | Mod. dégâts | Athlétisme | Sens |
 |---|---|---|---|---|---|
@@ -809,7 +809,7 @@ Vous puisez dans votre maîtrise des cieux pour remodeler votre corps en une for
 
 **Durée** 1 min
 ---- 
-Vous faites appel à l’énergie primordiale pour remodeler votre corps en une forme de combat : celle d’un animal de taille Moyenne. Lorsque vous Lancez ce sort, choisissez l’une des formes de combat listées. Vous pouvez opter pour un type d’animal spécifique (comme un lion ou une panthère des neiges pour la forme de félin), mais cela n’affecte ni la taille ni les statistiques de la forme de combat. Sous cette forme, vous gagnez le trait animal. Vous pouvez Révoquer le sort.
+Vous faites appel à l’énergie primordiale pour remodeler votre corps en une forme de combat : celle d’un animal de taille Moyenne. Lorsque vous Lancez ce sort, choisissez l’une des formes de combat listées. Vous pouvez opter pour un type d’animal spécifique (comme un lion ou une panthère des neiges pour la forme de félin), mais cela n’affecte ni la taille ni les statistiques de la forme de combat. Sous cette forme, vous gagnez le trait animal. Vous pouvez Révoquer le sort. Vous gagnez des pouvoirs spécifiques selon l’animal choisi :
 
 | CA | PV temp. | Mod. attaque | Mod. dégâts | Athlétisme | Sens |
 |---|---|---|---|---|---|
@@ -851,7 +851,7 @@ Vous faites appel à l’énergie primordiale pour remodeler votre corps en une 
 
 **Durée** 1 min
 ---- 
-Vous puisez dans les forces primordiales de la nature pour prendre la forme de combat d’un animal de Grande taille et plus précisément d’un puissant et terrifiant dinosaure. Lorsque vous Lancez ce sort, choisissez l’une des formes de combat listées. Vous pouvez opter pour un type d’animal spécifique, mais cela n’affecte ni la taille ni les statistiques de la forme de combat. Sous cette forme, vous gagnez les traits animal et dinosaure. Vous pouvez Révoquer le sort.
+Vous puisez dans les forces primordiales de la nature pour prendre la forme de combat d’un animal de Grande taille et plus précisément d’un puissant et terrifiant dinosaure. Lorsque vous Lancez ce sort, choisissez l’une des formes de combat listées. Vous pouvez opter pour un type d’animal spécifique, mais cela n’affecte ni la taille ni les statistiques de la forme de combat. Sous cette forme, vous gagnez les traits animal et dinosaure. Vous pouvez Révoquer le sort. Vous gagnez les statistiques et pouvoirs suivants, quelle que soit la forme de combat choisie :
 
 | CA | PV temp. | Mod. attaque | Mod. dégâts | Athlétisme | Sens |
 |---|---|---|---|---|---|
@@ -890,7 +890,7 @@ Vous puisez dans les forces primordiales de la nature pour prendre la forme de c
 
 **Durée** 1 min
 ---- 
-Vous faites appel à une puissante magie pour prendre la forme de combat d’un Grand dragon. Lorsque vous Lancez ce sort, choisissez un type de dragon commun ou un autre type auquel le MJ vous accorde l’accès. Sous cette forme, vous gagnez le trait dragon. La forme de combat possède des mains et vous autorise des actions de manipulation. Vous pouvez Révoquer le sort.
+Vous faites appel à une puissante magie pour prendre la forme de combat d’un Grand dragon. Lorsque vous Lancez ce sort, choisissez un type de dragon commun ou un autre type auquel le MJ vous accorde l’accès. Sous cette forme, vous gagnez le trait dragon. La forme de combat possède des mains et vous autorise des actions de manipulation. Vous pouvez Révoquer le sort. Vous gagnez les statistiques et pouvoirs suivants, quelle que soit la forme de combat choisie :
 
 | CA | PV temp. | Mod. attaque | Mod. dégâts | Athlétisme | Sens |
 |---|---|---|---|---|---|
@@ -921,7 +921,7 @@ Vous faites appel à une puissante magie pour prendre la forme de combat d’un 
 
 **Durée** 10 min
 ---- 
-Vous prenez le forme de combat d’un animal de Très Petite taille, tel qu’un chat, un insecte, un lézard ou un rat. Vous pouvez opter pour un type d’animal spécifique (comme un rat ou une mante religieuse), mais cela n’affecte ni votre taille ni vos statistiques. Lorsque vous êtes sous cette forme, vous gagnez le trait animal et ne pouvez pas effectuer de Frappe. Vous pouvez Révoquer le sort.
+Vous prenez le forme de combat d’un animal de Très Petite taille, tel qu’un chat, un insecte, un lézard ou un rat. Vous pouvez opter pour un type d’animal spécifique (comme un rat ou une mante religieuse), mais cela n’affecte ni votre taille ni vos statistiques. Lorsque vous êtes sous cette forme, vous gagnez le trait animal et ne pouvez pas effectuer de Frappe. Vous pouvez Révoquer le sort. Vous gagnez les statistiques et pouvoirs suivants :
 
 | CA | PV temp. | Mod. attaque | Mod. dégâts | Athlétisme | Sens |
 |---|---|---|---|---|---|
@@ -947,13 +947,14 @@ Vous prenez le forme de combat d’un animal de Très Petite taille, tel qu’un
 
 **Durée** 1 min
 ---- 
-Vous vous inspirez des créatures végétales en prenant la forme de combat d’une Grande plante. Lorsque vous Lancez ce sort, choisissez l’une des formes de combat listées. Vous pouvez aussi prendre la forme d’une plante en particulier (comme un népenthès au lieu d’un attrape-mouche) mais elle ne change pas les statistiques ni la taille de la forme. Sous cette forme, vous gagnez le trait plante. Vous pouvez Révoquer le sort.
+Vous vous inspirez des créatures végétales en prenant la forme de combat d’une Grande plante. Lorsque vous Lancez ce sort, choisissez l’une des formes de combat listées. Vous pouvez aussi prendre la forme d’une plante en particulier (comme un népenthès au lieu d’un attrape-mouche) mais elle ne change pas les statistiques ni la taille de la forme. Sous cette forme, vous gagnez le trait plante. Vous pouvez Révoquer le sort. Vous gagnez les statistiques et pouvoirs suivants, quelle que soit la forme de combat choisie :
 
 | CA | PV temp. | Mod. attaque | Mod. dégâts | Athlétisme | Sens |
 |---|---|---|---|---|---|
 | 19 + votre niveau | 12 | +17 | +11 | +19 | Vision nocturne |
 - Résistance 10 au poison
 - Une ou plusieurs attaques au corps à corps à mains nues spécifiques à la forme de combat choisie, qui deviennent vos seules attaques utilisables. Vous êtes qualifié pour vous en servir. Votre modificateur d’attaque est de +17 et votre bonus aux dégâts de +11. Ces attaques sont basées sur la Force (vis-à-vis de l’état affaibli, par exemple). Si votre modificateur d’attaque à mains nues est plus élevé, vous pouvez l’utiliser à la place
+- Vous gagnez des pouvoirs spécifiques selon la plante que vous choisissez :
 
 | Forme | Vitesse | Frappe | Traits | Dégâts | Note |
 |---|---|---|---|---|---|
@@ -977,12 +978,13 @@ Vous vous inspirez des créatures végétales en prenant la forme de combat d’
 
 **Durée** 1 min
 ---- 
-Vous visualisez un simple insecte et prenez la forme de combat d’un animal de taille Moyenne. Lorsque vous Lancez ce sort, choisissez l’une des formes de combat listées. Vous pouvez opter pour un type d’animal spécifique (comme une coccinelle ou un scarabée pour la forme de coléoptère), mais cela n’affecte ni la taille ni les statistiques de la forme. Sous cette forme, vous gagnez le trait animal. Vous pouvez Révoquer ce sort.
+Vous visualisez un simple insecte et prenez la forme de combat d’un animal de taille Moyenne. Lorsque vous Lancez ce sort, choisissez l’une des formes de combat listées. Vous pouvez opter pour un type d’animal spécifique (comme une coccinelle ou un scarabée pour la forme de coléoptère), mais cela n’affecte ni la taille ni les statistiques de la forme. Sous cette forme, vous gagnez le trait animal. Vous pouvez Révoquer ce sort. Vous gagnez les statistiques et pouvoirs suivants, quelle que soit la forme de combat choisie :
 
 | CA | PV temp. | Mod. attaque | Mod. dégâts | Athlétisme | Sens |
 |---|---|---|---|---|---|
 | 18 + votre niveau | 10 | +13 | +2 | +13 | Vision nocturne |
 - Une ou plusieurs attaques spécifiques à la forme de combat choisie, qui deviennent vos seules attaques utilisables. Vous êtes qualifié pour vous en servir. Votre modificateur d’attaque est de +13 et votre bonus aux dégâts de +2. Ces attaques sont basées sur la Force (vis-à-vis de l’état affaibli, par exemple). Si votre modificateur d’attaque à mains nues est plus élevé, utilisez-le à la place
+- Vous gagnez des pouvoirs spécifiques selon la forme choisie :
 
 | Forme | Vitesse | Frappe | Traits | Dégâts | Note |
 |---|---|---|---|---|---|
@@ -1013,13 +1015,14 @@ Vous visualisez un simple insecte et prenez la forme de combat d’un animal de 
 
 **Durée** 1 min
 ---- 
-Vous faites appel à la puissance des plans pour prendre la forme de combat d’un élémentaire Moyen. Lorsque vous Lancez ce sort, choisissez l’un des éléments listés. Sous cette forme, vous gagnez le trait correspondant et le trait élémentaire. La forme de combat possède des mains et vous autorise des actions de manipulation. Vous pouvez Révoquer le sort.
+Vous faites appel à la puissance des plans pour prendre la forme de combat d’un élémentaire Moyen. Lorsque vous Lancez ce sort, choisissez l’un des éléments listés. Sous cette forme, vous gagnez le trait correspondant et le trait élémentaire. La forme de combat possède des mains et vous autorise des actions de manipulation. Vous pouvez Révoquer le sort. Vous gagnez les statistiques et pouvoirs suivants, quelle que soit la forme de combat choisie :
 
 | CA | PV temp. | Mod. attaque | Mod. dégâts | Athlétisme | Sens |
 |---|---|---|---|---|---|
 | 19 + votre niveau | 10 | +18 | +9 | — | Vision dans le noir |
 - Une ou plusieurs attaques au corps à corps à mains nues spécifiques à la forme de combat choisie, qui deviennent vos seules attaques utilisables. Vous êtes qualifié pour vous en servir. Votre modificateur d’attaque est de +18 et votre bonus aux dégâts de +9. Ces attaques sont basées sur la Dextérité (air, feu ou métal) ou Force (terre, eau ou bois). Si votre modificateur d’attaque à mains nues correspondant est plus élevé, utilisez-le à la place
-- Modificateur d’Acrobaties (air, feu ou métal) ou d’Athlétisme (terre, eau ou bois) de +20 ; ignorez ce changement si votre propre modificateur est supérieur. Vous gagnez des pouvoirs spécifiques selon l’élément choisi :
+- Modificateur d’Acrobaties (air, feu ou métal) ou d’Athlétisme (terre, eau ou bois) de +20 ; ignorez ce changement si votre propre modificateur est supérieur
+- Vous gagnez des pouvoirs spécifiques selon l’élément choisi :
 
 | Forme | Vitesse | Frappe | Traits | Dégâts | Note |
 |---|---|---|---|---|---|

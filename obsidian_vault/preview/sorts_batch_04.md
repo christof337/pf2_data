@@ -11,12 +11,13 @@
 
 **Durée** 1 min
 ---- 
-Vous visualisez un simple insecte et prenez la forme de combat d’un animal de taille Moyenne. Lorsque vous Lancez ce sort, choisissez l’une des formes de combat listées. Vous pouvez opter pour un type d’animal spécifique (comme une coccinelle ou un scarabée pour la forme de coléoptère), mais cela n’affecte ni la taille ni les statistiques de la forme. Sous cette forme, vous gagnez le trait animal. Vous pouvez Révoquer ce sort.
+Vous visualisez un simple insecte et prenez la forme de combat d’un animal de taille Moyenne. Lorsque vous Lancez ce sort, choisissez l’une des formes de combat listées. Vous pouvez opter pour un type d’animal spécifique (comme une coccinelle ou un scarabée pour la forme de coléoptère), mais cela n’affecte ni la taille ni les statistiques de la forme. Sous cette forme, vous gagnez le trait animal. Vous pouvez Révoquer ce sort. Vous gagnez les statistiques et pouvoirs suivants, quelle que soit la forme de combat choisie :
 
 | CA | PV temp. | Mod. attaque | Mod. dégâts | Athlétisme | Sens |
 |---|---|---|---|---|---|
 | 18 + votre niveau | 10 | +13 | +2 | +13 | Vision nocturne |
 - Une ou plusieurs attaques spécifiques à la forme de combat choisie, qui deviennent vos seules attaques utilisables. Vous êtes qualifié pour vous en servir. Votre modificateur d’attaque est de +13 et votre bonus aux dégâts de +2. Ces attaques sont basées sur la Force (vis-à-vis de l’état affaibli, par exemple). Si votre modificateur d’attaque à mains nues est plus élevé, utilisez-le à la place
+- Vous gagnez des pouvoirs spécifiques selon la forme choisie :
 
 | Forme | Vitesse | Frappe | Traits | Dégâts | Note |
 |---|---|---|---|---|---|
@@ -47,13 +48,14 @@ Vous visualisez un simple insecte et prenez la forme de combat d’un animal de 
 
 **Durée** 1 min
 ---- 
-Vous faites appel à la puissance des plans pour prendre la forme de combat d’un élémentaire Moyen. Lorsque vous Lancez ce sort, choisissez l’un des éléments listés. Sous cette forme, vous gagnez le trait correspondant et le trait élémentaire. La forme de combat possède des mains et vous autorise des actions de manipulation. Vous pouvez Révoquer le sort.
+Vous faites appel à la puissance des plans pour prendre la forme de combat d’un élémentaire Moyen. Lorsque vous Lancez ce sort, choisissez l’un des éléments listés. Sous cette forme, vous gagnez le trait correspondant et le trait élémentaire. La forme de combat possède des mains et vous autorise des actions de manipulation. Vous pouvez Révoquer le sort. Vous gagnez les statistiques et pouvoirs suivants, quelle que soit la forme de combat choisie :
 
 | CA | PV temp. | Mod. attaque | Mod. dégâts | Athlétisme | Sens |
 |---|---|---|---|---|---|
 | 19 + votre niveau | 10 | +18 | +9 | — | Vision dans le noir |
 - Une ou plusieurs attaques au corps à corps à mains nues spécifiques à la forme de combat choisie, qui deviennent vos seules attaques utilisables. Vous êtes qualifié pour vous en servir. Votre modificateur d’attaque est de +18 et votre bonus aux dégâts de +9. Ces attaques sont basées sur la Dextérité (air, feu ou métal) ou Force (terre, eau ou bois). Si votre modificateur d’attaque à mains nues correspondant est plus élevé, utilisez-le à la place
-- Modificateur d’Acrobaties (air, feu ou métal) ou d’Athlétisme (terre, eau ou bois) de +20 ; ignorez ce changement si votre propre modificateur est supérieur. Vous gagnez des pouvoirs spécifiques selon l’élément choisi :
+- Modificateur d’Acrobaties (air, feu ou métal) ou d’Athlétisme (terre, eau ou bois) de +20 ; ignorez ce changement si votre propre modificateur est supérieur
+- Vous gagnez des pouvoirs spécifiques selon l’élément choisi :
 
 | Forme | Vitesse | Frappe | Traits | Dégâts | Note |
 |---|---|---|---|---|---|
@@ -101,12 +103,13 @@ Vous vous transformez en un humanoïde de taille Moyenne ou Petite, comme un nai
 
 **Durée** 1 min
 ---- 
-Vous vous transformez en monstre légendaire et prenez une forme de combat de Très Grande taille. Quand vous Lancez ce sort, choisissez entre le phénix, le ver des cavernes ou le serpent de mer. Sous cette forme, vous obtenez le trait bête (pour le phénix) ou le trait animal (pour le ver des cavernes ou le serpent de mer). Vous pouvez Révoquer le sort.
+Vous vous transformez en monstre légendaire et prenez une forme de combat de Très Grande taille. Quand vous Lancez ce sort, choisissez entre le phénix, le ver des cavernes ou le serpent de mer. Sous cette forme, vous obtenez le trait bête (pour le phénix) ou le trait animal (pour le ver des cavernes ou le serpent de mer). Vous pouvez Révoquer le sort. Vous gagnez les statistiques et pouvoirs suivants, quelle que soit la forme de combat choisie :
 
 | CA | PV temp. | Mod. attaque | Mod. dégâts | Athlétisme | Sens |
 |---|---|---|---|---|---|
 | 20 + votre niveau | 20 | +28 | — | +30 | Vision dans le noir |
 - Une ou plusieurs attaques au corps à corps à mains nues spécifiques à la forme de combat choisie, qui deviennent vos seules attaques utilisables. Vous êtes qualifié pour vous en servir. Votre modificateur d’attaque est +28 et vous utilisez les dégâts indiqués. Ces attaques sont basées sur la Force (vis-à-vis de l’état affaibli, par exemple). Si votre modificateur d’attaque à mains nues est plus élevé, vous pouvez l’utiliser à la place
+- Vous gagnez des pouvoirs spécifiques selon le monstre choisi :
 
 | Forme | Vitesse | Frappe | Traits | Dégâts | Note |
 |---|---|---|---|---|---|
@@ -478,12 +481,13 @@ Vous semez le doute dans l’esprit de vos ennemis. Les ennemis dans la zone doi
 
 **Durée** 1 min
 ---- 
-La puissance primordiale du monde s’écoule à travers vous. Vous vous transformez en homme vert ou en kaiju, des incarnations de la nature. Votre forme de combat est de taille Moyenne pour un homme vert ou Gigantesque (espace de 9 m sur 9) pour un kaiju. Sous cette forme, vous obtenez le trait plante (pour un homme vert) ou bête (pour un kaiju). Vous pouvez Révoquer le sort.
+La puissance primordiale du monde s’écoule à travers vous. Vous vous transformez en homme vert ou en kaiju, des incarnations de la nature. Votre forme de combat est de taille Moyenne pour un homme vert ou Gigantesque (espace de 9 m sur 9) pour un kaiju. Sous cette forme, vous obtenez le trait plante (pour un homme vert) ou bête (pour un kaiju). Vous pouvez Révoquer le sort. Vous gagnez les statistiques et pouvoirs suivants, quelle que soit la forme de combat choisie :
 
 | CA | PV temp. | Mod. attaque | Mod. dégâts | Athlétisme | Sens |
 |---|---|---|---|---|---|
 | 25 + votre niveau | 30 | +34 | — | +36 | Vision dans le noir |
 - Une ou plusieurs attaques spécifiques à la forme de combat choisie, qui deviennent vos seules attaques utilisables. Vous êtes qualifié pour vous en servir. Votre modificateur d’attaque est +34 et vous utilisez les dégâts indiqués. Ces attaques sont basées sur la Force (vis-à-vis de l’état affaibli, par exemple). Si votre modificateur d’attaque à mains nues est plus élevé, vous pouvez l’utiliser à la place
+- Vous gagnez des pouvoirs spécifiques selon l’incarnation que vous choisissez :
 
 | Forme | Vitesse | Frappe | Traits | Dégâts | Note |
 |---|---|---|---|---|---|

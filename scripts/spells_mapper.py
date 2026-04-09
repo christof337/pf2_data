@@ -190,16 +190,39 @@ def parse_battle_form(raw_text):
     )
     section_start = section_start_m.start() if section_start_m else len(raw_text)
 
-    # Intro : texte avant la section stats/formes
-    data['intro'] = clean_desc(raw_text[:section_start])
+    # Intro : texte avant la section stats/formes, phrase introductive incluse.
+    # Les deux variantes ("des pouvoirs spécifiques selon..." et "les statistiques et pouvoirs
+    # suivants...") sont des phrases d'introduction qui doivent apparaître dans la description.
+    # On étend l'intro jusqu'au premier bullet • pour les capturer entièrement.
+    if section_start_m:
+        bullet_m = re.search(r'•', raw_text[section_start:])
+        intro_end = (section_start + bullet_m.start()) if bullet_m else len(raw_text)
+        data['intro'] = clean_desc(raw_text[:intro_end])
+    else:
+        data['intro'] = clean_desc(raw_text[:section_start])
 
     section_text = raw_text[section_start:]
 
     # ── Trouver le séparateur stats / formes ─────────────────────────────────
-    sep_m = re.search(r'Vous gagnez également', section_text)
+    # Quand section_start = "les statistiques et pouvoirs suivants", le séparateur peut être
+    # "Vous gagnez également" ou "Vous gagnez des pouvoirs spécifiques selon" (FORME DE PLANTE,
+    # FORME D'INSECTE, etc.). Dans ce dernier cas, on conserve la phrase pour la réémettre.
+    if section_start_m and 'des pouvoirs spécifiques' in section_start_m.group():
+        sep_m = re.search(r'Vous gagnez également', section_text)
+    else:
+        sep_m = re.search(
+            r'Vous gagnez (?:également|des pouvoirs spécifiques selon)',
+            section_text
+        )
+    sep_phrase = None  # phrase introductive des formes, à conserver si présente
     if sep_m:
         stats_text  = section_text[:sep_m.start()]
         forms_text  = section_text[sep_m.end():]
+        if 'des pouvoirs spécifiques' in sep_m.group():
+            phrase_end_m = re.search(r'•', section_text[sep_m.start():])
+            sep_phrase = clean_desc(
+                section_text[sep_m.start() : sep_m.start() + phrase_end_m.start()]
+            ) if phrase_end_m else clean_desc(section_text[sep_m.start():])
     else:
         # Zone unique : on discriminera stats vs formes bullet par bullet
         stats_text  = section_text
@@ -274,6 +297,11 @@ def parse_battle_form(raw_text):
         # Bullets non reconnus → note (Faiblesse, Résistance, Souffle, etc.)
         if not recognized:
             gs.setdefault('notes', []).append(re.sub(r'\.$', '', b).strip())
+
+    # Ajouter la phrase introductive des formes ("Vous gagnez des pouvoirs spécifiques selon...")
+    # comme note de fin, pour qu'elle apparaisse entre le tableau de stats et le tableau des formes
+    if sep_phrase:
+        data['global_stats'].setdefault('notes', []).append(sep_phrase)
 
     # ── Parser les bullets de formes ─────────────────────────────────────────
     # Un bullet de forme commence par un nom propre suivi de "Vitesse X m"
