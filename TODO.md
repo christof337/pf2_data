@@ -15,3 +15,5 @@
 ## Priorité moyenne
 - [ ] reprendre le traitement par lot du Bestiaire complet
 - [ ] traiter les autres familles de données : équipement, dons, dangers
+- [ ] le trait émotion est trié alphabétiquement en dernier par erreur dans le xsl (discours captivant par exemple, dans sorts_batch_03.md dans preview). il devrait être avant manipulation
+- [ ] les traditions et les traits des frappes doivent aussi être triés par ordre alphabétique dans le xsl
