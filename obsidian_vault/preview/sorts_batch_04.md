@@ -16,13 +16,14 @@ Vous visualisez un simple insecte et prenez la forme de combat d’un animal de 
 | CA | PV temp. | Mod. attaque | Mod. dégâts | Athlétisme | Sens |
 |---|---|---|---|---|---|
 | 18 + votre niveau | 10 | +13 | +2 | +13 | Vision nocturne |
+- Ignorez le malus aux tests lié à votre armure et la réduction de Vitesse qu’elle vous impose.
 - Une ou plusieurs attaques spécifiques à la forme de combat choisie, qui deviennent vos seules attaques utilisables. Vous êtes qualifié pour vous en servir. Votre modificateur d’attaque est de +13 et votre bonus aux dégâts de +2. Ces attaques sont basées sur la Force (vis-à-vis de l’état affaibli, par exemple). Si votre modificateur d’attaque à mains nues est plus élevé, utilisez-le à la place
 - Vous gagnez des pouvoirs spécifiques selon la forme choisie :
 
 | Forme | Vitesse | Frappe | Traits | Dégâts | Note |
 |---|---|---|---|---|---|
 | **Araignée** | Vitesse 7,5 m, escalade 7,5 m | **Corps à corps** crocs |  | 1d6 dégâts perforants plus 1d4 dégâts de poison persistants | vision dans le noir |
-|  |  | **À distance** toile | facteur de portée 6 m |  |  |
+|  |  | **À distance** toile | facteur de portée 6 m | enchevêtre la cible pendant 1 round |  |
 | **Coléoptère** | Vitesse 7,5 m | **Corps à corps** mandibules |  | 2d10 contondants |  |
 | **Fourmi** | Vitesse 9 m, escalade 9 m | **Corps à corps** mandibules |  | 2d6 contondants |  |
 | **Mante** | Vitesse 12 m | **Corps à corps** pattes ravisseuses |  | 2d8 perforants | odorat imprécis 9 m |
@@ -53,6 +54,7 @@ Vous faites appel à la puissance des plans pour prendre la forme de combat d’
 | CA | PV temp. | Mod. attaque | Mod. dégâts | Athlétisme | Sens |
 |---|---|---|---|---|---|
 | 19 + votre niveau | 10 | +18 | +9 | — | Vision dans le noir |
+- Ignorez le malus aux tests lié à votre armure et la réduction de Vitesse qu’elle vous impose.
 - Une ou plusieurs attaques au corps à corps à mains nues spécifiques à la forme de combat choisie, qui deviennent vos seules attaques utilisables. Vous êtes qualifié pour vous en servir. Votre modificateur d’attaque est de +18 et votre bonus aux dégâts de +9. Ces attaques sont basées sur la Dextérité (air, feu ou métal) ou Force (terre, eau ou bois). Si votre modificateur d’attaque à mains nues correspondant est plus élevé, utilisez-le à la place
 - Modificateur d’Acrobaties (air, feu ou métal) ou d’Athlétisme (terre, eau ou bois) de +20 ; ignorez ce changement si votre propre modificateur est supérieur
 - Vous gagnez des pouvoirs spécifiques selon l’élément choisi :
@@ -108,6 +110,7 @@ Vous vous transformez en monstre légendaire et prenez une forme de combat de Tr
 | CA | PV temp. | Mod. attaque | Mod. dégâts | Athlétisme | Sens |
 |---|---|---|---|---|---|
 | 20 + votre niveau | 20 | +28 | — | +30 | Vision dans le noir |
+- Ignorez le malus aux tests lié à votre armure et la réduction de Vitesse qu’elle vous impose.
 - Une ou plusieurs attaques au corps à corps à mains nues spécifiques à la forme de combat choisie, qui deviennent vos seules attaques utilisables. Vous êtes qualifié pour vous en servir. Votre modificateur d’attaque est +28 et vous utilisez les dégâts indiqués. Ces attaques sont basées sur la Force (vis-à-vis de l’état affaibli, par exemple). Si votre modificateur d’attaque à mains nues est plus élevé, vous pouvez l’utiliser à la place
 - Vous gagnez des pouvoirs spécifiques selon le monstre choisi :
 
@@ -486,6 +489,7 @@ La puissance primordiale du monde s’écoule à travers vous. Vous vous transfo
 | CA | PV temp. | Mod. attaque | Mod. dégâts | Athlétisme | Sens |
 |---|---|---|---|---|---|
 | 25 + votre niveau | 30 | +34 | — | +36 | Vision dans le noir |
+- Ignorez le malus aux tests lié à votre armure et la réduction de Vitesse qu’elle vous impose.
 - Une ou plusieurs attaques spécifiques à la forme de combat choisie, qui deviennent vos seules attaques utilisables. Vous êtes qualifié pour vous en servir. Votre modificateur d’attaque est +34 et vous utilisez les dégâts indiqués. Ces attaques sont basées sur la Force (vis-à-vis de l’état affaibli, par exemple). Si votre modificateur d’attaque à mains nues est plus élevé, vous pouvez l’utiliser à la place
 - Vous gagnez des pouvoirs spécifiques selon l’incarnation que vous choisissez :
 

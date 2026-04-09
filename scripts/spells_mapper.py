@@ -230,16 +230,30 @@ def parse_battle_form(raw_text):
 
     # ── Parser les bullets de stats ──────────────────────────────────────────
     # On cherche des • qui NE commencent PAS par un nom gras (= pas une forme)
+    # Discriminateur form: nom gras + marqueur de vitesse
+    _FORM_SPEED = re.compile(
+        r'(?:(?:pas\s+de\s+)?Vitesse\b|vol\s+\d|nage\s+\d|escalade\s+\d|creusement\s+\d)',
+        re.IGNORECASE
+    )
+
     for raw_bullet in re.findall(r'•\s*(.+?)(?=\s*•|\Z)', stats_text, re.DOTALL):
         b = _normalize_bullet(raw_bullet)
-        if not b or re.match(r'\*\*\S', raw_bullet.strip()):
-            continue  # bullet de forme, pas de stats
+        if not b:
+            continue
+        # Sauter seulement si c'est vraiment une FORME : nom gras + marqueur vitesse
+        if re.match(r'\*\*\S', raw_bullet.strip()) and _FORM_SPEED.search(b):
+            continue  # bullet de forme (nom gras + vitesse), pas de stats
+
         gs = data['global_stats']
         recognized = False
 
         ca_m = re.search(r'CA\s*=\s*(\d+\s*\+\s*votre niveau)', b, re.IGNORECASE)
         if ca_m:
             gs['ac'] = ca_m.group(1).strip()
+            # Texte résiduel après le pattern CA (ex: "Ignorez le malus aux tests…")
+            remaining = re.sub(r'^[.\s,]+', '', b[ca_m.end():]).strip()
+            if remaining:
+                gs.setdefault('notes', []).append(remaining)
             recognized = True
 
         pv_m = re.search(r'(\d+)\s*(?:PV|points? de vie) temporaires', b, re.IGNORECASE)
@@ -261,6 +275,9 @@ def parse_battle_form(raw_text):
         skill_m = re.search(r'Modificateur d.([A-Za-zà-ÿ]+) de ([+\-]\d+)', b, re.IGNORECASE)
         if skill_m:
             gs['athletics'] = skill_m.group(2)   # on stocke le bonus numérique
+            skill_name = skill_m.group(1)
+            if skill_name.lower() != 'athlétisme':
+                gs['skill_name'] = skill_name
             recognized = True
 
         # Sens (Vision nocturne, odorat, etc.) — bullet commençant par Vision/odorat
@@ -413,6 +430,9 @@ def _parse_strike_normalized(segment):
                 'amount': d.group(1),
                 'type': re.sub(r"^d'", '', d.group(2).strip())
             })
+        elif part.strip():
+            # Effet textuel sans dés (ex: "enchevêtre la cible pendant 1 round")
+            damages.append({'amount': '', 'type': part.strip()})
 
     return {'type': strike_type, 'name': name, 'traits': traits, 'damages': damages} if name else None
 
@@ -464,6 +484,8 @@ def emit_battle_form(desc_node, bf_data):
             etree.SubElement(gs_node, "damageBonus").text = gs['damageBonus']
         if gs.get('athletics'):
             etree.SubElement(gs_node, "athletics").text = gs['athletics']
+        if gs.get('skill_name'):
+            etree.SubElement(gs_node, "skillName").text = gs['skill_name']
         if gs.get('senses'):
             etree.SubElement(gs_node, "senses").text = gs['senses']
         if gs.get('speed'):

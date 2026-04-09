@@ -144,6 +144,7 @@
             <xs:element name="attackBonus" type="xs:string" minOccurs="0"/>
             <xs:element name="damageBonus" type="xs:string" minOccurs="0"/>
             <xs:element name="athletics" type="xs:string" minOccurs="0"/>
+            <xs:element name="skillName" type="xs:string" minOccurs="0"/>
             <xs:element name="senses" type="xs:string" minOccurs="0"/>
             <xs:element name="speed" type="xs:string" minOccurs="0"/>
             <xs:element name="strike" type="baseStrikeType" minOccurs="0" maxOccurs="unbounded"/>

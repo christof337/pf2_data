@@ -777,9 +777,10 @@ Vous alternez extrêmement rapidement entre le plan où vous vous trouviez initi
 ---- 
 Vous puisez dans votre maîtrise des cieux pour remodeler votre corps en une forme de combat : celle d’un animal volant de taille Moyenne. Lorsque vous Lancez ce sort, choisissez l’une des formes de combat listées. Vous pouvez opter pour un type d’animal spécifique (comme un hibou ou un aigle pour la forme d’oiseau), mais cela n’affecte ni la taille ni les statistiques de la forme de combat. Sous cette forme, vous gagnez le trait animal. Vous pouvez Révoquer le sort. Vous gagnez des pouvoirs spécifiques selon l’animal choisi :
 
-| CA | PV temp. | Mod. attaque | Mod. dégâts | Athlétisme | Sens |
+| CA | PV temp. | Mod. attaque | Mod. dégâts | Acrobaties | Sens |
 |---|---|---|---|---|---|
 | 18 + votre niveau | 5 | +16 | +5 | +16 | Vision nocturne |
+- Ignorez le malus aux tests lié à votre armure et la réduction de Vitesse qu’elle vous impose.
 - Une ou plusieurs attaques au corps à corps à mains nues spécifiques à la forme de combat choisie, qui deviennent vos seules attaques utilisables. Vous êtes qualifié pour vous en servir. Votre modificateur d’attaque est de +16 et votre bonus aux dégâts de +5. Ces attaques sont basées sur la Dextérité (vis-à-vis de l’état maladroit, par exemple). Si votre modificateur d’attaque pour les attaques à mains nues basées sur la Dextérité est supérieur, utilisez-le à la place
 
 | Forme | Vitesse | Frappe | Traits | Dégâts | Note |
@@ -814,6 +815,7 @@ Vous faites appel à l’énergie primordiale pour remodeler votre corps en une 
 | CA | PV temp. | Mod. attaque | Mod. dégâts | Athlétisme | Sens |
 |---|---|---|---|---|---|
 | 16 + votre niveau | 5 | +9 | +1 | +9 | Vision nocturne et odorat imprécis 9 m |
+- Ignorez le malus aux tests lié à votre armure et la réduction de Vitesse qu’elle vous impose.
 - Une ou plusieurs attaques au corps à corps à mains nues spécifiques à la forme de combat choisie, qui deviennent vos seules attaques utilisables. Vous êtes qualifié pour vous en servir. Votre modificateur d’attaque est de +9 et votre bonus aux dégâts de +1. Ces attaques sont basées sur la Force (vis-à-vis de l’état affaibli, par exemple). Si votre bonus d’attaque à mains nues est plus élevé, utilisez-le à la place
 
 | Forme | Vitesse | Frappe | Traits | Dégâts | Note |
@@ -856,6 +858,7 @@ Vous puisez dans les forces primordiales de la nature pour prendre la forme de c
 | CA | PV temp. | Mod. attaque | Mod. dégâts | Athlétisme | Sens |
 |---|---|---|---|---|---|
 | 18 + votre niveau | 15 | +16 | +9 | +18 | Vision nocturne et odorat imprécis 9 m |
+- Ignorez le malus aux tests lié à votre armure et la réduction de Vitesse qu’elle vous impose.
 - Une ou plusieurs attaques au corps à corps à mains nues spécifiques à la forme de combat choisie, qui deviennent vos seules attaques utilisables. Vous êtes qualifié pour vous en servir. Votre modificateur d’attaque est de +16 et votre bonus aux dégâts de +9. Ces attaques sont basées sur la Force (vis-à-vis de l’état affaibli, par exemple). Si votre modificateur d’attaque à mains nues est plus élevé, vous pouvez l’utiliser à la place
 
 | Forme | Vitesse | Frappe | Traits | Dégâts |
@@ -864,7 +867,7 @@ Vous puisez dans les forces primordiales de la nature pour prendre la forme de c
 |  |  | **Corps à corps** patte |  | 2d6 contondants |
 | **Brontosaure** | Vitesse 7,5 m | **Corps à corps** queue | allonge 4,5 m | 2d6 contondants |
 |  |  | **Corps à corps** patte |  | 2d8 contondants |
-| **Deinonychus** | Vitesse 12 m | **Corps à corps** griffes | agile | 2d4 perforants |
+| **Deinonychus** | Vitesse 12 m | **Corps à corps** griffes | agile | 2d4 perforants plus 1 saignement persistant |
 |  |  | **Corps à corps** mâchoires |  | 1d10 perforants |
 | **Stégosaure** | Vitesse 9 m | **Corps à corps** queue | allonge 3 m | 2d8 perforants |
 | **Tricératops** | Vitesse 9 m | **Corps à corps** corne |  | 2d8 perforants plus 1d6 saignement persistants sur un coup critique |
@@ -896,11 +899,14 @@ Vous faites appel à une puissante magie pour prendre la forme de combat d’un 
 |---|---|---|---|---|---|
 | 18 + votre niveau | 10 | +22 | +6 | +23 | Vision dans le noir et odorat imprécis à 18 m |
 **Vitesse** Vitesse 12 m, vol 30 m Vous obtenez l’une des Vitesses suivantes que le dragon choisi possède mais avec la valeur indiquée ci-après : creusement 6 m, escalade 12 m, nage 18 m
+- Ignorez le malus aux tests lié à votre armure et la réduction de Vitesse qu’elle vous impose.
 - Résistance 10 contre le type de dégâts de votre souffle de dragon (cf. p. 336)
+- Souffle de dragon 2 Vous soufflez une énergie magique et mortelle dans une zone, infligeant 10d6 dégâts à chaque créature qui s’y trouve (jet basique contre votre DD des sorts). La forme, le type de dégâts et le type de jet de sauvegarde correspondent à ceux du souffle du dragon choisi. Si ce souffle de dragon peut infliger plus d’un type de dégâts, choisissez-en un au moment de l’incantation de _forme de dragon_. La forme est un cône de 9 m ou une ligne de 30 m. Une fois activé, votre souffle de dragon est inutilisable pendant 1d4 rounds. Le souffle de dragon a le trait de tradition et le trait de dégâts (si applicable) correspondant au type du dragon choisi
+- Résistance de tradition. Si la tradition magique du dragon correspond à celle de votre sort _forme de dragon_, vous gagnez le pouvoir indiqué. Arcanique résistance 5 aux dégâts magiques ; divine résistance 10 aux dégâts d’esprit, de vitalité et de néant ; occulte résistance 10 aux dégâts mentaux ; primordiale résistance 5 aux dégâts physiques
 
 | Frappe | Traits | Dégâts |
 |---|---|---|
-| **Corps à corps** mâchoires |  | 2d12 perforants plus 2d6 dégâts du même type que votre souffle de dragon (cf |
+| **Corps à corps** mâchoires |  | 2d12 perforants plus 2d6 dégâts du même type que votre souffle de dragon (cf plus bas) |
 | **Corps à corps** griffes | agile | 3d10 tranchants |
 | **Corps à corps** queue | allonge 3 m | 3d10 contondants |
 
@@ -927,6 +933,7 @@ Vous prenez le forme de combat d’un animal de Très Petite taille, tel qu’un
 |---|---|---|---|---|---|
 | 15 + votre niveau | — | — | — | — | Vision nocturne et odorat imprécis 9 m |
 **Vitesse** Vitesse 6 m
+- Ignorez le malus aux tests lié à votre armure et la réduction de Vitesse qu’elle vous impose.
 - Faiblesse 5 face aux dégâts physiques (si vous subissez des dégâts physiques sous cette forme, vous subissez 5 dégâts supplémentaires)
 - Modificateurs de +10 en Acrobaties et Discrétion, sauf si les vôtres sont plus élevés ; modificateur de −4 en Athlétisme
 
@@ -952,6 +959,7 @@ Vous vous inspirez des créatures végétales en prenant la forme de combat d’
 | CA | PV temp. | Mod. attaque | Mod. dégâts | Athlétisme | Sens |
 |---|---|---|---|---|---|
 | 19 + votre niveau | 12 | +17 | +11 | +19 | Vision nocturne |
+- Ignorez le malus aux tests lié à votre armure et la réduction de Vitesse qu’elle vous impose.
 - Résistance 10 au poison
 - Une ou plusieurs attaques au corps à corps à mains nues spécifiques à la forme de combat choisie, qui deviennent vos seules attaques utilisables. Vous êtes qualifié pour vous en servir. Votre modificateur d’attaque est de +17 et votre bonus aux dégâts de +11. Ces attaques sont basées sur la Force (vis-à-vis de l’état affaibli, par exemple). Si votre modificateur d’attaque à mains nues est plus élevé, vous pouvez l’utiliser à la place
 - Vous gagnez des pouvoirs spécifiques selon la plante que vous choisissez :
@@ -983,13 +991,14 @@ Vous visualisez un simple insecte et prenez la forme de combat d’un animal de 
 | CA | PV temp. | Mod. attaque | Mod. dégâts | Athlétisme | Sens |
 |---|---|---|---|---|---|
 | 18 + votre niveau | 10 | +13 | +2 | +13 | Vision nocturne |
+- Ignorez le malus aux tests lié à votre armure et la réduction de Vitesse qu’elle vous impose.
 - Une ou plusieurs attaques spécifiques à la forme de combat choisie, qui deviennent vos seules attaques utilisables. Vous êtes qualifié pour vous en servir. Votre modificateur d’attaque est de +13 et votre bonus aux dégâts de +2. Ces attaques sont basées sur la Force (vis-à-vis de l’état affaibli, par exemple). Si votre modificateur d’attaque à mains nues est plus élevé, utilisez-le à la place
 - Vous gagnez des pouvoirs spécifiques selon la forme choisie :
 
 | Forme | Vitesse | Frappe | Traits | Dégâts | Note |
 |---|---|---|---|---|---|
 | **Araignée** | Vitesse 7,5 m, escalade 7,5 m | **Corps à corps** crocs |  | 1d6 dégâts perforants plus 1d4 dégâts de poison persistants | vision dans le noir |
-|  |  | **À distance** toile | facteur de portée 6 m |  |  |
+|  |  | **À distance** toile | facteur de portée 6 m | enchevêtre la cible pendant 1 round |  |
 | **Coléoptère** | Vitesse 7,5 m | **Corps à corps** mandibules |  | 2d10 contondants |  |
 | **Fourmi** | Vitesse 9 m, escalade 9 m | **Corps à corps** mandibules |  | 2d6 contondants |  |
 | **Mante** | Vitesse 12 m | **Corps à corps** pattes ravisseuses |  | 2d8 perforants | odorat imprécis 9 m |
@@ -1020,6 +1029,7 @@ Vous faites appel à la puissance des plans pour prendre la forme de combat d’
 | CA | PV temp. | Mod. attaque | Mod. dégâts | Athlétisme | Sens |
 |---|---|---|---|---|---|
 | 19 + votre niveau | 10 | +18 | +9 | — | Vision dans le noir |
+- Ignorez le malus aux tests lié à votre armure et la réduction de Vitesse qu’elle vous impose.
 - Une ou plusieurs attaques au corps à corps à mains nues spécifiques à la forme de combat choisie, qui deviennent vos seules attaques utilisables. Vous êtes qualifié pour vous en servir. Votre modificateur d’attaque est de +18 et votre bonus aux dégâts de +9. Ces attaques sont basées sur la Dextérité (air, feu ou métal) ou Force (terre, eau ou bois). Si votre modificateur d’attaque à mains nues correspondant est plus élevé, utilisez-le à la place
 - Modificateur d’Acrobaties (air, feu ou métal) ou d’Athlétisme (terre, eau ou bois) de +20 ; ignorez ce changement si votre propre modificateur est supérieur
 - Vous gagnez des pouvoirs spécifiques selon l’élément choisi :

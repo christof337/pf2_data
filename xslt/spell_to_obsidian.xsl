@@ -180,7 +180,12 @@
     <xsl:text>&#10;</xsl:text>
     <!-- Statistiques globales -->
     <xsl:if test="globalStats">
-      <xsl:text>&#10;| CA | PV temp. | Mod. attaque | Mod. dégâts | Athlétisme | Sens |&#10;</xsl:text>
+      <xsl:text>&#10;| CA | PV temp. | Mod. attaque | Mod. dégâts | </xsl:text>
+      <xsl:choose>
+        <xsl:when test="globalStats/skillName"><xsl:value-of select="globalStats/skillName"/></xsl:when>
+        <xsl:otherwise>Athlétisme</xsl:otherwise>
+      </xsl:choose>
+      <xsl:text> | Sens |&#10;</xsl:text>
       <xsl:text>|---|---|---|---|---|---|&#10;</xsl:text>
       <xsl:text>| </xsl:text>
       <xsl:choose>
@@ -239,7 +244,9 @@
           </xsl:for-each>
           <xsl:text> | </xsl:text>
           <xsl:for-each select="damages/damage">
-            <xsl:value-of select="amount"/><xsl:text> </xsl:text>
+            <xsl:if test="amount != ''">
+              <xsl:value-of select="amount"/><xsl:text> </xsl:text>
+            </xsl:if>
             <xsl:value-of select="damageType"/>
             <xsl:if test="position() != last()"> plus </xsl:if>
           </xsl:for-each>
@@ -289,8 +296,10 @@
           </xsl:for-each>
           <xsl:text> | </xsl:text>
           <xsl:for-each select="damages/damage">
-            <xsl:value-of select="amount"/>
-            <xsl:text> </xsl:text>
+            <xsl:if test="amount != ''">
+              <xsl:value-of select="amount"/>
+              <xsl:text> </xsl:text>
+            </xsl:if>
             <xsl:value-of select="damageType"/>
             <xsl:if test="position() != last()"> plus </xsl:if>
           </xsl:for-each>
