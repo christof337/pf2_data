@@ -273,7 +273,7 @@ La cible est frappée d’infortune, ce qui la déstabilise. La cible doit effec
 # MÉMOIRE RÉÉCRITE `[two-actions]`
 ## SORT 4
 ----
-==CONCENTRATION== ==MANIPULATION== ==MENTAL== ==PEU COURANT==
+==PEU COURANT== ==CONCENTRATION== ==MANIPULATION== ==MENTAL==
 **Traditions** occulte
 **Portée** 9 m ; **Cible** 1 créature
 **Défense** Volonté ; **Durée** illimitée
@@ -394,7 +394,7 @@ Les cibles adoptent naturellement des formes animales plus adaptées à leur dé
 # MIRAGE
 ## SORT 4
 ----
-==CONCENTRATION== ==ILLUSION== ==MANIPULATION== ==PEU COURANT==
+==PEU COURANT== ==CONCENTRATION== ==ILLUSION== ==MANIPULATION==
 **Traditions** arcanique, occulte, primordiale
 **Incantation** 10 min
 **Portée** 150 m ; **Zone** explosion 15 m
@@ -700,7 +700,7 @@ Grâce à la magie de votre troisième œil, vous parvenez à vous réorienter. 
 # PALAIS PLANAIRE
 ## SORT 7
 ----
-==CONCENTRATION== ==EXTRADIMENSIONNEL== ==MANIPULATION== ==PEU COURANT==
+==PEU COURANT== ==CONCENTRATION== ==EXTRADIMENSIONNEL== ==MANIPULATION==
 **Traditions** arcanique, occulte
 **Incantation** 1 min
 **Portée** 9 m
@@ -799,7 +799,7 @@ Vous gagnez un bonus de statut de +9 m à votre Vitesse.
 # PASSAGE MAGIQUE `[two-actions]`
 ## SORT 5
 ----
-==CONCENTRATION== ==MANIPULATION== ==PEU COURANT== ==TERRE==
+==PEU COURANT== ==CONCENTRATION== ==MANIPULATION== ==TERRE==
 **Traditions** arcanique, primordiale
 **Portée** contact ; **Zone** section de mur en bois, en plâtre ou en pierre de 1,5 m de largeur, 3 m de haut et 3 m de profondeur
 **Durée** 1 h
@@ -816,7 +816,7 @@ Vous créez un tunnel visible dans le mur situé dans la zone désignée, en rem
 # PASSAGE SYLVESTRE
 ## SORT 5
 ----
-==CONCENTRATION== ==MANIPULATION== ==MENTAL== ==PEU COURANT== ==PLANTE== ==TÉLÉPORTATION==
+==PEU COURANT== ==CONCENTRATION== ==MANIPULATION== ==MENTAL== ==PLANTE== ==TÉLÉPORTATION==
 **Traditions** primordiale
 **Incantation** 1 min
 
@@ -1006,7 +1006,7 @@ Une main griffue et éphémère empoigne la cible et la brûle grâce à un acid
 # PORTAIL `[two-actions]`
 ## SORT 10
 ----
-==CONCENTRATION== ==MANIPULATION== ==PEU COURANT== ==TÉLÉPORTATION==
+==PEU COURANT== ==CONCENTRATION== ==MANIPULATION== ==TÉLÉPORTATION==
 **Traditions** arcanique, divine, occulte
 **Portée** 36 m
 **Durée** maintenu jusqu’à 1 min

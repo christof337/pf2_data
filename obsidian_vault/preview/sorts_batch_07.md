@@ -105,7 +105,7 @@ Toutes les créatures dans la zone deviennent somnolentes, et certaines peuvent 
 # SONDE MENTALE
 ## SORT 5
 ----
-==CONCENTRATION== ==LINGUISTIQUE== ==MANIPULATION== ==MENTAL== ==PEU COURANT==
+==PEU COURANT== ==CONCENTRATION== ==LINGUISTIQUE== ==MANIPULATION== ==MENTAL==
 **Traditions** arcanique, occulte
 **Incantation** 1 min
 **Portée** 9 m ; **Cible** 1 créature
@@ -309,9 +309,10 @@ Vous pouvez communiquer télépathiquement avec des créatures situées à 9 m. 
 # TÉLÉPORTATION INTERPLANAIRE
 ## SORT 7
 ----
-==CONCENTRATION== ==MANIPULATION== ==PEU COURANT== ==TÉLÉPORTATION==
+==PEU COURANT== ==CONCENTRATION== ==MANIPULATION== ==TÉLÉPORTATION==
 **Traditions** arcanique, divine, occulte, primordiale
 **Incantation** 10 min
+**Conditions** . Vous disposez d’une clef planaire pour le plan visé et l’utilisez comme locus
 **Portée** 1,5 m ; **Cible** jusqu’à 8 créatures consentantes
 
 ---- 
@@ -324,7 +325,7 @@ Vous et vos alliés franchissez les barrières entre les plans d’existence. Le
 # TÉLÉPORTATION
 ## SORT 6
 ----
-==CONCENTRATION== ==MANIPULATION== ==PEU COURANT== ==TÉLÉPORTATION==
+==PEU COURANT== ==CONCENTRATION== ==MANIPULATION== ==TÉLÉPORTATION==
 **Traditions** arcanique, occulte
 **Incantation** 10 min
 **Portée** 150 km ; **Cible** vous et jusqu’à 4 cibles que vous touchez, qu’il s’agisse de créatures consentantes ou d’objets ayant approximativement la taille d’une créature
@@ -445,7 +446,7 @@ Vous semez la terreur dans le cœur de la cible qui doit effectuer un jet de Vol
 # TINTEMENT DE VÉRITÉ
 ## SORT 3
 ----
-==CONCENTRATION== ==DÉTECTION== ==MANIPULATION== ==MENTAL== ==PEU COURANT==
+==PEU COURANT== ==CONCENTRATION== ==DÉTECTION== ==MANIPULATION== ==MENTAL==
 **Traditions** divine, occulte
 **Portée** 9 m ; **Zone** explosion 6 m
 **Défense** Volonté ; **Durée** 10 min
@@ -673,6 +674,7 @@ Votre contact transmet la variole gobeline, une éruption allergique qui démang
 ----
 ==MALÉDICTION==
 **Traditions** arcanique, divine, occulte
+**Conditions** . Vous pouvez saigner.
 **Déclencheur** Une créature vous inflige des dégâts perforants, tranchants ou de saignement persistants
 **Portée** 9 m ; **Cible** la créature ayant déclenché l’effet
 **Défense** Volonté ; **Durée** variable
@@ -795,7 +797,7 @@ Vous vous dotez d’une vision surnaturelle dans les zones de ténèbres. Vous g
 # VISION FAUSSÉE
 ## SORT 5
 ----
-==CONCENTRATION== ==ILLUSION== ==MANIPULATION== ==PEU COURANT==
+==PEU COURANT== ==CONCENTRATION== ==ILLUSION== ==MANIPULATION==
 **Traditions** arcanique, occulte
 **Incantation** 10 min
 **Portée** contact ; **Zone** explosion 30 m
@@ -843,7 +845,7 @@ Une explosion d’énergie de guérison apaise les créatures vivantes et éveil
 # VOILE OCCULTANT
 ## SORT 3
 ----
-==CONCENTRATION== ==MANIPULATION== ==PEU COURANT==
+==PEU COURANT== ==CONCENTRATION== ==MANIPULATION==
 **Traditions** arcanique, occulte, primordiale
 **Incantation** 10 min
 **Portée** contact ; **Cible** 1 créature ou objet
@@ -875,7 +877,7 @@ La cible peut s’élever dans les airs. Elle gagne une Vitesse de vol égale à
 # VOYAGE TÉNÉBREUX
 ## SORT 5
 ----
-==CONCENTRATION== ==MANIPULATION== ==OMBRE== ==PEU COURANT== ==TÉLÉPORTATION==
+==PEU COURANT== ==CONCENTRATION== ==MANIPULATION== ==OMBRE== ==TÉLÉPORTATION==
 **Traditions** arcanique, occulte
 **Incantation** 1 min
 **Portée** contact ; **Cible** vous et jusqu’à 10 créatures consentantes que vous touchez

@@ -122,7 +122,7 @@ Une main griffue et éphémère empoigne la cible et la brûle grâce à un acid
 # PORTAIL `[two-actions]`
 ## SORT 10
 ----
-==CONCENTRATION== ==MANIPULATION== ==PEU COURANT== ==TÉLÉPORTATION==
+==PEU COURANT== ==CONCENTRATION== ==MANIPULATION== ==TÉLÉPORTATION==
 **Traditions** arcanique, divine, occulte
 **Portée** 36 m
 **Durée** maintenu jusqu’à 1 min
@@ -136,7 +136,7 @@ Vous ouvrez une faille vers un autre plan, créant un portail que les créatures
 # PORTE LIMINALE
 ## SORT 4
 ----
-==CONCENTRATION== ==EXTRADIMENSIONNEL== ==MANIPULATION== ==PEU COURANT==
+==PEU COURANT== ==CONCENTRATION== ==EXTRADIMENSIONNEL== ==MANIPULATION==
 **Traditions** arcanique, occulte
 **Incantation** 10 min
 **Portée** contact
@@ -151,7 +151,7 @@ Vous dessinez à la craie sur une surface intacte une porte qui donne sur un esp
 # POSSESSION `[two-actions]`
 ## SORT 7
 ----
-==CONCENTRATION== ==MANIPULATION== ==MENTAL== ==MISE HORS DE COMBAT== ==PEU COURANT== ==POSSESSION==
+==PEU COURANT== ==CONCENTRATION== ==MANIPULATION== ==MENTAL== ==MISE HORS DE COMBAT== ==POSSESSION==
 **Traditions** occulte
 **Portée** 9 m ; **Cible** 1 créature vivante
 **Défense** Volonté ; **Durée** 1 min
@@ -387,9 +387,10 @@ La magie permet à la cible d’agir plus rapidement. Elle obtient l’état acc
 # RAPPEL À LA VIE
 ## SORT 6
 ----
-==CONCENTRATION== ==GUÉRISON== ==MANIPULATION== ==PEU COURANT==
+==PEU COURANT== ==CONCENTRATION== ==GUÉRISON== ==MANIPULATION==
 **Traditions** divine
 **Incantation** 10 min
+**Coût** gemmes d’une valeur totale égale au niveau de la cible (1 au minimum) × 200 po
 **Portée** 3 m ; **Cible** 1 créature morte de niveau 13 ou moins
 
 ---- 
@@ -446,9 +447,10 @@ Vous faites en sorte que tous les sorts lancés sur la cible répandent leurs é
 # RECRÉER
 ## SORT 10
 ----
-==CONCENTRATION== ==MANIPULATION== ==PEU COURANT==
+==PEU COURANT== ==CONCENTRATION== ==MANIPULATION==
 **Traditions** arcanique, divine, occulte, primordiale
 **Incantation** 1 h
+**Coût** vestiges d’un objet
 **Portée** 1,5 m
 
 ---- 
@@ -769,7 +771,7 @@ Vous protégez un allié contre les attaques et les sorts hostiles de la cible e
 # SCEAU PLANAIRE `[two-actions]`
 ## SORT 7
 ----
-==CONCENTRATION== ==MANIPULATION== ==PEU COURANT==
+==PEU COURANT== ==CONCENTRATION== ==MANIPULATION==
 **Traditions** arcanique, divine, occulte
 **Portée** 36 m ; **Zone** explosion 18 m
 **Durée** jusqu’à vos prochains préparatifs quotidiens
@@ -798,7 +800,7 @@ Vous créez une scène imaginaire qui peut englober jusqu’à dix créatures ou
 # SCRUTATION
 ## SORT 6
 ----
-==CONCENTRATION== ==MANIPULATION== ==PEU COURANT== ==SCRUTATION==
+==PEU COURANT== ==CONCENTRATION== ==MANIPULATION== ==SCRUTATION==
 **Traditions** arcanique, occulte
 **Incantation** 10 min
 **Portée** planétaire ; **Cible** 1 créature

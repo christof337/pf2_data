@@ -263,6 +263,14 @@ def parse_battle_form(raw_text):
                         if strike:
                             gs.setdefault('strikes', []).append(strike)
 
+        # Bullet "Une ou plusieurs attaques…" — cas FORME ÉLÉMENTAIRE et similaires :
+        # atk_m/dmg_m extraient les chiffres mais perdent le texte descriptif complet.
+        # On sauvegarde le texte intégral en note pour ne pas perdre le contexte
+        # ("basées sur la Dextérité/Force", "Si votre modificateur est plus élevé…").
+        if re.match(r'Une ou plusieurs attaques', b, re.IGNORECASE):
+            gs.setdefault('notes', []).append(re.sub(r'\.$', '', b).strip())
+            recognized = True
+
         # Bullets non reconnus → note (Faiblesse, Résistance, Souffle, etc.)
         if not recognized:
             gs.setdefault('notes', []).append(re.sub(r'\.$', '', b).strip())

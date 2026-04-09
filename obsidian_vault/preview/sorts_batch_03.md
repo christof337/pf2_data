@@ -780,6 +780,7 @@ Vous puisez dans votre maîtrise des cieux pour remodeler votre corps en une for
 | CA | PV temp. | Mod. attaque | Mod. dégâts | Athlétisme | Sens |
 |---|---|---|---|---|---|
 | 18 + votre niveau | 5 | +16 | +5 | +16 | Vision nocturne |
+- Une ou plusieurs attaques au corps à corps à mains nues spécifiques à la forme de combat choisie, qui deviennent vos seules attaques utilisables. Vous êtes qualifié pour vous en servir. Votre modificateur d’attaque est de +16 et votre bonus aux dégâts de +5. Ces attaques sont basées sur la Dextérité (vis-à-vis de l’état maladroit, par exemple). Si votre modificateur d’attaque pour les attaques à mains nues basées sur la Dextérité est supérieur, utilisez-le à la place
 
 | Forme | Vitesse | Frappe | Traits | Dégâts | Note |
 |---|---|---|---|---|---|
@@ -813,6 +814,7 @@ Vous faites appel à l’énergie primordiale pour remodeler votre corps en une 
 | CA | PV temp. | Mod. attaque | Mod. dégâts | Athlétisme | Sens |
 |---|---|---|---|---|---|
 | 16 + votre niveau | 5 | +9 | +1 | +9 | Vision nocturne et odorat imprécis 9 m |
+- Une ou plusieurs attaques au corps à corps à mains nues spécifiques à la forme de combat choisie, qui deviennent vos seules attaques utilisables. Vous êtes qualifié pour vous en servir. Votre modificateur d’attaque est de +9 et votre bonus aux dégâts de +1. Ces attaques sont basées sur la Force (vis-à-vis de l’état affaibli, par exemple). Si votre bonus d’attaque à mains nues est plus élevé, utilisez-le à la place
 
 | Forme | Vitesse | Frappe | Traits | Dégâts | Note |
 |---|---|---|---|---|---|
@@ -854,6 +856,7 @@ Vous puisez dans les forces primordiales de la nature pour prendre la forme de c
 | CA | PV temp. | Mod. attaque | Mod. dégâts | Athlétisme | Sens |
 |---|---|---|---|---|---|
 | 18 + votre niveau | 15 | +16 | +9 | +18 | Vision nocturne et odorat imprécis 9 m |
+- Une ou plusieurs attaques au corps à corps à mains nues spécifiques à la forme de combat choisie, qui deviennent vos seules attaques utilisables. Vous êtes qualifié pour vous en servir. Votre modificateur d’attaque est de +16 et votre bonus aux dégâts de +9. Ces attaques sont basées sur la Force (vis-à-vis de l’état affaibli, par exemple). Si votre modificateur d’attaque à mains nues est plus élevé, vous pouvez l’utiliser à la place
 
 | Forme | Vitesse | Frappe | Traits | Dégâts |
 |---|---|---|---|---|
@@ -950,6 +953,7 @@ Vous vous inspirez des créatures végétales en prenant la forme de combat d’
 |---|---|---|---|---|---|
 | 19 + votre niveau | 12 | +17 | +11 | +19 | Vision nocturne |
 - Résistance 10 au poison
+- Une ou plusieurs attaques au corps à corps à mains nues spécifiques à la forme de combat choisie, qui deviennent vos seules attaques utilisables. Vous êtes qualifié pour vous en servir. Votre modificateur d’attaque est de +17 et votre bonus aux dégâts de +11. Ces attaques sont basées sur la Force (vis-à-vis de l’état affaibli, par exemple). Si votre modificateur d’attaque à mains nues est plus élevé, vous pouvez l’utiliser à la place
 
 | Forme | Vitesse | Frappe | Traits | Dégâts | Note |
 |---|---|---|---|---|---|
@@ -978,6 +982,7 @@ Vous visualisez un simple insecte et prenez la forme de combat d’un animal de 
 | CA | PV temp. | Mod. attaque | Mod. dégâts | Athlétisme | Sens |
 |---|---|---|---|---|---|
 | 18 + votre niveau | 10 | +13 | +2 | +13 | Vision nocturne |
+- Une ou plusieurs attaques spécifiques à la forme de combat choisie, qui deviennent vos seules attaques utilisables. Vous êtes qualifié pour vous en servir. Votre modificateur d’attaque est de +13 et votre bonus aux dégâts de +2. Ces attaques sont basées sur la Force (vis-à-vis de l’état affaibli, par exemple). Si votre modificateur d’attaque à mains nues est plus élevé, utilisez-le à la place
 
 | Forme | Vitesse | Frappe | Traits | Dégâts | Note |
 |---|---|---|---|---|---|
@@ -1013,6 +1018,7 @@ Vous faites appel à la puissance des plans pour prendre la forme de combat d’
 | CA | PV temp. | Mod. attaque | Mod. dégâts | Athlétisme | Sens |
 |---|---|---|---|---|---|
 | 19 + votre niveau | 10 | +18 | +9 | — | Vision dans le noir |
+- Une ou plusieurs attaques au corps à corps à mains nues spécifiques à la forme de combat choisie, qui deviennent vos seules attaques utilisables. Vous êtes qualifié pour vous en servir. Votre modificateur d’attaque est de +18 et votre bonus aux dégâts de +9. Ces attaques sont basées sur la Dextérité (air, feu ou métal) ou Force (terre, eau ou bois). Si votre modificateur d’attaque à mains nues correspondant est plus élevé, utilisez-le à la place
 - Modificateur d’Acrobaties (air, feu ou métal) ou d’Athlétisme (terre, eau ou bois) de +20 ; ignorez ce changement si votre propre modificateur est supérieur. Vous gagnez des pouvoirs spécifiques selon l’élément choisi :
 
 | Forme | Vitesse | Frappe | Traits | Dégâts | Note |

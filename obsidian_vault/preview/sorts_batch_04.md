@@ -11,18 +11,23 @@
 
 **Durée** 1 min
 ---- 
-Vous visualisez un simple insecte et prenez la forme de combat d’un animal de taille Moyenne. Lorsque vous Lancez ce sort, choisissez l’une des formes de combat listées. Vous pouvez opter pour un type d’animal spécifique (comme une coccinelle ou un scarabée pour la forme de coléoptère), mais cela n’affecte ni la taille ni les statistiques de la forme. Sous cette forme, vous gagnez le trait animal. Vous pouvez Révoquer ce sort. Vous gagnez les statistiques et pouvoirs suivants, quelle que soit la forme de combat choisie :
-- CA = 18 + votre niveau. Ignorez le malus aux tests lié à votre armure et la réduction de Vitesse qu’elle vous impose.
-- 10 points de vie temporaires.
-- Vision nocturne.
-- Une ou plusieurs attaques spécifiques à la forme de combat choisie, qui deviennent vos seules attaques utilisables. Vous êtes qualifié pour vous en servir. Votre modificateur d’attaque est de +13 et votre bonus aux dégâts de +2. Ces attaques sont basées sur la Force (vis-à-vis de l’état affaibli, par exemple). Si votre modificateur d’attaque à mains nues est plus élevé, utilisez-le à la place.
-- Modificateur d’Athlétisme de +13, sauf si le vôtre est supérieur. Vous gagnez des pouvoirs spécifiques selon la forme choisie :
-- **Araignée** Vitesse 7,5 m, escalade 7,5 m ; vision dans le noir ; **Corps à corps** 1 crocs, **Dégâts** 1d6 dégâts perforants plus 1d4 dégâts de poison persistants ; **À distance** 1 toile (facteur de portée 6 m), **Dégâts** enchevêtre la cible pendant 1 round.
-- **Coléoptère** Vitesse 7,5 m ; **Corps à corps** 1 mandibules, **Dégâts** 2d10 contondants.
-- **Fourmi** Vitesse 9 m, escalade 9 m ; **Corps à corps** 1 mandibules, **Dégâts** 2d6 contondants.
-- **Mante** Vitesse 12 m ; odorat imprécis 9 m ; **Corps à corps** 1 pattes ravisseuses, **Dégâts** 2d8 perforants.
-- **Mille‑pattes** Vitesse 7,5 m, escalade 7,5 m ; vision dans le noir ; **Corps à corps** 1 mandibules, **Dégâts** 1d8 perforants plus 1d4 de poison persistants.
-- **Scorpion** Vitesse 12 m ; vision dans le noir, perception des vibrations imprécise 18 m ; **Corps à corps** 1 dard, **Dégâts** 1d8 perforants plus 1d4 de poison persistants ; **Corps à corps** 1 pince (agile), **Dégâts** 1d6 contondants.
+Vous visualisez un simple insecte et prenez la forme de combat d’un animal de taille Moyenne. Lorsque vous Lancez ce sort, choisissez l’une des formes de combat listées. Vous pouvez opter pour un type d’animal spécifique (comme une coccinelle ou un scarabée pour la forme de coléoptère), mais cela n’affecte ni la taille ni les statistiques de la forme. Sous cette forme, vous gagnez le trait animal. Vous pouvez Révoquer ce sort.
+
+| CA | PV temp. | Mod. attaque | Mod. dégâts | Athlétisme | Sens |
+|---|---|---|---|---|---|
+| 18 + votre niveau | 10 | +13 | +2 | +13 | Vision nocturne |
+- Une ou plusieurs attaques spécifiques à la forme de combat choisie, qui deviennent vos seules attaques utilisables. Vous êtes qualifié pour vous en servir. Votre modificateur d’attaque est de +13 et votre bonus aux dégâts de +2. Ces attaques sont basées sur la Force (vis-à-vis de l’état affaibli, par exemple). Si votre modificateur d’attaque à mains nues est plus élevé, utilisez-le à la place
+
+| Forme | Vitesse | Frappe | Traits | Dégâts | Note |
+|---|---|---|---|---|---|
+| **Araignée** | Vitesse 7,5 m, escalade 7,5 m | **Corps à corps** crocs |  | 1d6 dégâts perforants plus 1d4 dégâts de poison persistants | vision dans le noir |
+|  |  | **À distance** toile | facteur de portée 6 m |  |  |
+| **Coléoptère** | Vitesse 7,5 m | **Corps à corps** mandibules |  | 2d10 contondants |  |
+| **Fourmi** | Vitesse 9 m, escalade 9 m | **Corps à corps** mandibules |  | 2d6 contondants |  |
+| **Mante** | Vitesse 12 m | **Corps à corps** pattes ravisseuses |  | 2d8 perforants | odorat imprécis 9 m |
+| **Mille‑pattes** | Vitesse 7,5 m, escalade 7,5 m | **Corps à corps** mandibules |  | 1d8 perforants plus 1d4 de poison persistants | vision dans le noir |
+| **Scorpion** | Vitesse 12 m | **Corps à corps** dard |  | 1d8 perforants plus 1d4 de poison persistants | vision dans le noir, perception des vibrations imprécise 18 m |
+|  |  | **Corps à corps** pince | agile | 1d6 contondants |  |
  
 
 ----
@@ -42,18 +47,22 @@ Vous visualisez un simple insecte et prenez la forme de combat d’un animal de 
 
 **Durée** 1 min
 ---- 
-Vous faites appel à la puissance des plans pour prendre la forme de combat d’un élémentaire Moyen. Lorsque vous Lancez ce sort, choisissez l’un des éléments listés. Sous cette forme, vous gagnez le trait correspondant et le trait élémentaire. La forme de combat possède des mains et vous autorise des actions de manipulation. Vous pouvez Révoquer le sort. Vous gagnez les statistiques et pouvoirs suivants, quelle que soit la forme de combat choisie :
-- CA = 19 + votre niveau. Ignorez le malus aux tests lié à votre armure et la réduction de Vitesse qu’elle vous impose.
-- 10 points de vie temporaires.
-- Vision dans le noir.
-- Une ou plusieurs attaques au corps à corps à mains nues spécifiques à la forme de combat choisie, qui deviennent vos seules attaques utilisables. Vous êtes qualifié pour vous en servir. Votre modificateur d’attaque est de +18 et votre bonus aux dégâts de +9. Ces attaques sont basées sur la Dextérité (air, feu ou métal) ou Force (terre, eau ou bois). Si votre modificateur d’attaque à mains nues correspondant est plus élevé, utilisez-le à la place.
+Vous faites appel à la puissance des plans pour prendre la forme de combat d’un élémentaire Moyen. Lorsque vous Lancez ce sort, choisissez l’un des éléments listés. Sous cette forme, vous gagnez le trait correspondant et le trait élémentaire. La forme de combat possède des mains et vous autorise des actions de manipulation. Vous pouvez Révoquer le sort.
+
+| CA | PV temp. | Mod. attaque | Mod. dégâts | Athlétisme | Sens |
+|---|---|---|---|---|---|
+| 19 + votre niveau | 10 | +18 | +9 | — | Vision dans le noir |
+- Une ou plusieurs attaques au corps à corps à mains nues spécifiques à la forme de combat choisie, qui deviennent vos seules attaques utilisables. Vous êtes qualifié pour vous en servir. Votre modificateur d’attaque est de +18 et votre bonus aux dégâts de +9. Ces attaques sont basées sur la Dextérité (air, feu ou métal) ou Force (terre, eau ou bois). Si votre modificateur d’attaque à mains nues correspondant est plus élevé, utilisez-le à la place
 - Modificateur d’Acrobaties (air, feu ou métal) ou d’Athlétisme (terre, eau ou bois) de +20 ; ignorez ce changement si votre propre modificateur est supérieur. Vous gagnez des pouvoirs spécifiques selon l’élément choisi :
-- **Air** vol 24 m, le déplacement ne déclenche pas de réactions ; **Corps à corps** 1 bourrasque, **Dégâts** 1d4 contondants.
-- **Bois** Vitesse 6 m, escalade 9 m, **Corps à corps** 1 branche, **Dégâts** 2d10 contondants.
-- **Eau** Vitesse 6 m, nage 18 m ; résistance 5 au feu ; **Corps à corps** 1 vague, **Dégâts** 1d12 contondants, et vous pouvez dépenser une action immédiatement après avoir touché pour repousser la cible de 1,5 m comme avec un succès sur l’action Pousser.
-- **Feu** Vitesse 15 m ; résistance 10 au feu, faiblesse 5 au froid et 5 à l’eau ; **Corps à corps** 1 flammèche, **Dégâts** 1d8 feu plus 1d4 feu persistants.
-- **Métal** Vitesse 12 m, vol 6 m ; **Corps à corps** 1 lame (polyvalent perforant), **Dégâts** 1d8 tranchants plus 1d4 électricité.
-- **Terre** Vitesse 6 m, creusement 6 m ; **Corps à corps** 1 rocher, **Dégâts** 2d10 contondants.
+
+| Forme | Vitesse | Frappe | Traits | Dégâts | Note |
+|---|---|---|---|---|---|
+| **Air** | vol 24 m, le déplacement ne déclenche pas de réactions | **Corps à corps** bourrasque |  | 1d4 contondants |  |
+| **Bois** | Vitesse 6 m, escalade 9 m, | **Corps à corps** branche |  | 2d10 contondants |  |
+| **Eau** | Vitesse 6 m, nage 18 m | **Corps à corps** vague |  | 1d12 contondants, et vous pouvez dépenser une action immédiatement après avoir touché pour repousser la cible de 1,5 m comme avec un succès sur l’action Pousser | résistance 5 au feu |
+| **Feu** | Vitesse 15 m | **Corps à corps** flammèche |  | 1d8 feu plus 1d4 feu persistants | résistance 10 au feu, faiblesse 5 au froid et 5 à l’eau |
+| **Métal** | Vitesse 12 m, vol 6 m | **Corps à corps** lame | polyvalent perforant | 1d8 tranchants plus 1d4 électricité |  |
+| **Terre** | Vitesse 6 m, creusement 6 m | **Corps à corps** rocher |  | 2d10 contondants |  |
  
 
 ----
@@ -92,15 +101,22 @@ Vous vous transformez en un humanoïde de taille Moyenne ou Petite, comme un nai
 
 **Durée** 1 min
 ---- 
-Vous vous transformez en monstre légendaire et prenez une forme de combat de Très Grande taille. Quand vous Lancez ce sort, choisissez entre le phénix, le ver des cavernes ou le serpent de mer. Sous cette forme, vous obtenez le trait bête (pour le phénix) ou le trait animal (pour le ver des cavernes ou le serpent de mer). Vous pouvez Révoquer le sort. Vous gagnez les statistiques et pouvoirs suivants, quelle que soit la forme de combat choisie :
-- CA = 20 + votre niveau. Ignorez le malus aux tests lié à votre armure et la réduction de Vitesse qu’elle vous impose.
-- 20 points de vie temporaires.
-- Vision dans le noir.
-- Une ou plusieurs attaques au corps à corps à mains nues spécifiques à la forme de combat choisie, qui deviennent vos seules attaques utilisables. Vous êtes qualifié pour vous en servir. Votre modificateur d’attaque est +28 et vous utilisez les dégâts indiqués. Ces attaques sont basées sur la Force (vis-à-vis de l’état affaibli, par exemple). Si votre modificateur d’attaque à mains nues est plus élevé, vous pouvez l’utiliser à la place.
-- Modificateur d’Athlétisme de +30, sauf si le vôtre est supérieur. Vous gagnez des pouvoirs spécifiques selon le monstre choisi :
-- **Phénix** Vitesse 9 m, vol 27 m ; **Corps à corps** 1 bec (allonge 4,5 m), **Dégâts** 2d6+12 perforants plus 2d4 feu et 2d4 feu persistants ; **Corps à corps** 1 serres (agile, allonge 4,5 m), **Dégâts** 2d8+12 tranchants ; **Voile de flammes** (aura, feu, primordiale) 6 m. Vous obtenez une aura de feu qui vous enveloppe. Une créature qui entre ou termine son tour dans l’aura subit 2d6 dégâts de feu. Une créature n’encaisse ces dégâts qu’une seule fois par tour. Vous pouvez activer ou désactiver cette aura avec une action Maintenir.
-- **Serpent de mer** Vitesse 6 m, nage 27 m ; **Corps à corps** 1 mâchoires (allonge 4,5 m), **Dégâts** 2d12+20 perforants ; **Corps à corps** 1 queue (allonge 7,5 m), **Dégâts** 2d8+20 contondants ; **Extension des pointes dorsales** 2 (déplacement). Vous étendez vos pointes dorsales et Nagez ou Marchez rapidement. Chaque créature adjacente à vous à n’importe quel moment durant votre déplacement subit 4d8+10 dégâts tranchants (jet de Réflexes basique contre votre DD des sorts).
-- **Ver des cavernes** Vitesse 12 m, creusement 9 m, nage 6 m ; **Corps à corps** 1 mâchoires (allonge 3 m), Dégâts 2d12+20 perforants ; **Corps à corps** 1 dard (agile, allonge 3 m), **Dégâts** 2d8+15 perforants plus 2d6 poison persistants ; **Corps à corps** 1 corps (allonge 3 m), **Dégâts** 2d8+20 contondants ; **Inexorable.** Les états paralysé, ralenti et étourdi dont vous êtes victime disparaissent automatiquement à la fin de chacun de vos tours. Vous êtes également immunisé contre l’immobilisation et ignorez les terrains difficiles et très difficiles.
+Vous vous transformez en monstre légendaire et prenez une forme de combat de Très Grande taille. Quand vous Lancez ce sort, choisissez entre le phénix, le ver des cavernes ou le serpent de mer. Sous cette forme, vous obtenez le trait bête (pour le phénix) ou le trait animal (pour le ver des cavernes ou le serpent de mer). Vous pouvez Révoquer le sort.
+
+| CA | PV temp. | Mod. attaque | Mod. dégâts | Athlétisme | Sens |
+|---|---|---|---|---|---|
+| 20 + votre niveau | 20 | +28 | — | +30 | Vision dans le noir |
+- Une ou plusieurs attaques au corps à corps à mains nues spécifiques à la forme de combat choisie, qui deviennent vos seules attaques utilisables. Vous êtes qualifié pour vous en servir. Votre modificateur d’attaque est +28 et vous utilisez les dégâts indiqués. Ces attaques sont basées sur la Force (vis-à-vis de l’état affaibli, par exemple). Si votre modificateur d’attaque à mains nues est plus élevé, vous pouvez l’utiliser à la place
+
+| Forme | Vitesse | Frappe | Traits | Dégâts | Note |
+|---|---|---|---|---|---|
+| **Phénix** | Vitesse 9 m, vol 27 m | **Corps à corps** bec | allonge 4,5 m | 2d6+12 perforants plus 2d4 feu et 2d4 feu persistants | Voile de flammes (aura, feu, primordiale) 6 m. Vous obtenez une aura de feu qui vous enveloppe. Une créature qui entre ou termine son tour dans l’aura subit 2d6 dégâts de feu. Une créature n’encaisse ces dégâts qu’une seule fois par tour. Vous pouvez activer ou désactiver cette aura avec une action Maintenir. |
+|  |  | **Corps à corps** serres | agile, allonge 4,5 m | 2d8+12 tranchants |  |
+| **Serpent de mer** | Vitesse 6 m, nage 27 m | **Corps à corps** mâchoires | allonge 4,5 m | 2d12+20 perforants | Extension des pointes dorsales 2 (déplacement). Vous étendez vos pointes dorsales et Nagez ou Marchez rapidement. Chaque créature adjacente à vous à n’importe quel moment durant votre déplacement subit 4d8+10 dégâts tranchants (jet de Réflexes basique contre votre DD des sorts). |
+|  |  | **Corps à corps** queue | allonge 7,5 m | 2d8+20 contondants |  |
+| **Ver des cavernes** | Vitesse 12 m, creusement 9 m, nage 6 m | **Corps à corps** mâchoires | allonge 3 m | 2d12+20 perforants | Inexorable. Les états paralysé, ralenti et étourdi dont vous êtes victime disparaissent automatiquement à la fin de chacun de vos tours. Vous êtes également immunisé contre l’immobilisation et ignorez les terrains difficiles et très difficiles. |
+|  |  | **Corps à corps** dard | agile, allonge 3 m | 2d8+15 perforants plus 2d6 poison persistants |  |
+|  |  | **Corps à corps** corps | allonge 3 m | 2d8+20 contondants |  |
  
 
 ----
@@ -231,7 +247,7 @@ Un orbe de froid glacial se forme autour de votre cible, gelant son corps. La ci
 # GLOBE DE DISSIPATION `[two-actions]`
 ## SORT 4
 ----
-==CONCENTRATION== ==MANIPULATION== ==PEU COURANT==
+==PEU COURANT== ==CONCENTRATION== ==MANIPULATION==
 **Traditions** arcanique, divine, occulte
 **Zone** explosion de 3 m centrée sur un angle de votre espace.
 **Durée** 10 min
@@ -462,14 +478,20 @@ Vous semez le doute dans l’esprit de vos ennemis. Les ennemis dans la zone doi
 
 **Durée** 1 min
 ---- 
-La puissance primordiale du monde s’écoule à travers vous. Vous vous transformez en homme vert ou en kaiju, des incarnations de la nature. Votre forme de combat est de taille Moyenne pour un homme vert ou Gigantesque (espace de 9 m sur 9) pour un kaiju. Sous cette forme, vous obtenez le trait plante (pour un homme vert) ou bête (pour un kaiju). Vous pouvez Révoquer le sort. Vous gagnez les statistiques et pouvoirs suivants, quelle que soit la forme de combat choisie :
-- CA = 25 + votre niveau. Ignorez le malus aux tests lié à votre armure et la réduction de Vitesse qu’elle vous impose.
-- 30 points de vie temporaires.
-- Vision dans le noir.
-- Une ou plusieurs attaques spécifiques à la forme de combat choisie, qui deviennent vos seules attaques utilisables. Vous êtes qualifié pour vous en servir. Votre modificateur d’attaque est +34 et vous utilisez les dégâts indiqués. Ces attaques sont basées sur la Force (vis-à-vis de l’état affaibli, par exemple). Si votre modificateur d’attaque à mains nues est plus élevé, vous pouvez l’utiliser à la place.
-- Modificateur d’Athlétisme de +36, sauf si le vôtre est supérieur. Vous gagnez des pouvoirs spécifiques selon l’incarnation que vous choisissez :
-- **Homme vert** Vitesse 12 m, escalade 12 m ; **Corps à corps** 1 lianes (allonge 9 m, polyvalent P), **Dégâts** 6d8+12 contondants ; **Distance** 1 épines (portée 30 m), **Dégâts** 6d6+6 perforants ; **Caresse de verdure** (aura, primordiale) 18 m. Les ennemis autres que les plantes doivent chacun réussir un jet de Vigueur contre votre DD des sorts ou devenir maladroit 1 pendant 1 round (maladroit 2 en cas d’échec critique).
-- **Kaiju** Vitesse 15 m, résistance 5 aux dégâts physiques ;** Corps à corps** 1 mâchoires (allonge 9 m), **Dégâts** 6d10+10 perforants ; **Corps à corps** 1 griffes (agile, allonge 9 m), **Dégâts** 6d8+8 tranchants ; **Corps à corps** 1 pied (agile, allonge 4,5 m), **Dégâts** 6d6+10 contondants ; **Impossible à arrêter.** Vous êtes immunisé contre l’immobilisation et ignorez le terrain difficile et très difficile ; **Piétinement** 3 Vous vous déplacez jusqu’au double de votre Vitesse et traversez les espaces occupés par les créatures de taille Très Grande ou plus petite en piétinant chaque créature dans l’espace de laquelle vous entrez. Une créature piétinée subit des dégâts de pied (jet de Réflexes basique contre votre DD des sorts).
+La puissance primordiale du monde s’écoule à travers vous. Vous vous transformez en homme vert ou en kaiju, des incarnations de la nature. Votre forme de combat est de taille Moyenne pour un homme vert ou Gigantesque (espace de 9 m sur 9) pour un kaiju. Sous cette forme, vous obtenez le trait plante (pour un homme vert) ou bête (pour un kaiju). Vous pouvez Révoquer le sort.
+
+| CA | PV temp. | Mod. attaque | Mod. dégâts | Athlétisme | Sens |
+|---|---|---|---|---|---|
+| 25 + votre niveau | 30 | +34 | — | +36 | Vision dans le noir |
+- Une ou plusieurs attaques spécifiques à la forme de combat choisie, qui deviennent vos seules attaques utilisables. Vous êtes qualifié pour vous en servir. Votre modificateur d’attaque est +34 et vous utilisez les dégâts indiqués. Ces attaques sont basées sur la Force (vis-à-vis de l’état affaibli, par exemple). Si votre modificateur d’attaque à mains nues est plus élevé, vous pouvez l’utiliser à la place
+
+| Forme | Vitesse | Frappe | Traits | Dégâts | Note |
+|---|---|---|---|---|---|
+| **Homme vert** | Vitesse 12 m, escalade 12 m | **Corps à corps** lianes | allonge 9 m, polyvalent P | 6d8+12 contondants | Caresse de verdure (aura, primordiale) 18 m. Les ennemis autres que les plantes doivent chacun réussir un jet de Vigueur contre votre DD des sorts ou devenir maladroit 1 pendant 1 round (maladroit 2 en cas d’échec critique). |
+|  |  | **À distance** épines | portée 30 m | 6d6+6 perforants |  |
+| **Kaiju** | Vitesse 15 m, résistance 5 aux dégâts physiques | **Corps à corps** mâchoires | allonge 9 m | 6d10+10 perforants | Impossible à arrêter. Vous êtes immunisé contre l’immobilisation et ignorez le terrain difficile et très difficile; Piétinement 3 Vous vous déplacez jusqu’au double de votre Vitesse et traversez les espaces occupés par les créatures de taille Très Grande ou plus petite en piétinant chaque créature dans l’espace de laquelle vous entrez. Une créature piétinée subit des dégâts de pied (jet de Réflexes basique contre votre DD des sorts). |
+|  |  | **Corps à corps** griffes | agile, allonge 9 m | 6d8+8 tranchants |  |
+|  |  | **Corps à corps** pied | agile, allonge 4,5 m | 6d6+10 contondants |  |
  
 
   
@@ -606,7 +628,7 @@ Vous libérez un rayon d’énergie divine. Effectuez une attaque de sort à dis
 # LANGAGE UNIVERSEL `[two-actions]`
 ## SORT 5
 ----
-==CONCENTRATION== ==MANIPULATION== ==PEU COURANT==
+==PEU COURANT== ==CONCENTRATION== ==MANIPULATION==
 **Traditions** arcanique, divine, occulte
 **Portée** contact ; **Cible** 1 créature
 **Durée** 1 h
@@ -643,7 +665,7 @@ Vous vous concentrez sur l’objet ciblé en ouvrant votre esprit pour percevoir
 # LECTURE DES PENSÉES `[two-actions]`
 ## SORT 3
 ----
-==CONCENTRATION== ==DÉTECTION== ==MANIPULATION== ==MENTAL== ==PEU COURANT==
+==PEU COURANT== ==CONCENTRATION== ==DÉTECTION== ==MANIPULATION== ==MENTAL==
 **Traditions** arcanique, occulte
 **Portée** 9 m ; **Cible** 1 créature
 **Défense** Volonté ; **Durée** 1 round ou maintenu jusqu’à 1 min
@@ -741,7 +763,7 @@ D’un mot de pouvoir, vous prenez le contrôle de la cible. Elle gagne le trait
 # LIRE LES PRÉSAGES
 ## SORT 4
 ----
-==CONCENTRATION== ==MANIPULATION== ==PEU COURANT== ==PRÉDICTION==
+==PEU COURANT== ==CONCENTRATION== ==MANIPULATION== ==PRÉDICTION==
 **Traditions** divine, occulte
 **Incantation** 10 min
 
@@ -756,7 +778,7 @@ Vous jetez un coup d’œil dans le futur. Choisissez un but ou une activité pr
 # LOCALISATION
 ## SORT 3
 ----
-==CONCENTRATION== ==DÉTECTION== ==MANIPULATION== ==PEU COURANT==
+==PEU COURANT== ==CONCENTRATION== ==DÉTECTION== ==MANIPULATION==
 **Traditions** arcanique, divine, occulte
 **Incantation** 10 min
 **Portée** 150 m ; **Cible** 1 objet précis ou 1 type d’objets
