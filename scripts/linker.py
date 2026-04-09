@@ -29,6 +29,8 @@ ABILITIES_XML = "./data/abilities/abilities.xml"
 MONSTERS_DIR  = "./data/monsters"
 SPELLS_XML    = "./data/spells/all_spells.xml"
 
+RARITY_REFS = {"trait-commune", "trait-peu-courante", "trait-peu-courant", "trait-rare", "trait-unique"}
+
 
 # ==========================================
 # INDEX LOADERS
@@ -71,7 +73,12 @@ def link_file(xml_path, trait_index, spell_index, ability_index, dry_run=False):
 
     # — Traits —
     for elem in root.iter("trait"):
-        if elem.get("ref"):
+        ref = elem.get("ref")
+        if ref:
+            # Trait déjà lié : s'assurer que le type rareté est posé si manquant
+            if ref in RARITY_REFS and not elem.get("type"):
+                elem.set("type", "rarity")
+                changed = True
             continue
         text = (elem.text or "").strip()
         if not text:
@@ -79,6 +86,8 @@ def link_file(xml_path, trait_index, spell_index, ability_index, dry_run=False):
         slug = generate_slug("trait", text)
         if slug in trait_index:
             elem.set("ref", trait_index[slug])
+            if trait_index[slug] in RARITY_REFS:
+                elem.set("type", "rarity")
             stats["trait"] += 1
             changed = True
         else:

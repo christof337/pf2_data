@@ -11,6 +11,8 @@
     
     <!-- Traits -->
     <xsl:for-each select="creatureTraits/trait">
+      <xsl:sort select="number(not(@type = 'rarity'))" order="ascending" data-type="number"/>
+      <xsl:sort select="number(@type != 'size')" order="ascending" data-type="number"/>
       <xsl:text>==</xsl:text><xsl:value-of select="."/><xsl:text>==</xsl:text>
       <xsl:if test="position() != last()"><xsl:text> </xsl:text></xsl:if>
     </xsl:for-each>

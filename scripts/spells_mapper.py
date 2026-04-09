@@ -13,11 +13,13 @@ from utils import strip_metadata, split_bullet_list, parse_table_markers
 # ==========================================
 
 MULTI_WORD_TRAITS = [
-    "NON LÉTAL", 
-    "PEU COURANT", 
+    "NON LÉTAL",
+    "PEU COURANT",
     "MISE HORS DE COMBAT",
     "TOUR DE MAGIE"
 ]
+
+RARITY_TRAITS = {"COMMUNE", "PEU COURANT", "PEU COURANTE", "RARE", "UNIQUE"}
 
 # Plage stricte des majuscules (exclut les minuscules accentuées)
 UPPER = r'A-ZÀÂÄÆÇÉÈÊËÎÏÔÖŒÙÛÜŸ'
@@ -716,7 +718,8 @@ def generate_spells_xml(spells_data, output_path):
         if data.get('traits'):
             t_el = etree.SubElement(s_el, "traits")
             for t in data['traits']:
-                etree.SubElement(t_el, "trait").text = t
+                attrs = {"type": "rarity"} if t in RARITY_TRAITS else {}
+                etree.SubElement(t_el, "trait", **attrs).text = t
         
         if data.get('traditions'):
             tr_el = etree.SubElement(s_el, "traditions")

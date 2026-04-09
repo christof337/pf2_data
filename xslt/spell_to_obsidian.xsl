@@ -55,6 +55,7 @@
     <xsl:text>----&#10;</xsl:text>
     
     <xsl:for-each select="traits/trait">
+      <xsl:sort select="number(not(@type = 'rarity'))" order="ascending" data-type="number"/>
       <xsl:sort select="." order="ascending"/>
       <xsl:text>==</xsl:text><xsl:value-of select="."/><xsl:text>==</xsl:text>
       <xsl:if test="position() != last()"><xsl:text> </xsl:text></xsl:if>

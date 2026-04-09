@@ -1085,7 +1085,7 @@
     <rank>4</rank>
     <actions>2</actions>
     <traits>
-      <trait>PEU COURANT</trait>
+      <trait type="rarity">PEU COURANT</trait>
       <trait>CONCENTRATION</trait>
       <trait>DÉTECTION</trait>
       <trait>MANIPULATION</trait>
@@ -1106,7 +1106,7 @@
     <rank>1</rank>
     <actions>2</actions>
     <traits>
-      <trait>PEU COURANT</trait>
+      <trait type="rarity">PEU COURANT</trait>
       <trait>CONCENTRATION</trait>
       <trait>DÉTECTION</trait>
       <trait>MANIPULATION</trait>
@@ -1126,7 +1126,7 @@
     <name>DÉTERMINER LA POSITION</name>
     <rank>8</rank>
     <traits>
-      <trait>PEU COURANT</trait>
+      <trait type="rarity">PEU COURANT</trait>
       <trait>CONCENTRATION</trait>
       <trait>DÉTECTION</trait>
       <trait>MANIPULATION</trait>
@@ -1146,7 +1146,7 @@
     <rank>9</rank>
     <actions>2</actions>
     <traits>
-      <trait>PEU COURANT</trait>
+      <trait type="rarity">PEU COURANT</trait>
       <trait>CONCENTRATION</trait>
       <trait>MANIPULATION</trait>
     </traits>

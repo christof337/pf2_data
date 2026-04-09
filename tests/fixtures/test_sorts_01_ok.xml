@@ -535,7 +535,7 @@
     <rank>8</rank>
     <actions>2</actions>
     <traits>
-      <trait>PEU COURANT</trait>
+      <trait type="rarity">PEU COURANT</trait>
       <trait>CONCENTRATION</trait>
       <trait>MANIPULATION</trait>
     </traits>
@@ -634,7 +634,7 @@
     <name>BULLE DE PAIX</name>
     <rank>4</rank>
     <traits>
-      <trait>PEU COURANT</trait>
+      <trait type="rarity">PEU COURANT</trait>
       <trait>CONCENTRATION</trait>
       <trait>MANIPULATION</trait>
     </traits>
@@ -671,7 +671,7 @@
     <name>CADAVRE LOQUACE</name>
     <rank>4</rank>
     <traits>
-      <trait>PEU COURANT</trait>
+      <trait type="rarity">PEU COURANT</trait>
       <trait>CONCENTRATION</trait>
       <trait>MANIPULATION</trait>
     </traits>

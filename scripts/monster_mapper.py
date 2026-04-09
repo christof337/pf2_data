@@ -327,11 +327,14 @@ def generate_monster_xml(data, output_path):
     etree.SubElement(monster, "type").text = data.get('type')
     etree.SubElement(monster, "level").text = data.get('level')
     
+    RARITY_TRAITS = {"COMMUNE", "PEU COURANT", "PEU COURANTE", "RARE", "UNIQUE"}
+
     # Traits
     c_traits = etree.SubElement(monster, "creatureTraits")
     etree.SubElement(c_traits, "trait", type="size").text = data.get('size')
     for t in data.get('traits', []):
-        etree.SubElement(c_traits, "trait").text = t
+        attrs = {"type": "rarity"} if t in RARITY_TRAITS else {}
+        etree.SubElement(c_traits, "trait", **attrs).text = t
 
     # Perception
     percep = etree.SubElement(monster, "perception")
