@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feats xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="../../schema/feat.xsd">
+
+  <!-- ============================================================
+       ACTIONS BASIQUES — LdJ pages 416–419
+       Source : output/ldj_full/PF2R_01_Livre_des_Joueurs_web_v1.md
+       ============================================================ -->
+
+  <feat id="action-aider" type="reaction">
+    <name>Aider</name>
+    <actions>R</actions>
+    <trigger>Un allié est sur le point d'utiliser une action qui lui demande d'effectuer un test de compétence ou un jet d'attaque.</trigger>
+    <requirement>L'allié est disposé à accepter votre aide et vous vous êtes préparé à l'aider (voir ci-dessous).</requirement>
+    <description>Vous tentez d'apporter votre aide à un allié confronté à une tâche particulière. Pour utiliser cette réaction, vous devez préalablement vous être préparé à l'aider, généralement en utilisant une action lors de votre tour. Vous devez expliquer au MJ de quelle manière vous comptez apporter votre aide, et ce dernier détermine alors si vous pouvez ou non Aider votre allié.
+Quand vous utilisez la réaction Aider, effectuez un test de compétence ou un jet d'attaque dont le type est décidé par le MJ. Le DD est généralement de 15, mais le MJ peut décider de l'ajuster si la tâche est particulièrement facile ou difficile. En fonction de la situation, le MJ peut ajouter les traits adaptés de son choix à votre action de préparation ou à votre réaction Aider, ou même vous permettre d'effectuer un test pour Aider qui n'est pas un test de compétence ou un jet d'attaque.
+Succès critique. Vous octroyez à votre allié un bonus de circonstances de +2 au test déclencheur. Si votre rang de maîtrise pour ce test est maître, ce bonus est de +3, si votre rang est légendaire, il est de +4.
+Succès. Vous octroyez à votre allié un bonus de circonstances de +1 au test déclencheur.
+Échec critique. Votre allié subit un malus de circonstances de −1 au test déclencheur.</description>
+  </feat>
+
+  <feat id="action-bondir" type="action">
+    <name>Bondir</name>
+    <actions>1</actions>
+    <traits>
+      <trait>déplacement</trait>
+    </traits>
+    <description>Vous faites un petit saut horizontal ou vertical. Pour franchir une plus grande distance, vous devrez faire appel à la compétence Athlétisme pour effectuer un Saut en hauteur ou un Saut en longueur (p. 237).
+• Longueur. Vous pouvez Bondir sur une distance horizontale maximale de 3 m si votre Vitesse est supérieure ou égale à 4,5 m, ou sur une distance maximale de 4,5 m si votre Vitesse est supérieure ou égale à 9 m. Vous atterrissez dans l'espace où se termine votre Bond (ce qui signifie que vous pouvez généralement sauter par-dessus un fossé de 1,5 m, ou un fossé de 3 m si votre Vitesse est supérieure ou égale à 9 m). Vous ne pouvez pas Bondir horizontalement si votre Vitesse est inférieure à 4,5 m.
+• Hauteur. Vous sautez de 90 cm au maximum à la verticale et de 1,5 m au maximum à l'horizontale pour atteindre une surface surélevée.</description>
+  </feat>
+
+  <feat id="action-chercher" type="action">
+    <name>Chercher</name>
+    <actions>1</actions>
+    <traits>
+      <trait>concentration</trait>
+      <trait>secret</trait>
+    </traits>
+    <description>Vous scrutez une zone à la recherche de signes de la présence de créatures ou d'objets, ou peut-être de portes secrètes ou de dangers. Choisissez une zone. Le MJ détermine la zone que vous pouvez scruter à l'aide de votre action Chercher. Il s'agit presque toujours d'une zone de 9 m de côté ou moins dans les trois dimensions. Le MJ peut vous imposer un malus si vous scrutez une zone éloignée de vous ou ajuster le nombre d'actions nécessaires pour Chercher une zone particulièrement encombrée.
+Le MJ peut effectuer un unique test de Perception secret à votre place et comparer le résultat au DD de Discrétion de toute créature non détectée ou cachée dans la zone, ou au DD nécessaire pour détecter chacun des objets qui se trouvent dans la zone (ce DD est alors déterminé par le MJ ou par la personne qui a Dissimulé cet objet). Une créature que vous détectez peut se trouver dans l'état caché plutôt que dans l'état observé si vous utilisez un sens imprécis ou si un effet (comme invisibilité) empêche ce sujet d'être observé.
+Succès critique. Toute créature qui était non détectée ou cachée dans la zone se trouve dans l'état observé en ce qui vous concerne. Vous connaissez l'emplacement de tous les objets de la zone face auxquels vous avez obtenu un succès critique.
+Succès. Toute créature qui était non détectée dans la zone devient cachée, et toute créature qui était cachée dans la zone devient observée en ce qui vous concerne. Vous connaissez l'emplacement des objets de la zone, ou obtenez un indice sur leur emplacement, au choix du MJ.</description>
+  </feat>
+
+  <feat id="action-deviner-les-intentions" type="action">
+    <name>Deviner les intentions</name>
+    <actions>1</actions>
+    <traits>
+      <trait>concentration</trait>
+      <trait>secret</trait>
+    </traits>
+    <description>Vous tentez de déterminer si le comportement d'une créature est anormal. Vous désignez une créature et tentez de repérer des signes étranges dans son langage corporel, de la nervosité, ou d'autres indicateurs qui peuvent laisser penser qu'elle tente de tromper quelqu'un. Le MJ effectue un unique test de Perception secret à votre place et compare le résultat au DD de Duperie de la créature, au DD d'un sort qui affecte l'état mental de la créature, ou à un autre DD qu'il juge approprié à la situation. Vous ne pouvez généralement pas réessayer de Deviner les intentions de la même créature si la situation n'évolue pas significativement.
+Succès critique. Vous devinez les véritables intentions de la créature et déterminez le type de magie mentale qui l'affecte éventuellement.
+Succès. Vous êtes capable de dire si la créature se comporte normalement ou non, mais vous ne connaissez pas ses véritables intentions ni le type de magie qui pourrait l'affecter.
+Échec. Vous détectez seulement ce qu'une créature trompeuse cherche à vous faire croire. Si la créature ne cherche pas à vous tromper, vous êtes convaincu qu'elle se comporte normalement.
+Échec critique. Votre impression concernant les intentions de la créature est erronée.</description>
+  </feat>
+
+  <feat id="action-faire-un-pas" type="action">
+    <name>Faire un pas</name>
+    <actions>1</actions>
+    <traits>
+      <trait>déplacement</trait>
+    </traits>
+    <requirement>Votre Vitesse est d'au moins 3 m.</requirement>
+    <description>Vous vous déplacez prudemment de 1,5 m. À la différence de la plupart des autres types de déplacement, Faire un pas ne déclenche pas de réactions (comme une Frappe réflexe) qui peuvent être déclenchées par des actions de déplacement ou quand vous pénétrez dans une case ou la quittez.
+Vous ne pouvez pas Faire un pas quand vous vous trouvez sur un terrain difficile (p. 423), et vous ne pouvez pas Faire un pas en utilisant une autre Vitesse que votre Vitesse au sol.</description>
+  </feat>
+
+  <feat id="action-frapper" type="action">
+    <name>Frapper</name>
+    <actions>1</actions>
+    <traits>
+      <trait>attaque</trait>
+    </traits>
+    <description>Vous attaquez avec une arme que vous tenez en main ou une attaque à mains nues, en prenant pour cible une créature qui se trouve dans votre zone d'allonge (pour une attaque au corps à corps) ou à portée (pour une attaque à distance). Effectuez un jet d'attaque en utilisant le modificateur d'attaque de l'attaque à mains nues ou de l'arme que vous utilisez, et comparez le résultat à la CA de la créature ciblée afin de déterminer son effet.
+Succès critique. Vous effectuez un jet de dégâts qui dépend de l'attaque à mains nues ou de l'arme utilisée, et multipliez les dégâts par deux (rendez-vous p. 407 pour les règles sur le doublement des dégâts).
+Succès. Vous effectuez un jet de dégâts qui dépend de l'attaque à mains nues ou de l'arme utilisée, et infligez ces dégâts à votre cible.</description>
+  </feat>
+
+  <feat id="action-interagir" type="action">
+    <name>Interagir</name>
+    <actions>1</actions>
+    <traits>
+      <trait>manipulation</trait>
+    </traits>
+    <description>Vous utilisez une main ou plus pour manipuler un objet ou un élément de votre environnement. Vous pouvez vous saisir d'un objet non porté ou rangé, tirer une arme, échanger un objet que vous tenez avec un autre (p. 267), ouvrir une porte ou obtenir un effet similaire. En de rares occasions, vous devrez effectuer un test de compétence afin de déterminer le succès de votre Interaction.</description>
+  </feat>
+
+  <feat id="action-marcher-rapidement" type="action">
+    <name>Marcher rapidement</name>
+    <actions>1</actions>
+    <traits>
+      <trait>déplacement</trait>
+    </traits>
+    <description>Vous vous déplacez d'une distance maximale égale à votre Vitesse (p. 420).</description>
+  </feat>
+
+  <feat id="action-preparer" type="action">
+    <name>Préparer</name>
+    <actions>2</actions>
+    <traits>
+      <trait>concentration</trait>
+    </traits>
+    <description>Vous vous préparez à utiliser une action qui se déroulera hors de votre tour. Choisissez une action unique ou une action gratuite que vous pouvez utiliser et précisez un déclencheur. Votre tour prend alors fin. Si le déclencheur que vous avez indiqué se déroule avant le début de votre prochain tour, vous pouvez utiliser l'action choisie comme une réaction (dans la mesure où vous répondez à toutes les conditions d'utilisation). Vous ne pouvez pas Préparer une action gratuite qui a déjà un déclencheur.
+Si vous êtes soumis à un malus d'attaques multiples et que votre action préparée est une action d'attaque, votre attaque préparée est soumise au malus d'attaques multiples que vous aviez quand vous l'avez Préparée. Il s'agit d'une des rares occasions où le malus d'attaques multiples s'applique hors de votre tour.</description>
+  </feat>
+
+  <feat id="action-ramper" type="action">
+    <name>Ramper</name>
+    <actions>1</actions>
+    <traits>
+      <trait>déplacement</trait>
+    </traits>
+    <requirement>Vous êtes à terre et votre Vitesse est d'au moins 3 m.</requirement>
+    <description>Vous vous déplacez de 1,5 m en rampant, en restant à terre.</description>
+  </feat>
+
+  <feat id="action-relacher" type="action-libre">
+    <name>Relâcher</name>
+    <actions>0</actions>
+    <traits>
+      <trait>manipulation</trait>
+    </traits>
+    <description>Vous Relâchez quelque chose que vous tenez dans une main ou dans vos deux mains. Cela peut signifier laisser tomber un objet, retirer une main de la poignée de votre arme alors que vous la tenez encore de l'autre main, relâcher une corde à laquelle est accroché un chandelier, ou accomplir une action comparable. À la différence de nombreuses autres actions de manipulation, Relâcher ne déclenche pas de réactions qui peuvent être déclenchées par les actions dotées du trait manipulation (comme Frappe réflexe).
+Si vous voulez vous tenir prêt à Relâcher quelque chose hors de votre tour, utilisez l'activité Préparer.</description>
+  </feat>
+
+  <feat id="action-retarder" type="action-libre">
+    <name>Retarder</name>
+    <actions>0</actions>
+    <trigger>Votre tour commence.</trigger>
+    <description>Vous attendez le bon moment pour agir. Vous n'avez pas encore agi lors de ce tour. À la place, vous vous retirez de l'ordre d'initiative. Vous pouvez reprendre une place dans l'ordre d'initiative par une action gratuite déclenchée par la fin du tour d'une autre créature. Cette nouvelle place devient votre place permanente dans l'ordre d'initiative. Vous ne pouvez pas utiliser de réaction tant que vous n'avez pas repris une place dans l'ordre d'initiative. Si vous Retardez un round entier sans reprendre une place dans l'ordre d'initiative, les actions du tour Retardé sont perdues, votre initiative ne change pas et votre prochain tour se déroule donc à votre place initiale dans l'ordre d'initiative.
+Quand vous Retardez votre tour, tous les dégâts persistants et autres effets négatifs qui se produisent normalement au début ou à la fin de votre tour s'appliquent immédiatement quand vous utilisez l'action Retarder. Tous les effets bénéfiques qui devraient normalement prendre fin à n'importe quel moment de votre tour se terminent également. Le MJ détermine également quels autres effets prennent fin quand vous Retardez votre tour. En bref, vous ne pouvez pas Retarder votre tour pour échapper à des effets négatifs qui se produiront pendant votre tour ou étendre la durée d'effets qui doivent prendre fin pendant votre tour.</description>
+  </feat>
+
+  <feat id="action-s-echapper" type="action">
+    <name>S'échapper</name>
+    <actions>1</actions>
+    <traits>
+      <trait>attaque</trait>
+    </traits>
+    <description>Vous tentez de vous tirer d'une situation dans laquelle vous êtes empoigné, immobilisé ou entravé. Choisissez une créature, un objet, un effet de sort, un danger, ou un autre obstacle qui vous impose l'un de ces états. Effectuez un test contre le DD de cet effet en utilisant votre modificateur d'attaque à mains nues. Il s'agit généralement du DD d'Athlétisme de la créature qui vous empoigne, du DD de Larcin de la créature qui vous a attaché, du DD des sorts qui vous affecte, ou du DD pour S'échapper indiqué dans le profil d'un objet, d'un danger ou d'un autre obstacle. Au lieu d'utiliser votre modificateur d'attaque, vous pouvez effectuer un test d'Acrobaties ou d'Athlétisme (mais cette action possède toujours le trait attaque).
+Succès critique. Vous vous libérez et perdez l'état empoigné, immobilisé ou entravé que la cible désignée vous imposait. Vous pouvez alors Marcher rapidement sur une distance de 1,5 m.
+Succès. Vous vous libérez et perdez l'état empoigné, immobilisé ou entravé que la cible désignée vous imposait.
+Échec critique. Vous ne réussissez pas à vous libérer et vous ne pouvez pas tenter de Vous échapper avant votre prochain tour.</description>
+  </feat>
+
+  <feat id="action-se-jeter-a-terre" type="action">
+    <name>Se jeter à terre</name>
+    <actions>1</actions>
+    <traits>
+      <trait>déplacement</trait>
+    </traits>
+    <description>Vous vous laissez tomber à terre.</description>
+  </feat>
+
+  <feat id="action-se-mettre-a-l-abri" type="action">
+    <name>Se mettre à l'abri</name>
+    <actions>1</actions>
+    <requirement>Vous bénéficiez d'un abri, vous vous trouvez à proximité d'un endroit où vous abriter ou êtes à terre.</requirement>
+    <description>Vous vous plaquez contre un mur ou vous jetez derrière un obstacle pour mieux Vous mettre à l'abri (p. 424). Si vous bénéficiez déjà d'un abri standard, vous gagnez à la place un abri important qui vous confère un bonus de +4 à la CA, à vos jets de réflexes contre les zones d'effet et à vos tests de Discrétion pour Vous cacher, Être furtif ou éviter de vous faire détecter de manière générale. Vous bénéficiez sinon des avantages liés à un abri standard (un bonus de circonstances de +2). Ces avantages perdurent jusqu'à ce que vous quittiez votre emplacement actuel, utilisiez une action d'attaque, vous trouviez dans l'état inconscient ou mettiez fin à cet effet par une action gratuite.</description>
+  </feat>
+
+  <feat id="action-se-relever" type="action">
+    <name>Se relever</name>
+    <actions>1</actions>
+    <traits>
+      <trait>déplacement</trait>
+    </traits>
+    <description>Vous étiez à terre et vous Vous relevez.</description>
+  </feat>
+
+  <!-- ============================================================
+       ACTIONS BASIQUES SPÉCIALISÉES — LdJ pages 419–421
+       ============================================================ -->
+
+  <feat id="action-arreter-une-chute" type="reaction">
+    <name>Arrêter une chute</name>
+    <actions>R</actions>
+    <trigger>Vous chutez.</trigger>
+    <requirement>Vous avez une Vitesse de vol.</requirement>
+    <description>Vous effectuez au choix un test d'Acrobaties ou un jet de Réflexes pour ralentir votre chute. Le DD est généralement de 15, mais il peut être plus élevé en cas de turbulences ou d'autres circonstances particulières.
+Succès. Vous ne subissez pas de dégâts de chute.</description>
+  </feat>
+
+  <feat id="action-creuser" type="action">
+    <name>Creuser</name>
+    <actions>1</actions>
+    <traits>
+      <trait>déplacement</trait>
+    </traits>
+    <requirement>Vous avez une Vitesse de creusement.</requirement>
+    <description>Vous creusez un chemin à travers de la terre, du sable ou un autre matériau meuble sur une distance maximale égale à votre Vitesse de creusement. Vous ne pouvez pas creuser à travers la roche ou d'autres substances plus denses que la terre, sauf si vous possédez un pouvoir qui vous le permet.</description>
+  </feat>
+
+  <feat id="action-detourner-le-regard" type="action">
+    <name>Détourner le regard</name>
+    <actions>1</actions>
+    <description>Vous détournez le regard d'un danger, comme le regard d'une méduse. Vous gagnez un bonus de circonstances de +2 à vos jets de sauvegarde contre les pouvoirs visuels qui nécessitent que vous regardiez une créature ou un objet, comme le regard pétrifiant d'une méduse. Votre regard reste détourné jusqu'au début de votre prochain tour.</description>
+  </feat>
+
+  <feat id="action-lever-un-bouclier" type="action">
+    <name>Lever un bouclier</name>
+    <actions>1</actions>
+    <requirement>Vous maniez un bouclier.</requirement>
+    <description>Vous levez votre bouclier pour vous protéger. Quand vous avez Levé un bouclier, vous ajoutez le bonus de circonstances indiqué dans son profil à votre CA. Votre bouclier reste levé jusqu'au début de votre prochain tour.</description>
+  </feat>
+
+  <feat id="action-maintenir" type="action">
+    <name>Maintenir</name>
+    <actions>1</actions>
+    <traits>
+      <trait>concentration</trait>
+    </traits>
+    <description>Choisissez l'un de vos effets dont la durée indique « maintenu », ou qui vous confère un avantage spécial quand vous le Maintenez. Ces effets sont généralement liés à des sorts ou à l'activation d'objets magiques. Si l'effet a une durée maintenue, sa durée est prolongée jusqu'à la fin de votre prochain tour (Maintenir un effet plusieurs fois au cours d'un même tour ne permet pas de prolonger sa durée au-delà du tour suivant). Si un pouvoir peut être maintenu, sans qu'il soit précisé de durée, alors il peut être maintenu pendant une durée maximale de 10 min.
+Le descriptif d'un effet peut préciser que le Maintenir vous confère un avantage supplémentaire. Cette mention peut concerner des effets qui n'ont pas de durée maintenue. Si l'effet possède une durée maintenue et un avantage spécial associé au fait de le Maintenir, l'action Maintenir vous permet à la fois de prolonger sa durée et de profiter de l'avantage spécial.
+Si votre action Maintenir est interrompue, le pouvoir prend fin.</description>
+  </feat>
+
+  <feat id="action-monter-en-selle" type="action">
+    <name>Monter en selle</name>
+    <actions>1</actions>
+    <traits>
+      <trait>déplacement</trait>
+    </traits>
+    <requirement>Vous vous trouvez sur une case adjacente à une créature d'au moins une catégorie de taille de plus que la vôtre et qui accepte d'être votre monture.</requirement>
+    <description>Vous enfourchez la créature et la chevauchez. Si vous êtes déjà en selle, vous pouvez à la place utiliser cette action pour descendre de selle et mettre pied à terre dans un espace adjacent à votre monture.</description>
+  </feat>
+
+  <feat id="action-revoquer" type="action">
+    <name>Révoquer</name>
+    <actions>1</actions>
+    <traits>
+      <trait>concentration</trait>
+    </traits>
+    <description>Vous mettez fin à un effet dont le descriptif indique que vous pouvez le Révoquer. Sauf indication contraire, Révoquer signifie mettre un terme à l'ensemble de l'effet.</description>
+  </feat>
+
+  <feat id="action-se-raccrocher-in-extremis" type="reaction">
+    <name>Se raccrocher in extremis</name>
+    <actions>R</actions>
+    <traits>
+      <trait>manipulation</trait>
+    </traits>
+    <trigger>Vous chutez depuis un rebord ou une prise, ou passez à côté de l'un de ces éléments lors de votre chute.</trigger>
+    <requirement>Vos mains ne sont pas attachées dans votre dos ou entravées d'une quelconque manière.</requirement>
+    <description>Quand vous chutez devant un rebord ou un autre type de prise, vous pouvez tenter de vous y raccrocher afin d'interrompre votre chute. Vous devez réussir au choix un test d'Acrobaties ou un jet de Réflexes, en utilisant en général le DD d'Escalade. Si vous réussissez à vous raccrocher au rebord ou à la prise, vous pouvez alors Escalader en utilisant la compétence Athlétisme.
+Succès critique. Vous attrapez le rebord ou la prise, que vous disposiez ou non d'une main libre, généralement en utilisant un objet adapté pour vous rattraper (en accrochant la lame d'une hache de bataille sur un rebord, par exemple). Vous subissez quand même les dégâts correspondant à la hauteur de laquelle vous avez chuté, mais vous réduisez cette hauteur de 9 m.
+Succès. Si vous avez au moins une main de libre, vous attrapez le rebord ou la prise et stoppez votre chute. Vous subissez quand même les dégâts correspondant à la hauteur de laquelle vous avez chuté, mais vous réduisez cette hauteur de 6 m. Si vous n'avez aucune main de libre, vous continuez de chuter comme si vous aviez échoué à votre test.
+Échec critique. Vous continuez votre chute et, si vous aviez déjà chuté d'une hauteur supérieure ou égale à 6 m quand vous avez utilisé cette réaction, vous subissez 10 dégâts contondants causés par l'impact pour chaque tranche de 6 m de chute.</description>
+  </feat>
+
+  <feat id="action-signaler" type="action">
+    <name>Signaler</name>
+    <actions>1</actions>
+    <traits>
+      <trait>audible</trait>
+      <trait>manipulation</trait>
+      <trait>visuel</trait>
+    </traits>
+    <requirement>Une créature est non détectée par un ou plusieurs de vos alliés, mais pas par vous.</requirement>
+    <description>Vous désignez une créature que vous pouvez voir à un ou plusieurs de vos alliés, en la montrant du doigt et en indiquant verbalement à quelle distance elle se trouve. La créature se trouve alors cachée par rapport à vos alliés plutôt que non détectée (p. 434). Cela ne fonctionne que si vos alliés peuvent vous voir et qu'ils se trouvent à un endroit d'où ils pourraient potentiellement détecter la cible. Si vos alliés ne peuvent pas vous entendre ou vous comprendre, ils doivent alors réussir un test de Perception contre le DD de Discrétion de la créature. Sur un échec, ils vous comprennent mal et croient que la cible se trouve à un autre endroit que celui que vous désignez.</description>
+  </feat>
+
+  <feat id="action-voler" type="action">
+    <name>Voler</name>
+    <actions>1</actions>
+    <traits>
+      <trait>déplacement</trait>
+    </traits>
+    <requirement>Vous avez une Vitesse de vol.</requirement>
+    <description>Vous vous déplacez dans les airs sur une distance maximale égale à votre Vitesse de vol. Vous faites appel aux règles du déplacement à travers un terrain difficile pour vous déplacer vers le haut (verticalement ou en diagonale). Vous pouvez vous diriger verticalement vers le sol de 3 m en dépensant 1,5 m de déplacement. Si vous Volez jusqu'au sol, vous ne subissez pas de dégâts de chute. Vous pouvez utiliser une action pour Voler sur une distance de 0 m afin de faire du vol stationnaire. Si vous êtes dans les airs à la fin de votre tour et que vous n'avez pas utilisé d'action pour Voler lors de ce tour, vous chutez.</description>
+  </feat>
+
+</feats>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+  <xs:include schemaLocation="common.xsd"/>
+
+  <!-- Racine : liste de feats (dons et actions) -->
+  <xs:element name="feats">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="feat" type="featType" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="featType">
+    <xs:sequence>
+      <!-- Nom du don ou de l'action -->
+      <xs:element name="name" type="xs:string"/>
+      <!-- Niveau (présent pour les dons, absent pour les actions basiques) -->
+      <xs:element name="level" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <!-- Nombre d'actions (0=action libre, 1/2/3=actions, R=réaction, 9=réaction alt.) -->
+      <xs:element name="actions" type="xs:string" minOccurs="0"/>
+      <!-- Traits (réutilise traitListType de common.xsd) -->
+      <xs:element name="traits" type="traitListType" minOccurs="0"/>
+      <!-- Prérequis (attributs, dons, rangs de compétence requis) -->
+      <xs:element name="prerequisites" type="xs:string" minOccurs="0"/>
+      <!-- Fréquence d'utilisation -->
+      <xs:element name="frequency" type="xs:string" minOccurs="0"/>
+      <!-- Déclencheur (réactions et certaines actions gratuites) -->
+      <xs:element name="trigger" type="xs:string" minOccurs="0"/>
+      <!-- Conditions d'utilisation (Requirements) -->
+      <xs:element name="requirement" type="xs:string" minOccurs="0"/>
+      <!-- Description / effet principal -->
+      <xs:element name="description" type="xs:string" minOccurs="0"/>
+      <!-- Section Spécial (cas particuliers, cumul de sélections, etc.) -->
+      <xs:element name="special" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+    <!-- Identifiant unique : action-{slug} ou feat-{slug} -->
+    <xs:attribute name="id" type="xs:ID" use="required"/>
+    <!-- Type : don, action, reaction, action-libre -->
+    <xs:attribute name="type" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="don"/>
+          <xs:enumeration value="action"/>
+          <xs:enumeration value="reaction"/>
+          <xs:enumeration value="action-libre"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+
+</xs:schema>
