@@ -599,7 +599,7 @@ def parse_spell_block(content):
         'area': mech_prefix + r'Zone[\s:]*\**[\s:]*(.*?)(?=\s*(?:;|\n\s*[A-ZÀÂÄÆÇÉÈÊËÎÏÔÖŒÙÛÜŸ]|$|\*\*))',
         'cast': mech_prefix + r'Incantation\**[\s:]*(.*?)(?=\s*(?:;|\n|$))',
         'cost': mech_prefix + r'Coût\**[\s:]*(.*?)(?=\s*(?:;|\n\s*\*\*|\n\s*[A-ZÀÂÄÆÇÉÈÊËÎÏÔÖŒÙÛÜŸ]|$))',
-        'condition': mech_prefix + r'Conditions?\**[\s:]*(.*?)(?=\s*(?:;|\n\s*\*\*|\n\s*[A-ZÀÂÄÆÇÉÈÊËÎÏÔÖŒÙÛÜŸ]|$))',
+        'requirement': mech_prefix + r'Conditions?\**[\s:]*(.*?)(?=\s*(?:;|\n\s*\*\*|\n\s*[A-ZÀÂÄÆÇÉÈÊËÎÏÔÖŒÙÛÜŸ]|$))',
         'trigger': mech_prefix + r'Déclencheur[.*]?\**[\s:]*(.*?)(?=\s*(?:;|\n\s*\*\*|\n\s*[A-ZÀÂÄÆÇÉÈÊËÎÏÔÖŒÙÛÜŸ]|$))',
     }
     
@@ -784,7 +784,7 @@ def generate_spells_xml(spells_data, output_path):
             for tr in data['traditions']:
                 etree.SubElement(tr_el, "tradition").text = tr
 
-        for field in ['cast', 'cost', 'condition', 'trigger', 'range', 'area', 'targets', 'defense', 'duration']:
+        for field in ['cast', 'cost', 'requirement', 'trigger', 'range', 'area', 'targets', 'defense', 'duration']:
             if data.get(field): etree.SubElement(s_el, field).text = data[field]
         
         # description est requise par le XSD — on la crée même si vide

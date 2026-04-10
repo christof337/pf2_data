@@ -73,7 +73,7 @@
       
       <xs:element name="cast" type="xs:string" minOccurs="0"/>
       <xs:element name="cost" type="xs:string" minOccurs="0"/>
-      <xs:element name="condition" type="xs:string" minOccurs="0"/>
+      <xs:element name="requirement" type="xs:string" minOccurs="0"/>
       <xs:element name="trigger" type="xs:string" minOccurs="0"/>
       <xs:element name="range" type="xs:string" minOccurs="0"/>
       <xs:element name="area" type="xs:string" minOccurs="0"/>

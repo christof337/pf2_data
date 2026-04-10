@@ -77,8 +77,8 @@
       <xsl:text>**Coût** </xsl:text><xsl:value-of select="cost"/>
       <xsl:text>&#10;</xsl:text>
     </xsl:if>
-    <xsl:if test="condition">
-      <xsl:text>**Conditions** </xsl:text><xsl:value-of select="condition"/>
+    <xsl:if test="requirement">
+      <xsl:text>**Conditions** </xsl:text><xsl:value-of select="requirement"/>
       <xsl:text>&#10;</xsl:text>
     </xsl:if>
     <xsl:if test="trigger">
