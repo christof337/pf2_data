@@ -46,7 +46,7 @@
       <!-- Conditions d'utilisation (Requirements) -->
       <xs:element name="requirement" type="xs:string" minOccurs="0"/>
       <!-- Description / effet principal -->
-      <xs:element name="description" type="xs:string" minOccurs="0"/>
+      <xs:element name="description" type="xs:string"/>
       <!-- Degrés de succès (Succès critique / Succès / Échec / Échec critique) -->
       <xs:element name="successDegrees" type="successDegreesType" minOccurs="0"/>
       <!-- Section Spécial (cas particuliers, cumul de sélections, etc.) -->
