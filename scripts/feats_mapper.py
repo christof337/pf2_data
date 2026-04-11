@@ -211,9 +211,10 @@ def parse_feat_block(raw):
     # Tout ce qui précède "DON" dans le header content
     header_before_don = header_content[:header_content.find('DON')]
 
-    # Supprimer les artefacts : numéros de page (44 44), NIVEAU N
+    # Supprimer les artefacts : numéros de page (44 44), NIVEAU N, chiffre d'action en fin
     name_raw = re.sub(r'^\d+\s+\d+\s+', '', header_before_don.strip())
     name_raw = re.sub(r'^NIVEAU\s+\d+\s+', '', name_raw)
+    name_raw = re.sub(r'\s+[0-9]\s*$', '', name_raw)  # chiffre d'action après normalisation
     name_raw = name_raw.strip()
 
     if not name_raw or len(name_raw) < 2 or re.match(r'^\d', name_raw):
@@ -307,11 +308,12 @@ def parse_feats_md(content):
     """Parse le contenu MD et retourne une liste de dictionnaires de dons."""
     content = clean_pdf_artifacts(content)
 
+    # Normaliser les headers splittés AVANT la découpe en blocs, sinon
+    # le split_pat ne peut pas les détecter (le chiffre d'action est hors du **)
+    content = _normalize_split_header(content)
+
     # Découpe : chaque don commence par **[MAJUSCULE(S)]... DON N
-    # Inclut le format splitté où "DON N" est dans un second **...**
-    #
-    # Pattern de lookhead : une ligne **[MAJUSCULES] qui précède "DON N"
-    # On coupe juste avant le ** qui ouvre chaque nouveau header de don.
+    # Après normalisation, le chiffre d'action est inclus dans le **...**
     split_pat = re.compile(
         rf'(?=\s*\*\*[{UPPER}][^*\n]{{2,}}(?:\s+[0-9]\s+|\s+)DON\s+\d)',
         re.MULTILINE
