@@ -55,29 +55,30 @@
       <xsl:text>&#10;</xsl:text>
     </xsl:if>
 
-    <!-- Champs mécaniques -->
-    <xsl:if test="prerequisites">
-      <xsl:text>**Prérequis** </xsl:text><xsl:value-of select="prerequisites"/><xsl:text>&#10;</xsl:text>
+    <!-- Champs mécaniques + 2e séparateur (seulement si au moins un champ est présent) -->
+    <xsl:if test="prerequisites or skills or frequency or trigger or requirement">
+      <xsl:if test="prerequisites">
+        <xsl:text>**Prérequis** </xsl:text><xsl:value-of select="prerequisites"/><xsl:text>&#10;</xsl:text>
+      </xsl:if>
+      <xsl:if test="skills">
+        <xsl:text>**Compétences** </xsl:text>
+        <xsl:for-each select="skills/skill">
+          <xsl:value-of select="."/>
+          <xsl:if test="position() != last()">, </xsl:if>
+        </xsl:for-each>
+        <xsl:text>&#10;</xsl:text>
+      </xsl:if>
+      <xsl:if test="frequency">
+        <xsl:text>**Fréquence** </xsl:text><xsl:value-of select="frequency"/><xsl:text>&#10;</xsl:text>
+      </xsl:if>
+      <xsl:if test="trigger">
+        <xsl:text>**Déclencheur** </xsl:text><xsl:value-of select="trigger"/><xsl:text>&#10;</xsl:text>
+      </xsl:if>
+      <xsl:if test="requirement">
+        <xsl:text>**Conditions** </xsl:text><xsl:value-of select="requirement"/><xsl:text>&#10;</xsl:text>
+      </xsl:if>
+      <xsl:text>---- &#10;</xsl:text>
     </xsl:if>
-    <xsl:if test="skills">
-      <xsl:text>**Compétences** </xsl:text>
-      <xsl:for-each select="skills/skill">
-        <xsl:value-of select="."/>
-        <xsl:if test="position() != last()">, </xsl:if>
-      </xsl:for-each>
-      <xsl:text>&#10;</xsl:text>
-    </xsl:if>
-    <xsl:if test="frequency">
-      <xsl:text>**Fréquence** </xsl:text><xsl:value-of select="frequency"/><xsl:text>&#10;</xsl:text>
-    </xsl:if>
-    <xsl:if test="trigger">
-      <xsl:text>**Déclencheur** </xsl:text><xsl:value-of select="trigger"/><xsl:text>&#10;</xsl:text>
-    </xsl:if>
-    <xsl:if test="requirement">
-      <xsl:text>**Conditions** </xsl:text><xsl:value-of select="requirement"/><xsl:text>&#10;</xsl:text>
-    </xsl:if>
-
-    <xsl:text>---- &#10;</xsl:text>
 
     <!-- Description -->
     <xsl:value-of select="description"/>

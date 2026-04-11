@@ -38,6 +38,10 @@ def clean_pdf_artifacts(content):
     # Purge des marqueurs de page, flux principal, en-têtes récurrents
     content = re.sub(r'\[\[PAGE \d+\]\]', '', content)
     content = re.sub(r'(?m)^\s*# FLUX PRINCIPAL \(STATS\/BASE\)\s*$(?:\n\s*Livre des Joueurs)?\n*\*{0,2}\s*\d{1,3}\s?\d{0,3}\*{0,2}', '', content)
+    # Purge des numéros de page en gras **NN NN (ouverture de span bold sans fermeture sur la ligne)
+    content = re.sub(r'\*\*\d+\s+\d+\s*\n', '', content)
+    # Purge des en-têtes de chapitre récurrents (running heads après page break)
+    content = re.sub(r'(?m)^\s*Ascendances\s*&\s*Historiques\s*$', '', content)
     content = re.sub(r'(?m)^\s*Dons\s*$', '', content, flags=re.IGNORECASE)
 
     # Légendes d'illustration + crédit artiste
@@ -389,6 +393,10 @@ def parse_feat_block(raw):
         rf'\*\*(?:Prérequis|Fréquence|Déclencheur|Conditions?|Spécial)\.?\*\*\s*.+?(?=\n\s*\*\*|\n\s*[{UPPER}]|\Z)',
         '', desc_body, flags=re.DOTALL
     )
+    # Règle : pas de **[MAJUSCULES] ni de MAJUSCULES DON N dans la description
+    # (artefacts de dons non découpés qui ont fusionné dans ce bloc)
+    desc_clean = re.sub(rf'\*\*\s*[{UPPER}].*', '', desc_clean, flags=re.DOTALL)
+    desc_clean = re.sub(rf'(?m)^\s*[{UPPER}]{{2,}}[{UPPER}\u2019\' ]*\s+DON\s+\d.*', '', desc_clean, flags=re.DOTALL)
     description = clean_desc(desc_clean) or None
 
     return {
