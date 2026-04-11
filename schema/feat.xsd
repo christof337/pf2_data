@@ -29,6 +29,14 @@
       <xs:element name="actions" type="xs:string" minOccurs="0"/>
       <!-- Traits (réutilise traitListType de common.xsd) -->
       <xs:element name="traits" type="traitListType" minOccurs="0"/>
+      <!-- Compétences associées (pour les actions de compétence) -->
+      <xs:element name="skills" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="skill" type="xs:string" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
       <!-- Prérequis (attributs, dons, rangs de compétence requis) -->
       <xs:element name="prerequisites" type="xs:string" minOccurs="0"/>
       <!-- Fréquence d'utilisation -->
@@ -39,6 +47,17 @@
       <xs:element name="requirement" type="xs:string" minOccurs="0"/>
       <!-- Description / effet principal -->
       <xs:element name="description" type="xs:string" minOccurs="0"/>
+      <!-- Degrés de succès (Succès critique / Succès / Échec / Échec critique) -->
+      <xs:element name="successDegrees" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="criticalSuccess" type="xs:string" minOccurs="0"/>
+            <xs:element name="success" type="xs:string" minOccurs="0"/>
+            <xs:element name="failure" type="xs:string" minOccurs="0"/>
+            <xs:element name="criticalFailure" type="xs:string" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
       <!-- Section Spécial (cas particuliers, cumul de sélections, etc.) -->
       <xs:element name="special" type="xs:string" minOccurs="0"/>
     </xs:sequence>

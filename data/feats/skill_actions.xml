@@ -1,0 +1,962 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feats xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="../../schema/feat.xsd">
+
+  <!-- ============================================================
+       ACTIONS DE COMPÉTENCES — LdJ pages 228–247
+       Source : output/ldj_full/PF2R_01_Livre_des_Joueurs_web_v1.md
+       ============================================================ -->
+
+  <!-- ===== ACTIONS GÉNÉRALES (multi-compétences) ===== -->
+
+  <feat id="action-se-souvenir" type="action">
+    <name>Se souvenir</name>
+    <actions>1</actions>
+    <traits>
+      <trait>concentration</trait>
+      <trait>secret</trait>
+    </traits>
+    <skills>
+      <skill>Arcanes</skill>
+      <skill>Artisanat</skill>
+      <skill>Connaissances</skill>
+      <skill>Médecine</skill>
+      <skill>Nature</skill>
+      <skill>Occultisme</skill>
+      <skill>Religion</skill>
+      <skill>Société</skill>
+    </skills>
+    <description>Vous effectuez un test de compétence pour tenter de vous rappeler une information à propos d'un sujet correspondant à cette compétence. Proposez la compétence que vous aimeriez utiliser et posez une question au MJ. Celui-ci détermine le DD. Il vous faudra peut-être collaborer avec lui pour préciser la question ou les compétences, et vous pouvez décider de ne pas Vous souvenir avant d'accomplir l'action si vos options ne vous conviennent pas.</description>
+    <successDegrees>
+      <criticalSuccess>Vous vous souvenez avec précision de l'information voulue. Le MJ répond honnêtement à votre question. Il peut même vous révéler des informations ou du contexte supplémentaires, ou répondre à une deuxième question.</criticalSuccess>
+      <success>Vous vous souvenez avec précision de l'information voulue. Le MJ répond honnêtement à votre question.</success>
+      <criticalFailure>Vous vous souvenez d'une information inexacte. Le MJ répond à votre question de manière trompeuse (ou il peut décider de ne vous révéler aucune information, comme pour un échec).</criticalFailure>
+    </successDegrees>
+  </feat>
+
+  <feat id="action-apprendre-un-sort" type="action">
+    <name>Apprendre un sort</name>
+    <traits>
+      <trait>concentration</trait>
+      <trait>exploration</trait>
+    </traits>
+    <skills>
+      <skill>Arcanes</skill>
+      <skill>Nature</skill>
+      <skill>Occultisme</skill>
+      <skill>Religion</skill>
+    </skills>
+    <prerequisites>Qualifié dans la compétence correspondante</prerequisites>
+    <requirement>Vous avez une capacité de classe d'incantation et le sort que vous voulez apprendre est sur la liste de sorts de votre tradition magique.</requirement>
+    <description>Vous pouvez apprendre un nouveau sort de votre tradition auprès de quelqu'un qui le connaît déjà ou par le biais d'un manuscrit magique comme un grimoire ou un parchemin. Pour apprendre le sort, vous devez passer une heure par rang du sort avec la source du sort, acquérir les matériaux nécessaires (voir tableau Apprendre un sort), et effectuer un test de la compétence correspondant à votre tradition.</description>
+    <successDegrees>
+      <criticalSuccess>Vous dépensez la moitié des matériaux et apprenez le sort.</criticalSuccess>
+      <success>Vous dépensez les matériaux et apprenez le sort.</success>
+      <failure>Vous ne parvenez pas à apprendre le sort mais vous pouvez retenter après avoir gagné un niveau. Les matériaux ne sont pas dépensés.</failure>
+      <criticalFailure>Comme l'échec, sauf que vous dépensez la moitié des matériaux.</criticalFailure>
+    </successDegrees>
+  </feat>
+
+  <feat id="action-dechiffrer-un-texte" type="action">
+    <name>Déchiffrer un texte</name>
+    <traits>
+      <trait>concentration</trait>
+      <trait>exploration</trait>
+      <trait>secret</trait>
+    </traits>
+    <skills>
+      <skill>Arcanes</skill>
+      <skill>Occultisme</skill>
+      <skill>Religion</skill>
+      <skill>Société</skill>
+    </skills>
+    <prerequisites>Qualifié dans la compétence correspondante</prerequisites>
+    <description>Vous tentez de déchiffrer un manuscrit ou une œuvre littéraire complexe abordant un sujet obscur. Il faut généralement y consacrer une minute par page de texte mais la tâche peut parfois s'avérer plus longue (le plus souvent une heure par page pour déchiffrer un code secret ou un écrit similaire). Le texte doit être rédigé dans une langue que vous savez lire, mais le MJ peut vous autoriser à tenter de déchiffrer un texte écrit dans une langue inconnue en utilisant Société à la place.</description>
+    <successDegrees>
+      <criticalSuccess>Vous comprenez le véritable sens du texte.</criticalSuccess>
+      <success>Vous comprenez le véritable sens du texte. Si le document était rédigé dans un langage codé, vous comprenez son sens général mais ne parvenez pas à le traduire mot pour mot.</success>
+      <failure>Vous ne comprenez pas le texte et subissez un malus de circonstances de −2 aux tests ultérieurs pour le déchiffrer.</failure>
+      <criticalFailure>Vous croyez comprendre la page de texte que vous venez de lire mais vous le comprenez, en réalité, de travers.</criticalFailure>
+    </successDegrees>
+  </feat>
+
+  <feat id="action-identifier-la-magie" type="action">
+    <name>Identifier la magie</name>
+    <traits>
+      <trait>concentration</trait>
+      <trait>exploration</trait>
+      <trait>secret</trait>
+    </traits>
+    <skills>
+      <skill>Arcanes</skill>
+      <skill>Nature</skill>
+      <skill>Occultisme</skill>
+      <skill>Religion</skill>
+    </skills>
+    <prerequisites>Qualifié dans la compétence correspondante</prerequisites>
+    <description>Une fois que vous savez qu'un objet, un site ou un effet en cours est magique, vous pouvez passer 10 min à tenter d'identifier ses spécificités. Si votre tentative est interrompue, vous devez la reprendre depuis le début. Le MJ fixe le DD de votre test. Les sujets maudits ou ésotériques imposent généralement des DD plus élevés ou peuvent même rendre impossible leur identification par le biais de cette seule activité. Un sort intensifié n'augmente pas le DD pour l'identifier.</description>
+    <successDegrees>
+      <criticalSuccess>Vous découvrez tous les attributs de la magie, notamment son nom (dans le cas d'un effet), ce qu'elle fait, la façon dont elle s'active (dans le cas d'un objet ou d'un site) et si elle est maudite.</criticalSuccess>
+      <success>Dans le cas d'un objet ou d'un site, vous avez une idée de ce qu'il fait et vous découvrez comment l'activer. Dans le cas d'un effet en cours (tel qu'un sort avec une durée), vous découvrez le nom de l'effet et ce qu'il fait. Vous ne pouvez pas retenter votre test dans l'espoir d'obtenir un succès critique.</success>
+      <failure>Vous ne parvenez pas à identifier la magie et vous devez attendre une journée avant d'effectuer une autre tentative.</failure>
+      <criticalFailure>Vous identifiez la magie de travers et croyez que c'est autre chose, au choix du MJ.</criticalFailure>
+    </successDegrees>
+  </feat>
+
+  <feat id="action-gagner-de-l-argent" type="action">
+    <name>Gagner de l'argent</name>
+    <traits>
+      <trait>intermède</trait>
+    </traits>
+    <skills>
+      <skill>Artisanat</skill>
+      <skill>Connaissances</skill>
+      <skill>Représentation</skill>
+    </skills>
+    <prerequisites>Qualifié dans la compétence utilisée</prerequisites>
+    <description>Vous utilisez l'une de vos compétences pour gagner de l'argent lors des intermèdes. Le MJ assigne un niveau de tâche qui représente le travail disponible le plus rentable. Après votre premier jour de travail, vous effectuez un jet pour déterminer vos gains. Pour chaque jour supplémentaire que vous y consacrez, vous gagnez la même somme d'argent que lors du premier jour, jusqu'à ce que la tâche soit entièrement remplie.</description>
+    <successDegrees>
+      <criticalSuccess>La qualité de votre travail est exceptionnelle. Vous gagnez la somme d'argent correspondant au niveau de la tâche +1 et à votre rang de maîtrise.</criticalSuccess>
+      <success>La qualité de votre travail est convenable. Vous gagnez la somme d'argent correspondant au niveau de la tâche et à votre rang de maîtrise.</success>
+      <failure>La qualité de votre travail est douteuse et vous gagnez le strict minimum. Le MJ réduira probablement la durée pendant laquelle vous pouvez continuer cette tâche.</failure>
+      <criticalFailure>Votre travail ne vous rapporte rien et vous êtes renvoyé sur-le-champ. Vous ne pouvez plus continuer à travailler sur cette tâche.</criticalFailure>
+    </successDegrees>
+  </feat>
+
+  <feat id="action-subsister" type="action">
+    <name>Subsister</name>
+    <traits>
+      <trait>intermède</trait>
+    </traits>
+    <skills>
+      <skill>Société</skill>
+      <skill>Survie</skill>
+    </skills>
+    <description>Vous tentez d'obtenir de la nourriture et un abri pour vous et potentiellement aussi pour d'autres, selon un niveau de vie. Le MJ détermine le DD en fonction de la nature de l'endroit où vous tentez de Subsister. Au contraire de la plupart des activités d'intermède, vous pouvez Subsister après 8 h ou moins d'exploration mais vous subissez dans ce cas un malus de −5.</description>
+    <successDegrees>
+      <criticalSuccess>Vous fournissez de quoi vivre à vous-même et à une créature supplémentaire, ou vous améliorez votre nourriture et votre abri pour vivre de manière confortable.</criticalSuccess>
+      <success>Vous trouvez de la nourriture et un abri simple qui vous protège contre les éléments afin de bénéficier du minimum vital en matière de subsistance.</success>
+      <failure>Vous êtes exposé aux éléments et n'obtenez pas assez de nourriture. Vous êtes fatigué tant que vous n'obtenez pas suffisamment de nourriture et un abri convenable.</failure>
+      <criticalFailure>Vous rencontrez des problèmes, vous mangez quelque chose qui ne passe pas ou votre situation se détériore d'une façon ou d'une autre. Vous subissez un malus de circonstances de −2 aux tests pour Subsister pendant une semaine.</criticalFailure>
+    </successDegrees>
+  </feat>
+
+  <!-- ===== ACROBATIES (DEX) ===== -->
+
+  <feat id="action-deplacement-acrobatique" type="action">
+    <name>Déplacement acrobatique</name>
+    <actions>1</actions>
+    <traits>
+      <trait>déplacement</trait>
+    </traits>
+    <skills>
+      <skill>Acrobaties</skill>
+    </skills>
+    <description>Vous Marchez rapidement d'une distance égale à votre Vitesse. Pendant ce déplacement, vous pouvez tenter de traverser l'espace occupé par un ennemi. Effectuez un test d'Acrobaties contre le DD de Réflexes de l'ennemi dès que vous tentez d'entrer dans l'espace qu'il occupe. Vous pouvez faire un Déplacement acrobatique en effectuant les actions Voler, Escalader, Nager ou une autre action en fonction de votre environnement au lieu de Marcher rapidement.</description>
+    <successDegrees>
+      <success>Vous traversez l'espace occupé par l'ennemi, en considérant les cases dans son espace comme un terrain difficile (chaque déplacement de 1,5 m compte comme un déplacement de 3 m). Si vous n'avez pas assez de Vitesse pour traverser complètement l'espace qu'il occupe, vous appliquez l'effet de l'échec.</success>
+      <failure>Votre déplacement prend fin et vous déclenchez des réactions comme si vous étiez sorti de la case dans laquelle vous avez commencé.</failure>
+    </successDegrees>
+  </feat>
+
+  <feat id="action-garder-l-equilibre" type="action">
+    <name>Garder l'équilibre</name>
+    <actions>1</actions>
+    <traits>
+      <trait>déplacement</trait>
+    </traits>
+    <skills>
+      <skill>Acrobaties</skill>
+    </skills>
+    <requirement>Vous vous trouvez dans une case contenant une surface étroite, un sol inégal ou un autre élément similaire.</requirement>
+    <description>Vous vous déplacez sur une surface étroite ou sur un sol inégal en effectuant un test d'Acrobaties contre son DD pour Garder l'équilibre. Vous êtes pris par surprise lorsque vous êtes sur une surface étroite ou un sol inégal.</description>
+    <successDegrees>
+      <criticalSuccess>Vous vous déplacez d'une distance maximale égale à votre Vitesse.</criticalSuccess>
+      <success>Vous vous déplacez d'une distance maximale égale à votre Vitesse, en considérant la surface traversée comme un terrain difficile (chaque déplacement de 1,5 m compte comme un déplacement de 3 m).</success>
+      <failure>Vous devez rester sur place pour garder l'équilibre (l'action est tout de même dépensée) ou vous chutez. Votre tour prend fin si vous chutez.</failure>
+      <criticalFailure>Vous chutez et votre tour prend fin.</criticalFailure>
+    </successDegrees>
+  </feat>
+
+  <feat id="action-manouvrer-en-vol" type="action">
+    <name>Manœuvrer en vol</name>
+    <actions>1</actions>
+    <traits>
+      <trait>déplacement</trait>
+    </traits>
+    <skills>
+      <skill>Acrobaties</skill>
+    </skills>
+    <prerequisites>Qualifié en Acrobaties</prerequisites>
+    <requirement>Vous avez une Vitesse de vol.</requirement>
+    <description>Vous tentez une manœuvre difficile en volant. Effectuez un test d'Acrobaties. Le MJ détermine quelles manœuvres sont possibles mais elles vous permettent rarement de vous déplacer plus loin que votre Vitesse de vol.</description>
+    <successDegrees>
+      <success>Vous réussissez la manœuvre.</success>
+      <failure>Votre manœuvre échoue. Le MJ décide si vous ne vous déplacez simplement pas ou si un autre effet néfaste se produit. Cet effet devrait correspondre à la manœuvre que vous avez tentée.</failure>
+      <criticalFailure>Comme un échec, mais les conséquences sont plus néfastes.</criticalFailure>
+    </successDegrees>
+  </feat>
+
+  <feat id="action-se-faufiler" type="action">
+    <name>Se faufiler</name>
+    <traits>
+      <trait>exploration</trait>
+      <trait>déplacement</trait>
+    </traits>
+    <skills>
+      <skill>Acrobaties</skill>
+    </skills>
+    <prerequisites>Qualifié en Acrobaties</prerequisites>
+    <description>Vous vous contorsionnez pour vous faufiler dans un espace si étroit que vous pouvez à peine le traverser. Cette action concerne les espaces exceptionnellement étroits ; nombre d'espaces étroits sont considérés comme du terrain difficile que vous pouvez traverser plus rapidement et sans avoir à effectuer de test.</description>
+    <successDegrees>
+      <criticalSuccess>Vous traversez l'espace étroit en vous faufilant et cela vous prend 1 min tous les 3 m.</criticalSuccess>
+      <success>Vous vous faufilez en 1 min par tranche de 1,5 m.</success>
+      <criticalFailure>Vous restez coincé dans l'espace étroit. Lorsque vous êtes coincé de la sorte, vous pouvez effectuer un autre test d'Acrobaties contre le même DD en y consacrant 1 min. Tout résultat autre qu'un échec critique sur ce test permet de vous décoincer.</criticalFailure>
+    </successDegrees>
+  </feat>
+
+  <!-- ===== ARCANES (INT) ===== -->
+
+  <feat id="action-emprunter-un-sort-arcanique" type="action">
+    <name>Emprunter un sort arcanique</name>
+    <traits>
+      <trait>concentration</trait>
+      <trait>exploration</trait>
+    </traits>
+    <skills>
+      <skill>Arcanes</skill>
+    </skills>
+    <prerequisites>Qualifié en Arcanes</prerequisites>
+    <description>Si vous êtes un incantateur arcanique qui prépare ses sorts, vous pouvez essayer de préparer un sort inscrit dans le grimoire arcanique de quelqu'un d'autre, auprès du familier d'un sorcier arcanique ou d'une chose similaire. Le MJ fixe le DD du test en fonction du rang du sort et de sa rareté ; c'est généralement un peu plus simple que d'Apprendre le sort.</description>
+    <successDegrees>
+      <success>Vous préparez le sort emprunté lors de votre préparation normale des sorts.</success>
+      <failure>Vous ne parvenez pas à préparer le sort mais l'emplacement de sort reste disponible pour en préparer un autre. Vous ne pouvez pas tenter de préparer ce sort jusqu'à votre prochaine préparation des sorts.</failure>
+    </successDegrees>
+  </feat>
+
+  <!-- ===== ARTISANAT (INT) ===== -->
+
+  <feat id="action-reparer" type="action">
+    <name>Réparer</name>
+    <traits>
+      <trait>exploration</trait>
+      <trait>manipulation</trait>
+    </traits>
+    <skills>
+      <skill>Artisanat</skill>
+    </skills>
+    <requirement>Vous tenez ou portez du matériel de réparation.</requirement>
+    <description>Vous passez 10 min à tenter de réparer un objet endommagé, en le plaçant sur une surface stable et en utilisant le matériel de réparation avec vos deux mains. Effectuez un test d'Artisanat. Le MJ détermine le DD, sachant que le DD pour Réparer un objet donné est généralement similaire à celui pour le Fabriquer. Vous ne pouvez pas Réparer un objet détruit.</description>
+    <successDegrees>
+      <criticalSuccess>L'objet réparé récupère 10 points de vie, et 10 points de vie supplémentaires par rang de maîtrise que vous avez en Artisanat (pour un total de 20 PV si vous êtes qualifié, 30 PV si vous êtes un expert, 40 PV si vous êtes un maître ou 50 PV si vous êtes légendaire).</criticalSuccess>
+      <success>L'objet réparé récupère 5 points de vie, et 5 points de vie supplémentaires par rang de maîtrise que vous avez en Artisanat (pour un total de 10 PV si vous êtes qualifié, 15 PV si vous êtes un expert, 20 PV si vous êtes un maître ou 25 PV si vous êtes légendaire).</success>
+      <criticalFailure>Vous infligez 2d6 dégâts à l'objet. Appliquez la Solidité de l'objet à ces dégâts.</criticalFailure>
+    </successDegrees>
+  </feat>
+
+  <feat id="action-fabriquer" type="action">
+    <name>Fabriquer</name>
+    <traits>
+      <trait>intermède</trait>
+      <trait>manipulation</trait>
+    </traits>
+    <skills>
+      <skill>Artisanat</skill>
+    </skills>
+    <prerequisites>Qualifié en Artisanat</prerequisites>
+    <description>Vous pouvez fabriquer un objet avec des matières premières. Vous devez satisfaire aux conditions suivantes : l'objet est d'un niveau inférieur ou égal au vôtre (maître requis si niveau 9+, légendaire si niveau 17+) ; l'objet doit être commun ou vous devez en avoir un à disposition ; vous possédez les outils appropriés et un atelier si nécessaire ; vous fournissez les matières premières d'une valeur au moins égale à la moitié du prix de l'objet. Effectuez un test d'Artisanat après avoir passé 2 jours à travailler (ou 1 jour si vous possédez la formule de l'objet).</description>
+    <successDegrees>
+      <criticalSuccess>Votre tentative est réussie. Chaque jour supplémentaire réduit la valeur des matières nécessaires d'un montant basé sur votre niveau +1 et votre rang de maîtrise.</criticalSuccess>
+      <success>Votre tentative est réussie. Chaque jour supplémentaire réduit la valeur des matières nécessaires d'un montant basé sur votre niveau et votre rang de maîtrise.</success>
+      <failure>Vous ne parvenez pas à terminer la fabrication. Vous pouvez récupérer la pleine valeur des matières premières.</failure>
+      <criticalFailure>Vous ne parvenez pas à terminer la fabrication. Vous perdez 10 % des matières premières.</criticalFailure>
+    </successDegrees>
+  </feat>
+
+  <feat id="action-identifier-l-alchimie" type="action">
+    <name>Identifier l'alchimie</name>
+    <traits>
+      <trait>concentration</trait>
+      <trait>exploration</trait>
+      <trait>secret</trait>
+    </traits>
+    <skills>
+      <skill>Artisanat</skill>
+    </skills>
+    <prerequisites>Qualifié en Artisanat</prerequisites>
+    <requirement>Vous tenez ou portez du matériel d'alchimiste.</requirement>
+    <description>Vous pouvez identifier la nature d'un objet alchimique en l'analysant pendant 10 min avec votre matériel d'alchimiste. Si votre tentative est interrompue, vous devez la reprendre depuis le début.</description>
+    <successDegrees>
+      <success>Vous identifiez l'objet et découvrez la méthode pour l'activer.</success>
+      <failure>Vous ne parvenez pas à identifier l'objet mais vous pouvez recommencer.</failure>
+      <criticalFailure>Vous identifiez l'objet de travers et le prenez pour un autre objet au choix du MJ.</criticalFailure>
+    </successDegrees>
+  </feat>
+
+  <!-- ===== ATHLÉTISME (FOR) ===== -->
+
+  <feat id="action-croc-en-jambe" type="action">
+    <name>Croc-en-jambe</name>
+    <actions>1</actions>
+    <traits>
+      <trait>attaque</trait>
+    </traits>
+    <skills>
+      <skill>Athlétisme</skill>
+    </skills>
+    <requirement>L'une de vos mains au moins est libre. Votre cible ne peut pas être de plus d'une catégorie de taille de plus que vous.</requirement>
+    <description>Vous tentez de faire tomber une créature. Effectuez un test d'Athlétisme contre le DD de Réflexes de la cible.</description>
+    <successDegrees>
+      <criticalSuccess>La cible tombe à terre et subit 1d6 dégâts contondants.</criticalSuccess>
+      <success>La cible tombe à terre.</success>
+      <criticalFailure>Vous perdez l'équilibre et tombez à terre.</criticalFailure>
+    </successDegrees>
+  </feat>
+
+  <feat id="action-escalader" type="action">
+    <name>Escalader</name>
+    <actions>1</actions>
+    <traits>
+      <trait>déplacement</trait>
+    </traits>
+    <skills>
+      <skill>Athlétisme</skill>
+    </skills>
+    <requirement>Vos deux mains sont libres.</requirement>
+    <description>Vous tentez un test d'Athlétisme pour monter, descendre ou parcourir une déclivité sur une distance maximale de 1,5 m. Vous êtes pris par surprise quand vous escaladez, sauf si vous avez une Vitesse d'escalade. Le MJ détermine le DD en se basant sur la nature de la déclivité et les circonstances environnementales. Si votre Vitesse au sol est égale ou supérieure à 12 m, augmentez de 1,5 m la distance maximale parcourue par tranche de 6 m de Vitesse au-dessus de 6.</description>
+    <successDegrees>
+      <criticalSuccess>Vous montez, descendez ou parcourez la déclivité en augmentant de 1,5 m la distance maximale parcourue.</criticalSuccess>
+      <success>Vous montez, descendez ou parcourez la déclivité.</success>
+      <criticalFailure>Vous chutez. Si vous avez commencé votre escalade sur un sol stable, vous tombez à terre.</criticalFailure>
+    </successDegrees>
+  </feat>
+
+  <feat id="action-nager" type="action">
+    <name>Nager</name>
+    <actions>1</actions>
+    <traits>
+      <trait>déplacement</trait>
+    </traits>
+    <skills>
+      <skill>Athlétisme</skill>
+    </skills>
+    <description>Vous effectuez un test d'Athlétisme pour vous déplacer dans l'eau d'une distance maximale de 3 m. Le MJ détermine le DD en se basant sur la turbulence ou le danger de l'eau ; dans la plupart des cas où l'eau est calme, vous obtenez un succès critique automatique. Si votre Vitesse au sol est égale ou supérieure à 12 m, augmentez de 1,5 m la distance maximale par tranche de 6 m de Vitesse au-dessus de 6. Si vous terminez votre tour dans l'eau et que vous n'avez pas réussi une action Nager lors de ce tour, vous coulez de 3 m ou vous êtes emporté par le courant.</description>
+    <successDegrees>
+      <criticalSuccess>Vous vous déplacez dans l'eau en augmentant de 1,5 m la distance maximale parcourue.</criticalSuccess>
+      <success>Vous vous déplacez dans l'eau.</success>
+      <criticalFailure>Vous ne progressez pas. Si vous retenez votre respiration, vous perdez un round d'air.</criticalFailure>
+    </successDegrees>
+  </feat>
+
+  <feat id="action-ouvrir-de-force" type="action">
+    <name>Ouvrir de force</name>
+    <actions>1</actions>
+    <traits>
+      <trait>attaque</trait>
+    </traits>
+    <skills>
+      <skill>Athlétisme</skill>
+    </skills>
+    <description>En utilisant votre masse corporelle, un levier ou un autre outil, vous tentez de forcer l'ouverture d'une porte, d'une fenêtre, d'un contenant ou d'une grille épaisse. Avec un résultat suffisamment élevé, vous pouvez même traverser des murs. Vous subissez un malus d'objet de −2 au test d'Athlétisme si vous tentez d'Ouvrir de force quelque chose sans pied-de-biche.</description>
+    <successDegrees>
+      <criticalSuccess>Vous ouvrez la porte, la fenêtre, le contenant ou la grille sans l'endommager si vous le souhaitez.</criticalSuccess>
+      <success>Vous enfoncez la porte, la fenêtre, le contenant ou la grille, et l'objet enfoncé obtient l'état brisé. S'il est particulièrement solide, le MJ peut décider qu'il subit des dégâts sans être brisé.</success>
+      <criticalFailure>Votre tentative bloque la porte, la fenêtre, le contenant ou la grille, imposant un malus de circonstances de −2 aux tentatives ultérieures pour l'Ouvrir de force.</criticalFailure>
+    </successDegrees>
+  </feat>
+
+  <feat id="action-pousser" type="action">
+    <name>Pousser</name>
+    <actions>1</actions>
+    <traits>
+      <trait>attaque</trait>
+    </traits>
+    <skills>
+      <skill>Athlétisme</skill>
+    </skills>
+    <requirement>L'une de vos mains au moins est libre. La cible ne peut pas être de plus d'une catégorie de taille de plus que vous.</requirement>
+    <description>Vous repoussez une créature. Effectuez un test d'Athlétisme contre son DD de Vigueur.</description>
+    <successDegrees>
+      <criticalSuccess>Vous repoussez la cible de 3 m. Vous pouvez Marcher rapidement à sa suite, mais vous devez couvrir la même distance qu'elle et avancer dans la même direction.</criticalSuccess>
+      <success>Vous repoussez votre cible de 1,5 m. Vous pouvez Marcher rapidement à sa suite, mais vous devez couvrir la même distance qu'elle et avancer dans la même direction.</success>
+      <criticalFailure>Vous perdez l'équilibre et tombez à terre.</criticalFailure>
+    </successDegrees>
+  </feat>
+
+  <feat id="action-repositionner" type="action">
+    <name>Repositionner</name>
+    <actions>1</actions>
+    <traits>
+      <trait>attaque</trait>
+    </traits>
+    <skills>
+      <skill>Athlétisme</skill>
+    </skills>
+    <requirement>L'une de vos mains au moins est libre, ou vous saisissez ou entravez la cible. La cible ne peut pas être de plus d'une catégorie de taille de plus que vous.</requirement>
+    <description>Vous déplacez de force une créature ou un objet. Effectuez un test d'Athlétisme contre le DD de Vigueur de la cible.</description>
+    <successDegrees>
+      <criticalSuccess>Vous déplacez la créature d'une distance maximale de 3 m. Elle doit rester à portée de votre allonge pendant ce déplacement et vous ne pouvez pas la déplacer dans ou à travers des obstacles.</criticalSuccess>
+      <success>Vous déplacez la créature d'une distance maximale de 1,5 m. Elle doit rester à portée de votre allonge pendant ce déplacement et vous ne pouvez pas la déplacer dans ou à travers des obstacles.</success>
+      <criticalFailure>La cible peut vous déplacer d'une distance maximale de 1,5 m comme si c'était elle qui avait réussi à vous repositionner.</criticalFailure>
+    </successDegrees>
+  </feat>
+
+  <feat id="action-saisir" type="action">
+    <name>Saisir</name>
+    <actions>1</actions>
+    <traits>
+      <trait>attaque</trait>
+    </traits>
+    <skills>
+      <skill>Athlétisme</skill>
+    </skills>
+    <requirement>L'une de vos mains au moins est libre et votre cible ne peut pas être de plus d'une catégorie de taille de plus que vous.</requirement>
+    <description>Vous tentez de saisir une créature ou un objet avec votre main libre. Effectuez un test d'Athlétisme contre le DD de Vigueur de la cible. Vous pouvez Saisir une créature que vous avez déjà empoignée ou entravée sans avoir une main libre.</description>
+    <successDegrees>
+      <criticalSuccess>Votre adversaire est entravé jusqu'à la fin de votre prochain tour, sauf si vous vous déplacez ou si votre adversaire S'échappe.</criticalSuccess>
+      <success>Votre adversaire est empoigné jusqu'à la fin de votre prochain tour, sauf si vous vous déplacez ou si votre adversaire S'échappe.</success>
+      <failure>Vous ne parvenez pas à saisir votre adversaire. Si vous avez déjà empoigné ou entravé votre adversaire en utilisant l'action Saisir, ces états sur cet adversaire disparaissent.</failure>
+      <criticalFailure>Si vous avez déjà empoigné ou entravé votre adversaire, il se libère. Votre cible peut vous saisir, comme si elle avait réussi à effectuer l'action Saisir contre vous, ou vous obliger à tomber à terre.</criticalFailure>
+    </successDegrees>
+  </feat>
+
+  <feat id="action-sauter-en-hauteur" type="action">
+    <name>Sauter en hauteur</name>
+    <actions>2</actions>
+    <skills>
+      <skill>Athlétisme</skill>
+    </skills>
+    <description>Vous Marchez rapidement puis effectuez un test d'Athlétisme DD 30 pour sauter en hauteur. Si vous ne prenez pas un élan d'au moins 3 m avec l'action Marcher rapidement, vous ratez automatiquement votre test. Le MJ peut augmenter ou diminuer ce DD en fonction des situations.</description>
+    <successDegrees>
+      <criticalSuccess>Vous Bondissez de 2,4 m à la verticale et de 3 m à l'horizontale.</criticalSuccess>
+      <success>Vous Bondissez de 1,5 m à la verticale et à l'horizontale.</success>
+      <failure>Vous Bondissez normalement.</failure>
+      <criticalFailure>Vous tombez à terre dans votre espace.</criticalFailure>
+    </successDegrees>
+  </feat>
+
+  <feat id="action-sauter-en-longueur" type="action">
+    <name>Sauter en longueur</name>
+    <actions>2</actions>
+    <skills>
+      <skill>Athlétisme</skill>
+    </skills>
+    <description>Vous Marchez rapidement puis vous tentez un test d'Athlétisme DD 15 pour faire un saut en longueur dans la direction dans laquelle vous avez Marché rapidement. Si vous ne prenez pas un élan d'au moins 3 m avec l'action Marcher rapidement, vous ratez automatiquement votre test. Le MJ peut augmenter ou diminuer ce DD en fonction des situations.</description>
+    <successDegrees>
+      <success>Vous Bondissez jusqu'à une distance égale au résultat de votre test multiplié par 30 cm, en arrondissant au multiple de 1,5 m le plus proche. La longueur de votre Bond ne peut pas dépasser votre Vitesse au sol.</success>
+      <failure>Vous faites un Bond horizontal normal.</failure>
+      <criticalFailure>Vous faites un Bond horizontal normal puis vous tombez à terre.</criticalFailure>
+    </successDegrees>
+  </feat>
+
+  <feat id="action-desarmer" type="action">
+    <name>Désarmer</name>
+    <actions>1</actions>
+    <traits>
+      <trait>attaque</trait>
+    </traits>
+    <skills>
+      <skill>Athlétisme</skill>
+    </skills>
+    <prerequisites>Qualifié en Athlétisme</prerequisites>
+    <requirement>L'une de vos mains au moins est libre. La cible ne peut pas être de plus d'une catégorie de taille de plus que vous.</requirement>
+    <description>Vous tentez d'obliger une créature à lâcher un objet qu'elle tient. Effectuez un test d'Athlétisme contre le DD de Réflexes de la cible.</description>
+    <successDegrees>
+      <criticalSuccess>Votre obligez la créature à lâcher l'objet qu'elle tient. Celui-ci tombe au sol dans l'espace qu'elle occupe.</criticalSuccess>
+      <success>Vous affaiblissez la prise de votre adversaire sur l'objet. Les tentatives ultérieures pour la Désarmer bénéficient d'un bonus de circonstances de +2 et la cible subit un malus de circonstances de −2 aux attaques effectuées avec l'objet ou aux autres tests nécessitant une prise ferme sur l'objet. La créature peut mettre fin à l'effet en Interagissant pour changer sa prise sur l'objet.</success>
+      <criticalFailure>Vous perdez l'équilibre et êtes pris par surprise jusqu'au début de votre prochain tour.</criticalFailure>
+    </successDegrees>
+  </feat>
+
+  <!-- ===== DIPLOMATIE (CHA) ===== -->
+
+  <feat id="action-faire-bonne-impression" type="action">
+    <name>Faire bonne impression</name>
+    <traits>
+      <trait>audible</trait>
+      <trait>concentration</trait>
+      <trait>exploration</trait>
+      <trait>linguistique</trait>
+      <trait>mental</trait>
+    </traits>
+    <skills>
+      <skill>Diplomatie</skill>
+    </skills>
+    <description>Lors d'une conversation d'au moins 1 min pendant laquelle vous faites des propositions charismatiques, des flatteries et montrez votre bonne volonté, vous cherchez à faire bonne impression à quelqu'un pour que son attitude vous soit temporairement favorable. À la fin de la conversation, effectuez un test de Diplomatie contre le DD de Volonté d'une cible. Vous pouvez vous imposer un malus de −2 en choisissant jusqu'à cinq cibles à la place. L'impression dure uniquement le temps de l'interaction sociale en cours, à moins que le MJ n'en décide autrement.</description>
+    <successDegrees>
+      <criticalSuccess>L'attitude de la cible à votre égard s'améliore de deux catégories.</criticalSuccess>
+      <success>L'attitude de la cible envers vous s'améliore d'une catégorie.</success>
+      <criticalFailure>L'attitude de la cible à votre égard se détériore d'une catégorie.</criticalFailure>
+    </successDegrees>
+  </feat>
+
+  <feat id="action-recueillir-des-informations" type="action">
+    <name>Recueillir des informations</name>
+    <traits>
+      <trait>exploration</trait>
+      <trait>secret</trait>
+    </traits>
+    <skills>
+      <skill>Diplomatie</skill>
+    </skills>
+    <description>Vous fréquentez les marchés, les tavernes et les lieux de rassemblement locaux pour tenter de recueillir des informations sur un individu ou un sujet particulier. Le MJ détermine le DD du test et le temps qu'il faut investir (deux heures le plus souvent, mais parfois plus), en prenant en compte les éventuels avantages dont vous pouvez bénéficier en dépensant de l'argent en pots-de-vin, tournées de boisson ou divers cadeaux.</description>
+    <successDegrees>
+      <success>Vous recueillez des informations sur l'individu ou le sujet. Le MJ détermine le contenu de ces informations.</success>
+      <criticalFailure>Vous recueillez des informations erronées sur l'individu ou le sujet.</criticalFailure>
+    </successDegrees>
+  </feat>
+
+  <feat id="action-solliciter" type="action">
+    <name>Solliciter</name>
+    <actions>1</actions>
+    <traits>
+      <trait>audible</trait>
+      <trait>concentration</trait>
+      <trait>linguistique</trait>
+      <trait>mental</trait>
+    </traits>
+    <skills>
+      <skill>Diplomatie</skill>
+    </skills>
+    <description>Vous pouvez solliciter une créature amicale ou serviable envers vous. Vous devez formuler votre sollicitation de manière à ce que la cible accepte, étant donné son attitude actuelle envers vous. Le MJ détermine le DD en fonction de la difficulté de la sollicitation. Certaines sollicitations sont douteuses ou impossibles, et un PNJ, aussi serviable soit-il, ne les acceptera jamais.</description>
+    <successDegrees>
+      <criticalSuccess>La cible répond favorablement et sans réserve à votre sollicitation.</criticalSuccess>
+      <success>La cible répond favorablement à votre sollicitation, mais peut imposer des conditions ou modifier certains aspects de votre demande.</success>
+      <failure>La cible refuse votre sollicitation mais peut proposer une alternative moins extrême.</failure>
+      <criticalFailure>Non seulement la cible refuse votre sollicitation mais son attitude à votre égard se détériore d'une catégorie à cause de la témérité de votre requête.</criticalFailure>
+    </successDegrees>
+  </feat>
+
+  <!-- ===== DISCRÉTION (DEX) ===== -->
+
+  <feat id="action-dissimuler-un-objet" type="action">
+    <name>Dissimuler un objet</name>
+    <actions>1</actions>
+    <traits>
+      <trait>manipulation</trait>
+      <trait>secret</trait>
+    </traits>
+    <skills>
+      <skill>Discrétion</skill>
+    </skills>
+    <description>Vous dissimulez un petit objet sur vous (tel qu'une arme dont l'Encombrement est léger). Quand vous tentez de camoufler un objet sur vous pour que personne ne le remarque, le MJ effectue votre test de Discrétion et compare le résultat au DD de Perception de l'observateur passif. Une fois que le MJ a fait votre test pour un objet dissimulé, ce même résultat est utilisé, quel que soit le nombre d'observateurs passifs qui passent à votre proximité. Vous pouvez également dissimuler un objet ailleurs que sur vous, dans un buisson ou dans un compartiment secret, par exemple.</description>
+    <successDegrees>
+      <success>L'objet reste non détecté.</success>
+      <failure>La créature qui cherche trouve l'objet.</failure>
+    </successDegrees>
+  </feat>
+
+  <feat id="action-etre-furtif" type="action">
+    <name>Être furtif</name>
+    <actions>1</actions>
+    <traits>
+      <trait>déplacement</trait>
+      <trait>secret</trait>
+    </traits>
+    <skills>
+      <skill>Discrétion</skill>
+    </skills>
+    <description>Vous tentez de vous déplacer vers un autre endroit tout en devenant ou en restant non détecté. Marchez rapidement jusqu'à la moitié de votre Vitesse. Vous pouvez Être furtif en Creusant, en Escaladant, en Volant ou en Nageant au lieu de Marcher rapidement si vous avez le type de déplacement correspondant. À la fin de votre déplacement, le MJ effectue votre test de Discrétion en secret et compare le résultat au DD de Perception de chaque créature vis-à-vis desquelles vous étiez caché ou non détecté au début de votre déplacement.</description>
+    <successDegrees>
+      <success>Vous êtes non détecté par la créature pendant votre déplacement et restez non détecté à la fin. Vous devenez observé dès que vous faites quoi que ce soit d'autre que Vous cacher, Être furtif ou Faire un pas. Si vous tentez de Frapper une créature, celle-ci reste prise par surprise contre cette attaque puis vous devenez observé.</success>
+      <failure>Vous restez dissimulé mais un bruit ou autre signe suspect révèle votre position. Vous êtes caché de la créature pendant votre déplacement et le restez.</failure>
+      <criticalFailure>Vous êtes repéré ! Vous êtes observé par la créature pendant votre déplacement et le restez.</criticalFailure>
+    </successDegrees>
+  </feat>
+
+  <feat id="action-se-cacher" type="action">
+    <name>Se cacher</name>
+    <actions>1</actions>
+    <traits>
+      <trait>secret</trait>
+    </traits>
+    <skills>
+      <skill>Discrétion</skill>
+    </skills>
+    <description>Vous vous réfugiez derrière un abri normal ou important ou vous vous enfoncez dans un élément qui offre un camouflage pour être caché et non plus observé. Le MJ effectue votre test de Discrétion en secret et compare le résultat au DD de Perception de chaque créature qui vous observe mais vis-à-vis desquelles vous bénéficiez d'un abri ou êtes masqué. Vous obtenez un bonus de circonstances de +2 à votre test si vous bénéficiez d'un abri standard (ou +4 grâce à un abri important).</description>
+    <successDegrees>
+      <success>Si la créature pouvait vous voir, vous êtes à présent caché d'elle et non plus observé. Si vous étiez caché ou non détecté par la créature, vous conservez cet état. Vous n'êtes plus caché si vous faites quoi que ce soit d'autre que Se cacher, Être furtif ou Faire un pas.</success>
+      <failure>Vous restez observé.</failure>
+    </successDegrees>
+  </feat>
+
+  <!-- ===== DUPERIE (CHA) ===== -->
+
+  <feat id="action-faire-diversion" type="action">
+    <name>Faire diversion</name>
+    <actions>1</actions>
+    <traits>
+      <trait>mental</trait>
+    </traits>
+    <skills>
+      <skill>Duperie</skill>
+    </skills>
+    <description>À l'aide d'un geste, d'un tour de passe-passe ou de quelques mots destinés à détourner l'attention, vous pouvez faire diversion pour attirer l'attention de créatures ailleurs. Si vous utilisez un geste ou un tour de passe-passe, cette action obtient le trait manipulation. Si vous prononcez quelques mots, elle obtient les traits audible et linguistique. Effectuez un unique test de Duperie et comparez le résultat aux DD de Perception des créatures dont vous tentez de détourner l'attention. Qu'il soit réussi ou non, les créatures concernées bénéficient d'un bonus de circonstances de +4 à leur DD de Perception contre vos tentatives de Faire diversion pendant 1 min.</description>
+    <successDegrees>
+      <success>Vous devenez caché des créatures dont le DD de Perception est inférieur ou égal à votre résultat. Cela dure jusqu'à la fin de votre tour ou jusqu'à ce que vous fassiez autre chose que Faire un pas ou Se cacher/Être furtif.</success>
+      <failure>Vous ne parvenez à détourner l'attention d'aucune créature dont le DD est supérieur à votre résultat et ces créatures savent que vous avez essayé de les duper.</failure>
+    </successDegrees>
+  </feat>
+
+  <feat id="action-mentir" type="action">
+    <name>Mentir</name>
+    <traits>
+      <trait>audible</trait>
+      <trait>concentration</trait>
+      <trait>linguistique</trait>
+      <trait>mental</trait>
+      <trait>secret</trait>
+    </traits>
+    <skills>
+      <skill>Duperie</skill>
+    </skills>
+    <description>Vous tentez de tromper quelqu'un en lui mentant. Cela demande un round au moins ou plus longtemps si le mensonge est élaboré. Vous effectuez un unique test de Duperie et comparez le résultat au DD de Perception de chaque créature que vous tentez de tromper. Des mensonges compliqués ou à peine croyables sont bien plus difficiles à croire que des mensonges plus simples et plus crédibles.</description>
+    <successDegrees>
+      <success>La cible croit à votre mensonge.</success>
+      <failure>La cible ne croit pas à votre mensonge et bénéficie d'un bonus de circonstances de +4 contre vos tentatives pour Mentir pendant toute la durée de votre conversation. Elle se montrera également plus suspicieuse envers vous à l'avenir.</failure>
+    </successDegrees>
+  </feat>
+
+  <feat id="action-se-deguiser" type="action">
+    <name>Se déguiser</name>
+    <traits>
+      <trait>concentration</trait>
+      <trait>exploration</trait>
+      <trait>manipulation</trait>
+      <trait>secret</trait>
+    </traits>
+    <skills>
+      <skill>Duperie</skill>
+    </skills>
+    <description>Vous vous confectionnez un déguisement pour vous faire passer pour quelqu'un ou quelque chose d'autre. La confection d'un déguisement convaincant prend 10 min et nécessite du matériel de déguisement, mais un déguisement plus simple confectionné au pied levé peut faire l'affaire si vous ne voulez pas vous faire passer pour quelqu'un en particulier, à l'appréciation du MJ. Dans la plupart des cas, les créatures ont une chance de détecter la supercherie uniquement si elles utilisent l'action Chercher pour effectuer des tests de Perception contre votre DD de Duperie.</description>
+    <successDegrees>
+      <success>La créature que vous dupez est convaincue que vous êtes bien la personne dont vous avez pris l'apparence. Un nouveau test peut être nécessaire si vous changez de comportement.</success>
+      <failure>La créature peut affirmer que vous n'êtes pas la personne que vous prétendez être.</failure>
+      <criticalFailure>La créature peut affirmer que vous n'êtes pas la personne que vous prétendez être, et vous reconnaît si elle vous a déjà vu sans déguisement.</criticalFailure>
+    </successDegrees>
+  </feat>
+
+  <feat id="action-feinter" type="action">
+    <name>Feinter</name>
+    <actions>1</actions>
+    <traits>
+      <trait>mental</trait>
+    </traits>
+    <skills>
+      <skill>Duperie</skill>
+    </skills>
+    <prerequisites>Qualifié en Duperie</prerequisites>
+    <requirement>Vous êtes à portée d'allonge au corps à corps de la cible que vous tentez de Feinter.</requirement>
+    <description>À l'aide d'un moulinet trompeur, vous faites en sorte qu'un adversaire ne puisse pas voir venir votre véritable attaque. Effectuez un test de Duperie contre le DD de Perception de votre cible.</description>
+    <successDegrees>
+      <criticalSuccess>Les tentatives de défense de votre ennemi sont complètement inefficaces. La cible est prise par surprise contre les attaques au corps à corps que vous portez contre elle jusqu'à la fin de votre prochain tour.</criticalSuccess>
+      <success>Vous feintez votre adversaire, mais pour un court instant seulement. La cible est prise par surprise contre la prochaine attaque au corps à corps que vous portez contre elle avant la fin de votre tour actuel.</success>
+      <criticalFailure>Votre feinte se retourne contre vous. Vous êtes pris par surprise contre les attaques au corps à corps que la cible porte contre vous jusqu'à la fin de votre prochain tour.</criticalFailure>
+    </successDegrees>
+  </feat>
+
+  <!-- ===== INTIMIDATION (CHA) ===== -->
+
+  <feat id="action-contraindre" type="action">
+    <name>Contraindre</name>
+    <traits>
+      <trait>audible</trait>
+      <trait>concentration</trait>
+      <trait>émotion</trait>
+      <trait>exploration</trait>
+      <trait>linguistique</trait>
+      <trait>mental</trait>
+    </traits>
+    <skills>
+      <skill>Intimidation</skill>
+    </skills>
+    <description>À l'aide de menaces voilées ou manifestes, vous tentez d'intimider une créature pour la forcer à obéir à vos ordres. Vous devez interagir avec elle pendant au moins 1 min. À la fin de la conversation, effectuez un test d'Intimidation contre le DD de Volonté de la cible.</description>
+    <successDegrees>
+      <criticalSuccess>La cible vous révèle l'information que vous cherchez ou accepte de suivre vos directives tant qu'elles ne la mettent pas en danger. Elle continue d'obtempérer pendant une durée déterminée par le MJ (au maximum une journée). Une fois cette période écoulée, elle devient inamicale.</criticalSuccess>
+      <success>Comme un succès critique, mais une fois la cible inamicale, elle peut décider d'agir contre vous en vous dénonçant aux autorités ou en aidant vos ennemis.</success>
+      <failure>La cible ne fait pas ce que vous voulez et, si elle n'était pas déjà inamicale ou hostile, elle devient inamicale.</failure>
+      <criticalFailure>La cible refuse d'obtempérer, devient hostile si elle ne l'était pas déjà et vous ne pouvez plus la Contraindre pendant au moins une semaine.</criticalFailure>
+    </successDegrees>
+  </feat>
+
+  <feat id="action-demoraliser" type="action">
+    <name>Démoraliser</name>
+    <actions>1</actions>
+    <traits>
+      <trait>audible</trait>
+      <trait>concentration</trait>
+      <trait>émotion</trait>
+      <trait>terreur</trait>
+      <trait>mental</trait>
+    </traits>
+    <skills>
+      <skill>Intimidation</skill>
+    </skills>
+    <description>Vous pouvez ébranler la détermination d'un ennemi en poussant un cri soudain, en formulant un sarcasme au moment opportun ou en lâchant une insulte mordante. Désignez une créature située à 9 m ou moins de vous et dont vous percevez la présence. Effectuez un test d'Intimidation contre le DD de Volonté de cette cible. Si elle ne comprend pas la langue que vous parlez ou si vous ne parlez pas, vous subissez un malus de circonstances de −4 au test. Quel que soit le résultat, la cible est temporairement immunisée contre vos tentatives pour la Démoraliser pendant 10 min.</description>
+    <successDegrees>
+      <criticalSuccess>La cible devient effrayée 2.</criticalSuccess>
+      <success>La cible devient effrayée 1.</success>
+    </successDegrees>
+  </feat>
+
+  <!-- ===== LARCIN (DEX) ===== -->
+
+  <feat id="action-derober" type="action">
+    <name>Dérober</name>
+    <actions>1</actions>
+    <traits>
+      <trait>manipulation</trait>
+    </traits>
+    <skills>
+      <skill>Larcin</skill>
+    </skills>
+    <description>Vous tentez de vous emparer d'un objet que porte une autre créature sans vous faire repérer. Généralement, vous ne pouvez Dérober qu'un objet dont l'Encombrement est négligeable et vous ratez automatiquement si la créature qui porte l'objet est en combat ou sur ses gardes. Effectuez un test de Larcin pour déterminer si vous réussissez à Dérober l'objet. Le DD pour Dérober est le plus souvent le DD de Perception de la créature qui porte l'objet.</description>
+    <successDegrees>
+      <success>Vous dérobez l'objet sans que son détenteur ne s'en aperçoive, ou un observateur ne vous voit pas prendre ou tenter de prendre l'objet.</success>
+      <failure>Le détenteur de l'objet remarque votre tentative avant que vous puissiez prendre l'objet, ou un observateur vous voit prendre ou tenter de prendre l'objet.</failure>
+    </successDegrees>
+  </feat>
+
+  <feat id="action-escamoter-un-objet" type="action">
+    <name>Escamoter un objet</name>
+    <actions>1</actions>
+    <traits>
+      <trait>manipulation</trait>
+    </traits>
+    <skills>
+      <skill>Larcin</skill>
+    </skills>
+    <description>Vous vous emparez d'un petit objet que personne ne porte et vous tentez de ne pas vous faire repérer. Effectuez un test de Larcin contre les DD de Perception de toutes les créatures en train de vous observer. Vous ne pouvez généralement Escamoter que des objets dont l'Encombrement est négligeable, mais le MJ peut en décider autrement en fonction des situations.</description>
+    <successDegrees>
+      <success>La créature ne voit pas que vous Escamotez l'objet.</success>
+      <failure>La créature voit que vous Escamotez l'objet.</failure>
+    </successDegrees>
+  </feat>
+
+  <feat id="action-crocheter-une-serrure" type="action">
+    <name>Crocheter une serrure</name>
+    <actions>2</actions>
+    <traits>
+      <trait>manipulation</trait>
+    </traits>
+    <skills>
+      <skill>Larcin</skill>
+    </skills>
+    <prerequisites>Qualifié en Larcin</prerequisites>
+    <requirement>Vous tenez ou portez du matériel de voleur.</requirement>
+    <description>Déverrouiller une serrure sans sa clef est très similaire au Désamorçage d'un dispositif mais le DD du test est déterminé par la complexité et la structure de la serrure que vous tentez de crocheter. Les serrures de qualité supérieure nécessitent plusieurs succès pour parvenir à les crocheter. Si vous n'avez pas les bons outils, le MJ peut vous autoriser à utiliser du matériel improvisé, alors considéré comme du matériel de mauvaise qualité.</description>
+    <successDegrees>
+      <criticalSuccess>Vous crochetez la serrure ou obtenez deux succès pour réussir à crocheter une serrure nécessitant plus d'un succès. Vous ne laissez aucune trace de votre manipulation.</criticalSuccess>
+      <success>Vous crochetez la serrure ou obtenez un succès pour réussir à crocheter une serrure nécessitant plus d'un succès. Vous détériorez la serrure et des observateurs attentifs peuvent remarquer qu'elle a été crochetée.</success>
+      <criticalFailure>Vous cassez votre matériel et détériorez la serrure de manière évidente. Réparer du matériel brisé nécessite l'utilisation de la compétence Artisanat pour Réparer ou leur remplacement.</criticalFailure>
+    </successDegrees>
+  </feat>
+
+  <feat id="action-desamorcer-un-dispositif" type="action">
+    <name>Désamorcer un dispositif</name>
+    <actions>2</actions>
+    <traits>
+      <trait>manipulation</trait>
+    </traits>
+    <skills>
+      <skill>Larcin</skill>
+    </skills>
+    <prerequisites>Qualifié en Larcin</prerequisites>
+    <description>Cette action vous permet de désamorcer un piège ou un autre dispositif complexe. Souvent, un dispositif nécessite de nombreux succès avant de réussir à le désamorcer, en fonction de sa structure et de sa complexité. C'est le MJ qui détermine si du matériel de voleur peut être utile et même parfois nécessaire pour Désamorcer un dispositif.</description>
+    <successDegrees>
+      <criticalSuccess>Vous désamorcez le dispositif ou obtenez deux succès pour réussir à désamorcer un dispositif nécessitant plus d'un succès. Vous ne laissez aucune trace de votre manipulation et vous pouvez réarmer le dispositif ultérieurement si cela est possible.</criticalSuccess>
+      <success>Vous désamorcez le dispositif ou obtenez un succès pour réussir à désamorcer un dispositif nécessitant plus d'un succès.</success>
+      <criticalFailure>Vous déclenchez le dispositif.</criticalFailure>
+    </successDegrees>
+  </feat>
+
+  <!-- ===== MÉDECINE (SAG) ===== -->
+
+  <feat id="action-prodiguer-les-premiers-soins" type="action">
+    <name>Prodiguer les premiers soins</name>
+    <actions>2</actions>
+    <traits>
+      <trait>manipulation</trait>
+    </traits>
+    <skills>
+      <skill>Médecine</skill>
+    </skills>
+    <requirement>Vous portez ou tenez du matériel de guérisseur.</requirement>
+    <description>Vous prodiguez les premiers soins à une créature adjacente qui est mourante ou victime de saignements. Si une créature est mourante et victime de saignements, choisissez quelle affection vous voulez soigner avant d'effectuer le test. Vous pouvez Prodiguer les premiers soins à nouveau pour tenter de soigner l'autre affliction.
+• Stabiliser. Effectuez un test de Médecine sur une créature dans l'état mourant à qui il reste 0 point de vie. Le DD est égal à 5 + le DD du test de récupération de cette créature (pour un total s'élevant le plus souvent à 15 + l'intensité de son état mourant).
+• Stopper l'hémorragie. Effectuez un test de Médecine sur une créature victime de dégâts de saignement persistants. Le DD est le plus souvent égal à celui de l'effet qui a provoqué le saignement.</description>
+    <successDegrees>
+      <success>Si vous tentez de la stabiliser, la créature perd l'état mourant (mais elle reste inconsciente). Si vous tentez de stopper l'hémorragie, la cible bénéficie d'un rétablissement assisté avec le DD réduit d'une aide particulièrement appropriée.</success>
+      <criticalFailure>Si vous tentez de la stabiliser, l'intensité de son état mourant augmente de 1. Si vous tentez de stopper l'hémorragie, elle subit immédiatement un montant de dégâts égal à ses dégâts de saignements persistants.</criticalFailure>
+    </successDegrees>
+  </feat>
+
+  <feat id="action-soigner-les-blessures" type="action">
+    <name>Soigner les blessures</name>
+    <traits>
+      <trait>exploration</trait>
+      <trait>guérison</trait>
+      <trait>manipulation</trait>
+    </traits>
+    <skills>
+      <skill>Médecine</skill>
+    </skills>
+    <prerequisites>Qualifié en Médecine</prerequisites>
+    <requirement>Vous portez ou tenez du matériel de guérisseur.</requirement>
+    <description>Vous passez 10 min à soigner les blessures d'une créature vivante (vous pouvez soigner vos propres blessures si vous le souhaitez). La cible est ensuite temporairement immunisée aux actions Soigner les blessures pendant 1 h (cette durée comprend le temps du soin). Le DD du test de Médecine est le plus souvent de 15 mais le MJ peut le modifier en fonction des circonstances. Si vous êtes un expert en Médecine, vous pouvez faire à la place un test DD 20 pour augmenter de 10 les PV récupérés. Si vous êtes un maître, DD 30 pour +30 PV. Si vous êtes légendaire, DD 40 pour +50 PV. Si vous réussissez et soignez la cible pendant un total de 1 h, doublez les PV récupérés.</description>
+    <successDegrees>
+      <criticalSuccess>La cible récupère 4d8 points de vie et son état blessé disparaît.</criticalSuccess>
+      <success>La cible récupère 2d8 points de vie et son état blessé disparaît.</success>
+      <criticalFailure>La cible subit 1d8 dégâts.</criticalFailure>
+    </successDegrees>
+  </feat>
+
+  <feat id="action-soigner-une-maladie" type="action">
+    <name>Soigner une maladie</name>
+    <traits>
+      <trait>intermède</trait>
+      <trait>manipulation</trait>
+    </traits>
+    <skills>
+      <skill>Médecine</skill>
+    </skills>
+    <prerequisites>Qualifié en Médecine</prerequisites>
+    <requirement>Vous portez ou tenez du matériel de guérisseur.</requirement>
+    <description>Vous passez au moins 8 h à prendre soin d'une créature malade. Effectuez un test de Médecine contre le DD de la maladie. Après avoir tenté de soigner une créature malade, vous ne pouvez pas faire d'autres tentatives tant que la créature n'a pas effectué son prochain jet de sauvegarde contre la maladie.</description>
+    <successDegrees>
+      <criticalSuccess>Vous conférez un bonus de circonstances de +4 à son prochain jet de sauvegarde contre la maladie.</criticalSuccess>
+      <success>Vous conférez un bonus de circonstances de +2 à son prochain jet de sauvegarde contre la maladie.</success>
+      <criticalFailure>Vos efforts imposent un malus de circonstances de −2 à son prochain jet de sauvegarde contre la maladie.</criticalFailure>
+    </successDegrees>
+  </feat>
+
+  <feat id="action-soigner-un-empoisonnement" type="action">
+    <name>Soigner un empoisonnement</name>
+    <actions>1</actions>
+    <traits>
+      <trait>manipulation</trait>
+    </traits>
+    <skills>
+      <skill>Médecine</skill>
+    </skills>
+    <prerequisites>Qualifié en Médecine</prerequisites>
+    <requirement>Vous portez ou tenez du matériel de guérisseur.</requirement>
+    <description>Vous soignez un patient empoisonné pour stopper la propagation du poison. Effectuez un test de Médecine contre le DD du poison. Après avoir tenté de soigner une créature empoisonnée, vous ne pouvez pas faire d'autres tentatives tant que la créature n'a pas encore fait son prochain jet de sauvegarde contre le poison.</description>
+    <successDegrees>
+      <criticalSuccess>Vous conférez un bonus de circonstances de +4 à son prochain jet de sauvegarde contre le poison.</criticalSuccess>
+      <success>Vous conférez un bonus de circonstances de +2 à son prochain jet de sauvegarde contre le poison.</success>
+      <criticalFailure>Vos efforts imposent un malus de circonstances de −2 à son prochain jet de sauvegarde contre le poison.</criticalFailure>
+    </successDegrees>
+  </feat>
+
+  <!-- ===== NATURE (SAG) ===== -->
+
+  <feat id="action-diriger-un-animal" type="action">
+    <name>Diriger un animal</name>
+    <actions>1</actions>
+    <traits>
+      <trait>audible</trait>
+      <trait>concentration</trait>
+    </traits>
+    <skills>
+      <skill>Nature</skill>
+    </skills>
+    <description>Vous donnez un ordre à un animal. Effectuez un test de Nature contre le DD de Volonté de l'animal. Le MJ peut modifier le DD si l'animal a une attitude favorable envers vous, si vous lui demandez d'accomplir une action pour laquelle il est prédisposé ou si vous lui offrez une friandise. Vous ratez automatiquement si l'animal est hostile ou inamical envers vous. Si l'animal est serviable envers vous, augmentez d'un cran votre degré de succès. La plupart des animaux savent accomplir les actions basiques Bondir, Chercher, Marcher rapidement, Frapper, Se jeter à terre et Se relever.</description>
+    <successDegrees>
+      <success>L'animal obéit à vos ordres lors de son prochain tour.</success>
+      <failure>L'animal hésite ou rechigne et ne fait rien.</failure>
+      <criticalFailure>L'animal ne comprend pas l'ordre ou l'interprète mal et accomplit une autre action déterminée par le MJ.</criticalFailure>
+    </successDegrees>
+  </feat>
+
+  <!-- ===== REPRÉSENTATION (CHA) ===== -->
+
+  <feat id="action-se-produire" type="action">
+    <name>Se produire</name>
+    <actions>1</actions>
+    <traits>
+      <trait>concentration</trait>
+    </traits>
+    <skills>
+      <skill>Représentation</skill>
+    </skills>
+    <description>Quand vous donnez une courte représentation (une chanson, une danse rapide ou quelques histoires drôles), vous utilisez l'action Se produire. Cette action est particulièrement utile quand vous voulez prouver votre talent ou impressionner rapidement quelqu'un. Ce genre de représentations a rarement un impact en tant que tel mais elles peuvent influencer le DD de tests de Diplomatie ultérieurs vis-à-vis des observateurs, ou même changer leur attitude si le MJ le permet.</description>
+    <successDegrees>
+      <criticalSuccess>Votre représentation impressionne les gens qui y assistent et ils parleront probablement autour d'eux de votre talent.</criticalSuccess>
+      <success>Vous faites vos preuves et les personnes présentes apprécient la qualité de votre représentation.</success>
+      <failure>Votre représentation n'a pas l'effet escompté.</failure>
+      <criticalFailure>Vous ne parvenez à démontrer que votre incompétence.</criticalFailure>
+    </successDegrees>
+  </feat>
+
+  <!-- ===== SOCIÉTÉ (INT) ===== -->
+
+  <feat id="action-contrefaire" type="action">
+    <name>Contrefaire</name>
+    <traits>
+      <trait>intermède</trait>
+      <trait>secret</trait>
+    </traits>
+    <skills>
+      <skill>Société</skill>
+    </skills>
+    <requirement>Vous disposez du matériel d'écriture approprié à votre contrefaçon.</requirement>
+    <description>Vous contrefaites un document, le plus souvent en une journée ou une semaine. Le MJ effectue un test de Société DD 20 en secret. Pour imiter la calligraphie d'une personne en particulier, vous devez posséder un document écrit de sa main. Sinon, vous devez simplement avoir déjà vu un document similaire, et vous bénéficiez d'un bonus de circonstances pouvant aller jusqu'à +4 à votre test (le MJ détermine ce bonus).</description>
+    <successDegrees>
+      <success>La contrefaçon est d'une qualité suffisante pour que les observateurs passifs ne la détectent pas.</success>
+      <failure>Plusieurs signes évidents prouvent que le document est une contrefaçon, ce qui permet potentiellement aux observateurs passifs de la détecter.</failure>
+    </successDegrees>
+  </feat>
+
+  <!-- ===== SURVIE (SAG) ===== -->
+
+  <feat id="action-s-orienter" type="action">
+    <name>S'orienter</name>
+    <traits>
+      <trait>exploration</trait>
+      <trait>secret</trait>
+    </traits>
+    <skills>
+      <skill>Survie</skill>
+    </skills>
+    <description>Grâce aux étoiles, à la position du soleil, aux attributs géographiques, à la flore ou au comportement des animaux, vous savez toujours vous orienter en pleine nature. Vous effectuez généralement un test de Survie une seule fois par jour mais certains environnements ou changements peuvent nécessiter d'autres tests. Le MJ détermine le DD et le temps que vous prend cette activité (une minute environ, le plus souvent). Parfois, il vous faudra un rang de maîtrise minimum pour Vous orienter dans des régions plus inhabituelles. Sans boussole, vous subissez un malus d'objet de −2 aux tests pour Vous orienter.</description>
+    <successDegrees>
+      <criticalSuccess>Vous savez avec précision où vous vous trouvez. Si vous êtes dans un environnement où existent les points cardinaux, vous savez exactement dans quelles directions ils se trouvent.</criticalSuccess>
+      <success>Votre sens de l'orientation vous permet de ne pas vous perdre irrémédiablement. Si vous êtes dans un environnement où existent les points cardinaux, vous avez une idée de leur direction.</success>
+    </successDegrees>
+  </feat>
+
+  <feat id="action-dissimuler-des-traces" type="action">
+    <name>Dissimuler des traces</name>
+    <traits>
+      <trait>concentration</trait>
+      <trait>exploration</trait>
+      <trait>déplacement</trait>
+    </traits>
+    <skills>
+      <skill>Survie</skill>
+    </skills>
+    <prerequisites>Qualifié en Survie</prerequisites>
+    <description>Vous dissimulez vos traces en vous déplaçant à la moitié de votre Vitesse. Il n'est pas nécessaire d'effectuer un test de Survie pour Dissimuler des traces mais quiconque vous piste doit réussir un test de Survie contre votre DD de Survie s'il est supérieur au DD normal pour Pister. Vous pouvez, dans certains cas, Dissimuler des traces au cours d'une rencontre. Le cas échéant, Dissimuler des traces est une action unique sans le trait exploration.</description>
+  </feat>
+
+  <feat id="action-pister" type="action">
+    <name>Pister</name>
+    <traits>
+      <trait>concentration</trait>
+      <trait>exploration</trait>
+      <trait>déplacement</trait>
+    </traits>
+    <skills>
+      <skill>Survie</skill>
+    </skills>
+    <prerequisites>Qualifié en Survie</prerequisites>
+    <description>Vous suivez des traces en vous déplaçant à la moitié de votre Vitesse. Suite à un test réussi pour Pister, vous pouvez continuer à suivre des traces à la moitié de votre Vitesse sans effectuer de tests supplémentaires pendant un maximum de 1 h. Vous pouvez Pister au cours d'une rencontre — Pister est alors une action unique sans le trait exploration mais vous devez effectuer des tests plus souvent. Vous effectuez un test de Survie quand vous commencez à Pister, une fois par heure, et chaque fois qu'une chose change les traces de manière significative.</description>
+    <successDegrees>
+      <success>Vous trouvez les traces ou continuez à suivre celles que vous avez déjà trouvées.</success>
+      <failure>Vous perdez les traces mais vous pouvez réessayer au bout de 1 h.</failure>
+      <criticalFailure>Vous perdez les traces et ne pouvez pas réessayer pendant 24 h.</criticalFailure>
+    </successDegrees>
+  </feat>
+
+</feats>

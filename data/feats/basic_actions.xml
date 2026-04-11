@@ -13,10 +13,12 @@
     <trigger>Un allié est sur le point d'utiliser une action qui lui demande d'effectuer un test de compétence ou un jet d'attaque.</trigger>
     <requirement>L'allié est disposé à accepter votre aide et vous vous êtes préparé à l'aider (voir ci-dessous).</requirement>
     <description>Vous tentez d'apporter votre aide à un allié confronté à une tâche particulière. Pour utiliser cette réaction, vous devez préalablement vous être préparé à l'aider, généralement en utilisant une action lors de votre tour. Vous devez expliquer au MJ de quelle manière vous comptez apporter votre aide, et ce dernier détermine alors si vous pouvez ou non Aider votre allié.
-Quand vous utilisez la réaction Aider, effectuez un test de compétence ou un jet d'attaque dont le type est décidé par le MJ. Le DD est généralement de 15, mais le MJ peut décider de l'ajuster si la tâche est particulièrement facile ou difficile. En fonction de la situation, le MJ peut ajouter les traits adaptés de son choix à votre action de préparation ou à votre réaction Aider, ou même vous permettre d'effectuer un test pour Aider qui n'est pas un test de compétence ou un jet d'attaque.
-Succès critique. Vous octroyez à votre allié un bonus de circonstances de +2 au test déclencheur. Si votre rang de maîtrise pour ce test est maître, ce bonus est de +3, si votre rang est légendaire, il est de +4.
-Succès. Vous octroyez à votre allié un bonus de circonstances de +1 au test déclencheur.
-Échec critique. Votre allié subit un malus de circonstances de −1 au test déclencheur.</description>
+Quand vous utilisez la réaction Aider, effectuez un test de compétence ou un jet d'attaque dont le type est décidé par le MJ. Le DD est généralement de 15, mais le MJ peut décider de l'ajuster si la tâche est particulièrement facile ou difficile. En fonction de la situation, le MJ peut ajouter les traits adaptés de son choix à votre action de préparation ou à votre réaction Aider, ou même vous permettre d'effectuer un test pour Aider qui n'est pas un test de compétence ou un jet d'attaque.</description>
+    <successDegrees>
+      <criticalSuccess>Vous octroyez à votre allié un bonus de circonstances de +2 au test déclencheur. Si votre rang de maîtrise pour ce test est maître, ce bonus est de +3, si votre rang est légendaire, il est de +4.</criticalSuccess>
+      <success>Vous octroyez à votre allié un bonus de circonstances de +1 au test déclencheur.</success>
+      <criticalFailure>Votre allié subit un malus de circonstances de −1 au test déclencheur.</criticalFailure>
+    </successDegrees>
   </feat>
 
   <feat id="action-bondir" type="action">
@@ -38,9 +40,11 @@ Succès. Vous octroyez à votre allié un bonus de circonstances de +1 au test d
       <trait>secret</trait>
     </traits>
     <description>Vous scrutez une zone à la recherche de signes de la présence de créatures ou d'objets, ou peut-être de portes secrètes ou de dangers. Choisissez une zone. Le MJ détermine la zone que vous pouvez scruter à l'aide de votre action Chercher. Il s'agit presque toujours d'une zone de 9 m de côté ou moins dans les trois dimensions. Le MJ peut vous imposer un malus si vous scrutez une zone éloignée de vous ou ajuster le nombre d'actions nécessaires pour Chercher une zone particulièrement encombrée.
-Le MJ peut effectuer un unique test de Perception secret à votre place et comparer le résultat au DD de Discrétion de toute créature non détectée ou cachée dans la zone, ou au DD nécessaire pour détecter chacun des objets qui se trouvent dans la zone (ce DD est alors déterminé par le MJ ou par la personne qui a Dissimulé cet objet). Une créature que vous détectez peut se trouver dans l'état caché plutôt que dans l'état observé si vous utilisez un sens imprécis ou si un effet (comme invisibilité) empêche ce sujet d'être observé.
-Succès critique. Toute créature qui était non détectée ou cachée dans la zone se trouve dans l'état observé en ce qui vous concerne. Vous connaissez l'emplacement de tous les objets de la zone face auxquels vous avez obtenu un succès critique.
-Succès. Toute créature qui était non détectée dans la zone devient cachée, et toute créature qui était cachée dans la zone devient observée en ce qui vous concerne. Vous connaissez l'emplacement des objets de la zone, ou obtenez un indice sur leur emplacement, au choix du MJ.</description>
+Le MJ peut effectuer un unique test de Perception secret à votre place et comparer le résultat au DD de Discrétion de toute créature non détectée ou cachée dans la zone, ou au DD nécessaire pour détecter chacun des objets qui se trouvent dans la zone.</description>
+    <successDegrees>
+      <criticalSuccess>Toute créature qui était non détectée ou cachée dans la zone se trouve dans l'état observé en ce qui vous concerne. Vous connaissez l'emplacement de tous les objets de la zone face auxquels vous avez obtenu un succès critique.</criticalSuccess>
+      <success>Toute créature qui était non détectée dans la zone devient cachée, et toute créature qui était cachée dans la zone devient observée en ce qui vous concerne. Vous connaissez l'emplacement des objets de la zone, ou obtenez un indice sur leur emplacement, au choix du MJ.</success>
+    </successDegrees>
   </feat>
 
   <feat id="action-deviner-les-intentions" type="action">
@@ -50,11 +54,13 @@ Succès. Toute créature qui était non détectée dans la zone devient cachée,
       <trait>concentration</trait>
       <trait>secret</trait>
     </traits>
-    <description>Vous tentez de déterminer si le comportement d'une créature est anormal. Vous désignez une créature et tentez de repérer des signes étranges dans son langage corporel, de la nervosité, ou d'autres indicateurs qui peuvent laisser penser qu'elle tente de tromper quelqu'un. Le MJ effectue un unique test de Perception secret à votre place et compare le résultat au DD de Duperie de la créature, au DD d'un sort qui affecte l'état mental de la créature, ou à un autre DD qu'il juge approprié à la situation. Vous ne pouvez généralement pas réessayer de Deviner les intentions de la même créature si la situation n'évolue pas significativement.
-Succès critique. Vous devinez les véritables intentions de la créature et déterminez le type de magie mentale qui l'affecte éventuellement.
-Succès. Vous êtes capable de dire si la créature se comporte normalement ou non, mais vous ne connaissez pas ses véritables intentions ni le type de magie qui pourrait l'affecter.
-Échec. Vous détectez seulement ce qu'une créature trompeuse cherche à vous faire croire. Si la créature ne cherche pas à vous tromper, vous êtes convaincu qu'elle se comporte normalement.
-Échec critique. Votre impression concernant les intentions de la créature est erronée.</description>
+    <description>Vous tentez de déterminer si le comportement d'une créature est anormal. Vous désignez une créature et tentez de repérer des signes étranges dans son langage corporel, de la nervosité, ou d'autres indicateurs qui peuvent laisser penser qu'elle tente de tromper quelqu'un. Le MJ effectue un unique test de Perception secret à votre place et compare le résultat au DD de Duperie de la créature, au DD d'un sort qui affecte l'état mental de la créature, ou à un autre DD qu'il juge approprié à la situation. Vous ne pouvez généralement pas réessayer de Deviner les intentions de la même créature si la situation n'évolue pas significativement.</description>
+    <successDegrees>
+      <criticalSuccess>Vous devinez les véritables intentions de la créature et déterminez le type de magie mentale qui l'affecte éventuellement.</criticalSuccess>
+      <success>Vous êtes capable de dire si la créature se comporte normalement ou non, mais vous ne connaissez pas ses véritables intentions ni le type de magie qui pourrait l'affecter.</success>
+      <failure>Vous détectez seulement ce qu'une créature trompeuse cherche à vous faire croire. Si la créature ne cherche pas à vous tromper, vous êtes convaincu qu'elle se comporte normalement.</failure>
+      <criticalFailure>Votre impression concernant les intentions de la créature est erronée.</criticalFailure>
+    </successDegrees>
   </feat>
 
   <feat id="action-faire-un-pas" type="action">
@@ -74,9 +80,11 @@ Vous ne pouvez pas Faire un pas quand vous vous trouvez sur un terrain difficile
     <traits>
       <trait>attaque</trait>
     </traits>
-    <description>Vous attaquez avec une arme que vous tenez en main ou une attaque à mains nues, en prenant pour cible une créature qui se trouve dans votre zone d'allonge (pour une attaque au corps à corps) ou à portée (pour une attaque à distance). Effectuez un jet d'attaque en utilisant le modificateur d'attaque de l'attaque à mains nues ou de l'arme que vous utilisez, et comparez le résultat à la CA de la créature ciblée afin de déterminer son effet.
-Succès critique. Vous effectuez un jet de dégâts qui dépend de l'attaque à mains nues ou de l'arme utilisée, et multipliez les dégâts par deux (rendez-vous p. 407 pour les règles sur le doublement des dégâts).
-Succès. Vous effectuez un jet de dégâts qui dépend de l'attaque à mains nues ou de l'arme utilisée, et infligez ces dégâts à votre cible.</description>
+    <description>Vous attaquez avec une arme que vous tenez en main ou une attaque à mains nues, en prenant pour cible une créature qui se trouve dans votre zone d'allonge (pour une attaque au corps à corps) ou à portée (pour une attaque à distance). Effectuez un jet d'attaque en utilisant le modificateur d'attaque de l'attaque à mains nues ou de l'arme que vous utilisez, et comparez le résultat à la CA de la créature ciblée afin de déterminer son effet.</description>
+    <successDegrees>
+      <criticalSuccess>Vous effectuez un jet de dégâts qui dépend de l'attaque à mains nues ou de l'arme utilisée, et multipliez les dégâts par deux (rendez-vous p. 407 pour les règles sur le doublement des dégâts).</criticalSuccess>
+      <success>Vous effectuez un jet de dégâts qui dépend de l'attaque à mains nues ou de l'arme utilisée, et infligez ces dégâts à votre cible.</success>
+    </successDegrees>
   </feat>
 
   <feat id="action-interagir" type="action">
@@ -132,7 +140,7 @@ Si vous voulez vous tenir prêt à Relâcher quelque chose hors de votre tour, u
     <actions>0</actions>
     <trigger>Votre tour commence.</trigger>
     <description>Vous attendez le bon moment pour agir. Vous n'avez pas encore agi lors de ce tour. À la place, vous vous retirez de l'ordre d'initiative. Vous pouvez reprendre une place dans l'ordre d'initiative par une action gratuite déclenchée par la fin du tour d'une autre créature. Cette nouvelle place devient votre place permanente dans l'ordre d'initiative. Vous ne pouvez pas utiliser de réaction tant que vous n'avez pas repris une place dans l'ordre d'initiative. Si vous Retardez un round entier sans reprendre une place dans l'ordre d'initiative, les actions du tour Retardé sont perdues, votre initiative ne change pas et votre prochain tour se déroule donc à votre place initiale dans l'ordre d'initiative.
-Quand vous Retardez votre tour, tous les dégâts persistants et autres effets négatifs qui se produisent normalement au début ou à la fin de votre tour s'appliquent immédiatement quand vous utilisez l'action Retarder. Tous les effets bénéfiques qui devraient normalement prendre fin à n'importe quel moment de votre tour se terminent également. Le MJ détermine également quels autres effets prennent fin quand vous Retardez votre tour. En bref, vous ne pouvez pas Retarder votre tour pour échapper à des effets négatifs qui se produiront pendant votre tour ou étendre la durée d'effets qui doivent prendre fin pendant votre tour.</description>
+Quand vous Retardez votre tour, tous les dégâts persistants et autres effets négatifs qui se produisent normalement au début ou à la fin de votre tour s'appliquent immédiatement quand vous utilisez l'action Retarder. Tous les effets bénéfiques qui devraient normalement prendre fin à n'importe quel moment de votre tour se terminent également.</description>
   </feat>
 
   <feat id="action-s-echapper" type="action">
@@ -141,10 +149,12 @@ Quand vous Retardez votre tour, tous les dégâts persistants et autres effets n
     <traits>
       <trait>attaque</trait>
     </traits>
-    <description>Vous tentez de vous tirer d'une situation dans laquelle vous êtes empoigné, immobilisé ou entravé. Choisissez une créature, un objet, un effet de sort, un danger, ou un autre obstacle qui vous impose l'un de ces états. Effectuez un test contre le DD de cet effet en utilisant votre modificateur d'attaque à mains nues. Il s'agit généralement du DD d'Athlétisme de la créature qui vous empoigne, du DD de Larcin de la créature qui vous a attaché, du DD des sorts qui vous affecte, ou du DD pour S'échapper indiqué dans le profil d'un objet, d'un danger ou d'un autre obstacle. Au lieu d'utiliser votre modificateur d'attaque, vous pouvez effectuer un test d'Acrobaties ou d'Athlétisme (mais cette action possède toujours le trait attaque).
-Succès critique. Vous vous libérez et perdez l'état empoigné, immobilisé ou entravé que la cible désignée vous imposait. Vous pouvez alors Marcher rapidement sur une distance de 1,5 m.
-Succès. Vous vous libérez et perdez l'état empoigné, immobilisé ou entravé que la cible désignée vous imposait.
-Échec critique. Vous ne réussissez pas à vous libérer et vous ne pouvez pas tenter de Vous échapper avant votre prochain tour.</description>
+    <description>Vous tentez de vous tirer d'une situation dans laquelle vous êtes empoigné, immobilisé ou entravé. Choisissez une créature, un objet, un effet de sort, un danger, ou un autre obstacle qui vous impose l'un de ces états. Effectuez un test contre le DD de cet effet en utilisant votre modificateur d'attaque à mains nues. Il s'agit généralement du DD d'Athlétisme de la créature qui vous empoigne, du DD de Larcin de la créature qui vous a attaché, du DD des sorts qui vous affecte, ou du DD pour S'échapper indiqué dans le profil d'un objet, d'un danger ou d'un autre obstacle. Au lieu d'utiliser votre modificateur d'attaque, vous pouvez effectuer un test d'Acrobaties ou d'Athlétisme (mais cette action possède toujours le trait attaque).</description>
+    <successDegrees>
+      <criticalSuccess>Vous vous libérez et perdez l'état empoigné, immobilisé ou entravé que la cible désignée vous imposait. Vous pouvez alors Marcher rapidement sur une distance de 1,5 m.</criticalSuccess>
+      <success>Vous vous libérez et perdez l'état empoigné, immobilisé ou entravé que la cible désignée vous imposait.</success>
+      <criticalFailure>Vous ne réussissez pas à vous libérer et vous ne pouvez pas tenter de Vous échapper avant votre prochain tour.</criticalFailure>
+    </successDegrees>
   </feat>
 
   <feat id="action-se-jeter-a-terre" type="action">
@@ -181,8 +191,10 @@ Succès. Vous vous libérez et perdez l'état empoigné, immobilisé ou entravé
     <actions>R</actions>
     <trigger>Vous chutez.</trigger>
     <requirement>Vous avez une Vitesse de vol.</requirement>
-    <description>Vous effectuez au choix un test d'Acrobaties ou un jet de Réflexes pour ralentir votre chute. Le DD est généralement de 15, mais il peut être plus élevé en cas de turbulences ou d'autres circonstances particulières.
-Succès. Vous ne subissez pas de dégâts de chute.</description>
+    <description>Vous effectuez au choix un test d'Acrobaties ou un jet de Réflexes pour ralentir votre chute. Le DD est généralement de 15, mais il peut être plus élevé en cas de turbulences ou d'autres circonstances particulières.</description>
+    <successDegrees>
+      <success>Vous ne subissez pas de dégâts de chute.</success>
+    </successDegrees>
   </feat>
 
   <feat id="action-creuser" type="action">
@@ -214,8 +226,8 @@ Succès. Vous ne subissez pas de dégâts de chute.</description>
     <traits>
       <trait>concentration</trait>
     </traits>
-    <description>Choisissez l'un de vos effets dont la durée indique « maintenu », ou qui vous confère un avantage spécial quand vous le Maintenez. Ces effets sont généralement liés à des sorts ou à l'activation d'objets magiques. Si l'effet a une durée maintenue, sa durée est prolongée jusqu'à la fin de votre prochain tour (Maintenir un effet plusieurs fois au cours d'un même tour ne permet pas de prolonger sa durée au-delà du tour suivant). Si un pouvoir peut être maintenu, sans qu'il soit précisé de durée, alors il peut être maintenu pendant une durée maximale de 10 min.
-Le descriptif d'un effet peut préciser que le Maintenir vous confère un avantage supplémentaire. Cette mention peut concerner des effets qui n'ont pas de durée maintenue. Si l'effet possède une durée maintenue et un avantage spécial associé au fait de le Maintenir, l'action Maintenir vous permet à la fois de prolonger sa durée et de profiter de l'avantage spécial.
+    <description>Choisissez l'un de vos effets dont la durée indique « maintenu », ou qui vous confère un avantage spécial quand vous le Maintenez. Ces effets sont généralement liés à des sorts ou à l'activation d'objets magiques. Si l'effet a une durée maintenue, sa durée est prolongée jusqu'à la fin de votre prochain tour. Si un pouvoir peut être maintenu, sans qu'il soit précisé de durée, alors il peut être maintenu pendant une durée maximale de 10 min.
+Le descriptif d'un effet peut préciser que le Maintenir vous confère un avantage supplémentaire. Si l'effet possède une durée maintenue et un avantage spécial associé au fait de le Maintenir, l'action Maintenir vous permet à la fois de prolonger sa durée et de profiter de l'avantage spécial.
 Si votre action Maintenir est interrompue, le pouvoir prend fin.</description>
   </feat>
 
@@ -246,10 +258,12 @@ Si votre action Maintenir est interrompue, le pouvoir prend fin.</description>
     </traits>
     <trigger>Vous chutez depuis un rebord ou une prise, ou passez à côté de l'un de ces éléments lors de votre chute.</trigger>
     <requirement>Vos mains ne sont pas attachées dans votre dos ou entravées d'une quelconque manière.</requirement>
-    <description>Quand vous chutez devant un rebord ou un autre type de prise, vous pouvez tenter de vous y raccrocher afin d'interrompre votre chute. Vous devez réussir au choix un test d'Acrobaties ou un jet de Réflexes, en utilisant en général le DD d'Escalade. Si vous réussissez à vous raccrocher au rebord ou à la prise, vous pouvez alors Escalader en utilisant la compétence Athlétisme.
-Succès critique. Vous attrapez le rebord ou la prise, que vous disposiez ou non d'une main libre, généralement en utilisant un objet adapté pour vous rattraper (en accrochant la lame d'une hache de bataille sur un rebord, par exemple). Vous subissez quand même les dégâts correspondant à la hauteur de laquelle vous avez chuté, mais vous réduisez cette hauteur de 9 m.
-Succès. Si vous avez au moins une main de libre, vous attrapez le rebord ou la prise et stoppez votre chute. Vous subissez quand même les dégâts correspondant à la hauteur de laquelle vous avez chuté, mais vous réduisez cette hauteur de 6 m. Si vous n'avez aucune main de libre, vous continuez de chuter comme si vous aviez échoué à votre test.
-Échec critique. Vous continuez votre chute et, si vous aviez déjà chuté d'une hauteur supérieure ou égale à 6 m quand vous avez utilisé cette réaction, vous subissez 10 dégâts contondants causés par l'impact pour chaque tranche de 6 m de chute.</description>
+    <description>Quand vous chutez devant un rebord ou un autre type de prise, vous pouvez tenter de vous y raccrocher afin d'interrompre votre chute. Vous devez réussir au choix un test d'Acrobaties ou un jet de Réflexes, en utilisant en général le DD d'Escalade. Si vous réussissez à vous raccrocher au rebord ou à la prise, vous pouvez alors Escalader en utilisant la compétence Athlétisme.</description>
+    <successDegrees>
+      <criticalSuccess>Vous attrapez le rebord ou la prise, que vous disposiez ou non d'une main libre, généralement en utilisant un objet adapté pour vous rattraper (en accrochant la lame d'une hache de bataille sur un rebord, par exemple). Vous subissez quand même les dégâts correspondant à la hauteur de laquelle vous avez chuté, mais vous réduisez cette hauteur de 9 m.</criticalSuccess>
+      <success>Si vous avez au moins une main de libre, vous attrapez le rebord ou la prise et stoppez votre chute. Vous subissez quand même les dégâts correspondant à la hauteur de laquelle vous avez chuté, mais vous réduisez cette hauteur de 6 m. Si vous n'avez aucune main de libre, vous continuez de chuter comme si vous aviez échoué à votre test.</success>
+      <criticalFailure>Vous continuez votre chute et, si vous aviez déjà chuté d'une hauteur supérieure ou égale à 6 m quand vous avez utilisé cette réaction, vous subissez 10 dégâts contondants causés par l'impact pour chaque tranche de 6 m de chute.</criticalFailure>
+    </successDegrees>
   </feat>
 
   <feat id="action-signaler" type="action">
