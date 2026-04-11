@@ -6157,3 +6157,374 @@ fois par jour en tant que sort inné divin de rang 4.
                                    **REJETON INFERNAL REJETON INFERNAL**
                                                  Christophe Cavalier Pont - pont.christophe.pc@gmail.com - 202602/2468111/3429431
 
+
+[[PAGE 84]]
+
+# FLUX PRINCIPAL (STATS/BASE)
+                   Livre des Joueurs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**82 82**
+        Vous pouvez choisir une ascendance mixte représentant deux
+        lignées pour votre personnage. Cela n’empêche pas d’avoir plus
+        de deux ascendances dans votre généalogie, mais vous devrez
+        dans ce cas en discuter avec votre MJ pour que cela soit
+        pris en compte dans les règles. Les combinaisons
+        possibles d’ascendances sont innombrables, mais
+        la plupart des habitants de la région de la mer
+        Intérieure ne connaissent que les aiuvarins et les
+        dromaars, car ce sont les personnes d’ascen‑
+        dance mixte qu’ils rencontrent le plus souvent.
+         **Héritages mixtes personnalisés :** vous
+        pouvez travailler avec votre MJ pour créer
+        un héritage mixte pour une ascendance
+        autre qu’elfe ou orc. Un héritage d’ascendance
+        mixte personnalisé est un héritage peu cou‑
+        rant. Choisissez une ascendance liée à votre
+        héritage. Vous gagnez les traits de cette
+        ascendance et un nouveau trait pour
+        votre ascendance combinée, de la même
+        manière que l’héritage aiuvarin ci‑après
+        accorde les traits « elfe » et « aiuvarin ». Vous
+        gagnez aussi vision nocturne si l’ascendance liée
+        à votre héritage est dotée de vision nocturne ou de vision
+        dans le noir. L’héritage vous permet de sélectionner des dons
+        ancestraux pour l’ascendance choisie en plus de ceux de votre
+        ascendance de base. Les héritages aiuvarins et dromaars ont des
+        dons spéciaux, mais pour un héritage personnalisé vous devrez
+        travailler avec votre MJ pour en créer ou en adapter certains.
+        AIUVARIN
+        Les enfants que les elfes ont eus avec des personnes d’autres
+        ascendances, et les enfants de leurs enfants, sont appelés « aiu‑
+        varins », un mot elfique qui fait référence à un poème sur les
+        feuilles qui tombent trop vite. Les aiuvarins les plus connus
+        de Golarion sont nés d’un elfe et d’un humain, ou de deux
+        aiuvarins. Ils sont très souvent appelés des « demi‑elfes ». Leur
+        vie n’est pas toujours simple et ils doivent bien souvent lutter
+        pour s’intégrer. Les aiuvarins n’ont pas de patrie propre sur
+        Golarion, et ils ne sont pas particulièrement liés les uns aux
+        autres, car ils suivent souvent des traditions très différentes de
+        celles de leurs parents. Ils tentent plutôt de se faire accepter au
+        sein des cultures et communautés de leurs parents.
+         Les aiuvarins ont souvent des oreilles pointues et peuvent
+        être grands et minces, tout en manifestant des traits de leurs
+        ancêtres non elfes. Ils n’ont pas les yeux étranges de leurs
+        parents elfes, et leurs efforts pour s’intégrer dans des com‑
+        munautés dans lesquelles ils sont souvent en décalage avec la
+        culture dominante impliquent que bon nombre d’entre eux
+        choisissent de devenir artistes ou bateleurs. Malgré leur socia‑
+        bilité innée, de nombreux aiuvarins ont du mal à tisser des liens
+        durables avec des humains ou d’autres elfes, car ils n’arrivent
+        à se sentir proches d’aucun de ces deux peuples.
+         Les aiuvarins bénéficient d’une partie, mais pas de la tota‑
+        lité, de la longévité de leurs parents elfiques, et ceux qui ont
+        un parent humain vivent souvent environ 150 ans. Certains
+        d’entre eux craignent ainsi de se lier d’amitié ou d’avoir des
+                                         relations sentimentales avec des humains, car ils savent qu’ils
+                                         survivront à leur compagnon.
+                                           **Vous…**
+                                                 x Êtes introverti et avez du mal à développer
+                                                  des liens forts avec les autres.
+                                                 x Vous identifiez à, ou rejetez avec force une
+                                                  partie de vos ascendances.
+                                                 x Vous sentez proche des autres individus
+                                                  d’ascendance mixte et vous identifiez for‑
+                                                  tement à eux.
+                                                 **Les autres…**
+                                                      x Vous trouvent plus accessibles que
+                                                       les elfes.
+                                                      x Vous considèrent principalement
+                                                       par le prisme de votre héritage
+                                                       elfique.
+                                                      x Minimisent la difficulté de se trou‑
+                                                       ver déchiré entre deux cultures.
+                                                **Aiuvarin (héritage)**
+                                         Votre arbre généalogique compte des elfes ou des aiuvarins.
+                                         Vos oreilles pointues et d’autres signes trahissent votre ascen‑
+                                         dance elfique. Vous gagnez le trait elfe, le trait aiuvarin et vision
+                                         nocturne. De plus, quand vous gagnez un don ancestral, vous
+                                         pouvez choisir parmi les dons des aiuvarins et des elfes en plus
+                                         de ceux de votre ascendance.
+                                         **Dons des aiuvarins**
+                                         En plus des dons de l’ascendance elfique (p. 42), les dons sui‑
+                                         vants sont accessibles aux personnages aiuvarins.
+                                          **NIVEAU 1
+                                         ATAVISME ELFIQUE            DON 1
+                                         AIUVARIN**
+                                         Le sang elfique qui coule dans vos veines est particulièrement puis-
+                                         sant et vous fait bénéficier de caractéristiques elfiques bien plus
+                                         prononcées que celles d’un aiuvarin moyen. Vous pouvez égale-
+                                         ment avoir été élevé parmi les elfes et baigné dans la culture de vos
+                                         ancêtres elfes. Vous gagnez les avantages liés à l’héritage elfique de
+                                         vos parents ou ancêtres elfes. Vous ne pouvez cependant pas choisir
+                                         d’héritage qui nécessite ou améliore une caractéristique elfique que
+                                         vous ne possédez pas. Par exemple, vous ne pouvez pas prendre
+                                         l’héritage elfe ancien (p. 43) à moins que votre ascendance non elfique
+                                         ait une espérance de vie qui se mesure en plusieurs siècles. Dans ces
+                                         cas-là, si le MJ le permet, vous pouvez gagner un autre avantage.
+                                         **Spécial.** Vous pouvez seulement choisir ce don au niveau 1 et
+                                          vous ne pouvez pas utiliser un réapprentissage pour perdre ou
+                                          gagner ce don.
+                                         **GLOIRE MÉRITÉE            DON 1
+                                         AIUVARIN**
+                                         Les elfes ont souvent tendance à sous-estimer les aiuvarins et vous
+                                         avez l’habitude de raconter les récits de vos exploits pour gagner
+                          ASCENDANCE         MIXTE
+                                     **AIUVARIN AIUVARIN
+
+[[PAGE 85]]
+
+# FLUX PRINCIPAL (STATS/BASE)
+                                                                    22
+                                      Ascendances  & Historiques
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                      **83 83
+                                                                 Introduction
+                                                                 Ascendances
+                                                                  & Historiques
+                                                                  Introduction
+                                                                  Ascendances
+                                                                   Elfe
+                                                                   Gnome
+                                                                   Gobelin
+                                                                   Halfelin
+                                                                   Humain
+                                                                   Léchi
+                                                                   Nain
+                                                                   Orc
+                                                                  Héritages
+                                                                   polyvalents
+                                                                   Changelin
+                                                                   Néphilim
+                                                                   Ascendance
+                                                                    mixte
+                                                                  Historiques
+                                                                  Langues
+                                                                 Classes
+                                                                 Compétences
+                                                                 Dons
+                                                                 Équipement
+                                                                 Sorts
+                                                                 Jouer une partie
+                                                                 Annexe des États
+                                                                 Feuille de personnage
+                                                                 Glossaire et index**
+leur respect. Vous êtes qualifié en Représentation. Si vous êtes déjà
+automatiquement qualifié en Représentation (grâce à votre historique
+ou à votre classe, par exemple), vous devenez alors qualifié dans une
+compétence de votre choix.
+ Vous gagnez le don Représentation impressionnante (p. 262).
+Lorsque vous tentez un test de Représentation pour Faire bonne
+impression sur un elfe et que vous obtenez un échec critique, vous
+obtenez un échec à la place.
+ **NIVEAU 5
+CHARME SURNATUREL   DON 5
+AIUVARIN**
+La magie elfique qui coule dans vos veines se mani-
+feste comme une force que vous pouvez utiliser pour
+devenir plus séduisant ou intéressant. Une fois par
+jour, vous pouvez lancer le sort *charme* comme un
+sort inné arcanique de rang 1.
+**EXEMPLARITÉS      DON 5
+AIUVARIN**
+Vos actions inspirent vos alliés et les
+poussent à se dépasser. Chaque fois
+que vous obtenez un succès critique à
+un test de compétence, vous pouvez
+automatiquement utiliser la réaction
+Aider pour apporter votre aide à un allié qui
+utilise la même compétence, sans avoir besoin
+d’utiliser une action pour vous préparer.
+DROMAARS
+Les orcs du Belkzen étant devenus un fer de lance essentiel
+dans la guerre contre le Tyran qui Murmure, se battant parfois
+aux côtés d’alliés d’autres ascendances, les enfants issus d’un
+parent orc et d’un parent d’une autre ascendance (typiquement
+humaine) sont de plus en plus nombreux. Bon nombre de ces
+« demi‑orcs » se font appeler des « dromaars », un mot orquien
+désignant les joueurs de tambour dont la musique accompagne
+les hordes qui partent en guerre. Ils se considèrent comme
+les hérauts d’une nouvelle ère pour les orcs de la région de
+la mer Intérieure. Certains humanoïdes intolérants voient les
+orcs comme des monstres plutôt que comme des individus à
+part entière, et ils haïssent et craignent parfois les demi‑orcs
+simplement à cause de cette ascendance. Cela peut pousser les
+dromaars à vivre en marge de la société en travaillant comme
+mercenaires ou dans les milieux criminels. Nombreux sont
+ceux qui, ne supportant plus les indignités imposées par la
+société des humains, se réfugient chez leurs cousins orcs ou
+préfèrent vivre en pleine nature.
+ Les dromaars s’intègrent rarement dans les sociétés qui
+comptent de nombreux humains, estimant qu’ils sont moins
+intelligents qu’eux et peu civilisés. Un dromaar est souvent
+considéré comme un atout précieux dans une forteresse orque,
+car il compense ses faiblesses physiques par des dons hérités
+de son autre lignée ancestrale. Si certains dromaars peinent à
+se faire un nom au sein de la hiérarchie impitoyable des for‑
+teresses orques, d’autres découvrent que la société orque est
+bien plus tolérante et qu’elle peut leur offrir des opportunités.
+ Un dromaar avec un parent humain a une espérance de vie
+moyenne de 70 ans.
+                                 **Vous…**
+                                   x Ignorez, acceptez, ou vous opposez activement aux stéréo‑
+                                    types courants qui sont associés aux dromaars.
+                                   x Jouez de votre taille et de votre force pour vous imposer
+                                    physiquement ou socialement.
+                                   x Gardez vos distances avec les individus des autres ascen‑
+                                    dances, au cas où ils vous rejettent injustement à cause
+                                    de vos ancêtres orcs.
+                                     **Les autres…**
+                                           x Considèrent que vous aimez vous battre
+                                            et le faites bien, mais que vous n’êtes
+                                            pas intéressé par la magie ou les activités
+                                            intellectuelles.
+                                           x Vous plaignent en supposant que
+                                            votre naissance est liée à une situation
+                                            tragique.
+                                           x Préfèrent prendre leurs distances et capi‑
+                                            tuler plutôt que de risquer votre colère.
+                                             **Dromaar (héritage)**
+                                             Votre lignage est renforcé par la force
+                                             des orcs. Votre peau aux nuances ver‑
+                                             dâtres et d’autres signes trahissent
+                                            votre ascendance orque. Vous gagnez
+                                          le trait orc, le trait dromaar et vision noc‑
+                                      turne. Quand vous gagnez un don ancestral, vous
+                                 pouvez choisir parmi les dons des dromaars et des orcs en plus
+                                 de ceux de votre ascendance.
+                                 DONS   DES  DROMAARS
+                                 En plus des dons de l’ascendance orque (p. 70), les dons sui‑
+                                 vants sont accessibles aux personnages dromaars.
+                                 **NIVEAU 1
+                                 MÉDIATEUR MONSTRUEUX       DON 1
+                                 DROMAAR**
+                                 Votre nature duelle d’humain et d’orc vous donne une perspective
+                                 unique qui vous permet de faire le lien entre les humains et de nom-
+                                 breuses créatures intelligentes que les humains considèrent comme
+                                 des monstres. Vous gagnez un bonus de circonstances de +1 à vos
+                                 tests de Diplomatie contre des créatures intelligentes non humanoïdes
+                                 et contre les humanoïdes marginalisés par les sociétés humaines (à
+                                 la discrétion du MJ, mais ceux-ci incluent généralement les géants,
+                                 les gobelins, les kobolds et les orcs). Vous bénéficiez également de
+                                 ce bonus à vos tests de Perception pour Deviner les intentions de
+                                 ces créatures.
+                                 **VISION ORQUE             DON 1
+                                 DROMAAR
+                                 Prérequis** vision nocturne
+                                 Votre sang orc vous permet de bénéficier des capacités visuelles de
+                                 vos ancêtres. Vous gagnez vision dans le noir, qui vous permet de voir
+                                 dans les ténèbres et la lumière faible aussi bien que dans la lumière
+                                 vive. Cependant, dans les ténèbres, vous ne voyez qu’en noir et blanc.
+                                 **Spécial.** Vous pouvez seulement choisir ce don au niveau 1 et
+                                  vous ne pouvez pas utiliser un réapprentissage pour perdre ou
+                                  gagner ce don.
+                             **DROMAAR DROMAAR**
+                                                 Christophe Cavalier Pont - pont.christophe.pc@gmail.com - 202602/2468111/3429431
+

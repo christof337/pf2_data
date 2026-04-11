@@ -37,7 +37,10 @@ def clean_pdf_artifacts(content):
 
     # Purge des marqueurs de page, flux principal, en-têtes récurrents
     content = re.sub(r'\[\[PAGE \d+\]\]', '', content)
-    content = re.sub(r'(?m)^\s*# FLUX PRINCIPAL \(STATS\/BASE\)\s*$(?:\n\s*Livre des Joueurs)?\n*\*{0,2}\s*\d{1,3}\s?\d{0,3}\*{0,2}', '', content)
+    # FLUX PRINCIPAL : on supprime le bloc jusqu'aux lignes vides incluses,
+    # MAIS on conserve **NN NN** (numéro de page suivante) pour que Rule 3
+    # du parser puisse tronquer la description au bon endroit.
+    content = re.sub(r'(?m)^\s*# FLUX PRINCIPAL \(STATS\/BASE\)\s*$(?:\n\s*Livre des Joueurs)?\n*', '', content)
     # Purge des numéros de page en gras **NN NN (ouverture de span bold sans fermeture sur la ligne)
     content = re.sub(r'\*\*\d+\s+\d+\s*\n', '', content)
     # Purge des en-têtes de chapitre récurrents (running heads après page break)
@@ -210,7 +213,7 @@ def _extract_granted_activities(body):
 
         # Requirement (Conditions)
         req_m = re.search(
-            rf'\*\*Conditions?\.?\*\*\s*(.+?)(?=\n\n|\n\s*\*\*|\n\s*[{UPPER}]|\Z)',
+            rf'\*\*Conditions?\.?\s*\*\*\s*(.+?)(?=\n\n|\n\s*\*\*|\n\s*[{UPPER}]|\Z)',
             sub_content, re.DOTALL
         )
         sub_req = clean_value(req_m.group(1)) if req_m else None
@@ -221,7 +224,7 @@ def _extract_granted_activities(body):
         # Description = ce qui suit le requirement (ou tout le contenu si absent)
         desc_raw = sub_content[req_m.end():] if req_m else sub_content
         desc_raw = re.sub(
-            rf'\*\*(?:Fréquence|Déclencheur|Conditions?|Spécial)\.?\*\*\s*.+?(?=\n\n|\n\s*\*\*|\n\s*[{UPPER}]|\Z)',
+            rf'\*\*(?:Fréquence|Déclencheur|Conditions?|Spécial)\.?\s*\*\*\s*.+?(?=\n\n|\n\s*\*\*|\n\s*[{UPPER}]|\Z)',
             '', desc_raw, flags=re.DOTALL
         )
         sub_desc = clean_desc(desc_raw) or None
@@ -361,25 +364,25 @@ def parse_feat_block(raw):
             elif 'condition' in field_name:
                 requirement = val
     else:
-        # Cas body : **Prérequis** ou **Prérequis.**
-        prereq_body = re.search(rf'\*\*Prérequis\.?\*\*\s*(.+?)(?=\n\s*\*\*|\n\s*[{UPPER}]|\Z)', body, re.DOTALL)
+        # Cas body : **Prérequis** ou **Prérequis.** ou **Prérequis. ** (espace avant fermeture)
+        prereq_body = re.search(rf'\*\*Prérequis\.?\s*\*\*\s*(.+?)(?=\n\s*\*\*|\n\s*[{UPPER}]|\Z)', body, re.DOTALL)
         if prereq_body:
             prerequisites = clean_value(prereq_body.group(1))
 
     # 9. Autres champs dans le body (complètent ou remplacent les valeurs ci-dessus si absentes)
     if frequency is None:
-        frequency_match = re.search(rf'\*\*Fréquence\.?\*\*\s*(.+?)(?=\n\s*\*\*|\n\s*[{UPPER}]|\Z)', body, re.DOTALL)
+        frequency_match = re.search(rf'\*\*Fréquence\.?\s*\*\*\s*(.+?)(?=\n\s*\*\*|\n\s*[{UPPER}]|\Z)', body, re.DOTALL)
         frequency = clean_value(frequency_match.group(1)) if frequency_match else None
 
     if trigger is None:
-        trigger_match = re.search(rf'\*\*Déclencheur\.?\*\*\s*(.+?)(?=\n\s*\*\*|\n\s*[{UPPER}]|\Z)', body, re.DOTALL)
+        trigger_match = re.search(rf'\*\*Déclencheur\.?\s*\*\*\s*(.+?)(?=\n\s*\*\*|\n\s*[{UPPER}]|\Z)', body, re.DOTALL)
         trigger = clean_value(trigger_match.group(1)) if trigger_match else None
 
     if requirement is None:
-        requirement_match = re.search(rf'\*\*Conditions?\.?\*\*\s*(.+?)(?=\n\s*\*\*|\n\s*[{UPPER}]|\Z)', body, re.DOTALL)
+        requirement_match = re.search(rf'\*\*Conditions?\.?\s*\*\*\s*(.+?)(?=\n\s*\*\*|\n\s*[{UPPER}]|\Z)', body, re.DOTALL)
         requirement = clean_value(requirement_match.group(1)) if requirement_match else None
 
-    special_match = re.search(r'\*\*Spécial\.?\*\*\s*(.+?)(?=\n\s*\*\*|\Z)', body, re.DOTALL)
+    special_match = re.search(rf'\*\*Spécial\.?\s*\*\*\s*(.+?)(?=\n\s*\*\*|\Z)', body, re.DOTALL)
     special = clean_value(special_match.group(1)) if special_match else None
 
     # 9. Description : ce qui reste dans le body après avoir retiré les champs nommés
@@ -390,12 +393,16 @@ def parse_feat_block(raw):
 
     # Supprimer tous les champs nommés du body pour isoler la description
     desc_clean = re.sub(
-        rf'\*\*(?:Prérequis|Fréquence|Déclencheur|Conditions?|Spécial)\.?\*\*\s*.+?(?=\n\s*\*\*|\n\s*[{UPPER}]|\Z)',
+        rf'\*\*(?:Prérequis|Fréquence|Déclencheur|Conditions?|Spécial)\.?\s*\*\*\s*.+?(?=\n\s*\*\*|\n\s*[{UPPER}]|\Z)',
         '', desc_body, flags=re.DOTALL
     )
-    # Règle : pas de **[MAJUSCULES] ni de MAJUSCULES DON N dans la description
-    # (artefacts de dons non découpés qui ont fusionné dans ce bloc)
+    # Règle 3 en premier : tronquer à **NN NN** (numéro de page = frontière de section)
+    # Doit précéder Rule 1 car Rule 1 peut consumer le ** fermant de **NN NN**
+    # via \*\*\s*[UPPER] si le saut de ligne suivant mène à une majuscule.
+    desc_clean = re.sub(r'\*\*\d+\s+\d+\*\*.*', '', desc_clean, flags=re.DOTALL)
+    # Règle 1 : tronquer à **[MAJUSCULE] (début d'un autre don fusionné)
     desc_clean = re.sub(rf'\*\*\s*[{UPPER}].*', '', desc_clean, flags=re.DOTALL)
+    # Règle 2 : tronquer à une ligne MAJUSCULES DON N (don non découpé fusionné)
     desc_clean = re.sub(rf'(?m)^\s*[{UPPER}]{{2,}}[{UPPER}\u2019\' ]*\s+DON\s+\d.*', '', desc_clean, flags=re.DOTALL)
     description = clean_desc(desc_clean) or None
 
