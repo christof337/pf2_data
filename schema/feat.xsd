@@ -65,7 +65,11 @@
         </xs:restriction>
       </xs:simpleType>
     </xs:attribute>
-    <!-- Catégorie de don : ancestry, class, archetype, general -->
+    <!-- Catégorie de don : ancestry, class, archetype, general
+         Contrainte (non exprimable en XSD 1.0) :
+           si category="ancestry" alors traits doit contenir au moins un trait
+           avec type ∈ {ancestry, mixed-heritage, versatile-heritage}
+         Cette contrainte est vérifiée par le mapper Python. -->
     <xs:attribute name="category" use="optional">
       <xs:simpleType>
         <xs:restriction base="xs:string">

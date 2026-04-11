@@ -4,7 +4,7 @@
     <name>DÉLAISSÉ</name>
     <level>1</level>
     <traits>
-      <trait>ELFE</trait>
+      <trait type="ancestry">ELFE</trait>
     </traits>
     <description>Vous avez été témoin de la sénescence et de la mort de vos amis, ce qui vous a empli d’une morosité qui vous protège des émotions douloureuses. Vous gagnez un bonus de circonstances de +1 à vos jets de sauvegarde contre les effets des émotions. Si vous remportez un succès sur un jet de sauvegarde contre l’effet d’une émotion, il est transformé en succès critique.</description>
   </feat>
@@ -12,7 +12,7 @@
     <name>ELFE PRESTE</name>
     <level>1</level>
     <traits>
-      <trait>ELFE</trait>
+      <trait type="ancestry">ELFE</trait>
     </traits>
     <description>Vos muscles sont bien entraînés. Votre Vitesse augmente de 1,5 m.</description>
   </feat>
@@ -20,7 +20,7 @@
     <name>FAMILIARITÉ AVEC LES ARMES ELFIQUES</name>
     <level>1</level>
     <traits>
-      <trait>ELFE</trait>
+      <trait type="ancestry">ELFE</trait>
     </traits>
     <description>Vous avez une prédilection pour les arcs et les autres armes élégantes. Vous avez accès aux armes peu courantes avec le trait elfe. Vous êtes familiarisé avec les armes ayant le trait elfe, ainsi qu’avec les arcs longs, les arcs longs composites, les rapières, les arcs courts et les arcs courts composites. En ce qui concerne la maîtrise de ces armes, vous considérez toutes les armes de guerre comme des armes simples et toutes les armes évoluées comme des armes de guerre. Au niveau 5, chaque fois que vous obtenez un coup critique avec l’une de ces armes, vous bénéficiez de son effet critique spécialisé.</description>
   </feat>
@@ -28,7 +28,7 @@
     <name>LONGÉVITÉ ANCESTRALE</name>
     <level>1</level>
     <traits>
-      <trait>ELFE</trait>
+      <trait type="ancestry">ELFE</trait>
     </traits>
     <prerequisites>avoir au moins 100 ans</prerequisites>
     <description>Vous avez accumulé de nombreuses connaissances au fil des années. Lors de vos préparatifs quotidiens, vous pouvez méditer sur vos expériences passées afin de bénéficier du rang de maîtrise qualifié dans une compétence de votre choix. Vous bénéficiez de cette maîtrise jusqu’à vos prochains préparatifs. Dans la mesure où cette maîtrise est temporaire, vous ne pouvez pas l’utiliser comme prérequis pour bénéficier d’une amélioration de compétence ou d’une option permanente de personnage, comme un don.</description>
@@ -37,7 +37,7 @@
     <name>MAGIE SURNATURELLE</name>
     <level>1</level>
     <traits>
-      <trait>ELFE</trait>
+      <trait type="ancestry">ELFE</trait>
     </traits>
     <description>Votre magie elfique se manifeste sous la forme d’un sort arcanique simple, même si vous n’avez pas été formé à la magie. Choisissez un tour de magie dans la liste des sorts arcaniques (p. 304). Vous pouvez lancer ce tour de magie comme un sort inné arcanique à volonté. Un tour de magie est intensifié à un rang de sort égal à la moitié de votre niveau arrondi à l’entier supérieur.</description>
   </feat>
@@ -45,7 +45,7 @@
     <name>VOLONTÉ INÉBRANLABLE</name>
     <level>1</level>
     <traits>
-      <trait>ELFE</trait>
+      <trait type="ancestry">ELFE</trait>
     </traits>
     <description>Votre contrôle et vos méditations mystiques vous permettent de résister aux influences externes qui tentent d’affecter votre conscience. Chaque fois que vous vous trouvez affecté par un effet mental qui dure au moins 2 rounds, vous pouvez en réduire la durée de 1 round. Vous avez toujours besoin de dormir normalement, mais vous considérez vos jets de sauvegarde contre les effets d’endormissement comme étant d’un rang de succès au-dessus de ce qu’ils sont. Ce don vous protège seulement des effets de sommeil, mais pas des autres effets qui vous rendent inconscient. **NIVEAU 5 EXPÉRIENCE MARTIALE DON 5 ELFE** Vous avez affronté une grande variété d’ennemis maniant une grande variété d’armes et avez appris les bases du combat avec près de la totalité de ces dernières. Lorsque vous maniez une arme que vous ne maîtrisez pas, utilisez votre niveau comme bonus de maîtrise. Vous devenez qualifié pour toutes les armes au niveau 11.</description>
   </feat>
@@ -53,7 +53,7 @@
     <name>MÉFIANCE ANCESTRALE</name>
     <level>5</level>
     <traits>
-      <trait>ELFE</trait>
+      <trait type="ancestry">ELFE</trait>
     </traits>
     <description>Les elfes à la vie très longue ont vu maintes civilisations s’ériger et tomber, souvent face à des forces étrangères. C’est pourquoi leur méfiance des autres s’est accentuée, car ils pourraient chercher à les influencer ou à les contrôler. Vous avez été entraîné à résister à de telles manipulations et gagnez un bonus de circonstances de +2 aux jets de sauvegarde contre les effets de contrôle comme *domination*, et aux tests de Perception pour Deviner les intentions lorsque vous souhaitez déterminer si une créature est sous l’influence d’un tel effet. Si vous obtenez un succès à un jet de sauvegarde contre un effet pareil, vous obtenez à la place un succès critique.</description>
   </feat>
@@ -61,7 +61,7 @@
     <name>PATIENCE INFINIE</name>
     <level>5</level>
     <traits>
-      <trait>ELFE</trait>
+      <trait type="ancestry">ELFE</trait>
     </traits>
     <description>Votre longévité vous a permis de développer un rythme de travail plus lent mais plus minutieux. Vous pouvez volontairement passer deux fois plus de temps que la normale sur un test de Perception ou un test de compétence. Si vous le faites, vous bénéficiez d’un bonus de circonstances de +2 au test et ne réduisez pas automatiquement votre degré de succès sur un 1 naturel (vous obtenez un échec critique uniquement si votre résultat est inférieur de 10 au DD). Vous pouvez par exemple profiter de ces avantages en utilisant 2 actions pour Chercher, ce qui nécessite normalement 1 action. Vous pouvez également en profiter pendant les phases d’exploration en passant deux fois plus de temps que la normale à explorer, ou lors d’un intermède en doublant aussi le temps que vous passez à faire des actions. Le MJ peut déterminer qu’une situation ne vous permet pas de profiter de ces avantages si le doublement de la durée compromet directement le succès de votre tâche, par exemple si vous êtes en pleine négociation tendue avec une créature impatiente. **NIVEAU 9 ESCALADEUR D’ARBRES DON 9 ELFE** Vous avez passé la majorité de votre vie parmi les cimes et êtes devenu un expert dans l’art de les escalader rapidement et en toute sécurité. Vous gagnez une Vitesse d’escalade de 3 m. Ascendances &amp; Historiques LONGÉVITÉ EXPERTE DON 9 ELFE Prérequis** Longévité ancestrale Vous avez continué d’affiner les connaissances et compétences acquises au cours de votre vie. Quand vous choisissez une compétence dans laquelle devenir qualifié grâce à votre Longévité ancestrale, vous pouvez également choisir de devenir expert dans une compétence dans laquelle vous êtes déjà qualifié. Vous possédez ce rang de maîtrise jusqu’à ce que l’effet de Longévité ancestrale prenne fin. Quand les effets des dons Longévité ancestrale et Longévité experte prennent fin, vous pouvez réapprendre l’une de vos améliorations de compétence. L’amélioration de compétence dont vous bénéficiez grâce à ce réapprentissage doit soit vous permettre de devenir qualifié dans la compétence choisie avec le don Longévité ancestrale, soit vous permettre de devenir expert dans la compétence choisie avec le don Longévité experte.</description>
   </feat>
@@ -70,7 +70,7 @@
     <level>9</level>
     <actions>1</actions>
     <traits>
-      <trait>ELFE</trait>
+      <trait type="ancestry">ELFE</trait>
     </traits>
     <description>Vous vous déplacez avec une grâce de danseur et un pas long. Vous Faites un pas de 1,5 m deux fois.</description>
   </feat>
@@ -78,7 +78,7 @@
     <name>SAGACITÉ SURNATURELLE</name>
     <level>9</level>
     <traits>
-      <trait>ELFE</trait>
+      <trait type="ancestry">ELFE</trait>
     </traits>
     <prerequisites>Au moins un sort inné gagné grâce à un don ances-</prerequisites>
     <frequency>une fois par jour Vous avez perfectionné votre capacité à entretenir les compétences que vous avez apprises au cours de votre longue vie et vous ne vous trouvez ainsi jamais véritablement inexpérimenté dans une compétence. Vous méditez sur les expériences que vous avez vécues et modifiez la compétence que vous avez choisie avec Longévité ancestrale (et la compétence que vous avez choisie avec Longévité experte si vous possédez ce don).</frequency>
@@ -89,7 +89,7 @@
     <level>13</level>
     <actions>1</actions>
     <traits>
-      <trait>ELFE</trait>
+      <trait type="ancestry">ELFE</trait>
       <trait>FORTUNE</trait>
     </traits>
     <requirement>Vous êtes dans un rayon de 9 m autour d’un allié avec l’état mourant. Vous savez que vous finirez par survivre à vos compagnons, mais le fait de les voir aux portes de la mort rend vos attaques plus vives. Effectuez une Frappe. Lancez le jet d’attaque deux fois et utilisez le meilleur résultat.</requirement>
@@ -99,7 +99,7 @@
     <name>COMPLICE ANIMAL</name>
     <level>1</level>
     <traits>
-      <trait>GNOME</trait>
+      <trait type="ancestry">GNOME</trait>
     </traits>
     <description>Vous développez une relation avec un animal avec lequel vous vous liez magiquement. Vous gagnez alors un familier qui utilise les règles présentées p. 212. Vous êtes libre de décider de quel type d’animal il s’agit, mais les gnomes choisissent généralement des animaux avec une Vitesse de creusement.</description>
   </feat>
@@ -108,7 +108,7 @@
     <level>1</level>
     <actions>0</actions>
     <traits>
-      <trait>GNOME</trait>
+      <trait type="ancestry">GNOME</trait>
     </traits>
     <description>une fois par heure **Déclencheur. **Vous aveuglez ou éblouissez une créature. Vous avez passé énormément de temps à pratiquer la manipulation de la lumière, transformant en arme le reflet de vos lames ou augmentant la luminosité de démonstrations magiques à un point non conventionnel. Augmentez la durée de l’état aveugle ou ébloui de la cible de 1 round.</description>
   </feat>
@@ -116,7 +116,7 @@
     <name>FAMILIARITÉ AVEC LES ARMES GNOMES</name>
     <level>1</level>
     <traits>
-      <trait>GNOME</trait>
+      <trait type="ancestry">GNOME</trait>
     </traits>
     <description>Vos armes de prédilection sont celles liées à votre peuple, notamment si elles possèdent une lame incurvée ou de forme singulière. Vous avez accès aux kukris et à toutes les armes peu courantes avec le trait gnome. Vous êtes familiarisé avec les armes ayant le trait gnome, ainsi qu’avec les coutilles et les kukris. En ce qui concerne la maîtrise de ces armes, vous considérez toutes les armes de guerre comme des armes simples et toutes les armes évoluées comme des armes de guerre. Au niveau 5, chaque fois que vous obtenez un coup critique avec l’une de ces armes, vous bénéficiez de son effet critique spécialisé.</description>
   </feat>
@@ -124,7 +124,7 @@
     <name>MAGIE DU PREMIER MONDE</name>
     <level>1</level>
     <traits>
-      <trait>GNOME</trait>
+      <trait type="ancestry">GNOME</trait>
     </traits>
     <description>Votre connexion avec le Premier Monde vous fait bénéficier d’un sort inné primordial, comme ceux que peuvent utiliser les fées. Choisissez un tour de magie dans la liste des sorts primordiaux (p. 311). Vous pouvez lancer ce tour de magie comme un sort inné primordial à volonté. Un tour de magie est intensifié à un rang de sort égal à la moitié de votre niveau arrondi à l’entier supérieur.</description>
   </feat>
@@ -132,7 +132,7 @@
     <name>OBSESSION GNOME</name>
     <level>1</level>
     <traits>
-      <trait>GNOME</trait>
+      <trait type="ancestry">GNOME</trait>
     </traits>
     <description>Malgré votre nature inconstante, quand un sujet vous intéresse, vous vous y plongez à corps perdu. Vous gagnez le don Connaissances supplémentaires (p. 255) et le don Assurance pour les Connaissances choisies. Comme les obsessions des gnomes peuvent changer rapidement, vous pouvez effectuer un réapprentissage avec Obsession gnome dans une autre sous-catégorie de Connaissances en 1 jour d’intermède.</description>
   </feat>
@@ -140,7 +140,7 @@
     <name>ORATEUR ANIMALIER</name>
     <level>1</level>
     <traits>
-      <trait>GNOME</trait>
+      <trait type="ancestry">GNOME</trait>
     </traits>
     <description>À vos oreilles, les sons émis par les animaux forment des paroles intelligibles et non pas des bruits incohérents, et vous pouvez leur répondre de la même manière. Vous pouvez poser des questions, recevoir des réponses et utiliser la compétence Diplomatie avec les animaux. Dans la plupart des cas, les animaux sauvages vous laisseront le temps d’exposer votre cas. Vous gagnez un bonus de circonstances de +1 pour Faire bonne impression sur les animaux.</description>
   </feat>
@@ -148,7 +148,7 @@
     <name>PERCEPTION DES ILLUSIONS</name>
     <level>1</level>
     <traits>
-      <trait>GNOME</trait>
+      <trait type="ancestry">GNOME</trait>
     </traits>
     <description>Vos ancêtres passaient leurs journées enveloppés et bercés par des illusions et vous avez hérité d’eux la capacité innée de ressentir la magie de l’illusion. Vous gagnez un bonus de circonstances de +1 à vos tests de Perception et à vos jets de sauvegarde de Volonté contre les illusions. Quand vous vous approchez à 3 m d’une illusion qui peut être discernée, le MJ fait un test en secret afin de déterminer si vous la discernez, même si vous n’avez fait aucune action pour Interagir avec cette illusion. **NIVEAU 5 PROJECTION DE PERSONNAGE ** 1 ** DON 5 CONCENTRATION GNOME ILLUSION PRIMORDIALE VISUEL** Si les autres gravent leur armure pour satisfaire leur imagination, votre esprit vif et votre personnalité courageuse vous permettent de projeter une apparence plus convenable à votre armure sans éclat. Vous changez la forme et l’aspect de votre armure pour qu’elle ressemble aux vêtements beaux ou ordinaires que vous imaginez. Les statistiques de l’armure ne changent pas. Cet effet dure tant que vous restez conscient et que vous portez l’armure. Une créature peut discerner l’illusion en Cherchant ou touchant votre armure. Le DD est égal à votre DD de Volonté.</description>
   </feat>
@@ -157,7 +157,7 @@
     <level>5</level>
     <actions>1</actions>
     <traits>
-      <trait>GNOME</trait>
+      <trait type="ancestry">GNOME</trait>
     </traits>
     <prerequisites>réserve de focalisation, au moins un sort inné obtenu par</prerequisites>
     <frequency>une fois par jour Grâce à la magie qui coule dans vos veines, vous pouvez vous concentrer plus facilement. Vous regagnez 1 point de focalisation, sans pouvoir dépasser votre maximum. Ascendances &amp; Historiques ADEPTE DU PREMIER MONDE DON 9 GNOME Prérequis au moins un sort inné primordial Votre magie féerique s’est renforcée avec le temps. Vous gagnez invisibilité et lumière révélatrice comme sorts innés primordiaux de rang 2. Vous pouvez lancer chacun de ces sorts innés primordiaux une fois par jour.</frequency>
@@ -168,7 +168,7 @@
     <level>9</level>
     <actions>1</actions>
     <traits>
-      <trait>GNOME</trait>
+      <trait type="ancestry">GNOME</trait>
       <trait>DÉPLACEMENT</trait>
       <trait>TÉLÉPORTATION</trait>
     </traits>
@@ -178,7 +178,7 @@
     <name>CONDUIT VIVACE</name>
     <level>9</level>
     <traits>
-      <trait>GNOME</trait>
+      <trait type="ancestry">GNOME</trait>
     </traits>
     <description>Votre connexion avec le Premier Monde s’est renforcée et les énergies vitales qui en proviennent affluent en vous rapidement. Si vous vous reposez pendant 10 min, vous gagnez une quantité de points de vie égale à votre modificateur de Constitution × la moitié de votre niveau. C’est un effet de guérison de vitalité cumulatif avec n’importe quels soins obtenus grâce à Soigner les blessures.</description>
   </feat>
@@ -186,7 +186,7 @@
     <name>CURIOSITÉ PRUDENTE</name>
     <level>9</level>
     <traits>
-      <trait>GNOME</trait>
+      <trait type="ancestry">GNOME</trait>
     </traits>
     <prerequisites>au moins un sort inné occulte ou arcanique octroyé par</prerequisites>
     <frequency>une fois par heure</frequency>
@@ -197,7 +197,7 @@
     <name>BRÛLE !</name>
     <level>1</level>
     <traits>
-      <trait>GOBELIN</trait>
+      <trait type="ancestry">GOBELIN</trait>
     </traits>
     <description>Le feu vous fascine. Vos sorts et objets alchimiques qui infligent des dégâts de feu gagnent un bonus de statut aux dégâts égal à la moitié du rang du sort ou à un quart du niveau de l’objet (avec un minimum de +1). Vous gagnez également un bonus de statut de +1 à tous les dégâts de feu persistants que vous infligez.</description>
   </feat>
@@ -205,7 +205,7 @@
     <name>CAVALIER FAROUCHE</name>
     <level>1</level>
     <traits>
-      <trait>GOBELIN</trait>
+      <trait type="ancestry">GOBELIN</trait>
     </traits>
     <description>Vous êtes particulièrement bon cavalier sur les montures traditionnelles des gobelins. Vous gagnez le don Chevaucher même si vous n’en possédez pas les prérequis. Vous gagnez un bonus de circonstances de +1 à vos tests de Nature pour utiliser Diriger un animal en montant un chien gobelin ou un loup. Si vous avez un loup comme compagnon animal, il gagne le pouvoir spécial de monture (et si vous gagnez un pouvoir qui vous accorde un compagnon animal avec le pouvoir spécial de monture, vous pouvez choisir un loup).</description>
   </feat>
@@ -214,7 +214,7 @@
     <level>1</level>
     <actions>1</actions>
     <traits>
-      <trait>GOBELIN</trait>
+      <trait type="ancestry">GOBELIN</trait>
     </traits>
     <description>Vous entonnez d’agaçants chants gobelins aux paroles stupides et répétitives qui déconcentrent vos adversaires. Faites un test de Représentation contre le DD de Volonté d’un unique ennemi qui se trouve dans un rayon de 9 m. Ce test possède tous les traits et restrictions normalement associés à un test de Représentation pour chanter (p. 246). Vous pouvez affecter jusqu’à deux cibles à portée si vous possédez le rang de maîtrise expert en Représentation, quatre si vous possédez le rang maître et huit si vous possédez le rang légendaire. **Succès critique.** La cible subit un malus de −1 à ses tests de Perception et à ses jets de sauvegarde de Volonté pendant 1 min. **Succès.** La cible subit un malus de −1 à ses tests de Perception et à ses jets de sauvegarde de Volonté pendant 1 round. **Échec critique.** La cible est temporairement immunisée au Chant gobelin pendant 1 h.</description>
   </feat>
@@ -222,7 +222,7 @@
     <name>CHAROGNARD URBAIN</name>
     <level>1</level>
     <traits>
-      <trait>GOBELIN</trait>
+      <trait type="ancestry">GOBELIN</trait>
     </traits>
     <description>Vous savez que les plus grands trésors ressemblent souvent à des déchets. Vous gagnez un bonus de circonstances de +1 à vos tests pour Subsister et vous pouvez utiliser les compétences Société ou Survie quand vous tentez de Subsister dans une agglomération. Quand vous tentez de Subsister dans une ville, vous découvrez également des déchets de valeur que ces idiots de grandes guibolles ont jetés. Vous pouvez Gagner de l’argent grâce aux compétences Société ou Survie en même temps que vous Subsistez, sans avoir à y consacrer des jours d’intermède supplémentaires. Vous gagnez également un bonus de circonstances de +1 à ce test.</description>
     <special>Si vous possédez l’héritage gobelin boyaud’fer, ce bonus est de +2.</special>
@@ -231,7 +231,7 @@
     <name>CONNAISSANCES SUR LES GOBELINS</name>
     <level>1</level>
     <traits>
-      <trait>GOBELIN</trait>
+      <trait type="ancestry">GOBELIN</trait>
     </traits>
     <description>Vous avez appris des compétences et entendu des contes dans votre communauté gobeline. Vous gagnez le rang de maîtrise qualifié en Nature et en Discrétion. Si vous êtes déjà automatiquement qualifié dans l’une de ces compétences (grâce à votre historique ou à votre classe, par exemple), vous devenez alors qualifié dans une compétence de votre choix. Vous gagnez aussi le don général de Connaissances supplémentaireur la compétence Connaissances sur les gobelins.</description>
   </feat>
@@ -239,7 +239,7 @@
     <name>FAMILIARITÉ AVEC LES ARMES GOBELINES</name>
     <level>1</level>
     <traits>
-      <trait>GOBELIN</trait>
+      <trait type="ancestry">GOBELIN</trait>
     </traits>
     <description>Les autres ont beau vous regarder avec un certain dédain, vous savez que les armes de votre peuple sont aussi efficaces que tranchantes. Vous avez accès aux armes peu courantes avec le trait gobelin. Vous êtes familiarisé avec les armes ayant le trait gobelin. En ce qui concerne la maîtrise de ces armes, vous considérez toutes les armes de guerre comme des armes simples et toutes les armes évoluées comme des armes de guerre. Au niveau 5, chaque fois que vous obtenez un coup critique avec l’une de ces armes, vous bénéficiez de son effet critique spécialisé.</description>
   </feat>
@@ -248,7 +248,7 @@
     <level>1</level>
     <actions>9</actions>
     <traits>
-      <trait>GOBELIN</trait>
+      <trait type="ancestry">GOBELIN</trait>
     </traits>
     <description>Un allié termine une action de déplacement sur une case adjacente à la vôtre. Vous profitez du déplacement de votre allié pour ajuster votre position. Vous Faites un pas.</description>
   </feat>
@@ -256,7 +256,7 @@
     <name>TRÈS FURTIF</name>
     <level>1</level>
     <traits>
-      <trait>GOBELIN</trait>
+      <trait type="ancestry">GOBELIN</trait>
     </traits>
     <description>Les grandes personnes font rarement attention aux zones d’ombres qui se trouvent à leurs pieds et vous savez profiter de cette négligence. Vous pouvez vous déplacer de 1,5 m supplémentaire quand vous Êtes furtif, jusqu’à votre maximum de Vitesse. En outre, tant que vous continuez d’enchaîner les actions Être furtif et réussissez votre test de Discrétion, vous ne pouvez pas être observé même si vous ne bénéficiez pas d’un abri ou d’un abri important et n’êtes pas masqué à la fin de l’action Être furtif, du moment qu’à la fin de votre tour vous bénéficiez d’un abri, d’un abri important ou êtes masqué. **NIVEAU 5 CHANTEUR BRUYANT DON 5 GOBELIN Prérequis **Chant gobelin Le bon ton, le contrôle de la respiration et le fait de se souvenir des paroles sont moins importants que la véritable mesure des talents d’un Ascendances &amp; Historiques chanteur : le volume ! La portée de votre Chant gobelin est augmentée à 18 m et vous pouvez cibler un ennemi supplémentaire avec.</description>
   </feat>
@@ -265,7 +265,7 @@
     <level>5</level>
     <actions>1</actions>
     <traits>
-      <trait>GOBELIN</trait>
+      <trait type="ancestry">GOBELIN</trait>
     </traits>
     <description>Vous délivrez un coup éprouvant au genou, au tibia ou à n’importe quelle partie vulnérable de l’anatomie de votre ennemi à votre portée. Effectuez une Frappe au corps à corps avec une arme de corps à corps ou une attaque à mains nues. Cette attaque n’inflige pas de dégâts. Si vous touchez la cible, elle subit un malus de statut de −3 m à sa Vitesse ou un malus de statut de −4,5 m en cas de coup critique. Le malus ne dure que 1 round. Ce malus ne s’applique que si la créature possède une Vitesse au sol et qu’elle dépend de ses jambes ou d’autres appendices que vous pouvez viser pour utiliser cette dernière. Comme pour l’ensemble des malus infligés à la Vitesse, cette dernière ne peut être réduite à moins de 1,5 m.</description>
   </feat>
@@ -273,7 +273,7 @@
     <name>VANDALE</name>
     <level>5</level>
     <traits>
-      <trait>GOBELIN</trait>
+      <trait type="ancestry">GOBELIN</trait>
     </traits>
     <description>Vous êtes très doué pour casser et démonter des choses. Les réparer vous ennuie, c’est pourquoi vous ne prenez habituellement pas la peine de le faire. Vous devenez qualifié en Larcin. Si vous êtes déjà automatiquement qualifié en Larcin (grâce à votre historique ou à votre classe, par exemple), vous devenez alors qualifié dans une compétence de votre choix. De plus, chaque fois que vous réussissez une Frappe contre un piège ou un objet non porté, vous ignorez les 5 premiers points de Solidité de ce dernier. **NIVEAU 9 GRIMPEUR DES CAVERNES DON 9 GOBELIN** Après avoir passé des années à ramper et à grimper dans les cavernes, vous n’avez aucun mal à escalader les obstacles qui se dressent sur votre chemin. Vous gagnez une Vitesse d’escalade de 3 m.</description>
   </feat>
@@ -281,7 +281,7 @@
     <name>PRÉCIPITATION HÂTIVE</name>
     <level>9</level>
     <traits>
-      <trait>GOBELIN</trait>
+      <trait type="ancestry">GOBELIN</trait>
     </traits>
     <prerequisites>Précipitation gobeline</prerequisites>
     <description>Quand vous vous trouvez aux côtés de vos alliés, vous pouvez vous précipiter plus loin et plus vite. Quand vous utilisez Précipitation gobeline, vous pouvez Marcher rapidement jusqu’à la moitié de votre Vitesse au lieu de Faire un pas.</description>
@@ -291,7 +291,7 @@
     <level>9</level>
     <actions>1</actions>
     <traits>
-      <trait>GOBELIN</trait>
+      <trait type="ancestry">GOBELIN</trait>
     </traits>
     <frequency>une fois par jour ; Effet. Vous pouvez maudire une autre créature pour qu’elle soit maladroite. La malédiction a une portée de 9 m et vous devez être capable de voir votre cible. La cible peut effectuer un jet de Volonté contre votre DD de classe ou de sort selon lequel est le plus élevé.</frequency>
     <description>Votre dernière action est une Frappe réussie et vous disposez d’une main libre. Vous vous accrochez à un ennemi pour le harceler jusqu’à ce qu’il se soumette. Si votre cible se déplace alors que vous y êtes accroché, vous pouvez choisir de la suivre. La cible est relâchée si vous choisissez de ne pas vous déplacer avec elle, au début de votre prochain tour ou si elle S’échappe. Les tentatives pour S’échapper de votre action S’accrocher sont effectuées contre votre DD d’Acrobaties et suivent les règles de la page 418, mais elles mettent un terme à l’action S’accrocher au lieu des états normalement annulés par l’action S’échapper. **Spécial. **Vous pouvez utiliser cette action sans main libre si votre Frappe précédente a été effectuée avec vos mâchoires ou toute attaque similaire à mains nues que vous pourriez utiliser pour vous accrocher. Le MJ détermine quelles attaques à mains nues fonctionnent. Vous accrocher de cette façon vous empêche d’utiliser cette attaque à mains nues. **NIVEAU 13 TRÈS TRÈS FURTIF DON 13 GOBELIN Prérequis **Très furtif Quand vous utilisez l’action Être furtif, vous pouvez vous déplacer de votre Vitesse et vous n’avez plus besoin de bénéficier d’un abri, d’un abri important ou d’être masqué pour Vous cacher ou Être furtif. **NIVEAU 17 IMPRUDENCE TÉMÉRAIRE ** 0 ** DON 17 FORTUNE GOBELIN Fréquence** une fois par jour Malgré une vie à prendre des décisions discutables, vous avez réussi à survivre, comme si vous étiez doté d’une chance surnaturelle qui vous permet d’éviter les conséquences de vos actes. Durant le reste de votre tour, si vous obtenez un échec ou un échec critique à un jet de sauvegarde contre un effet néfaste, vous obtenez un succès à la place. De plus, si vous deviez subir des dégâts à cause d’un ennemi ou d’un danger pendant ce tour, vous subissez le minimum de dégâts possible. Ces avantages ne s’appliquent qu’aux effets néfastes encourus durant le tour où vous activez Imprudence téméraire, comme courir à travers un *mur de feu*. Les dégâts et états persistants qui vous ont été appliqués avant continuent normalement et, dès que votre tour s’arrête, vous êtes à nouveau sujet à toutes les conséquences des dangers qui vous menacent toujours. Les halfelins ne se revendiquent d’aucune nation et leurs villes sont rarement plus que de simples villages. Ils cohabitent en général avec les humains dans l’enceinte de grandes villes où ils vivent dans de petites communautés aux côtés des grandes gens. Optimistes et joyeux, et animés par une irrésistible soif de voyage, les halfelins compensent leur petite stature par une abondance de bravoure et d’audace. D’un naturel plutôt décontracté et fondamentalement opportunistes, ils s’enflamment cependant facilement, faisant toujours passer la joie avant la violence. Si leur curiosité les pousse parfois à l’aventure, les halfelins sont également très attachés à leur maison et à leur foyer. Si vous voulez incarner un personnage partagé entre des aspirations opposées d’aventures et de confort, vous devriez jouer un halfelin. **Vous…** x Vous vous entendez bien avec une grande variété d’individus et vous aimez vous faire de nouveaux amis. x Avez du mal à réfréner votre curiosité, même si vous savez que vous allez vous attirer des ennuis. **Les autres…** x Apprécient votre capacité à toujours voir le bon côté des choses et trouver des sujets d’amusement, même dans la pire des situations. x Pensent que vous portez bonheur. **Description physique** Les halfelins sont de petits humanoïdes, qui peuvent faire penser à de petits humains. Ils mesurent rarement plus de 90 cm. Les proportions des halfelins sont variables et certains ressemblent ainsi à de petits humains adultes avec une tête un peu grosse et d’autres ont des proportions plus proches d’enfants humains. La plupart des halfelins préfèrent généralement marcher pieds nus plutôt que porter des chaussures et ils développent ainsi d’épaisses callosités plantaires. Leurs pieds larges et tannés sont couverts d’épaisses touffes de poils bouclés. La carnation des halfelins est généralement dans des tons fauves et riches d’ambre ou de chêne, et leurs cheveux peuvent être aussi bien d’un blond lumineux que d’un noir de corbeau. Les halfelins atteignent leur taille adulte vers 20 ans. En moyenne, ils peuvent vivre près de 150 ans. **Société** Malgré leur nature joviale et amicale, les halfelins forment rarement des communautés. Ils ont peu de sites culturels dans la région de la mer Intérieure et préfèrent s’intégrer dans les autres sociétés du monde. Les halfelins subsistent généralement comme ils peuvent, vivant de petits travaux ou d’emplois de service simples. Certains rejettent la vie urbaine et préfèrent arpenter les routes et voyager d’un lieu à l’autre à la recherche de gloire et de fortune. Ces halfelins nomades voyagent souvent en petits groupes afin de partager les difficultés et les plaisirs simples des voyages en compagnie d’amis et de parents. Les noms halfelins comptent généralement entre deux et trois syllabes, sont harmonieux et évitent les consonnes dures. Ils favorisent les noms aux sonorités humbles et, en ce qui les concerne, considèrent les noms trop longs ou complexes comme un signe d’arrogance. En revanche, ils comprennent parfaitement que les humains et les elfes aient des noms plus longs pour répondre à leurs propres préférences. **Exemples de noms :** Anafa, Antal, Bellis, Boram, Etune, Filiu, Jamir, Kaleb, Linna, Marra, Miro, Rillka, Sistra, Sumak, Yamyra **Croyances** Les halfelins sont loyaux envers leurs amis et leurs familles, mais ils n’ont pas peur de se salir les mains pour survivre. Où qu’ils se rendent, les halfelins savent s’intégrer naturellement à la société locale et s’adapter à la culture et aux croyances de l’ascendance prédominante, en y ajoutant leur propre touche typiquement halfeline, créant ainsi un mélange culturel qui enrichit les deux cultures. Les halfelins préfèrent les dieux qui portent chance, comme Desna, ou qui encouragent la ruse, HALFELIN Ascendances &amp; Historiques comme Norgorber. Ils sont nombreux à apprécier le rôle de libérateur de Cayden Cailéan, ou à se tourner vers les religions courantes parmi les membres des ascendances avec lesquels ils vivent. **Édits populaires. **partager de bons repas avec des amis et des étrangers, tenir tête aux tyrans et aux oppresseurs, ne pas se faire remarquer par les peuples plus grands. **Anathème populaire.** Tenir sa chance pour acquise. HÉRITAGES HALFELINS Étant donné leur goût prononcé pour les voyages, il est possible de rencontrer des halfelins de différents héritages loin des terres de leurs ancêtres. Au niveau 1, choisissez l’un des héritages halfelins suivants. **Halfelin bois‑sauvage** Vous venez des profondeurs d’une jungle ou d’une forêt et avez appris à utiliser votre petite taille pour vous faufiler dans les sous‑bois et autres obstacles. Vous ignorez tout terrain difficile dû aux plantes et aux champignons, tels que les fourrés, les lianes et la broussaille. **Halfelin des collines** Habitué à la vie calme des collines, vous tirez un bénéfice particulièrement important du repos et de la relaxation, notamment quand vous profitez des joies du confort matériel. Quand vous regagnez des points de vie pendant la nuit, ajoutez‑y votre niveau. Quand quelqu’un fait appel à la compétence Médecine pour Soigner vos blessures, vous pouvez manger un en‑cas pour ajouter votre niveau à la quantité de points de vie que vous gagnez grâce à ces soins. **Halfelin du crépuscule** Vos ancêtres profitaient du couvert du crépuscule pour accomplir de nombreuses actions, bonnes ou mauvaises, en secret et ils ont fini par développer la capacité de voir dans la lumière crépusculaire avec plus d’acuité que les autres halfelins. Vous gagnez vision nocturne. **Halfelin flegmatique** Votre lignée familiale est connue pour sa capacité à garder la tête sur les épaules et à résister à la peur dans les moments critiques. Si vous obtenez un succès à un jet de sauvegarde contre un effet d’émotion, vous obtenez à la place un succès critique. **Halfelin nomade** Vos ancêtres parcourent les routes depuis des générations, sans jamais avoir ressenti la nécessité de s’installer quelque part. Vous gagnez deux langues de votre choix parmi les langues courantes et peu courantes auxquelles vous avez accès et, chaque fois que vous choisissez le don Polyglotte, vous gagnez une langue supplémentaire. **Halfelin porteur de malheur (peu courant)** Vous êtes né avec une étrange bénédiction : privé de la chance typique des halfelins, vous pouvez à la place manipuler celle des autres. Vous ne pourrez jamais sélectionner le don Chance halfeline et gagnez l’action Porte‑malheur. **Porte‑malheur** 2 (malédiction, occulte) **Succès.** La cible n’est pas affectée et elle est temporairement immunisée pendant 24 h. **Échec.** La créature est maladroite 1 pendant 1 min. **Échec critique.** La cible est maladroite 2 pendant 1 min. DONS ANCESTRAUX Au niveau 1, vous gagnez un don ancestral. Vous gagnez ensuite un nouveau don ancestral tous les quatre niveaux (aux niveaux 5, 9, 13 et 17). En tant qu’halfelin, vous pouvez choisir les dons ancestraux suivants. Langues supplémentaires : un nombre égal à votre modificateur d’Intelligence (s’il est positif). Choisissez parmi les langues suivantes : nain, elfique, gnomien, gobelin, ainsi que toutes les autres langues auxquelles vous avez accès (comme les langues les plus répandues dans votre région). **TRAITS** Halfelin Humanoïde **YEUX PERÇANTS** Votre vue perçante vous permet de distinguer des détails concernant des créatures masquées ou invisibles que d’autres pourraient ne pas remarquer. Vous gagnez un bonus de circonstances de +2 quand vous utilisez l’action Chercher pour trouver des créatures cachées ou non détectées dans un rayon de 9 m autour de vous. Quand vous prenez pour cible un adversaire masqué ou caché, réduisez le DD du test nu à 3 pour une cible masquée ou à 9 pour une cible cachée. NIVEAU 1 BARATIN CAMPAGNARD DON 1 HALFELIN** Vous adorez transmettre des messages codés à travers des idiomes campagnards. Grâce au jargon, aux plaisanteries, aux emprunts halfelins et autres, vous faites passer un message simple constitué de trois mots basiques (comme « Danger assassin fuite » ou « RDV lever lune »). La personne à laquelle s’adresse votre message peut tenter un test de Perception DD 20 pour le comprendre. Le DD est réduit de 5 si le destinataire est un halfelin ou s’il a le don Baratin campagnard et de 10 s’il remplit ces deux conditions. Les indiscrets peuvent aussi tenter un test de Perception contre votre DD de Duperie pour comprendre ce que vous voulez dire. Tous les bonus et malus applicables aux tests de Perception pour Deviner les intentions s’appliquent aux tests pour comprendre Baratin campagnard.</description>
@@ -300,7 +300,7 @@
     <name>CAVALIER DES PRAIRIES</name>
     <level>1</level>
     <traits>
-      <trait>HALFELIN</trait>
+      <trait type="ancestry">HALFELIN</trait>
     </traits>
     <description>Vous avez grandi sur le dos des poneys hirsutes et des chiens de selle de votre clan. Vous devenez qualifié en Nature. Si vous êtes déjà automatiquement qualifié en Nature (grâce à votre historique ou à votre classe, par exemple), vous devenez alors qualifié dans une compétence de votre choix. Vous obtenez aussi un bonus de circonstances de +1 pour Diriger un animal si la cible est une monture traditionnelle halfeline, comme un poney ou un chien de selle.</description>
   </feat>
@@ -310,7 +310,7 @@
     <actions>0</actions>
     <traits>
       <trait>FORTUNE</trait>
-      <trait>HALFELIN</trait>
+      <trait type="ancestry">HALFELIN</trait>
     </traits>
     <trigger>Vous échouez à un test de compétence ou à un jet de sauvegarde. Votre nature insouciante donne l’impression que la malchance vous évite et, dans une certaine mesure, c’est peut-être bien le cas. Vous pouvez relancer le test qui déclenche ce pouvoir, mais vous devez alors utiliser le nouveau résultat, même s’il est moins bon que le premier.</trigger>
     <description>une fois par jour</description>
@@ -319,7 +319,7 @@
     <name>CONNAISSANCES SUR LES HALFELINS</name>
     <level>1</level>
     <traits>
-      <trait>HALFELIN</trait>
+      <trait type="ancestry">HALFELIN</trait>
     </traits>
     <description>Vous avez consciencieusement appris à conserver votre équilibre et à rester en sûreté dans les ombres, des compétences vitales transmises de génération en génération de halfelins. Vous gagnez le rang de maîtrise qualifié en Acrobaties et en Discrétion. Si vous êtes déjà automatiquement qualifié dans l’une de ces compétences (grâce à votre historique ou à votre classe, par exemple), vous devenez alors qualifié dans une compétence de votre choix. Vous gagnez aussi le don général de Connaissances supplémentaire pour la compétence Connaissances sur les halfelins.</description>
   </feat>
@@ -327,7 +327,7 @@
     <name>FAMILIARITÉ AVEC LES ARMES HALFELINES</name>
     <level>1</level>
     <traits>
-      <trait>HALFELIN</trait>
+      <trait type="ancestry">HALFELIN</trait>
     </traits>
     <description>Vous avez une prédilection pour les armes halfelines et avez ainsi appris à les utiliser correctement. Vous avez accès aux armes peu courantes avec le trait halfelin. Vous êtes familiarisé avec les armes ayant le trait halfelin, ainsi qu’avec les frondes et les épées courtes. En ce qui concerne la maîtrise de ces armes, vous considérez toutes les armes de guerre comme des armes simples et toutes les armes évoluées comme des armes de guerre. Au niveau 5, chaque fois que vous obtenez un coup critique avec l’une de ces armes, vous bénéficiez de son effet critique spécialisé.</description>
   </feat>
@@ -335,7 +335,7 @@
     <name>FRONDEUR DE TITANS</name>
     <level>1</level>
     <traits>
-      <trait>HALFELIN</trait>
+      <trait type="ancestry">HALFELIN</trait>
     </traits>
     <description>Vous avez appris à utiliser votre fronde pour abattre des créatures énormes. Quand vous réussissez une attaque avec une arme du groupe des frondes contre une créature dont la taille est Grande ou supérieure, vous augmentez la taille du dé de dégâts d’un échelon (vous pouvez trouver des détails sur l’augmentation de la taille des dés de dégâts p. 276).</description>
   </feat>
@@ -343,7 +343,7 @@
     <name>HALFELIN LIBRE</name>
     <level>1</level>
     <traits>
-      <trait>HALFELIN</trait>
+      <trait type="ancestry">HALFELIN</trait>
     </traits>
     <description>Vous avez été asservi ou enchaîné dans une prison, mais vous vous êtes évadé et vous vous êtes entraîné pour ne plus jamais être capturé. Quand vous obtenez un succès à un test pour vous Échapper ou à un jet de sauvegarde contre un effet qui vous imposerait l’état empoigné, immobilisé ou entravé, vous obtenez un succès critique à la place. Quand une créature échoue à un test pour vous Saisir, elle obtient un échec critique à la place.</description>
   </feat>
@@ -351,7 +351,7 @@
     <name>HALFELIN VIGILANT</name>
     <level>1</level>
     <traits>
-      <trait>HALFELIN</trait>
+      <trait type="ancestry">HALFELIN</trait>
     </traits>
     <description>Vous faites attention aux gens qui vous entourent et vous remarquez plus facilement quand leur comportement est inhabituel. Vous gagnez un bonus de circonstances de +2 à vos tests de Perception quand vous utilisez l’action basique Deviner les intentions afin de remarquer les personnages enchantés ou possédés. Si vous n’êtes pas en train de tenter de Deviner les intentions d’un personnage enchanté ou possédé, le MJ effectue un test secret, sans votre bonus de circonstances habituel, afin de déterminer si vous remarquez que cette créature est enchantée ou possédée. En plus de l’utiliser pour les tests de compétences, vous pouvez utiliser l’action basique Aider pour accorder un bonus à une autre créature qui tente un jet de sauvegarde ou un autre test afin de passer outre un enchantement ou une possession. Comme c’est le cas avec l’action Aider, vous devez vous préparer en utilisant une action lors de votre tour afin d’encourager la créature à lutter contre l’effet.</description>
   </feat>
@@ -359,7 +359,7 @@
     <name>OMBRES DISTRAYANTES</name>
     <level>1</level>
     <traits>
-      <trait>HALFELIN</trait>
+      <trait type="ancestry">HALFELIN</trait>
     </traits>
     <description>Vous avez appris à rester caché en utilisant les grandes personnes comme distraction pour éviter d’attirer l’attention. Vous pouvez utiliser une créature qui mesure au moins une catégorie de taille de plus que vous (généralement Moyenne ou plus grande) comme abri pour Vous cacher ou Être furtif, mais vous ne pouvez pas utiliser ces créatures comme abri pour d’autres raisons, comme pour Vous mettre à l’abri.</description>
   </feat>
@@ -367,7 +367,7 @@
     <name>PIED ASSURÉ</name>
     <level>1</level>
     <traits>
-      <trait>HALFELIN</trait>
+      <trait type="ancestry">HALFELIN</trait>
     </traits>
     <description>Qu’il s’agisse de garder l’équilibre ou d’escalader, vos pieds trouvent facilement un point d’appui. Si vous obtenez un succès à un test d’Acrobaties pour Garder l’équilibre ou à un test d’Athlétisme pour Escalader, vous obtenez un succès critique à la place. Vous n’êtes pas pris par surprise quand vous tentez de Garder l’équilibre ou d’Escalader. **NIVEAU 5 ADAPTABILITÉS CULTURELLE DON 5 HALFELIN** Au cours de vos aventures, vous avez affiné votre capacité à vous adapter à la culture de l’ascendance qui prédomine dans votre Ascendances &amp; Historiques entourage. Vous gagnez le don général Ascendance adoptive, ainsi qu’un don ancestral de niveau 1 tiré de la liste de dons de l’ascendance que vous avez choisie avec Ascendance adoptive.</description>
   </feat>
@@ -376,7 +376,7 @@
     <level>5</level>
     <actions>9</actions>
     <traits>
-      <trait>HALFELIN</trait>
+      <trait type="ancestry">HALFELIN</trait>
     </traits>
     <description>Un ennemi de Grande taille ou plus se retrouve adjacent à vous une fois son déplacement terminé. Vous êtes expert dans l’art d’éviter les pas pesants de créatures qui vous surplombent. Vous Faites un pas dans un autre espace adjacent à cet ennemi. **NIVEAU 9 CHANCE DIRECTRICE DON 9 HALFELIN Prérequis** Chance halfeline Votre chance vous guide et vous permet de porter vos coups avec infaillibilité. Vous pouvez utiliser Chance halfeline deux fois par jour : une fois en réaction à son déclencheur normal et une fois après avoir échoué à un test de Perception ou à un jet d’attaque.</description>
   </feat>
@@ -384,7 +384,7 @@
     <name>DANSE SOUS LES PIEDS</name>
     <level>9</level>
     <traits>
-      <trait>HALFELIN</trait>
+      <trait type="ancestry">HALFELIN</trait>
     </traits>
     <prerequisites>Pas vif</prerequisites>
     <description>Vous foncez sous les jambes de vos ennemis durant le combat. Vous pouvez terminer une action de Déplacement acrobatique réussie dans l’espace d’un ennemi Grand ou plus grand. En outre, lorsque vous utilisez le don Pas vif, vous pouvez Faire un pas dans l’espace de l’ennemi déclencheur. L’ennemi doit avoir des membres ou vous laisser assez de place pour cette manœuvre, au bon vouloir du MJ. Par exemple, vous pourriez partager un espace avec un géant ou un dragon, mais pas une vase.</description>
@@ -393,7 +393,7 @@
     <name>IRRÉPRESSIBLE</name>
     <level>9</level>
     <traits>
-      <trait>HALFELIN</trait>
+      <trait type="ancestry">HALFELIN</trait>
     </traits>
     <description>Vous pouvez facilement faire fi des tentatives de jouer sur vos peurs et vos émotions. Si vous obtenez un succès à un jet de sauvegarde contre un effet d’émotion, vous obtenez à la place un succès critique. En outre, si votre héritage est halfelin flegmatique, quand vous obtenez un échec critique à un jet de sauvegarde contre un effet d’émotion, vous obtenez à la place un échec simple.</description>
   </feat>
@@ -401,7 +401,7 @@
     <name>PASSAGE LIBRE</name>
     <level>9</level>
     <traits>
-      <trait>HALFELIN</trait>
+      <trait type="ancestry">HALFELIN</trait>
     </traits>
     <description>Vous ne laisserez personne vous entraver. Une fois par jour, vous pouvez lancer *déplacement sans entrave* sur vous-même comme un sort inné primordial. **NIVEAU 13 DANSE RENVERSANTE DON 13 HALFELIN Prérequis** Danse sous les pieds Lorsque vous partagez l’espace d’une créature en utilisant Danse sous les pieds, vos armes de corps à corps et vos attaques à mains nues gagnent le trait croc-en-jambe, mais seulement contre la créature avec laquelle vous partagez l’espace. Vous pouvez vous trouver dans le même espace qu’une créature Grande ou plus grande, même si ce n’est pas votre alliée.</description>
   </feat>
@@ -409,7 +409,7 @@
     <name>OMBRES INCESSANTES</name>
     <level>13</level>
     <traits>
-      <trait>HALFELIN</trait>
+      <trait type="ancestry">HALFELIN</trait>
     </traits>
     <prerequisites>Ombres distrayantes</prerequisites>
     <frequency>une fois par heure</frequency>
@@ -420,7 +420,7 @@
     <name>ARMEMENT NON CONVENTIONNEL</name>
     <level>1</level>
     <traits>
-      <trait>HUMAIN</trait>
+      <trait type="ancestry">HUMAIN</trait>
     </traits>
     <description>Vous vous êtes familiarisé avec une arme spécifique, qui peut être liée à une autre ascendance ou culture. Choisissez une arme simple ou de guerre peu courante avec le trait correspondant à une ascendance (comme nain, gobelin ou orc) ou qui est fréquemment utilisée dans une autre Deux primes d’attributs libres **LANGUES** Commun Un nombre de langues supplémentaires égal à votre modificateur d’Intelligence (s’il est positif) +1. Choisissez dans la liste des langues courantes, en y ajoutant toute autre langue à laquelle vous avez accès (comme les langues les plus répandues dans votre région). **TRAITS** Humain culture. Vous avez accès à cette arme et, pour sa maîtrise, vous la considérez comme une arme simple. Si vous êtes qualifié pour toutes les armes de guerre, vous pouvez choisir à la place une arme évoluée peu courante qui a un trait d’ascendance ou qui est courante dans une autre culture. Vous avez accès à cette arme avec laquelle vous êtes familiarisé. Pour sa maîtrise, vous la considérez comme une arme de guerre.</description>
   </feat>
@@ -428,7 +428,7 @@
     <name>FORMATION GÉNÉRALISTE</name>
     <level>1</level>
     <traits>
-      <trait>HUMAIN</trait>
+      <trait type="ancestry">HUMAIN</trait>
     </traits>
     <description>Votre capacité d’adaptation se manifeste par votre maîtrise d’une gamme de nombreuses capacités utiles. Vous gagnez un don général de niveau 1. Vous devez posséder les prérequis de ce don, mais si vous le sélectionnez au moment de la création de votre personnage, vous pouvez le choisir à la fin du processus de création afin de vous assurer de bien posséder les prérequis.</description>
     <special>Vous pouvez sélectionner ce don ancestral plusieurs fois en choisissant chaque fois un nouveau don général.</special>
@@ -437,7 +437,7 @@
     <name>NATURE COOPÉRATIVE</name>
     <level>1</level>
     <traits>
-      <trait>HUMAIN</trait>
+      <trait type="ancestry">HUMAIN</trait>
     </traits>
     <description>La courte espérance de vie des humains leur confère une perspective particulière sur le monde. Vous avez ainsi appris très tôt à mettre vos différences de côté et coopérer avec d’autres pour atteindre vos buts. Vous gagnez un bonus de circonstances de +4 à vos tests pour Aider.</description>
   </feat>
@@ -445,7 +445,7 @@
     <name>OBSTINATION ARROGANTE</name>
     <level>1</level>
     <traits>
-      <trait>HUMAIN</trait>
+      <trait type="ancestry">HUMAIN</trait>
     </traits>
     <description>Votre ego développé complique la tâche de ceux qui veulent vous donner des ordres. Si vous obtenez un succès à un jet de sauvegarde contre un effet mental qui vise à contrôler directement vos actions, vous obtenez à la place un succès critique. Si une créature obtient un échec à un test pour vous Contraindre en utilisant l’Intimidation, elle obtient un échec critique à la place (elle ne peut donc pas tenter de vous Contraindre de nouveau pendant 1 semaine).</description>
   </feat>
@@ -453,7 +453,7 @@
     <name>TALENT NATUREL</name>
     <level>1</level>
     <traits>
-      <trait>HUMAIN</trait>
+      <trait type="ancestry">HUMAIN</trait>
     </traits>
     <description>Votre sagacité vous permet d’apprendre de nombreuses compétences. Vous gagnez le rang de maîtrise qualifié dans deux compétences de votre choix.</description>
   </feat>
@@ -461,7 +461,7 @@
     <name>TOUR DE MAGIE ADAPTÉ</name>
     <level>1</level>
     <traits>
-      <trait>HUMAIN</trait>
+      <trait type="ancestry">HUMAIN</trait>
     </traits>
     <prerequisites>une capacité de classe d’incantation</prerequisites>
     <description>Vous avez étudié plusieurs traditions magiques et avez découvert comment altérer un sort pour qu’il corresponde à votre style incantatoire. Choisissez un tour de magie qui ne fait pas partie de la liste correspondant à votre tradition magique. Si vous préparez des sorts, vous pouvez choisir celui-ci lors de la préparation de vos tours de magie, en plus de vos autres options. Si vous possédez un répertoire de sorts, remplacez l’un de vos tours de magie connus par le sort choisi. Vous pouvez lancer ce tour de magie comme un sort de la tradition choisie pour votre classe. Si vous échangez ce tour de magie par un autre ou le réapprenez ultérieurement, vous pouvez choisir le tour de magie qui le remplace parmi ceux de la liste de la même tradition ou d’une liste différente. **NIVEAU 5 ADEPTE DE L’ADAPTATION DON 5 HUMAIN Prérequis** Tour de magie adapté, capacité de lancer des sorts de rang 3 Vous avez continué d’adapter votre magie pour mélanger votre tradition de classe et votre tradition adaptée. Choisissez un tour de magie ou un sort de rang 1 de la même tradition que le tour de magie que vous avez gagné avec Tour de magie adapté. Vous gagnez ce sort et l’ajoutez à vos options de sorts comme le tour de magie du don Tour de magie adapté. Vous pouvez lancer ce sort comme un sort de la tradition magique de votre classe. Si vous avez choisi un sort de rang 1, vous n’avez pas accès aux versions intensifiées de ce sort, ce qui signifie que vous ne pouvez pas les préparer quand vous préparez vos sorts, que vous ne pouvez pas les apprendre et que vous ne pouvez pas faire de ce sort un sort emblématique si vous utilisez un répertoire de sorts.</description>
@@ -470,7 +470,7 @@
     <name>IMPROVISATEUR ASTUCIEUX</name>
     <level>5</level>
     <traits>
-      <trait>HUMAIN</trait>
+      <trait type="ancestry">HUMAIN</trait>
     </traits>
     <description>Vous avez appris à gérer les situations qui vous dépassent. Vous gagnez le don général Improvisation inexpérimentée. En outre, vous pouvez entreprendre des actions de compétences qui vous demandent normalement de posséder le rang de maîtrise qualifié, même si vous êtes inexpérimenté.</description>
   </feat>
@@ -478,7 +478,7 @@
     <name>SENTIR LES ALLIÉS</name>
     <level>5</level>
     <traits>
-      <trait>HUMAIN</trait>
+      <trait type="ancestry">HUMAIN</trait>
     </traits>
     <description>Comme beaucoup d’humains élevés dans une communauté soudée, vous avez toujours été très sensible à la présence des autres. Les alliés consentants dont vous sentez la présence à moins de 18 m et qui devraient vous apparaître non détectés vous apparaissent cachés. Le test nu pour cibler des alliés consentants à moins de 18 m qui vous apparaissent cachés est de 5 au lieu de 11. **NIVEAU 9 ÂME COOPÉRATIVE DON 9 HUMAIN** Vous avez développé un lien profond avec vos camarades et pouvez ainsi encore mieux coopérer avec eux. Si vous êtes au moins expert dans la compétence pour laquelle vous Aidez, quand vous obtenez un échec ou un échec critique pour Aider un test de compétence, à la place vous obtenez un succès.</description>
   </feat>
@@ -487,7 +487,7 @@
     <level>9</level>
     <actions>0</actions>
     <traits>
-      <trait>HUMAIN</trait>
+      <trait type="ancestry">HUMAIN</trait>
     </traits>
     <trigger>Vous effectuez un test utilisant une compétence dans laquelle vous êtes inexpérimenté. Malgré votre inexpérience, un éclair de génie vous confère un avantage de taille dans une compétence. Vous gagnez un bonus de circonstances de +4 au test de compétence déclencheur.</trigger>
     <description>une fois par jour</description>
@@ -496,7 +496,7 @@
     <name>MULTIPLES TALENTS</name>
     <level>9</level>
     <traits>
-      <trait>HUMAIN</trait>
+      <trait type="ancestry">HUMAIN</trait>
     </traits>
     <description>Vous avez appris à partager votre attention entre plusieurs classes à la fois avec une certaine aise. Vous gagnez un don de dévouement Ascendances &amp; Historiques de multiclasse de niveau 2 (pour en savoir plus sur les archétypes de multiclasses, rendez-vous p. 215), même si vous ne pouvez normalement pas gagner d’autre don de dévouement avant d’avoir choisi plus de dons dans votre archétype actuel. Si vous avez l’héritage polyvalent aiuvarin (p. 82), vous n’avez pas besoin de satisfaire le modificateur de compétence exigé comme prérequis pour ce don.</description>
   </feat>
@@ -504,7 +504,7 @@
     <name>SECOURS DE GROUPE</name>
     <level>9</level>
     <traits>
-      <trait>HUMAIN</trait>
+      <trait type="ancestry">HUMAIN</trait>
     </traits>
     <description>Du fait de votre éducation, il est naturel pour vous de travailler en équipe et d’aider vos alliés. Après avoir Aidé un allié à un test de compétence qui ne possède pas le trait attaque, vous pouvez aussi Aider un autre allié qui tente le même test de compétence avec le même objectif durant ce round. Vous utilisez une action gratuite plutôt qu’une réaction. Les préparatifs effectués pour aider ne doivent pas être réitérés pour les autres alliés et vous ne pouvez Aider chaque allié qu’une fois. Par exemple, si vous avez soulevé quelqu’un afin de l’Aider à un test d’Athlétisme pour grimper à un mur, vous pouvez garder la même position afin de donner un coup de main aux autres alliés qui tentent d’escalader le mur durant le même round.</description>
   </feat>
@@ -512,7 +512,7 @@
     <name>VOYAGEUR ROBUSTE</name>
     <level>9</level>
     <traits>
-      <trait>HUMAIN</trait>
+      <trait type="ancestry">HUMAIN</trait>
     </traits>
     <description>Aucune terre n’est trop lointaine et aucun fardeau trop lourd quand vous avez des amis à vos côtés et l’espoir au fond du cœur. Augmentez vos limites d’Encombrement et de surcharge de 1. En outre, vous gagnez un bonus de circonstances de +3 m à votre Vitesse lorsque vous voyagez à terre. **NIVEAU 13 BASCULER ** 0 ** DON 13 HUMAIN Fréquence** une fois par jour **Déclencheur. **Vous perdez l’état mourant. Vous vous remettez des expériences de mort imminente avec une résilience impressionnante. N’augmentez pas la valeur de votre état blessé après avoir perdu l’état mourant.</description>
   </feat>
@@ -520,7 +520,7 @@
     <name>FORMATION GÉNÉRALISTE AVANCÉE</name>
     <level>13</level>
     <traits>
-      <trait>HUMAIN</trait>
+      <trait type="ancestry">HUMAIN</trait>
     </traits>
     <description>Au cours de vos aventures, votre adaptabilité vous a permis d’apprendre beaucoup de pouvoirs très utiles. Vous gagnez un don général de niveau 7 ou moins. Vous devez remplir les prérequis de ce don.</description>
     <special>Vous pouvez sélectionner ce don ancestral plusieurs fois en choisissant un nouveau don général à chaque fois.</special>
@@ -529,7 +529,7 @@
     <name>PERSISTANCE ACHARNÉE</name>
     <level>13</level>
     <traits>
-      <trait>HUMAIN</trait>
+      <trait type="ancestry">HUMAIN</trait>
     </traits>
     <description>Là où d’autres seraient prêts à abandonner, les êtres humains sont réputés pour leur persévérance dans les épreuves les plus éprouvantes. Lorsque vous devenez fatigué, tentez un test nu DD 17. Sur un succès, vous n’êtes pas fatigué. Si l’état fatigué est le résultat d’une cause sous-jacente dont vous ne vous occupez pas, comme le manque de repos, vous devez retenter le test à un intervalle déterminé par le MJ jusqu’à ce que vous échouiez ou que vous résolviez le problème. **NIVEAU 17 PRÉSENCE HÉROÏQUE ** 1 ** DON 17 ÉMOTION HUMAIN MENTAL Fréquence** une fois par jour Le sang des héros coule dans vos veines et vous poussez vos alliés à puiser en eux pour trouver une résolution nouvelle. Vous conférez à un maximum de 10 créatures consentantes à moins de 9 m les effets d’une *conviction zélée *de rang 6, bien que l’effet s’arrête immédiatement si vous donnez à une cible un ordre qu’elle trouverait répugnant d’ordinaire. Cette action possède le trait audible ou visuel selon la façon dont vous inspirez vos alliés. Les léchis sont des esprits immortels de la nature auxquels on a temporairement donné une forme physique. En tant que gardiens et émissaires de l’environnement, les léchis « naissent » lorsqu’un druide talentueux ou un autre maître de la magie primordiale effectue un rituel au cours duquel il crée un réceptacle adéquat, qui est ensuite choisi par un esprit comme hôte temporaire. Dès la fin du rituel, les léchis sont autonomes, mais il n’est pas rare qu’ils conservent des liens avec leurs créateurs tout au long de leur vie. Nombreux sont ceux qui apprécient de pouvoir interagir avec le monde physique. Bien que la plupart des esprits léchis soient anciens, ils se souviennent rarement de leurs vies antérieures et considèrent leur nouvelle existence comme une occasion de découvrir une fois de plus les merveilles du monde. Si vous voulez jouer un personnage curieux et connecté à la nature, vous devriez jouer un léchi. **Vous…** x Agissez en tant qu’agent itinérant pour les gardiens de la nature qui ne peuvent pas quitter leurs territoires. x Encouragez les civilisations à agir en coopération avec la nature et construire leurs villes dans le respect de l’écologie. **Les autres…** x Vous perçoivent de façon très curieuse à cause de vos origines spirituelles. x Pensent que vous ne connaissez que ce qui a trait à la nature et que vous ignorez tout de la civilisation et de la société. **Description physique** Les léchis sont aussi variés que le matériau utilisé pour la construction de leur réceptacle, apparaissant souvent comme un méli‑mélo de plantes et de champignons. Leurs corps ont une apparence vaguement humanoïde, empruntant de nombreuses caractéristiques à la plante ou au champignon dont ils sont composés. Un léchi mesure environ 1 m. Les léchis naissent adultes et ne vieillissent pas. **Société** Pour la plupart des léchis, le concept de famille n’a aucun lien avec la naissance, mais est déterminé par les liens de loyauté et d’amitié. Les léchis sont des alliés fidèles, mais ne se montrent que peu tolérants envers ceux qui détruisent la nature. Autant ils sont heureux d’accepter dans leur famille quelqu’un qui gagne leur confiance, autant ils attendent des membres de leur famille qu’ils prennent soin d’eux et de leurs coins de nature en retour. Les léchis sont regroupés au sein de catégories semblables à des ethnies, mais ces dernières ne sont pas définies par des traits physiques. À l’inverse, elles représentent de larges catégories des caractéristiques de leurs esprits. Certains esprits vont avoir tendance à s’intéresser à certains corps physiques, même si ce n’est en rien une règle absolue. Le genre d’un léchi est déterminé par l’esprit qui habite son corps. Certains léchis sont exclusivement mâles ou femelles, alors que la grande majorité se considère comme appartenant aux deux genres. D’autres, et en particulier les léchis fongiques, tendent vers une expression plus complexe du genre, quand ils n’y renoncent pas totalement. Les léchis choisissent et changent de noms de nombreuses fois au cours de leur vie. **Exemples de noms :** Vermeille en été, Tisseur de légendes verdoyant, Chasseur qui rôde, Maître buveur du soleil, Ciel de midi chanson du soir, Branche de pin enneigée, Rapides en cascade. **Croyances** Les croyances des léchis sont généralement en rapport avec le monde naturel. Ceux qui possèdent un penchant philosophique se dirigeront vers la verte religion, et Gozreh est la divinité la plus répandue parmi les léchis qui ont la foi. Certains vénèrent également les hommes verts, de puissants esprits de la nature. **Édits populaires. **faire l’expérience du monde physique, constituer une famille basée sur la loyauté et la confiance, protéger les parties de la nature que l’on incarne. **Anathèmes populaires. **embrasser une magie ou des influences non naturelles LÉCHI Ascendances &amp; Historiques L’héritage d’un léchi représente les avantages qu’il tire de son corps. Choisissez l’un des héritages léchis suivants au niveau 1. **Léchi algues** Votre corps est constitué d’algues entremêlées et vous vous sentez aussi à l’aise sous l’eau que sur la terre. Vous gagnez une Vitesse de nage de 6 m et pouvez toujours respirer sous l’eau. Cependant, votre Vitesse au sol est réduite de 1,5 m (jusqu’à 6 m pour la plupart des léchis algues). **Léchi cactus** Des épines recouvrent votre corps. Vous obtenez une attaque d’épine qui inflige 1d6 dégâts perforants. Vos épines font partie du groupe pugilat et possèdent les traits finesse et mains nues. **Léchi calebasse** Vous avez une grande calebasse en guise de crâne et, comme vous n’avez pas de cerveau physique, vous pouvez utiliser l’espace à l’intérieur de votre tête. Vous pouvez stocker des objets dans votre tête jusqu’à la limite d’un Encombrement 1. Le DD des tests pour Dérober les objets placés dans votre tête augmente de 4. De plus, si vous ne stockez qu’un seul objet dans votre tête, vous pouvez le dégainer sans effort en tant que partie d’une autre action pour l’utiliser. Le fait de dégainer l’objet confère à cette autre action le trait manipulation. **Léchi de feuilles** Votre corps est composé en grande majorité de feuillages naturels, et, tout comme une feuille chutant d’un arbre, vous vous réceptionnez de vos chutes avec une grâce remarquable. Vous ne subissez aucun dégât de chute, quelle que soit la hauteur dont vous tombez. **Léchi de vigne** Vos vignes préhensiles vous confèrent une compétence inégalée en matière d’escalade. Vous n’avez pas besoin de mains libres pour Escalader. De plus, si vous obtenez un succès sur un test d’Athlétisme pour Escalader, vous obtenez à la place un succès critique. **Léchi fongique** Votre corps a été composé à partir de champignons qui poussent à l’ombre des grottes et des arbres, et vous vous sentez comme chez vous dans les cavernes et les dédales sombres. Vous gagnez la vision dans le noir. Vous perdez le trait plante et gagnez le trait champignon. **Léchi fruitier** Votre corps produit continuellement de petits fruits imprégnés de magie primordiale. Chaque jour, à l’aube, un nouveau fruit mûrit. Vous ou un allié pouvez prendre ce dernier avec une action Interagir. Si une créature vivante pouvant se nourir de fruits le consomme avec une action Interagir pendant la prochaine heure, elle regagne 1d8 PV ainsi que 1d8 PV supplémentaires par tranche de deux de vos niveaux après le premier. Cet effet a les traits guérison et vitalité. **Léchi lotus** Vous pouvez flotter sans aucun effort à la surface de l’eau. Vous pouvez marcher sur la surface d’une eau calme ou d’autres liquides qui n’infligent pas de dégâts, et vous déplacer à la moitié de votre Vitesse. Vous pouvez aussi tenter de Garder l’équilibre pour vous déplacer à la surface d’une eau vive en utilisant le DD d’un test pour Nager à travers cette étendue liquide. Lorsque vous faites cela, vous ne pouvez pas vous déplacer plus vite que la moitié de votre Vitesse, et si vous obtenez un échec ou un échec critique, vous tombez dans l’eau au lieu de subir les effets normaux. **Léchi racinaire** Votre corps est constitué de racines résistantes qui vous lient fermement au sol. Votre ascendance vous fait gagner 10 points de vie au lieu de 8. Vous pouvez passer deux semaines sans la lumière du soleil avant de commencer à mourir de faim. Vous gagnez un bonus de Langues supplémentaires : un nombre égal à votre modificateur d’Intelligence (s’il est positif). Choisissez parmi les langues suivantes : draconique, elfique, gnomien, gobelin, halfelin, sakvroth, ainsi que toutes les autres langues auxquelles vous avez accès (les langues les plus répandues dans votre région, par exemple). **TRAITS** Léchi Plante **VISION NOCTURNE** Vous pouvez voir dans la lumière faible comme s’il s’agissait de lumière vive, et vous ignorez l’état masqué dû à la lumière faible. **ALIMENTATION DE LA PLANTE** Vous vous alimentez de la même façon que le font les plantes ou les champignons correspondant à votre type, par un mélange de photosynthèse, d’absorption de minéraux par vos racines ou de récupération de matière pourrissante. Vous n’avez en général pas à payer pour votre nourriture. Si vous vous nourrissez par la photosynthèse et que vous n’êtes pas exposé au soleil pendant une semaine, vous commencez à être affamé. Vous pouvez tirer votre alimentation de bouteilles de lumière solaire fabriquées spécifiquement pour remplacer la lumière naturelle du soleil, mais ces bouteilles coûtent 10 fois plus cher que les rations standard (ou 40 pa). circonstances de +2 à votre DD de Vigueur ou de Réflexes contre les tentatives pour vous Repositionner, vous Pousser ou vous faire un Croc‑en‑jambe. Ce bonus s’applique également aux jets de sauvegarde contre les sorts ou effets qui tentent de vous déplacer ou de vous faire tomber à terre. DONS ANCESTRAUX LÉCHIS Au niveau 1, vous gagnez un don ancestral. Vous gagnez ensuite un nouveau don ancestral tous les quatre niveaux (aux niveaux 5, 9, 13 et 17). En tant que léchi, vous pouvez choisir les dons ancestraux suivants. **NIVEAU 1 ALLONGE DE L’ÉTREINTE DON 1 LÉCHI** Vous pouvez étendre un enchevêtrement de vignes ou de vrilles pour soutenir votre bras et ainsi augmenter votre allonge. Lorsque vous maniez une arme de corps à corps qui nécessite deux mains, qui n’a pas d’allonge et qui inflige au moins 1d6 dégâts, vous pouvez changer entre une prise à deux mains classique et une prise à deux mains étendue en utilisant une action Interagir. Les armes maniées grâce à votre prise étendue gagnent une allonge de 3 m. Cette prise est moins stable et moins puissante qu’une prise classique, réduisant le dé de dégâts de l’arme de 1 échelon.</description>
   </feat>
@@ -537,7 +537,7 @@
     <name>CONNAISSANCES SUR LES LÉCHIS</name>
     <level>1</level>
     <traits>
-      <trait>LÉCHI</trait>
+      <trait type="ancestry">LÉCHI</trait>
     </traits>
     <description>Vous possédez une connaissance approfondie des traditions culturelles de votre peuple et de ses forces innées. Vous gagnez le rang de maîtrise qualifié en Nature et en Discrétion. Si vous êtes déjà automatiquement qualifié dans l’une de ces compétences (grâce à votre historique ou à votre classe, par exemple), vous devenez alors qualifié dans une compétence de votre choix. Vous gagnez aussi le don général de Connaissances supplémentaires pour la compétence Connaissances sur les léchis.</description>
   </feat>
@@ -545,7 +545,7 @@
     <name>COSSE</name>
     <level>1</level>
     <traits>
-      <trait>LÉCHI</trait>
+      <trait type="ancestry">LÉCHI</trait>
     </traits>
     <description>Votre corps produit des cosses de graines en permanence. Vous gagnez une attaque à mains nues à distance de cosse avec un facteur de portée de 9 m et qui inflige 1d4 dégâts contondants. Sur un coup critique, une cosse éclate, produisant un enchevêtrement de végétation qui impose un malus de circonstances de -3 m à la Vitesse de la cible jusqu’au début de votre prochain tour. Les cosses n’ajoutent aucun effet critique spécialisé.</description>
   </feat>
@@ -553,7 +553,7 @@
     <name>INÉBRANLABLE</name>
     <level>1</level>
     <traits>
-      <trait>LÉCHI</trait>
+      <trait type="ancestry">LÉCHI</trait>
     </traits>
     <description>Votre esprit a surmonté de nombreuses épreuves au cours de sa longue existence. Vous gagnez un bonus de circonstances de +1 à vos jets de sauvegarde contre les effets d’émotion. Si vous obtenez un succès sur un jet de sauvegarde contre un effet d’émotion, vous obtenez un succès critique à la place.</description>
   </feat>
@@ -561,7 +561,7 @@
     <name>OMBRE DE LA NATURE SAUVAGE</name>
     <level>1</level>
     <traits>
-      <trait>LÉCHI</trait>
+      <trait type="ancestry">LÉCHI</trait>
     </traits>
     <description>Il est difficile de repérer les traces que vous laissez dans les environnements sauvages. Tant que vous n’êtes pas dans un environnement urbain, vous êtes toujours considéré comme en train de Dissimuler des traces, même si vous choisissez une activité différente en mode exploration.</description>
   </feat>
@@ -570,7 +570,7 @@
     <level>1</level>
     <actions>9</actions>
     <traits>
-      <trait>LÉCHI</trait>
+      <trait type="ancestry">LÉCHI</trait>
     </traits>
     <description>Vous tentez un jet de sauvegarde contre un sort ou un effet magique, mais vous n’avez pas encore lancé le dé. Vous remarquez les esprits qui occupent les objets, identifiant ceux qui portent chance et ceux qui portent malheur. Vous vous concentrez sur le pouvoir d’un objet qui porte chance, conférant un bonus de circonstances de +1 aux jets de sauvegarde contre l’effet déclencheur.</description>
   </feat>
@@ -578,7 +578,7 @@
     <name>TELLEMENT MIGNON</name>
     <level>1</level>
     <traits>
-      <trait>LÉCHI</trait>
+      <trait type="ancestry">LÉCHI</trait>
     </traits>
     <description>Votre taille et votre comportement vous permettent de convaincre facilement les autres que vous êtes inoffensif. Vous obtenez le don de compétence Sollicitation éhontée comme don bonus. De plus, vous gagnez un bonus de circonstances de +1 à vos tests d’initiative lorsque vous utilisez Duperie pour votre initiative. **NIVEAU 5 INVERSION DE RITUEL ** 2 ** DON 5 LÉCHI MÉTAMORPHOSE PRIMORDIALE** Vous pouvez temporairement revenir à une forme moins voyante sans pour autant diminuer vos sens. Vous prenez la forme d’un spécimen ordinaire de la plante ou du champignon qui vous ressemble le plus, revenant à l’apparence qu’avait votre corps avant que votre esprit ne l’intègre. Pour le reste, appliquez les effets d’*uni aux plantes*, mais votre taille reste Petite.</description>
   </feat>
@@ -586,7 +586,7 @@
     <name>PARLER AVEC LES SIENS</name>
     <level>5</level>
     <traits>
-      <trait>LÉCHI</trait>
+      <trait type="ancestry">LÉCHI</trait>
     </traits>
     <description>Vous avez établi un lien avec les créatures qui partagent votre physiologie. Vous pouvez utiliser la compétence Diplomatie avec les plantes et les champignons, leur poser des questions et comprendre leurs réponses. Vous gagnez un bonus de circonstances de +2 à vos tests de Diplomatie avec les plantes ou les champignons de votre espèce. En règle générale, les léchis fongiques obtiennent ce bonus avec les champignons et les créatures fongiques, les léchis calebasses avec les calebasses, les melons et les plantes fruitières similaires, les léchis des feuilles avec les arbres à feuilles caduques et les léchis grimpants avec les vignes et les plantes grimpantes.</description>
   </feat>
@@ -594,7 +594,7 @@
     <name>RACINES SOLIDES</name>
     <level>5</level>
     <traits>
-      <trait>LÉCHI</trait>
+      <trait type="ancestry">LÉCHI</trait>
     </traits>
     <requirement>Vous êtes sur une surface solide ; Effet. Vous enfoncez vos racines dans le sol ou les étendez sur cette surface, pour être beaucoup plus stable. Jusqu’à ce que vous vous déplaciez, vous gagnez un bonus de circonstances de +2 à votre DD de Vigueur ou de Réflexes contre les tentatives pour vous Repositionner, vous Pousser ou vous infliger un Croc-en-jambe (ou un bonus de circonstances de +4 si vous êtes un léchi racinaire). Ce bonus s’applique également aux jets de sauvegarde contre les sorts ou effets qui tentent de vous déplacer ou de vous Ascendances &amp; Historiques faire tomber à terre. Si un effet vous force à vous déplacer, vous le faites seulement de la moitié de la distance normale, car il faut d’abord arracher vos racines.</requirement>
     <description>De petites racines sortent de vos pieds et vous stabilisent lorsque vous vous déplacez. Vous gagnez le don de compétence Équilibre stable même si vous n’êtes pas qualifié en Acrobaties, et vous pouvez utiliser l’action S’enraciner. **S’enraciner** 1</description>
@@ -604,7 +604,7 @@
     <level>5</level>
     <actions>1</actions>
     <traits>
-      <trait>LÉCHI</trait>
+      <trait type="ancestry">LÉCHI</trait>
     </traits>
     <prerequisites>héritage léchi de feuilles ou don de compétence</prerequisites>
     <description>Chute féline. Grâce à vos feuilles, vous parvenez à contrôler votre descente. Vous planez lentement vers le sol, de 1,5 m vers le bas et jusqu’à 7,5 m vers l’avant dans les airs. Tant que vous dépensez au moins 1 action par round à planer et que vous n’avez pas encore atteint le sol, vous restez dans les airs à la fin de votre tour. **NIVEAU 9 COLIFICHET PORTE‑BONHEUR DON 9 LÉCHI Prérequis** Superstition léchi L’un de vos colifichets vous porte chance. Vous gagnez un bonus de circonstances permanent de +1 aux jets de sauvegarde contre les sorts et effets magiques, et pas seulement lorsque vous utilisez Superstition léchi. Si vous perdez votre colifichet, vous perdez le bonus jusqu’à ce que vous choisissiez un nouveau colifichet, souvent dans la semaine qui suit.</description>
@@ -613,7 +613,7 @@
     <name>COSSE ÉPINEUSE</name>
     <level>9</level>
     <traits>
-      <trait>LÉCHI</trait>
+      <trait type="ancestry">LÉCHI</trait>
     </traits>
     <prerequisites>Cosse</prerequisites>
     <description>Lorsque vos cosses effectuent une frappe renversante, elles explosent et projettent des lianes aux épines acérées. Lorsque vous obtenez un succès critique avec une Frappe de cosse, ces plantes se tordent et frappent votre ennemi, infligeant 1d4 dégâts perforants persistants.</description>
@@ -622,7 +622,7 @@
     <name>ÉCORCE ET FRONDAISON</name>
     <level>9</level>
     <traits>
-      <trait>LÉCHI</trait>
+      <trait type="ancestry">LÉCHI</trait>
     </traits>
     <description>Vous êtes détenteur de magie primordiale. Vous pouvez lancer *enchevêtrement végétal *et *résistance du chêne* en tant que sorts primordiaux innés de rang 2 une fois par jour chacun.</description>
   </feat>
@@ -630,7 +630,7 @@
     <name>REVITALISATION SOLAIRE</name>
     <level>9</level>
     <traits>
-      <trait>LÉCHI</trait>
+      <trait type="ancestry">LÉCHI</trait>
     </traits>
     <description>Si vous vous reposez 10 min à l’extérieur pendant la journée, vous regagnez une quantité de points de vie égale à votre modificateur de Constitution × la moitié de votre niveau. Vous gagnez cet avantage en plus de la guérison apportée par Soigner les blessures. Les léchis dont l’alimentation des plantes hôtes ne repose pas sur la photosynthèse doivent trouver un environnement adéquat. Par exemple, les léchis fongiques doivent trouver un environnement sombre et humide ainsi que des plantes en décomposition. **NIVEAU 13 APPEL DE L’HOMME VERT DON 13 LÉCHI** Vous pouvez appeler à vous des esprits de la nature pour agrandir votre corps. Une fois par jour, vous pouvez lancer *forme de plante* comme un sort inné primordial de rang 5. Quand vous atteignez le niveau 17, vous pouvez intensifier ce sort au rang 6 quand vous le lancez.</description>
   </feat>
@@ -639,7 +639,7 @@
     <level>13</level>
     <actions>2</actions>
     <traits>
-      <trait>LÉCHI</trait>
+      <trait type="ancestry">LÉCHI</trait>
       <trait>POISON</trait>
     </traits>
     <description>une fois par jour Vous sécrétez une couche de poison concentré qui blesse tous ceux qui osent vous attaquer. Pendant 1 min, toute créature qui vous touche ou vous inflige des dégâts avec une attaque à mains nues ou au corps à corps sans le trait allonge subit 3d6 dégâts de poison. **NIVEAU 17 FLORAISON ET DESTRUCTION DON 17 LÉCHI** Vous faites appel à l’essence vitale de votre esprit pour revigorer vos alliés et faire apparaître des plantes grimpantes qui prennent au piège et frappent vos ennemis. Une fois par jour, vous pouvez lancer *champ de vie* et *entraves végétales* comme des sorts innés primordiaux de rang 6.</description>
@@ -648,7 +648,7 @@
     <name>REPOUSSE</name>
     <level>17</level>
     <traits>
-      <trait>LÉCHI</trait>
+      <trait type="ancestry">LÉCHI</trait>
     </traits>
     <trigger>Vous tentez un jet de sauvegarde contre un effet magique, mais vous n’avez pas encore effectué votre jet ; Effet. La résistance à la magie innée de vos ancêtres déferle en vous avant de lentement refluer. Vous gagnez un bonus de circonstances de +1 contre les effets magiques au jet de sauvegarde déclencheur et à ceux qui suivent jusqu’à la fin de ce tour.</trigger>
     <description>Votre contrôle de l’essence de vie vous permet à vous ou à un allié de récupérer après avoir subi des blessures graves. Vous pouvez lancer une fois par jour *régénération *comme un sort inné primordial de rang 7. NAIN Les nains ont la réputation bien méritée d’être des individus stoïques et austères, mais ils ont aussi une ardeur débridée et apprécient énormément l’artisanat. Pour un étranger, ils peuvent sembler méfiants et claniques, mais pour leurs amis et leurs proches, ils sont chaleureux et attentionnés. Par contre, si la confiance d’un nain est difficile à gagner, une fois acquise, elle est solide comme l’acier. Si vous voulez incarner un aventurier coriace, entêté et résolu, à la fois bourru et habité d’une profonde sagesse, vous devriez jouer un nain. **Vous…** x Défendez votre honneur contre vents et marées et vous refusez de céder. x Appréciez l’artisanat de qualité sous toutes ses formes et insistez pour avoir toujours un équipement de la meilleure facture possible. **Les autres…** x Vous considèrent comme quelqu’un de borné, mais à leurs yeux c’est un défaut ou une qualité en fonction des circonstances. x Sont conscients des liens étroits qui vous unissent à votre famille, votre héritage et vos amis. **Description physique** Les nains, petits et trapus, mesurent environ 30 cm de moins que les humains. Leur corps large et compact possède une ossature robuste. Les nains des deux sexes sont fiers de la longueur de leurs cheveux et de leur barbe, qu’ils tressent généralement de manière élaborée. Certaines coiffures sont même représentatives de leur clan. Une longue barbe est un signe de maturité et d’honneur au sein de nombreux clans. Les nains atteignent généralement leur maturité physique vers 25 ans. Cela dit, leur culture traditionaliste accorde plus de valeur aux cérémonies de passage à l’âge adulte, qui varient d’un clan à l’autre, qu’à leur âge réel. En moyenne, un nain peut vivre près de 350 ans. **Société** Bien que l’ancien empire des nains se soit effondré il y a bien longtemps, submergé par des ennemis orcs et gobelinoïdes, les nains modernes conservent bon nombre des qualités qui les ont jadis hissés vers la grandeur : l’ardeur, le courage et l’obstination. Ils vivent dans des Citadelles célestes montagneuses disséminées à la surface, ce qui peut être à l’origine de grandes différences culturelles entre les clans. Presque tous les nains partagent une même passion pour la famille ainsi que pour le travail de la pierre et du métal. Rares sont les nains qui ne portent pas la dague de leur clan passée à la ceinture. Cette dague, forgée juste avant leur naissance, est caractéristique de leur clan. Ils honorent leurs enfants en leur donnant les noms de leurs ancêtres ou de héros de leur peuple. Quand ils se présentent, les nains indiquent généralement leur famille et leur clan d’origine, ainsi que tous les autres liens familiaux et titres honorifiques associés. **Exemples de noms **: Agna, Bodill, Edrukk, Grunyar, Ingra, Kotri, Morgrym, Rogar, Torra, Yangrit **Croyances** Les nains attachent une grande importance à l’honneur et restent très fidèles aux traditions de leurs clans et de leurs royaumes. Ils ont un sens aigu de l’amitié et de la justice, mais ils choisissent souvent leurs amis avec soin. S’ils font preuve d’acharnement dans leur travail, c’est avec encore plus d’ardeur qu’ils se divertissent, particulièrement en présence de bière forte. Torag, le dieu des nains, est leur principale divinité. Cela étant, il n’est pas rare qu’ils adorent également les membres de sa famille. **Édits populaires :** créer des œuvres d’art utiles, protéger sa communauté contre ceux qui veulent lui nuire, garder sa dague de clan à portée de main. **Anathèmes populaires :** ne pas terminer une activité ou ne pas tenir sa promesse, abandonner sa famille. Ascendances &amp; Historiques Les nains s’enorgueillissent de la résilience de leur lignée. Au niveau 1, choisissez l’un des héritages nains suivants. **Nain des forges** Vous avez une remarquable capacité d’adaptation aux environnements chauds. Vous bénéficiez ainsi d’une résistance au feu égale à la moitié de votre niveau (avec un minimum de 1) et vous subissez tous les effets environnementaux liés à la chaleur comme si leur intensité était réduite d’un rang (la chaleur extraordinaire devient extrême, la chaleur extrême devient grande, etc.). **Nain des roches** Vos ancêtres vivaient et travaillaient au milieu des roches vénérables qui coiffent les montagnes ou que l’on trouve dans les profondeurs de la terre. Grâce à eux, quand vous vous tenez debout, vous êtes aussi inébranlable qu’une montagne. Vous gagnez un bonus de circonstances de +2 à votre DD de Vigueur ou de Réflexes contre les tentatives pour vous Repositionner, vous Pousser ou vous faire un Croc‑en‑jambe. Ce bonus s’applique également aux jets de sauvegarde contre les sorts ou effets qui tentent de vous déplacer ou de vous faire tomber à terre. En outre, quand vous subissez un effet qui devrait vous forcer à vous déplacer de 3 m ou plus, vous ne vous déplacez que de la moitié de cette distance. **Nain gardemort** Vos ancêtres étaient des gardiens de tombeaux et leur pouvoir pour se protéger de la mort vous a été transmis. Si vous réussissez un jet de sauvegarde contre un effet ayant le trait néant ou qui a été généré par une créature morte‑vivante, vous obtenez un succès critique à la place. **Nain sang‑ancien** Les héros nains de l’ancien temps étaient capables de balayer la magie de leurs ennemis du revers de la main. Vous avez hérité d’une partie de cette résistance. Vous gagnez la réaction Appel du sang ancien. **Appel du sang ancien** 9 **Nain sang‑fort** Votre sang, vigoureux et tonique, vous permet de mieux résister aux toxines. Vous gagnez une résistance au poison égale à la moitié de votre niveau (avec un minimum de 1) et, chaque fois que vous obtenez un succès à un jet de sauvegarde contre un poison, vous réduisez son stade de 2, ou de 1 s’il s’agit d’un poison virulent. Chaque succès critique contre un poison en train de vous affecter réduit son stade de 3, ou de 2 s’il s’agit d’un poison virulent. DONS ANCESTRAUX Au niveau 1, vous gagnez un don ancestral. Vous gagnez ensuite un nouveau don ancestral tous les quatre niveaux (aux niveaux 5, 9, 13 et 17). En tant que nain, vous pouvez choisir les dons ancestraux suivants. **NIVEAU 1 ARPENTEUR DES ROCHES DON 1 NAIN** Vous possédez une étroite connexion avec la pierre, qui vous permet de vous déplacer plus facilement sur des surfaces accidentées. Vous pouvez ignorer la difficulté des terrains liée à la pierre (comme des gravats ou des cailloux) et aux sols irréguliers de pierre et de terre. En outre, quand vous utilisez la compétence Acrobaties pour Garder l’équilibre sur des surfaces étroites ou sur un sol inégal de pierre ou de terre, vous n’êtes pas pris par surprise et, quand vous obtenez un succès à l’un de ces tests d’Acrobaties, vous obtenez un succès critique à la place. Langues supplémentaires : un nombre égal à votre modificateur d’Intelligence (s’il est positif). Choisissez parmi les langues suivantes : gnomien, gobelin, jotun, orquien, pétran, sakvroth ainsi que toutes les autres langues auxquelles vous avez accès (comme les langues les plus répandues dans votre région). **TRAITS** Nain Humanoïde **VISION DANS LE NOIR** Vous voyez dans les ténèbres et dans la lumière faible aussi bien que dans la lumière vive, mais quand vous êtes dans les ténèbres, vous voyez en noir et blanc. **DAGUE DE CLAN** Vous obtenez gratuitement une dague de clan (p. 277) qui vous a été offerte à votre naissance. Vendre cette dague est un terrible tabou et cela vous vaudrait le mépris des autres nains. CONNAISSANCES SUR LES NAINS DON 1 NAIN** Vous vous êtes imprégné des vieilles histoires et traditions de vos ancêtres, de vos dieux et de votre peuple, et avez étudié les sujets et les techniques transmis de génération en génération. Vous gagnez le rang de maîtrise qualifié en Artisanat et en Religion. Si vous êtes déjà automatiquement qualifié dans l’une de ces compétences (grâce à votre historique ou à votre classe, par exemple), vous devenez alors qualifié dans une compétence de votre choix. Vous gagnez aussi le don général de Connaissances supplémentaires pour la compétence Connaissances sur les nains.</description>
@@ -657,7 +657,7 @@
     <name>FAMILIARITÉ AVEC LES ARMES NAINES</name>
     <level>1</level>
     <traits>
-      <trait>NAIN</trait>
+      <trait type="ancestry">NAIN</trait>
     </traits>
     <description>Vous avez développé auprès de vos congénères une affinité pour les armes qui frappent fort et vous les préférez à des armes plus élégantes. Vous avez accès aux armes peu courantes avec le trait nain. Vous êtes familiarisé avec les armes ayant le trait nain, ainsi qu’avec la hache d’armes, le pic et le marteau de guerre. En ce qui concerne la maîtrise de ces armes, vous considérez toutes les armes de guerre comme des armes simples et toutes les armes évoluées comme des armes de guerre. Au niveau 5, chaque fois que vous obtenez un coup critique avec l’une de ces armes, vous bénéficiez de son effet critique spécialisé.</description>
   </feat>
@@ -665,7 +665,7 @@
     <name>FER ALLÉGÉ</name>
     <level>1</level>
     <traits>
-      <trait>NAIN</trait>
+      <trait type="ancestry">NAIN</trait>
     </traits>
     <description>Vous avez appris des techniques découvertes par vos ancêtres lors d’anciennes guerres, qui vous permettent de porter plus facilement de lourdes armures. Vous ignorez la réduction de Vitesse de l’armure que vous portez. En outre, chaque fois qu’une autre source vous inflige un malus affectant votre Vitesse (si vous vous trouvez dans l’état surchargé ou sous l’effet d’un sort), vous réduisez ce malus de 1,5 m. Par exemple, l’état surchargé, qui vous infligerait normalement un malus de Vitesse de −3 m, ne vous inflige qu’un malus de −1,5 m. Si plusieurs effets vous infligent des malus de Vitesse, choisissez-en un dont vous réduirez l’intensité.</description>
   </feat>
@@ -673,7 +673,7 @@
     <name>ŒIL DU TAILLEUR DE PIERRE</name>
     <level>1</level>
     <traits>
-      <trait>NAIN</trait>
+      <trait type="ancestry">NAIN</trait>
     </traits>
     <description>Vous comprenez les subtilités du travail de la pierre. Vous devenez qualifié en Artisanat. Si vous êtes déjà qualifié en Artisanat, à la place vous gagnez le don de compétence Artisanat spécialisé pour la Taille de pierre. Vous gagnez aussi un bonus de circonstances de +2 à vos tests de Perception pour remarquer les constructions en pierre inhabituelles. Ce bonus s’applique à vos tests pour découvrir des pièges mécaniques de pierre ou cachés par de la pierre. Même si vous n’utilisez pas l’action Chercher ou que vous n’êtes pas en train d’étudier les alentours, le MJ fait automatiquement un test secret pour déterminer si vous notez des irrégularités dans les constructions de pierre. Vous ne bénéficiez pas de votre bonus de circonstances habituel pour ce test.</description>
   </feat>
@@ -681,7 +681,7 @@
     <name>STRATÉGIE DES MONTAGNARDS</name>
     <level>1</level>
     <traits>
-      <trait>NAIN</trait>
+      <trait type="ancestry">NAIN</trait>
     </traits>
     <description>Les nains combattent depuis très longtemps des adversaires communs et vous maîtrisez les anciennes tactiques qui permettent de lutter contre ces ennemis. Vous gagnez un bonus de circonstances de +1 aux dégâts que vous infligez avec vos armes ou à mains nues contre les créatures possédant les traits géant, gobelin, hryngar ou orc. Si vous lancez plus d’un dé de dégâts d’arme (comme c’est souvent le cas au-delà du niveau 1), ce bonus est alors égal au nombre de dés de dégâts d’arme ou d’attaque à mains nues que vous lancez. En outre, si une créature réussit une attaque critique contre vous et vous inflige des dégâts, vous bénéficiez de votre bonus de dégâts contre cette créature pendant 1 min, même si elle ne possède pas le trait que vous avez choisi.</description>
     <special>Si votre personnage est issu d’une communauté qui se trouve souvent en conflit avec d’autres types d’ennemis, votre MJ peut ajouter les traits de créatures appropriés à votre liste d’ennemis ancestraux.</special>
@@ -690,7 +690,7 @@
     <name>VAILLANCE NAINE</name>
     <level>1</level>
     <traits>
-      <trait>NAIN</trait>
+      <trait type="ancestry">NAIN</trait>
     </traits>
     <description>Vous êtes naturellement calme et serein face à un danger imminent. À la fin de votre tour, réduisez votre état effrayé de 2 au lieu de 1. **NIVEAU 5 DÉFIER LES TÉNÈBRES DON 5 NAIN Prérequis **vision dans le noir Grâce à d’anciennes méthodes naines développées pour combattre des ennemis en maniant des ténèbres magiques, vous avez affûté votre vision dans le noir et juré de ne jamais utiliser une telle magie. Vous gagnez vision dans le noir supérieure, ce qui vous permet de voir à travers des ténèbres magiques, même si elles bloquent habituellement ce pouvoir (comme les ténèbres créées par un sort *ténèbres *de rang 4). Vous ne pouvez pas lancer de sorts avec le trait ténèbres, utiliser d’activation d’objet avec le trait ténèbres ou utiliser tout autre pouvoir avec le trait ténèbres.</description>
   </feat>
@@ -699,7 +699,7 @@
     <level>5</level>
     <actions>2</actions>
     <traits>
-      <trait>NAIN</trait>
+      <trait type="ancestry">NAIN</trait>
     </traits>
     <prerequisites>Arpenteur des roches</prerequisites>
     <description>Votre carrure de nain vous permet de repousser vos adversaires, à la manière d’un gros rocher dévalant un tunnel souterrain. Si vous Faites un pas dans la case d’un adversaire dont la taille est égale ou inférieure à la vôtre, celui-ci doit se déplacer dans l’espace vide qui se trouve directement derrière lui. L’adversaire est obligé de se déplacer, même si cela le met en danger. Il peut tenter un jet de sauvegarde de Vigueur contre votre DD d’Athlétisme afin de vous empêcher de Faire un pas. Si l’adversaire tente ce jet de sauvegarde, il subit un montant de dégâts contondants égal à votre niveau plus votre modificateur de Force, à moins qu’il obtienne une réussite critique. Si votre adversaire ne peut pas se déplacer dans un espace vide (s’il est entouré d’objets solides ou d’autres créatures, par exemple), votre Pas du roc n’a aucun effet.</description>
@@ -708,7 +708,7 @@
     <name>RENFORCEMENT NAIN</name>
     <level>5</level>
     <traits>
-      <trait>NAIN</trait>
+      <trait type="ancestry">NAIN</trait>
     </traits>
     <prerequisites>expert en Artisanat</prerequisites>
     <description>Vous pouvez utiliser votre savoir en ingénierie et en ferronnerie pour renforcer temporairement des objets et structures épais. En passant 1 h à travailler sur un objet, vous octroyez à sa Solidité un bonus de circonstances de +1 pendant 24 h. Si vous êtes un maître en Artisanat, le bonus est de +2 et il est de +3 si vous êtes légendaire. Vous pouvez renforcer une partie d’une structure, bien qu’une heure ne renforce en général qu’une porte, quelques fenêtres ou une autre section rentrant dans un cube de 3 m d’arête. Ascendances &amp; Historiques ÉCHOS DE LA PIERRE ** 1 ** DON 9 CONCENTRATION NAIN Conditions.** Vous vous tenez sur une pierre ou une surface de terre. Vous vous arrêtez un moment pour accorder vos sens à la pierre qui vous entoure. Jusqu’au début de votre prochain tour, vous gagnez perception imprécise des vibrations avec une portée de 6 m.</description>
@@ -717,7 +717,7 @@
     <name>MARCHEPIERRE</name>
     <level>9</level>
     <traits>
-      <trait>NAIN</trait>
+      <trait type="ancestry">NAIN</trait>
     </traits>
     <description>Vous faites preuve d’un profond respect pour la pierre, avec laquelle vous vous sentez étroitement lié. Une fois par jour, vous pouvez lancer *uni à la pierre* en tant que sort inné divin de rang 3. Si vous possédez également le don Œil du tailleur de pierre, vous pouvez tenter de repérer des irrégularités et des pièges dans les constructions de pierre qui demandent normalement un rang de maîtrise légendaire en Perception. Si vous avez à la fois Œil du tailleur de pierre et une maîtrise légendaire en Perception, quand le MJ effectue un test secret pour vous afin de remarquer des irrégularités, vous conservez votre bonus d’Œil du tailleur de pierre.</description>
   </feat>
@@ -726,7 +726,7 @@
     <level>9</level>
     <actions>9</actions>
     <traits>
-      <trait>NAIN</trait>
+      <trait type="ancestry">NAIN</trait>
     </traits>
     <description>Vous êtes touché par un coup critique qui inflige des dégâts physiques. Votre nature intraitable peut vous aider à ignorer même les blessures les plus douloureuses. Faites un test nu DD 17. Sur un succès, l’attaque devient un coup normal.</description>
   </feat>
@@ -734,7 +734,7 @@
     <name>ROBUSTESSE DE LA MONTAGNE</name>
     <level>9</level>
     <traits>
-      <trait>NAIN</trait>
+      <trait type="ancestry">NAIN</trait>
     </traits>
     <description>Votre robustesse vous permet d’endurer plus de dégâts que la plupart. Ajoutez votre niveau à votre maximum de points de vie. Quand vous souffrez de l’état mourant, le DD de vos tests de récupération est égal à 9 + l’intensité de votre état mourant (au lieu de 10 plus l’intensité de l’état mourant). Si vous possédez également le don Robustesse, les points de vie gagnés grâce à ces deux dons se cumulent et le DD de vos tests de récupération est égal à 6 + l’intensité de votre état mourant **NIVEAU 13 MARCHE DANS LES MINES ** 2 ** DON 13 NAIN** Vous marchez à travers la terre, accompagné d’un allié. Vous gagnez une Vitesse de creusement de 4,5 m quand vous utilisez cette activité (si vous n’avez pas une Vitesse supérieure) puis soit vous Marchez rapidement deux fois, soit vous Creusez deux fois. Au début de votre déplacement, vous pouvez choisir un allié consentant qui vous est adjacent et qui se déplacera avec vous. Cet allié termine son déplacement une case derrière vous.</description>
   </feat>
@@ -742,7 +742,7 @@
     <name>PUISSANCE TELLURIQUE</name>
     <level>13</level>
     <traits>
-      <trait>NAIN</trait>
+      <trait type="ancestry">NAIN</trait>
     </traits>
     <description>Vous canalisez la force de la terre sous vos pieds pour rosser vos ennemis. Lorsque vous effectuez une Frappe au corps à corps contre une cible qui se tient sur la même surface de terre ou de pierre que vous, vous gagnez un bonus de circonstances au jet de dégâts égal au nombre de dés de dégâts d’arme. **NIVEAU 17 PORTAIL DE PIERRE DON 17 PEU COURANT NAIN Prérequis **Marchepierre Les barrières de terre ne font plus obstacle à votre progression. Vous gagnez *passage magique *comme sort inné divin de rang 7 et pouvez le lancer une fois par jour. Toutefois, contrairement au sort, ce pouvoir ne peut être utilisé que pour ouvrir un passage à travers une barrière de terre ou de pierre.</description>
   </feat>
@@ -751,7 +751,7 @@
     <level>17</level>
     <actions>9</actions>
     <traits>
-      <trait>NAIN</trait>
+      <trait type="ancestry">NAIN</trait>
       <trait>TERRE</trait>
       <trait>MÉTAMORPHOSE</trait>
     </traits>
@@ -762,7 +762,7 @@
     <name>DÉFENSES</name>
     <level>1</level>
     <traits>
-      <trait>ORC</trait>
+      <trait type="ancestry">ORC</trait>
     </traits>
     <description>Vous possédez des défenses particulièrement longues et pointues, parfaites pour arracher la viande des os. Vous gagnez une attaque de défenses qui inflige 1d6 dégâts perforants. Vos défenses font partie du groupe pugilat et possèdent les traits finesse et mains nues.</description>
     <special>Vous pouvez choisir ce don seulement au niveau 1 et vous ne pouvez pas utiliser un réapprentissage pour le gagner. Vous ne pourrez utiliser le réapprentissage pour perdre ce don qu’en prenant des mesures radicales, comme briser, limer ou arracher vos défenses.</special>
@@ -771,7 +771,7 @@
     <name>DRESSEUR DE BÊTES</name>
     <level>1</level>
     <traits>
-      <trait>ORC</trait>
+      <trait type="ancestry">ORC</trait>
     </traits>
     <description>Vous avez un impressionnant pouvoir inné pour dompter et diriger des bêtes féroces. Vous êtes qualifié en Nature et vous gagnez au choix le don général Animal de compagnie ou le don de compétence Dressage animalier.</description>
   </feat>
@@ -779,7 +779,7 @@
     <name>FAMILIARITÉ AVEC LES ARMES ORQUES</name>
     <level>1</level>
     <traits>
-      <trait>ORC</trait>
+      <trait type="ancestry">ORC</trait>
     </traits>
     <description>Au combat, vous avez une prédilection pour les armes brutales de vos ancêtres orcs. Vous avez accès aux armes peu courantes avec le trait orc. Vous êtes familiarisé avec les armes ayant le trait orc, ainsi qu’avec les cimeterres à deux mains et les grandes haches. En ce qui concerne la maîtrise de ces armes, vous considérez toutes les armes de guerre comme des armes simples et toutes les armes évoluées comme des armes de guerre. Au niveau 5, chaque fois que vous obtenez un coup critique avec l’une de ces armes, vous bénéficiez de son effet critique spécialisé.</description>
   </feat>
@@ -788,7 +788,7 @@
     <level>1</level>
     <actions>9</actions>
     <traits>
-      <trait>ORC</trait>
+      <trait type="ancestry">ORC</trait>
     </traits>
     <trigger>Vous êtes réduit à 0 point de vie, mais ne mourez pas sur-le-champ. La férocité au combat coule dans vos veines et vous refusez de succomber à vos blessures, aussi terribles soient-elles. Vous n’êtes pas assommé et conservez 1 point de vie, et l’intensité de votre état blessé augmente de 1.</trigger>
     <description>une fois par jour</description>
@@ -797,7 +797,7 @@
     <name>POINGS D’ACIER</name>
     <level>1</level>
     <traits>
-      <trait>ORC</trait>
+      <trait type="ancestry">ORC</trait>
     </traits>
     <description>Au fil des combats et autres conflits, vos poings ont été durcis et votre peau naturellement solide et vos gros os encore plus raffermis. Vos attaques à mains nues de poing perdent le trait non létal et gagnent le trait d’arme pousser.</description>
   </feat>
@@ -805,7 +805,7 @@
     <name>PORTEUR DE MARQUES</name>
     <level>1</level>
     <traits>
-      <trait>ORC</trait>
+      <trait type="ancestry">ORC</trait>
     </traits>
     <description>Vous portez des cicatrices ou des tatouages améliorés par les experts de votre communauté. Lorsque vous sélectionnez ce don, choisissez l’une des options du tableau ci-après. Vous êtes qualifié dans la compétence indiquée et vous gagnez un bonus de statut de +1 à vos jets de sauvegarde contre les sorts de la tradition indiquée. Vous gagnez un tatouage ou une marque ayant la forme de l’emblème choisi ou d’un concept similaire (par exemple, le Soleil Brûlant peut être une torche, un soleil, un volcan ou un autre symbole de feu, tandis que la Main Vide peut être un poing ou une griffe). **Emblème du Porteur de marques Compétence Tradition** Cadavre Profané Religion Divin Main Vide Intimidation Occulte Soleil Brûlant Diplomatie Arcanique Tête de Mort Survie Primordial</description>
   </feat>
@@ -815,7 +815,7 @@
     <actions>9</actions>
     <traits>
       <trait>CONCENTRATION</trait>
-      <trait>ORC</trait>
+      <trait type="ancestry">ORC</trait>
     </traits>
     <description>Vous tentez un jet de sauvegarde contre un sort ou un effet magique, mais vous n’avez pas encore lancé le dé. Vous vous préservez de la magie en vous reposant sur des techniques héritées de superstitions culturelles orques. Vous gagnez un bonus de circonstances de +1 à votre jet de sauvegarde contre le sort ou l’effet magique déclencheur. **NIVEAU 5 COUPS SANGLANTS DON 5 ORC** Vos attaques à mains nues létales créent des entailles sanglantes ou de graves hémorragies internes. Sur un coup critique avec une Frappe à mains nues qui n’est pas non létale, la cible subit 1d4 dégâts de saignement persistants. Cela peut se produire si vous décidez de subir un malus pour porter une attaque létale avec vos poings ou si vous possédez une attaque à mains nues sans le trait non létal à cause de Défenses ou d’un pouvoir similaire.</description>
   </feat>
@@ -823,7 +823,7 @@
     <name>DÉFIER LA MORT</name>
     <level>5</level>
     <traits>
-      <trait>ORC</trait>
+      <trait type="ancestry">ORC</trait>
     </traits>
     <prerequisites>Férocité orque</prerequisites>
     <description>Vous êtes incroyablement difficile à tuer. Le DD pour vos tests de récupération est égal à 9 + l’intensité de votre état mourant ou 8 + l’intensité de votre état mourant si vous avez le don général Robustesse. De plus, lorsque quelqu’un vous ramène à la vie en utilisant une magie qui devrait vous handicaper pendant une semaine (comme *rappel à la vie* ou le rituel *résurrection*), vous ne subissez pas cet état. Ascendances &amp; Historiques PEAU RECOUVERTE DE CICATRICES DON 5 ORC** De glorieuses cicatrices couvrent et protègent une grande partie de votre corps, vous faisant bénéficier d’une armure de chair qui résiste à toute blessure moins grave que celles auxquelles vous avez déjà survécu. Votre DD sur les tests nus pour mettre fin à des dégâts de saignement persistants est réduit et passe de 15 à 10 ou de 10 à 5 si vous avez reçu une aide appropriée.</description>
@@ -832,7 +832,7 @@
     <name>PUISSANCE ATHLÉTIQUE</name>
     <level>5</level>
     <traits>
-      <trait>ORC</trait>
+      <trait type="ancestry">ORC</trait>
     </traits>
     <description>La survie en terrain hostile vous a parfaitement appris comment vous déplacer. Quand vous obtenez un succès sur un test d’Athlétisme pour Escalader ou Nager, vous obtenez à la place un succès critique. **NIVEAU 9 FÉROCITÉ ÉTERNELLE DON 9 ORC Prérequis **Férocité orque Vous résistez à l’étreinte de la mort avec une vigueur surnaturelle. Vous la défiez de venir vous prendre en lui assurant qu’elle échouera. Quand vous utilisez Férocité orque, vous gagnez un nombre de points de vie temporaires égal à votre niveau.</description>
   </feat>
@@ -840,7 +840,7 @@
     <name>SUPERSTITION OMNIPRÉSENTE</name>
     <level>9</level>
     <traits>
-      <trait>ORC</trait>
+      <trait type="ancestry">ORC</trait>
     </traits>
     <prerequisites>Superstition orque</prerequisites>
     <description>Vous êtes tellement baigné de superstitions orques que votre pratique des exercices mentaux de vos ancêtres vous aide à ignorer les effets de la magie. Vous bénéficiez d’un bonus de circonstances de +1 à vos jets de sauvegarde contre les sorts et les effets magiques en toutes circonstances. **NIVEAU 13 BÊTES FÉROCES DON 13 ORC Prérequis** Compagnon animal, Animal de compagnie ou Animal lié ; Férocité orque Depuis la nuit des temps, les plus grands dompteurs orcs ont fait ressortir les véritables esprits guerriers de leurs compagnons bestiaux en donnant aux créatures une gorgée de leur propre sang. Tous les compagnons animaux, animaux de compagnie, familiers et animaux liés que vous possédez gagnent le don Férocité orque et bénéficient d’une réaction par round qu’ils ne peuvent utiliser que pour Férocité orque. Si vous possédez le don ancestral Férocité éternelle, tous les compagnons animaux, animaux de compagnie, familiers ou animaux liés que vous possédez gagnent également les avantages de ce don lorsqu’ils utilisent leur réaction de Férocité orque.</description>
@@ -849,7 +849,7 @@
     <name>DÉVOREUR DE SORTS</name>
     <level>13</level>
     <traits>
-      <trait>ORC</trait>
+      <trait type="ancestry">ORC</trait>
     </traits>
     <prerequisites>Superstition orque</prerequisites>
     <description>Vous ne faites pas que résister à la magie : vous la dévorez. Lorsque vous réussissez un jet de sauvegarde contre un sort ou un effet magique, vous gagnez un nombre de points de vie temporaires égal au double du rang du sort ou bien au niveau de l’effet magique si ce n’est pas un sort. Ces points de vie temporaires persistent jusqu’à la fin de votre prochain tour.</description>
@@ -858,7 +858,7 @@
     <name>FÉROCITÉ EXTRAORDINAIRE</name>
     <level>13</level>
     <traits>
-      <trait>ORC</trait>
+      <trait type="ancestry">ORC</trait>
     </traits>
     <prerequisites>Férocité orque</prerequisites>
     <trigger>Vous utilisez Férocité orque. Vous frappez de façon vicieuse et fulgurante face à la mort. Effectuez une Frappe au corps à corps. Si cette Frappe réduit un ennemi à 0 point de vie, cette activation de la Férocité orque ne compte pas dans sa fréquence. Les plus communs sont de loin les héritages polyvalents aiuvarin et dromaar avec un parent humain et un parent elfe pour le premier ou orc pour le second. D’autres individus naissent dans des circonstances bien plus étranges, par exemple si l’un de leurs parents a été affecté par des énergies monstrueuses, mortes‑vivantes ou extraplanaires. Comme ces circonstances ne se limitent pas à une seule ascendance, ces héritages (appelés héritages polyvalents) sont eux aussi partagés par plusieurs ascendances. Golarion abrite une diversité d’héritages polyvalents. Certains sont nés de créatures insolites ou de circonstances spécifiques, banales ou surnaturelles. Toutefois, beaucoup sont le résultat d’une infusion d’énergie extraplanaire, via une lignée directe ou des ancêtres plus éloignés, ou encore d’une exposition directe à la quintessence de ce plan. Ces individus sont connus sous le nom d’héritiers des plans. Comme les circonstances d’apparition de tels héritages polyvalents ne sont pas limitées à une seule ascendance, ils peuvent être choisis par un personnage de presque n’importe quelle ascendance. Certains héritages polyvalents sont plus répandus que d’autres dans des ascendances particulières, et d’autres ajoutent des restrictions spécifiques. Votre MJ peut décider d’ajouter des restrictions supplémentaires à propos des ascendances qui peuvent utiliser un héritage polyvalent, selon l’histoire et le lieu de l’intrigue. DES POSSIBILITÉS ILLIMITÉES ! Bien qu’un personnage ne puisse avoir qu’un seul héritage et un don de lignée, les permutations possibles de son historique et de son arbre généalogique sont virtuellement illimitées. Un personnage aiuvarin peut toujours avoir un parent changelin dont la nature est identifiable à la coloration de ses yeux, même s’il n’a pas accès aux dons ancestraux des changelins. De même, un nain né de la fosse peut très bien avoir un ancêtre avec des influences féeriques dans sa lignée, qui se manifestent par une muse ou un protecteur féerique acquis grâce à sa classe en même temps que sa fiélonnie ancestrale. JOUER UN HÉRITAGE POLYVALENT Pour jouer un personnage à l’héritage polyvalent, sélectionnez d’abord votre ascendance comme vous le feriez pour n’importe quel personnage. Vous gagnez les points de vie, la taille, la Vitesse, les primes et pénalités d’attributs, les langues, les traits et les autres pouvoirs de cette ascendance. Puis, au lieu de choisir un héritage parmi ceux habituellement disponibles pour cette ascendance, appliquez l’héritage polyvalent de votre choix. Vous gagnez toutes les caractéristiques de ce dernier, certains héritages pouvant modifier ou remplacer des statistiques, caractéristiques ou des traits de votre ascendance. Puisqu’un héritage polyvalent reste un héritage, vous ne pouvez en avoir qu’un et n’en aurez aucun autre en plus de celui‑ci. Il se peut qu’un héritage polyvalent vous octroie une caractéristique en conflit avec l’une de celles de votre ascendance. Dans ce cas, décidez laquelle des deux votre personnage possède. HÉRITAGES POLYVALENTS</trigger>
@@ -868,7 +868,7 @@
     <name>JOUVENCEAU DES EMBRUNS</name>
     <level>1</level>
     <traits>
-      <trait>CHANGELIN</trait>
+      <trait type="versatile-heritage">CHANGELIN</trait>
       <trait>LIGNÉE</trait>
     </traits>
     <description>Votre mère était une guenaude marine, c’est pourquoi vous possédez un œil vert ou bleu. CHANGELIN Ascendances &amp; Historiques La mer et la rive vous réconfortent. Quand vous obtenez un succès sur un test d’Athlétisme pour Nager, vous obtenez à la place un succès critique. Si vous finissez votre tour dans l’eau sans avoir réussi une action de Nage durant ce round, vous ne coulez pas (mais vous pouvez toujours être emporté par le courant).</description>
@@ -877,7 +877,7 @@
     <name>JOUVENCEAU DES RÊVES</name>
     <level>1</level>
     <traits>
-      <trait>CHANGELIN</trait>
+      <trait type="versatile-heritage">CHANGELIN</trait>
       <trait>LIGNÉE</trait>
     </traits>
     <description>Vous êtes l’enfant d’une guenaude cuculus, ce qui rend l’un de vos yeux violet, peut-être même noir. Le contrôle qu’exerce votre mère sur le sommeil et les rêves vous a transmis une certaine résistance à ces effets, vous octroyant un bonus de circonstances de +2 aux jets de sauvegarde contre les effets de sommeil et les effets qui provoquent ou modifient des rêves. De plus, le sommeil est plus réparateur pour vous. Vous regagnez un nombre de PV égal à votre modificateur de Constitution multiplié par le double de votre niveau plutôt que par votre niveau, et réduisez la sévérité des états drainé et condamné de 2 au lieu de 1.</description>
@@ -886,7 +886,7 @@
     <name>JOUVENCEAU DES SCORIES</name>
     <level>1</level>
     <traits>
-      <trait>CHANGELIN</trait>
+      <trait type="versatile-heritage">CHANGELIN</trait>
       <trait>LIGNÉE</trait>
     </traits>
     <description>Votre mère était une guenaude de fer, une variété connue pour ses prouesses physiques, et vous avez un œil violet ou gris métallique. Vous possédez des griffes épaisses et robustes faites de fer froid qui ont naturellement poussé sur votre corps. Vous gagnez une attaque de griffes qui inflige 1d6 dégâts tranchants. Vos griffes font partie du groupe pugilat, sont constituées de fer froid et possèdent les traits mains nues et saisir.</description>
@@ -895,7 +895,7 @@
     <name>JOUVENCEAU INGÉNU</name>
     <level>1</level>
     <traits>
-      <trait>CHANGELIN</trait>
+      <trait type="versatile-heritage">CHANGELIN</trait>
       <trait>LIGNÉE</trait>
     </traits>
     <description>Vous faites partie des changelins les plus communs (ceux nés d’une guenaude doucereuse) et votre œil vert vif prouve cette origine. La nature manipulatrice et versatile de votre mère vous avantage quand il s’agit de duper les autres. Vous gagnez le don de compétence Menteur charismatique. Si vous effectuez un test de Duperie pour déterminer votre initiative, vos adversaires pour ce combat qui n’ont pas encore agi sont pris par surprise contre vous. **NIVEAU 1 CONNAISSANCES SUR LES CHANGELINS DON 1 CHANGELIN** Bien trop conscient de votre nature profonde, vous avez étudié les guenaudes et leurs pouvoirs. Vous gagnez le rang de maîtrise qualifié en Duperie et en Occultisme. Si vous êtes déjà automatiquement qualifié dans l’une de ces compétences (grâce à votre historique ou à votre classe, par exemple), vous devenez alors qualifié dans une compétence de votre choix. Vous gagnez aussi le don général de Connaissances supplémentaires pour la compétence Connaissances sur les guenaudes.</description>
@@ -904,7 +904,7 @@
     <name>GRIFFES DE GUENAUDE</name>
     <level>1</level>
     <traits>
-      <trait>CHANGELIN</trait>
+      <trait type="versatile-heritage">CHANGELIN</trait>
     </traits>
     <description>Lorsque vous atteignez l’âge adulte, vos ongles deviennent longs et acérés. Vous gagnez une attaque de griffes qui inflige 1d4 dégâts tranchants. Vos griffes font partie du groupe des armes de pugilat et possèdent les traits agile, finesse et mains nues.</description>
     <special>Les griffes de guenaude peuvent se développer à n’importe quel moment de la vie d’un changelin. Vous pouvez choisir ce don chaque fois que vous gagnez un don ancestral, mais vous ne pouvez pas utiliser un réapprentissage pour le perdre.</special>
@@ -913,7 +913,7 @@
     <name>VISION DE GUENAUDE</name>
     <level>1</level>
     <traits>
-      <trait>CHANGELIN</trait>
+      <trait type="versatile-heritage">CHANGELIN</trait>
     </traits>
     <description>Vous avez cultivé les pouvoirs surnaturels que vous a légués votre mère, en particulier la vue. Vous gagnez vision dans le noir. **NIVEAU 5 APPELÉ DON 5 CHANGELIN** Vous avez entendu l’Appel et en y résistant vous avez développé un véritable rempart pour résister aux effets qui affectent l’esprit. Vous gagnez un bonus de circonstances de +1 à vos jets de Volonté contre les effets mentaux. Si vous obtenez un succès sur un jet de sauvegarde contre un effet mental qui vous infligerait l’état contrôlé, il est transformé en succès critique.</description>
   </feat>
@@ -921,7 +921,7 @@
     <name>ENFANT DE LA BRUME</name>
     <level>5</level>
     <traits>
-      <trait>CHANGELIN</trait>
+      <trait type="versatile-heritage">CHANGELIN</trait>
     </traits>
     <description>Vous vous fondez dans le décor avec une aisance surnaturelle. Lorsque vous êtes masqué ou caché, augmentez le DD du test nu pour vous cibler à 6 si vous êtes masqué, et à 12 si vous êtes caché. **NIVEAU 9 GRIFFES MAUDITES DON 9 CHANGELIN Prérequis **attaque de griffes à mains nues Vos griffes portent en elles la magie de votre mère guenaude. Quand vous effectuez un coup critique avec une Frappe de griffes, la cible subit 1d4 dégâts mentaux persistants supplémentaires.</description>
   </feat>
@@ -929,7 +929,7 @@
     <name>RÉSISTANCE OCCULTE</name>
     <level>9</level>
     <traits>
-      <trait>CHANGELIN</trait>
+      <trait type="versatile-heritage">CHANGELIN</trait>
     </traits>
     <prerequisites>expert en Occultisme</prerequisites>
     <description>Votre étude des pratiques occultes vous a appris comment vous défendre au mieux contre elles. Vous gagnez un bonus de circonstances de +1 à vos jets de sauvegarde contre les effets occultes. **NIVEAU 13 MAGIE DE GUENAUDE DON 13 CHANGELIN** Grâce à votre héritage, vous pouvez reproduire une partie de la magie d’une guenaude. Choisissez un sort commun de rang 4 ou moins parmi ceux disponibles pour un cercle, dont ceux qui lui ont été donnés par une guenaude du même type que votre mère. Vous pouvez lancer ce sort une fois par jour comme un sort inné occulte de rang 4. Les sorts disponibles dans tous les cercles sont* augure*,* charme*,* clairaudience*,* clairvoyance*, *déguisement illusoire* et *message onirique*. Les sorts éligibles octroyés par les types les plus communs de guenaudes sont : **guenaude cuculus*** cauchemar*,* ravages magiques* ; **guenaude de fer*** cloué à terre*, *ravages magiques* ; **guenaude marine*** forme humanoïde*,* malédiction du marin*,* marche sur l’eau *; **guenaude doucereuse*** charme*, *paroles mielleuses*, *malédiction du paria* D’innombrables légendes évoquent les relations entre les mortels et les êtres immortels, et les enfants nés de ces rencontres. Ces enfants, connus sous le nom d’héritiers des plans, sont des mortels ayant hérité de l’essence d’un autre plan, qui se manifeste à travers leurs caractéristiques physiques distinctives et leurs pouvoirs mystiques. Cette section présente les règles applicables aux néphilims, des héritiers des plans dont l’héritage extraplanaire remonte aux célestes, aux fiélons, aux veilleurs et à d’autres entités qui s’impliquent souvent dans les affaires religieuses des mortels. Une fidèle prêtresse d’Érastil reçoit la visite d’un ange dans sa jeunesse et, bien des années plus tard, elle donne naissance à un enfant avec une tête de wapiti et une tache de naissance représentant un arc et une flèche, le symbole religieux d’Érastil. Une puissante ensorceleuse empêche une incursion des Failles extérieures, mais l’enfant qu’elle porte est imprégné d’une parcelle de pouvoir démoniaque. Il naît avec des crocs et une paire de petites cornes. Une caravane planaire parcourt le multivers jusqu’à accueillir le maximum d’enfants possédant des sabots diaboliques et des auréoles angéliques. Ces enfants, connus sous le nom de néphilims, possèdent l’ambition et la capacité de croissance et de changement inhérentes à leurs ancêtres mortels. Mais ils ont aussi en eux une partie du pouvoir et de l’apparence d’une ou plusieurs entités immortelles dont les énergies ont influencé leur lignée. Du fait de leur nature même, il est difficile de les catégoriser. Certains possèdent à la fois des traits démoniaques et angéliques tandis que d’autres disposent de pouvoirs qui échappent aux catégories bien définies des érudits. Cependant, de nombreux néphilims possèdent des traits qui reflètent fortement leur lignée. Les néphilims dotés des pouvoirs des archons, parfois appelés porteurs de loi, peuvent avoir des yeux dorés ou des auras flamboyantes, tandis que ceux qui descendent des diables, appelés rejetons infernaux, peuvent avoir la peau rouge et des pieds en sabots. Bien que le terme néphilim définisse de manière assez large ces individus, dans certaines civilisations, ceux qui ont une influence céleste sont appelés empyréens et ceux aux influences fiélones porte le nom de cambions. D’autres néphilims sont parfois appelés des aphorites ou des ganzis, mais seuls les empyréens et les cambions sont abordés ici. Si vous voulez un personnage imprégné de la puissance des plans extérieurs, dont l’apparence ne passe pas inaperçue, et dont les liens personnels peuvent s’étendre au‑delà des limites de l’Univers, vous devriez jouer un néphilim. **Vous…** x Avez une grande confiance en vous grâce au pouvoir ou à l’influence de votre héritage extraplanaire. x Acceptez ou vous rebellez contre votre nature extraplanaire, en embrassant la bonté angélique ou en usant de votre rage démoniaque à de meilleures fins. x Trouvez qu’il est difficile de nouer des relations avec les autres, mais chérissez ceux qui vous apprécient pour votre personnalité et non pour ce que vous êtes. **Les autres…** x Supposent que vous avez été confronté à de nombreux défis ou que vous avez bénéficié d’avantages injustes en raison de votre héritage. x Vous prennent pour un agent d’une organisation sainte ou impie. x Pensent que vous êtes lié à de puissantes créatures extraplanaires et essaient peut‑être de négocier avec vous pour que vous leur octroyiez plus de puissance. NÉPHILIM **ANGELIN ANGELIN Ascendances &amp; Historiques Néphilim (héritage peu courant)** Votre nature est influencée par les célestes, les fiélons ou les veilleurs. Cela se manifeste par une combinaison de traits qui trahissent votre héritage comme des yeux dorés, un halo, des cornes ou une queue. Vous gagnez le trait néphilim, en plus de ceux de votre ascendance. Vous gagnez vision nocturne ou vision dans le noir si votre ascendance possède déjà la première. Vous pouvez choisir un don de néphilim ou un don de votre ascendance lorsque vous gagnez un don ancestral. DONS DE NÉPHILIM Les personnages néphilims peuvent choisir les dons suivants. **Lignées** Les néphilims peuvent choisir n’importe laquelle des lignées suivantes.</description>
@@ -939,7 +939,7 @@
     <level>1</level>
     <traits>
       <trait>LIGNÉE</trait>
-      <trait>NÉPHILIM</trait>
+      <trait type="versatile-heritage">NÉPHILIM</trait>
     </traits>
     <description>Vous descendez d’un ange, d’un messager ailé du Nirvana ou de l’un des autres royaumes célestes. Vous gagnez le rang de maîtrise qualifié en Société. Si vous êtes déjà automatiquement qualifié en Société (grâce à votre historique ou à votre classe, par exemple), vous devenez alors qualifié dans une compétence de votre choix. Vous connaissez la langue empyréenne et gagnez le don de compétence Polyglotte.</description>
   </feat>
@@ -948,7 +948,7 @@
     <level>1</level>
     <traits>
       <trait>LIGNÉE</trait>
-      <trait>NÉPHILIM</trait>
+      <trait type="versatile-heritage">NÉPHILIM</trait>
     </traits>
     <description>Votre sang vibre du pouvoir libérateur des azatas, incarnations vivantes de la liberté issues du royaume sauvage de l’Élysée. Vous gagnez un bonus de circonstances de +1 pour vous Échapper. Si vous obtenez un échec critique à un test pour vous Échapper, il se transforme en simple échec. Si vous réussissez votre jet, vous obtenez un succès critique à la place.</description>
   </feat>
@@ -957,7 +957,7 @@
     <level>1</level>
     <traits>
       <trait>LIGNÉE</trait>
-      <trait>NÉPHILIM</trait>
+      <trait type="versatile-heritage">NÉPHILIM</trait>
     </traits>
     <description>Votre sang porte la marque d’un démon, une incarnation vivante du péché née des profondeurs fétides des Failles extérieures. Un pouvoir démoniaque pulse dans vos veines et se manifeste de façon différente pour chaque né de la fosse, que vous ayez des doigts palmés et prospériez dans l’eau, de grandes mains capables de lutter contre des ennemis plus grands ou toute autre manifestation. Vous êtes qualifié en Athlétisme. Si vous êtes déjà qualifié en Athlétisme (grâce à votre historique ou à votre classe, par exemple), vous devenez alors qualifié dans une compétence de votre choix. Vous gagnez aussi n’importe lequel des dons de compétences communs de niveau 1 avec un prérequis qualifié en Athlétisme, pour refléter la manifestation de votre sang fiélon.</description>
   </feat>
@@ -966,7 +966,7 @@
     <level>1</level>
     <traits>
       <trait>LIGNÉE</trait>
-      <trait>NÉPHILIM</trait>
+      <trait type="versatile-heritage">NÉPHILIM</trait>
     </traits>
     <description>Votre lignée remonte aux archons, les gardiens de la montagne du Paradis aux sept strates et érecteurs de la loi et de la vertu parmi les mortels. Vous gagnez un bonus de circonstances de +1 aux jets de sauvegarde contre les effets d’émotion et si vous obtenez un succès à un tel jet de sauvegarde, vous obtenez un succès critique à la place.</description>
   </feat>
@@ -975,7 +975,7 @@
     <level>1</level>
     <traits>
       <trait>LIGNÉE</trait>
-      <trait>NÉPHILIM</trait>
+      <trait type="versatile-heritage">NÉPHILIM</trait>
     </traits>
     <description>Votre lignée descend des diables, les conspirateurs sournois des Enfers. Vous êtes aussi doué pour repérer les mensonges et les formulations tordues que pour les inventer. Vous êtes qualifié en Duperie et Connaissances juridiques. Si vous êtes déjà qualifié en Duperie (grâce à votre historique ou à votre classe, par exemple), vous devenez alors qualifié dans une compétence de votre choix. Vous gagnez aussi le don de compétence Détecteur de mensonges.</description>
   </feat>
@@ -984,7 +984,7 @@
     <level>1</level>
     <traits>
       <trait>LIGNÉE</trait>
-      <trait>NÉPHILIM</trait>
+      <trait type="versatile-heritage">NÉPHILIM</trait>
     </traits>
     <description>Votre lignée remonte à un daémon, une manifestation des formes horrifiques de la mort qui dévore les âmes dans son infâme foyer d’Abaddon. C’est pourquoi vous vous raccrochez fermement aux derniers fragments de vie qu’il vous reste. Vous gagnez le don général Dur à cuire. NIVEAU 1 CONNAISSANCES SUR LES NÉPHILIMS DON 1 NÉPHILIM** Vous connaissez les secrets du multivers. Vous gagnez le rang de maîtrise qualifié en Religion ainsi qu’en Diplomatie ou en Intimidation. Si vous êtes déjà automatiquement qualifié dans l’une de ces compétences (grâce à votre historique ou à votre classe, par exemple), vous devenez alors qualifié dans une compétence de votre choix. Vous gagnez aussi le don général Connaissances supplémentaires pour une sous-catégorie de Connaissances pour un plan dont votre lignée est issue.</description>
   </feat>
@@ -992,7 +992,7 @@
     <name>HALO</name>
     <level>1</level>
     <traits>
-      <trait>NÉPHILIM</trait>
+      <trait type="versatile-heritage">NÉPHILIM</trait>
     </traits>
     <description>Vous êtes entouré d’un halo de lumière et de bonté qui diffuse de la lumière comme le tour de magie divin *lumière*. Un tour de magie est intensifié à un rang de sort égal à la moitié de votre niveau arrondi à l’entier supérieur. Vous pouvez utiliser l’action Maintenir pour révoquer ou manifester à nouveau votre halo.</description>
   </feat>
@@ -1000,7 +1000,7 @@
     <name>MANIFESTATION BESTIALE</name>
     <level>1</level>
     <traits>
-      <trait>NÉPHILIM</trait>
+      <trait type="versatile-heritage">NÉPHILIM</trait>
     </traits>
     <description>Une partie de votre corps subit l’influence animale d’une créature planaire. Vos mains sont serties de griffes, vous avez des sabots à la place des pieds, votre bouche est remplie de dents pointues ou votre colonne vertébrale est prolongée par une queue. Vous gagnez l’attaque à mains nues de votre choix parmi les suivantes. Cette attaque fait partie du groupe pugilat et possède les dés de dégâts et les traits listés. **Griffes **1d4 tranchants (agile, finesse, mains nues, perforant polyvalent) **Sabot **1d6 contondants (finesse, mains nues) **Mâchoires **1d6 perforants (finesse, mains nues) **Queue **1d4 contondants (agile, finesse, mains nues)</description>
     <special>Vous pouvez choisir ce don seulement au niveau 1 et vous ne pouvez pas utiliser un réapprentissage pour perdre ni gagner ce don, et ne pouvez pas non plus changer le type d’attaque choisi.</special>
@@ -1009,7 +1009,7 @@
     <name>SABOTS PRESTES</name>
     <level>1</level>
     <traits>
-      <trait>NÉPHILIM</trait>
+      <trait type="versatile-heritage">NÉPHILIM</trait>
     </traits>
     <description>Vous avez des sabots, des chevilles ailées ou toute autre caractéristique qui accélère votre déplacement. Votre Vitesse augmente de 1,5 m.</description>
     <special>L’augmentation de Vitesse de ce don ne peut pas se cumuler avec d’autres augmentations de Vitesse issues d’autres dons ancestraux.</special>
@@ -1018,7 +1018,7 @@
     <name>YEUX DE NÉPHILIM</name>
     <level>1</level>
     <traits>
-      <trait>NÉPHILIM</trait>
+      <trait type="versatile-heritage">NÉPHILIM</trait>
     </traits>
     <prerequisites>vision nocturne</prerequisites>
     <description>Vos yeux peuvent voir à travers les ténèbres avec une acuité visuelle comparable à celle de la plupart des êtres extraplanaires. Vous gagnez vision dans le noir. **NIVEAU 5 HÉRITIER DES PLANS DON 5 NÉPHILIM** La longue et complexe histoire de votre lignée se traduit par votre capacité à puiser votre énergie dans plus de sources planaires que la plupart des autres néphilims. Choisissez un don de lignée néphilim que vous ne possédez pas encore : vous gagnez ce don et tous ses avantages même si vous avez déjà obtenu un don de lignée au niveau 1.</description>
@@ -1027,7 +1027,7 @@
     <name>QUEUE HABILE</name>
     <level>5</level>
     <traits>
-      <trait>NÉPHILIM</trait>
+      <trait type="versatile-heritage">NÉPHILIM</trait>
     </traits>
     <description>Vous avez toujours eu une queue, mais avec de l’entraînement, vous avez appris à l’utiliser à d’autres desseins que pour signaler votre humeur. Vous pouvez effectuer des actions Interagir simples avec votre queue, comme ouvrir une porte déverrouillée. Votre queue ne peut pas effectuer d’actions qui requièrent des doigts ou une dextérité manuelle importante, ni d’actions dont la réussite nécessite un test, et vous ne pouvez pas l’utiliser pour porter des objets.</description>
   </feat>
@@ -1035,7 +1035,7 @@
     <name>RÉSISTANCES DES NÉPHILIMS</name>
     <level>5</level>
     <traits>
-      <trait>NÉPHILIM</trait>
+      <trait type="versatile-heritage">NÉPHILIM</trait>
     </traits>
     <description>À l’instar de vos ancêtres extraplanaires, vous résistez à l’énergie. Choisissez l’un des types de dégâts d’énergie suivants : acide, froid, électricité, feu ou son. Vous bénéficiez d’une résistance 5 à ce type de dégâts. Ce type de dégâts correspond généralement à celui auquel résiste une entité extraplanaire associée à votre lignée. Par exemple, un angelin peut choisir une résistance au froid, tandis qu’un rejeton infernal peut choisir une résistance au feu.</description>
   </feat>
@@ -1043,7 +1043,7 @@
     <name>SANG BÉNI</name>
     <level>5</level>
     <traits>
-      <trait>NÉPHILIM</trait>
+      <trait type="versatile-heritage">NÉPHILIM</trait>
     </traits>
     <description>Le sang que vous versez est sanctifié avec des effets similaires à ceux de l’*eau bénite* (*Livre* *du MJ* p. 268). Lorsqu’un fiélon, un mort-vivant ou une créature possédant une faiblesse à ce qui est saint boit votre sang ou vous inflige des dégâts perforants ou tranchants avec ses mâchoires, ses crocs ou une attaque similaire, cette créature subit 1d6 dégâts d’esprit avec le trait saint. Vous gagnez un bonus de circonstances de +4 aux tests d’Artisanat pour Fabriquer de l’*eau bénite* avec votre propre sang en tant qu’ingrédient.</description>
   </feat>
@@ -1051,7 +1051,7 @@
     <name>SUPPLIQUE EXTRAPLANAIRE</name>
     <level>5</level>
     <traits>
-      <trait>NÉPHILIM</trait>
+      <trait type="versatile-heritage">NÉPHILIM</trait>
     </traits>
     <description>Vous en appelez à la puissance divine pour bénir vos alliés ou maudire vos adversaires. Choisissez entre *bénédiction* et *imprécation*. Vous pouvez lancer le sort choisi une fois par jour comme sort inné divin de rang 1. **NIVEAU 9 AILES DIVINES ** 2 ** DON 9 DIVIN TRANSFORMATION NÉPHILIM Fréquence** une fois par jour Avec un peu d’effort, vous pouvez faire surgir de votre dos des ailes magiques, semblables à celles de votre ancêtre extraplanaire, qu’il s’agisse d’élégantes ailes avec des plumes ou de sinistres ailes de chauve-souris. Ces ailes disparaissent au bout de 10 min. Vous gagnez une Vitesse de vol égale à votre Vitesse tant que vous possédez vos ailes.</description>
   </feat>
@@ -1059,7 +1059,7 @@
     <name>CONTRE‑MESURES DIVINES</name>
     <level>9</level>
     <traits>
-      <trait>NÉPHILIM</trait>
+      <trait type="versatile-heritage">NÉPHILIM</trait>
     </traits>
     <description>Vous avez étudié votre héritage extraplanaire afin de mieux vous défendre, que ce soit contre des créatures alignées ou opposées à votre lignée extraplanaire. Vous avez découvert que vos techniques Ascendances &amp; Historiques sont tout aussi puissantes contre les célestes, les fiélons et les autres entités divines. Vous gagnez un bonus de circonstances de +1 à vos jets de sauvegarde contre les effets divins.</description>
   </feat>
@@ -1067,7 +1067,7 @@
     <name>MAGIE CÉLESTE</name>
     <level>9</level>
     <traits>
-      <trait>NÉPHILIM</trait>
+      <trait type="versatile-heritage">NÉPHILIM</trait>
     </traits>
     <prerequisites>Angelin, Porteur de loi, Élu des muses ou un autre don de</prerequisites>
     <description>lignée associé aux célestes Vous êtes doté d’une magie céleste. Choisissez deux des sorts suivants : *clarté spirituelle, forme humanoïde, lumière éternelle, lumière révélatrice,* *partage de force vitale* ou *pied sûr.* Vous pouvez utiliser chacun des deux sorts choisis une fois par jour en tant que sorts innés divins de rang 2. Les angelins choisissent généralement *clarté spirituelle* et *forme* *humanoïde*, les porteurs de loi optent pour *lumière éternelle* et *partage de* *force vitale* et les élus des muses pour *lumière* *révélatrice* et *pied* *sûr*.</description>
@@ -1076,7 +1076,7 @@
     <name>MAGIE FIÉLONE</name>
     <level>9</level>
     <traits>
-      <trait>NÉPHILIM</trait>
+      <trait type="versatile-heritage">NÉPHILIM</trait>
     </traits>
     <prerequisites>rejeton sinistre, né de la fosse ou rejeton infernal</prerequisites>
     <description>Vous êtes doté d’une magie fiélone. Choisissez deux des sorts suivants : *fausse vitalité*, *fracassement*, *invisibilité*,* magie camouflée, paranoïa* ou* percevoir l’imperceptible.* Vous pouvez utiliser chacun des deux sorts choisis une fois par jour en tant que sorts innés divins de rang 2. Les rejetons sinistres choisissent généralement *fausse vitalité* et *percevoir* *l’imperceptible*, les nés de la fosse optent pour *paranoïa* et *fracassement* et les rejetons infernaux pour *invisibilité* et *magie camouflée*. **NIVEAU 13 CONVOCATION DE NÉPHILIM DON 13 NÉPHILIM Prérequis **tout don de lignée néphilim Vous êtes lié aux plans extérieurs, ce qui vous permet d’invoquer un allié divin. Choisissez entre *convocation de céleste*, *convocation de fiélon* ou un autre sort de rang 5 permettant de convoquer une créature appropriée pour votre lignée. Une fois par jour, vous pouvez lancer le sort choisi comme un sort inné divin de rang 5, mais la créature convoquée doit être de la même catégorie que votre lignée, par exemple une créature avec le trait ange si vous êtes un angelin.</description>
@@ -1085,7 +1085,7 @@
     <name>GLISSEMENT LATÉRAL</name>
     <level>13</level>
     <traits>
-      <trait>NÉPHILIM</trait>
+      <trait type="versatile-heritage">NÉPHILIM</trait>
     </traits>
     <prerequisites>rejeton sinistre, né de la fosse ou rejeton infernal ou un</prerequisites>
     <description>autre don de lignée associé aux fiélons ou au Maelström Comme beaucoup de fiélons, vous avez le pouvoir surnaturel de vous téléporter en sécurité. Une fois par jour, vous pouvez lancer *translocation* comme un sort inné primordial de rang 5.</description>
@@ -1094,7 +1094,7 @@
     <name>MISÉRICORDE CÉLESTE</name>
     <level>13</level>
     <traits>
-      <trait>NÉPHILIM</trait>
+      <trait type="versatile-heritage">NÉPHILIM</trait>
     </traits>
     <prerequisites>Angelin, Porteur de loi, Élu des muses ou un autre don de</prerequisites>
     <description>lignée associé aux célestes Vos pouvoirs célestes vous permettent d’annuler facilement les afflictions inférieures. Vous pouvez lancer *purification des afflictions* deux fois par jour en tant que sort inné divin de rang 4. **NIVEAU 17 AILES ÉTERNELLES DON 17 NÉPHILIM Prérequis** Ailes divines Vos ailes font désormais partie de votre corps. Vous gagnez les effets d’Ailes divines à tout moment, non plus 10 min une fois par jour.</description>
@@ -1103,7 +1103,7 @@
     <name>PROCLAMATION DIVINE</name>
     <level>17</level>
     <traits>
-      <trait>NÉPHILIM</trait>
+      <trait type="versatile-heritage">NÉPHILIM</trait>
     </traits>
     <description>Pour punir vos ennemis, vous pouvez invoquer une parole sainte ou impie des royaumes de l’au-delà. Une fois par jour, vous pouvez lancer *décret divin* comme un sort inné divin de rang 7.</description>
   </feat>

@@ -13,11 +13,13 @@ from utils import strip_metadata
 
 UPPER = r'A-ZÀÂÄÆÇÉÈÊËÎÏÔÖŒÙÛÜŸ'
 
-ANCESTRY_TRAITS = {
+_ANCESTRY_CORE = {
     "ELFE", "GNOME", "GOBELIN", "HALFELIN", "HUMAIN", "LÉCHI", "NAIN", "ORC",
-    "CHANGELIN", "NÉPHILIM",
-    "AIUVARIN", "DROMAAR",
 }
+_VERSATILE_HERITAGE = {"CHANGELIN", "NÉPHILIM"}
+_MIXED_HERITAGE = {"AIUVARIN", "DROMAAR"}
+
+ANCESTRY_TRAITS = _ANCESTRY_CORE | _VERSATILE_HERITAGE | _MIXED_HERITAGE
 
 MULTI_WORD_TRAITS = []  # à compléter si besoin
 
@@ -128,6 +130,16 @@ def parse_traits(traits_raw):
 # ==========================================
 # DÉTECTION DE CATÉGORIE
 # ==========================================
+
+def get_ancestry_trait_type(trait):
+    """Retourne le type d'ascendance d'un trait, ou None si ce n'est pas un trait d'ascendance."""
+    if trait in _ANCESTRY_CORE:
+        return "ancestry"
+    if trait in _VERSATILE_HERITAGE:
+        return "versatile-heritage"
+    if trait in _MIXED_HERITAGE:
+        return "mixed-heritage"
+    return None
 
 def get_category(traits):
     """Retourne 'ancestry' si un trait d'ascendance est détecté, None sinon."""
@@ -359,7 +371,9 @@ def generate_feats_xml(feats_data, output_path):
         if f.get('traits'):
             traits_el = etree.SubElement(feat_el, "traits")
             for t in f['traits']:
-                etree.SubElement(traits_el, "trait").text = t
+                trait_type = get_ancestry_trait_type(t)
+                attrs = {"type": trait_type} if trait_type else {}
+                etree.SubElement(traits_el, "trait", **attrs).text = t
         if f.get('prerequisites'):
             etree.SubElement(feat_el, "prerequisites").text = f['prerequisites']
         if f.get('frequency'):
