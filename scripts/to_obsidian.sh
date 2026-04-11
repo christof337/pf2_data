@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Usage: bash scripts/to_obsidian.sh <input.md> <output.md> <type>
-#   type : sort | monstre
+#   type : sort | monstre | don
 # Exemple :
 #   bash scripts/to_obsidian.sh tests/fixtures/test_sorts_02.md obsidian_vault/preview/sorts_batch_02.md sort
 
@@ -11,7 +11,7 @@ OUTPUT="$2"
 TYPE="${3:-sort}"
 
 if [[ -z "$INPUT" || -z "$OUTPUT" ]]; then
-    echo "Usage: bash scripts/to_obsidian.sh <input.md> <output.md> <type=sort|monstre>"
+    echo "Usage: bash scripts/to_obsidian.sh <input.md> <output.md> <type=sort|monstre|don>"
     exit 1
 fi
 
@@ -27,8 +27,12 @@ case "$TYPE" in
         MAPPER="scripts/monster_mapper.py"
         XSL="xslt/monster_to_obsidian.xsl"
         ;;
+    don)
+        MAPPER="scripts/feats_mapper.py"
+        XSL="xslt/feat_to_obsidian.xsl"
+        ;;
     *)
-        echo "Type inconnu : '$TYPE'. Valeurs acceptées : sort, monstre"
+        echo "Type inconnu : '$TYPE'. Valeurs acceptées : sort, monstre, don"
         exit 1
         ;;
 esac

@@ -32,6 +32,28 @@
     </xs:sequence>
   </xs:complexType>
 
+  <!-- Type de base pour toute activité (action, réaction, don-activité, sous-activité conférée) -->
+  <xs:complexType name="activityType">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <!-- Nombre d'actions (0=libre, 1/2/3=actions, R=réaction, 9=réaction alt.) -->
+      <xs:element name="actions" type="xs:string" minOccurs="0"/>
+      <xs:element name="traits" type="traitListType" minOccurs="0"/>
+      <xs:element name="frequency" type="xs:string" minOccurs="0"/>
+      <xs:element name="trigger" type="xs:string" minOccurs="0"/>
+      <xs:element name="requirement" type="xs:string" minOccurs="0"/>
+      <xs:element name="description" type="xs:string"/>
+      <xs:element name="successDegrees" type="successDegreesType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Activité conférée par un don (ex. S'enraciner dans Racines solides) -->
+  <xs:complexType name="grantedActivityType">
+    <xs:complexContent>
+      <xs:extension base="activityType"/>
+    </xs:complexContent>
+  </xs:complexType>
+
   <!-- Type de base pour une frappe (sans bonus) - utilisé par les formes de combat -->
   <xs:complexType name="baseStrikeType">
     <xs:sequence>

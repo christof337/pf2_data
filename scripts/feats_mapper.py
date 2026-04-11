@@ -142,10 +142,14 @@ def get_ancestry_trait_type(trait):
     return None
 
 def get_category(traits):
-    """Retourne 'ancestry' si un trait d'ascendance est détecté, None sinon."""
+    """Détermine la catégorie d'un don selon ses traits."""
     for t in traits:
         if t in ANCESTRY_TRAITS:
             return "ancestry"
+    if "GÉNÉRAL" in traits and "COMPÉTENCE" in traits:
+        return "skill"
+    if "GÉNÉRAL" in traits:
+        return "general"
     return None
 
 # ==========================================
@@ -165,6 +169,67 @@ def _normalize_split_header(text):
         text,
         flags=re.DOTALL
     )
+
+# ==========================================
+# SOUS-ACTIVITÉS CONFÉRÉES
+# ==========================================
+
+# Détecte **NomAction**\n[digit]\n — ne matche PAS les headers de dons (pas de "DON N")
+_GRANTED_ACTIVITY_PAT = re.compile(
+    r'\*\*([^*\n]+?)\*\*\s*\n\s*([0-9])\s*\n'
+)
+
+def _extract_granted_activities(body):
+    """
+    Extrait les sous-activités imbriquées dans le body d'un don.
+    Format reconnu :
+      **NomAction**
+          [0-9]
+           **Conditions.** texte ; **Effet.**
+      Description de l'activité.
+    Retourne (liste_granted_activities, body_principal_nettoyé).
+    """
+    splits = list(_GRANTED_ACTIVITY_PAT.finditer(body))
+    if not splits:
+        return [], body
+
+    # Le body principal s'arrête avant la première sous-activité
+    main_body = body[:splits[0].start()]
+
+    activities = []
+    for i, m in enumerate(splits):
+        sub_name = clean_text(m.group(1))
+        sub_actions = m.group(2)
+
+        end = splits[i + 1].start() if i + 1 < len(splits) else len(body)
+        sub_content = body[m.end():end]
+
+        # Requirement (Conditions)
+        req_m = re.search(
+            rf'\*\*Conditions?\.?\*\*\s*(.+?)(?=\n\n|\n\s*\*\*|\n\s*[{UPPER}]|\Z)',
+            sub_content, re.DOTALL
+        )
+        sub_req = clean_value(req_m.group(1)) if req_m else None
+        # Supprimer le label "Effet." en fin de valeur (artefact PDF)
+        if sub_req:
+            sub_req = re.sub(r'\s*;\s*Effet\.?\s*$', '', sub_req, flags=re.IGNORECASE).strip() or None
+
+        # Description = ce qui suit le requirement (ou tout le contenu si absent)
+        desc_raw = sub_content[req_m.end():] if req_m else sub_content
+        desc_raw = re.sub(
+            rf'\*\*(?:Fréquence|Déclencheur|Conditions?|Spécial)\.?\*\*\s*.+?(?=\n\n|\n\s*\*\*|\n\s*[{UPPER}]|\Z)',
+            '', desc_raw, flags=re.DOTALL
+        )
+        sub_desc = clean_desc(desc_raw) or None
+
+        activities.append({
+            'name': sub_name,
+            'actions': sub_actions,
+            'requirement': sub_req,
+            'description': sub_desc,
+        })
+
+    return activities, main_body
 
 # ==========================================
 # PARSING D'UN BLOC DE DON
@@ -251,34 +316,64 @@ def parse_feat_block(raw):
     # 6. Catégorie
     category = get_category(traits)
 
-    # 7. Prérequis : peut être dans le header ("Prérequis." avant **) ou dans le body
-    #    Dans le header : header_after_don contient "Prérequis. " + le reste qui est dans body
-    prerequisites = None
+    # 7. Extraire les sous-activités conférées AVANT de parser les mécaniques du don principal
+    #    (évite que **Conditions.** d'une sous-activité soit capturé comme requirement du don)
+    granted_activities, body = _extract_granted_activities(body)
 
-    # Cas header : "Prérequis." dans le header_content → la valeur est au début de body
-    prereq_in_header = re.search(r'(?:Prérequis|Prérequis\.)\s*$', header_content, re.IGNORECASE)
-    if prereq_in_header:
-        # La valeur est sur la première ligne du body (toujours une ligne courte)
-        prereq_val_match = re.match(r'\s*([^\n]+)', body)
-        if prereq_val_match:
-            prerequisites = clean_value(prereq_val_match.group(1))
-            # Avancer le body après cette première ligne
-            body = body[prereq_val_match.end():]
+    # 8. Champs qui peuvent se terminer dans le header (après normalisation split)
+    #    Quand _normalize_split_header capture un nom de champ à l'intérieur des **,
+    #    la VALEUR de ce champ se retrouve en début de body sans marqueur **Champ**.
+    #    Exemples : header se termine par "Fréquence" → body commence par "une fois toutes les 10 min"
+    prerequisites = None
+    frequency = None
+    trigger = None
+    requirement = None
+
+    field_in_header = re.search(
+        r'(Prérequis|Fréquence|Déclencheur|Conditions?)\.?\s*$',
+        header_content, re.IGNORECASE
+    )
+    if field_in_header:
+        field_name = field_in_header.group(1).lower()
+        # La valeur est sur la première ligne du body (parfois deux lignes si coupure de mot)
+        val_match = re.match(r'\s*([^\n]+)', body)
+        if val_match:
+            val_raw = val_match.group(1)
+            body_rest = body[val_match.end():]
+            # Continuation sur la ligne suivante si coupure de mot par tiret
+            if re.search(r'[\u002D\u2011]\s*$', val_raw):
+                cont = re.match(r'\n\s*([^\n]+)', body_rest)
+                if cont:
+                    val_raw = val_raw + '\n' + cont.group(1)
+                    body_rest = body_rest[cont.end():]
+            val = clean_value(val_raw)
+            body = body_rest
+            if 'prérequis' in field_name:
+                prerequisites = val
+            elif field_name == 'fréquence':
+                frequency = val
+            elif field_name == 'déclencheur':
+                trigger = val
+            elif 'condition' in field_name:
+                requirement = val
     else:
         # Cas body : **Prérequis** ou **Prérequis.**
-        prereq_body = re.search(r'\*\*Prérequis\.?\*\*\s*(.+?)(?=\n\s*\*\*|\Z)', body, re.DOTALL)
+        prereq_body = re.search(rf'\*\*Prérequis\.?\*\*\s*(.+?)(?=\n\s*\*\*|\n\s*[{UPPER}]|\Z)', body, re.DOTALL)
         if prereq_body:
             prerequisites = clean_value(prereq_body.group(1))
 
-    # 8. Autres champs dans le body
-    frequency_match = re.search(r'\*\*Fréquence\.?\*\*\s*(.+?)(?=\n\s*\*\*|\Z)', body, re.DOTALL)
-    frequency = clean_value(frequency_match.group(1)) if frequency_match else None
+    # 9. Autres champs dans le body (complètent ou remplacent les valeurs ci-dessus si absentes)
+    if frequency is None:
+        frequency_match = re.search(rf'\*\*Fréquence\.?\*\*\s*(.+?)(?=\n\s*\*\*|\n\s*[{UPPER}]|\Z)', body, re.DOTALL)
+        frequency = clean_value(frequency_match.group(1)) if frequency_match else None
 
-    trigger_match = re.search(r'\*\*Déclencheur\.?\*\*\s*(.+?)(?=\n\s*\*\*|\Z)', body, re.DOTALL)
-    trigger = clean_value(trigger_match.group(1)) if trigger_match else None
+    if trigger is None:
+        trigger_match = re.search(rf'\*\*Déclencheur\.?\*\*\s*(.+?)(?=\n\s*\*\*|\n\s*[{UPPER}]|\Z)', body, re.DOTALL)
+        trigger = clean_value(trigger_match.group(1)) if trigger_match else None
 
-    requirement_match = re.search(r'\*\*Conditions?\.?\*\*\s*(.+?)(?=\n\s*\*\*|\Z)', body, re.DOTALL)
-    requirement = clean_value(requirement_match.group(1)) if requirement_match else None
+    if requirement is None:
+        requirement_match = re.search(rf'\*\*Conditions?\.?\*\*\s*(.+?)(?=\n\s*\*\*|\n\s*[{UPPER}]|\Z)', body, re.DOTALL)
+        requirement = clean_value(requirement_match.group(1)) if requirement_match else None
 
     special_match = re.search(r'\*\*Spécial\.?\*\*\s*(.+?)(?=\n\s*\*\*|\Z)', body, re.DOTALL)
     special = clean_value(special_match.group(1)) if special_match else None
@@ -287,13 +382,11 @@ def parse_feat_block(raw):
     #    et la valeur de prérequis déjà consommée
     desc_body = body
 
-    # Supprimer la valeur de prérequis si elle était en début de body (déjà consommée)
-    if prereq_in_header and prerequisites:
-        pass  # body a déjà été avancé
+    # body a déjà été avancé au-delà de la valeur du champ si field_in_header était non-None
 
     # Supprimer tous les champs nommés du body pour isoler la description
     desc_clean = re.sub(
-        r'\*\*(?:Prérequis|Fréquence|Déclencheur|Conditions?|Spécial)\.?\*\*\s*.+?(?=\n\s*\*\*|\Z)',
+        rf'\*\*(?:Prérequis|Fréquence|Déclencheur|Conditions?|Spécial)\.?\*\*\s*.+?(?=\n\s*\*\*|\n\s*[{UPPER}]|\Z)',
         '', desc_body, flags=re.DOTALL
     )
     description = clean_desc(desc_clean) or None
@@ -310,6 +403,7 @@ def parse_feat_block(raw):
         'requirement': requirement,
         'description': description,
         'special': special,
+        'granted_activities': granted_activities,
     }
 
 # ==========================================
@@ -319,6 +413,13 @@ def parse_feat_block(raw):
 def parse_feats_md(content):
     """Parse le contenu MD et retourne une liste de dictionnaires de dons."""
     content = clean_pdf_artifacts(content)
+
+    # Supprimer les préfixes NIVEAU N qui précèdent le nom du don à l'intérieur
+    # d'un header gras (**NIVEAU 5\nNOM DON N → **NOM DON N).
+    # Gère aussi le cas avec numéro de page : **44 44\nNIVEAU 1\nNOM DON N → **NOM DON N
+    content = re.sub(r'\*\*(?:\d+\s+\d+\s*\n\s*)?NIVEAU\s+\d+\s*\n\s*', '**', content)
+    # Supprimer les lignes NIVEAU N autonomes (pas de ** avant — running heads résiduels)
+    content = re.sub(r'(?m)^\s*NIVEAU\s+\d+\s*$\n?', '', content)
 
     # Normaliser les headers splittés AVANT la découpe en blocs, sinon
     # le split_pat ne peut pas les détecter (le chiffre d'action est hors du **)
@@ -363,9 +464,8 @@ def generate_feats_xml(feats_data, output_path):
         if f.get('category'):
             feat_el.set('category', f['category'])
 
+        # --- Champs hérités de activityType (ordre du schéma) ---
         etree.SubElement(feat_el, "name").text = f['name']
-        if f.get('level') is not None:
-            etree.SubElement(feat_el, "level").text = str(f['level'])
         if f.get('actions') is not None:
             etree.SubElement(feat_el, "actions").text = f['actions']
         if f.get('traits'):
@@ -374,18 +474,28 @@ def generate_feats_xml(feats_data, output_path):
                 trait_type = get_ancestry_trait_type(t)
                 attrs = {"type": trait_type} if trait_type else {}
                 etree.SubElement(traits_el, "trait", **attrs).text = t
-        if f.get('prerequisites'):
-            etree.SubElement(feat_el, "prerequisites").text = f['prerequisites']
         if f.get('frequency'):
             etree.SubElement(feat_el, "frequency").text = f['frequency']
         if f.get('trigger'):
             etree.SubElement(feat_el, "trigger").text = f['trigger']
         if f.get('requirement'):
             etree.SubElement(feat_el, "requirement").text = f['requirement']
-        if f.get('description'):
-            etree.SubElement(feat_el, "description").text = f['description']
+        etree.SubElement(feat_el, "description").text = f.get('description') or ''
+        # --- Champs de l'extension featType ---
+        if f.get('level') is not None:
+            etree.SubElement(feat_el, "level").text = str(f['level'])
+        if f.get('prerequisites'):
+            etree.SubElement(feat_el, "prerequisites").text = f['prerequisites']
         if f.get('special'):
             etree.SubElement(feat_el, "special").text = f['special']
+        for ga in f.get('granted_activities') or []:
+            ga_el = etree.SubElement(feat_el, "grantedActivity")
+            etree.SubElement(ga_el, "name").text = ga['name']
+            if ga.get('actions'):
+                etree.SubElement(ga_el, "actions").text = ga['actions']
+            if ga.get('requirement'):
+                etree.SubElement(ga_el, "requirement").text = ga['requirement']
+            etree.SubElement(ga_el, "description").text = ga.get('description') or ''
 
     tree = etree.ElementTree(root)
     tree.write(output_path, encoding="utf-8", xml_declaration=True, pretty_print=True)
