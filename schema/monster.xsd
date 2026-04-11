@@ -266,7 +266,7 @@
           </xs:simpleContent>
         </xs:complexType>
       </xs:element>
-      <xs:element name="scseecBloc" type="scseecType"/>
+      <xs:element name="successDegrees" type="successDegreesType"/>
     </xs:choice>
   </xs:complexType>
 
@@ -305,13 +305,5 @@
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="scseecType">
-    <xs:sequence>
-      <xs:element name="criticalSuccess" type="xs:string" minOccurs="0"/>
-      <xs:element name="success" type="xs:string" minOccurs="0"/>
-      <xs:element name="failure" type="xs:string" minOccurs="0"/>
-      <xs:element name="criticalFailure" type="xs:string" minOccurs="0"/>
-    </xs:sequence>
-  </xs:complexType>
 
 </xs:schema>

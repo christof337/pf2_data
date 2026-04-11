@@ -680,12 +680,12 @@
                 </traits>
                 <description>
                     27 m, DD 38. Les créatures de Très Grande taille ou plus petite qui entrent dans l’aura doivent tenter un jet de Volonté. Quel que soit le résultat du jet de sauvegarde, la créature est ensuite immunisée contre la Présence majestueuse du titanosaure pendant 1 h.
-                    <scseecBloc>
+                    <successDegrees>
                         <criticalSuccess>La créature n’est pas affectée.</criticalSuccess>
                         <success>La créature est fascinée par le titanosaure pendant 1 round.</success>
                         <failure>La créature est fascinée pendant 2 rounds.</failure>
                         <criticalFailure>La créature est fascinée pendant 1 min.</criticalFailure>
-                    </scseecBloc>
+                    </successDegrees>
                 </description>
             </special>
         </reactiveAbilities>
@@ -1978,11 +1978,11 @@
                 <traits><trait>aura</trait><trait>eau</trait><trait>primordiale</trait><trait>visuel</trait></traits>
                 <description>
                     9 m. La colère du gardien invoque une tempête éblouissante autour de lui qui transforme la zone en terrain difficile. Les créatures qui entrent dans la tempête doivent faire un jet de Volonté DD 45. Une créature qui réussit ce jet de sauvegarde est immunisée contre les leurres visuels pendant 24 h.
-                    <scseecBloc>
+                    <successDegrees>
                         <success>La créature n’est pas affectée.</success>
                         <failure>La créature est éblouie pendant 1 round, et pour la première action de son prochain tour, elle doit utiliser une action simple pour se rapprocher le plus possible du gardien.</failure>
                         <criticalFailure>La créature est éblouie tant qu’elle reste dans l’aura. Lorsqu’elle commence son tour à l’intérieur de l’aura, elle doit utiliser la première action de son tour pour se rapprocher le plus possible du gardien. Elle peut tenter un nouveau jet de sauvegarde à la fin de son tour et met fin à cet effet en cas de succès.</criticalFailure>
-                    </scseecBloc>
+                    </successDegrees>
                 </description>
             </special>
         </interactionAbilities>

@@ -200,7 +200,7 @@
         </xsl:for-each>
     </xsl:template>
     
-        <xsl:template match="scseecBloc">
+        <xsl:template match="successDegrees">
         <br/>
         <xsl:if test="criticalSuccess">
             <b>Succès critique. </b><xsl:value-of select="criticalSuccess"/>

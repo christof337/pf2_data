@@ -20,6 +20,16 @@
     </xs:sequence>
   </xs:complexType>
 
+  <!-- Degrés de succès (Succès critique / Succès / Échec / Échec critique) -->
+  <xs:complexType name="successDegreesType">
+    <xs:sequence>
+      <xs:element name="criticalSuccess" type="xs:string" minOccurs="0"/>
+      <xs:element name="success" type="xs:string" minOccurs="0"/>
+      <xs:element name="failure" type="xs:string" minOccurs="0"/>
+      <xs:element name="criticalFailure" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
   <!-- Type de base pour une frappe (sans bonus) - utilisé par les formes de combat -->
   <xs:complexType name="baseStrikeType">
     <xs:sequence>
