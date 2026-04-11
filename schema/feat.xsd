@@ -65,6 +65,17 @@
         </xs:restriction>
       </xs:simpleType>
     </xs:attribute>
+    <!-- Catégorie de don : ancestry, class, archetype, general -->
+    <xs:attribute name="category" use="optional">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="ancestry"/>
+          <xs:enumeration value="class"/>
+          <xs:enumeration value="archetype"/>
+          <xs:enumeration value="general"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
   </xs:complexType>
 
 </xs:schema>

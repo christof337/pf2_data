@@ -8,6 +8,7 @@ sys.path.append(os.path.relpath("scripts"))
 from monster_mapper import parse_monster_md, generate_monster_xml
 from spells_mapper import parse_spells_md, generate_spells_xml
 from trait_mapper import parse_traits_md, generate_trait_xml
+from feats_mapper import parse_feats_md, generate_feats_xml
 from xml_validator import validate_xml
 
 def run_snapshot_test(name, md_path, expected_xml_path, parse_fn, generate_fn, xsd_path=None):
@@ -110,6 +111,14 @@ if __name__ == "__main__":
             "xsd": "./schema/trait.xsd",
             "parse":    lambda content: parse_traits_md(content, format="ldj"),
             "generate": generate_trait_xml,
+        },
+        {
+            "name": "Dons d'ascendance 01",
+            "md": "./tests/fixtures/test_dons_ascendance_01.md",
+            "xml": "./tests/fixtures/test_dons_ascendance_01_ok.xml",
+            "xsd": "./schema/feat.xsd",
+            "parse": parse_feats_md,
+            "generate": generate_feats_xml,
         },
     ]
 
