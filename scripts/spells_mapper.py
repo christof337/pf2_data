@@ -8,6 +8,12 @@ from xml_validator import validate_xml
 from slug_generator import generate_slug
 from utils import strip_metadata, split_bullet_list, parse_table_markers
 
+_QUIET = False
+
+def _log(*args, **kwargs):
+    if not _QUIET:
+        print(*args, **kwargs)
+
 # ==========================================
 # CONFIGURATION & CONSTANTES
 # ==========================================
@@ -698,10 +704,12 @@ def parse_spell_block(content):
 # PARSING COMPLET DES SORTS
 # ==========================================
 
-def parse_spells_md(content):
+def parse_spells_md(content, quiet=False):
     """Extrait et parse tous les sorts du Markdown brut."""
+    global _QUIET
+    _QUIET = quiet
     spells_data = []
-    print("[PARSING] Début de l'analyse des sorts...")
+    _log("[PARSING] Début de l'analyse des sorts...")
 
 
     # Cat B : Normaliser les headers multi-lignes "1 ** À** 3 **" en une seule ligne
@@ -727,15 +735,15 @@ def parse_spells_md(content):
     
     spell_blocks = [b for b in spell_blocks if re.search(r'\b(?:SORT|TOUR DE MAGIE|FOCALISÉ)\s+\d+', b)]
 
-    print(f"[PARSING] {len(spell_blocks)} sorts isolés.")
+    _log(f"[PARSING] {len(spell_blocks)} sorts isolés.")
 
     for block in spell_blocks:
         if not re.search(r'\b(?:SORT|TOUR DE MAGIE|FOCALISÉ)\s+\d+', block):
-            print(f"[PARSING]   ⚠ bloc sans rang ignoré: {block[:80].strip()!r}")
+            _log(f"[PARSING]   ⚠ bloc sans rang ignoré: {block[:80].strip()!r}")
             continue
         data = parse_spell_block(block)
         spells_data.append(data)
-        print(f"[PARSING]   ✓ {data['name']}")
+        _log(f"[PARSING]   ✓ {data['name']}")
 
     return spells_data
 
@@ -743,10 +751,12 @@ def parse_spells_md(content):
 # GÉNÉRATION XML
 # ==========================================
 
-def generate_spells_xml(spells_data, output_path):
+def generate_spells_xml(spells_data, output_path, quiet=False):
     """Transforme la liste des sorts en fichier XML."""
+    global _QUIET
+    _QUIET = quiet
     start_time = time.time()
-    print("[XML] Début de la génération du fichier XML...")
+    _log("[XML] Début de la génération du fichier XML...")
     
     XSI_NS = "http://www.w3.org/2001/XMLSchema-instance"
     root = etree.Element("spells", nsmap={'xsi': XSI_NS})
@@ -827,7 +837,7 @@ def generate_spells_xml(spells_data, output_path):
     tree.write(output_path, encoding="utf-8", xml_declaration=True, pretty_print=True)
     
     total_time = time.time() - start_time
-    print(f"[XML] ✓ Fichier sauvegardé à {output_path} - {total_time:.3f}s")
+    _log(f"[XML] ✓ Fichier sauvegardé à {output_path} - {total_time:.3f}s")
 
 # ==========================================
 # EXÉCUTION PRINCIPALE

@@ -6,6 +6,12 @@ from lxml import etree
 from xml_validator import validate_xml
 from utils import clean_text, strip_metadata, split_bullet_list
 
+_QUIET = False
+
+def _log(*args, **kwargs):
+    if not _QUIET:
+        print(*args, **kwargs)
+
 # ==========================================
 # PARSING SPÉCIFIQUE MONSTRES
 # ==========================================
@@ -77,11 +83,13 @@ def parse_ability_block(text):
         
     return abilities
 
-def parse_monster_md(content):
+def parse_monster_md(content, quiet=False):
     """Analyse le Markdown brut (issu de pdfplumber) pour extraire les données du monstre."""
+    global _QUIET
+    _QUIET = quiet
     content = strip_metadata(content)
     monster_data = {}
-    print("[PARSING] Début de l'analyse du Markdown...")
+    _log("[PARSING] Début de l'analyse du Markdown...")
     
     # 1. Flux principal
     main_section = content.split("# FLUX PRINCIPAL (STATS/BASE)")[1]
@@ -100,7 +108,7 @@ def parse_monster_md(content):
             monster_data['traits'] = [t for t in traits_match.group(2).split() if t.isupper()]
             
         main_section = main_section[header_match.end():]
-        print(f"[PARSING]    ✓ Nom: {monster_data['name']}, Niveau: {monster_data['level']}")
+        _log(f"[PARSING]    ✓ Nom: {monster_data['name']}, Niveau: {monster_data['level']}")
 
     # 3. Perception
     percept_match = re.search(r'Perception\*\*\s*\+?(\d+)\s*;\s*(.*?)(?=\n\s*\*\*)', main_section, re.DOTALL)
@@ -119,7 +127,7 @@ def parse_monster_md(content):
                     'source': s_match.group(4)
                 })
         main_section = main_section[percept_match.end():]
-        print(f"[PARSING]    ✓ Perception et {len(monster_data['senses'])} sens détectés.")
+        _log(f"[PARSING]    ✓ Perception et {len(monster_data['senses'])} sens détectés.")
 
     # 4. Langues
     lang_match = re.search(r'\*\*Langues\*\*\s+(.*?)(?=\n\s*\*\*Compétences)', main_section, re.DOTALL)
@@ -180,7 +188,7 @@ def parse_monster_md(content):
         
         weak_m = re.search(r'\*\*Faiblesse[s]?\s*\*\*\s*([a-zA-Zà-ÿ\s]+)\s+(\d+)', defenses_text)
         monster_data['weaknesses'] = [{'name': weak_m.group(1).strip(), 'value': weak_m.group(2)}] if weak_m else []
-        print("[PARSING]    ✓ Défenses extraites.")
+        _log("[PARSING]    ✓ Défenses extraites.")
 
     # 9. Capacités réactives
     vit_match = re.search(r'(?:^|\n)\*\*Vitesses\*\*', main_section)
@@ -311,10 +319,12 @@ def add_abilities_to_xml(parent_node, abilities_list, tag_name):
             for item in abi['list_items']:
                 etree.SubElement(list_node, "listItem").text = item
 
-def generate_monster_xml(data, output_path):
+def generate_monster_xml(data, output_path, quiet=False):
     """Transforme le dictionnaire de données en un fichier XML formaté."""
+    global _QUIET
+    _QUIET = quiet
     start_time = time.time()
-    print("[XML] Début de la génération du fichier XML...")
+    _log("[XML] Début de la génération du fichier XML...")
     
     XSI_NS = "http://www.w3.org/2001/XMLSchema-instance"
     root = etree.Element("monsters", nsmap={'xsi': XSI_NS})
@@ -472,7 +482,7 @@ def generate_monster_xml(data, output_path):
     tree.write(output_path, encoding="UTF-8", xml_declaration=True, pretty_print=True)
     
     total_time = time.time() - start_time
-    print(f"[XML] ✓ Génération complète en {total_time:.3f}s\n")
+    _log(f"[XML] ✓ Génération complète en {total_time:.3f}s\n")
 
 # ==========================================
 # EXÉCUTION PRINCIPALE

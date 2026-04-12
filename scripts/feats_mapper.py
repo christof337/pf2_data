@@ -426,7 +426,7 @@ def parse_feat_block(raw):
 # PARSING GLOBAL
 # ==========================================
 
-def parse_feats_md(content):
+def parse_feats_md(content, quiet=False):
     """Parse le contenu MD et retourne une liste de dictionnaires de dons."""
     content = clean_pdf_artifacts(content)
 
@@ -463,7 +463,7 @@ def parse_feats_md(content):
 # GÉNÉRATION XML
 # ==========================================
 
-def generate_feats_xml(feats_data, output_path):
+def generate_feats_xml(feats_data, output_path, quiet=False):
     """Génère le fichier XML des dons à partir des données parsées."""
     XSI = "http://www.w3.org/2001/XMLSchema-instance"
     root = etree.Element("feats", nsmap={'xsi': XSI})

@@ -22,11 +22,11 @@ def run_snapshot_test(name, md_path, expected_xml_path, parse_fn, generate_fn, x
         expected_xml = f.read()
 
     # 2. Exécution du mapper dans un fichier temporaire
-    data = parse_fn(md_content)
+    data = parse_fn(md_content, quiet=True)
 
     with tempfile.TemporaryDirectory() as tmpdirname:
         temp_output = os.path.join(tmpdirname, "actual_output.xml")
-        generate_fn(data, temp_output)
+        generate_fn(data, temp_output, quiet=True)
 
         with open(temp_output, 'r', encoding='utf-8') as f:
             actual_xml = f.read()
@@ -64,7 +64,7 @@ def run_snapshot_test(name, md_path, expected_xml_path, parse_fn, generate_fn, x
 
 def discover_sort_batch_tests():
     """Auto-découvre les batches de sorts validés (test_sorts_NN_ok.xml)."""
-    fixture_dir = "./tests/fixtures"
+    fixture_dir = "./tests/fixtures/sorts"
     batch_tests = []
     for i in range(1, 11):
         xml_path = os.path.join(fixture_dir, f"test_sorts_{i:02d}_ok.xml")
@@ -81,6 +81,26 @@ def discover_sort_batch_tests():
     return batch_tests
 
 
+def discover_dons_ascendance_tests():
+    """Auto-découvre les dons d'ascendance validés (test_dons_ascendance_*_ok.xml)."""
+    fixture_dir = "./tests/fixtures/dons"
+    batch_tests = []
+    import glob
+    for xml_path in sorted(glob.glob(os.path.join(fixture_dir, "test_dons_ascendance_*_ok.xml"))):
+        slug = os.path.basename(xml_path).replace("test_dons_ascendance_", "").replace("_ok.xml", "")
+        md_path = os.path.join(fixture_dir, f"test_dons_ascendance_{slug}.md")
+        if os.path.exists(md_path):
+            batch_tests.append({
+                "name": f"Dons d'ascendance — {slug}",
+                "md":   md_path,
+                "xml":  xml_path,
+                "xsd":  "./schema/feat.xsd",
+                "parse":    parse_feats_md,
+                "generate": generate_feats_xml,
+            })
+    return batch_tests
+
+
 if __name__ == "__main__":
     print("="*50)
     print("LANCEMENT DES TESTS DE NON-RÉGRESSION")
@@ -90,35 +110,27 @@ if __name__ == "__main__":
     tests = [
         {
             "name": "Jeune Dragon Empyréen (Monstre Standard)",
-            "md":  "./tests/fixtures/test_dragon.md",
-            "xml": "./tests/fixtures/test_dragon_ok.xml",
+            "md":  "./tests/fixtures/monstres/test_dragon.md",
+            "xml": "./tests/fixtures/monstres/test_dragon_ok.xml",
             "xsd": "./schema/monster.xsd",
             "parse":    parse_monster_md,
             "generate": generate_monster_xml,
         },
         {
             "name": "Traits LdM (format §**Nom.** description)",
-            "md":  "./tests/fixtures/test_traits.md",
-            "xml": "./tests/fixtures/test_traits_ok.xml",
+            "md":  "./tests/fixtures/traits/test_traits.md",
+            "xml": "./tests/fixtures/traits/test_traits_ok.xml",
             "xsd": "./schema/trait.xsd",
             "parse":    parse_traits_md,
             "generate": generate_trait_xml,
         },
         {
             "name": "Traits LdJ (format **Nom** (trait). — 9 cas edge)",
-            "md":  "./tests/fixtures/test_traits_ldj.md",
-            "xml": "./tests/fixtures/test_traits_ldj_ok.xml",
+            "md":  "./tests/fixtures/traits/test_traits_ldj.md",
+            "xml": "./tests/fixtures/traits/test_traits_ldj_ok.xml",
             "xsd": "./schema/trait.xsd",
-            "parse":    lambda content: parse_traits_md(content, format="ldj"),
+            "parse":    lambda content, quiet=False: parse_traits_md(content, format="ldj", quiet=quiet),
             "generate": generate_trait_xml,
-        },
-        {
-            "name": "Dons d'ascendance 01",
-            "md": "./tests/fixtures/test_dons_ascendance_01.md",
-            "xml": "./tests/fixtures/test_dons_ascendance_01_ok.xml",
-            "xsd": "./schema/feat.xsd",
-            "parse": parse_feats_md,
-            "generate": generate_feats_xml,
         },
     ]
 
@@ -129,6 +141,14 @@ if __name__ == "__main__":
     else:
         print("  → Aucun golden de sorts validé trouvé (test_sorts_NN_ok.xml).\n")
     tests.extend(sort_batches)
+
+    # Dons d'ascendance : auto-découverte par ascendance
+    dons_batches = discover_dons_ascendance_tests()
+    if dons_batches:
+        print(f"  → {len(dons_batches)} fichier(s) de dons d'ascendance trouvé(s) et inclus dans la suite.\n")
+    else:
+        print("  → Aucun golden de dons d'ascendance validé trouvé.\n")
+    tests.extend(dons_batches)
 
     all_passed = True
     for t in tests:

@@ -7,13 +7,17 @@ from xml_validator import validate_xml
 from slug_generator import generate_slug
 from utils import clean_text, strip_metadata
 
+_QUIET = False
 
+def _log(*args, **kwargs):
+    if not _QUIET:
+        print(*args, **kwargs)
 
 # ==========================================
 # PARSING SPÉCIFIQUE TRAITS
 # ==========================================
 
-def parse_traits_md(content, format="ldm"):
+def parse_traits_md(content, format="ldm", quiet=False):
     """
     Extrait la liste des traits depuis le Markdown.
 
@@ -24,9 +28,11 @@ def parse_traits_md(content, format="ldm"):
         Le suffixe " (trait)" est supprimé du nom ; les numéros de page en fin de
         description sont tronqués.
     """
+    global _QUIET
+    _QUIET = quiet
     content = strip_metadata(content)
     traits_data = []
-    print(f"[PARSING] Début de l'analyse des traits (format={format})...")
+    _log(f"[PARSING] Début de l'analyse des traits (format={format})...")
 
     # 0. Normalisation : tiret non-sécable (U+2011) → tiret ordinaire
     content = content.replace('\u2011', '-')
@@ -64,7 +70,7 @@ def _parse_traits_ldm(content, traits_data):
         traits_data.append({'id': trait_id, 'name': name, 'description': desc})
         count += 1
 
-    print(f"[PARSING] ✓ {count} traits détectés et extraits.")
+    _log(f"[PARSING] ✓ {count} traits détectés et extraits.")
     return traits_data
 
 
@@ -152,20 +158,22 @@ def _parse_traits_ldj(content, traits_data):
         traits_data.append({'id': trait_id, 'name': name, 'description': desc})
         count += 1
 
-    print(f"[PARSING] ✓ {count} traits (trait) retenus depuis le glossaire LdJ.")
+    _log(f"[PARSING] ✓ {count} traits (trait) retenus depuis le glossaire LdJ.")
     return traits_data
 
 # ==========================================
 # GÉNÉRATION XML
 # ==========================================
 
-def generate_trait_xml(traits_data, output_path):
+def generate_trait_xml(traits_data, output_path, quiet=False):
     """
     Construit l'arbre XML à partir de la liste des traits
     et l'écrit dans le fichier de sortie.
     """
+    global _QUIET
+    _QUIET = quiet
     start_time = time.time()
-    print("[XML] Début de la génération du fichier XML...")
+    _log("[XML] Début de la génération du fichier XML...")
     
     XSI_NS = "http://www.w3.org/2001/XMLSchema-instance"
     root = etree.Element("traits", nsmap={'xsi': XSI_NS})
@@ -184,7 +192,7 @@ def generate_trait_xml(traits_data, output_path):
     
     tree.write(output_path, encoding="UTF-8", xml_declaration=True, pretty_print=True)
     
-    print(f"[XML] ✓ Fichier sauvegardé à {output_path} - {time.time() - start_time:.3f}s")
+    _log(f"[XML] ✓ Fichier sauvegardé à {output_path} - {time.time() - start_time:.3f}s")
 
 # ==========================================
 # EXÉCUTION PRINCIPALE
