@@ -400,6 +400,7 @@ def parse_feat_block(raw):
     # Doit précéder Rule 1 car Rule 1 peut consumer le ** fermant de **NN NN**
     # via \*\*\s*[UPPER] si le saut de ligne suivant mène à une majuscule.
     desc_clean = re.sub(r'\*\*\d+\s+\d+\*\*.*', '', desc_clean, flags=re.DOTALL)
+    # ⚠️ : règles 1 et 2 si dessous risquées, peuvent masquer des problèmes de découpage, faire perdre un spécial etc
     # Règle 1 : tronquer à **[MAJUSCULE] (début d'un autre don fusionné)
     desc_clean = re.sub(rf'\*\*\s*[{UPPER}].*', '', desc_clean, flags=re.DOTALL)
     # Règle 2 : tronquer à une ligne MAJUSCULES DON N (don non découpé fusionné)
