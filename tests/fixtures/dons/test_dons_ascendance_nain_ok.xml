@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feats xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/feat.xsd">
+  <feat id="feat-arpenteur-des-roches" type="don" category="ancestry">
+    <name>ARPENTEUR DES ROCHES</name>
+    <traits>
+      <trait type="ancestry">NAIN</trait>
+    </traits>
+    <description>Vous possédez une étroite connexion avec la pierre, qui vous permet de vous déplacer plus facilement sur des surfaces accidentées. Vous pouvez ignorer la difficulté des terrains liée à la pierre (comme des gravats ou des cailloux) et aux sols irréguliers de pierre et de terre. En outre, quand vous utilisez la compétence Acrobaties pour Garder l’équilibre sur des surfaces étroites ou sur un sol inégal de pierre ou de terre, vous n’êtes pas pris par surprise et, quand vous obtenez un succès à l’un de ces tests d’Acrobaties, vous obtenez un succès critique à la place. Langues supplémentaires : un nombre égal à votre modificateur d’Intelligence (s’il est positif). Choisissez parmi les langues suivantes : gnomien, gobelin, jotun, orquien, pétran, sakvroth ainsi que toutes les autres langues auxquelles vous avez accès (comme les langues les plus répandues dans votre région).</description>
+    <level>1</level>
+  </feat>
+  <feat id="feat-familiarite-avec-les-armes-naines" type="don" category="ancestry">
+    <name>FAMILIARITÉ AVEC LES ARMES NAINES</name>
+    <traits>
+      <trait type="ancestry">NAIN</trait>
+    </traits>
+    <description>Vous avez développé auprès de vos congénères une affinité pour les armes qui frappent fort et vous les préférez à des armes plus élégantes. Vous avez accès aux armes peu courantes avec le trait nain. Vous êtes familiarisé avec les armes ayant le trait nain, ainsi qu’avec la hache d’armes, le pic et le marteau de guerre. En ce qui concerne la maîtrise de ces armes, vous considérez toutes les armes de guerre comme des armes simples et toutes les armes évoluées comme des armes de guerre. Au niveau 5, chaque fois que vous obtenez un coup critique avec l’une de ces armes, vous bénéficiez de son effet critique spécialisé.</description>
+    <level>1</level>
+  </feat>
+  <feat id="feat-fer-allege" type="don" category="ancestry">
+    <name>FER ALLÉGÉ</name>
+    <traits>
+      <trait type="ancestry">NAIN</trait>
+    </traits>
+    <description>Vous avez appris des techniques découvertes par vos ancêtres lors d’anciennes guerres, qui vous permettent de porter plus facilement de lourdes armures. Vous ignorez la réduction de Vitesse de l’armure que vous portez. En outre, chaque fois qu’une autre source vous inflige un malus affectant votre Vitesse (si vous vous trouvez dans l’état surchargé ou sous l’effet d’un sort), vous réduisez ce malus de 1,5 m. Par exemple, l’état surchargé, qui vous infligerait normalement un malus de Vitesse de −3 m, ne vous inflige qu’un malus de −1,5 m. Si plusieurs effets vous infligent des malus de Vitesse, choisissez-en un dont vous réduirez l’intensité.</description>
+    <level>1</level>
+  </feat>
+  <feat id="feat-oeil-du-tailleur-de-pierre" type="don" category="ancestry">
+    <name>ŒIL DU TAILLEUR DE PIERRE</name>
+    <traits>
+      <trait type="ancestry">NAIN</trait>
+    </traits>
+    <description>Vous comprenez les subtilités du travail de la pierre. Vous devenez qualifié en Artisanat. Si vous êtes déjà qualifié en Artisanat, à la place vous gagnez le don de compétence Artisanat spécialisé pour la Taille de pierre. Vous gagnez aussi un bonus de circonstances de +2 à vos tests de Perception pour remarquer les constructions en pierre inhabituelles. Ce bonus s’applique à vos tests pour découvrir des pièges mécaniques de pierre ou cachés par de la pierre. Même si vous n’utilisez pas l’action Chercher ou que vous n’êtes pas en train d’étudier les alentours, le MJ fait automatiquement un test secret pour déterminer si vous notez des irrégularités dans les constructions de pierre. Vous ne bénéficiez pas de votre bonus de circonstances habituel pour ce test.</description>
+    <level>1</level>
+  </feat>
+  <feat id="feat-strategie-des-montagnards" type="don" category="ancestry">
+    <name>STRATÉGIE DES MONTAGNARDS</name>
+    <traits>
+      <trait type="ancestry">NAIN</trait>
+    </traits>
+    <description>Les nains combattent depuis très longtemps des adversaires communs et vous maîtrisez les anciennes tactiques qui permettent de lutter contre ces ennemis. Vous gagnez un bonus de circonstances de +1 aux dégâts que vous infligez avec vos armes ou à mains nues contre les créatures possédant les traits géant, gobelin, hryngar ou orc. Si vous lancez plus d’un dé de dégâts d’arme (comme c’est souvent le cas au-delà du niveau 1), ce bonus est alors égal au nombre de dés de dégâts d’arme ou d’attaque à mains nues que vous lancez. En outre, si une créature réussit une attaque critique contre vous et vous inflige des dégâts, vous bénéficiez de votre bonus de dégâts contre cette créature pendant 1 min, même si elle ne possède pas le trait que vous avez choisi.</description>
+    <level>1</level>
+    <special>Si votre personnage est issu d’une communauté qui se trouve souvent en conflit avec d’autres types d’ennemis, votre MJ peut ajouter les traits de créatures appropriés à votre liste d’ennemis ancestraux.</special>
+  </feat>
+  <feat id="feat-vaillance-naine" type="don" category="ancestry">
+    <name>VAILLANCE NAINE</name>
+    <traits>
+      <trait type="ancestry">NAIN</trait>
+    </traits>
+    <description>Vous êtes naturellement calme et serein face à un danger imminent. À la fin de votre tour, réduisez votre état effrayé de 2 au lieu de 1.</description>
+    <level>1</level>
+  </feat>
+  <feat id="feat-defier-les-tenebres" type="don" category="ancestry">
+    <name>DÉFIER LES TÉNÈBRES</name>
+    <traits>
+      <trait type="ancestry">NAIN</trait>
+    </traits>
+    <description>Grâce à d’anciennes méthodes naines développées pour combattre des ennemis en maniant des ténèbres magiques, vous avez affûté votre vision dans le noir et juré de ne jamais utiliser une telle magie. Vous gagnez vision dans le noir supérieure, ce qui vous permet de voir à travers des ténèbres magiques, même si elles bloquent habituellement ce pouvoir (comme les ténèbres créées par un sort *ténèbres *de rang 4). Vous ne pouvez pas lancer de sorts avec le trait ténèbres, utiliser d’activation d’objet avec le trait ténèbres ou utiliser tout autre pouvoir avec le trait ténèbres.</description>
+    <level>5</level>
+    <prerequisites>vision dans le noir</prerequisites>
+  </feat>
+  <feat id="feat-pas-du-roc" type="don" category="ancestry">
+    <name>PAS DU ROC</name>
+    <actions>2</actions>
+    <traits>
+      <trait type="ancestry">NAIN</trait>
+    </traits>
+    <description>Votre carrure de nain vous permet de repousser vos adversaires, à la manière d’un gros rocher dévalant un tunnel souterrain. Si vous Faites un pas dans la case d’un adversaire dont la taille est égale ou inférieure à la vôtre, celui-ci doit se déplacer dans l’espace vide qui se trouve directement derrière lui. L’adversaire est obligé de se déplacer, même si cela le met en danger. Il peut tenter un jet de sauvegarde de Vigueur contre votre DD d’Athlétisme afin de vous empêcher de Faire un pas. Si l’adversaire tente ce jet de sauvegarde, il subit un montant de dégâts contondants égal à votre niveau plus votre modificateur de Force, à moins qu’il obtienne une réussite critique. Si votre adversaire ne peut pas se déplacer dans un espace vide (s’il est entouré d’objets solides ou d’autres créatures, par exemple), votre Pas du roc n’a aucun effet.</description>
+    <level>5</level>
+    <prerequisites>Arpenteur des roches</prerequisites>
+  </feat>
+  <feat id="feat-renforcement-nain" type="don" category="ancestry">
+    <name>RENFORCEMENT NAIN</name>
+    <traits>
+      <trait type="ancestry">NAIN</trait>
+    </traits>
+    <description>Vous pouvez utiliser votre savoir en ingénierie et en ferronnerie pour renforcer temporairement des objets et structures épais. En passant 1 h à travailler sur un objet, vous octroyez à sa Solidité un bonus de circonstances de +1 pendant 24 h. Si vous êtes un maître en Artisanat, le bonus est de +2 et il est de +3 si vous êtes légendaire. Vous pouvez renforcer une partie d’une structure, bien qu’une heure ne renforce en général qu’une porte, quelques fenêtres ou une autre section rentrant dans un cube de 3 m d’arête. ÉCHOS DE LA PIERRE ** 1</description>
+    <level>5</level>
+    <prerequisites>expert en Artisanat</prerequisites>
+  </feat>
+  <feat id="feat-marchepierre" type="don" category="ancestry">
+    <name>MARCHEPIERRE</name>
+    <traits>
+      <trait type="ancestry">NAIN</trait>
+    </traits>
+    <description>Vous faites preuve d’un profond respect pour la pierre, avec laquelle vous vous sentez étroitement lié. Une fois par jour, vous pouvez lancer *uni à la pierre* en tant que sort inné divin de rang 3. Si vous possédez également le don Œil du tailleur de pierre, vous pouvez tenter de repérer des irrégularités et des pièges dans les constructions de pierre qui demandent normalement un rang de maîtrise légendaire en Perception. Si vous avez à la fois Œil du tailleur de pierre et une maîtrise légendaire en Perception, quand le MJ effectue un test secret pour vous afin de remarquer des irrégularités, vous conservez votre bonus d’Œil du tailleur de pierre.</description>
+    <level>9</level>
+  </feat>
+  <feat id="feat-os-de-pierre" type="don" category="ancestry">
+    <name>OS DE PIERRE</name>
+    <actions>9</actions>
+    <traits>
+      <trait type="ancestry">NAIN</trait>
+    </traits>
+    <trigger>Vous êtes touché par un coup critique qui inflige des</trigger>
+    <description>dégâts physiques. Votre nature intraitable peut vous aider à ignorer même les blessures les plus douloureuses. Faites un test nu DD 17. Sur un succès, l’attaque devient un coup normal.</description>
+    <level>9</level>
+  </feat>
+  <feat id="feat-robustesse-de-la-montagne" type="don" category="ancestry">
+    <name>ROBUSTESSE DE LA MONTAGNE</name>
+    <traits>
+      <trait type="ancestry">NAIN</trait>
+    </traits>
+    <description>Votre robustesse vous permet d’endurer plus de dégâts que la plupart. Ajoutez votre niveau à votre maximum de points de vie. Quand vous souffrez de l’état mourant, le DD de vos tests de récupération est égal à 9 + l’intensité de votre état mourant (au lieu de 10 plus l’intensité de l’état mourant). Si vous possédez également le don Robustesse, les points de vie gagnés grâce à ces deux dons se cumulent et le DD de vos tests de récupération est égal à 6 + l’intensité de votre état mourant</description>
+    <level>9</level>
+  </feat>
+  <feat id="feat-marche-dans-les-mines" type="don" category="ancestry">
+    <name>MARCHE DANS LES MINES</name>
+    <actions>2</actions>
+    <traits>
+      <trait type="ancestry">NAIN</trait>
+    </traits>
+    <description>Vous marchez à travers la terre, accompagné d’un allié. Vous gagnez une Vitesse de creusement de 4,5 m quand vous utilisez cette activité (si vous n’avez pas une Vitesse supérieure) puis soit vous Marchez rapidement deux fois, soit vous Creusez deux fois. Au début de votre déplacement, vous pouvez choisir un allié consentant qui vous est adjacent et qui se déplacera avec vous. Cet allié termine son déplacement une case derrière vous.</description>
+    <level>13</level>
+  </feat>
+  <feat id="feat-puissance-tellurique" type="don" category="ancestry">
+    <name>PUISSANCE TELLURIQUE</name>
+    <traits>
+      <trait type="ancestry">NAIN</trait>
+    </traits>
+    <description>Vous canalisez la force de la terre sous vos pieds pour rosser vos ennemis. Lorsque vous effectuez une Frappe au corps à corps contre une cible qui se tient sur la même surface de terre ou de pierre que vous, vous gagnez un bonus de circonstances au jet de dégâts égal au nombre de dés de dégâts d’arme.</description>
+    <level>13</level>
+  </feat>
+  <feat id="feat-portail-de-pierre" type="don" category="ancestry">
+    <name>PORTAIL DE PIERRE</name>
+    <traits>
+      <trait>PEU</trait>
+      <trait>COURANT</trait>
+      <trait type="ancestry">NAIN</trait>
+    </traits>
+    <description>Les barrières de terre ne font plus obstacle à votre progression. Vous gagnez *passage magique *comme sort inné divin de rang 7 et pouvez le lancer une fois par jour. Toutefois, contrairement au sort, ce pouvoir ne peut être utilisé que pour ouvrir un passage à travers une barrière de terre ou de pierre.</description>
+    <level>17</level>
+    <prerequisites>Marchepierre</prerequisites>
+  </feat>
+  <feat id="feat-rempart-de-pierre" type="don" category="ancestry">
+    <name>REMPART DE PIERRE</name>
+    <actions>9</actions>
+    <traits>
+      <trait type="ancestry">NAIN</trait>
+      <trait>TERRE</trait>
+      <trait>MÉTAMORPHOSE</trait>
+    </traits>
+    <frequency>une fois par jour</frequency>
+    <trigger>Vous êtes victime d’un effet émanant d’un ennemi ou d’un danger, ou vous ratez un jet de Vigueur contre un tel effet.</trigger>
+    <description>La force de la pierre déferle en vous de manière si puissante qu’elle remplace votre corps. Vous êtes pétrifié jusqu’à la fin du tour actuel. Vous ne subissez aucun dégât dû à l’effet déclencheur ou tout autre effet néfaste qui ne peut affecter la pierre.</description>
+    <level>17</level>
+  </feat>
+</feats>

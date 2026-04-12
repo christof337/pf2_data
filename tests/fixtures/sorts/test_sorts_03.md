@@ -1108,6 +1108,20 @@ créatures dans la faille doivent effectuer un jet de Vigueur.
  vulnérabilité 10 au feu. Elle bénéficie des immunités des objets
  (p. 269) et est détruite si la cible S’échappe.
 **Intensifié (+1).** Les dégâts augmentent de 1d8 et les PV de 5.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 **FANAL DE VIE             SORT 4
 CONCENTRATION GUÉRISON MANIPULATION VITALITÉ
 Traditions** divine, primordiale
@@ -1271,6 +1285,14 @@ une action Interagir pour implorer et poser les mains sur vous pour
          La silhouette de la cible semble floue. Elle devient masquée. La nature
          de cet effet ne dissimule pas l’emplacement de la cible, celle-ci ne peut
          donc pas en profiter pour Se cacher ou Être furtive.
+
+
+
+
+
+
+
+
          **FLUCTUATION** 
                 2
                    **               SORT 4
@@ -1290,6 +1312,7 @@ une action Interagir pour implorer et poser les mains sur vous pour
          CONCENTRATION MANIPULATION MÉTAMORPHOSE
          Traditions** arcanique, primordiale
          **Durée** 1 min
+
          Vous puisez dans votre maîtrise des cieux pour remodeler votre corps
          en une forme de combat : celle d’un animal volant de taille Moyenne.
          Lorsque vous Lancez ce sort, choisissez l’une des formes de combat

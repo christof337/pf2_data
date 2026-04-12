@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feats xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/feat.xsd">
+  <feat id="feat-cavalier-des-prairies" type="don" category="ancestry">
+    <name>CAVALIER DES PRAIRIES</name>
+    <traits>
+      <trait type="ancestry">HALFELIN</trait>
+    </traits>
+    <description>Vous avez grandi sur le dos des poneys hirsutes et des chiens de selle de votre clan. Vous devenez qualifié en Nature. Si vous êtes déjà automatiquement qualifié en Nature (grâce à votre historique ou à votre classe, par exemple), vous devenez alors qualifié dans une compétence de votre choix. Vous obtenez aussi un bonus de circonstances de +1 pour Diriger un animal si la cible est une monture traditionnelle halfeline, comme un poney ou un chien de selle.</description>
+    <level>1</level>
+  </feat>
+  <feat id="feat-chance-halfeline" type="don" category="ancestry">
+    <name>CHANCE HALFELINE</name>
+    <actions>0</actions>
+    <traits>
+      <trait>FORTUNE</trait>
+      <trait type="ancestry">HALFELIN</trait>
+    </traits>
+    <frequency>une fois par jour</frequency>
+    <trigger>Vous échouez à un test de compétence ou à un jet de sauvegarde.</trigger>
+    <description>Votre nature insouciante donne l’impression que la malchance vous évite et, dans une certaine mesure, c’est peut-être bien le cas. Vous pouvez relancer le test qui déclenche ce pouvoir, mais vous devez alors utiliser le nouveau résultat, même s’il est moins bon que le premier.</description>
+    <level>1</level>
+  </feat>
+  <feat id="feat-connaissances-sur-les-halfelins" type="don" category="ancestry">
+    <name>CONNAISSANCES SUR LES HALFELINS</name>
+    <traits>
+      <trait type="ancestry">HALFELIN</trait>
+    </traits>
+    <description>Vous avez consciencieusement appris à conserver votre équilibre et à rester en sûreté dans les ombres, des compétences vitales transmises de génération en génération de halfelins. Vous gagnez le rang de maîtrise qualifié en Acrobaties et en Discrétion. Si vous êtes déjà automatiquement qualifié dans l’une de ces compétences (grâce à votre historique ou à votre classe, par exemple), vous devenez alors qualifié dans une compétence de votre choix. Vous gagnez aussi le don général de Connaissances supplémentaire pour la compétence Connaissances sur les halfelins.</description>
+    <level>1</level>
+  </feat>
+  <feat id="feat-familiarite-avec-les-armes-halfelines" type="don" category="ancestry">
+    <name>FAMILIARITÉ AVEC LES ARMES HALFELINES</name>
+    <traits>
+      <trait type="ancestry">HALFELIN</trait>
+    </traits>
+    <description>Vous avez une prédilection pour les armes halfelines et avez ainsi appris à les utiliser correctement. Vous avez accès aux armes peu courantes avec le trait halfelin. Vous êtes familiarisé avec les armes ayant le trait halfelin, ainsi qu’avec les frondes et les épées courtes. En ce qui concerne la maîtrise de ces armes, vous considérez toutes les armes de guerre comme des armes simples et toutes les armes évoluées comme des armes de guerre. Au niveau 5, chaque fois que vous obtenez un coup critique avec l’une de ces armes, vous bénéficiez de son effet critique spécialisé.</description>
+    <level>1</level>
+  </feat>
+  <feat id="feat-frondeur-de-titans" type="don" category="ancestry">
+    <name>FRONDEUR DE TITANS</name>
+    <traits>
+      <trait type="ancestry">HALFELIN</trait>
+    </traits>
+    <description>Vous avez appris à utiliser votre fronde pour abattre des créatures énormes. Quand vous réussissez une attaque avec une arme du groupe des frondes contre une créature dont la taille est Grande ou supérieure, vous augmentez la taille du dé de dégâts d’un échelon (vous pouvez trouver des détails sur l’augmentation de la taille des dés de dégâts p. 276).</description>
+    <level>1</level>
+  </feat>
+  <feat id="feat-halfelin-libre" type="don" category="ancestry">
+    <name>HALFELIN LIBRE</name>
+    <traits>
+      <trait type="ancestry">HALFELIN</trait>
+    </traits>
+    <description>Vous avez été asservi ou enchaîné dans une prison, mais vous vous êtes évadé et vous vous êtes entraîné pour ne plus jamais être capturé. Quand vous obtenez un succès à un test pour vous Échapper ou à un jet de sauvegarde contre un effet qui vous imposerait l’état empoigné, immobilisé ou entravé, vous obtenez un succès critique à la place. Quand une créature échoue à un test pour vous Saisir, elle obtient un échec critique à la place.</description>
+    <level>1</level>
+  </feat>
+  <feat id="feat-halfelin-vigilant" type="don" category="ancestry">
+    <name>HALFELIN VIGILANT</name>
+    <traits>
+      <trait type="ancestry">HALFELIN</trait>
+    </traits>
+    <description>Vous faites attention aux gens qui vous entourent et vous remarquez plus facilement quand leur comportement est inhabituel. Vous gagnez un bonus de circonstances de +2 à vos tests de Perception quand vous utilisez l’action basique Deviner les intentions afin de remarquer les personnages enchantés ou possédés. Si vous n’êtes pas en train de tenter de Deviner les intentions d’un personnage enchanté ou possédé, le MJ effectue un test secret, sans votre bonus de circonstances habituel, afin de déterminer si vous remarquez que cette créature est enchantée ou possédée. En plus de l’utiliser pour les tests de compétences, vous pouvez utiliser l’action basique Aider pour accorder un bonus à une autre créature qui tente un jet de sauvegarde ou un autre test afin de passer outre un enchantement ou une possession. Comme c’est le cas avec l’action Aider, vous devez vous préparer en utilisant une action lors de votre tour afin d’encourager la créature à lutter contre l’effet.</description>
+    <level>1</level>
+  </feat>
+  <feat id="feat-ombres-distrayantes" type="don" category="ancestry">
+    <name>OMBRES DISTRAYANTES</name>
+    <traits>
+      <trait type="ancestry">HALFELIN</trait>
+    </traits>
+    <description>Vous avez appris à rester caché en utilisant les grandes personnes comme distraction pour éviter d’attirer l’attention. Vous pouvez utiliser une créature qui mesure au moins une catégorie de taille de plus que vous (généralement Moyenne ou plus grande) comme abri pour Vous cacher ou Être furtif, mais vous ne pouvez pas utiliser ces créatures comme abri pour d’autres raisons, comme pour Vous mettre à l’abri.</description>
+    <level>1</level>
+  </feat>
+  <feat id="feat-pied-assure" type="don" category="ancestry">
+    <name>PIED ASSURÉ</name>
+    <traits>
+      <trait type="ancestry">HALFELIN</trait>
+    </traits>
+    <description>Qu’il s’agisse de garder l’équilibre ou d’escalader, vos pieds trouvent facilement un point d’appui. Si vous obtenez un succès à un test d’Acrobaties pour Garder l’équilibre ou à un test d’Athlétisme pour Escalader, vous obtenez un succès critique à la place. Vous n’êtes pas pris par surprise quand vous tentez de Garder l’équilibre ou d’Escalader.</description>
+    <level>1</level>
+  </feat>
+  <feat id="feat-adaptabilites-culturelle" type="don" category="ancestry">
+    <name>ADAPTABILITÉS CULTURELLE</name>
+    <traits>
+      <trait type="ancestry">HALFELIN</trait>
+    </traits>
+    <description>Au cours de vos aventures, vous avez affiné votre capacité à vous adapter à la culture de l’ascendance qui prédomine dans votre entourage. Vous gagnez le don général Ascendance adoptive, ainsi qu’un don ancestral de niveau 1 tiré de la liste de dons de l’ascendance que vous avez choisie avec Ascendance adoptive.</description>
+    <level>5</level>
+  </feat>
+  <feat id="feat-pas-vif" type="don" category="ancestry">
+    <name>PAS VIF</name>
+    <actions>9</actions>
+    <traits>
+      <trait type="ancestry">HALFELIN</trait>
+    </traits>
+    <trigger>Un ennemi de Grande taille ou plus se retrouve adjacent</trigger>
+    <description>à vous une fois son déplacement terminé. Vous êtes expert dans l’art d’éviter les pas pesants de créatures qui vous surplombent. Vous Faites un pas dans un autre espace adjacent à cet ennemi.</description>
+    <level>5</level>
+  </feat>
+  <feat id="feat-chance-directrice" type="don" category="ancestry">
+    <name>CHANCE DIRECTRICE</name>
+    <traits>
+      <trait type="ancestry">HALFELIN</trait>
+    </traits>
+    <description>Votre chance vous guide et vous permet de porter vos coups avec infaillibilité. Vous pouvez utiliser Chance halfeline deux fois par jour : une fois en réaction à son déclencheur normal et une fois après avoir échoué à un test de Perception ou à un jet d’attaque.</description>
+    <level>9</level>
+    <prerequisites>Chance halfeline</prerequisites>
+  </feat>
+  <feat id="feat-danse-sous-les-pieds" type="don" category="ancestry">
+    <name>DANSE SOUS LES PIEDS</name>
+    <traits>
+      <trait type="ancestry">HALFELIN</trait>
+    </traits>
+    <description>Vous foncez sous les jambes de vos ennemis durant le combat. Vous pouvez terminer une action de Déplacement acrobatique réussie dans l’espace d’un ennemi Grand ou plus grand. En outre, lorsque vous utilisez le don Pas vif, vous pouvez Faire un pas dans l’espace de l’ennemi déclencheur. L’ennemi doit avoir des membres ou vous laisser assez de place pour cette manœuvre, au bon vouloir du MJ. Par exemple, vous pourriez partager un espace avec un géant ou un dragon, mais pas une vase.</description>
+    <level>9</level>
+    <prerequisites>Pas vif</prerequisites>
+  </feat>
+  <feat id="feat-irrepressible" type="don" category="ancestry">
+    <name>IRRÉPRESSIBLE</name>
+    <traits>
+      <trait type="ancestry">HALFELIN</trait>
+    </traits>
+    <description>Vous pouvez facilement faire fi des tentatives de jouer sur vos peurs et vos émotions. Si vous obtenez un succès à un jet de sauvegarde contre un effet d’émotion, vous obtenez à la place un succès critique. En outre, si votre héritage est halfelin flegmatique, quand vous obtenez un échec critique à un jet de sauvegarde contre un effet d’émotion, vous obtenez à la place un échec simple.</description>
+    <level>9</level>
+  </feat>
+  <feat id="feat-passage-libre" type="don" category="ancestry">
+    <name>PASSAGE LIBRE</name>
+    <traits>
+      <trait type="ancestry">HALFELIN</trait>
+    </traits>
+    <description>Vous ne laisserez personne vous entraver. Une fois par jour, vous pouvez lancer *déplacement sans entrave* sur vous-même comme un sort inné primordial.</description>
+    <level>9</level>
+  </feat>
+  <feat id="feat-danse-renversante" type="don" category="ancestry">
+    <name>DANSE RENVERSANTE</name>
+    <traits>
+      <trait type="ancestry">HALFELIN</trait>
+    </traits>
+    <description>Lorsque vous partagez l’espace d’une créature en utilisant Danse sous les pieds, vos armes de corps à corps et vos attaques à mains nues gagnent le trait croc-en-jambe, mais seulement contre la créature avec laquelle vous partagez l’espace. Vous pouvez vous trouver dans le même espace qu’une créature Grande ou plus grande, même si ce n’est pas votre alliée.</description>
+    <level>13</level>
+    <prerequisites>Danse sous les pieds</prerequisites>
+  </feat>
+  <feat id="feat-ombres-incessantes" type="don" category="ancestry">
+    <name>OMBRES INCESSANTES</name>
+    <traits>
+      <trait type="ancestry">HALFELIN</trait>
+    </traits>
+    <description>Vous savez très bien passer inaperçu, particulièrement au milieu d’une foule. Vous n’avez plus besoin d’abri ou d’être masqué pour Vous cacher ou Être furtif. Si vous bénéficiez d’un abri partiel conféré par une autre créature, vous le considérez à la place comme un abri standard et vous pouvez Vous mettre à l’abri. Si vous bénéficiez d’un abri standard grâce à une créature, vous le considérez comme un abri important.</description>
+    <level>13</level>
+    <prerequisites>Ombres distrayantes</prerequisites>
+  </feat>
+  <feat id="feat-devenir-lombre" type="don" category="ancestry">
+    <name>DEVENIR L’OMBRE</name>
+    <traits>
+      <trait type="ancestry">HALFELIN</trait>
+    </traits>
+    <frequency>une fois par heure</frequency>
+    <trigger>Vous réussissez à utiliser Discrétion pour Vous cacher et devenez caché de tous vos ennemis actuels, ou utilisez Discrétion pour Être furtif et devenez non détecté par tous vos ennemis actuels.</trigger>
+    <description>Vous échappez à l’attention de vos adversaires et réapparaissez ailleurs. Vous devenez invisible pendant 1 min ou jusqu’à ce que vous accomplissiez une action hostile. Désignez un endroit situé à 3 m ou moins de vous. Jusqu’à ce que votre invisibilité prenne fin, toute personne tentant de vous trouver vous voit caché là-bas. Si la personne qui vous cherche obtient des preuves claires que vous ne vous y trouvez pas, elle ne pense plus que vous vous y êtes caché, mais ne découvrira pas votre emplacement actuel.</description>
+    <level>17</level>
+    <prerequisites>légendaire en Discrétion</prerequisites>
+  </feat>
+</feats>

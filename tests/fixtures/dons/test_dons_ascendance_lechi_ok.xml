@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feats xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/feat.xsd">
+  <feat id="feat-allonge-de-letreinte" type="don" category="ancestry">
+    <name>ALLONGE DE L’ÉTREINTE</name>
+    <traits>
+      <trait type="ancestry">LÉCHI</trait>
+    </traits>
+    <description>Vous pouvez étendre un enchevêtrement de vignes ou de vrilles pour soutenir votre bras et ainsi augmenter votre allonge. Lorsque vous maniez une arme de corps à corps qui nécessite deux mains, qui n’a pas d’allonge et qui inflige au moins 1d6 dégâts, vous pouvez changer entre une prise à deux mains classique et une prise à deux mains étendue en utilisant une action Interagir. Les armes maniées grâce à votre prise étendue gagnent une allonge de 3 m. Cette prise est moins stable et moins puissante qu’une prise classique, réduisant le dé de dégâts de l’arme de 1 échelon.</description>
+    <level>1</level>
+  </feat>
+  <feat id="feat-connaissances-sur-les-lechis" type="don" category="ancestry">
+    <name>CONNAISSANCES SUR LES LÉCHIS</name>
+    <traits>
+      <trait type="ancestry">LÉCHI</trait>
+    </traits>
+    <description>Vous possédez une connaissance approfondie des traditions culturelles de votre peuple et de ses forces innées. Vous gagnez le rang de maîtrise qualifié en Nature et en Discrétion. Si vous êtes déjà automatiquement qualifié dans l’une de ces compétences (grâce à votre historique ou à votre classe, par exemple), vous devenez alors qualifié dans une compétence de votre choix. Vous gagnez aussi le don général de Connaissances supplémentaires pour la compétence Connaissances sur les léchis.</description>
+    <level>1</level>
+  </feat>
+  <feat id="feat-cosse" type="don" category="ancestry">
+    <name>COSSE</name>
+    <traits>
+      <trait type="ancestry">LÉCHI</trait>
+    </traits>
+    <description>Votre corps produit des cosses de graines en permanence. Vous gagnez une attaque à mains nues à distance de cosse avec un facteur de portée de 9 m et qui inflige 1d4 dégâts contondants. Sur un coup critique, une cosse éclate, produisant un enchevêtrement de végétation qui impose un malus de circonstances de -3 m à la Vitesse de la cible jusqu’au début de votre prochain tour. Les cosses n’ajoutent aucun effet critique spécialisé.</description>
+    <level>1</level>
+  </feat>
+  <feat id="feat-inebranlable" type="don" category="ancestry">
+    <name>INÉBRANLABLE</name>
+    <traits>
+      <trait type="ancestry">LÉCHI</trait>
+    </traits>
+    <description>Votre esprit a surmonté de nombreuses épreuves au cours de sa longue existence. Vous gagnez un bonus de circonstances de +1 à vos jets de sauvegarde contre les effets d’émotion. Si vous obtenez un succès sur un jet de sauvegarde contre un effet d’émotion, vous obtenez un succès critique à la place.</description>
+    <level>1</level>
+  </feat>
+  <feat id="feat-ombre-de-la-nature-sauvage" type="don" category="ancestry">
+    <name>OMBRE DE LA NATURE SAUVAGE</name>
+    <traits>
+      <trait type="ancestry">LÉCHI</trait>
+    </traits>
+    <description>Il est difficile de repérer les traces que vous laissez dans les environnements sauvages. Tant que vous n’êtes pas dans un environnement urbain, vous êtes toujours considéré comme en train de Dissimuler des traces, même si vous choisissez une activité différente en mode exploration.</description>
+    <level>1</level>
+  </feat>
+  <feat id="feat-superstition-lechie" type="don" category="ancestry">
+    <name>SUPERSTITION LÉCHIE</name>
+    <actions>9</actions>
+    <traits>
+      <trait type="ancestry">LÉCHI</trait>
+    </traits>
+    <trigger>Vous tentez un jet de sauvegarde contre un sort ou un</trigger>
+    <description>effet magique, mais vous n’avez pas encore lancé le dé. Vous remarquez les esprits qui occupent les objets, identifiant ceux qui portent chance et ceux qui portent malheur. Vous vous concentrez sur le pouvoir d’un objet qui porte chance, conférant un bonus de circonstances de +1 aux jets de sauvegarde contre l’effet déclencheur.</description>
+    <level>1</level>
+  </feat>
+  <feat id="feat-tellement-mignon" type="don" category="ancestry">
+    <name>TELLEMENT MIGNON</name>
+    <traits>
+      <trait type="ancestry">LÉCHI</trait>
+    </traits>
+    <description>Votre taille et votre comportement vous permettent de convaincre facilement les autres que vous êtes inoffensif. Vous obtenez le don de compétence Sollicitation éhontée comme don bonus. De plus, vous gagnez un bonus de circonstances de +1 à vos tests d’initiative lorsque vous utilisez Duperie pour votre initiative.</description>
+    <level>1</level>
+  </feat>
+  <feat id="feat-inversion-de-rituel" type="don" category="ancestry">
+    <name>INVERSION DE RITUEL</name>
+    <actions>2</actions>
+    <traits>
+      <trait type="ancestry">LÉCHI</trait>
+      <trait>MÉTAMORPHOSE</trait>
+      <trait>PRIMORDIALE</trait>
+    </traits>
+    <description>Vous pouvez temporairement revenir à une forme moins voyante sans pour autant diminuer vos sens. Vous prenez la forme d’un spécimen ordinaire de la plante ou du champignon qui vous ressemble le plus, revenant à l’apparence qu’avait votre corps avant que votre esprit ne l’intègre. Pour le reste, appliquez les effets d’*uni aux plantes*, mais votre taille reste Petite.</description>
+    <level>5</level>
+  </feat>
+  <feat id="feat-parler-avec-les-siens" type="don" category="ancestry">
+    <name>PARLER AVEC LES SIENS</name>
+    <traits>
+      <trait type="ancestry">LÉCHI</trait>
+    </traits>
+    <description>Vous avez établi un lien avec les créatures qui partagent votre physiologie. Vous pouvez utiliser la compétence Diplomatie avec les plantes et les champignons, leur poser des questions et comprendre leurs réponses. Vous gagnez un bonus de circonstances de +2 à vos tests de Diplomatie avec les plantes ou les champignons de votre espèce. En règle générale, les léchis fongiques obtiennent ce bonus avec les champignons et les créatures fongiques, les léchis calebasses avec les calebasses, les melons et les plantes fruitières similaires, les léchis des feuilles avec les arbres à feuilles caduques et les léchis grimpants avec les vignes et les plantes grimpantes.</description>
+    <level>5</level>
+  </feat>
+  <feat id="feat-racines-solides" type="don" category="ancestry">
+    <name>RACINES SOLIDES</name>
+    <traits>
+      <trait type="ancestry">LÉCHI</trait>
+    </traits>
+    <description>De petites racines sortent de vos pieds et vous stabilisent lorsque vous vous déplacez. Vous gagnez le don de compétence Équilibre stable même si vous n’êtes pas qualifié en Acrobaties, et vous pouvez utiliser l’action S’enraciner.</description>
+    <level>5</level>
+    <grantedActivity>
+      <name>S’enraciner</name>
+      <actions>1</actions>
+      <requirement>Vous êtes sur une surface solide</requirement>
+      <description>Vous enfoncez vos racines dans le sol ou les étendez sur cette surface, pour être beaucoup plus stable. Jusqu’à ce que vous vous déplaciez, vous gagnez un bonus de circonstances de +2 à votre DD de Vigueur ou de Réflexes contre les tentatives pour vous Repositionner, vous Pousser ou vous infliger un Croc-en-jambe (ou un bonus de circonstances de +4 si vous êtes un léchi racinaire). Ce bonus s’applique également aux jets de sauvegarde contre les sorts ou effets qui tentent de vous déplacer ou de vous faire tomber à terre. Si un effet vous force à vous déplacer, vous le faites seulement de la moitié de la distance normale, car il faut d’abord arracher vos racines.</description>
+    </grantedActivity>
+  </feat>
+  <feat id="feat-vol-plane-lechi" type="don" category="ancestry">
+    <name>VOL PLANÉ LÉCHI</name>
+    <actions>1</actions>
+    <traits>
+      <trait type="ancestry">LÉCHI</trait>
+    </traits>
+    <description>Chute féline. Grâce à vos feuilles, vous parvenez à contrôler votre descente. Vous planez lentement vers le sol, de 1,5 m vers le bas et jusqu’à 7,5 m vers l’avant dans les airs. Tant que vous dépensez au moins 1 action par round à planer et que vous n’avez pas encore atteint le sol, vous restez dans les airs à la fin de votre tour.</description>
+    <level>5</level>
+    <prerequisites>héritage léchi de feuilles ou don de compétence</prerequisites>
+  </feat>
+  <feat id="feat-colifichet-portebonheur" type="don" category="ancestry">
+    <name>COLIFICHET PORTE‑BONHEUR</name>
+    <traits>
+      <trait type="ancestry">LÉCHI</trait>
+    </traits>
+    <description>L’un de vos colifichets vous porte chance. Vous gagnez un bonus de circonstances permanent de +1 aux jets de sauvegarde contre les sorts et effets magiques, et pas seulement lorsque vous utilisez Superstition léchi. Si vous perdez votre colifichet, vous perdez le bonus jusqu’à ce que vous choisissiez un nouveau colifichet, souvent dans la semaine qui suit.</description>
+    <level>9</level>
+    <prerequisites>Superstition léchi</prerequisites>
+  </feat>
+  <feat id="feat-cosse-epineuse" type="don" category="ancestry">
+    <name>COSSE ÉPINEUSE</name>
+    <traits>
+      <trait type="ancestry">LÉCHI</trait>
+    </traits>
+    <description>Lorsque vos cosses effectuent une frappe renversante, elles explosent et projettent des lianes aux épines acérées. Lorsque vous obtenez un succès critique avec une Frappe de cosse, ces plantes se tordent et frappent votre ennemi, infligeant 1d4 dégâts perforants persistants.</description>
+    <level>9</level>
+    <prerequisites>Cosse</prerequisites>
+  </feat>
+  <feat id="feat-ecorce-et-frondaison" type="don" category="ancestry">
+    <name>ÉCORCE ET FRONDAISON</name>
+    <traits>
+      <trait type="ancestry">LÉCHI</trait>
+    </traits>
+    <description>Vous êtes détenteur de magie primordiale. Vous pouvez lancer *enchevêtrement végétal *et *résistance du chêne* en tant que sorts primordiaux innés de rang 2 une fois par jour chacun.</description>
+    <level>9</level>
+  </feat>
+  <feat id="feat-revitalisation-solaire" type="don" category="ancestry">
+    <name>REVITALISATION SOLAIRE</name>
+    <traits>
+      <trait type="ancestry">LÉCHI</trait>
+    </traits>
+    <description>Si vous vous reposez 10 min à l’extérieur pendant la journée, vous regagnez une quantité de points de vie égale à votre modificateur de Constitution × la moitié de votre niveau. Vous gagnez cet avantage en plus de la guérison apportée par Soigner les blessures. Les léchis dont l’alimentation des plantes hôtes ne repose pas sur la photosynthèse doivent trouver un environnement adéquat. Par exemple, les léchis fongiques doivent trouver un environnement sombre et humide ainsi que des plantes en décomposition.</description>
+    <level>9</level>
+  </feat>
+  <feat id="feat-appel-de-lhomme-vert" type="don" category="ancestry">
+    <name>APPEL DE L’HOMME VERT</name>
+    <traits>
+      <trait type="ancestry">LÉCHI</trait>
+    </traits>
+    <description>Vous pouvez appeler à vous des esprits de la nature pour agrandir votre corps. Une fois par jour, vous pouvez lancer *forme de plante* comme un sort inné primordial de rang 5. Quand vous atteignez le niveau 17, vous pouvez intensifier ce sort au rang 6 quand vous le lancez.</description>
+    <level>13</level>
+  </feat>
+  <feat id="feat-cape-de-poison" type="don" category="ancestry">
+    <name>CAPE DE POISON</name>
+    <actions>2</actions>
+    <traits>
+      <trait type="ancestry">LÉCHI</trait>
+      <trait>POISON</trait>
+    </traits>
+    <frequency>une fois par jour</frequency>
+    <description>Vous sécrétez une couche de poison concentré qui blesse tous ceux qui osent vous attaquer. Pendant 1 min, toute créature qui vous touche ou vous inflige des dégâts avec une attaque à mains nues ou au corps à corps sans le trait allonge subit 3d6 dégâts de poison.</description>
+    <level>13</level>
+  </feat>
+  <feat id="feat-floraison-et-destruction" type="don" category="ancestry">
+    <name>FLORAISON ET DESTRUCTION</name>
+    <traits>
+      <trait type="ancestry">LÉCHI</trait>
+    </traits>
+    <description>Vous faites appel à l’essence vitale de votre esprit pour revigorer vos alliés et faire apparaître des plantes grimpantes qui prennent au piège et frappent vos ennemis. Une fois par jour, vous pouvez lancer *champ de vie* et *entraves végétales* comme des sorts innés primordiaux de rang 6.</description>
+    <level>17</level>
+  </feat>
+  <feat id="feat-repousse" type="don" category="ancestry">
+    <name>REPOUSSE</name>
+    <traits>
+      <trait type="ancestry">LÉCHI</trait>
+    </traits>
+    <description>Votre contrôle de l’essence de vie vous permet à vous ou à un allié de récupérer après avoir subi des blessures graves. Vous pouvez lancer une fois par jour *régénération *comme un sort inné primordial de rang 7.</description>
+    <level>17</level>
+    <grantedActivity>
+      <name>Appel du sang ancien</name>
+      <actions>9</actions>
+      <description>**Nain sang‑fort** Votre sang, vigoureux et tonique, vous permet de mieux résister aux toxines. Vous gagnez une résistance au poison égale à la moitié de votre niveau (avec un minimum de 1) et, chaque fois que vous obtenez un succès à un jet de sauvegarde contre un poison, vous réduisez son stade de 2, ou de 1 s’il s’agit d’un poison virulent. Chaque succès critique contre un poison en train de vous affecter réduit son stade de 3, ou de 2 s’il s’agit d’un poison virulent. DONS ANCESTRAUX Au niveau 1, vous gagnez un don ancestral. Vous gagnez ensuite un nouveau don ancestral tous les quatre niveaux (aux niveaux 5, 9, 13 et 17). En tant que nain, vous pouvez choisir les dons ancestraux suivants.</description>
+    </grantedActivity>
+  </feat>
+</feats>
