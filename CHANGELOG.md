@@ -15,8 +15,8 @@
 - Fix Intensifié convocation : `Intensifié. Comme indiqué sous le trait convocation` expansé en 9 entrées `<heighten>` explicites (2e→Niv.1 … 10e→Niv.15) et supprimé de la description
 - Script one-liner `scripts/to_obsidian.sh <input.md> <output.md> <sort|monstre>`
 - Fixtures sorts 01–10 régénérées depuis PDF (pages 316-391) avec chevauchement de page (dernière page de batch N = première de batch N+1)
-- Golden batch 01 béni : `tests/fixtures/test_sorts_01_ok.xml` (51 sorts, pages 316-324)
-- Golden batch 02 béni : `tests/fixtures/test_sorts_02_ok.xml` (51 sorts, pages 324-330)
+- Golden batch 01 béni : `tests/fixtures/sorts/test_sorts_01_ok.xml` (51 sorts, pages 316-324)
+- Golden batch 02 béni : `tests/fixtures/sorts/test_sorts_02_ok.xml` (51 sorts, pages 324-330)
 - Previews Obsidian : `sorts_batch_01.md`, `sorts_batch_02.md`, `sorts_batch_03.md`
 -  `<requirements>` implémenté dans le schéma, le mapper et le XSL
 - `battleFormType` modélisé pour les sorts de forme

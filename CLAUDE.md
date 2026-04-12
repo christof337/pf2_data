@@ -53,8 +53,8 @@ PDF → extraction → XML pivot validé → transformation Obsidian → extensi
 `tests/` est une zone protégée.
 
 Ne jamais modifier sans validation explicite :
-- `tests/fixtures/*.md`
-- `tests/fixtures/*_ok.xml`
+- `tests/fixtures/**/*.md`
+- `tests/fixtures/**/*_ok.xml`
 - `tests/test_runner.py`
 
 ### Avant toute modification sur un mapper ou une regex

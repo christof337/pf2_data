@@ -9,7 +9,7 @@
 → Voir `CHANGELOG.md` pour l’historique complet des jalons.
 
 ## Priorité haute
-- [ ] valider le preview batch 03 et bénir `tests/fixtures/test_sorts_03_ok.xml`
+- [ ] valider le preview batch 03 et bénir `tests/fixtures/sorts/test_sorts_03_ok.xml`
 - [ ] continuer batches 04–10 progressivement (preview → validation → golden)
 
 ## Priorité moyenne
